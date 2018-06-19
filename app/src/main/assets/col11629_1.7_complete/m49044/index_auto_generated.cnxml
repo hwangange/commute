@@ -1,0 +1,316 @@
+<?xml version="1.0"?>
+<document xmlns="http://cnx.rice.edu/cnxml" xmlns:md="http://cnx.rice.edu/mdml" xmlns:bib="http://bibtexml.sf.net/" xmlns:m="http://www.w3.org/1998/Math/MathML" xmlns:q="http://cnx.rice.edu/qml/1.0" id="new" cnxml-version="0.7" module-id="new">
+
+<title>The Other Senses</title>
+<metadata xmlns:md="http://cnx.rice.edu/mdml"
+          mdml-version="0.5">
+  <!-- WARNING! The 'metadata' section is read only. Do not edit below.
+       Changes to the metadata section in the source will not be saved. -->
+  <md:repository>http://legacy.cnx.org/content</md:repository>
+  <md:content-url>http://legacy.cnx.org/content/m49044/latest</md:content-url>
+  <md:content-id>m49044</md:content-id>
+  <md:title>The Other Senses</md:title>
+  <md:version>1.6</md:version>
+  <md:created>2014/02/12 15:32:36 -0600</md:created>
+  <md:revised>2016/10/11 11:04:01 -0500</md:revised>
+  <md:actors>
+    <md:organization userid="OpenStaxCollege">
+      <md:shortname>OpenStax</md:shortname>
+      <md:fullname>OpenStax</md:fullname>
+      <md:email>info@openstax.org</md:email>
+    </md:organization>
+    <md:person userid="OSCRiceUniversity">
+      <md:firstname>Rice</md:firstname>
+      <md:surname>University</md:surname>
+      <md:fullname>Rice University</md:fullname>
+      <md:email>info@openstaxcollege.org</md:email>
+    </md:person>
+    <md:person userid="cnxpsych">
+      <md:firstname>CNX</md:firstname>
+      <md:surname>Psychology</md:surname>
+      <md:fullname>OpenStax Psychology</md:fullname>
+      <md:email>info@openstaxcollege.org</md:email>
+    </md:person>
+  </md:actors>
+  <md:roles>
+    <md:role type="author">OpenStaxCollege</md:role>
+    <md:role type="maintainer">OpenStaxCollege cnxpsych</md:role>
+    <md:role type="licensor">OSCRiceUniversity</md:role>
+  </md:roles>
+  <md:license url="http://creativecommons.org/licenses/by/4.0/">Creative Commons Attribution License 4.0</md:license>
+  <!-- For information on license requirements for use or modification, see license url in the
+       above <md:license> element.
+       For information on formatting required attribution, see the URL:
+         CONTENT_URL/content_info#cnx_cite_header
+       where CONTENT_URL is the value provided above in the <md:content-url> element.
+  -->
+  <md:keywordlist>
+    <md:keyword>chemical senses</md:keyword>
+    <md:keyword>congenital analgesia</md:keyword>
+    <md:keyword>congenital insensitivity to pain</md:keyword>
+    <md:keyword>gustation</md:keyword>
+    <md:keyword>inflammatory pain</md:keyword>
+    <md:keyword>kinesthesia</md:keyword>
+    <md:keyword>Meissner’s corpuscle</md:keyword>
+    <md:keyword>Merkel’s disk</md:keyword>
+    <md:keyword>neuropathic pain</md:keyword>
+    <md:keyword>nociception</md:keyword>
+    <md:keyword>nociceptor</md:keyword>
+    <md:keyword>olfactory bulb</md:keyword>
+    <md:keyword>olfactory receptor</md:keyword>
+    <md:keyword>Pacinian corpuscle</md:keyword>
+    <md:keyword>pain</md:keyword>
+    <md:keyword>pheromone</md:keyword>
+    <md:keyword>proprioception</md:keyword>
+    <md:keyword>Ruffini corpuscle</md:keyword>
+    <md:keyword>somatosensory system</md:keyword>
+    <md:keyword>taste</md:keyword>
+    <md:keyword>taste bud</md:keyword>
+    <md:keyword>thermoception</md:keyword>
+    <md:keyword>touch</md:keyword>
+    <md:keyword>umami</md:keyword>
+    <md:keyword>vestibular sense</md:keyword>
+  </md:keywordlist>
+  <md:subjectlist>
+    <md:subject>Social Sciences</md:subject>
+  </md:subjectlist>
+  <md:abstract>By the end of this section, you will be able to:
+<list>
+<item>Describe the basic functions of the chemical senses</item>
+<item>Explain the basic functions of the somatosensory, nociceptive, and thermoceptive sensory systems</item>
+<item>Describe the basic functions of the vestibular, proprioceptive, and kinesthetic sensory systems</item>
+</list></md:abstract>
+  <md:language>en</md:language>
+  <!-- WARNING! The 'metadata' section is read only. Do not edit above.
+       Changes to the metadata section in the source will not be saved. -->
+</metadata>
+
+<content>
+  <para id="fs-idp8294224">Vision and hearing have received an incredible amount of attention from researchers over the years. While there is still much to be learned about how these sensory systems work, we have a much better understanding of them than of our other sensory modalities. In this section, we will explore our chemical senses (taste and smell) and our body senses (touch, temperature, pain, balance, and body position).</para>
+  <section id="fs-idp5987360">
+    <title>THE CHEMICAL SENSES</title>
+    <para id="fs-idp14287728">Taste (gustation) and <term class="no-emphasis">smell</term> (olfaction) are called chemical senses because both have sensory receptors that respond to molecules in the food we eat or in the air we breathe. There is a pronounced interaction between our chemical senses. For example, when we describe the flavor of a given food, we are really referring to both gustatory and olfactory properties of the food working in combination.</para> 
+    <section id="fs-idp64677872">
+      <title>Taste (Gustation)</title>
+      <para id="fs-idp84168272">You have learned since elementary school that there are four basic groupings of taste: sweet, salty, sour, and bitter. Research demonstrates, however, that we have at least six <term class="no-emphasis">taste</term> groupings. Umami is our fifth taste. <term>Umami</term> is actually a Japanese word that roughly translates to yummy, and it is associated with a taste for monosodium glutamate (Kinnamon &amp; Vandenbeuch, 2009). There is also a growing body of experimental evidence suggesting that we possess a taste for the fatty content of a given food (Mizushige, Inoue, &amp; Fushiki, 2007).</para>
+      <para id="fs-idm27095808">Molecules from the food and beverages we consume dissolve in our saliva and interact with taste receptors on our tongue and in our mouth and throat. <term>Taste buds</term> are formed by groupings of taste receptor cells with hair-like extensions that protrude into the central pore of the taste bud (<link target-id="Figure_05_05_TasteBud"/>). Taste buds have a life cycle of ten days to two weeks, so even destroying some by burning your tongue won’t have any long-term effect; they just grow right back. Taste molecules bind to receptors on this extension and cause chemical changes within the sensory cell that result in neural impulses being transmitted to the brain via different nerves, depending on where the receptor is located. Taste information is transmitted to the medulla, thalamus, and limbic system, and to the gustatory cortex, which is tucked underneath the overlap between the frontal and temporal lobes (Maffei, Haley, &amp; Fontanini, 2012; Roper, 2013).</para> 
+      <figure id="Figure_05_05_TasteBud">
+        <media id="fs-idp36889264" alt="Illustration A shows a taste bud in an opening of the tongue, with the &#x201C;tongue surface,&#x201D; &#x201C;taste pore,&#x201D; &#x201C;taste receptor cell&#x201D; and &#x201C;nerves&#x201D; labeled. Part B is a micrograph showing taste buds on a human tongue.">
+          <image src="CNX_Psych_05_05_TasteBud.jpg" mime-type="image/jpg"/>
+        </media>
+        <caption>(a) Taste buds are composed of a number of individual taste receptors cells that transmit information to nerves. (b) This micrograph shows a close-up view of the tongue’s surface. (credit a: modification of work by Jonas Töle; credit b: scale-bar data from Matt Russell)</caption>
+      </figure>
+    </section>
+    <section id="fs-idp28646368">
+      <title>Smell (Olfaction)</title>
+      <para id="fs-idm4091616"><term>Olfactory receptor</term> cells are located in a mucous membrane at the top of the nose. Small hair-like extensions from these receptors serve as the sites for odor molecules dissolved in the mucus to interact with chemical receptors located on these extensions (<link target-id="Figure_05_05_OlfacRecep"/>). Once an odor molecule has bound a given receptor, chemical changes within the cell result in signals being sent to the <term>olfactory bulb</term>: a bulb-like structure at the tip of the frontal lobe where the olfactory nerves begin. From the olfactory bulb, information is sent to regions of the limbic system and to the primary olfactory cortex, which is located very near the gustatory cortex (Lodovichi &amp; Belluscio, 2012; Spors et al., 2013).</para>
+      <figure id="Figure_05_05_OlfacRecep">
+        <media id="fs-idp84153504" alt="An illustration shows a side view of a human head and the location of the &#x201C;nasal cavity,&#x201D; &#x201C;olfactory receptors,&#x201D; and &#x201C;olfactory bulb.&#x201D;">
+          <image src="CNX_Psych_05_05_OlfacRecep.jpg" mime-type="image/jpg"/>
+        </media>
+        <caption>Olfactory receptors are the hair-like parts that extend from the olfactory bulb into the mucous membrane of the nasal cavity.</caption>
+      </figure>
+      
+      
+      <para id="fs-idm21753600">There is tremendous variation in the sensitivity of the olfactory systems of different species. We often think of dogs as having far superior olfactory systems than our own, and indeed, dogs can do some remarkable things with their noses. There is some evidence to suggest that dogs can “smell” dangerous drops in blood glucose levels as well as cancerous tumors (Wells, 2010). Dogs’ extraordinary olfactory abilities may be due to the increased number of functional genes for olfactory receptors (between 800 and 1200), compared to the fewer than 400 observed in humans and other primates (Niimura &amp; Nei, 2007).</para>
+      <para id="fs-idp109938928">Many species respond to chemical messages, known as <term>pheromones</term>, sent by another individual (Wysocki &amp; Preti, 2004). Pheromonal communication often involves providing information about the reproductive status of a potential mate. So, for example, when a female rat is ready to mate, she secretes pheromonal signals that draw attention from nearby male rats. Pheromonal activation is actually an important component in eliciting sexual behavior in the male rat (Furlow, 1996, 2012; Purvis &amp; Haynes, 1972; Sachs, 1997). There has also been a good deal of research (and controversy) about pheromones in humans (Comfort, 1971; Russell, 1976; Wolfgang-Kimball, 1992; Weller, 1998).</para> 
+    </section>
+  </section>
+  <section id="fs-idp7757872">
+    <title>TOUCH, THERMOCEPTION, AND NOCICEPTION</title>
+    <para xmlns:data="http://www.w3.org/TR/html5/dom.html#custom-data-attribute" id="fs-idp11691024">A number of receptors are distributed throughout the skin to respond to various touch-related stimuli (<link target-id="Figure_05_05_Touch"/>). These receptors include Meissner’s corpuscles, Pacinian corpuscles, Merkel’s disks, and Ruffini corpuscles. <term>Meissner’s corpuscles</term> respond to pressure and lower frequency vibrations, and <term>Pacinian corpuscles</term> detect transient pressure and higher frequency vibrations. <term>Merkel’s disks</term> respond to light pressure, while <term>Ruffini corpuscles</term> detect stretch (Abraira &amp; Ginty, 2013).</para><figure id="Figure_05_05_Touch">
+      <media id="fs-idm20766480" alt="An illustration shows &#x201C;skin surface&#x201D; underneath which different receptors are identified: the &#x201C;pacinian corpuscle,&#x201D; &#x201C;ruffini corpuscle,&#x201D; &#x201C;merkel&#x2019;s disk,&#x201D; and &#x201C;meissner&#x2019;s corpuscle.&#x201D;">
+        <image src="CNX_Psych_05_05_Touch.jpg" mime-type="image/jpg"/>
+      </media>
+      <caption>There are many types of sensory receptors located in the skin, each attuned to specific touch-related stimuli.</caption>
+    </figure>
+    <para id="fs-idm45754096">In addition to the receptors located in the skin, there are also a number of free nerve endings that serve sensory functions. These nerve endings respond to a variety of different types of touch-related stimuli and serve as sensory receptors for both <term>thermoception</term> (temperature perception) and <term>nociception</term> (a signal indicating potential harm and maybe pain) (Garland, 2012; Petho &amp; Reeh, 2012; Spray, 1986). Sensory information collected from the receptors and free nerve endings travels up the spinal cord and is transmitted to regions of the medulla, thalamus, and ultimately to somatosensory cortex, which is located in the postcentral gyrus of the parietal lobe.</para>
+    <section id="fs-idm12779248">
+      <title>Pain Perception</title>
+      <para id="fs-idm76055408">Pain is an unpleasant experience that involves both physical and psychological components. Feeling pain is quite adaptive because it makes us aware of an injury, and it motivates us to remove ourselves from the cause of that injury. In addition, pain also makes us less likely to suffer additional injury because we will be gentler with our injured body parts.</para> 
+      <para id="fs-idm78395840">Generally speaking, pain can be considered to be neuropathic or inflammatory in nature. Pain that signals some type of tissue damage is known as <term>inflammatory pain</term>. In some situations, pain results from damage to neurons of either the peripheral or central nervous system. As a result, pain signals that are sent to the brain get exaggerated. This type of pain is known as <term>neuropathic pain</term>. Multiple treatment options for pain relief range from relaxation therapy to the use of analgesic medications to deep brain stimulation. The most effective treatment option for a given individual will depend on a number of considerations, including the severity and persistence of the pain and any medical/psychological conditions.</para>
+      <para id="fs-idm28421280">Some individuals are born without the ability to feel pain. This very rare genetic disorder is known as <term>congenital insensitivity to pain </term>(or <term>congenital analgesia</term>). While those with congenital analgesia can detect differences in temperature and pressure, they cannot experience pain. As a result, they often suffer significant injuries. Young children have serious mouth and tongue injuries because they have bitten themselves repeatedly. Not surprisingly, individuals suffering from this disorder have much shorter life expectancies due to their injuries and secondary infections of injured sites (U.S. National Library of Medicine, 2013).</para>
+      
+      <note id="fs-idp4560560" class="psychology link-to-learning"><label>Link To Learning</label>
+<media id="fs-idm9296880" alt="">
+            <image mime-type="png" src="OSC_Interactive_150.png"/>
+          </media>
+
+        <para id="fs-idm142307152">Watch this <link url="http://openstaxcollege.org/l/congenital">video</link> to learn more about congenital insensitivity to pain.</para>
+      </note></section>
+  </section>
+  <section id="fs-idm12760480">
+    <title>THE VESTIBULAR SENSE, PROPRIOCEPTION, AND KINESTHESIA</title>
+    
+    <para id="fs-idp105592464">The <term>vestibular sense</term> contributes to our ability to maintain balance and body posture. As <link target-id="Figure_05_05_Vestibular"/> shows, the major sensory organs (utricle, saccule, and the three semicircular canals) of this system are located next to the cochlea in the inner ear. The vestibular organs are fluid-filled and have hair cells, similar to the ones found in the auditory system, which respond to movement of the head and gravitational forces. When these hair cells are stimulated, they send signals to the brain via the vestibular nerve. Although we may not be consciously aware of our vestibular system’s sensory information under normal circumstances, its importance is apparent when we experience motion sickness and/or dizziness related to infections of the inner ear (Khan &amp; Chang, 2013).</para>
+    <figure id="Figure_05_05_Vestibular">
+      <media id="fs-idm3058416" alt="An illustration of the vestibular system shows the locations of the three canals (&#x201C;posterior canal,&#x201D; &#x201C;horizontal canal,&#x201D; and &#x201C;superior canal&#x201D;) and the locations of the &#x201C;urticle,&#x201D; &#x201C;oval window,&#x201D; &#x201C;cochlea,&#x201D; &#x201C;basilar membrane and hair cells,&#x201D; &#x201C;saccule,&#x201D; and &#x201C;vestibule.&#x201D;">
+        <image src="CNX_Psych_05_05_Vestibular.jpg" mime-type="image/jpg"/>
+      </media>
+      <caption>The major sensory organs of the vestibular system are located next to the cochlea in the inner ear. These include the utricle, saccule, and the three semicircular canals (posterior, superior, and horizontal).</caption>
+    </figure>
+    <para id="fs-idm23066208">In addition to maintaining balance, the vestibular system collects information critical for controlling movement and the reflexes that move various parts of our bodies to compensate for changes in body position. Therefore, both <term>proprioception </term>(perception of body position) and <term>kinesthesia </term>(perception of the body’s movement through space) interact with information provided by the vestibular system.</para> 
+    <para id="fs-idp80383424">These sensory systems also gather information from receptors that respond to stretch and tension in muscles, joints, skin, and tendons (Lackner &amp; DiZio, 2005; Proske, 2006; Proske &amp; Gandevia, 2012). Proprioceptive and kinesthetic information travels to the brain via the spinal column. Several cortical regions in addition to the cerebellum receive information from and send information to the sensory organs of the proprioceptive and kinesthetic systems.</para>
+  </section>
+  <section id="fs-idm14068000" class="summary">
+    <title>Summary</title>
+    <para id="fs-idp11870448">Taste (gustation) and smell (olfaction) are chemical senses that employ receptors on the tongue and in the nose that bind directly with taste and odor molecules in order to transmit information to the brain for processing. Our ability to perceive touch, temperature, and pain is mediated by a number of receptors and free nerve endings that are distributed throughout the skin and various tissues of the body. The vestibular sense helps us maintain a sense of balance through the response of hair cells in the utricle, saccule, and semi-circular canals that respond to changes in head position and gravity. Our proprioceptive and kinesthetic systems provide information about body position and body movement through receptors that detect stretch and tension in the muscles, joints, tendons, and skin of the body.</para>
+  </section>
+  <section id="fs-idp8921536" class="review-questions">
+    <title>Review Questions</title>
+    <exercise id="fs-idm21242624">
+      <problem id="fs-idm26686896"><para id="fs-idp126198912">Chemical messages often sent between two members of a species to communicate something about reproductive status are called ________.</para>
+        <list id="fs-idm56797072" list-type="enumerated" number-style="lower-alpha">
+          <item>hormones</item>
+          <item>pheromones</item>
+          <item>Merkel’s disks</item>
+          <item>Meissner’s corpuscles</item>
+        </list>
+      </problem>
+      <solution id="fs-idm20594096"><para id="fs-idp38502992">B</para></solution>
+    </exercise>
+    
+    <exercise id="fs-idp80464880">
+      <problem id="fs-idm31820192"><para id="fs-idm10153264">Which taste is associated with monosodium glutamate?</para>
+        <list id="fs-idm12435888" list-type="enumerated" number-style="lower-alpha">
+          <item>sweet</item>
+          <item>bitter</item>
+          <item>umami</item>
+          <item>sour</item>
+        </list>
+      </problem>
+      <solution id="fs-idp7874768"><para id="fs-idp33417296">C</para></solution>
+    </exercise>
+    
+    <exercise id="fs-idp110065696">
+      <problem id="fs-idp163978256"><para id="fs-idp169669696">________ serve as sensory receptors for temperature and pain stimuli.</para>
+        <list id="fs-idp143815568" list-type="enumerated" number-style="lower-alpha">
+          <item>free nerve endings</item>
+          <item>Pacinian corpuscles</item>
+          <item>Ruffini corpuscles</item>
+          <item>Meissner’s corpuscles</item>
+        </list>
+      </problem>
+      <solution id="fs-idm29717360"><para id="fs-idp65656144">A</para></solution>
+    </exercise>
+    
+    <exercise id="fs-idm13249056">
+      <problem id="fs-idm951456"><para id="fs-idp124045584">Which of the following is involved in maintaining balance and body posture?</para>
+        <list id="fs-idp3112720" list-type="enumerated" number-style="lower-alpha">
+          <item>auditory nerve</item>
+          <item>nociceptors</item>
+          <item>olfactory bulb</item>
+          <item>vestibular system</item>
+        </list>
+      </problem>
+      <solution id="fs-idp90551184"><para id="fs-idp84156560">D</para></solution>
+    </exercise>
+  </section>
+  
+  <section id="fs-idp148928" class="critical-thinking">
+    <title>Critical Thinking Question</title>
+    <exercise id="fs-idp77858880">
+      <problem id="fs-idm44337312">
+        <para id="fs-idp1445472">Many people experience nausea while traveling in a car, plane, or boat. How might you explain this as a function of sensory interaction?</para>
+      </problem>
+      <solution id="fs-idp33833120">
+        <para id="fs-idp8114144">When traveling by car, we often have visual information that suggests that we are in motion while our vestibular sense indicates that we’re not moving (assuming we’re traveling at a relatively constant speed). Normally, these two sensory modalities provide congruent information, but the discrepancy might lead to confusion and nausea. The converse would be true when traveling by plane or boat.</para>
+      </solution>
+    </exercise>  
+    
+    <exercise id="fs-idp4512528">
+      <problem id="fs-idp62051856">
+        <para id="fs-idm13848928">If you heard someone say that they would do anything not to feel the pain associated with significant injury, how would you respond given what you’ve just read?</para>
+      </problem>
+      <solution id="fs-idp133148768">
+        <para id="fs-idm28144320">Pain serves important functions that are critical to our survival. As noxious as pain stimuli may be, the experiences of individuals who suffer from congenital insensitivity to pain makes the consequences of a lack of pain all too apparent.</para>
+      </solution>
+    </exercise>
+    
+    <exercise id="fs-idm76061488">
+      <problem id="fs-idm20907344">
+        <para id="fs-idm4627904">Do you think women experience pain differently than men? Why do you think this is?</para>
+      </problem>
+      <solution id="fs-idm2698592">
+        <para id="fs-idm23831504">Research has shown that women and men do differ in their experience of and tolerance for pain: Women tend to handle pain better than men. Perhaps this is due to women’s labor and childbirth experience. Men tend to be stoic about their pain and do not seek help. Research also shows that gender differences in pain tolerance can vary across cultures.</para>
+      </solution>
+    </exercise>
+    
+  </section>
+  <section id="fs-idm12273296" class="personal-application">
+    <title>Personal Application Question</title>
+    <exercise id="fs-idm220544">
+      <problem id="fs-idp3092016">
+        <para id="fs-idp81987136">As mentioned earlier, a food’s flavor represents an interaction of both gustatory and olfactory information. Think about the last time you were seriously congested due to a cold or the flu. What changes did you notice in the flavors of the foods that you ate during this time?</para>
+      </problem>
+    </exercise>
+  </section>
+  
+</content>
+<glossary>
+  
+<definition id="fs-idp44141024"><term>congenital insensitivity to pain (congenital analgesia)</term>
+<meaning id="fs-idm2529728">genetic disorder that results in the inability to experience pain</meaning>
+</definition>
+<definition id="fs-idm25384240">
+<term>inflammatory pain</term>
+<meaning id="fs-idp81421120">signal that some type of tissue damage has occurred</meaning>
+</definition>
+<definition id="fs-idp34109952">
+<term>kinesthesia</term>
+<meaning id="fs-idm21930816">perception of the body’s movement through space</meaning>
+</definition>
+<definition id="fs-idm26174016">
+<term>Meissner’s corpuscle</term>
+<meaning id="fs-idm6267728">touch receptor that responds to pressure and lower frequency vibrations</meaning>
+</definition>
+<definition id="fs-idm44304192">
+<term>Merkel’s disk</term>
+<meaning id="fs-idp87342880">touch receptor that responds to light touch</meaning>
+</definition>
+<definition id="fs-idp48320768">
+<term>neuropathic pain</term>
+<meaning id="fs-idp41808464">pain from damage to neurons of either the peripheral or central nervous system</meaning>
+</definition>
+<definition id="fs-idp168124128">
+<term>nociception</term>
+<meaning id="fs-idp21206464">sensory signal indicating potential harm and maybe pain</meaning>
+</definition>
+<definition id="fs-idm29606800">
+<term>olfactory bulb</term>
+<meaning id="fs-idm3696400">bulb-like structure at the tip of the frontal lobe, where the olfactory nerves begin</meaning>
+</definition>
+<definition id="fs-idm30277120">
+<term>olfactory receptor</term>
+<meaning id="fs-idp62610736">sensory cell for the olfactory system</meaning></definition>
+<definition id="fs-idm12414400">
+<term>Pacinian corpuscle</term>
+<meaning id="fs-idm22661568">touch receptor that detects transient pressure and higher frequency vibrations</meaning>
+</definition>
+<definition id="fs-idp155672480">
+<term>pheromone</term>
+<meaning id="fs-idm16289664">chemical message sent by another individual</meaning>
+</definition>
+<definition id="fs-idp70203856">
+<term>proprioception</term>
+<meaning id="fs-idm25315648">perception of body position</meaning>
+</definition>
+<definition id="fs-idm10518128">
+<term>Ruffini corpuscle</term>
+<meaning id="fs-idm2404864">touch receptor that detects stretch</meaning></definition>
+<definition id="fs-idm25096304">
+<term>taste bud</term>
+<meaning id="fs-idm4913504">grouping of taste receptor cells with hair-like extensions that protrude into the central pore of the taste bud</meaning></definition>
+<definition id="fs-idm16306784">
+<term>thermoception</term>
+<meaning id="fs-idm22170304">temperature perception</meaning>
+</definition>
+<definition id="fs-idm3092272">
+<term>umami</term>
+<meaning id="fs-idp44441248">taste for monosodium glutamate</meaning></definition>
+<definition id="fs-idp105664096">
+<term>vestibular sense</term>
+<meaning id="fs-idm45131680">contributes to our ability to maintain balance and body posture</meaning>
+</definition>
+</glossary>
+</document>

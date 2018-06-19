@@ -1,0 +1,165 @@
+<?xml version="1.0"?>
+<document xmlns="http://cnx.rice.edu/cnxml" xmlns:md="http://cnx.rice.edu/mdml" xmlns:bib="http://bibtexml.sf.net/" xmlns:m="http://www.w3.org/1998/Math/MathML" xmlns:q="http://cnx.rice.edu/qml/1.0" id="new" cnxml-version="0.7" module-id="new">
+
+<title>Diagnosing and Classifying Psychological Disorders</title>
+<metadata xmlns:md="http://cnx.rice.edu/mdml"
+          mdml-version="0.5">
+  <!-- WARNING! The 'metadata' section is read only. Do not edit below.
+       Changes to the metadata section in the source will not be saved. -->
+  <md:repository>http://legacy.cnx.org/content</md:repository>
+  <md:content-url>http://legacy.cnx.org/content/m49268/latest</md:content-url>
+  <md:content-id>m49268</md:content-id>
+  <md:title>Diagnosing and Classifying Psychological Disorders</md:title>
+  <md:version>1.5</md:version>
+  <md:created>2014/02/13 14:19:25 -0600</md:created>
+  <md:revised>2014/12/16 11:25:31 -0600</md:revised>
+  <md:actors>
+    <md:organization userid="OpenStaxCollege">
+      <md:shortname>OpenStax</md:shortname>
+      <md:fullname>OpenStax</md:fullname>
+      <md:email>info@openstax.org</md:email>
+    </md:organization>
+    <md:person userid="OSCRiceUniversity">
+      <md:firstname>Rice</md:firstname>
+      <md:surname>University</md:surname>
+      <md:fullname>Rice University</md:fullname>
+      <md:email>info@openstaxcollege.org</md:email>
+    </md:person>
+    <md:person userid="cnxpsych">
+      <md:firstname>CNX</md:firstname>
+      <md:surname>Psychology</md:surname>
+      <md:fullname>OpenStax Psychology</md:fullname>
+      <md:email>info@openstaxcollege.org</md:email>
+    </md:person>
+  </md:actors>
+  <md:roles>
+    <md:role type="author">OpenStaxCollege</md:role>
+    <md:role type="maintainer">OpenStaxCollege cnxpsych</md:role>
+    <md:role type="licensor">OSCRiceUniversity</md:role>
+  </md:roles>
+  <md:license url="http://creativecommons.org/licenses/by/4.0/">Creative Commons Attribution License 4.0</md:license>
+  <!-- For information on license requirements for use or modification, see license url in the
+       above <md:license> element.
+       For information on formatting required attribution, see the URL:
+         CONTENT_URL/content_info#cnx_cite_header
+       where CONTENT_URL is the value provided above in the <md:content-url> element.
+  -->
+  <md:keywordlist>
+    <md:keyword>comorbidity</md:keyword>
+    <md:keyword>diagnosis</md:keyword>
+    <md:keyword>Diagnostic and Statistical Manual of Mental Disorders</md:keyword>
+    <md:keyword>DSM</md:keyword>
+    <md:keyword>DSM-5</md:keyword>
+    <md:keyword>ICD</md:keyword>
+    <md:keyword>International Classification of Diseases</md:keyword>
+  </md:keywordlist>
+  <md:subjectlist>
+    <md:subject>Social Sciences</md:subject>
+  </md:subjectlist>
+  <md:abstract>By the end of this section, you will be able to:
+<list>
+<item>Explain why classification systems are necessary in the study of psychopathology</item>
+<item>Describe the basic features of the Diagnostic and Statistical Manual of Mental Disorders, Fifth Edition (DSM-5)</item>
+<item>Discuss changes in the DSM over time, including criticisms of the current edition</item>
+<item>Identify which disorders are generally the most common</item>
+</list></md:abstract>
+  <md:language>en</md:language>
+  <!-- WARNING! The 'metadata' section is read only. Do not edit above.
+       Changes to the metadata section in the source will not be saved. -->
+</metadata>
+
+<content>
+  <para id="fs-idp69473056">A first step in the study of psychological disorders is carefully and systematically discerning significant signs and symptoms. How do mental health professionals ascertain whether or not a person’s inner states and behaviors truly represent a psychological disorder? Arriving at a proper <term>diagnosis</term>—that is, appropriately identifying and labeling a set of defined symptoms—is absolutely crucial. This process enables professionals to use a common language with others in the field and aids in communication about the disorder with the patient, colleagues and the public. A proper diagnosis is an essential element to guide proper and successful treatment. For these reasons, classification systems that organize psychological disorders systematically are necessary.</para>
+  
+  <section id="fs-idp94298720"><title><emphasis effect="italics">THE DIAGNOSTIC AND STATISTICAL MANUAL OF MENTAL DISORDERS</emphasis> (DSM)</title><para id="fs-idp68461424">Although a number of classification systems have been developed over time, the one that is used by most mental health professionals in the United States is the <term><emphasis effect="italics">Diagnostic and Statistical Manual of Mental Disorders</emphasis> (DSM-5)</term>, published by the American Psychiatric Association (2013). (Note that the American Psychiatric Association differs from the American Psychological Association; both are abbreviated APA.) The first edition of the DSM, published in 1952, classified psychological disorders according to a format developed by the U.S. Army during World War II (Clegg, 2012). In the years since, the DSM has undergone numerous revisions and editions. The most recent edition, published in 2013, is the DSM-5 (APA, 2013). The DSM-5 includes many categories of disorders (e.g., anxiety disorders, depressive disorders, and dissociative disorders). Each disorder is described in detail, including an overview of the disorder (diagnostic features), specific symptoms required for diagnosis (diagnostic criteria), prevalence information (what percent of the population is thought to be afflicted with the disorder), and risk factors associated with the disorder. <link target-id="Figure_15_02_Disorders"/> shows lifetime prevalence rates—the percentage of people in a population who develop a disorder in their lifetime—of various psychological disorders among U.S. adults. These data were based on a national sample of 9,282 U.S. residents (National Comorbidity Survey, 2007).</para>
+    
+    <figure id="Figure_15_02_Disorders">
+     <media id="fs-idp51680080" alt="A bar graph has an x-axis labeled &#x201C;DSM disorder&#x201D; and a y-axis labeled &#x201C;Lifetime prevalence rates.&#x201D; For each disorder, a prevalence rate is given for total population, females, and males. The approximate data shown is: &#x201C;major depressive disorder&#x201D; 17% total, 20% females, 13% males; &#x201C;alcohol abuse&#x201D; 13% total, 7% females, 20% males; &#x201C;specific phobia&#x201D; 13% total, 16% females, 8% males; &#x201C;social anxiety disorder&#x201D; 12% total, 13% females, 11% males; &#x201C;drug abuse&#x201D; 8% total, 5% females, 12% males; &#x201C;posttraumatic stress disorder&#x201D; 7% total, 10% females, 3% males; &#x201C;generalized anxiety disorder&#x201D; 6% total, 7% females, 4% males; &#x201C;panic disorder&#x201D; 5% total, 6% females, 3% males; &#x201C;obsessive-compulsive disorder&#x201D; 3% total, 3% females, 2% males; &#x201C;dysthymia&#x201D; 3% total, 3% females, 2% males.">
+       <image mime-type="image/jpeg" src="CNX_Psych_15_02_Disorders.jpg"/>
+     </media>
+     <caption>The graph shows the breakdown of psychological disorders, comparing the percentage prevalence among adult males and adult females in the United States. Because the data is from 2007, the categories shown here are from the DSM-IV, which has been supplanted by the DSM-5. Most categories remain the same; however, alcohol abuse now falls under a broader Alcohol Use Disorder category.</caption>
+    </figure>
+    
+    <para id="fs-idp32145344">The DSM-5 also provides information about <term>comorbidity</term>; the co-occurrence of two disorders. For example, the DSM-5 mentions that 41% of people with obsessive-compulsive disorder (OCD) also meet the diagnostic criteria for major depressive disorder (<link target-id="Figure_15_02_Comorbidity"/>). Drug use is highly comorbid with other mental illnesses; 6 out of 10 people who have a substance use disorder also suffer from another form of mental illness (National Institute on Drug Abuse [NIDA], 2007).</para>
+    
+    <figure id="Figure_15_02_Comorbidity">
+     <media id="fs-idm25506816" alt="A Venn-diagram shows two overlapping circles. One circle is titled &#x201C;Obsessive-Compulsive Disorder&#x201D; and the other is titled &#x201C;Major Depressive Disorder.&#x201D; The area in which these two circles overlap includes forty-one percent of each circle. This area is titled &#x201C;Comorbidity 41%.&#x201D;">
+       <image mime-type="image/jpeg" src="CNX_Psych_15_02_Comorbidity.jpg"/>
+     </media>
+     <caption>Obsessive-compulsive disorder and major depressive disorder frequently occur in the same person.</caption>
+    </figure>
+    <para id="fs-idp5015536">The DSM has changed considerably in the half-century since it was originally published. The first two editions of the DSM, for example, listed homosexuality as a disorder; however, in 1973, the APA voted to remove it from the manual (Silverstein, 2009). Additionally, beginning with the DSM-III in 1980, mental disorders have been described in much greater detail, and the number of diagnosable conditions has grown steadily, as has the size of the manual itself. DSM-I included 106 diagnoses and was 130 total pages, whereas DSM-III included more than 2 times as many diagnoses (265) and was nearly seven times its size (886 total pages) (Mayes &amp; Horowitz, 2005). Although DSM-5 is longer than DSM-IV, the volume includes only 237 disorders, a decrease from the 297 disorders that were listed in DSM-IV. The latest edition, DSM-5, includes revisions in the organization and naming of categories and in the diagnostic criteria for various disorders (Regier, Kuhl, &amp; Kupfer, 2012), while emphasizing careful consideration of the importance of gender and cultural difference in the expression of various symptoms (Fisher, 2010).</para>
+    <para id="fs-idp3576848">Some believe that establishing new diagnoses might overpathologize the human condition by turning common human problems into mental illnesses (The Associated Press, 2013). Indeed, the finding that nearly half of all Americans will meet the criteria for a DSM disorder at some point in their life (Kessler et al., 2005) likely fuels much of this skepticism. The DSM-5 is also criticized on the grounds that its diagnostic criteria have been loosened, thereby threatening to “turn our current diagnostic inflation into diagnostic hyperinflation” (Frances, 2012, para. 22). For example, DSM-IV specified that the symptoms of major depressive disorder must not be attributable to normal bereavement (loss of a loved one). The DSM-5, however, has removed this bereavement exclusion, essentially meaning that grief and sadness after a loved one’s death can constitute major depressive disorder.  </para>
+  </section><section id="fs-idp8661648">
+    <title>THE INTERNATIONAL CLASSIFICATION OF DISEASES</title>
+    <para id="fs-idm19257776">A second classification system, the <term><emphasis effect="italics">International Classification of Diseases</emphasis> (ICD)</term>, is also widely recognized. Published by the World Health Organization (WHO), the ICD was developed in Europe shortly after World War II and, like the DSM, has been revised several times. The categories of psychological disorders in both the DSM and ICD are similar, as are the criteria for specific disorders; however, some differences exist. Although the ICD is used for clinical purposes, this tool is also used to examine the general health of populations and to monitor the prevalence of diseases and other health problems internationally (WHO, 2013). The ICD is in its 10th edition (ICD-10); however, efforts are now underway to develop a new edition (ICD-11) that, in conjunction with the changes in DSM-5, will help harmonize the two classification systems as much as possible (APA, 2013).</para>
+    
+    <para id="fs-idm54945712">A study that compared the use of the two classification systems found that worldwide the ICD is more frequently used for clinical diagnosis, whereas the DSM is more valued for research (Mezzich, 2002). Most research findings concerning the etiology and treatment of psychological disorders are based on criteria set forth in the DSM (Oltmanns &amp; Castonguay, 2013). The DSM also includes more explicit disorder criteria, along with an extensive and helpful explanatory text (Regier et al., 2012). The DSM is the classification system of choice among U.S. mental health professionals, and this chapter is based on the DSM paradigm.</para>
+  </section>
+      <section id="fs-idp48709696">
+        <title>THE COMPASSIONATE VIEW OF PSYCHOLOGICAL DISORDERS</title>
+        <para id="fs-idp87396560">As these disorders are outlined, please bear two things in mind. First, remember that psychological disorders represent <emphasis effect="italics">extremes</emphasis> of inner experience and behavior. If, while reading about these disorders, you feel that these descriptions begin to personally characterize you, do not worry—this moment of enlightenment probably means nothing more than you are normal. Each of us experiences episodes of sadness, anxiety, and preoccupation with certain thoughts—times when we do not quite feel ourselves. These episodes should not be considered problematic unless the accompanying thoughts and behaviors become extreme and have a disruptive effect on one’s life. Second, understand that people with psychological disorders are far more than just embodiments of their disorders. We do not use terms such as schizophrenics, depressives, or phobics because they are labels that objectify people who suffer from these conditions, thus promoting biased and disparaging assumptions about them. It is important to remember that a psychological disorder is not what a person <emphasis effect="italics">is</emphasis>; it is something that a person <emphasis effect="italics">has</emphasis>—through no fault of his or her own. As is the case with cancer or diabetes, those with psychological disorders suffer debilitating, often painful conditions that are not of their own choosing. These individuals deserve to be viewed and treated with compassion, understanding, and dignity.</para>
+      </section>
+  <section id="fs-idp51641408" class="summary"><title>Summary</title><para id="fs-idp110812416">The diagnosis and classification of psychological disorders is essential in studying and treating psychopathology. The classification system used by most U.S. professionals is the DSM-5. The first edition of the DSM was published in 1952, and has undergone numerous revisions. The 5th and most recent edition, the DSM-5, was published in 2013. The diagnostic manual includes a total of 237 specific diagnosable disorders, each described in detail, including its symptoms, prevalence, risk factors, and comorbidity. Over time, the number of diagnosable conditions listed in the DSM has grown steadily, prompting criticism from some. Nevertheless, the diagnostic criteria in the DSM are more explicit than that of any other system, which makes the DSM system highly desirable for both clinical diagnosis and research.</para>
+  </section><section id="fs-idp57530112" class="review-questions">
+        <title>Review Questions</title>
+        <exercise id="fs-idp96795840">
+        <problem id="fs-idp60755376"><para id="fs-idm53801856">The letters in the abbreviation DSM-5 stand for ________.</para>
+            <list id="fs-idp47199360" list-type="enumerated" number-style="lower-alpha">
+                <item>Diseases and Statistics Manual of Medicine</item>
+<item>Diagnosable Standards Manual of Mental Disorders</item>
+<item>Diseases and Symptoms Manual of Mental Disorders</item>
+<item>Diagnostic and Statistical Manual of Mental Disorders</item>
+
+            </list>
+        </problem>
+        <solution id="fs-idp51592496"><para id="fs-idm24366976">D</para></solution>
+        </exercise>
+        
+        <exercise id="fs-idp87413216">
+        <problem id="fs-idm68434480"><para id="fs-idp211024">A study based on over 9,000 U. S. residents found that the most prevalent disorder was ________.</para>
+            <list id="fs-idm17817104" list-type="enumerated" number-style="lower-alpha">
+               <item>major depressive disorder</item>
+<item>social anxiety disorder</item> 
+<item>obsessive-compulsive disorder</item>
+<item>specific phobia</item> 
+
+            </list>
+        </problem>
+        <solution id="fs-idm9855312"><para id="fs-idm56077904">A</para></solution>
+        </exercise>
+        
+  </section>
+  
+  <section id="fs-idm22659696" class="critical-thinking">
+        <title>Critical Thinking Questions</title>
+        <exercise id="fs-idm28331440"><problem id="fs-idp57031744"><para id="fs-idm8193664">Describe the DSM-5. What is it, what kind of information does it contain, and why is it important to the study and treatment of psychological disorders?</para></problem>
+<solution id="fs-idp54323728"><para id="fs-idp66179776">The DSM-5 is the classification system of psychological disorders preferred by most U.S. mental health professionals, and it is published by the American Psychiatric Association (APA). It consists of broad categories of disorders and specific disorders that fall within each category. Each disorder has an explicit description of its symptoms, as well as information concerning prevalence, risk factors, and comorbidity. The DSM-5 provides a common language that enables mental health professionals to communicate effectively about sets of symptoms.</para></solution></exercise>
+    
+    <exercise id="fs-idp52595552"><problem id="fs-idm1947552"><para id="fs-idm53664992">The International Classification of Diseases (ICD) and the DSM differ in various ways. What are some of the differences in these two classification systems?</para></problem>
+<solution id="fs-idp15744992"><para id="fs-idp80738608">The ICD is used primarily for making clinical diagnoses and more broadly for examining the general health of populations and monitoring the international prevalence of diseases and other health problems. While the DSM is also used for diagnostic purposes, it is also highly valued as a research tool. For example, much of the data regarding the etiology and treatment of psychological disorders are based on diagnostic criteria set forth in the DSM.</para></solution></exercise>
+  </section>
+  
+  
+</content>
+<glossary>
+  
+  <definition id="fs-idm51520784">
+            <term>comorbidity</term>
+            <meaning id="fs-idm33008896">co-occurrence of two disorders in the same individual</meaning></definition>
+  
+  <definition id="fs-idm55498096">
+            <term>diagnosis</term>
+            <meaning id="fs-idm42282352">determination of which disorder a set of symptoms represents</meaning></definition>
+  
+  <definition id="fs-idm33143456">
+            <term><emphasis effect="italics">Diagnostic and Statistical Manual of Mental Disorders, Fifth Edition</emphasis> (DSM-5)</term>
+            <meaning id="fs-idm50670704">authoritative index of mental disorders and the criteria for their diagnosis; published by the American Psychiatric Association (APA)</meaning></definition>
+  
+  <definition id="fs-idp36002160">
+            <term><emphasis effect="italics">International Classification of Diseases</emphasis> (ICD)</term>
+            <meaning id="fs-idm9449456">authoritative index of mental and physical diseases, including infectious diseases, and the criteria for their diagnosis; published by the World Health Organization (WHO)</meaning></definition>
+  
+  
+</glossary>
+</document>

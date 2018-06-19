@@ -1,0 +1,288 @@
+<?xml version="1.0"?>
+<document xmlns="http://cnx.rice.edu/cnxml" xmlns:md="http://cnx.rice.edu/mdml" xmlns:bib="http://bibtexml.sf.net/" xmlns:m="http://www.w3.org/1998/Math/MathML" xmlns:q="http://cnx.rice.edu/qml/1.0" id="new" cnxml-version="0.7" module-id="new">
+
+<title>History of Psychology</title>
+<metadata xmlns:md="http://cnx.rice.edu/mdml"
+          mdml-version="0.5">
+  <!-- WARNING! The 'metadata' section is read only. Do not edit below.
+       Changes to the metadata section in the source will not be saved. -->
+  <md:repository>http://legacy.cnx.org/content</md:repository>
+  <md:content-url>http://legacy.cnx.org/content/m49017/latest/</md:content-url>
+  <md:content-id>m49017</md:content-id>
+  <md:title>History of Psychology</md:title>
+  <md:version>1.5</md:version>
+  <md:created>2014/02/07 07:44:18 -0600</md:created>
+  <md:revised>2014/12/22 11:09:13.376 US/Central</md:revised>
+  <md:actors>
+    <md:organization userid="OpenStaxCollege">
+      <md:shortname>OpenStax College</md:shortname>
+      <md:fullname>OpenStax College</md:fullname>
+      <md:email>info@openstaxcollege.org</md:email>
+    </md:organization>
+    <md:person userid="OSCRiceUniversity">
+      <md:firstname>Rice</md:firstname>
+      <md:surname>University</md:surname>
+      <md:fullname>Rice University</md:fullname>
+      <md:email>daniel@openstaxcollege.org</md:email>
+    </md:person>
+    <md:person userid="cnxpsych">
+      <md:firstname>CNX</md:firstname>
+      <md:surname>Psychology</md:surname>
+      <md:fullname>CNX Psychology</md:fullname>
+      <md:email>info@openstaxcollege.org</md:email>
+    </md:person>
+  </md:actors>
+  <md:roles>
+    <md:role type="author">OpenStaxCollege</md:role>
+    <md:role type="maintainer">OpenStaxCollege cnxpsych</md:role>
+    <md:role type="licensor">OSCRiceUniversity</md:role>
+  </md:roles>
+  <md:license url="http://creativecommons.org/licenses/by/4.0/">Creative Commons Attribution License 4.0</md:license>
+  <!-- For information on license requirements for use or modification, see license url in the
+       above <md:license> element.
+       For information on formatting required attribution, see the URL:
+         CONTENT_URL/content_info#cnx_cite_header
+       where CONTENT_URL is the value provided above in the <md:content-url> element.
+  -->
+  <md:keywordlist>
+    <md:keyword>Abraham Maslow</md:keyword>
+    <md:keyword>behaviorism</md:keyword>
+    <md:keyword>B. F. Skinner</md:keyword>
+    <md:keyword>Carl Rogers</md:keyword>
+    <md:keyword>client-centered therapy</md:keyword>
+    <md:keyword>contemporary psychology</md:keyword>
+    <md:keyword>feminist psychology</md:keyword>
+    <md:keyword>functionalism</md:keyword>
+    <md:keyword>Gestalt</md:keyword>
+    <md:keyword>history of psychology</md:keyword>
+    <md:keyword>humanism</md:keyword>
+    <md:keyword>introspection</md:keyword>
+    <md:keyword>Ivan Pavlov</md:keyword>
+    <md:keyword>John Watson</md:keyword>
+    <md:keyword>Kurt Koffka</md:keyword>
+    <md:keyword>Max Wertheimer</md:keyword>
+    <md:keyword>modern psychology</md:keyword>
+    <md:keyword>multicultural psychology</md:keyword>
+    <md:keyword>Noam Chomsky</md:keyword>
+    <md:keyword>psychoanalytic theory</md:keyword>
+    <md:keyword>Sigmund Freud</md:keyword>
+    <md:keyword>Skinner box</md:keyword>
+    <md:keyword>structuralism</md:keyword>
+    <md:keyword>unconditional positive regard</md:keyword>
+    <md:keyword>unconscious</md:keyword>
+    <md:keyword>Wilhelm Wundt</md:keyword>
+    <md:keyword>William James</md:keyword>
+    <md:keyword>Wolfgang Köhler</md:keyword>
+  </md:keywordlist>
+  <md:subjectlist>
+    <md:subject>Social Sciences</md:subject>
+  </md:subjectlist>
+  <md:abstract>By the end of this section, you will be able to:
+<list>
+<item>Understand the importance of Wundt and James in the development of psychology</item>
+<item>Appreciate Freud’s influence on psychology</item>
+<item>Understand the basic tenets of Gestalt psychology</item>
+<item>Appreciate the important role that behaviorism played in psychology’s history</item>
+<item>Understand basic tenets of humanism</item>
+<item>Understand how the cognitive revolution shifted psychology’s focus back to the mind</item>
+</list></md:abstract>
+  <md:language>en</md:language>
+  <!-- WARNING! The 'metadata' section is read only. Do not edit above.
+       Changes to the metadata section in the source will not be saved. -->
+</metadata>
+
+<content>
+<para id="fs-idm48059152">Psychology is a relatively young science with its experimental roots in the 19th century, compared, for example, to human physiology, which dates much earlier. As mentioned, anyone interested in exploring issues related to the mind generally did so in a philosophical context prior to the 19th century. Two men, working in the 19th century, are generally credited as being the founders of psychology as a science and academic discipline that was distinct from philosophy. Their names were Wilhelm Wundt and William James. This section will provide an overview of the shifts in paradigms that have influenced psychology from Wundt and James through today.</para>
+<section id="fs-idm5993920">
+<title>WUNDT AND STRUCTURALISM</title>
+<para id="fs-idm61487312">Wilhelm <term class="no-emphasis">Wundt</term> (1832–1920) was a German scientist who was the first person to be referred to as a psychologist. His famous book entitled <emphasis effect="italics">Principles of Physiological Psychology</emphasis> was published in 1873. Wundt viewed psychology as a scientific study of conscious experience, and he believed that the goal of psychology was to identify components of consciousness and how those components combined to result in our conscious experience. Wundt used <term>introspection</term> (he called it “internal perception”), a process by which someone examines their own conscious experience as objectively as possible, making the human mind like any other aspect of nature that a scientist observed. Wundt’s version of introspection used only very specific experimental conditions in which an external stimulus was designed to produce a scientifically observable (repeatable) experience of the mind (Danziger, 1980). The first stringent requirement was the use of “trained” or practiced observers, who could immediately observe and report a reaction. The second requirement was the use of repeatable stimuli that always produced the same experience in the subject and allowed the subject to expect and thus be fully attentive to the inner reaction. These experimental requirements were put in place to eliminate “interpretation” in the reporting of internal experiences and to counter the argument that there is no way to know that an individual is observing their mind or consciousness accurately, since it cannot be seen by any other person. This attempt to understand the structure or characteristics of the mind was known as <term>structuralism</term>. Wundt established his psychology laboratory at the University at Leipzig in 1879 (<link target-id="CNX_Psych_01_02_Wundt"/>). In this laboratory, Wundt and his students conducted experiments on, for example, reaction times. A subject, sometimes in a room isolated from the scientist, would receive a stimulus such as a light, image, or sound. The subject’s reaction to the stimulus would be to push a button, and an apparatus would record the time to reaction. Wundt could measure reaction time to one-thousandth of a second (Nicolas &amp; Ferrand, 1999).</para>
+<figure id="CNX_Psych_01_02_Wundt">
+<media id="fs-idm133412992" alt="Photograph A shows Wilhelm Wundt. Photograph B shows Wundt and five other people gathered around a desk with equipment on top of it.">
+<image mime-type="image/jpeg" src="CNX_Psych_01_02_Wundt.jpg"/>
+</media>
+<caption>(a) Wilhelm Wundt is credited as one of the founders of psychology. He created the first laboratory for psychological research. (b) This photo shows him seated and surrounded by fellow researchers and equipment in his laboratory in Germany.</caption>
+</figure><para id="eip-586">However, despite his efforts to train individuals in the process of introspection, this process remained highly subjective, and there was very little agreement between individuals. As a result, structuralism fell out of favor with the passing of Wundt’s student, Edward Titchener, in 1927 (Gordon, 1995).</para>
+</section>
+<section id="fs-idm93623136">
+<title>JAMES AND FUNCTIONALISM</title>
+<para id="fs-idp35147312">William <term class="no-emphasis">James</term> (1842–1910) was the first American psychologist who espoused a different perspective on how psychology should operate (<link target-id="CNX_Psych_01_02_James"/>). James was introduced to Darwin’s theory of evolution by natural selection and accepted it as an explanation of an organism’s characteristics. Key to that theory is the idea that natural selection leads to organisms that are adapted to their environment, including their behavior. Adaptation means that a trait of an organism has a function for the survival and reproduction of the individual, because it has been naturally selected. As James saw it, psychology’s purpose was to study the function of behavior in the world, and as such, his perspective was known as <term>functionalism</term>. Functionalism focused on how mental activities helped an organism fit into its environment. Functionalism has a second, more subtle meaning in that functionalists were more interested in the operation of the whole mind rather than of its individual parts, which were the focus of structuralism. Like Wundt, James believed that introspection could serve as one means by which someone might study mental activities, but James also relied on more objective measures, including the use of various recording devices, and examinations of concrete products of mental activities and of anatomy and physiology (Gordon, 1995).</para>
+<figure id="CNX_Psych_01_02_James"><media id="fs-idm84774656" alt="A drawing depicts the William James.">
+<image mime-type="image/jpeg" src="CNX_Psych_01_02_James.jpg"/>
+</media>
+
+<caption>William James, shown here in a self-portrait, was the first American psychologist.</caption></figure></section>
+<section id="fs-idm78841520">
+<title>FREUD AND PSYCHOANALYTIC THEORY</title>
+<para id="fs-idp64602112">Perhaps one of the most influential and well-known figures in psychology’s history was Sigmund <term class="no-emphasis">Freud</term> (<link target-id="CNX_Psych_01_02_Freud"/>). Freud (1856–1939) was an Austrian neurologist who was fascinated by patients suffering from “hysteria” and neurosis. Hysteria was an ancient diagnosis for disorders, primarily of women with a wide variety of symptoms, including physical symptoms and emotional disturbances, none of which had an apparent physical cause. Freud theorized that many of his patients’ problems arose from the unconscious mind. In Freud’s view, the unconscious mind was a repository of feelings and urges of which we have no awareness. Gaining access to the unconscious, then, was crucial to the successful resolution of the patient’s problems. According to Freud, the unconscious mind could be accessed through dream analysis, by examinations of the first words that came to people’s minds, and through seemingly innocent slips of the tongue. <term>Psychoanalytic theory</term> focuses on the role of a person’s unconscious, as well as early childhood experiences, and this particular perspective dominated clinical psychology for several decades (Thorne &amp; Henley, 2005).</para>
+<figure id="CNX_Psych_01_02_Freud">
+<media id="fs-idm66639488" alt="Photograph A shows Sigmund Freud. Image B shows the title page of his book, A General Introduction to Psychoanalysis.">
+<image mime-type="image/jpeg" src="CNX_Psych_01_02_Freud.jpg"/>
+</media>
+<caption>(a) Sigmund Freud was a highly influential figure in the history of psychology. (b) One of his many books, <emphasis effect="italics">A General Introduction to Psychoanalysis</emphasis>, shared his ideas about psychoanalytical therapy; it was published in 1922.</caption>
+</figure>
+<para id="fs-idm50839632">Freud’s ideas were influential, and you will learn more about them when you study lifespan development, personality, and therapy. For instance, many therapists believe strongly in the unconscious and the impact of early childhood experiences on the rest of a person’s life. The method of psychoanalysis, which involves the patient talking about their experiences and selves, while not invented by Freud, was certainly popularized by him and is still used today. Many of Freud’s other ideas, however, are controversial. Drew Westen (1998) argues that many of the criticisms of Freud’s ideas are misplaced, in that they attack his older ideas without taking into account later writings. Westen also argues that critics fail to consider the success of the broad ideas that Freud introduced or developed, such as the importance of childhood experiences in adult motivations, the role of unconscious versus conscious motivations in driving our behavior, the fact that motivations can cause conflicts that affect behavior, the effects of mental representations of ourselves and others in guiding our interactions, and the development of personality over time. Westen identifies subsequent research support for all of these ideas.</para>
+<para id="fs-idm2800432">More modern iterations of Freud’s clinical approach have been empirically demonstrated to be effective (Knekt et al., 2008; Shedler, 2010). Some current practices in psychotherapy involve examining unconscious aspects of the self and relationships, often through the relationship between the therapist and the client. Freud’s historical significance and contributions to clinical practice merit his inclusion in a discussion of the historical movements within psychology.</para> 
+</section>
+<section id="fs-idm97381040">
+<title>WERTHEIMER, KOFFKA, KÖHLER, AND GESTALT PSYCHOLOGY</title>
+<para id="fs-idp12734720">Max Wertheimer (1880–1943), Kurt Koffka (1886–1941), and Wolfgang Köhler (1887–1967) were three German psychologists who immigrated to the United States in the early 20th century to escape Nazi Germany. These men are credited with introducing psychologists in the United States to various Gestalt principles. The word <term class="no-emphasis">Gestalt</term> roughly translates to “whole;” a major emphasis of Gestalt psychology deals with the fact that although a sensory experience can be broken down into individual parts, how those parts relate to each other as a whole is often what the individual responds to in perception. For example, a song may be made up of individual notes played by different instruments, but the real nature of the song is perceived in the combinations of these notes as they form the melody, rhythm, and harmony. In many ways, this particular perspective would have directly contradicted Wundt’s ideas of structuralism (Thorne &amp; Henley, 2005).</para>
+<para id="fs-idm75121728">Unfortunately, in moving to the United States, these men were forced to abandon much of their work and were unable to continue to conduct research on a large scale. These factors along with the rise of behaviorism (described next) in the United States prevented principles of Gestalt psychology from being as influential in the United States as they had been in their native Germany (Thorne &amp; Henley, 2005). Despite these issues, several Gestalt principles are still very influential today. Considering the human individual as a whole rather than as a sum of individually measured parts became an important foundation in humanistic theory late in the century. The ideas of Gestalt have continued to influence research on sensation and perception.</para><para id="fs-idm123393392">Structuralism, Freud, and the Gestalt psychologists were all concerned in one way or another with describing and understanding inner experience. But other researchers had concerns that inner experience could be a legitimate subject of scientific inquiry and chose instead to exclusively study behavior, the objectively observable outcome of mental processes.</para>
+</section>
+<section id="fs-idm90781904">
+<title>PAVLOV, WATSON, SKINNER, AND BEHAVIORISM</title>
+<para id="fs-idp58395184">Early work in the field of behavior was conducted by the Russian physiologist Ivan <term class="no-emphasis">Pavlov</term> (1849–1936). Pavlov studied a form of learning behavior called a conditioned reflex, in which an animal or human produced a reflex (unconscious) response to a stimulus and, over time, was conditioned to produce the response to a different stimulus that the experimenter associated with the original stimulus. The reflex Pavlov worked with was salivation in response to the presence of food. The salivation reflex could be elicited using a second stimulus, such as a specific sound, that was presented in association with the initial food stimulus several times. Once the response to the second stimulus was “learned,” the food stimulus could be omitted. Pavlov’s “classical conditioning” is only one form of learning behavior studied by behaviorists.</para>
+<para id="fs-idm90863904">John B. <term class="no-emphasis">Watson</term> (1878–1958) was an influential American psychologist whose most famous work occurred during the early 20th century at Johns Hopkins University (<link target-id="CNX_Psych_01_02_Watson"/>). While Wundt and James were concerned with understanding conscious experience, Watson thought that the study of consciousness was flawed. Because he believed that objective analysis of the mind was impossible, Watson preferred to focus directly on observable behavior and try to bring that behavior under control. Watson was a major proponent of shifting the focus of psychology from the mind to behavior, and this approach of observing and controlling behavior came to be known as <term>behaviorism</term>. A major object of study by behaviorists was learned behavior and its interaction with inborn qualities of the organism. Behaviorism commonly used animals in experiments under the assumption that what was learned using animal models could, to some degree, be applied to human behavior. Indeed, Tolman (1938) stated, “I believe that everything important in psychology (except … such matters as involve society and words) can be investigated in essence through the continued experimental and theoretical analysis of the determiners of rat behavior at a choice-point in a maze.”</para><figure id="CNX_Psych_01_02_Watson">
+<media id="fs-idm86911392" alt="A photograph shows John B. Watson.">
+<image mime-type="image/jpeg" src="CNX_Psych_01_02_Watson.jpg"/>
+</media>
+<caption>John B. Watson is known as the father of behaviorism within psychology.</caption>
+</figure>
+<para id="eip-683">Behaviorism dominated experimental psychology for several decades, and its influence can still be felt today (Thorne &amp; Henley, 2005). Behaviorism is largely responsible for establishing psychology as a scientific discipline through its objective methods and especially experimentation. In addition, it is used in behavioral and cognitive-behavioral therapy. Behavior modification is commonly used in classroom settings. Behaviorism has also led to research on environmental influences on human behavior.</para><para id="fs-idm92162944">B. F. <term class="no-emphasis">Skinner</term> (1904–1990) was an American psychologist (<link target-id="CNX_Psych_01_02_Skinner"/>). Like Watson, Skinner was a behaviorist, and he concentrated on how behavior was affected by its consequences. Therefore, Skinner spoke of reinforcement and punishment as major factors in driving behavior. As a part of his research, Skinner developed a chamber that allowed the careful study of the principles of modifying behavior through reinforcement and punishment. This device, known as an operant conditioning chamber (or more familiarly, a Skinner box), has remained a crucial resource for researchers studying behavior (Thorne &amp; Henley, 2005).</para>
+<figure id="CNX_Psych_01_02_Skinner"><media id="fs-idp18812992" alt="Photograph A shows B.F. Skinner. Illustration B shows a rat in a Skinner box: a chamber with a speaker, lights, a lever, and a food dispenser.">
+<image mime-type="image/jpeg" src="CNX_Psych_01_02_Skinner.jpg"/>
+</media>
+
+<caption>(a) B. F. Skinner is famous for his research on operant conditioning. (b) Modified versions of the operant conditioning chamber, or Skinner box, are still widely used in research settings today. (credit a: modification of work by "Silly rabbit"/Wikimedia Commons)</caption></figure><para id="fs-idp58092432">The <term class="no-emphasis">Skinner box</term> is a chamber that isolates the subject from the external environment and has a behavior indicator such as a lever or a button. When the animal pushes the button or lever, the box is able to deliver a positive reinforcement of the behavior (such as food) or a punishment (such as a noise) or a token conditioner (such as a light) that is correlated with either the positive reinforcement or punishment.</para>
+<para id="fs-idp7000048">Skinner’s focus on positive and negative reinforcement of learned behaviors had a lasting influence in psychology that has waned somewhat since the growth of research in cognitive psychology. Despite this, conditioned learning is still used in human behavioral modification. Skinner’s two widely read and controversial popular science books about the value of operant conditioning for creating happier lives remain as thought-provoking arguments for his approach (Greengrass, 2004).</para>
+</section>
+<section id="fs-idm3881328">
+<title>MASLOW, ROGERS, AND HUMANISM</title>
+<para id="fs-idp56995824">During the early 20th century, American psychology was dominated by behaviorism and psychoanalysis. However, some psychologists were uncomfortable with what they viewed as limited perspectives being so influential to the field. They objected to the pessimism and determinism (all actions driven by the unconscious) of Freud. They also disliked the reductionism, or simplifying nature, of behaviorism. Behaviorism is also deterministic at its core, because it sees human behavior as entirely determined by a combination of genetics and environment. Some psychologists began to form their own ideas that emphasized personal control, intentionality, and a true predisposition for “good” as important for our self-concept and our behavior. Thus, humanism emerged. <term>Humanism</term> is a perspective within psychology that emphasizes the potential for good that is innate to all humans. Two of the most well-known proponents of humanistic psychology are Abraham Maslow and Carl Rogers (O’Hara, n.d.).</para>
+<para id="fs-idm47239952">Abraham <term class="no-emphasis">Maslow</term> (1908–1970) was an American psychologist who is best known for proposing a hierarchy of human needs in motivating behavior (<link target-id="CNX_Psych_01_02_Maslow"/>). Although this concept will be discussed in more detail in a later chapter, a brief overview will be provided here. Maslow asserted that so long as basic needs necessary for survival were met (e.g., food, water, shelter), higher-level needs (e.g., social needs) would begin to motivate behavior. According to Maslow, the highest-level needs relate to self-actualization, a process by which we achieve our full potential. Obviously, the focus on the positive aspects of human nature that are characteristic of the humanistic perspective is evident (Thorne &amp; Henley, 2005). Humanistic psychologists rejected, on principle, the research approach based on reductionist experimentation in the tradition of the physical and biological sciences, because it missed the “whole” human being. Beginning with Maslow and Rogers, there was an insistence on a humanistic research program. This program has been largely qualitative (not measurement-based), but there exist a number of quantitative research strains within humanistic psychology, including research on happiness, self-concept, meditation, and the outcomes of humanistic psychotherapy (Friedman, 2008).</para>
+<figure id="CNX_Psych_01_02_Maslow"><media id="fs-idp13014848" alt="A triangle is divided vertically into five sections with corresponding labels inside and outside of the triangle for each section. From top to bottom, the triangle's sections are labeled: self-actualization corresponds to &#x201C;Inner fulfillment&#x201D; esteem corresponds to &#x201C;Self-worth, accomplishment, confidence&#x201D;; social corresponds to &#x201C;Family, friendship, intimacy, belonging&#x201D; security corresponds to &#x201C;Safety, employment, assets&#x201D;; &#x201C;physiological corresponds to Food, water, shelter, warmth.&#x201D;">
+<image mime-type="image/jpeg" src="CNX_Psych_01_02_Maslow.jpg"/>
+</media>
+
+<caption>Maslow’s hierarchy of needs is shown.</caption></figure><para id="fs-idm60943184">Carl <term class="no-emphasis">Rogers</term> (1902–1987) was also an American psychologist who, like Maslow, emphasized the potential for good that exists within all people (<link target-id="CNX_Psych_01_02_Rogers"/>). Rogers used a therapeutic technique known as client-centered therapy in helping his clients deal with problematic issues that resulted in their seeking psychotherapy. Unlike a psychoanalytic approach in which the therapist plays an important role in interpreting what conscious behavior reveals about the unconscious mind, client-centered therapy involves the patient taking a lead role in the therapy session. Rogers believed that a therapist needed to display three features to maximize the effectiveness of this particular approach: unconditional positive regard, genuineness, and empathy. Unconditional positive regard refers to the fact that the therapist accepts their client for who they are, no matter what he or she might say. Provided these factors, Rogers believed that people were more than capable of dealing with and working through their own issues (Thorne &amp; Henley, 2005).</para> 
+<figure id="CNX_Psych_01_02_Rogers">
+<media id="fs-idm80965936" alt="A drawing depicts Carl Rogers.">
+<image mime-type="image/jpeg" src="CNX_Psych_01_02_Rogers.jpg"/>
+</media>
+<caption>Carl Rogers, shown in this portrait, developed a client-centered therapy method that has been influential in clinical settings. (credit: "Didius"/Wikimedia Commons)</caption>
+</figure>
+<para id="fs-idm80995120">Humanism has been influential to psychology as a whole. Both Maslow and Rogers are well-known names among students of psychology (you will read more about both men later in this text), and their ideas have influenced many scholars. Furthermore, Rogers’ client-centered approach to therapy is still commonly used in psychotherapeutic settings today (O’hara, n.d.)</para>
+<note id="fs-idm103072032" class="psychology link-to-learning"><label>Link to Learning</label>
+<media id="fs-idm79504784" alt="">
+<image mime-type="png" src="OSC_Interactive_150.png"/>
+</media>
+<para id="fs-idm9953232">View a brief <link url="http://openstaxcollege.org/l/crogers1">video</link> of Carl Rogers describing his therapeutic approach.</para>
+</note></section>
+<section id="fs-idm98402320">
+<title>THE COGNITIVE REVOLUTION</title>
+<para id="fs-idp101701360">Behaviorism’s emphasis on objectivity and focus on external behavior had pulled psychologists’ attention away from the mind for a prolonged period of time. The early work of the humanistic psychologists redirected attention to the individual human as a whole, and as a conscious and self-aware being. By the 1950s, new disciplinary perspectives in linguistics, neuroscience, and computer science were emerging, and these areas revived interest in the mind as a focus of scientific inquiry. This particular perspective has come to be known as the cognitive revolution (Miller, 2003). By 1967, Ulric Neisser published the first textbook entitled <emphasis effect="italics">Cognitive Psychology</emphasis>, which served as a core text in cognitive psychology courses around the country (Thorne &amp; Henley, 2005).</para>
+<para id="fs-idm121942976">Although no one person is entirely responsible for starting the cognitive revolution, Noam Chomsky was very influential in the early days of this movement (<link target-id="CNX_Psych_01_02_Chomsky"/>). Chomsky (1928–), an American linguist, was dissatisfied with the influence that behaviorism had had on psychology. He believed that psychology’s focus on behavior was short-sighted and that the field had to re-incorporate mental functioning into its purview if it were to offer any meaningful contributions to understanding behavior (Miller, 2003).</para>
+<figure id="CNX_Psych_01_02_Chomsky">
+<media id="fs-idp91281296" alt="A photograph shows a mural on the side of a building. The mural includes Chomsky's face, along with some newspapers, televisions, and cleaning products. At the top of the mural, it reads &#x201C;Noam Chomsky.&#x201D; At the bottom of the mural, it reads &#x201C;the most important intellectual alive.&#x201D;">
+<image mime-type="image/jpeg" src="CNX_Psych_01_02_Chomsky.jpg"/>
+</media>
+<caption>Noam Chomsky was very influential in beginning the cognitive revolution. In 2010, this mural honoring him was put up in Philadelphia, Pennsylvania. (credit: Robert Moran)</caption>
+</figure>
+<para id="fs-idm66647504">European psychology had never really been as influenced by behaviorism as had American psychology; and thus, the cognitive revolution helped reestablish lines of communication between European psychologists and their American counterparts. Furthermore, psychologists began to cooperate with scientists in other fields, like anthropology, linguistics, computer science, and neuroscience, among others. This interdisciplinary approach often was referred to as the cognitive sciences, and the influence and prominence of this particular perspective resonates in modern-day psychology (Miller, 2003).</para>
+<note id="fs-idm92314848" class="psychology dig-deeper">
+<label>Dig Deeper</label>
+<title>Feminist Psychology</title>
+<para id="fs-idm100806480">The science of psychology has had an impact on human wellbeing, both positive and negative. The dominant influence of Western, white, and male academics in the early history of psychology meant that psychology developed with the biases inherent in those individuals, which often had negative consequences for members of society that were not white or male. Women, members of ethnic minorities in both the United States and other countries, and individuals with sexual orientations other than heterosexual had difficulties entering the field of psychology and therefore influencing its development. They also suffered from the attitudes of white, male psychologists, who were not immune to the nonscientific attitudes prevalent in the society in which they developed and worked. Until the 1960s, the science of psychology was largely a “womanless” psychology (Crawford &amp; Marecek, 1989), meaning that few women were able to practice psychology, so they had little influence on what was studied. In addition, the experimental subjects of psychology were mostly men, which resulted from underlying assumptions that gender had no influence on psychology and that women were not of sufficient interest to study.</para>
+<para id="fs-idm65561840">An article by Naomi Weisstein, first published in 1968 (Weisstein, 1993), stimulated a feminist revolution in psychology by presenting a critique of psychology as a science. She also specifically criticized male psychologists for constructing the psychology of women entirely out of their own cultural biases and without careful experimental tests to verify any of their characterizations of women. Weisstein used, as examples, statements by prominent psychologists in the 1960s, such as this quote by Bruno Bettleheim: “. . . we must start with the realization that, as much as women want to be good scientists or engineers, they want first and foremost to be womanly companions of men and to be mothers.” Weisstein’s critique formed the foundation for the subsequent development of a feminist psychology that attempted to be free of the influence of male cultural biases on our knowledge of the psychology of women and, indeed, of both genders.</para><para id="fs-idp5166624">Crawford &amp; Marecek (1989) identify several feminist approaches to psychology that can be described as feminist psychology. These include re-evaluating and discovering the contributions of women to the history of psychology, studying psychological gender differences, and questioning the male bias present across the practice of the scientific approach to knowledge.</para></note>
+</section>
+<section id="fs-idp78799120">
+<title>MULTICULTURAL PSYCHOLOGY</title>
+<para id="fs-idm171769824">Culture has important impacts on individuals and social psychology, yet the effects of <term class="no-emphasis">culture</term> on psychology are under-studied. There is a risk that psychological theories and data derived from white, American settings could be assumed to apply to individuals and social groups from other cultures and this is unlikely to be true (Betancourt &amp; López, 1993). One weakness in the field of cross-cultural psychology is that in looking for differences in psychological attributes across cultures, there remains a need to go beyond simple descriptive statistics (Betancourt &amp; López, 1993). In this sense, it has remained a descriptive science, rather than one seeking to determine cause and effect. For example, a study of characteristics of individuals seeking treatment for a binge eating disorder in Hispanic American, African American, and Caucasian American individuals found significant differences between groups (Franko et al., 2012). The study concluded that results from studying any one of the groups could not be extended to the other groups, and yet potential causes of the differences were not measured.</para><para id="fs-idm126171232">This history of multicultural psychology in the United States is a long one. The role of African American psychologists in researching the cultural differences between African American individual and social psychology is but one example. In 1920, Cecil Sumner was the first African American to receive a PhD in psychology in the United States. Sumner established a psychology degree program at Howard University, leading to the education of a new generation of African American psychologists (Black, Spence, and Omari, 2004). Much of the work of early African American psychologists (and a general focus of much work in first half of the 20th century in psychology in the United States) was dedicated to testing and intelligence testing in particular (Black et al., 2004). That emphasis has continued, particularly because of the importance of testing in determining opportunities for children, but other areas of exploration in African-American psychology research include learning style, sense of community and belonging, and spiritualism (Black et al., 2004).</para><para id="fs-idm80857312">The American Psychological Association has several ethnically based organizations for professional psychologists that facilitate interactions among members. Since psychologists belonging to specific ethnic groups or cultures have the most interest in studying the psychology of their communities, these organizations provide an opportunity for the growth of research on the impact of culture on individual and social psychology.</para>
+<note id="fs-idm68798960" class="psychology link-to-learning"><label>Link to Learning</label>
+<media id="fs-idp6863920" alt="">
+<image mime-type="png" src="OSC_Interactive_150.png"/>
+</media>
+<para id="fs-idp31068608">Read a <link url="http://openstaxcollege.org/l/crogers2">news story</link> about the influence of an African American’s psychology research on the historic <emphasis effect="italics">Brown v. Board of Education</emphasis> civil rights case.</para> 
+</note></section>
+<section id="fs-idm74730496" class="summary"><title>Summary</title><para id="fs-idm127516896">Before the time of Wundt and James, questions about the mind were considered by philosophers. However, both Wundt and James helped create psychology as a distinct scientific discipline. Wundt was a structuralist, which meant he believed that our cognitive experience was best understood by breaking that experience into its component parts. He thought this was best accomplished by introspection.</para>
+<para id="fs-idm69010720">William James was the first American psychologist, and he was a proponent of functionalism. This particular perspective focused on how mental activities served as adaptive responses to an organism’s environment. Like Wundt, James also relied on introspection; however, his research approach also incorporated more objective measures as well.</para>
+<para id="fs-idm71138000">Sigmund Freud believed that understanding the unconscious mind was absolutely critical to understand conscious behavior. This was especially true for individuals that he saw who suffered from various hysterias and neuroses. Freud relied on dream analysis, slips of the tongue, and free association as means to access the unconscious. Psychoanalytic theory remained a dominant force in clinical psychology for several decades.</para>
+<para id="fs-idp10521856">Gestalt psychology was very influential in Europe. Gestalt psychology takes a holistic view of an individual and his experiences. As the Nazis came to power in Germany, Wertheimer, Koffka, and Köhler immigrated to the United States. Although they left their laboratories and their research behind, they did introduce America to Gestalt ideas. Some of the principles of Gestalt psychology are still very influential in the study of sensation and perception.</para>
+<para id="fs-idm30223728">One of the most influential schools of thought within psychology’s history was behaviorism. Behaviorism focused on making psychology an objective science by studying overt behavior and deemphasizing the importance of unobservable mental processes. John Watson is often considered the father of behaviorism, and B. F. Skinner’s contributions to our understanding of principles of operant conditioning cannot be underestimated.</para>
+<para id="fs-idm65457616">As behaviorism and psychoanalytic theory took hold of so many aspects of psychology, some began to become dissatisfied with psychology’s picture of human nature. Thus, a humanistic movement within psychology began to take hold. Humanism focuses on the potential of all people for good. Both Maslow and Rogers were influential in shaping humanistic psychology.</para>
+<para id="fs-idm89388736">During the 1950s, the landscape of psychology began to change. A science of behavior began to shift back to its roots of focus on mental processes. The emergence of neuroscience and computer science aided this transition. Ultimately, the cognitive revolution took hold, and people came to realize that cognition was crucial to a true appreciation and understanding of behavior.</para>
+</section><section id="fs-idm37294240" class="review-questions">
+<title>Review Questions</title>
+<exercise id="fs-idm59818416">
+<problem id="fs-idm35198944">
+<para id="fs-idm49800512">Based on your reading, which theorist would have been most likely to agree with this statement: Perceptual phenomena are best understood as a combination of their components.</para>
+<list id="fs-idp60271536" list-type="enumerated" number-style="lower-alpha">
+<item>William James</item>
+<item>Max Wertheimer</item>
+<item>Carl Rogers</item>
+<item>Noam Chomsky</item>
+</list>
+</problem>
+<solution id="fs-idm81034496">
+<para id="fs-idm78938912">B</para>
+</solution>
+</exercise>
+<exercise id="fs-idm92509952">
+<problem id="fs-idp28226288">
+<para id="fs-idm115647648">________ is most well-known for proposing his hierarchy of needs.</para>
+<list id="fs-idm46818560" list-type="enumerated" number-style="lower-alpha">
+<item>Noam Chomsky</item>
+<item>Carl Rogers</item>
+<item>Abraham Maslow</item>
+<item>Sigmund Freud</item>
+</list>
+</problem>
+<solution id="fs-idm80809760">
+<para id="fs-idm77381184">C</para>
+</solution>
+</exercise>
+<exercise id="fs-idm96967936">
+<problem id="fs-idp56551536">
+<para id="fs-idm79204032">Rogers believed that providing genuineness, empathy, and ________ in the therapeutic environment for his clients was critical to their being able to deal with their problems.</para>
+<list id="fs-idp17364240" list-type="enumerated" number-style="lower-alpha">
+<item>structuralism</item>
+<item>functionalism</item>
+<item>Gestalt</item>
+<item>unconditional positive regard</item>
+</list>
+</problem>
+<solution id="fs-idp74582288"><para id="fs-idm87533328">D</para></solution>
+</exercise>
+<exercise id="fs-idm25931216">
+<problem id="fs-idm80961056">
+<para id="fs-idp7033072">The operant conditioning chamber (aka ________ box) is a device used to study the principles of operant conditioning.</para>
+<list id="fs-idm101151520" list-type="enumerated" number-style="lower-alpha">
+<item>Skinner</item>
+<item>Watson</item>
+<item>James</item>
+<item>Koffka</item>
+</list>
+</problem>
+<solution id="fs-idm5937424">
+<para id="fs-idm144602064">A</para>
+</solution>
+</exercise>
+</section>
+<section id="fs-idm66601552" class="critical-thinking">
+<title>Critical Thinking Questions</title>
+<exercise id="fs-idp90891680">
+<problem id="fs-idm30203808"><para id="fs-idm93582544">How did the object of study in psychology change over the history of the field since the 19th century?</para></problem>
+<solution id="fs-idm81625248"><para id="fs-idp29653936">In its early days, psychology could be defined as the scientific study of mind or mental processes. Over time, psychology began to shift more towards the scientific study of behavior. However, as the cognitive revolution took hold, psychology once again began to focus on mental processes as necessary to the understanding of behavior.</para></solution>
+</exercise>
+<exercise id="fs-idm56972864">
+<problem id="fs-idp38645376"><para id="fs-idm146519712">In part, what aspect of psychology was the behaviorist approach to psychology a reaction to?</para></problem>
+<solution id="fs-idm138852128"><para id="fs-idm90866896">Behaviorists studied objectively observable behavior partly in reaction to the psychologists of the mind who were studying things that were not directly observable.</para></solution>
+</exercise>
+</section>
+<section id="fs-idm94002288" class="personal-application">
+<title>Personal Application Questions</title>
+<exercise id="fs-idp11676912">
+<problem id="fs-idp21677840">
+<para id="fs-idp39349008">Freud is probably one of the most well-known historical figures in psychology. Where have you encountered references to Freud or his ideas about the role that the unconscious mind plays in determining conscious behavior?</para>
+</problem>
+</exercise>
+</section>
+</content>
+<glossary>
+<definition id="fs-idm66673872"><term>behaviorism</term><meaning id="fs-idm39648">focus on observing and controlling behavior</meaning></definition>
+<definition id="fs-idp91147536"><term>functionalism</term><meaning id="fs-idm48551968">focused on how mental activities helped an organism adapt to its environment</meaning></definition>
+<definition id="fs-idp12847712"><term>humanism</term><meaning id="fs-idm30273920">perspective within psychology that emphasizes the potential for good that is innate to all humans</meaning></definition>
+<definition id="fs-idp10965152"><term>introspection</term><meaning id="fs-idp6823056">process by which someone examines their own conscious experience in an attempt to break it into its component parts</meaning></definition>
+<definition id="fs-idm65274432"><term>psychoanalytic theory</term><meaning id="fs-idm48530352">focus on the role of the unconscious in affecting conscious behavior</meaning></definition>
+<definition id="fs-idp64623424"><term>structuralism</term><meaning id="fs-idp94839280">understanding the conscious experience through introspection</meaning></definition>
+</glossary>
+</document>

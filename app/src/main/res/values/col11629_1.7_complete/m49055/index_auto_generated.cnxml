@@ -1,0 +1,267 @@
+<?xml version="1.0"?>
+<document xmlns="http://cnx.rice.edu/cnxml" xmlns:md="http://cnx.rice.edu/mdml" xmlns:bib="http://bibtexml.sf.net/" xmlns:m="http://www.w3.org/1998/Math/MathML" xmlns:q="http://cnx.rice.edu/qml/1.0" id="new" cnxml-version="0.7" module-id="new">
+
+<title>Language</title>
+<metadata xmlns:md="http://cnx.rice.edu/mdml"
+          mdml-version="0.5">
+  <!-- WARNING! The 'metadata' section is read only. Do not edit below.
+       Changes to the metadata section in the source will not be saved. -->
+  <md:repository>http://legacy.cnx.org/content</md:repository>
+  <md:content-url>http://legacy.cnx.org/content/m49055/latest</md:content-url>
+  <md:content-id>m49055</md:content-id>
+  <md:title>Language</md:title>
+  <md:version>1.5</md:version>
+  <md:created>2014/02/13 03:00:19 -0600</md:created>
+  <md:revised>2014/12/16 16:21:32 -0600</md:revised>
+  <md:actors>
+    <md:organization userid="OpenStaxCollege">
+      <md:shortname>OpenStax</md:shortname>
+      <md:fullname>OpenStax</md:fullname>
+      <md:email>info@openstax.org</md:email>
+    </md:organization>
+    <md:person userid="OSCRiceUniversity">
+      <md:firstname>Rice</md:firstname>
+      <md:surname>University</md:surname>
+      <md:fullname>Rice University</md:fullname>
+      <md:email>info@openstaxcollege.org</md:email>
+    </md:person>
+    <md:person userid="cnxpsych">
+      <md:firstname>CNX</md:firstname>
+      <md:surname>Psychology</md:surname>
+      <md:fullname>OpenStax Psychology</md:fullname>
+      <md:email>info@openstaxcollege.org</md:email>
+    </md:person>
+  </md:actors>
+  <md:roles>
+    <md:role type="author">OpenStaxCollege</md:role>
+    <md:role type="maintainer">OpenStaxCollege cnxpsych</md:role>
+    <md:role type="licensor">OSCRiceUniversity</md:role>
+  </md:roles>
+  <md:license url="http://creativecommons.org/licenses/by/4.0/">Creative Commons Attribution License 4.0</md:license>
+  <!-- For information on license requirements for use or modification, see license url in the
+       above <md:license> element.
+       For information on formatting required attribution, see the URL:
+         CONTENT_URL/content_info#cnx_cite_header
+       where CONTENT_URL is the value provided above in the <md:content-url> element.
+  -->
+  <md:keywordlist>
+    <md:keyword>grammar</md:keyword>
+    <md:keyword>language</md:keyword>
+    <md:keyword>lexicon</md:keyword>
+    <md:keyword>morpheme</md:keyword>
+    <md:keyword>overgeneralization</md:keyword>
+    <md:keyword>phoneme</md:keyword>
+    <md:keyword>semantics</md:keyword>
+    <md:keyword>syntax</md:keyword>
+  </md:keywordlist>
+  <md:subjectlist>
+    <md:subject>Social Sciences</md:subject>
+  </md:subjectlist>
+  <md:abstract>By the end of this section, you will be able to:
+<list>
+<item>Define language and demonstrate familiarity with the components of language</item>
+<item>Understand how the use of language develops</item>
+<item>Explain the relationship between language and thinking</item>
+</list></md:abstract>
+  <md:language>en</md:language>
+  <!-- WARNING! The 'metadata' section is read only. Do not edit above.
+       Changes to the metadata section in the source will not be saved. -->
+</metadata>
+
+<content>
+  <para id="fs-idm158525664"><term>Language</term> is a communication system that involves using words and systematic rules to organize those words to transmit information from one individual to another. While language is a form of communication, not all communication is language. Many species communicate with one another through their postures, movements, odors, or vocalizations. This communication is crucial for species that need to interact and develop social relationships with their conspecifics. However, many people have asserted that it is language that makes humans unique among all of the animal species (Corballis &amp; Suddendorf, 2007; Tomasello &amp; Rakoczy, 2003). This section will focus on what distinguishes language as a special form of communication, how the use of language develops, and how language affects the way we think.</para>
+<section id="fs-idm132084208">
+<title>COMPONENTS OF LANGUAGE</title>
+<para id="fs-idm137521248">Language, be it spoken, signed, or written, has specific components: a lexicon and grammar. <term>Lexicon</term> refers to the words of a given language. Thus, lexicon is a language’s vocabulary. <term>Grammar</term> refers to the set of rules that are used to convey meaning through the use of the lexicon (Fernández &amp; Cairns, 2011). For instance, English grammar dictates that most verbs receive an “-ed” at the end to indicate past tense.</para>
+<para id="fs-idm123022048">Words are formed by combining the various phonemes that make up the language. A <term>phoneme</term> (e.g., the sounds “ah” vs. “eh”) is a basic sound unit of a given language, and different languages have different sets of phonemes. Phonemes are combined to form <term>morphemes</term>, which are the smallest units of language that convey some type of meaning (e.g., “I” is both a phoneme and a morpheme). We use semantics and syntax to construct language. Semantics and syntax are part of a language’s grammar. <term>Semantics</term> refers to the process by which we derive meaning from morphemes and words. <term>Syntax</term> refers to the way words are organized into sentences (Chomsky, 1965; Fernández &amp; Cairns, 2011).</para>
+<para id="fs-idm124129904">We apply the rules of grammar to organize the lexicon in novel and creative ways, which allow us to communicate information about both concrete and abstract concepts. We can talk about our immediate and observable surroundings as well as the surface of unseen planets. We can share our innermost thoughts, our plans for the future, and debate the value of a college education. We can provide detailed instructions for cooking a meal, fixing a car, or building a fire. The flexibility that language provides to relay vastly different types of information is a property that makes language so distinct as a mode of communication among humans.</para>
+</section>
+<section id="fs-idm41880112">
+<title>LANGUAGE DEVELOPMENT</title>
+<para id="fs-idm139017664">Given the remarkable complexity of a language, one might expect that mastering a language would be an especially arduous task; indeed, for those of us trying to learn a second language as adults, this might seem to be true. However, young children master language very quickly with relative ease. B. F. <term class="no-emphasis">Skinner</term> (1957) proposed that language is learned through reinforcement. Noam <term class="no-emphasis">Chomsky</term> (1965) criticized this behaviorist approach, asserting instead that the mechanisms underlying language acquisition are biologically determined. The use of language develops in the absence of formal instruction and appears to follow a very similar pattern in children from vastly different cultures and backgrounds. It would seem, therefore, that we are born with a biological predisposition to acquire a language (Chomsky, 1965; Fernández &amp; Cairns, 2011). Moreover, it appears that there is a critical period for language acquisition, such that this proficiency at acquiring language is maximal early in life; generally, as people age, the ease with which they acquire and master new languages diminishes (Johnson &amp; Newport, 1989; Lenneberg, 1967; Singleton, 1995).</para><para id="fs-idm128899856">Children begin to learn about language from a very early age (<link target-id="Table_07_02_01"/>). In fact, it appears that this is occurring even before we are born. Newborns show preference for their mother’s voice and appear to be able to discriminate between the language spoken by their mother and other languages. Babies are also attuned to the languages being used around them and show preferences for videos of faces that are moving in synchrony with the audio of spoken language versus videos that do not synchronize with the audio (Blossom &amp; Morgan, 2006; Pickens, 1994; Spelke &amp; Cortelyou, 1981).</para>
+<table id="Table_07_02_01" summary="A three column table describes Stages of Language and Communication Development. The columns, from left to right, are labeled &#x201C;Stage; Age; and Developmental Language and Communication.&#x201D; The first row, respectively, reads: &#x201C;1; 0&#x2013;3 months; and reflexive communication.&#x201D; The second row reads: &#x201C;2; 3&#x2013;8 months; and reflexive communication, interest in others.&#x201D; The third row reads: &#x201C;3; 8&#x2013;13 months; and intentional communication, sociability.&#x201D; The fourth row reads: &#x201C;4; 12&#x2013;18 months; and first words.&#x201D; The fifth row reads: &#x201C;5; 18&#x2013;24 months; and simple sentences of two words.&#x201D; The sixth row reads: &#x201C;6; 2&#x2013;3 years; and sentences of three or more words.&#x201D; The seventh row reads: &#x201C;7; 3&#x2013;5 years; and complex sentences, has conversations.&#x201D;">
+<title>Stages of Language and Communication Development</title>
+<tgroup cols="3">
+<colspec colnum="1" colname="c1"/>
+<colspec colnum="2" colname="c2"/>
+<colspec colnum="3" colname="c3"/>
+<thead>
+<row>
+<entry>Stage</entry>
+<entry>Age</entry>
+<entry>Developmental Language and Communication</entry>
+</row>
+</thead>
+<tbody>
+<row>
+<entry>1</entry>
+<entry>0–3 months</entry>
+<entry>Reflexive communication</entry>
+</row>
+<row>
+<entry>2</entry>
+<entry>3–8 months</entry>
+<entry>Reflexive communication; interest in others</entry>
+</row>
+<row>
+<entry>3</entry>
+<entry>8–13 months</entry>
+<entry>Intentional communication; sociability</entry>
+</row>
+<row>
+<entry>4</entry>
+<entry>12–18 months</entry>
+<entry>First words</entry>
+</row>
+<row>
+<entry>5</entry>
+<entry>18–24 months</entry>
+<entry>Simple sentences of two words</entry>
+</row>
+<row>
+<entry>6</entry>
+<entry>2–3 years</entry>
+<entry>Sentences of three or more words</entry>
+</row>
+<row>
+<entry>7</entry>
+<entry>3–5 years</entry>
+<entry>Complex sentences; has conversations</entry>
+</row>
+</tbody>
+</tgroup>
+</table>
+<note id="fs-idm59772368" class="psychology dig-deeper">
+    <label>Dig Deeper</label>
+<title>The Case of Genie</title>
+     <para id="fs-idm93155600">In the fall of 1970, a social worker in the Los Angeles area found a 13-year-old girl who was being raised in extremely neglectful and abusive conditions. The girl, who came to be known as Genie, had lived most of her life tied to a potty chair or confined to a crib in a small room that was kept closed with the curtains drawn. For a little over a decade, Genie had virtually no social interaction and no access to the outside world. As a result of these conditions, Genie was unable to stand up, chew solid food, or speak (Fromkin, Krashen, Curtiss, Rigler, &amp; Rigler, 1974; Rymer, 1993). The police took Genie into protective custody.</para>
+<para id="fs-idm166156384">Genie’s abilities improved dramatically following her removal from her abusive environment, and early on, it appeared she was acquiring language—much later than would be predicted by critical period hypotheses that had been posited at the time (Fromkin et al., 1974). Genie managed to amass an impressive vocabulary in a relatively short amount of time. However, she never developed a mastery of the grammatical aspects of language (Curtiss, 1981). Perhaps being deprived of the opportunity to learn language during a critical period impeded Genie’s ability to fully acquire and use language.</para>
+</note>
+
+<para id="fs-idm64847120">You may recall that each language has its own set of phonemes that are used to generate morphemes, words, and so on. Babies can discriminate among the sounds that make up a language (for example, they can tell the difference between the “s” in vision and the “ss” in fission); early on, they can differentiate between the sounds of all human languages, even those that do not occur in the languages that are used in their environments. However, by the time that they are about 1 year old, they can only discriminate among those phonemes that are used in the language or languages in their environments (Jensen, 2011; Werker &amp; Lalonde, 1988; Werker &amp; Tees, 1984).</para>
+<note id="fs-idp7371120" class="psychology link-to-learning"><label>Link to Learning</label>
+<media id="fs-idm50110400" alt="">
+<image mime-type="png" src="OSC_Interactive_150.png"/>
+</media>
+<para id="fs-idm137301136">Visit this <link url="http://openstaxcollege.org/l/language">website</link> to learn more about how babies lose the ability to discriminate among all possible human phonemes as they age.</para> 
+</note><para id="fs-idm83546720">After the first few months of life, babies enter what is known as the babbling stage, during which time they tend to produce single syllables that are repeated over and over. As time passes, more variations appear in the syllables that they produce. During this time, it is unlikely that the babies are trying to communicate; they are just as likely to babble when they are alone as when they are with their caregivers (Fernández &amp; Cairns, 2011). Interestingly, babies who are raised in environments in which sign language is used will also begin to show babbling in the gestures of their hands during this stage (Petitto, Holowka, Sergio, Levy, &amp; Ostry, 2004).</para>
+<para id="fs-idm77513744">Generally, a child’s first word is uttered sometime between the ages of 1 year to 18 months, and for the next few months, the child will remain in the “one word” stage of language development. During this time, children know a number of words, but they only produce one-word utterances. The child’s early vocabulary is limited to familiar objects or events, often nouns. Although children in this stage only make one-word utterances, these words often carry larger meaning (Fernández &amp; Cairns, 2011). So, for example, a child saying “cookie” could be identifying a cookie or asking for a cookie.</para>
+<para id="fs-idm73474272">As a child’s lexicon grows, she begins to utter simple sentences and to acquire new vocabulary at a very rapid pace. In addition, children begin to demonstrate a clear understanding of the specific rules that apply to their language(s). Even the mistakes that children sometimes make provide evidence of just how much they understand about those rules. This is sometimes seen in the form of <term>overgeneralization</term>. In this context, overgeneralization refers to an extension of a language rule to an exception to the rule. For example, in English, it is usually the case that an “s” is added to the end of a word to indicate plurality. For example, we speak of one dog versus two dogs. Young children will overgeneralize this rule to cases that are exceptions to the “add an s to the end of the word” rule and say things like “those two gooses” or “three mouses.” Clearly, the rules of the language are understood, even if the exceptions to the rules are still being learned (Moskowitz, 1978).</para>
+</section>
+<section id="fs-idm181736080">
+<title>LANGUAGE AND THOUGHT</title>
+
+<para id="fs-idm176340720">When we speak one language, we agree that words are representations of ideas, people, places, and events. The given language that children learn is connected to their culture and surroundings. But can words themselves shape the way we think about things? Psychologists have long investigated the question of whether language shapes thoughts and actions, or whether our thoughts and beliefs shape our language. Two researchers, Edward Sapir and Benjamin Lee Whorf, began this investigation in the 1940s. They wanted to understand how the language habits of a community encourage members of that community to interpret language in a particular manner (Sapir, 1941/1964). Sapir and Whorf proposed that language determines thought, suggesting, for example, that a person whose community language did not have past-tense verbs would be challenged to think about the past (Whorf, 1956). Researchers have since identified this view as too absolute, pointing out a lack of empiricism behind what Sapir and Whorf proposed (Abler, 2013; Boroditsky, 2011; van Troyer, 1994). Today, psychologists continue to study and debate the relationship between language and thought.</para>
+
+<note id="fs-idm188402192" class="psychology what-do-you-think">
+    <label>What Do You Think?</label>
+<title>The Meaning of Language</title>
+<para id="fs-idm75689504">Think about what you know of other languages; perhaps you even speak multiple languages. Imagine for a moment that your closest friend fluently speaks more than one language. Do you think that friend thinks differently, depending on which language is being spoken? You may know a few words that are not translatable from their original language into English. For example, the Portuguese word <emphasis effect="italics">saudade </emphasis>originated during the 15th century, when Portuguese sailors left home to explore the seas and travel to Africa or Asia. Those left behind described the emptiness and fondness they felt as <emphasis effect="italics">saudade </emphasis>(<link target-id="Figure_07_02_Saudade"/>)<emphasis effect="italics">.</emphasis> The word came to express many meanings, including loss, nostalgia, yearning, warm memories, and hope. There is no single word in English that includes all of those emotions in a single description. Do words such as <emphasis effect="italics">saudade</emphasis> indicate that different languages produce different patterns of thought in people? What do you think??</para>
+<figure id="Figure_07_02_Saudade">
+<media id="fs-idm59675744" alt="Photograph A shows a painting of a person leaning against a ledge, slumped sideways over a box. Photograph B shows a painting of a person reading by a window.">
+<image mime-type="image/jpeg" src="CNX_Psych_07_02_Saudade.jpg"/>
+</media>
+<caption>These two works of art depict <emphasis effect="italics">saudade</emphasis>. (a) <emphasis effect="italics">Saudade de Nápoles</emphasis>, which is translated into “missing Naples,” was painted by Bertha Worms in 1895. (b) Almeida Júnior painted <emphasis effect="italics">Saudade </emphasis>in 1899.</caption>
+</figure>
+ </note>
+<para id="fs-idm56759008">Language may indeed influence the way that we think, an idea known as linguistic determinism. One recent demonstration of this phenomenon involved differences in the way that English and Mandarin Chinese speakers talk and think about time. English speakers tend to talk about time using terms that describe changes along a horizontal dimension, for example, saying something like “I’m running behind schedule” or “Don’t get ahead of yourself.” While Mandarin Chinese speakers also describe time in horizontal terms, it is not uncommon to also use terms associated with a vertical arrangement. For example, the past might be described as being “up” and the future as being “down.” It turns out that these differences in language translate into differences in performance on cognitive tests designed to measure how quickly an individual can recognize temporal relationships. Specifically, when given a series of tasks with vertical priming, Mandarin Chinese speakers were faster at recognizing temporal relationships between months. Indeed, Boroditsky (2001) sees these results as suggesting that “habits in language encourage habits in thought” (p. 12).</para>  
+<para id="fs-idm214946608">One group of researchers who wanted to investigate how language influences thought compared how English speakers and the Dani people of Papua New Guinea think and speak about color. The Dani have two words for color: one word for <emphasis effect="italics">light </emphasis>and one word for <emphasis effect="italics">dark</emphasis>. In contrast, the English language has 11 color words. Researchers hypothesized that the number of color terms could limit the ways that the Dani people conceptualized color. However, the Dani were able to distinguish colors with the same ability as English speakers, despite having fewer words at their disposal (Berlin &amp; Kay, 1969). A recent review of research aimed at determining how language might affect something like color perception suggests that language can influence perceptual phenomena, especially in the left hemisphere of the brain. You may recall from earlier chapters that the left hemisphere is associated with language for most people. However, the right (less linguistic hemisphere) of the brain is less affected by linguistic influences on perception (Regier &amp; Kay, 2009)</para>
+</section>
+<section id="fs-idm123872224" class="summary">
+<title>Summary</title>
+<para id="fs-idm183004528">Language is a communication system that has both a lexicon and a system of grammar. Language acquisition occurs naturally and effortlessly during the early stages of life, and this acquisition occurs in a predictable sequence for individuals around the world. Language has a strong influence on thought, and the concept of how language may influence cognition remains an area of study and debate in psychology.</para>
+</section>
+
+<section id="fs-idm52001184" class="review-questions">
+<title>Review Questions</title>
+<exercise id="fs-idm175029136">
+<problem id="fs-idm51443072">
+<para id="fs-idm185597952">________ provides general principles for organizing words into meaningful sentences.</para>
+<list id="fs-idm33996560" list-type="enumerated" number-style="lower-alpha">
+<item>Linguistic determinism</item>
+<item>Lexicon</item>
+<item>Semantics</item>
+<item>Syntax</item>
+</list>
+</problem>
+<solution id="fs-idm184663088"><para id="fs-idm55722688">D</para></solution>
+</exercise>
+
+<exercise id="fs-idm92509680">
+<problem id="fs-idm12325296">
+<para id="fs-idm54941232">________ are the smallest unit of language that carry meaning.</para>
+<list id="fs-idm74384432" list-type="enumerated" number-style="lower-alpha">
+<item>Lexicon</item>
+<item>Phonemes</item>
+<item>Morphemes</item>
+<item>Syntax</item>
+</list>
+</problem>
+<solution id="fs-idm81470080"><para id="fs-idm51597856">C</para></solution>
+</exercise>
+
+<exercise id="fs-idm58124784">
+<problem id="fs-idm49907952">
+<para id="fs-idm18827024">The meaning of words and phrases is determined by applying the rules of ________.</para>
+<list id="fs-idm216840576" list-type="enumerated" number-style="lower-alpha">
+<item>lexicon</item>
+<item>phonemes</item>
+<item>overgeneralization</item>
+<item>semantics</item>
+</list>
+</problem>
+<solution id="fs-idm27278448"><para id="fs-idm75442464">D</para></solution>
+</exercise>
+
+<exercise id="fs-idm143260304">
+<problem id="fs-idm151563600">
+<para id="fs-idm216612448">________ is (are) the basic sound units of a spoken language.</para>
+<list id="fs-idm199883920" list-type="enumerated" number-style="lower-alpha">
+<item>Syntax</item>
+<item>Phonemes</item>
+<item>Morphemes</item>
+<item>Grammar</item>
+</list>
+</problem>
+<solution id="fs-idm100477424"><para id="fs-idm173173552">B</para></solution>
+</exercise>
+</section>
+
+<section id="fs-idm183165136" class="critical-thinking">
+<title>Critical Thinking Questions</title>
+<exercise id="fs-idm6992192">
+<problem id="fs-idm106166720"><para id="fs-idm109095168">How do words not only represent our thoughts but also represent our values?</para></problem>
+<solution id="fs-idm140196368"><para id="fs-idm124585136">People tend to talk about the things that are important to them or the things they think about the most. What we talk about, therefore, is a reflection of our values.</para></solution>
+</exercise>
+
+<exercise id="fs-idm87484016">
+<problem id="fs-idm241514224"><para id="fs-idm10876448">How could grammatical errors actually be indicative of language acquisition in children?</para></problem>
+<solution id="fs-idm124126928"><para id="fs-idm176509216">People tend to talk about the things that are important to them or the things they think about the most. What we talk about, therefore, is a reflection of our values.</para></solution>
+</exercise>
+
+<exercise id="fs-idm198485712">
+<problem id="fs-idm177203200"><para id="fs-idm133663120">How do words not only represent our thoughts but also represent our values?</para></problem>
+<solution id="fs-idm192308096"><para id="fs-idp7364576">Grammatical errors that involve overgeneralization of specific rules of a given language indicate that the child recognizes the rule, even if he or she doesn’t recognize all of the subtleties or exceptions involved in the rule’s application.</para></solution>
+</exercise>
+</section>
+
+<section id="fs-idm237944416" class="personal-application">
+<title>Personal Application Question</title>
+<exercise id="fs-idm96187280">
+<problem id="fs-idm219704656"><para id="fs-idm181235504">Can you think of examples of how language affects cognition?</para></problem>
+</exercise>
+</section>
+
+
+</content>
+<glossary>
+<definition id="fs-idm82970400"><term>grammar</term><meaning id="fs-idm195218096"> set of rules that are used to convey meaning through the use of a lexicon</meaning></definition>
+<definition id="fs-idm51586864"><term>language</term><meaning id="fs-idm176182672"> communication system that involves using words to transmit information from one individual to another</meaning></definition>
+<definition id="fs-idm90926416"><term>lexicon</term><meaning id="fs-idm51931088"> the words of a given language</meaning></definition>
+<definition id="fs-idm59607216"><term>morpheme</term><meaning id="fs-idm157830288"> smallest unit of language that conveys some type of meaning</meaning></definition>
+<definition id="fs-idm77287008"><term>overgeneralization</term><meaning id="fs-idm47936992"> extension of a rule that exists in a given language to an exception to the rule</meaning></definition>
+<definition id="fs-idm199874544"><term>phoneme</term><meaning id="fs-idm82936752"> basic sound unit of a given language</meaning></definition>
+<definition id="fs-idm146803984"><term>semantics</term><meaning id="fs-idm133677632"> process by which we derive meaning from morphemes and words</meaning></definition>
+<definition id="fs-idm233654256"><term>syntax</term><meaning id="fs-idm195806256"> manner by which words are organized into sentences</meaning></definition>
+</glossary>
+</document>

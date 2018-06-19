@@ -1,0 +1,262 @@
+<?xml version="1.0"?>
+<document xmlns="http://cnx.rice.edu/cnxml" xmlns:md="http://cnx.rice.edu/mdml" xmlns:bib="http://bibtexml.sf.net/" xmlns:m="http://www.w3.org/1998/Math/MathML" xmlns:q="http://cnx.rice.edu/qml/1.0" id="new" cnxml-version="0.7" module-id="new">
+
+<title>What Is Stress?</title>
+<metadata xmlns:md="http://cnx.rice.edu/mdml"
+          mdml-version="0.5">
+  <!-- WARNING! The 'metadata' section is read only. Do not edit below.
+       Changes to the metadata section in the source will not be saved. -->
+  <md:repository>https://legacy.cnx.org/content</md:repository>
+  <md:content-url>https://legacy.cnx.org/content/m49142/latest/</md:content-url>
+  <md:content-id>m49142</md:content-id>
+  <md:title>What Is Stress?</md:title>
+  <md:version>1.7</md:version>
+  <md:created>2014/02/13 06:55:25 +0000</md:created>
+  <md:revised>2017/07/17 15:34:18.052 GMT-5</md:revised>
+  <md:actors>
+    <md:organization userid="OpenStaxCollege">
+      <md:shortname>OpenStax</md:shortname>
+      <md:fullname>OpenStax</md:fullname>
+      <md:email>info@openstax.org</md:email>
+    </md:organization>
+    <md:person userid="OSCRiceUniversity">
+      <md:firstname>Rice</md:firstname>
+      <md:surname>University</md:surname>
+      <md:fullname>Rice University</md:fullname>
+      <md:email>info@openstaxcollege.org</md:email>
+    </md:person>
+    <md:person userid="cnxpsych">
+      <md:firstname>CNX</md:firstname>
+      <md:surname>Psychology</md:surname>
+      <md:fullname>OpenStax Psychology</md:fullname>
+      <md:email>info@openstaxcollege.org</md:email>
+    </md:person>
+  </md:actors>
+  <md:roles>
+    <md:role type="author">OpenStaxCollege</md:role>
+    <md:role type="maintainer">OpenStaxCollege cnxpsych</md:role>
+    <md:role type="licensor">OSCRiceUniversity</md:role>
+  </md:roles>
+  <md:license url="http://creativecommons.org/licenses/by/4.0/">Creative Commons Attribution License 4.0</md:license>
+  <!-- For information on license requirements for use or modification, see license url in the
+       above <md:license> element.
+       For information on formatting required attribution, see the URL:
+         CONTENT_URL/content_info#cnx_cite_header
+       where CONTENT_URL is the value provided above in the <md:content-url> element.
+  -->
+  <md:keywordlist>
+    <md:keyword>alarm reaction</md:keyword>
+    <md:keyword>appraisal</md:keyword>
+    <md:keyword>bad stress</md:keyword>
+    <md:keyword>cortisol</md:keyword>
+    <md:keyword>distress</md:keyword>
+    <md:keyword>eustress</md:keyword>
+    <md:keyword>fight-or-flight</md:keyword>
+    <md:keyword>general adaptation syndrome</md:keyword>
+    <md:keyword>good stress</md:keyword>
+    <md:keyword>Hans Selye</md:keyword>
+    <md:keyword>health psychology</md:keyword>
+    <md:keyword>HPA axis</md:keyword>
+    <md:keyword>hypothalamic-pituitary-adrenal axis</md:keyword>
+    <md:keyword>primary appraisal</md:keyword>
+    <md:keyword>response-based stress</md:keyword>
+    <md:keyword>secondary appraisal</md:keyword>
+    <md:keyword>stage of exhaustion</md:keyword>
+    <md:keyword>stage of resistance</md:keyword>
+    <md:keyword>stimulus-based stress</md:keyword>
+    <md:keyword>stress</md:keyword>
+    <md:keyword>stressors</md:keyword>
+    <md:keyword>Walter Cannon</md:keyword>
+  </md:keywordlist>
+  <md:subjectlist>
+    <md:subject>Social Sciences</md:subject>
+  </md:subjectlist>
+  <md:abstract>By the end of this section, you will be able to:
+<list>
+<item>Differentiate between stimulus-based and response-based definitions of stress</item>
+<item>Define stress as a process</item>
+<item>Differentiate between good stress and bad stress</item>
+<item>Describe the early contributions of Walter Cannon and Hans Selye to the stress research field</item>
+<item>Understand the physiological basis of stress and describe the general adaptation syndrome</item>
+</list></md:abstract>
+  <md:language>en</md:language>
+  <!-- WARNING! The 'metadata' section is read only. Do not edit above.
+       Changes to the metadata section in the source will not be saved. -->
+</metadata>
+
+<content>
+<para id="fs-idm168825216">The term <term class="no-emphasis">stress</term> as it relates to the human condition first emerged in scientific literature in the 1930s, but it did not enter the popular vernacular until the 1970s (Lyon, 2012). Today, we often use the term loosely in describing a variety of unpleasant feeling states; for example, we often say we are stressed out when we feel frustrated, angry, conflicted, overwhelmed, or fatigued. Despite the widespread use of the term, stress is a fairly vague concept that is difficult to define with precision.</para>
+<para id="fs-idm173370256">Researchers have had a difficult time agreeing on an acceptable definition of stress. Some have conceptualized stress as a demanding or threatening event or situation (e.g., a high-stress job, overcrowding, and long commutes to work). Such conceptualizations are known as stimulus-based definitions because they characterize stress as a stimulus that causes certain reactions. Stimulus-based definitions of stress are problematic, however, because they fail to recognize that people differ in how they view and react to challenging life events and situations. For example, a conscientious student who has studied diligently all semester would likely experience less stress during final exams week than would a less responsible, unprepared student.</para>
+<para id="fs-idm1279600">Others have conceptualized stress in ways that emphasize the physiological responses that occur when faced with demanding or threatening situations (e.g., increased arousal). These conceptualizations are referred to as response-based definitions because they describe stress as a response to environmental conditions. For example, the endocrinologist Hans <term class="no-emphasis">Selye</term>, a famous stress researcher, once defined stress as the “response of the body to any demand, whether it is caused by, or results in, pleasant or unpleasant conditions” (Selye, 1976, p. 74). Selye’s definition of stress is response-based in that it conceptualizes stress chiefly in terms of the body’s physiological reaction to any demand that is placed on it. Neither stimulus-based nor response-based definitions provide a complete definition of stress. Many of the physiological reactions that occur when faced with demanding situations (e.g., accelerated heart rate) can also occur in response to things that most people would not consider to be genuinely stressful, such as receiving unanticipated good news: an unexpected promotion or raise.</para>
+<para id="fs-idm189868112">A useful way to conceptualize <term>stress</term> is to view it as a process whereby an individual perceives and responds to events that he appraises as overwhelming or threatening to his well-being (Lazarus &amp; Folkman, 1984). A critical element of this definition is that it emphasizes the importance of how we appraise—that is, judge—demanding or threatening events (often referred to as <term>stressors</term>); these appraisals, in turn, influence our reactions to such events. Two kinds of appraisals of a stressor are especially important in this regard: primary and secondary appraisals. A <term>primary appraisal</term> involves judgment about the degree of potential harm or threat to well-being that a stressor might entail. A stressor would likely be appraised as a threat if one anticipates that it could lead to some kind of harm, loss, or other negative consequence; conversely, a stressor would likely be appraised as a challenge if one believes that it carries the potential for gain or personal growth. For example, an employee who is promoted to a leadership position would likely perceive the promotion as a much greater threat if she believed the promotion would lead to excessive work demands than if she viewed it as an opportunity to gain new skills and grow professionally. Similarly, a college student on the cusp of graduation may face the change as a threat or a challenge (<link target-id="CNX_Psych_14_01_Graduation"/>).</para>
+<figure id="CNX_Psych_14_01_Graduation">
+<media id="fs-idm46156384" alt="A photo shows a smiling person wearing a graduation cap and gown.">
+<image mime-type="image/jpeg" src="CNX_Psych_14_01_Graduation.jpg"/>
+</media>
+<caption>Graduating from college and entering the workforce can be viewed as either a threat (loss of financial support) or a challenge (opportunity for independence and growth). (credit: Timothy Zanker)</caption>
+</figure>
+<para id="fs-idm160892544">The perception of a threat triggers a <term>secondary appraisal</term>: judgment of the options available to cope with a stressor, as well as perceptions of how effective such options will be (Lyon, 2012) (<link target-id="CNX_Psych_14_01_Appraisals"/>). As you may recall from what you learned about self-efficacy, an individual’s belief in his ability to complete a task is important (Bandura, 1994). A threat tends to be viewed as less catastrophic if one believes something can be done about it (Lazarus &amp; Folkman, 1984). Imagine that two middle-aged women, Robin and Maria, perform breast self-examinations one morning and each woman notices a lump on the lower region of her left breast. Although both women view the breast lump as a potential threat (primary appraisal), their secondary appraisals differ considerably. In considering the breast lump, some of the thoughts racing through Robin’s mind are, “Oh my God, I could have breast cancer! What if the cancer has spread to the rest of my body and I cannot recover? What if I have to go through chemotherapy? I’ve heard that experience is awful! What if I have to quit my job? My husband and I won’t have enough money to pay the mortgage. Oh, this is just horrible…I can’t deal with it!” On the other hand, Maria thinks, “Hmm, this may not be good. Although most times these things turn out to be benign, I need to have it checked out. If it turns out to be breast cancer, there are doctors who can take care of it because the medical technology today is quite advanced. I’ll have a lot of different options, and I’ll be just fine.” Clearly, Robin and Maria have different outlooks on what might turn out to be a very serious situation: Robin seems to think that little could be done about it, whereas Maria believes that, worst case scenario, a number of options that are likely to be effective would be available. As such, Robin would clearly experience greater stress than would Maria.</para>
+<figure id="CNX_Psych_14_01_Appraisals"><media id="fs-idm156839712" alt="A concept map begins with a box titled &#x201C;Stressor&#x201D; at the top with an arrow underneath that leads to a box labeled &#x201C;Primary appraisal: challenge or threat?&#x201D; Below &#x201C;Primary appraisal: challenge or threat?&#x201D; is a line leading to the word &#x201C;challenge&#x201D; on the left side and &#x201C;threat&#x201D; on the right side. Below the word &#x201C;challenge&#x201D; is a box labeled &#x201C;Potential for gain or growth.&#x201D; There are no additional lines, arrows, or boxes under &#x201C;Potential for gain or growth.&#x201D; Below the word &#x201C;threat,&#x201D; there is a box labeled &#x201C;May lead to harm, loss, or negative consequences.&#x201D; Underneath the box, there is an arrow leading to another box labeled &#x201C;Secondary appraisal: potential options and how effective?&#x201D; The box has a line underneath that leads to the words &#x201C;effective option&#x201D; on the left side and &#x201C;ineffective/no option&#x201D; on the right side. Below the words &#x201C;effective option,&#x201D; there is an arrow leading to a box labeled &#x201C;Low threat.&#x201D; Below the words &#x201C;ineffective/no option,&#x201D; there is an arrow leading to a box labeled &#x201C;High threat.&#x201D;">
+<image mime-type="image/jpeg" src="CNX_Psych_14_01_Appraisals.jpg"/>
+</media>
+
+<caption>When encountering a stressor, a person judges its potential threat (primary appraisal) and then determines if effective options are available to manage the situation. Stress is likely to result if a stressor is perceived as extremely threatening or threatening with few or no effective coping options available.</caption></figure><para id="fs-idp12433280">To be sure, some stressors are inherently more stressful than others in that they are more threatening and leave less potential for variation in cognitive appraisals (e.g., objective threats to one’s health or safety). Nevertheless, appraisal will still play a role in augmenting or diminishing our reactions to such events (Everly &amp; Lating, 2002).</para>
+<para id="fs-idm29877712">If a person appraises an event as harmful and believes that the demands imposed by the event exceed the available resources to manage or adapt to it, the person will subjectively experience a state of stress. In contrast, if one does not appraise the same event as harmful or threatening, she is unlikely to experience stress. According to this definition, environmental events trigger stress reactions by the way they are interpreted and the meanings they are assigned. In short, stress is largely in the eye of the beholder: it’s not so much what happens to you as it is how you respond (Selye, 1976).</para>
+<section id="fs-idm11968432">
+<title>GOOD STRESS?</title>
+<para id="fs-idm112400896">Although stress carries a negative connotation, at times it may be of some benefit. Stress can motivate us to do things in our best interests, such as study for exams, visit the doctor regularly, exercise, and perform to the best of our ability at work. Indeed, Selye (1974) pointed out that not all stress is harmful. He argued that stress can sometimes be a positive, motivating force that can improve the quality of our lives. This kind of stress, which Selye called <term>eustress</term> (from the Greek <emphasis effect="italics">eu</emphasis> = “good”), is a good kind of stress associated with positive feelings, optimal health, and performance. A moderate amount of stress can be beneficial in challenging situations. For example, athletes may be motivated and energized by pregame stress, and students may experience similar beneficial stress before a major exam. Indeed, research shows that moderate stress can enhance both immediate and delayed recall of educational material. Male participants in one study who memorized a scientific text passage showed improved memory of the passage immediately after exposure to a mild stressor as well as one day following exposure to the stressor (Hupbach &amp; Fieman, 2012).</para>
+<para id="fs-idm61780208">Increasing one’s level of stress will cause performance to change in a predictable way. As shown in <link target-id="CNX_Psych_14_01_Performance"/>, as stress increases, so do performance and general well-being (eustress); when stress levels reach an optimal level (the highest point of the curve), performance reaches its peak. A person at this stress level is colloquially at the top of his game, meaning he feels fully energized, focused, and can work with minimal effort and maximum efficiency. But when stress exceeds this optimal level, it is no longer a positive force—it becomes excessive and debilitating, or what Selye termed <term>distress</term> (from the Latin <emphasis effect="italics">dis</emphasis> = “bad”). People who reach this level of stress feel burned out; they are fatigued, exhausted, and their performance begins to decline. If the stress remains excessive, health may begin to erode as well (Everly &amp; Lating, 2002).</para>
+<figure id="CNX_Psych_14_01_Performance">
+<media id="fs-idm118423072" alt="A graph features a bell curve that has a line going through the middle labeled &#x201C;Optimal level.&#x201D; The curve is labeled &#x201C;eustress&#x201D; on the left side and &#x201C;distress&#x201D; on the right side. The x-axis is labeled &#x201C;Stress level&#x201D; and moves from low to high, and the y-axis is labeled &#x201C;Performance level&#x201D; and moves from low to high.&#x201D; The graph shows that stress levels increase with performance levels and that once stress levels reach optimal level, they move from eustress to distress.">
+<image mime-type="image/jpeg" src="CNX_Psych_14_01_Performance.jpg"/>
+</media>
+<caption>As the stress level increases from low to moderate, so does performance (eustress). At the optimal level (the peak of the curve), performance has reached its peak. If stress exceeds the optimal level, it will reach the distress region, where it will become excessive and debilitating, and performance will decline (Everly &amp; Lating, 2002).</caption>
+</figure>
+</section>
+<section id="fs-idm93066656">
+<title>THE PREVALENCE OF STRESS</title>
+<para id="fs-idm154031696">Stress is everywhere and, as shown in <link target-id="CNX_Psych_14_01_StressRise"/>, it has been on the rise over the last several years. Each of us is acquainted with stress—some are more familiar than others. In many ways, stress feels like a load you just can’t carry—a feeling you experience when, for example, you have to drive somewhere in a crippling blizzard, when you wake up late the morning of an important job interview, when you run out of money before the next pay period, and before taking an important exam for which you realize you are not fully prepared.</para>
+<figure id="CNX_Psych_14_01_StressRise">
+<media id="fs-idm65724096" alt="A pie chart is labeled &#x201C;Change in Stress Levels Over Past 5 Years&#x201D; and split into three sections. The largest section is labeled &#x201C;Increased&#x201D; and accounts for 44% of the pie chart. The second largest section is labeled &#x201C;Stayed the same&#x201D; and accounts for 31% of the pie chart. The smallest section is labeled &#x201C;Decreased&#x201D; and accounts for 25% of the pie chart.">
+<image mime-type="image/jpeg" src="CNX_Psych_14_01_StressRise.jpg"/>
+</media>
+<caption>Nearly half of U.S. adults indicated that their stress levels have increased over the last five years (Neelakantan, 2013).</caption>
+</figure>
+<para id="fs-idm166655728">Stress is an experience that evokes a variety of responses, including those that are physiological (e.g., accelerated heart rate, headaches, or gastrointestinal problems), cognitive (e.g., difficulty concentrating or making decisions), and behavioral (e.g., drinking alcohol, smoking, or taking actions directed at eliminating the cause of the stress). Although stress can be positive at times, it can have deleterious health implications, contributing to the onset and progression of a variety of physical illnesses and diseases (Cohen &amp; Herbert, 1996).</para>
+<para id="fs-idm166481008">The scientific study of how stress and other psychological factors impact health falls within the realm of <term>health psychology</term>, a subfield of psychology devoted to understanding the importance of psychological influences on health, illness, and how people respond when they become ill (Taylor, 1999). Health psychology emerged as a discipline in the 1970s, a time during which there was increasing awareness of the role behavioral and lifestyle factors play in the development of illnesses and diseases (Straub, 2007). In addition to studying the connection between stress and illness, health psychologists investigate issues such as why people make certain lifestyle choices (e.g., smoking or eating unhealthy food despite knowing the potential adverse health implications of such behaviors). Health psychologists also design and investigate the effectiveness of interventions aimed at changing unhealthy behaviors. Perhaps one of the more fundamental tasks of health psychologists is to identify which groups of people are especially at risk for negative health outcomes, based on psychological or behavioral factors. For example, measuring differences in stress levels among demographic groups and how these levels change over time can help identify populations who may have an increased risk for illness or disease.</para>
+<para id="fs-idm185276784"><link target-id="CNX_Psych_14_01_StressLev"/> depicts the results of three national surveys in which several thousand individuals from different demographic groups completed a brief stress questionnaire; the surveys were administered in 1983, 2006, and 2009 (Cohen &amp; Janicki-Deverts, 2012). All three surveys demonstrated higher stress in women than in men. Unemployed individuals reported high levels of stress in all three surveys, as did those with less education and income; retired persons reported the lowest stress levels. However, from 2006 to 2009 the greatest increase in stress levels occurred among men, Whites, people aged 45–64, college graduates, and those with full-time employment. One interpretation of these findings is that concerns surrounding the 2008–2009 economic downturn (e.g., threat of or actual job loss and substantial loss of retirement savings) may have been especially stressful to White, college-educated, employed men with limited time remaining in their working careers.</para>
+<figure id="CNX_Psych_14_01_StressLev">
+<media id="fs-idm113061936" alt="Graphs a through f show mean stress scores in 1983, 2006, and 2009, and how they have been impacted by different factors. Graph a shows the relationship between mean stress score and sex. The mean stress score for men steadily increased from 12 in 1983 to a little over 14 in 2006 to a little over 15 in 2009. The mean stress score for women increased rapidly from a little under 13 in 1983 to 16 in 2006 and remained the same in 2009. The graph indicates that the mean stress score for women is higher than the mean stress score for men overall. Graph b shows the relationship between mean stress score and age. The mean stress scores for people under 25 years old increased from a little over 14 in 1983 to a little over 18 in 2006, and then decreased to 17 in 2009. The mean stress scores for people 25 to 34 years old increased from a little under 14 in 1983 to 18 in 2006, then decreased to a little over 16 in 2009. The mean stress scores for people 35&#x2013;44 years old increased from 13 in 1983 to a little under 17 in 2006, then decreased to a little over 16 in 2009. The mean stress scores for people 45&#x2013;54 years old from a little under 13 in 1983 to 15 in 2006, then increased to a little under 17 in 2009. The mean stress scores for people 55&#x2013;64 years old steadily increased from 12 in 1983 to a little over 13 in 2006 to a little over 14 in 2009. The mean stress scores for people 65 years old or older decreased from 12 in 1983 to a little under 11 in 2006, then slightly increased to 11 in 2009.  Graph c shows the relationship between mean stress score and race. The mean stress scores for White people steadily increased from a little under 13 in 1983 to 15 in 2006 to a little over 15 in 2009. The mean stress scores for Black people increased from a little over 15 in 1983 to a little over 16 in 2006, then slightly decreased to a little over 15 in 2009. The mean stress scores for Hispanic people steadily increased from 14 in 1983 to a little under 16 in 2006 to 17 in 2009. The mean stress score for people classified as &#x201C;Other&#x201D; increased from 14 in 1983 to a little over 17 in 2006 where it remained. Graph d shows the relationship between mean stress scores and education. The mean stress scores for those with less than a high school education steadily increased from a little over 14 in 1983 to a little over 17 in 2006 to 19 in 2009. The mean stress scores for those with a high school education increased from 12 in 1983 to a little over 16 in 2006 and remained the same in 2009. The mean stress scores for those with some college education increased from 12 in 1983 to a little over 15 in 2006, then slightly increased to a little under 16 in 2009. The mean stress scores for those with a bachelor&#x2019;s degree steadily increased from 12 in 1983 to a little over 13 in 2006 to 15 in 2009. The mean stress scores for those with advanced degrees also steadily increased, from a little over 11 in 1983 to 13 in 2006 to a little under 15 in 2009. Graph e shows the relationship between mean stress scores and employment status. The mean stress scores for those with full time employment status steadily increased from a little over 12 in 1983 to 15 in 2006 to 16 in 2009. The mean stress scores for those with part time employment status increased from 14 in 1983 to 16 in 2006, then decreased to 15 in 2009.The mean stress scores for those who were unemployed rapidly increased from a little over 16 in 1983 to 20 in 2006, then decreased back to a little over 16 in 2009. The mean stress scores for those who were retired remained lower than the other groups, remaining at a little under 12 in 1983 and 2006, then slightly increasing to a little over 12 in 2009. Graph f shows the relationship between the mean stress score and income in U.S. dollars. The mean stress scores for those with an income of $25,000 or lower steadily increased from a little over 15 in 1983 to 17 in 2006 to a little under 18 in 2009. The mean stress scores for those with an income of  $25,001 to $35,000 steadily increased from 14 in 1983 to 16 in 2006 to a little under 17 in 2009. The mean stress scores for those with an income of $35,001&#x2013;$50,000 steadily increased from a little under 13 in 1983 to a little over 15 in 2006 to a little over 16 in 2009. The mean stress scores for those with an income of $50,001&#x2013;$75,000 increased rapidly from 12 in 1983 to a little under 15 in 2006, then slightly increased to a little over 15 in 2009. The mean stress scores for those with an income of $75,001 or more steadily increased from 12 in 1983 to a little under 13 in 2006 to a little over 14 in 2009.">
+<image mime-type="image/jpeg" src="CNX_Psych_14_01_StressLev.jpg"/>
+</media>
+<caption>The charts above, adapted from Cohen &amp; Janicki-Deverts (2012), depict the mean stress level scores among different demographic groups during the years 1983, 2006, and 2009. Across categories of sex, age, race, education level, employment status, and income, stress levels generally show a marked increase over this quarter-century time span.</caption>
+</figure> 
+</section>
+<section id="fs-idm74580224">
+<title>EARLY CONTRIBUTIONS TO THE STUDY OF STRESS</title>
+<para id="fs-idm231134096">As previously stated, scientific interest in stress goes back nearly a century. One of the early pioneers in the study of stress was Walter <term class="no-emphasis">Cannon</term>, an eminent American physiologist at Harvard Medical School (<link target-id="CNX_Psych_14_01_Cannon"/>). In the early part of the 20th century, Cannon was the first to identify the body’s physiological reactions to stress.</para>
+<figure id="CNX_Psych_14_01_Cannon"><media id="fs-idm17296464" alt="A photo of Walter Cannon is shown.">
+<image mime-type="image/jpeg" src="CNX_Psych_14_01_Cannon2.jpg"/>
+</media>
+
+<caption>Harvard physiologist Walter Cannon first articulated and named the fight-or-flight response, the nervous system’s sympathetic response to a significant stressor.</caption></figure><section id="fs-idm148122176">
+<title>Cannon and the Fight-or-Flight Response</title>
+<para id="fs-idm15011904">Imagine that you are hiking in the beautiful mountains of Colorado on a warm and sunny spring day. At one point during your hike, a large, frightening-looking black bear appears from behind a stand of trees and sits about 50 yards from you. The bear notices you, sits up, and begins to lumber in your direction. In addition to thinking, “This is definitely not good,” a constellation of physiological reactions begins to take place inside you. Prompted by a deluge of epinephrine (adrenaline) and norepinephrine (noradrenaline) from your adrenal glands, your pupils begin to dilate. Your heart starts to pound and speeds up, you begin to breathe heavily and perspire, you get butterflies in your stomach, and your muscles become tense, preparing you to take some kind of direct action. Cannon proposed that this reaction, which he called the <term>fight-or-flight response</term>, occurs when a person experiences very strong emotions—especially those associated with a perceived threat (Cannon, 1932). During the fight-or-flight response, the body is rapidly aroused by activation of both the sympathetic nervous system and the endocrine system (<link target-id="CNX_Psych_14_01_FightFlight"/>). This arousal helps prepare the person to either fight or flee from a perceived threat.</para>
+<figure id="CNX_Psych_14_01_FightFlight"><media id="fs-idm155670432" alt="A figure shows the basic outline of a human body and indicates the body&#x2019;s various responses to fight or flight, including: pupils dilate, heart rate increases, muscles tense and may tremble, respiration quickens, bronchial tubes dilate, and perspiration begins.">
+<image mime-type="image/jpeg" src="CNX_Psych_14_01_Fightflight.jpg"/>
+</media>
+
+<caption>Fight or flight is a physiological response to a stressor.</caption></figure><para id="fs-idm68759552">According to Cannon, the fight-or-flight response is a built-in mechanism that assists in maintaining homeostasis—an internal environment in which physiological variables such as blood pressure, respiration, digestion, and temperature are stabilized at levels optimal for survival. Thus, Cannon viewed the fight-or-flight response as adaptive because it enables us to adjust internally and externally to changes in our surroundings, which is helpful in species survival.</para> 
+</section>
+<section id="fs-idm167533888"><title>Selye and the General Adaptation Syndrome</title><para id="fs-idm133716464">Another important early contributor to the stress field was Hans <term class="no-emphasis">Selye</term>, mentioned earlier. He would eventually become one of the world’s foremost experts in the study of stress (<link target-id="CNX_Psych_14_01_Hans_Selye"/>). As a young assistant in the biochemistry department at McGill University in the 1930s, Selye was engaged in research involving sex hormones in rats. Although he was unable to find an answer for what he was initially researching, he incidentally discovered that when exposed to prolonged negative stimulation (stressors)—such as extreme cold, surgical injury, excessive muscular exercise, and shock—the rats showed signs of adrenal enlargement, thymus and lymph node shrinkage, and stomach ulceration. Selye realized that these responses were triggered by a coordinated series of physiological reactions that unfold over time during continued exposure to a stressor. These physiological reactions were nonspecific, which means that regardless of the type of stressor, the same pattern of reactions would occur. What Selye discovered was the <term>general adaptation syndrome</term>, the body’s nonspecific physiological response to stress.</para>
+<figure id="CNX_Psych_14_01_Hans_Selye"><media id="fs-idm169506944" alt="A stamp featuring Hans Selye is shown.">
+<image mime-type="image/jpeg" src="CNX_Psych_14_01_Hans.jpg"/>
+</media>
+
+<caption>Hans Selye specialized in research about stress. In 2009, his native Hungary honored his work with this stamp, released in conjunction with the 2nd annual World Conference on Stress.</caption></figure><para id="fs-idm151327392">The general adaptation syndrome, shown in <link target-id="CNX_Psych_14_01_Adaptation"/>, consists of three stages: (1) alarm reaction, (2) stage of resistance, and (3) stage of exhaustion (Selye, 1936; 1976). <term>Alarm reaction</term> describes the body’s immediate reaction upon facing a threatening situation or emergency, and it is roughly analogous to the fight-or-flight response described by Cannon. During an alarm reaction, you are alerted to a stressor, and your body alarms you with a cascade of physiological reactions that provide you with the energy to manage the situation. A person who wakes up in the middle of the night to discover her house is on fire, for example, is experiencing an alarm reaction.</para>
+<figure id="CNX_Psych_14_01_Adaptation">
+<media id="fs-idm170598416" alt="A graph shows the three stages of Selye&#x2019;s general adaption syndrome: alarm reaction, resistance, and exhaustion. The x-axis represents time while the y-axis represents stress levels. The x-axis is labeled &#x201C;Time&#x201D; and the y-axis is labeled &#x201C;Stress resistance.&#x201D; The graph shows that an increase in time and stress ultimately leads to exhaustion.">
+<image mime-type="image/jpeg" src="CNX_Psych_14_01_Adaptation.jpg"/>
+</media>
+<caption>The three stages of Selye’s general adaptation syndrome are shown in this graph. Prolonged stress ultimately results in exhaustion.</caption>
+</figure>
+<para id="fs-idm76588112">If exposure to a stressor is prolonged, the organism will enter the <term>stage of resistance</term>. During this stage, the initial shock of alarm reaction has worn off and the body has adapted to the stressor. Nevertheless, the body also remains on alert and is prepared to respond as it did during the alarm reaction, although with less intensity. For example, suppose a child who went missing is still missing 72 hours later. Although the parents would obviously remain extremely disturbed, the magnitude of physiological reactions would likely have diminished over the 72 intervening hours due to some adaptation to this event.</para>
+<para id="fs-idm172708576">If exposure to a stressor continues over a longer period of time, the <term>stage of exhaustion</term> ensues. At this stage, the person is no longer able to adapt to the stressor: the body’s ability to resist becomes depleted as physical wear takes its toll on the body’s tissues and organs. As a result, illness, disease, and other permanent damage to the body—even death—may occur. If a missing child still remained missing after three months, the long-term stress associated with this situation may cause a parent to literally faint with exhaustion at some point or even to develop a serious and irreversible illness.</para>
+<para id="fs-idm169450544">In short, Selye’s general adaptation syndrome suggests that stressors tax the body via a three-phase process—an initial jolt, subsequent readjustment, and a later depletion of all physical resources—that ultimately lays the groundwork for serious health problems and even death. It should be pointed out, however, that this model is a response-based conceptualization of stress, focusing exclusively on the body’s physical responses while largely ignoring psychological factors such as appraisal and interpretation of threats. Nevertheless, Selye’s model has had an enormous impact on the field of stress because it offers a general explanation for how stress can lead to physical damage and, thus, disease. As we shall discuss later, prolonged or repeated stress has been implicated in development of a number of disorders such as hypertension and coronary artery disease.</para>
+</section></section>
+<section id="fs-idm112329408">
+<title>THE PHYSIOLOGICAL BASIS OF STRESS</title>
+<para id="fs-idm130839824">What goes on inside our bodies when we experience stress? The physiological mechanisms of stress are extremely complex, but they generally involve the work of two systems—the <term class="no-emphasis">sympathetic nervous system</term> and the <term>hypothalamic-pituitary-adrenal (HPA) axis</term>. When a person first perceives something as stressful (Selye’s alarm reaction), the sympathetic nervous system triggers arousal via the release of adrenaline from the adrenal glands. Release of these hormones activates the fight-or-flight responses to stress, such as accelerated heart rate and respiration. At the same time, the HPA axis, which is primarily endocrine in nature, becomes especially active, although it works much more slowly than the sympathetic nervous system. In response to stress, the hypothalamus (one of the limbic structures in the brain) releases corticotrophin-releasing factor, a hormone that causes the pituitary gland to release adrenocorticotropic hormone (ACTH) (<link target-id="CNX_Psych_14_01_HPAAxis"/>). The ACTH then activates the adrenal glands to secrete a number of hormones into the bloodstream; an important one is cortisol, which can affect virtually every organ within the body. <term>Cortisol</term> is commonly known as a stress hormone and helps provide that boost of energy when we first encounter a stressor, preparing us to run away or fight. However, sustained elevated levels of cortisol weaken the immune system.</para>
+<figure id="CNX_Psych_14_01_HPAAxis">
+<media id="fs-idm150516512" alt="A figure shows an outline of the human body that indicates various parties of the body related to the hypothalamic-pituitary-adrenal axis. The hypothalamus, pituitary gland, and adrenal glands are labeled. There is an arrow from hypothalamus to pituitary gland and another arrow from pituitary gland to adrenal glands. These arrows represent the flow between these organs.">
+<image mime-type="image/jpeg" src="CNX_Psych_14_01_HPAAxis.jpg"/>
+</media>
+<caption>This diagram shows the functioning of the hypothalamic-pituitary-adrenal (HPA) axis. The hypothalamus activates the pituitary gland, which in turn activates the adrenal glands, increasing their secretion of cortisol.</caption>
+</figure>
+<para id="fs-idm76602496">In short bursts, this process can have some favorable effects, such as providing extra energy, improving <term class="no-emphasis">immune system</term> functioning temporarily, and decreasing pain sensitivity. However, extended release of cortisol—as would happen with prolonged or chronic stress—often comes at a high price. High levels of cortisol have been shown to produce a number of harmful effects. For example, increases in cortisol can significantly weaken our immune system (Glaser &amp; Kiecolt-Glaser, 2005), and high levels are frequently observed among depressed individuals (Geoffroy, Hertzman, Li, &amp; Power, 2013). In summary, a stressful event causes a variety of physiological reactions that activate the adrenal glands, which in turn release epinephrine, norepinephrine, and cortisol. These hormones affect a number of bodily processes in ways that prepare the stressed person to take direct action, but also in ways that may heighten the potential for illness.</para>
+<para id="fs-idm176188608">When stress is extreme or chronic, it can have profoundly negative consequences. For example, stress often contributes to the development of certain psychological disorders, including post-traumatic stress disorder, major depressive disorder, and other serious psychiatric conditions. Additionally, we noted earlier that stress is linked to the development and progression of a variety of physical illnesses and diseases. For example, researchers in one study found that people injured during the September 11, 2001, World Trade Center disaster or who developed post-traumatic stress symptoms afterward later suffered significantly elevated rates of heart disease (Jordan, Miller-Archie, Cone, Morabia, &amp; Stellman, 2011). Another investigation yielded that self-reported stress symptoms among aging and retired Finnish food industry workers were associated with morbidity 11 years later. This study also predicted the onset of musculoskeletal, nervous system, and endocrine and metabolic disorders (Salonen, Arola, Nygård, &amp; Huhtala, 2008). Another study reported that male South Korean manufacturing employees who reported high levels of work-related stress were more likely to catch the common cold over the next several months than were those employees who reported lower work-related stress levels (Park et al., 2011). Later, you will explore the mechanisms through which stress can produce physical illness and disease.</para>
+</section>
+<section id="fs-idm75801888" class="summary">
+<title>Summary</title>
+<para id="fs-idm58292432">Stress is a process whereby an individual perceives and responds to events appraised as overwhelming or threatening to one’s well-being. The scientific study of how stress and emotional factors impact health and well-being is called health psychology, a field devoted to studying the general impact of psychological factors on health. The body’s primary physiological response during stress, the fight-or-flight response, was first identified in the early 20th century by Walter Cannon. The fight-or-flight response involves the coordinated activity of both the sympathetic nervous system and the hypothalamic-pituitary-adrenal (HPA) axis. Hans Selye, a noted endocrinologist, referred to these physiological reactions to stress as part of general adaptation syndrome, which occurs in three stages: alarm reaction (fight-or-flight reactions begin), resistance (the body begins to adapt to continuing stress), and exhaustion (adaptive energy is depleted, and stress begins to take a physical toll).</para>
+</section>
+<section id="fs-idm168940208" class="review-questions">
+<title>Review Questions</title>
+<exercise id="fs-idm145714288">
+<problem id="fs-idm231708384">
+<para id="fs-idm60675376">Negative effects of stress are most likely to be experienced when an event is perceived as ________.</para>
+<list id="fs-idm187182672" list-type="enumerated" number-style="lower-alpha"><item>negative, but it is likely to affect one’s friends rather than oneself</item>
+<item>challenging</item> 
+<item>confusing</item>  
+<item>threatening, and no clear options for dealing with it are apparent</item>
+</list></problem>
+<solution id="fs-idm166117760">
+<para id="fs-idm147438320">D</para>
+</solution>
+</exercise>
+<exercise id="fs-idm164262560">
+<problem id="fs-idm112705312"><para id="fs-idm164414656">Between 2006 and 2009, the greatest increases in stress levels were found to occur among ________.</para>
+<list id="fs-idm150640880" list-type="enumerated" number-style="lower-alpha"><item>Blacks</item>
+<item>those aged 45–64</item>
+<item>the unemployed</item> 
+<item>those without college degrees</item>
+</list></problem>
+<solution id="fs-idm64882656">
+<para id="fs-idm51137632">B</para>
+</solution>
+</exercise>
+<exercise id="fs-idm147843024">
+<problem id="fs-idm62303392"><para id="fs-idp14653664">At which stage of Selye’s general adaptation syndrome is a person especially vulnerable to illness?</para>
+<list id="fs-idp11232448" list-type="enumerated" number-style="lower-alpha"><item>exhaustion</item>
+<item>alarm reaction</item>
+<item>fight-or-flight</item>
+<item>resistance</item>
+</list></problem>
+<solution id="fs-idm167904752">
+<para id="fs-idm57449840">A</para>
+</solution>
+</exercise>
+<exercise id="fs-idm29183856">
+<problem id="fs-idm158339536">
+<para id="fs-idm106220848">During an encounter judged as stressful, cortisol is released by the ________.</para>
+<list id="fs-idm161899776" list-type="enumerated" number-style="lower-alpha"><item>sympathetic nervous system</item>
+<item>hypothalamus</item> 
+<item>pituitary gland</item>
+<item>adrenal glands</item>
+</list></problem>
+<solution id="fs-idm36358832"><para id="fs-idm157572224">D</para></solution>
+</exercise>
+</section>
+<section id="fs-idm166091184" class="critical-thinking">
+<title>Critical Thinking Questions</title>
+<exercise id="fs-idm170722912">
+<problem id="fs-idp12419552"><para id="fs-idm15693072">Provide an example (other than the one described earlier) of a situation or event that could be appraised as either threatening or challenging.</para></problem>
+<solution id="fs-idm185608880"><para id="fs-idm143881328">Answers will vary. One example is divorce. People may perceive a divorce as a threat if they believe it will result in loneliness, change of lifestyle (due to loss of additional income), or humiliation in the eyes of their family. However, divorce may be perceived as a challenge if they view it as an opportunity to find somebody more compatible, and if they consider the process of finding a new partner a pleasant one, perhaps involving mystery and excitement.</para></solution>
+</exercise>
+<exercise id="fs-idm117334240">
+<problem id="fs-idm135169616"><para id="fs-idm147950400">Provide an example of a stressful situation that may cause a person to become seriously ill. How would Selye’s general adaptation syndrome explain this occurrence?</para></problem>
+<solution id="fs-idm161730496"><para id="fs-idm32058912">Answers will vary. One example is when somebody’s spouse dies or is unexpectedly diagnosed with a fatal disease. In both cases, the stress experienced by the surviving spouse would be intense, continuous, and—according the general adaptation syndrome—would eventually increase vulnerability to illness or disease (exhaustion stage).</para></solution>
+</exercise>
+</section>
+<section id="fs-idm73665168" class="personal-application"><title>Personal Application Question</title><exercise id="fs-idm37760512">
+<problem id="fs-idm8300480"><para id="fs-idm157333616">Think of a time in which you and others you know (family members, friends, and classmates) experienced an event that some viewed as threatening and others viewed as challenging. What were some of the differences in the reactions of those who experienced the event as threatening compared to those who viewed the event as challenging? Why do you think there were differences in how these individuals judged the same event?</para></problem>
+</exercise>
+</section>
+</content>
+<glossary>
+<definition id="fs-idm22869872"><term>alarm reaction</term><meaning id="fs-idm135708512">first stage of the general adaptation syndrome; characterized as the body’s immediate physiological reaction to a threatening situation or some other emergency; analogous to the fight-or-flight response</meaning></definition>
+<definition id="fs-idp13102896"><term>cortisol</term><meaning id="fs-idm164967280">stress hormone released by the adrenal glands when encountering a stressor; helps to provide a boost of energy, thereby preparing the individual to take action</meaning></definition>
+<definition id="fs-idm160204896"><term>distress</term><meaning id="fs-idm149492368">bad form of stress; usually high in intensity; often leads to exhaustion, fatigue, feeling burned out; associated with erosions in performance and health</meaning></definition>
+<definition id="fs-idm32083232"><term>eustress</term><meaning id="fs-idm28296512">good form of stress; low to moderate in intensity; associated with positive feelings, as well as optimal health and performance</meaning></definition>
+<definition id="fs-idm118650816"><term>fight-or-flight response</term><meaning id="fs-idm55918336">set of physiological reactions (increases in blood pressure, heart rate, respiration rate, and sweat) that occur when an individual encounters a perceived threat; these reactions are produced by activation of the sympathetic nervous system and the endocrine system</meaning></definition>
+<definition id="fs-idm150517056"><term>general adaptation syndrome</term><meaning id="fs-idm185340064">Hans Selye’s three-stage model of the body’s physiological reactions to stress and the process of stress adaptation: alarm reaction, stage of resistance, and stage of exhaustion</meaning></definition>
+<definition id="fs-idm159760080"><term>health psychology</term><meaning id="fs-idm159416064">subfield of psychology devoted to studying psychological influences on health, illness, and how people respond when they become ill</meaning></definition>
+<definition id="fs-idm212617680"><term>hypothalamic-pituitary-adrenal (HPA) axis</term><meaning id="fs-idm131103584">set of structures found in both the limbic system (hypothalamus) and the endocrine system (pituitary gland and adrenal glands) that regulate many of the body’s physiological reactions to stress through the release of hormones</meaning></definition>
+<definition id="fs-idm75871760"><term>primary appraisal</term><meaning id="fs-idp12477280">judgment about the degree of potential harm or threat to well-being that a stressor might entail</meaning></definition>
+<definition id="fs-idm148435088"><term>secondary appraisal</term><meaning id="fs-idm185418576">judgment of options available to cope with a stressor and their potential effectiveness</meaning></definition>
+<definition id="fs-idm158384176"><term>stage of exhaustion</term><meaning id="fs-idm147805424">third stage of the general adaptation syndrome; the body’s ability to resist stress becomes depleted; illness, disease, and even death may occur</meaning></definition>
+<definition id="fs-idm113831344"><term>stage of resistance</term><meaning id="fs-idm14016320">second stage of the general adaptation syndrome; the body adapts to a stressor for a period of time</meaning></definition>
+<definition id="fs-idp34117088"><term>stress</term><meaning id="fs-idm155098816">process whereby an individual perceives and responds to events that one appraises as overwhelming or threatening to one’s well-being</meaning></definition>
+<definition id="fs-idm76932224"><term>stressors</term><meaning id="fs-idm164356192">environmental events that may be judged as threatening or demanding; stimuli that initiate the stress process</meaning></definition>
+</glossary>
+</document>

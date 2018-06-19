@@ -1,0 +1,221 @@
+<?xml version="1.0"?>
+<document xmlns="http://cnx.rice.edu/cnxml" xmlns:md="http://cnx.rice.edu/mdml" xmlns:bib="http://bibtexml.sf.net/" xmlns:m="http://www.w3.org/1998/Math/MathML" xmlns:q="http://cnx.rice.edu/qml/1.0" id="new" cnxml-version="0.7" module-id="new">
+
+<title>Mental Health Treatment: Past and Present</title>
+<metadata xmlns:md="http://cnx.rice.edu/mdml"
+          mdml-version="0.5">
+  <!-- WARNING! The 'metadata' section is read only. Do not edit below.
+       Changes to the metadata section in the source will not be saved. -->
+  <md:repository>http://legacy.cnx.org/content</md:repository>
+  <md:content-url>http://legacy.cnx.org/content/m49174/latest/</md:content-url>
+  <md:content-id>m49174</md:content-id>
+  <md:title>Mental Health Treatment: Past and Present</md:title>
+  <md:version>1.5</md:version>
+  <md:created>2014/02/13 13:17:02 -0600</md:created>
+  <md:revised>2014/12/16 12:28:24.134 US/Central</md:revised>
+  <md:actors>
+    <md:organization userid="OpenStaxCollege">
+      <md:shortname>OpenStax College</md:shortname>
+      <md:fullname>OpenStax College</md:fullname>
+      <md:email>info@openstaxcollege.org</md:email>
+    </md:organization>
+    <md:person userid="OSCRiceUniversity">
+      <md:firstname>Rice</md:firstname>
+      <md:surname>University</md:surname>
+      <md:fullname>Rice University</md:fullname>
+      <md:email>daniel@openstaxcollege.org</md:email>
+    </md:person>
+    <md:person userid="cnxpsych">
+      <md:firstname>CNX</md:firstname>
+      <md:surname>Psychology</md:surname>
+      <md:fullname>CNX Psychology</md:fullname>
+      <md:email>info@openstaxcollege.org</md:email>
+    </md:person>
+  </md:actors>
+  <md:roles>
+    <md:role type="author">OpenStaxCollege</md:role>
+    <md:role type="maintainer">OpenStaxCollege cnxpsych</md:role>
+    <md:role type="licensor">OSCRiceUniversity</md:role>
+  </md:roles>
+  <md:license url="http://creativecommons.org/licenses/by/4.0/">Creative Commons Attribution License 4.0</md:license>
+  <!-- For information on license requirements for use or modification, see license url in the
+       above <md:license> element.
+       For information on formatting required attribution, see the URL:
+         CONTENT_URL/content_info#cnx_cite_header
+       where CONTENT_URL is the value provided above in the <md:content-url> element.
+  -->
+  <md:keywordlist>
+    <md:keyword>asylum</md:keyword>
+    <md:keyword>deinstitutionalization</md:keyword>
+    <md:keyword>Dorothea Dix</md:keyword>
+    <md:keyword>homelessness</md:keyword>
+    <md:keyword>incarceration</md:keyword>
+    <md:keyword>involuntary treatment</md:keyword>
+    <md:keyword>voluntary treatment</md:keyword>
+  </md:keywordlist>
+  <md:subjectlist>
+    <md:subject>Social Sciences</md:subject>
+  </md:subjectlist>
+  <md:abstract>By the end of this section, you will be able to:
+<list>
+<item>Explain how people with psychological disorders have been treated throughout the ages</item>
+<item>Discuss deinstitutionalization</item>
+<item>Discuss the ways in which mental health services are delivered today</item>
+<item>Distinguish between voluntary and involuntary treatment</item>
+</list></md:abstract>
+  <md:language>en</md:language>
+  <!-- WARNING! The 'metadata' section is read only. Do not edit above.
+       Changes to the metadata section in the source will not be saved. -->
+</metadata>
+
+<content>
+<para id="fs-idm84293280">Before we explore the various approaches to therapy used today, let’s begin our study of therapy by looking at how many people experience mental illness and how many receive treatment. According to the U.S. Department of Health and Human Services (2013), 19% of U.S. adults experienced mental illness in 2012. For teens (ages 13–18), the rate is similar to that of adults, and for children ages 8–15, current estimates suggest that 13% experience mental illness in a given year (National Institute of Mental Health [NIMH], n.d.-a)</para>
+<para id="fs-idm14020496">With many different treatment options available, approximately how many people receive mental health treatment per year? According to the Substance Abuse and Mental Health Services Administration (SAMHSA), in 2008, 13.4% of adults received treatment for a mental health issue (NIMH, n.d.-b). These percentages, shown in <link target-id="CNX_Psych_16_01_AdultTreat"/>, reflect the number of adults who received care in inpatient and outpatient settings and/or used prescription medication for psychological disorders.</para>
+<figure id="CNX_Psych_16_01_AdultTreat">
+<media id="fs-idm6704288" alt="A bar graph is titled &#x201C;U.S. Adult Mental Health Treatment, 2004&#x2013;2008.&#x201D; Below this title the source is given: &#x201C;National Institute of Mental Health, n.d.-b&#x201D; The x axis is labeled &#x201C;Year,&#x201D; and the y axis is labeled &#x201C;Percent of adults.&#x201D; In the years 2004, 2005 and 2006, the percentage of adults who received treatment hovered at 13 percent or just below. For the years 2007 and 2008, the percentage rose slightly closer to 14 percent.">
+<image mime-type="image/jpeg" src="CNX_Psych_16_01_AdultTreat.jpg"/>
+</media>
+<caption>The percentage of adults who received mental health treatment in 2004–2008 is shown. Adults seeking treatment increased slightly from 2004 to 2008.</caption>
+</figure>
+<para id="fs-idp25259664">Children and adolescents also receive mental health services. The Centers for Disease Control and Prevention's National Health and Nutrition Examination Survey (NHANES) found that approximately half (50.6%) of children with mental disorders had received treatment for their disorder within the past year (NIMH, n.d.-c). However, there were some differences between treatment rates by category of disorder (<link target-id="CNX_Psych_16_01_ChildTreat"/>). For example, children with anxiety disorders were least likely to have received treatment in the past year, while children with ADHD or a conduct disorder were more likely to receive treatment. Can you think of some possible reasons for these differences in receiving treatment?</para>
+<figure id="CNX_Psych_16_01_ChildTreat">
+<media id="fs-idm125384208" alt="A bar graph is titled &#x201C;U.S. Child Mental Health Treatment (Ages 8&#x2013;15).&#x201D; Below this title the source is given: &#x201C;National Institute of Mental Health, n.d.-c&#x201D; The x axis is labeled &#x201C;Type of disorder,&#x201D; and the y axis is labeled &#x201C;Percent with disorder.&#x201D; For children diagnosed with &#x201C;Anxiety disorders,&#x201D; around 32 percent receive treatment. For &#x201C;Mood disorder,&#x201D; around 42 percent receive treatment. For &#x201C;Conduct disorder,&#x201D; around 46 percent receive treatment. For &#x201C;ADHD,&#x201D; around 48 percent receive treatment. For &#x201C;Any disorder,&#x201D; around 50 percent receive treatment.">
+<image mime-type="image/jpeg" src="CNX_Psych_16_01_ChildTreat.jpg"/>
+</media>
+<caption>About one-third to one-half of U.S. adolescents (ages 8–15) with mental disorders receive treatment, with behavior-related disorders more likely to be treated.</caption>
+</figure>
+<para id="fs-idm55635888">Considering the many forms of treatment for mental health disorders available today, how did these forms of treatment emerge? Let’s take a look at the history of mental health treatment from the past (with some questionable approaches in light of modern understanding of mental illness) to where we are today.</para>
+<section id="fs-idm109459040">
+<title>TREATMENT IN THE PAST</title>
+<para id="fs-idp21511536">For much of history, the mentally ill have been treated very poorly. It was believed that mental illness was caused by demonic possession, witchcraft, or an angry god (Szasz, 1960). For example, in medieval times, abnormal behaviors were viewed as a sign that a person was possessed by demons. If someone was considered to be possessed, there were several forms of treatment to release spirits from the individual. The most common treatment was exorcism, often conducted by priests or other religious figures: Incantations and prayers were said over the person’s body, and she may have been given some medicinal drinks. Another form of treatment for extreme cases of mental illness was trephining: A small hole was made in the afflicted individual’s skull to release spirits from the body. Most people treated in this manner died. In addition to exorcism and trephining, other practices involved execution or imprisonment of people with psychological disorders. Still others were left to be homeless beggars. Generally speaking, most people who exhibited strange behaviors were greatly misunderstood and treated cruelly. The prevailing theory of psychopathology in earlier history was the idea that mental illness was the result of demonic possession by either an evil spirit or an evil god because early beliefs incorrectly attributed all unexplainable phenomena to deities deemed either good or evil.</para>
+<para id="fs-idm107771648">From the late 1400s to the late 1600s, a common belief perpetuated by some religious organizations was that some people made pacts with the devil and committed horrible acts, such as eating babies (Blumberg, 2007). These people were considered to be witches and were tried and condemned by courts—they were often burned at the stake. Worldwide, it is estimated that tens of thousands of mentally ill people were killed after being accused of being witches or under the influence of witchcraft (Hemphill, 1966)</para>
+<para id="fs-idm190896544">By the 18th century, people who were considered odd and unusual were placed in asylums (<link target-id="CNX_Psych_16_01_Goya"/>). <term>Asylums</term> were the first institutions created for the specific purpose of housing people with psychological disorders, but the focus was ostracizing them from society rather than treating their disorders. Often these people were kept in windowless dungeons, beaten, chained to their beds, and had little to no contact with caregivers.</para> 
+<figure id="CNX_Psych_16_01_Goya">
+<media id="fs-idm59756768" alt="A painting depicts the inside of a mental asylum in the early 1800s.">
+<image mime-type="image/jpeg" src="CNX_Psych_16_01_Goya.jpg"/>
+</media>
+<caption>This painting by Francisco Goya, called <emphasis effect="italics">The Madhouse</emphasis>, depicts a mental asylum and its inhabitants in the early 1800s. It portrays those with psychological disorders as victims.</caption>
+</figure>
+<para id="fs-idp68853568">In the late 1700s, a French physician, Philippe <term class="no-emphasis">Pinel</term>, argued for more humane treatment of the mentally ill. He suggested that they be unchained and talked to, and that’s just what he did for patients at La Salpêtrière in Paris in 1795 (<link target-id="CNX_Psych_16_01_Pinel"/>). Patients benefited from this more humane treatment, and many were able to leave the hospital.</para>
+<figure id="CNX_Psych_16_01_Pinel">
+<media id="fs-idm46612080" alt="A painting, set inside an asylum, depicts a person removing the chains from a patient. There are several other people in the scene, but the focus is on these two characters.">
+<image mime-type="image/jpeg" src="CNX_Psych_16_01_Pinel.jpg"/>
+</media>
+<caption>This painting by Tony Robert-Fleury depicts Dr. Philippe Pinel ordering the removal of chains from patients at the Salpêtrière asylum in Paris.</caption>
+</figure>
+<para id="fs-idp57750784">In the 19th century, Dorothea <term class="no-emphasis">Dix</term> led reform efforts for mental health care in the United States (<link target-id="CNX_Psych_16_01_Dix"/>). She investigated how those who are mentally ill and poor were cared for, and she discovered an underfunded and unregulated system that perpetuated abuse of this population (Tiffany, 1891). Horrified by her findings, Dix began lobbying various state legislatures and the U.S. Congress for change (Tiffany, 1891). Her efforts led to the creation of the first mental asylums in the United States.</para>
+<figure id="CNX_Psych_16_01_Dix">
+<media id="fs-idm68126064" alt="A portrait of Dorothea Dix is shown.">
+<image mime-type="image/jpeg" src="CNX_Psych_16_01_Dix.jpg"/>
+</media>
+<caption>Dorothea Dix was a social reformer who became an advocate for the indigent insane and was instrumental in creating the first American mental asylum. She did this by relentlessly lobbying state legislatures and Congress to set up and fund such institutions.</caption>
+</figure>
+<para id="fs-idp56496944">Despite reformers’ efforts, however, a typical asylum was filthy, offered very little treatment, and often kept people for decades. At Willard Psychiatric Center in upstate New York, for example, one treatment was to submerge patients in cold baths for long periods of time. Electroshock treatment was also used, and the way the treatment was administered often broke patients’ backs; in 1943, doctors at Willard administered 1,443 shock treatments (Willard Psychiatric Center, 2009). (Electroshock is now called electroconvulsive treatment, and the therapy is still used, but with safeguards and under anesthesia. A brief application of electric stimulus is used to produce a generalized seizure. Controversy continues over its effectiveness versus the side effects.) Many of the wards and rooms were so cold that a glass of water would be frozen by morning (Willard Psychiatric Center, 2009). Willard’s doors were not closed until 1995. Conditions like these remained commonplace until well into the 20th century.</para>
+<para id="fs-idm98495392">Starting in 1954 and gaining popularity in the 1960s, antipsychotic medications were introduced. These proved a tremendous help in controlling the symptoms of certain psychological disorders, such as psychosis. Psychosis was a common diagnosis of individuals in mental hospitals, and it was often evidenced by symptoms like hallucinations and delusions, indicating a loss of contact with reality. Then in 1963, Congress passed and John F. Kennedy signed the Mental Retardation Facilities and Community Mental Health Centers Construction Act, which provided federal support and funding for community mental health centers (National Institutes of Health, 2013). This legislation changed how mental health services were delivered in the United States. It started the process of <term>deinstitutionalization</term>, the closing of large asylums, by providing for people to stay in their communities and be treated locally. In 1955, there were 558,239 severely mentally ill patients institutionalized at public hospitals (Torrey, 1997). By 1994, by percentage of the population, there were 92% fewer hospitalized individuals (Torrey, 1997).</para>
+</section>
+<section id="fs-idm87887472">
+<title>MENTAL HEALTH TREATMENT TODAY</title>
+<para id="fs-idm51315776">Today, there are community mental health centers across the nation. They are located in neighborhoods near the homes of clients, and they provide large numbers of people with mental health services of various kinds and for many kinds of problems. Unfortunately, part of what occurred with deinstitutionalization was that those released from institutions were supposed to go to newly created centers, but the system was not set up effectively. Centers were underfunded, staff was not trained to handle severe illnesses such as schizophrenia, there was high staff burnout, and no provision was made for the other services people needed, such as housing, food, and job training. Without these supports, those people released under deinstitutionalization often ended up homeless. Even today, a large portion of the homeless population is considered to be mentally ill (<link target-id="CNX_Psych_16_01_Homeless"/>). Statistics show that 26% of homeless adults living in shelters experience mental illness (U.S. Department of Housing and Urban Development [HUD], 2011).</para>
+<figure id="CNX_Psych_16_01_Homeless">
+<media id="fs-idm81775808" alt="Photograph A shows a person sitting on a bench slumped over. In the background an American flag hangs vertically. Photograph B shows a prison yard from afar. There are several people gathered around a basketball court.">
+<image mime-type="image/jpeg" src="CNX_Psych_16_01_Homeless.jpg"/>
+</media>
+<caption>(a) Of the homeless individuals in U.S. shelters, about one-quarter have a severe mental illness (HUD, 2011). (b) Correctional institutions also report a high number of individuals living with mental illness. (credit a: modification of work by C.G.P. Grey; credit b: modification of work by Bart Everson)</caption>
+</figure>
+<para id="fs-idm10812528">Another group of the mentally ill population is involved in the corrections system. According to a 2006 special report by the Bureau of Justice Statistics (BJS), approximately 705,600 mentally ill adults were incarcerated in the state prison system, and another 78,800 were incarcerated in the federal prison system. A further 479,000 were in local jails. According to the study, “people with mental illnesses are overrepresented in probation and parole populations at estimated rates ranging from two to four times the general population” (Prins &amp; Draper, 2009, p. 23). The Treatment Advocacy Center reported that the growing number of mentally ill inmates has placed a burden on the correctional system (Torrey et al., 2014).</para>
+<para id="fs-idm25238928">Today, instead of asylums, there are psychiatric hospitals run by state governments and local community hospitals focused on short-term care. In all types of hospitals, the emphasis is on short-term stays, with the average length of stay being less than two weeks and often only several days. This is partly due to the very high cost of psychiatric hospitalization, which can be about $800 to $1000 per night (Stensland, Watson, &amp; Grazier, 2012). Therefore, insurance coverage often limits the length of time a person can be hospitalized for treatment. Usually individuals are hospitalized only if they are an imminent threat to themselves or others.</para>
+<note id="fs-idm26210976" class="psychology link-to-learning"><label>Link to Learning</label>
+<media id="fs-idp21487136" alt="">
+<image mime-type="png" src="OSC_Interactive_150.png"/>
+</media>
+<para id="fs-idp64852688">View this <link url="http://openstaxcollege.org/l/timeline">timeline</link> showing the history of mental institutions in the United States.</para>
+</note><para id="fs-idm51248240">Most people suffering from mental illnesses are not hospitalized. If someone is feeling very depressed, complains of hearing voices, or feels anxious all the time, he or she might seek psychological treatment. A friend, spouse, or parent might refer someone for treatment. The individual might go see his primary care physician first and then be referred to a mental health practitioner.</para>
+<para id="fs-idm144959920">Some people seek treatment because they are involved with the state’s child protective services—that is, their children have been removed from their care due to abuse or neglect. The parents might be referred to psychiatric or substance abuse facilities and the children would likely receive treatment for trauma. If the parents are interested in and capable of becoming better parents, the goal of treatment might be family reunification. For other children whose parents are unable to change—for example, the parent or parents who are heavily addicted to drugs and refuse to enter treatment—the goal of therapy might be to help the children adjust to foster care and/or adoption (<link target-id="CNX_Psych_16_01_Children"/>).</para>
+<figure id="CNX_Psych_16_01_Children">
+<media id="fs-idm7621312" alt="An adult and a small child are depicted sitting on a rug next to a toy house.">
+<image mime-type="image/jpeg" src="CNX_Psych_16_01_Children.jpg"/>
+</media>
+<caption>Therapy with children may involve play. (credit: “LizMarie_AK”/Flick4)</caption>
+</figure>
+<para id="fs-idp35975280">Some people seek therapy because the criminal justice system referred them or required them to go. For some individuals, for example, attending weekly counseling sessions might be a condition of parole. If an individual is mandated to attend therapy, she is seeking services involuntarily. <term>Involuntary treatment</term> refers to therapy that is not the individual’s choice. Other individuals might voluntarily seek treatment. <term>Voluntary treatment</term> means the person chooses to attend therapy to obtain relief from symptoms.</para>
+<para id="fs-idp63301600">Psychological treatment can occur in a variety of places. An individual might go to a community mental health center or a practitioner in private or community practice. A child might see a school counselor, school psychologist, or school social worker. An incarcerated person might receive group therapy in prison. There are many different types of treatment providers, and licensing requirements vary from state to state. Besides psychologists and psychiatrists, there are clinical social workers, marriage and family therapists, and trained religious personnel who also perform counseling and therapy.</para>
+<para id="fs-idm121767760">A range of funding sources pay for mental health treatment: health insurance, government, and private pay. In the past, even when people had health insurance, the coverage would not always pay for mental health services. This changed with the Mental Health Parity and Addiction Equity Act of 2008, which requires group health plans and insurers to make sure there is parity of mental health services (U.S. Department of Labor, n.d.). This means that co-pays, total number of visits, and deductibles for mental health and substance abuse treatment need to be equal to and cannot be more restrictive or harsher than those for physical illnesses and medical/surgical problems.</para>
+<para id="fs-idm83363088">Finding treatment sources is also not always easy: there may be limited options, especially in rural areas and low-income urban areas; waiting lists; poor quality of care available for indigent patients; and financial obstacles such as co-pays, deductibles, and time off from work. Over 85% of the l,669 federally designated mental health professional shortage areas are rural; often primary care physicians and law enforcement are the first-line mental health providers (Ivey, Scheffler, &amp; Zazzali, 1998), although they do not have the specialized training of a mental health professional, who often would be better equipped to provide care. Availability, accessibility, and acceptability (the stigma attached to mental illness) are all problems in rural areas. Approximately two-thirds of those with symptoms receive no care at all (U.S. Department of Health and Human Services, 2005; Wagenfeld, Murray, Mohatt, &amp; DeBruiynb, 1994). At the end of 2013, the U.S. Department of Agriculture announced an investment of $50 million to help improve access and treatment for mental health problems as part of the Obama administration’s effort to strengthen rural communities.</para>
+</section>
+<section id="fs-idm113439120" class="summary">
+<title>Summary</title>
+<para id="fs-idp117865632">It was once believed that people with psychological disorders, or those exhibiting strange behavior, were possessed by demons. These people were forced to take part in exorcisms, were imprisoned, or executed. Later, asylums were built to house the mentally ill, but the patients received little to no treatment, and many of the methods used were cruel. Philippe Pinel and Dorothea Dix argued for more humane treatment of people with psychological disorders. In the mid-1960s, the deinstitutionalization movement gained support and asylums were closed, enabling people with mental illness to return home and receive treatment in their own communities. Some did go to their family homes, but many became homeless due to a lack of resources and support mechanisms.</para>
+<para id="fs-idp8937200">Today, instead of asylums, there are psychiatric hospitals run by state governments and local community hospitals, with the emphasis on short-term stays. However, most people suffering from mental illness are not hospitalized. A person suffering symptoms could speak with a primary care physician, who most likely would refer him to someone who specializes in therapy. The person can receive outpatient mental health services from a variety of sources, including psychologists, psychiatrists, marriage and family therapists, school counselors, clinical social workers, and religious personnel. These therapy sessions would be covered through insurance, government funds, or private (self) pay.</para>
+</section>
+<section id="fs-idm85473024" class="review-questions">
+<title>Review Questions</title>
+<exercise id="fs-idm9640640">
+<problem id="fs-idm26997568">
+<para id="fs-idm102266656">Who of the following does not support the humane and improved treatment of mentally ill persons?</para>
+<list id="fs-idm70164480" list-type="enumerated" number-style="lower-alpha"><item>Philippe Pinel</item>
+<item>medieval priests</item>
+<item>Dorothea Dix</item>
+<item>All of the above</item>
+</list></problem>
+<solution id="fs-idp71158240"><para id="fs-idm87178896">B</para></solution>
+</exercise>
+<exercise id="fs-idm83080272">
+<problem id="fs-idm14018528">
+<para id="fs-idp36227584">The process of closing large asylums and providing for people to stay in the community to be treated locally is known as ________.</para>
+<list id="fs-idm70889216" list-type="enumerated" number-style="lower-alpha"><item>deinstitutionalization</item>
+<item>exorcism</item>
+<item>deactivation</item>
+<item>decentralization</item>
+</list></problem>
+<solution id="fs-idp34051536"><para id="fs-idm99080112">A</para></solution>
+</exercise>
+<exercise id="fs-idm100302928">
+<problem id="fs-idm75585440">
+<para id="fs-idm11177760">Joey was convicted of domestic violence. As part of his sentence, the judge has ordered that he attend therapy for anger management. This is considered ________ treatment.</para>
+<list id="fs-idp57776720" list-type="enumerated" number-style="lower-alpha"><item>involuntary</item>
+<item>voluntary</item>
+<item>forced</item>
+<item>mandatory</item>
+</list></problem>
+<solution id="fs-idp64826720"><para id="fs-idm9466288">A</para></solution>
+</exercise>
+<exercise id="fs-idm9089504">
+<problem id="fs-idm70154064">
+<para id="fs-idm82501776">Today, most people with psychological problems are not hospitalized. Typically they are only hospitalized if they ________.</para>
+<list id="fs-idm41243104" list-type="enumerated" number-style="lower-alpha"><item>have schizophrenia</item>
+<item>have insurance</item>
+<item>are an imminent threat to themselves or others</item>
+<item>require therapy</item>
+</list></problem>
+<solution id="fs-idm13079728"><para id="fs-idm52392784">C</para></solution>
+</exercise>
+</section>
+<section id="fs-idp6413680" class="critical-thinking">
+<title>Critical Thinking Questions</title>
+<exercise id="fs-idm90768368">
+<problem id="fs-idm7830464"><para id="fs-idp80404096">People with psychological disorders have been treated poorly throughout history. Describe some efforts to improve treatment, include explanations for the success or lack thereof.</para></problem>
+<solution id="fs-idm140011856"><para id="fs-idp20141520">Beginning in the Middle Ages and up until the mid-20th century, the mentally ill were misunderstood and treated cruelly. In the 1700s, Philippe Pinel advocated for patients to be unchained, and he was able to affect this in a Paris hospital. In the 1800s, Dorothea Dix urged the government to provide better funded and regulated care, which led to the creation of asylums, but treatment generally remained quite poor. Federally mandated deinstitutionalization in the 1960s began the elimination of asylums, but it was often inadequate in providing the infrastructure for replacement treatment.</para></solution>
+</exercise>
+<exercise id="fs-idm59774048">
+<problem id="fs-idm112439888"><para id="fs-idm35723968">Usually someone is hospitalized only if they are an imminent threat to themselves or others. Describe a situation that might meet these criteria.</para></problem>
+<solution id="fs-idp29586352"><para id="fs-idm96539280">Frank is severely depressed. He lost his job one year ago and has not been able to find another one. A few months after losing his job, his home was foreclosed and his wife left him. Lately, he has been thinking that he would be better off dead. He’s begun giving his possessions away and has purchased a handgun. He plans to kill himself on what would have been his 20th wedding anniversary, which is coming up in a few weeks.</para></solution>
+</exercise>
+</section>
+<section id="fs-idm95758208" class="personal-application">
+<title>Personal Application Questions</title>
+<exercise id="fs-idm23873600">
+<problem id="fs-idp34132928"><para id="fs-idp64069728">Do you think there is a stigma associated with mentally ill persons today? Why or why not?</para></problem>
+</exercise>
+<exercise id="fs-idm98309360">
+<problem id="fs-idp89900512"><para id="fs-idm58199728">What are some places in your community that offer mental health services? Would you feel comfortable seeking assistance at one of these facilities? Why or why not?</para></problem>
+</exercise>
+</section>
+
+</content>
+<glossary>
+<definition id="fs-idp14967664"><term>asylum</term><meaning id="fs-idm95625200">institution created for the specific purpose of housing people with psychological disorders</meaning></definition>
+<definition id="fs-idm47924032"><term>deinstitutionalization</term><meaning id="fs-idp7760512">process of closing large asylums and integrating people back into the community where they can be treated locally</meaning></definition>
+<definition id="fs-idm101799456"><term>involuntary treatment</term><meaning id="fs-idm81561712">therapy that is mandated by the courts or other systems</meaning></definition>
+<definition id="fs-idm341392"><term>voluntary treatment</term><meaning id="fs-idm12260288">therapy that a person chooses to attend in order to obtain relief from her symptoms</meaning></definition>
+</glossary>
+</document>

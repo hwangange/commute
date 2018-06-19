@@ -1,0 +1,290 @@
+<?xml version="1.0"?>
+<document xmlns="http://cnx.rice.edu/cnxml" xmlns:md="http://cnx.rice.edu/mdml" xmlns:bib="http://bibtexml.sf.net/" xmlns:m="http://www.w3.org/1998/Math/MathML" xmlns:q="http://cnx.rice.edu/qml/1.0" id="new" cnxml-version="0.7" module-id="new">
+
+<title>Problem Solving</title>
+<metadata xmlns:md="http://cnx.rice.edu/mdml"
+          mdml-version="0.5">
+  <!-- WARNING! The 'metadata' section is read only. Do not edit below.
+       Changes to the metadata section in the source will not be saved. -->
+  <md:repository>http://legacy.cnx.org/content</md:repository>
+  <md:content-url>http://legacy.cnx.org/content/m49057/latest</md:content-url>
+  <md:content-id>m49057</md:content-id>
+  <md:title>Problem Solving</md:title>
+  <md:version>1.6</md:version>
+  <md:created>2014/02/12 21:24:34 -0600</md:created>
+  <md:revised>2014/12/22 14:02:44 -0600</md:revised>
+  <md:actors>
+    <md:organization userid="OpenStaxCollege">
+      <md:shortname>OpenStax</md:shortname>
+      <md:fullname>OpenStax</md:fullname>
+      <md:email>info@openstax.org</md:email>
+    </md:organization>
+    <md:person userid="OSCRiceUniversity">
+      <md:firstname>Rice</md:firstname>
+      <md:surname>University</md:surname>
+      <md:fullname>Rice University</md:fullname>
+      <md:email>info@openstaxcollege.org</md:email>
+    </md:person>
+    <md:person userid="cnxpsych">
+      <md:firstname>CNX</md:firstname>
+      <md:surname>Psychology</md:surname>
+      <md:fullname>OpenStax Psychology</md:fullname>
+      <md:email>info@openstaxcollege.org</md:email>
+    </md:person>
+  </md:actors>
+  <md:roles>
+    <md:role type="author">OpenStaxCollege</md:role>
+    <md:role type="maintainer">OpenStaxCollege cnxpsych</md:role>
+    <md:role type="licensor">OSCRiceUniversity</md:role>
+  </md:roles>
+  <md:license url="http://creativecommons.org/licenses/by/4.0/">Creative Commons Attribution License 4.0</md:license>
+  <!-- For information on license requirements for use or modification, see license url in the
+       above <md:license> element.
+       For information on formatting required attribution, see the URL:
+         CONTENT_URL/content_info#cnx_cite_header
+       where CONTENT_URL is the value provided above in the <md:content-url> element.
+  -->
+  <md:keywordlist>
+    <md:keyword>algorithm</md:keyword>
+    <md:keyword>anchoring bias</md:keyword>
+    <md:keyword>availability heuristic</md:keyword>
+    <md:keyword>confirmation bias</md:keyword>
+    <md:keyword>functional fixedness</md:keyword>
+    <md:keyword>heuristic</md:keyword>
+    <md:keyword>hindsight bias</md:keyword>
+    <md:keyword>mental set</md:keyword>
+    <md:keyword>problem-solving strategy</md:keyword>
+    <md:keyword>representative bias</md:keyword>
+    <md:keyword>trial and error</md:keyword>
+    <md:keyword>working backwards</md:keyword>
+  </md:keywordlist>
+  <md:subjectlist>
+    <md:subject>Social Sciences</md:subject>
+  </md:subjectlist>
+  <md:abstract>By the end of this section, you will be able to:
+<list>
+<item>Describe problem solving strategies</item>
+<item>Define algorithm and heuristic</item>
+<item>Explain some common roadblocks to effective problem solving</item>
+</list></md:abstract>
+  <md:language>en</md:language>
+  <!-- WARNING! The 'metadata' section is read only. Do not edit above.
+       Changes to the metadata section in the source will not be saved. -->
+</metadata>
+
+<content>
+<para id="fs-idp7406912">People face problems every day—usually, multiple problems throughout the day. Sometimes these problems are straightforward: To double a recipe for pizza dough, for example, all that is required is that each ingredient in the recipe be doubled. Sometimes, however, the problems we encounter are more complex. For example, say you have a work deadline, and you must mail a printed copy of a report to your supervisor by the end of the business day. The report is time-sensitive and must be sent overnight. You finished the report last night, but your printer will not work today. What should you do? First, you need to identify the problem and then apply a strategy for solving the problem.</para>
+<section id="fs-idm10771072">
+<title>PROBLEM-SOLVING STRATEGIES</title>
+<para id="fs-idm55655984">When you are presented with a problem—whether it is a complex mathematical problem or a broken printer, how do you solve it? Before finding a solution to the problem, the problem must first be clearly identified. After that, one of many problem solving strategies can be applied, hopefully resulting in a solution.</para>
+<para id="fs-idm81082576">A <term>problem-solving strategy</term> is a plan of action used to find a solution. Different strategies have different action plans associated with them (<link target-id="Table_07_03_01"/>). For example, a well-known strategy is <term>trial and error</term>. The old adage, “If at first you don’t succeed, try, try again” describes trial and error. In terms of your broken printer, you could try checking the ink levels, and if that doesn’t work, you could check to make sure the paper tray isn’t jammed. Or maybe the printer isn’t actually connected to your laptop. When using trial and error, you would continue to try different solutions until you solved your problem. Although trial and error is not typically one of the most time-efficient strategies, it is a commonly used one.</para>
+<table id="Table_07_03_01" summary="A three column table describes problem solving strategies. From left to right the columns are labeled &#x201C;Method; Description; and Example.&#x201D; The first row, respectively, reads: &#x201C;trial and error; continue trying different solutions until problem is solved; and restarting phone, turning off wifi, turning off Bluetooth in order to determine why your phone is malfunctioning.&#x201D; The second row reads: &#x201C;algorithm; step-by-step problem-solving formula; and instruction manual for installing new software on your computer.&#x201D; The third row reads: &#x201C;heuristic; general problem-solving framework; and working backwards, breaking a task into steps.&#x201D;"><title>Problem-Solving Strategies</title>
+<tgroup cols="3"><colspec colnum="1" colname="c1"/>
+<colspec colnum="2" colname="c2"/>
+<colspec colnum="3" colname="c3"/>
+<thead>
+<row>
+<entry>Method</entry>
+<entry>Description</entry>
+<entry>Example</entry>
+</row>
+</thead>
+<tbody>
+<row>
+<entry>Trial and error</entry>
+<entry>Continue trying different solutions until problem is solved</entry>
+<entry>Restarting phone, turning off WiFi, turning off bluetooth in order to determine why your phone is malfunctioning</entry>
+</row>
+<row>
+<entry>Algorithm</entry>
+<entry>Step-by-step problem-solving formula</entry>
+<entry>Instruction manual for installing new software on your computer</entry>
+</row>
+<row>
+<entry>Heuristic</entry>
+<entry>General problem-solving framework </entry>
+<entry>Working backwards; breaking a task into steps</entry>
+</row>
+</tbody>
+
+
+</tgroup>
+</table><para id="fs-idm40583184">Another type of strategy is an algorithm. An <term>algorithm</term> is a problem-solving formula that provides you with step-by-step instructions used to achieve a desired outcome (Kahneman, 2011). You can think of an algorithm as a recipe with highly detailed instructions that produce the same result every time they are performed. Algorithms are used frequently in our everyday lives, especially in computer science. When you run a search on the Internet, search engines like Google use algorithms to decide which entries will appear first in your list of results. Facebook also uses algorithms to decide which posts to display on your newsfeed. Can you identify other situations in which algorithms are used?</para>
+<para id="fs-idp8055712">A heuristic is another type of problem solving strategy. While an algorithm must be followed exactly to produce a correct result, a <term>heuristic</term> is a general problem-solving framework (Tversky &amp; Kahneman, 1974). You can think of these as mental shortcuts that are used to solve problems. A “rule of thumb” is an example of a heuristic. Such a rule saves the person time and energy when making a decision, but despite its time-saving characteristics, it is not always the best method for making a rational decision. Different types of heuristics are used in different types of situations, but the impulse to use a heuristic occurs when one of five conditions is met (Pratkanis, 1989):</para>
+<list id="fs-idm24198944" list-type="bulleted">
+<item>When one is faced with too much information</item>
+<item>When the time to make a decision is limited</item> 
+<item>When the decision to be made is unimportant</item>
+<item>When there is access to very little information to use in making the decision</item>
+<item>When an appropriate heuristic happens to come to mind in the same moment</item>
+</list>
+<para id="fs-idm161874848"><term>Working backwards</term> is a useful heuristic in which you begin solving the problem by focusing on the end result. Consider this example: You live in Washington, D.C. and have been invited to a wedding at 4 PM on Saturday in Philadelphia. Knowing that Interstate 95 tends to back up any day of the week, you need to plan your route and time your departure accordingly. If you want to be at the wedding service by 3:30 PM, and it takes 2.5 hours to get to Philadelphia without traffic, what time should you leave your house? You use the working backwards heuristic to plan the events of your day on a regular basis, probably without even thinking about it.</para>
+<para id="fs-idm26711856">Another useful heuristic is the practice of accomplishing a large goal or task by breaking it into a series of smaller steps. Students often use this common method to complete a large research project or long essay for school. For example, students typically brainstorm, develop a thesis or main topic, research the chosen topic, organize their information into an outline, write a rough draft, revise and edit the rough draft, develop a final draft, organize the references list, and proofread their work before turning in the project. The large task becomes less overwhelming when it is broken down into a series of small steps.</para>
+<note id="fs-idp39443200" class="psychology everyday-connection"><label>Everyday Connection</label><title>Solving Puzzles</title>
+<para id="fs-idm81906192">Problem-solving abilities can improve with practice. Many people challenge themselves every day with puzzles and other mental exercises to sharpen their problem-solving skills. Sudoku puzzles appear daily in most newspapers. Typically, a sudoku puzzle is a 9×9 grid. The simple sudoku below (<link target-id="Figure_07_03_Sudoku"/>) is a 4×4 grid. To solve the puzzle, fill in the empty boxes with a single digit: 1, 2, 3, or 4. Here are the rules: The numbers must total 10 in each bolded box, each row, and each column; however, each digit can only appear once in a bolded box, row, and column. Time yourself as you solve this puzzle and compare your time with a classmate.</para>
+<figure id="Figure_07_03_Sudoku"><media id="fs-idm79344352" alt="A four column by four row Sudoku puzzle is shown. The top left cell contains the number 3. The top right cell contains the number 2. The bottom right cell contains the number 1. The bottom left cell contains the number 4. The cell at the intersection of the second row and the second column contains the number 4. The cell to the right of that contains the number 1. The cell below the cell containing the number 1 contains the number 2. The cell to the left of the cell containing the number 2 contains the number 3.">
+<image mime-type="image/jpeg" src="CNX_Psych_07_03_Sudoko.jpg"/>
+</media>
+
+<caption>How long did it take you to solve this sudoku puzzle? (You can see the answer at the end of this section.)</caption></figure><para id="fs-idp18699600">Here is another popular type of puzzle (<link target-id="Figure_07_03_DotsAndLines"/>) that challenges your spatial reasoning skills. Connect all nine dots with four connecting straight lines without lifting your pencil from the paper:</para>
+<figure id="Figure_07_03_DotsAndLines">
+<media id="fs-idm127112048" alt="A square shaped outline contains three rows and three columns of dots with equal space between them.">
+<image mime-type="image/jpeg" src="CNX_Psych_07_03_DotsAndLines.jpg"/>
+</media>
+<caption>Did you figure it out? (The answer is at the end of this section.) Once you understand how to crack this puzzle, you won’t forget.</caption>
+</figure>
+<para id="fs-idm101365104">Take a look at the “Puzzling Scales” logic puzzle below (<link target-id="Figure_07_03_SamLoyd"/>). Sam Loyd, a well-known puzzle master, created and refined countless puzzles throughout his lifetime (Cyclopedia of Puzzles, n.d.).</para>
+<figure id="Figure_07_03_SamLoyd"><media id="fs-idm2420176" alt="A puzzle involving a scale is shown. At the top of the figure it reads: &#x201C;Sam Loyds Puzzling Scales.&#x201D; The first row of the puzzle shows a balanced scale with 3 blocks and a top on the left and 12 marbles on the right. Below this row it reads: &#x201C;Since the scales now balance.&#x201D; The next row of the puzzle shows a balanced scale with just the top on the left, and 1 block and 8 marbles on the right. Below this row it reads: &#x201C;And balance when arranged this way.&#x201D; The third row shows an unbalanced scale with the top on the left side, which is much lower than the right side. The right side is empty. Below this row it reads: &#x201C;Then how many marbles will it require to balance with that top?&#x201D;">
+<image mime-type="image/jpeg" src="CNX_Psych_07_03_SamLoyd.jpg"/>
+</media>
+
+<caption>What steps did you take to solve this puzzle? You can read the solution at the end of this section.</caption></figure></note></section>
+<section id="fs-idp55827040"><title>PITFALLS TO PROBLEM SOLVING</title><para id="fs-idp83546720">Not all problems are successfully solved, however. What challenges stop us from successfully solving a problem? Albert Einstein once said, “Insanity is doing the same thing over and over again and expecting a different result.” Imagine a person in a room that has four doorways. One doorway that has always been open in the past is now locked. The person, accustomed to exiting the room by that particular doorway, keeps trying to get out through the same doorway even though the other three doorways are open. The person is stuck—but she just needs to go to another doorway, instead of trying to get out through the locked doorway. A <term>mental set</term> is where you persist in approaching a problem in a way that has worked in the past but is clearly not working now.</para>
+<para id="fs-idp7857216"><term>Functional fixedness</term> is a type of mental set where you cannot perceive an object being used for something other than what it was designed for. During the <emphasis effect="italics">Apollo 13</emphasis> mission to the moon, NASA engineers at Mission Control had to overcome functional fixedness to save the lives of the astronauts aboard the spacecraft. An explosion in a module of the spacecraft damaged multiple systems. The astronauts were in danger of being poisoned by rising levels of carbon dioxide because of problems with the carbon dioxide filters. The engineers found a way for the astronauts to use spare plastic bags, tape, and air hoses to create a makeshift air filter, which saved the lives of the astronauts.</para>
+<note id="fs-idp23754352" class="psychology link-to-learning"><label>Link to Learning</label>
+<media id="fs-idm27537232" alt="">
+<image mime-type="png" src="OSC_Interactive_150.png"/>
+</media>
+<para id="fs-idm59356784">Check out this <link url="http://openstaxcollege.org/l/Apollo13"><emphasis effect="italics">Apollo 13 </emphasis>scene</link> where the group of NASA engineers are given the task of overcoming functional fixedness.</para> 
+</note><para id="fs-idp34596688">Researchers have investigated whether functional fixedness is affected by culture. In one experiment, individuals from the Shuar group in Ecuador were asked to use an object for a purpose other than that for which the object was originally intended. For example, the participants were told a story about a bear and a rabbit that were separated by a river and asked to select among various objects, including a spoon, a cup, erasers, and so on, to help the animals. The spoon was the only object long enough to span the imaginary river, but if the spoon was presented in a way that reflected its normal usage, it took participants longer to choose the spoon to solve the problem. (German &amp; Barrett, 2005). The researchers wanted to know if exposure to highly specialized tools, as occurs with individuals in industrialized nations, affects their ability to transcend functional fixedness. It was determined that functional fixedness is experienced in both industrialized and nonindustrialized cultures (German &amp; Barrett, 2005).</para><para id="fs-idm130151376">In order to make good decisions, we use our knowledge and our reasoning. Often, this knowledge and reasoning is sound and solid. Sometimes, however, we are swayed by biases or by others manipulating a situation. For example, let’s say you and three friends wanted to rent a house and had a combined target budget of $1,600. The realtor shows you only very run-down houses for $1,600 and then shows you a very nice house for $2,000. Might you ask each person to pay more in rent to get the $2,000 home? Why would the realtor show you the run-down houses and the nice house? The realtor may be challenging your anchoring bias. An <term>anchoring bias</term> occurs when you focus on one piece of information when making a decision or solving a problem. In this case, you’re so focused on the amount of money you are willing to spend that you may not recognize what kinds of houses are available at that price point.</para><para id="fs-idm73967264">The <term>confirmation bias</term> is the tendency to focus on information that confirms your existing beliefs. For example, if you think that your professor is not very nice, you notice all of the instances of rude behavior exhibited by the professor while ignoring the countless pleasant interactions he is involved in on a daily basis. <term>Hindsight bias</term> leads you to believe that the event you just experienced was predictable, even though it really wasn’t. In other words, you knew all along that things would turn out the way they did. <term>Representative bias</term> describes a faulty way of thinking, in which you unintentionally stereotype someone or something; for example, you may assume that your professors spend their free time reading books and engaging in intellectual conversation, because the idea of them spending their time playing volleyball or visiting an amusement park does not fit in with your stereotypes of professors.</para> 
+<para id="fs-idp35880832">Finally, the <term>availability heuristic</term> is a heuristic in which you make a decision based on an example, information, or recent experience that is that readily available to you, even though it may not be the best example to inform your decision<emphasis>.</emphasis> Biases tend to “preserve that which is already established—to maintain our preexisting knowledge, beliefs, attitudes, and hypotheses” (Aronson, 1995; Kahneman, 2011). These biases are summarized in <link target-id="Table_07_03_02"/>.</para>
+<table id="Table_07_03_02" summary="A two-column table summarizes various decision biases. The left column is titled &#x201C;Bias&#x201D; and the right column is titled &#x201C;Description.&#x201D; Respectively, the first row contains: &#x201C;anchoring&#x201D; and &#x201C;tendency to focus on one particular piece of information when making decisions or problem-solving.&#x201D; The second row contains: &#x201C;confirmation&#x201D; and &#x201C;focuses on information that confirms existing beliefs.&#x201D; The third row contains: &#x201C;hindsight&#x201D; and &#x201C;belief that the event just experienced was predictable.&#x201D; The fourth row contains: &#x201C;representative&#x201D; and &#x201C;unintentional stereotyping of someone or something.&#x201D; The fifth row contains: &#x201C;availability&#x201D; and &#x201C;decision is based on an available precedent or example that may be faulty.&#x201D;">
+<title>Summary of Decision Biases</title>
+<tgroup cols="2">
+<colspec colnum="1" colname="c1"/>
+<colspec colnum="2" colname="c2"/>
+<thead>
+<row>
+<entry>Bias</entry>
+<entry>Description</entry>
+</row>
+</thead>
+<tbody>
+<row>
+<entry>Anchoring</entry>
+<entry>Tendency to focus on one particular piece of information when making decisions or problem-solving</entry>
+</row>
+<row>
+<entry>Confirmation </entry>
+<entry>Focuses on information that confirms existing beliefs</entry>
+</row>
+<row>
+<entry>Hindsight </entry>
+<entry>Belief that the event just experienced was predictable</entry>
+</row>
+<row>
+<entry>Representative </entry>
+<entry>Unintentional stereotyping of someone or something</entry>
+</row>
+<row>
+<entry>Availability </entry>
+<entry>Decision is based upon either an available precedent or an example that may be faulty</entry>
+</row>
+</tbody>
+</tgroup>
+</table>
+
+<note id="fs-idm33205008" class="psychology link-to-learning"><label>Link to Learning</label>
+<media id="fs-idp24469376" alt="">
+<image mime-type="png" src="OSC_Interactive_150.png"/>
+</media>
+<para id="fs-idp10384560">Please visit this <link url="http://openstaxcollege.org/l/CogBias">site</link> to see a clever music video that a high school teacher made to explain these and other cognitive biases to his AP psychology students.</para> 
+</note><para id="fs-idm116954640">Were you able to determine how many marbles are needed to balance the scales in <link target-id="Figure_07_03_SamLoyd"/>? You need nine. Were you able to solve the problems in <link target-id="Figure_07_03_Sudoku"/> and <link target-id="Figure_07_03_DotsAndLines"/>? Here are the answers (<link target-id="Figure_07_03_Solutions"/>).</para><figure id="Figure_07_03_Solutions"><media id="fs-idp32245312" alt="The first puzzle is a Sudoku grid of 16 squares (4 rows of 4 squares) is shown. Half of the numbers were supplied to start the puzzle and are colored blue, and half have been filled in as the puzzle&#x2019;s solution and are colored red. The numbers in each row of the grid, left to right, are as follows. Row 1:  blue 3, red 1, red 4, blue 2. Row 2: red 2, blue 4, blue 1, red 3. Row 3: red 1, blue 3, blue 2, red 4. Row 4: blue 4, red 2, red 3, blue 1.The second puzzle consists of 9 dots arranged in 3 rows of 3 inside of a square. The solution, four straight lines made without lifting the pencil, is shown in a red line with arrows indicating the direction of movement. In order to solve the puzzle, the lines must extend beyond the borders of the box. The four connecting lines are drawn as follows. Line 1 begins at the top left dot, proceeds through the middle and right dots of the top row, and extends to the right beyond the border of the square. Line 2 extends from the end of line 1, through the right dot of the horizontally centered row, through the middle dot of the bottom row, and beyond the square&#x2019;s border ending in the space beneath the left dot of the bottom row. Line 3 extends from the end of line 2 upwards through the left dots of the bottom, middle, and top rows. Line 4 extends from the end of line 3 through the middle dot in the middle row and ends at the right dot of the bottom row.">
+<image mime-type="image/jpeg" src="CNX_Psych_07_06_Solutions.jpg"/>
+</media>
+</figure></section><section id="fs-idp43883184" class="summary">
+<title>Summary</title>
+<para id="fs-idm8905680">Many different strategies exist for solving problems. Typical strategies include trial and error, applying algorithms, and using heuristics. To solve a large, complicated problem, it often helps to break the problem into smaller steps that can be accomplished individually, leading to an overall solution. Roadblocks to problem solving include a mental set, functional fixedness, and various biases that can cloud decision making skills.</para>
+</section>
+
+<section id="fs-idm35776032" class="review-questions">
+<title>Review Questions</title>
+<exercise id="fs-idm138779696">
+<problem id="fs-idp10693616">
+<para id="fs-idp30333520">A specific formula for solving a problem is called ________.</para>
+<list id="fs-idm134518416" list-type="enumerated" number-style="lower-alpha">
+<item>an algorithm</item>
+<item>a heuristic</item>
+<item>a mental set</item>
+<item>trial and error</item>
+</list>
+</problem>
+<solution id="fs-idm116000736"><para id="fs-idm78022208">A</para></solution>
+</exercise>
+
+<exercise id="fs-idm172007920">
+<problem id="fs-idm142271712">
+<para id="fs-idm58318464">A mental shortcut in the form of a general problem-solving framework is called ________.</para>
+<list id="fs-idm63176752" list-type="enumerated" number-style="lower-alpha">
+<item>an algorithm</item>
+<item>a heuristic</item>
+<item>a mental set</item>
+<item>trial and error</item>
+</list>
+</problem>
+<solution id="fs-idm42789936"><para id="fs-idm38833888">B</para></solution>
+</exercise>
+
+<exercise id="fs-idm104965904">
+<problem id="fs-idm106446752">
+<para id="fs-idp41264048">Which type of bias involves becoming fixated on a single trait of a problem?</para>
+<list id="fs-idp7499728" list-type="enumerated" number-style="lower-alpha">
+<item>anchoring bias</item>
+<item>confirmation bias</item>
+<item>representative bias</item>
+<item>availability bias</item>
+</list>
+</problem>
+<solution id="fs-idp68831600"><para id="fs-idm46265232">A</para></solution>
+</exercise>
+
+<exercise id="fs-idm83509360">
+<problem id="fs-idm162953552">
+<para id="fs-idm39228112">Which type of bias involves relying on a false stereotype to make a decision?</para>
+<list id="fs-idm98016192" list-type="enumerated" number-style="lower-alpha">
+<item>anchoring bias</item>
+<item>confirmation bias</item>
+<item>representative bias</item>
+<item>availability bias</item>
+</list>
+</problem>
+<solution id="fs-idm12467760"><para id="fs-idm111666992">C</para></solution>
+</exercise>
+</section>
+<section id="fs-idm98787904" class="critical-thinking">
+<title>Critical Thinking Questions</title>
+<exercise id="fs-idm56559376">
+<problem id="fs-idp72670272"><para id="fs-idm36227776">What is functional fixedness and how can overcoming it help you solve problems?</para></problem>
+<solution id="fs-idp76554528"><para id="fs-idm45700016">Functional fixedness occurs when you cannot see a use for an object other than the use for which it was intended. For example, if you need something to hold up a tarp in the rain, but only have a pitchfork, you must overcome your expectation that a pitchfork can only be used for garden chores before you realize that you could stick it in the ground and drape the tarp on top of it to hold it up.</para></solution>
+</exercise>
+
+<exercise id="fs-idm12089648">
+<problem id="fs-idm25548448"><para id="fs-idm62248960">How does an algorithm save you time and energy when solving a problem?</para></problem>
+<solution id="fs-idm115980752"><para id="fs-idm56810912">An algorithm is a proven formula for achieving a desired outcome. It saves time because if you follow it exactly, you will solve the problem without having to figure out how to solve the problem. It is a bit like not reinventing the wheel.</para></solution>
+</exercise>
+</section>
+
+<section id="fs-idm39905440" class="personal-application">
+<title>Personal Application Question</title>
+<exercise id="fs-idp38452032">
+<problem id="fs-idm118283296"><para id="fs-idm116337200">Which type of bias do you recognize in your own decision making processes? How has this bias affected how you’ve made decisions in the past and how can you use your awareness of it to improve your decisions making skills in the future?</para></problem>
+</exercise>
+</section>
+
+
+</content>
+<glossary>
+<definition id="fs-idp2076640"><term>algorithm </term><meaning id="fs-idm24709632">problem-solving strategy characterized by a specific set of instructions</meaning></definition>
+<definition id="fs-idm117584624"><term>anchoring bias </term><meaning id="fs-idm37758096">faulty heuristic in which you fixate on a single aspect of a problem to find a solution</meaning></definition>
+<definition id="fs-idp23939504"><term>availability heuristic </term><meaning id="fs-idp23639776">faulty heuristic in which you make a decision based on information readily available to you</meaning></definition>
+<definition id="fs-idm7379696"><term>confirmation bias </term><meaning id="fs-idm18822432">faulty heuristic in which you focus on information that confirms your beliefs</meaning></definition>
+<definition id="fs-idp31959856"><term>functional fixedness </term><meaning id="fs-idm57877744">inability to see an object as useful for any other use other than the one for which it was intended</meaning></definition>
+<definition id="fs-idp576320"><term>heuristic </term><meaning id="fs-idm58051792">mental shortcut that saves time when solving a problem</meaning></definition>
+<definition id="fs-idp57737840"><term>hindsight bias </term><meaning id="fs-idm128933552">belief that the event just experienced was predictable, even though it really wasn’t</meaning></definition>
+<definition id="fs-idm58035616"><term>mental set </term><meaning id="fs-idm101127968">continually using an old solution to a problem without results</meaning></definition>
+<definition id="fs-idp31995952"><term>problem-solving strategy </term><meaning id="fs-idm116805152">method for solving problems</meaning></definition>
+<definition id="fs-idm59079984"><term>representative bias </term><meaning id="fs-idp8931952">faulty heuristic in which you stereotype someone or something without a valid basis for your judgment</meaning></definition>
+<definition id="fs-idm82407696"><term>trial and error </term><meaning id="fs-idm109248320">problem-solving strategy in which multiple solutions are attempted until the correct one is found</meaning></definition>
+<definition id="fs-idm208944"><term>working backwards </term><meaning id="fs-idm82802624">heuristic in which you begin to solve a problem by focusing on the end result</meaning></definition>
+</glossary>
+</document>

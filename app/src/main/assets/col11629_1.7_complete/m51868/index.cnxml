@@ -1,0 +1,141 @@
+<?xml version="1.0"?>
+<document xmlns="http://cnx.rice.edu/cnxml" xmlns:md="http://cnx.rice.edu/mdml" xmlns:bib="http://bibtexml.sf.net/" xmlns:m="http://www.w3.org/1998/Math/MathML" xmlns:q="http://cnx.rice.edu/qml/1.0" id="new" class="preface" cnxml-version="0.7" module-id="new">
+
+<title>Preface</title>
+<metadata xmlns:md="http://cnx.rice.edu/mdml"
+          mdml-version="0.5">
+  <!-- WARNING! The 'metadata' section is read only. Do not edit below.
+       Changes to the metadata section in the source will not be saved. -->
+  <md:repository>https://legacy.cnx.org/content</md:repository>
+  <md:content-url>https://legacy.cnx.org/content/m51868/latest/</md:content-url>
+  <md:content-id>m51868</md:content-id>
+  <md:title>Preface</md:title>
+  <md:version>1.17</md:version>
+  <md:created>2014/12/04 02:41:30 -0600</md:created>
+  <md:revised>2018/05/29 09:32:41.047 GMT-5</md:revised>
+  <md:actors>
+    <md:organization userid="OpenStaxCollege">
+      <md:shortname>OpenStax</md:shortname>
+      <md:fullname>OpenStax</md:fullname>
+      <md:email>info@openstax.org</md:email>
+    </md:organization>
+    <md:person userid="OSCRiceUniversity">
+      <md:firstname>Rice</md:firstname>
+      <md:surname>University</md:surname>
+      <md:fullname>Rice University</md:fullname>
+      <md:email>info@openstaxcollege.org</md:email>
+    </md:person>
+    <md:person userid="cnxpsych">
+      <md:firstname>CNX</md:firstname>
+      <md:surname>Psychology</md:surname>
+      <md:fullname>OpenStax Psychology</md:fullname>
+      <md:email>info@openstaxcollege.org</md:email>
+    </md:person>
+  </md:actors>
+  <md:roles>
+    <md:role type="author">OpenStaxCollege</md:role>
+    <md:role type="maintainer">OpenStaxCollege cnxpsych</md:role>
+    <md:role type="licensor">OSCRiceUniversity</md:role>
+  </md:roles>
+  <md:license url="http://creativecommons.org/licenses/by/4.0/">Creative Commons Attribution License 4.0</md:license>
+  <!-- For information on license requirements for use or modification, see license url in the
+       above <md:license> element.
+       For information on formatting required attribution, see the URL:
+         CONTENT_URL/content_info#cnx_cite_header
+       where CONTENT_URL is the value provided above in the <md:content-url> element.
+  -->
+  <md:subjectlist>
+    <md:subject>Social Sciences</md:subject>
+  </md:subjectlist>
+  <md:abstract></md:abstract>
+  <md:language>en</md:language>
+  <!-- WARNING! The 'metadata' section is read only. Do not edit above.
+       Changes to the metadata section in the source will not be saved. -->
+</metadata>
+
+<content>
+<para xmlns:data="http://www.w3.org/TR/html5/dom.html#custom-data-attribute" id="fs-idp164565872">Welcome to <emphasis effect="italics">Psychology</emphasis>, an OpenStax resource. This textbook was written to increase student access to high-quality learning materials, maintaining highest standards of academic rigor at little to no cost.</para><section id="fs-idp112472064">
+<title>About OpenStax</title>
+<para xmlns:data="http://www.w3.org/TR/html5/dom.html#custom-data-attribute" id="fs-idp107805552">OpenStax is a nonprofit based at Rice University, and it’s our mission to improve student access to education. Our first openly licensed college textbook was published in 2012, and our library has since scaled to over 25 books for college and AP® courses used by hundreds of thousands of students. Our adaptive learning technology, designed to improve learning outcomes through personalized educational paths, is being piloted in college courses throughout the country. Through our partnerships with philanthropic foundations and our alliance with other educational resource organizations, OpenStax is breaking down the most common barriers to learning and empowering students and instructors to succeed.</para></section>
+<section xmlns:data="http://www.w3.org/TR/html5/dom.html#custom-data-attribute" id="fs-idp115889712"><title>About OpenStax Resources</title><section id="fs-idp125344352">
+<title>Customization</title>
+<para id="fs-idp134646384"><emphasis effect="italics">Psychology</emphasis> is licensed under a Creative Commons Attribution 4.0 International (CC BY) license, which means that you can distribute, remix, and build upon the content, as long as you provide attribution to OpenStax and its content contributors.</para><para id="fs-idp190387536">Because our books are openly licensed, you are free to use the entire book or pick and choose the sections that are most relevant to the needs of your course. Feel free to remix the content by assigning your students certain chapters and sections in your syllabus, in the order that you prefer. You can even provide a direct link in your syllabus to the sections in the web view of your book.</para><para id="eip-742">Instructors also have the option of creating a customized version of their OpenStax book. The custom version can be made available to students in low-cost print or digital form through their campus bookstore. Visit your book page on openstax.org for more information.</para></section>
+<section id="fs-idp103208560"><title>Errata</title><para id="fs-idp130866272">All OpenStax textbooks undergo a rigorous review process. However, like any professional-grade textbook, errors sometimes occur. Since our books are web based, we can make updates periodically when deemed pedagogically necessary. If you have a correction to suggest, submit it through the link on your book page on openstax.org. Subject matter experts review all errata suggestions. OpenStax is committed to remaining transparent about all updates, so you will also find a list of past errata changes on your book page on openstax.org.</para></section><section id="fs-idp98939040"><title>Format</title><para id="fs-idp95364480">You can access this textbook for free in web view or PDF through openstax.org, and in low-cost print and iBooks editions.</para></section></section><section id="fs-idp149375136">
+<title>About <emphasis effect="italics">Psychology</emphasis></title>
+<para xmlns:data="http://www.w3.org/TR/html5/dom.html#custom-data-attribute" id="fs-idp91913936"><emphasis effect="italics">Psychology</emphasis> is designed to meet scope and sequence requirements for the single-semester introduction to psychology course. The book offers a comprehensive treatment of core concepts, grounded in both classic studies and current and emerging research. The text also includes coverage of the DSM-5 in examinations of psychological disorders. <emphasis effect="italics">Psychology</emphasis> incorporates discussions that reflect the diversity within the discipline, as well as the diversity of cultures and communities across the globe.</para><section id="fs-idp166390576">
+<title>Coverage and Scope</title>
+<para xmlns:data="http://www.w3.org/TR/html5/dom.html#custom-data-attribute" id="fs-idp239359968">This book is designed to make psychology, as a discipline, interesting and accessible to students research and examples that represent and include the various sociocultural backgrounds of the many students who take this course. The result is a book that covers the breadth of psychology topics with variety and depth that promote student engagement. The organization and pedagogical features were developed and vetted with feedback from psychology educators dedicated to the project.
+<list id="fs-idp59668784" list-type="bulleted" bullet-style="bullet"><item>Chapter 1: Introduction to Psychology</item>
+<item>Chapter 2: Psychological Research</item>
+<item>Chapter 3: Biopsychology</item>
+<item>Chapter 4: States of Consciousness</item>
+<item>Chapter 5: Sensation and Perception</item>
+<item>Chapter 6: Learning</item>
+<item>Chapter 7: Thinking and Intelligence</item>
+<item>Chapter 8: Memory</item>
+<item>Chapter 9: Lifespan Development</item>
+<item>Chapter 10: Motivation and Emotion</item>
+<item>Chapter 11: Personality</item>
+<item>Chapter 12: Social Psychology</item>
+<item>Chapter 13: Industrial-Organizational Psychology</item>
+<item>Chapter 14: Stress, Lifestyle, and Health</item>
+<item>Chapter 15: Psychological Disorders</item>
+<item>Chapter 16: Therapy and Treatment</item></list></para></section>
+<section id="eip-962"><title>Pedagogical Foundation</title><para xmlns:data="http://www.w3.org/TR/html5/dom.html#custom-data-attribute" id="eip-852">Throughout <emphasis effect="italics">Psychology</emphasis>,  you will find features that draw the students into psychological inquiry by taking selected topics a step further.
+<list id="eip-idp18059328"><item><emphasis>Everyday Connection</emphasis> features tie psychological topics to everyday issues and behaviors that students encounter in their lives and the world. Topics include the validity of scores on college entrance exams, advertising and associative learning, and cognitive mapping.</item>
+<item><emphasis>What Do You Think?</emphasis> features provide research-based information and ask students their views on controversial issues. Topics include “Brain Dead and on Life Support,” “Hooters and BFOQ Laws,” and “Intellectually Disabled Criminals and Capital Punishment.”</item>
+<item><emphasis>Dig Deeper</emphasis> features discuss one specific aspect of a topic in greater depth so students can dig more deeply into the concept. Examples include a discussion on the distinction between evolutionary psychology and behavioral genetics, an analysis of the increasing prevalence rate of ADHD, and a presentation of research on strategies for coping with prejudice and discrimination.</item>
+<item><emphasis>Connect the Concepts</emphasis> features revisit a concept learned in another chapter, expanding upon it within a different context. Features include “Autism Spectrum Disorder and the Expression of Emotions,” “Tweens, Teens, and Social Norms,” and “Conditioning and OCD.”</item>
+</list></para></section><section id="fs-idp156319200">
+<title>Art, Interactives, and Assessments That Engage</title><para xmlns:data="http://www.w3.org/TR/html5/dom.html#custom-data-attribute" id="fs-idp80827712">Our art program is designed to enhance students’ understanding of psychological concepts through simple, effective graphs, diagrams, and photographs. <emphasis effect="italics">Psychology</emphasis> also incorporates links to relevant interactive exercises and animations that help bring topics to life. Selected assessment items touch directly on students’ lives.
+<list id="eip-idp139814595979104"><item><emphasis>Link to Learning</emphasis> features direct students to online interactive exercises and animations that add a fuller context to core content and provide an opportunity for application.</item>
+<item><emphasis>Personal Application Questions</emphasis> engage students in topics at a personal level to encourage reflection and promote discussion. 
+</item></list></para></section></section>
+<section xmlns:data="http://www.w3.org/TR/html5/dom.html#custom-data-attribute" id="fs-idp152344432"><title>Additional Resources</title><section id="eip-541"><title>Student and Instructor Resources</title><para id="eip-815">
+We’ve compiled additional resources for both students and instructors, including Getting Started Guides, an instructor solution guide, a test bank, and PowerPoint slides. Instructor resources require a verified instructor account, which you can apply for when you log in or create your account on openstax.org. Take advantage of these resources to supplement your OpenStax book.
+</para></section><section id="eip-911"><title>Partner Resources</title><para id="eip-757">
+OpenStax Partners are our allies in the mission to make high-quality learning materials affordable and accessible to students and instructors everywhere. Their tools integrate seamlessly with our OpenStax titles at a low cost. To access the partner resources for your text, visit your book page on openstax.org.
+</para></section></section><section xmlns:data="http://www.w3.org/TR/html5/dom.html#custom-data-attribute" id="fs-idp112539776"><title>About the Authors</title><section id="eip-901" class="sr-contrib-auth"><title>Senior Contributing Authors</title><para id="eip-577">Rose M. Spielman (Content Lead)<newline/>
+Dr. Rose Spielman has been teaching psychology and working as a licensed clinical psychologist for 20 years. Her academic career has included positions at Quinnipiac University, Housatonic Community College, and Goodwin College. As a licensed clinical psychologist, educator, and volunteer director, Rose is able to connect with people from diverse backgrounds and facilitate treatment, advocacy, and education. In her years of work as a teacher, therapist, and administrator, she has helped thousands of students and clients and taught them to advocate for themselves and move their lives forward to become more productive citizens and family members. 
+</para><para id="eip-99">Kathryn Dumper, Bainbridge State College<newline/>
+William Jenkins, Mercer University<newline/>
+Arlene Lacombe, Saint Joseph’s University<newline/>
+Marilyn Lovett, Livingstone College<newline/>
+Marion Perlmutter, University of Michigan</para></section><section id="eip-860"><title>Reviewers</title><para id="eip-254">Daniel Bellack, Trident Technical College<newline/>
+Jerimy Blowers, Cayuga Community College<newline/>
+Salena Brody, Collin College<newline/>
+Bettina Casad, University of Missouri–St. Louis<newline/>
+Sharon Chacon, Northeast Wisconsin Technical College<newline/>
+Barbara Chappell, Walden University<newline/>
+James Corpening<newline/>
+Frank Eyetsemitan, Roger Williams University<newline/>
+Tamara Ferguson, Utah State University<newline/>
+Kathleen Flannery, Saint Anselm College<newline/>
+Johnathan Forbey, Ball State University<newline/>
+Laura Gaudet, Chadron State College<newline/>
+William Goggin, University of Southern Mississippi<newline/>
+Jeffery K. Gray, Charleston Southern University<newline/>
+Heather Griffiths, Fayetteville State University<newline/>
+Mark Holder, University of British Columbia<newline/>
+Rita Houge, Des Moines Area Community College<newline/>
+Colette Jacquot, Strayer University<newline/>
+John Johanson, Winona State University<newline/>
+Andrew Johnson, Park University<newline/>
+Shaila Khan, Tougaloo College<newline/>
+Carol Laman, Houston Community College<newline/>
+Thomas Malloy, Rhode Island College<newline/>
+Jan Mendoza, Golden West College<newline/>
+Christopher Miller, University of Minnesota<newline/>
+Lisa Moeller, Beckfield College<newline/>
+Hugh Riley, Baylor University<newline/>
+Juan Salinas, University of Texas at Austin<newline/>
+Brittney Schrick, Southern Arkansas University<newline/>
+Phoebe Scotland, College of the Rockies<newline/>
+Christine Selby, Husson University<newline/>
+Brian Sexton, Kean University<newline/>
+Nancy Simpson, Trident Technical College<newline/>
+Robert Stennett, University of Georgia<newline/>
+Jennifer Stevenson, Ursinus College<newline/>
+Eric Weiser, Curry College<newline/>
+Valjean Whitlow, American Public University</para></section></section></content>
+</document>

@@ -1,0 +1,366 @@
+<?xml version="1.0"?>
+<document xmlns="http://cnx.rice.edu/cnxml" xmlns:md="http://cnx.rice.edu/mdml" xmlns:bib="http://bibtexml.sf.net/" xmlns:m="http://www.w3.org/1998/Math/MathML" xmlns:q="http://cnx.rice.edu/qml/1.0" id="new" cnxml-version="0.7" module-id="new" class="introduction">
+
+<title>Introduction</title>
+<metadata xmlns:md="http://cnx.rice.edu/mdml"
+          mdml-version="0.5">
+  <!-- WARNING! The 'metadata' section is read only. Do not edit below.
+       Changes to the metadata section in the source will not be saved. -->
+  <md:repository>http://legacy.cnx.org/content</md:repository>
+  <md:content-url>http://legacy.cnx.org/content/m49097/latest/</md:content-url>
+  <md:content-id>m49097</md:content-id>
+  <md:title>Introduction</md:title>
+  <md:version>1.4</md:version>
+  <md:created>2014/02/13 04:42:55 -0600</md:created>
+  <md:revised>2014/12/10 11:16:21.098 US/Central</md:revised>
+  <md:actors>
+    <md:organization userid="OpenStaxCollege">
+      <md:shortname>OpenStax College</md:shortname>
+      <md:fullname>OpenStax College</md:fullname>
+      <md:email>info@openstaxcollege.org</md:email>
+    </md:organization>
+    <md:person userid="OSCRiceUniversity">
+      <md:firstname>Rice</md:firstname>
+      <md:surname>University</md:surname>
+      <md:fullname>Rice University</md:fullname>
+      <md:email>daniel@openstaxcollege.org</md:email>
+    </md:person>
+    <md:person userid="cnxpsych">
+      <md:firstname>CNX</md:firstname>
+      <md:surname>Psychology</md:surname>
+      <md:fullname>CNX Psychology</md:fullname>
+      <md:email>info@openstaxcollege.org</md:email>
+    </md:person>
+  </md:actors>
+  <md:roles>
+    <md:role type="author">OpenStaxCollege</md:role>
+    <md:role type="maintainer">cnxpsych OpenStaxCollege</md:role>
+    <md:role type="licensor">OSCRiceUniversity</md:role>
+  </md:roles>
+  <md:license url="http://creativecommons.org/licenses/by/4.0/">Creative Commons Attribution License 4.0</md:license>
+  <!-- For information on license requirements for use or modification, see license url in the
+       above <md:license> element.
+       For information on formatting required attribution, see the URL:
+         CONTENT_URL/content_info#cnx_cite_header
+       where CONTENT_URL is the value provided above in the <md:content-url> element.
+  -->
+  <md:subjectlist>
+    <md:subject>Social Sciences</md:subject>
+  </md:subjectlist>
+  <md:abstract></md:abstract>
+  <md:language>en</md:language>
+  <!-- WARNING! The 'metadata' section is read only. Do not edit above.
+       Changes to the metadata section in the source will not be saved. -->
+</metadata>
+
+<content>
+<?cnx.eoc class="summary" title="Summary"?>
+<?cnx.eoc class="review-questions" title="Review Questions"?>
+<?cnx.eoc class="critical-thinking" title="Critical Thinking Questions"?>
+<?cnx.eoc class="personal-application" title="Personal Application Questions"?>
+<?cnx.eoc class="references" title="References"?>
+
+<figure id="Figure_09_00_Hands" class="splash">
+<media id="fs-idm89480496" alt="A picture shows two intertwined hands. One is the large hand of an adult, and the other is the tiny hand of an infant. The infant&#x2019;s entire hand grasp is about the size of a single adult finger.">
+<image mime-type="image/jpg" src="CNX_Psych_09_00_Hands.jpg"/>
+</media>
+<caption>How have you changed since childhood? How are you the same? What will your life be like 25 years from now? Fifty years from now? Lifespan development studies how you change as well as how you remain the same over the course of your life. (credit: modification of work by Giles Cook)</caption>
+</figure>
+<para id="fs-idp54625408">Welcome to the story of your life. In this chapter we explore the fascinating tale of how you have grown and developed into the person you are today. We also look at some ideas about who you will grow into tomorrow. Yours is a story of lifespan development (<link target-id="Figure_09_00_Hands"/>), from the start of life to the end.</para> 
+<para id="fs-idp55115712">The process of human growth and development is more obvious in infancy and childhood, yet your development is happening this moment and will continue, minute by minute, for the rest of your life. Who you are today and who you will be in the future depends on a blend of genetics, environment, culture, relationships, and more, as you continue through each phase of life. You have experienced firsthand much of what is discussed in this chapter. Now consider what psychological science has to say about your physical, cognitive, and psychosocial development, from the womb to the tomb.</para>
+<section id="fs-idm99620640" class="references">
+<title>References</title>
+<para id="fs-idp72561104">Ainsworth, M. D. S., &amp; Bell, S. M. (1970). Attachment, exploration, and separation: Illustrated by the behavior of one-year-olds in a strange situation. <emphasis effect="italics">Child Development, 41</emphasis>, 49–67.</para>
+
+<para id="fs-idm993520">Ainsworth, M. D. S., Blehar, M. C., Waters, E., &amp; Wall, S. (1978). <emphasis effect="italics">Patterns of attachment: A psychological study of the strange situation</emphasis>. Hillsdale, NJ: Erlbaum.</para>
+
+<para id="fs-idp17951008">American Academy of Pediatrics. (2007). The importance of play in promoting healthy child development and maintaining strong parent-child bonds. <emphasis effect="italics">Pediatrics, 199</emphasis>(1), 182–191.</para>
+
+<para id="fs-idm80109424">Amsterdam, B. (1972). Mirror image reactions before age two. <emphasis effect="italics">Developmental Psychobiology, 5</emphasis>, 297–305.</para>
+
+<para id="eip-981">Archer, J. (1992). <emphasis effect="italics">Ethology and human development</emphasis>. New York, NY: Harvester Wheatsheaf.</para><para id="fs-idp89589200">Arnett, J. (2000). Emerging adulthood: A theory of development from the late teens through the twenties. <emphasis effect="italics">American Psychologist, 55</emphasis>(5), 469–480.</para>
+
+<para id="fs-idm71471392">Ashley, S. J., Magnuson, S. I., Omnell, L. M., &amp; Clarren, S. K. (1999). Fetal alcohol syndrome: Changes in craniofacial form with age, cognition, and timing of ethanol exposure in the macaque. <emphasis effect="italics">Teratology, 59</emphasis>(3), 163–172.</para>
+
+<para id="fs-idp24115808">Bahr, S. J., &amp; Hoffman, J. P. (2010). Parenting style, religiosity, peers, and adolescent heavy drinking. <emphasis effect="italics">Journal of Studies on Alcohol and Drugs, 71</emphasis>, 539–543.</para>
+
+<para id="fs-idp3623504">Baillargeon, R. (2004). Infants’ reasoning about hidden objects: Evidence for event-general and event-specific expectations. <emphasis effect="italics">Developmental Science, 7</emphasis>(4), 391–424.</para>
+
+<para id="fs-idm60096416">Baillargeon, R. (1987). Young infants' reasoning about the physical and spatial properties of a hidden object. <emphasis effect="italics">Cognitive Development</emphasis>, <emphasis effect="italics">2</emphasis>(3), 179–200.</para>
+
+<para id="fs-idm16293568">Baillargeon, R., Li, J., Gertner, Y., &amp; Wu, D. (2011). How do infants reason about physical events. <emphasis effect="italics">The Wiley-Blackwell handbook of childhood cognitive development</emphasis>, <emphasis effect="italics">2</emphasis>, 11–48.</para>
+
+<para id="fs-idm20254496">Barber, B. K. (1994). Cultural, family, and person contexts of parent-adolescent conflict. <emphasis effect="italics">Journal of Marriage and the Family, 56</emphasis>, 375–386.</para>
+
+<para id="fs-idm6749008">Basseches, M. (1984). Dialectical thinking as metasystematic form of cognitive organization. In M. L. Commons, F. A. Richards, &amp; C. Armon (Eds.), <emphasis effect="italics">Beyond formal operations: Late adolescent and adult cognitive development </emphasis>(pp. 216–238). New York, NY: Praeger.</para> 
+
+<para id="fs-idm41474032">Baumrind, D. (1971). Current patterns of parental authority. <emphasis effect="italics">Developmental Psychology, 4</emphasis>(1, Pt. 2), 1–103. doi:10.1037/h0030372</para>
+
+<para id="fs-idm84018000">Baumrind, D. (1991). The influence of parenting style on adolescent competence and substance use<emphasis effect="italics">. Journal of Early Adolescence, 11</emphasis>(1), 56–95.</para>
+
+<para id="fs-idm75927440">Bayley, N., &amp; Oden, M. H. (1955). The maintenance of intellectual ability in gifted adults. <emphasis effect="italics">Journal of Gerontology, 10</emphasis>, 91–107.</para>
+
+<para id="fs-idp9850896">Bjorklund, D. F. (1987). A note on neonatal imitation. <emphasis effect="italics">Developmental Review, 7</emphasis>, 86–92.</para>
+
+<para id="fs-idm93539168">Blossom, M., &amp; Morgan, J.L. (2006). Does the face say what the mouth says? A study of infants’ sensitivity to visual prosody. In <emphasis effect="italics">30th anuual Boston University conference on language development, Somerville, MA.</emphasis></para>
+
+<para id="fs-idp111492256">Bogartz, R. S., Shinskey, J. L., &amp; Schilling, T. (2000). <emphasis effect="italics">Infancy, 1</emphasis>(4), 403–428.</para>
+
+<para id="eip-591">Bowlby, J. (1969). <emphasis effect="italics">Attachment and loss: Attachment</emphasis> (Vol. 1). New York, NY: Basic Books.</para>
+
+<para id="fs-idm68735888">Bowlby, J. (1988). <emphasis effect="italics">A secure base: Parent-child attachment and health human development</emphasis>. New York, NY: Basic Books.</para>
+
+<para id="fs-idp5042656">Brumley, R., Enquidanos, S., Jamison, P., Seitz, R., Morgenstern, N., Saito, S., . . . Gonzalez, J. (2007). Increased satisfaction with care and lower costs: Results of a randomized trial of in-home palliative care. <emphasis effect="italics">Journal of the American Geriatric Society, 55</emphasis>(7), 993–1000.</para>
+
+<para id="fs-idm80727104">Brumley, R. D., Enquidanos, S., &amp; Cherin, D. A. (2003). Effectiveness of a home-based palliative care program for end-of-life. <emphasis effect="italics">Journal of Palliative Medicine, 6</emphasis>(5), 715–724.</para>
+
+<para id="fs-idp39449712">Callaghan, T. C., Rochat, P., Lillard, A., Claux, M.L., Odden, H., Itakura, S., . . . Singh, S. (2005). Synchrony in the onset of mental-state reasoning. <emphasis effect="italics">Psychological Science, 16</emphasis>, 378–384.</para>
+
+<para id="fs-idm33654864">Carel, J-C., Lahlou, N., Roger, M., &amp; Chaussain, J. L. (2004). Precocious puberty and statural growth. <emphasis effect="italics">Human Reproduction Update, 10</emphasis>(2), 135–147.</para>
+
+<para id="fs-idm678960">Carstensen, L. L. (1992). Social and emotional patterns in adulthood: Support for socioemotional selectivity. <emphasis effect="italics">Psychology and Aging, 7</emphasis>(3), 331–338.</para>
+
+<para id="fs-idp80069968">Case, R. (1985). <emphasis effect="italics">Intellectual development: Birth to Adulthood</emphasis>. New York, NY: Academic.</para>
+
+<para id="fs-idm84796448">Casey, B. J., Tottenham, N., Liston, C., &amp; Durston, S. (2005). Imaging the developing brain: What have we learned about cognitive development? <emphasis effect="italics">TRENDS in Cognitive Sciences, 19</emphasis>(3), 104–110.</para>
+
+<para id="fs-idm90347328">Centers for Disease Control and Prevention. (2013). <emphasis effect="italics">Smoking during pregnancy</emphasis>. Retrieved from http://www.cdc.gov/tobacco/basic_information/health_effects/pregnancy/</para>
+
+<para id="fs-idm79021760">Chick, K., Heilman-Houser, R., &amp; Hunter, M. (2002). The impact of child care on gender role development and gender stereotypes. <emphasis effect="italics">Early Childhood Education Journal, 29</emphasis>(3), 149–154.</para>
+
+<para id="fs-idm21494416">Chomsky, N. (1957). <emphasis effect="italics">Syntactic structures</emphasis>. The Hague, Netherlands: Mouton.</para>
+
+<para id="fs-idm72588880">Clements, R. (2004). An investigation of the status of outdoor play. <emphasis effect="italics">Contemporary Issues in Early Childhood, 5</emphasis>(1), 68–80.</para>
+
+<para id="fs-idp90752384">Commons, M. L., &amp; Bresette, L. M. (2006). Illuminating major creative scientific innovators with postformal stages. In C. Hoare (Ed.), <emphasis effect="italics">Handbook of adult development and learning</emphasis> (pp. 255–280). New York, NY: Oxford University Press.</para>
+
+<para id="fs-idm100571264">Connor, S. R., Pyenson, B., Fitch, K., Spence, C., &amp; Iwasaki, K. (2007). Comparing hospice and nonhospice patient survival among patients who die within a three-year window. <emphasis effect="italics">Journal of Pain and Symptom Management, 33</emphasis>(3), 238–246.</para>
+
+<para id="fs-idm41513232">Courage, M. L., &amp; Howe, M. L. (2002). From infant to child: The dynamics of cognitive change in the second year of life. <emphasis effect="italics">Psychological Bulletin, 128</emphasis>, 250–277.</para>
+
+<para id="eip-488">Curtiss, S. (1981). Dissociations between language and cognition: Cases and implications. <emphasis effect="italics">Journal of Autism and Developmental Disorders, 11</emphasis>(1), 15–30.</para>
+
+<para id="fs-idp9047584">Darling, N. (1999). <emphasis effect="italics">Parenting style and its correlates</emphasis>. Retrieved from ERIC database (EDO-PS-99-3) http://ecap.crc.illinois.edu/eecearchive/digests/1999/darlin99.pdf</para>
+
+<para id="fs-idm56355616">de Hevia, M. D., &amp; Spelke, E. S. (2010). Number-space mapping in human infants. <emphasis effect="italics">Psychological Science, 21</emphasis>(5), 653–660.</para>
+
+<para id="fs-idp30178016">Dennett, D. (1987). <emphasis effect="italics">The intentional stance</emphasis>. Cambridge, MA: MIT Press.</para>
+
+<para id="fs-idp4889200">Diamond, A. (2009). The interplay of biology and the environment broadly defined. <emphasis effect="italics">Developmental Psychology, 45</emphasis>(1), 1–8.</para>
+
+<para id="fs-idm1917200">Donenberg, G. R., Wilson, H. W., Emerson, E., Bryant, F. B. (2002). Holding the line with a watchful eye: The impact of perceived parental permissiveness and parental monitoring on risky sexual behavior among adolescents in psychiatric care. <emphasis effect="italics">AIDS Education Prevention, 14</emphasis>(2), 138–157.</para>
+
+<para id="fs-idm155938320">Dornbusch, S. M., Ritter, P. L., Leiderman, P. H., Roberts, D. F., &amp; Fraleigh, M. J. (1987). The relation of parenting style to adolescent school performance. <emphasis effect="italics">Child Development, 58</emphasis>(5), 1244–1257.</para>
+
+<para id="fs-idp83806768">Duncan, G. J., &amp; Magnuson, K. A. (2005). Can family socioeconomic resources account for racial and ethnic test score gaps? <emphasis effect="italics">The Future of Children, 15</emphasis>(1), 35–54.</para>
+
+<para id="fs-idp14682304">Erikson, E. H. (1963). <emphasis effect="italics">Childhood and Society</emphasis> (2nd ed.). New York, NY: Norton.</para>
+
+<para id="fs-idm81933328">Erikson, E. H. (1968). <emphasis effect="italics">Identity: Youth and crisis</emphasis>. New York, NY: Norton.</para> 
+
+<para id="fs-idp6584992">Ferrer, M., &amp; Fugate, A. (2003). <emphasis effect="italics">Helping your school-age child develop a healthy self-concept</emphasis>. Retrieved from http://edis.ifas.ufl.edu/fy570#FOOTNOTE_2</para>
+
+<para id="fs-idm26146448">Figdor, E., &amp; Kaeser, L. (1998). Concerns mount over punitive approaches to substance abuse among pregnant women. <emphasis effect="italics">The Guttmacher Report on Public Policy 1</emphasis>(5), 3–5.</para>
+
+<para id="fs-idp44261168">Fischer, K. W., Yan, Z., &amp; Stewart, J. (2003). Adult cognitive development: Dynamics in the developmental web. In J. Valsiner &amp; K Connolly (Eds.), <emphasis effect="italics">Handbook of developmental psychology</emphasis> (pp. 491–516). Thousand Oaks, CA: Sage Publications.</para>
+
+<para id="fs-idp49097952">Flannery, D. J., Rowe, D. C., &amp; Gulley, B. L. (1993). Impact of pubertal status, timing, and age on adolescent sexual experience and delinquency. <emphasis effect="italics">Journal of Adolescent Research, 8</emphasis>, 21–40.</para>
+
+<para id="eip-403">Freud, S. (1909). Analysis of a phobia in a five-year-old boy. In <emphasis effect="italics">Collected Papers: Volume 111, Case Histories (1949)</emphasis> (pp. 149–289). Hogarth Press: London.</para>
+
+<para id="fs-idm69593392">Fromkin, V., Krashen, S., Curtiss, S., Rigler, D., &amp; Rigler, M. (1974). The development of language in Genie: A case of language acquisition beyond the critical period. <emphasis effect="italics">Brain and Language, 1</emphasis>, 81–107.</para>
+
+<para id="fs-idp21131728">Galambos, N. L., &amp; Almeida, D. M. (1992). Does parent-adolescent conflict increase in early adolescence? <emphasis effect="italics">Journal of Marriage and the Family, 54</emphasis>, 737–747.</para>
+
+<para id="fs-idm43052912">Ganger, J., &amp; Brent, M.R. (2004). Reexamining the vocabulary spurt. <emphasis effect="italics">Developmental Psychology, 40</emphasis>(4), 621–632.</para>
+
+<para id="fs-idm97186544">Ge, X., Conger, R. D., &amp; Elder, G. H. (2001). Pubertal transition, stressful life events, and the emergence of gender differences in adolescent depressive symptoms. <emphasis effect="italics">Developmental Psychology, 37</emphasis>, 404–417.</para>
+
+<para id="fs-idm61566992">Gervai, J. (2009). Environmental and genetic influences on early attachment. <emphasis effect="italics">Child and Adolescent Psychiatry and Mental Health, 3</emphasis>, 25.</para>
+
+<para id="fs-idp120701136">Gesell, A. (1933). Maturation and the patterning of behavior. In C. Murchison (Ed.), <emphasis effect="italics">A handbook of child psychology</emphasis> (2nd ed., pp. 209–235). Worcester, MA: Clark University Press.</para>
+
+<para id="fs-idm93935616">Gesell, A. (1939). <emphasis effect="italics">Biographies of child development</emphasis>. New York, NY: Paul B. Hoeber.</para>
+
+<para id="fs-idm68003168">Gesell, A. (1940). <emphasis effect="italics">The first five years of life</emphasis>. New York, NY: Harper.</para>
+
+<para id="fs-idm20933248">Gesell, A., &amp; Ilg, F. L. (1946). <emphasis effect="italics">The child from five to ten</emphasis>. New York, NY: Harper.</para>
+
+<para id="fs-idm58505120">Gilligan, C. (1982).<emphasis effect="italics"> In a different voice: Psychological theory and women's development</emphasis>. Cambridge, MA: Harvard University Press.</para>
+
+<para id="fs-idm58770656">Gleitman, L.R., &amp; Newport, E. L. (1995). The invention of language by children: Environmental and biological influences on the acquisition of language. In D.N. Osherson , L.R. Gleitman, &amp; M. Liberman (Eds.), <emphasis effect="italics">An invitation to cognitive science: Language </emphasis>(pp. 1–24). Cambridge, MA: The MIT Press.</para>
+
+<para id="fs-idp84766240">Gleitman, L. R., &amp; Newport, E. L. (1995). The invention of language by children: Environmental and biological influences on the acquisition of language. In L. R. Gleitman &amp; M. Liberman (Eds.), <emphasis effect="italics">An invitation to cognitive science, Vol. 1: Language</emphasis>. (2nd ed.) (pp. 1–24). Cambridge, MA: MIT Press.</para>
+
+<para id="fs-idp65428144">Godkin, M., Krant, M., &amp; Doster, N. (1984). The impact of hospice care on families. <emphasis effect="italics">International Journal of Psychiatry in Medicine, 13</emphasis>, 153–165.</para>
+
+<para id="fs-idm41850160">Graber, J. A., Lewinsohn, P. M., Seeley, J. R., &amp; Brooks-Gunn, J. (1997). Is psychopathology associated with the timing of pubertal development? <emphasis effect="italics">Journal of the Academy of Child and Adolescent Psychiatry, 36</emphasis>, 1768–1776.</para>
+
+<para id="fs-idp30017552">Hair, E. C., Moore, K. A., Garrett, S. B., Kinukawa, A., Lippman, L., &amp; Michelson, E. (2005). The parent-adolescent relationship scale. In L. Lippman (Ed.), <emphasis effect="italics">Conceptualizing and Measuring Indicators of Positive Development: What Do Children Need to Fluorish?</emphasis> (pp. 183–202). New York, NY: Kluwer Academic/Plenum Press.</para>
+
+<para id="fs-idm94289792">Hall, S. S. (2004, May). The good egg. <emphasis effect="italics">Discover</emphasis>, 30–39.</para>
+
+<para id="fs-idm42734048">Hall, G. S. (1904). <emphasis effect="italics">Adolescence</emphasis>. New York, NY: Appleton.</para>
+
+<para id="fs-idm84330112">Harlow, H. (1958). The nature of love. <emphasis effect="italics">American Psychologist, 13</emphasis>, 673–685.</para>
+
+<para id="fs-idp1016768">Harris, J. R. (2009). <emphasis effect="italics">The nurture assumption: Why children turn out the way they do</emphasis> (2nd ed.). New York, NY: Free Press.</para>
+
+<para id="fs-idm2176544">Hart, B., &amp; Risley, T. R. (2003). The early catastrophe: The 30 million word gap. <emphasis effect="italics">American Educator, 27</emphasis>(1), 4–9.</para>
+
+<para id="fs-idm80613072">Hatch, E. (1983). <emphasis effect="italics">Psycholinguistics: A second language perspective</emphasis>. Rowley, MA: Newbury House.</para>
+
+<para id="fs-idp52898656">Hertzog, C., Kramer, A. F., Wilson, R. S., &amp; Lindenberger, U. (2009). Enrichment effects on adult cognitive development. <emphasis effect="italics">Psychological Science in the Public Interest, 9</emphasis>(1), 1–65.</para>
+
+<para id="fs-idm95296816">Hood, R. W., Jr., Spilka, B., Hunsberger, B., &amp; Corsuch, R. (1996). <emphasis effect="italics">The psychology of religion: An empirical approach</emphasis> (2nd ed.). New York, NY: Guilford.</para>
+
+<para id="fs-idp81990256">Huebler, F. (2005, December 14). International education statistics [Web log post]. Retrieved from http://huebler.blogspot.com/2005/12/age-and-level-of-education-in-nigeria.html</para>
+
+<para id="fs-idp79584688">Hutchinson, N. (2011). A geographically informed vision of skills development. <emphasis effect="italics">Geographical Education</emphasis>, <emphasis effect="italics">24</emphasis>, 15.</para>
+
+<para id="fs-idm68195728">Huttenlocher, P. R., &amp; Dabholkar, A. S. (1997). Regional differences in synaptogenesis in human cerebral cortex. <emphasis effect="italics">Journal of Comparative Neurology, 387</emphasis>(2), 167–178.</para>
+
+<para id="fs-idp15966112">Iverson, J.M., &amp; Goldin-Meadow, S. (2005). Gesture paves the way for language development. <emphasis effect="italics">Psychological Science, 16</emphasis>(5), 367–71.</para>
+
+<para id="fs-idp30784752">Iyengar, S. S., Wells, R. E., &amp; Schwartz, B. (2006). Doing better but feeling worse: Looking for the best job undermines satisfaction. <emphasis effect="italics">Psychological Science, 17</emphasis>, 143–150.</para>
+
+<para id="fs-idm44609200">Jos, P. H., Marshall, M. F., &amp; Perlmutter, M. (1995). The Charleston policy on cocaine use during pregnancy: A cautionary tale. <emphasis effect="italics">The Journal of Law, Medicine &amp; Ethics, 23</emphasis>(2), 120–128.</para>
+
+<para id="fs-idp6560432">Kaltiala-Heino, R. A., Rimpela, M., Rissanen, A., &amp; Rantanen, P. (2001). Early puberty and early sexual activity are associated with bulimic-type eating pathology in middle adolescence. <emphasis effect="italics">Journal of Adolescent Health, 28</emphasis>, 346–352.</para>
+
+<para id="fs-idm68441520">Kaplan, H., &amp; Dove, H. (1987). Infant development among the Aché of Eastern Paraguay. <emphasis effect="italics">Developmental Psychology, 23</emphasis>, 190–198.</para>
+
+<para id="fs-idp109511680">Karasik, L. B., Adolph, K. E., Tamis-LeMonda, C. S., &amp; Bornstein, M. H. (2010). WEIRD Walking: Cross-cultural research on motor development. <emphasis effect="italics">Behavioral &amp; Brain Sciences, 33</emphasis>(2-3), 95–96.</para>
+
+<para id="fs-idm55436752">Karnik, S., &amp; Kanekar, A. (2012). Childhood obesity: A global public health crisis. <emphasis effect="italics">International Journal of Preventive Medicine, 3</emphasis>(1), 1–7.</para>
+
+<para id="fs-idp126459200">Kohlberg, L. (1969). Stage and sequence: The cognitive-developmental approach to socialization. In D. A. Goslin (Ed.), <emphasis effect="italics">Handbook of socialization theory and research</emphasis> (p. 379). Chicago, IL: Rand McNally.</para>
+
+<para id="fs-idp46386000">Kolb, B., &amp; Whishaw, I. Q. (2009). <emphasis effect="italics">Fundamentals of human neuropsychology</emphasis>. New York, NY: Worth.</para>
+
+<para id="fs-idm113331360">Kübler-Ross, E. (1969). <emphasis effect="italics">On death and dying</emphasis>. New York, NY: Macmillan.</para>
+
+<para id="fs-idm11897056">Labouvie-Vief, G., &amp; Diehl, M. (1999). Self and personality development. In J. C. Cavanaugh &amp; S. K. Whitbourne (Eds.), <emphasis effect="italics">Gerontology: An interdisciplinary perspective</emphasis> (pp. 238–268). New York, NY: Oxford University Press.</para>
+
+<para id="fs-idm92892368">Larson, E. B., Wang, L., Bowen, J. D., McCormick, W. C., Teri, L., Crane, P., &amp; Kukull, W. (2006). Exercise is associated with reduced risk for incident dementia among persons 65 years of age or older. <emphasis effect="italics">Annals of Internal Medicine, 144</emphasis>, 73–81.</para>
+
+<para id="fs-idp2016416">Lee, V. E., &amp; Burkam, D. T. (2002). <emphasis effect="italics">Inequality at the starting gate: Social background differences in achievement as children begin school</emphasis>. Washington, DC: Economic Policy Institute.</para>
+
+<para id="fs-idm70308544">Lobo, I. (2008) Environmental influences on gene expression. <emphasis effect="italics">Nature Education 1</emphasis>(1), 39.</para>
+
+<para id="fs-idm43373088">Loop, E. (2013). <emphasis effect="italics">Major milestones in cognitive development in early childhood</emphasis>. Retrieved from http://everydaylife.globalpost.com/major-milestones-cognitive-development-early-childhood-4625.html</para>
+
+<para id="fs-idp19262048">Maccoby, E. (1980). <emphasis effect="italics">Social development: Psychological growth and the parent-child relationship</emphasis>. New York, NY: Harcourt Brace Jovanovich.</para>
+
+<para id="fs-idp16194768">MacFarlane, A. (1978, February). What a baby knows. <emphasis effect="italics">Human Nature</emphasis>, 74–81.</para>
+
+<para id="fs-idm48502784">Maier, S. E., &amp; West, J. R. (2001). Drinking patterns and alcohol-related birth defects. <emphasis effect="italics">Alcohol Research &amp; Health, 25</emphasis>(3), 168–174.</para>
+
+<para id="fs-idp87150256">Main, M., &amp; Solomon, J. (1990). Procedures for identifying infants as disorganized/disoriented during the Ainsworth Strange Situation. In M. T. Greenberg, D. Cicchetti, &amp; E. M. Cummings (Eds.), <emphasis effect="italics">Attachment in the Preschool Years</emphasis> (pp. 121–160). Chicago, IL: University of Chicago Press.</para>
+
+<para id="fs-idm1692704">Markus, H. R., Ryff, C. D., Curan, K., &amp; Palmersheim, K. A. (2004). In their own words: Well-being at midlife among high school-educated and college-educated adults. In O. G. Brim, C. D. Ryff, &amp; R. C. Kessler (Eds.), <emphasis effect="italics">How healthy are we? A national study of well-being at midlife</emphasis> (pp. 273–319). Chicago, IL: University of Chicago Press.</para>
+
+<para id="fs-idm123956736">McIntosh, D. N., Silver, R. C., &amp; Wortman, C. B. (1993). Religion’s role in adjustment to a negative life event: Coping with the loss of a child. <emphasis effect="italics">Journal of Personality and Social Psychology, 65</emphasis>, 812–821.</para>
+
+<para id="fs-idp98613168">McMillan, S. C., Small, B. J., Weitzner, M., Schonwetter, R., Tittle, M., Moody, L., &amp; Haley, W. E. (2006). Impact of coping skills intervention with family caregivers of hospice patients with cancer. <emphasis effect="italics">Cancer</emphasis>, <emphasis effect="italics">106</emphasis>(1), 214-222.</para>
+
+<para id="fs-idm17648080">Miklikowska, M., Duriez, B., &amp; Soenens, B. (2011). Family roots of empathy-related characteristics: The role of perceived maternal and paternal need support in adolescence. <emphasis effect="italics">Developmental Psychology, 47</emphasis>(5), 1342–1352.</para>
+
+<para id="fs-idp44096768">Mills, M., &amp; Melhuish, E. (1974). Recognition of mother’s voice in early infancy. <emphasis effect="italics">Nature, 252</emphasis>, 123–124.</para>
+
+<para id="fs-idp3429328">Mohr, R. D., &amp; Zoghi, C. (2006). Is job enrichment really enriching? (U.S. Bureau of Labor Statistics Working Paper 389). Washington, DC: U.S. Bureau of Labor Statistics. Retrieved from http://www.bls.gov/ore/pdf/ec060010.pdf</para>
+
+<para id="fs-idm73302944">Moore, K. A., Guzman, L., Hair, E. C., Lippman, L., &amp; Garrett, S. B. (2004). Parent-teen relationships and interactions: Far more positive than not. <emphasis effect="italics">Child Trends Research Brief, 2004-25</emphasis>. Washington, DC: Child Trends.</para>
+
+<para id="fs-idm91112320">National Institutes of Health. (2013). <emphasis effect="italics">What is prenatal care and why is it important?</emphasis> Retrieved from http://www.nichd.nih.gov/health/topics/pregnancy/conditioninfo/Pages/prenatal-care.aspx</para>
+
+<para id="fs-idm46103600">Nolen-Hoeksema, S., &amp; Larson, J. (1999). <emphasis effect="italics">Coping with loss</emphasis>. Mahweh, NJ: Erlbaum.</para>
+
+<para id="fs-idm26166448">Overman, W. H., Bachevalier, J., Turner, M., &amp; Peuster, A. (1992). Object recognition versus object discrimination: Comparison between human infants and infant monkeys. <emphasis effect="italics">Behavioral Neuroscience, 106</emphasis>, 15–29.</para>
+
+<para id="fs-idm69367280">Paloutzian, R. F. (1996). <emphasis effect="italics">Invitation to the psychology of religion</emphasis>. Boston, MA: Allyn &amp; Bacon.</para>
+
+<para id="fs-idp94502000">Parent, J., Forehand, R., Merchant, M. J., Edwards, M. C., Conners-Burrow, N. A., Long, N., &amp; Jones, D. J. (2011). The relation of harsh and permissive discipline with child disruptive behaviors: Does child gender make a difference in an at-risk sample? <emphasis effect="italics">Journal of Family Violence, 26</emphasis>, 527–533.</para>
+
+<para id="fs-idm42753728">Piaget, J. (1954).<emphasis effect="italics"> The construction of reality in the child. </emphasis>New York: Basic Books.</para>
+
+<para id="fs-idm42186480">Pickens, J. (1994). Full-term and preterm infants’ perception of face-voice synchrony. <emphasis effect="italics">Infant Behavior and Development, 17, </emphasis>447–455.</para> 
+
+<para id="fs-idm58102816">Piaget, J. (1930). <emphasis effect="italics">The child’s conception of the world</emphasis>. New York, NY: Harcourt, Brace &amp; World.</para>
+<para id="fs-idm4325968">Piaget, J. (1932). <emphasis effect="italics">The moral judgment of the child</emphasis>. New York, NY: Harcourt, Brace &amp; World.</para>
+
+<para id="fs-idm55199952">Podewils, L. J., Guallar, E., Kuller, L. H., Fried, L. P., Lopez, O. L., Carlson, M., &amp; Lyketsos, C. G. (2005). Physical activity, APOE genotype, and dementia risk: Findings from the Cardiovascular Health Cognition Study. <emphasis effect="italics">American Journal of Epidemiology, 161</emphasis>, 639–651.</para>
+
+<para id="fs-idm82238432">Pollack, W., &amp; Shuster, T. (2000). <emphasis effect="italics">Real boys’ voices</emphasis>. New York, NY: Random House.</para>
+
+<para id="fs-idm36836688">Rhodes, R. L., Mitchell, S. L., Miller, S. C., Connor, S. R., &amp; Teno, J. M. (2008). Bereaved family members' evaluation of hospice care: What factors influence overall satisfaction with services? <emphasis effect="italics">Journal of Pain and Symptom Management, 35</emphasis>, 365–371.</para>
+
+<para id="fs-idm47864592">Risley, T. R., &amp; Hart, B. (2006). Promoting early language development. In N. F. Watt, C. Ayoub, R. H. Bradley, J. E. Puma, &amp; W. A. LeBoeuf (Eds.), <emphasis effect="italics">The crisis in youth mental health: Early intervention programs and policies </emphasis>(Vol. 4, pp. 83–88). Westport, CT: Praeger.</para>
+
+<para id="fs-idm229548544">Rothbaum, R., Weisz, J., Pott, M., Miyake, K., &amp; Morelli, G. (2000). Attachment and culture: Security in the United States and Japan. <emphasis effect="italics">American Psychologist, 55</emphasis>, 1093–1104.</para>
+
+<para id="fs-idm7252304">Russell, S. T., Crockett, L. J., &amp; Chao, R. (Eds.). (2010). Asian American parenting and parent-adolescent relationships. In R. Levesque (Series Ed.), <emphasis effect="italics">Advancing responsible adolescent development</emphasis>. New York, NY: Springer.</para>
+
+<para id="fs-idm43409632">Ryff, C. D., &amp; Singer, B. (2009). Understanding healthy aging: Key components and their integration. In V. L. Bengtson, D. Gans., N. M. Putney, &amp; M. Silverstein. (Eds.), <emphasis effect="italics">Handbook of theories of aging</emphasis> (2nd ed., pp. 117–144). New York, NY: Springer.</para>
+
+<para id="fs-idm39173872">Samarel, N. (1991). <emphasis effect="italics">Caring for life after death</emphasis>. Washington, DC: Hemisphere.</para>
+
+<para id="fs-idm3755280">Sanson, A., &amp; Rothbart, M. K. (1995). Child temperament and parenting. In M. Bornstein (Ed.), <emphasis effect="italics">Applied and practical parenting </emphasis>(Vol. 4, pp. 299–321). Mahwah, NJ: Lawrence Erlbaum.</para>
+
+<para id="fs-idm2276288">Schechter, C., &amp; Byeb, B. (2007). Preliminary evidence for the impact of mixed-income preschools on low-income children’s language growth. <emphasis effect="italics">Early Childhood Research Quarterly, 22</emphasis>, 137–146.</para>
+
+<para id="fs-idm43820000">Shamay-Tsoory, S. G., Tomer, R., &amp; Aharon-Peretz, J. (2005). The neuroanatomical basis of understanding sarcasm and its relationship to social cognition. <emphasis effect="italics">Neuropsychology, 19</emphasis>(3), 288–300.</para>
+
+<para id="fs-idp95405904">Shanahan, L., McHale, S. M., Osgood, D. W., &amp; Crouter, A. C. (2007). Conflict frequency with mothers and fathers from middle childhood to late adolescence: Within and between family comparisons. <emphasis effect="italics">Developmental Psychology, 43</emphasis>, 539–550.</para>
+
+<para id="fs-idp77443200">Siegler, R. S. (2005). <emphasis effect="italics">Children’s thinking </emphasis>(4th ed). Mahwah, NJ: Erlbaum.</para>
+<para id="fs-idp78234048">Siegler, R. S. (2006). Microgenetic analyses of learning. In D. Kuhn &amp; R. S. Siegler (Eds.), <emphasis effect="italics">Handbook of child psychology: Cognition, perception, and language </emphasis>(6th ed., Vol. 2). New York: Wiley.</para> 
+
+<para id="fs-idm1355904">Sinnott, J. D. (1998). <emphasis effect="italics">The development of logic in adulthood: Postformal thought and its applications</emphasis>. New York, NY: Springer.</para>
+
+<para id="fs-idm99948688">Small, M. F. (1999). <emphasis effect="italics">Our babies, ourselves: How biology and culture shape the way we parent</emphasis>. New York, NY: Anchor Books.</para>
+
+<para id="fs-idm98841088">Spelke, E.S., &amp; Cortelyou, A. (1981). Perceptual aspects of social knowing: Looking and listening in infancy. In M.E. Lamb &amp; L.R. Sherrod (Eds.), <emphasis effect="italics">Infant social cognition: Empirical and theoretical considerations </emphasis>(pp. 61–83). Hillsdale, NJ: Erlbaum.</para>
+
+<para id="fs-idp47605248">Steinberg, L., &amp; Morris, A. S. (2001). Adolescent development. <emphasis effect="italics">Annual Review of Psychology, 52</emphasis>, 83–110.</para>
+
+<para id="fs-idp17917824">Sterns, H. L., &amp; Huyck, M. H. (2001). The role of work in midlife. In M. Lachman (Ed.), <emphasis effect="italics">The handbook of midlife development</emphasis> (pp. 447–486). New York, NY:Wiley.</para>
+
+<para id="fs-idm36126944">Steven L. Youngentob, et. al. (2007). Experience-induced fetal plasticity: The effect of gestational ethanol exposure on the behavioral and neurophysiologic olfactory response to ethanol odor in early postnatal and adult rats. <emphasis effect="italics">Behavioral Neuroscience, 121</emphasis>(6), 1293–1305.</para>
+
+<para id="fs-idm85022192">Stork, F. C., &amp; Widdowson, D. A. (1974). <emphasis effect="italics">Learning about linguistics</emphasis>. London, UK: Hutchinson Ltd.</para>
+
+<para id="fs-idm901472">Streissguth, A. P., Bookstein, F. L., Barr, H. M., Sampson, P. D., O’Malley, K., &amp; Young, J. K. (2004). Risk factors for adverse life outcomes in fetal alcohol syndrome and fetal alcohol effects. <emphasis effect="italics">Developmental and Behavioral Pediatrics, 25</emphasis>(4), 228–238.</para>
+
+<para id="fs-idp15856928">Striegel-Moore, R. H., &amp; Cachelin, F. M. (1999). Body image concerns and disordered eating in adolescent girls: Risk and protective factors. In N. G. Johnson, M. C. Roberts, &amp; J. Worell (Eds.), <emphasis effect="italics">Beyond appearance: A new look at adolescent girls</emphasis>. Washington, DC: American Psychological Association</para>
+
+<para id="fs-idm1726240">Tanner, J. M. (1978). <emphasis effect="italics">Fetus into man: Physical growth from conception to maturity</emphasis>. Cambridge, MA: Harvard University Press.</para>
+
+<para id="fs-idm81194000">Temel, J. S., Greer, J. A., Muzikansky, A., Gallagher, E. R., Admane, S., Jackson, V. A. . . . Lynch, T. J. (2010). Early palliative care for patients with metastic non-small-cell lung cancer. <emphasis effect="italics">New England Journal of Medicine, 363</emphasis>, 733–742.</para>
+
+<para id="fs-idm110558816">Thomas, A. (1984). Temperament research: Where we are, where we are going. <emphasis effect="italics">Merrill-Palmer Quarterly, 30</emphasis>(2), 103–109.</para>
+
+<para id="fs-idp2184128">Tran, T. D., &amp; Kelly, S. J. (2003). Critical periods for ethanol-induced cell loss in the hippocampal formation. <emphasis effect="italics">Neurotoxicology and Teratology, 25</emphasis>(5), 519–528.</para>
+
+<para id="fs-idm43651056">Umberson, D., Pudrovska, T., &amp; Reczek, C. (2010). Parenthood, childlessness, and well-being: A life course perspective. <emphasis effect="italics">Journal of Marriage and the Family, 72</emphasis>(3), 612–629.</para>
+
+<para id="fs-idm75057024">United Nations Educational, Scientific and Cultural Organization. (2013, June). <emphasis effect="italics">UIS Fact Sheet: Schooling for millions of children jeopardized by reductions in aid</emphasis>. Montreal, Canada: UNESCO Institute for Statistics.</para>
+
+<para id="fs-idm72858080">Vaillant, G. E. (2002). <emphasis effect="italics">Aging well</emphasis>. New York, NY: Little Brown &amp; Co.</para>
+
+<para id="fs-idp43325344">Van der Graaff, J., Branje, S., De Wied, M., Hawk, S., Van Lier, P., &amp; Meeus, W. (2013). Perspective taking and empathetic concern in adolescence: Gender differences in developmental changes. <emphasis effect="italics">Developmental Psychology, 50</emphasis>(3), 881.</para>
+
+<para id="fs-idm7265712">van Ijzendoorn, M. H., &amp; Sagi-Schwartz, A. (2008). Cross-cultural patterns of attachment: Universal and contextual dimensions. In J. Cassidy &amp; P. R. Shaver (Eds.), <emphasis effect="italics">Handbook of attachment</emphasis>. New York, NY: Guilford.</para>
+
+<para id="fs-idm2830320">Vouloumanos, A., &amp; Werker, J. F. (2004). Tuned to the signal: The privileged status of speech for young infants.<emphasis effect="italics"> Developmental Science, 7, </emphasis>270–276.</para>
+
+<para id="fs-idp30410528">WHO Multicentre Growth Reference Study Group. (2006). <emphasis effect="italics">WHO Child growth standards: Methods and development: Length/height-for-age, weight-for-age, weight-for-length, weight-for-height and body mass index-for-age</emphasis>. Geneva, Switzerland: World Health Organization.</para>
+
+<para id="fs-idm75773632">Winerman, L. (2011). Closing the achievement gap. <emphasis effect="italics">Monitor of Psychology, 42</emphasis>(8), 36.</para>
+
+<para id="fs-idm9108448">Wortman, J. H., &amp; Park, C. L. (2008). Religion and spirituality in adjustment following bereavement: An integrative review. <emphasis effect="italics">Death Studies</emphasis></para>
+</section>
+
+</content>
+
+</document>

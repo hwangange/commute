@@ -1,0 +1,252 @@
+<?xml version="1.0"?>
+<document xmlns="http://cnx.rice.edu/cnxml" xmlns:md="http://cnx.rice.edu/mdml" xmlns:bib="http://bibtexml.sf.net/" xmlns:m="http://www.w3.org/1998/Math/MathML" xmlns:q="http://cnx.rice.edu/qml/1.0" id="new" cnxml-version="0.7" module-id="new">
+
+<title>Sensation versus Perception</title>
+<metadata xmlns:md="http://cnx.rice.edu/mdml"
+          mdml-version="0.5">
+  <!-- WARNING! The 'metadata' section is read only. Do not edit below.
+       Changes to the metadata section in the source will not be saved. -->
+  <md:repository>http://legacy.cnx.org/content</md:repository>
+  <md:content-url>http://legacy.cnx.org/content/m49040/latest/</md:content-url>
+  <md:content-id>m49040</md:content-id>
+  <md:title>Sensation versus Perception</md:title>
+  <md:version>1.5</md:version>
+  <md:created>2014/02/12 08:44:12 +0000</md:created>
+  <md:revised>2014/12/16 15:14:49.954 US/Central</md:revised>
+  <md:actors>
+    <md:organization userid="OpenStaxCollege">
+      <md:shortname>OpenStax College</md:shortname>
+      <md:fullname>OpenStax College</md:fullname>
+      <md:email>info@openstaxcollege.org</md:email>
+    </md:organization>
+    <md:person userid="OSCRiceUniversity">
+      <md:firstname>Rice</md:firstname>
+      <md:surname>University</md:surname>
+      <md:fullname>Rice University</md:fullname>
+      <md:email>daniel@openstaxcollege.org</md:email>
+    </md:person>
+    <md:person userid="cnxpsych">
+      <md:firstname>CNX</md:firstname>
+      <md:surname>Psychology</md:surname>
+      <md:fullname>CNX Psychology</md:fullname>
+      <md:email>info@openstaxcollege.org</md:email>
+    </md:person>
+  </md:actors>
+  <md:roles>
+    <md:role type="author">OpenStaxCollege</md:role>
+    <md:role type="maintainer">OpenStaxCollege cnxpsych</md:role>
+    <md:role type="licensor">OSCRiceUniversity</md:role>
+  </md:roles>
+  <md:license url="http://creativecommons.org/licenses/by/4.0/">Creative Commons Attribution License 4.0</md:license>
+  <!-- For information on license requirements for use or modification, see license url in the
+       above <md:license> element.
+       For information on formatting required attribution, see the URL:
+         CONTENT_URL/content_info#cnx_cite_header
+       where CONTENT_URL is the value provided above in the <md:content-url> element.
+  -->
+  <md:keywordlist>
+    <md:keyword>absolute threshold</md:keyword>
+    <md:keyword>attention</md:keyword>
+    <md:keyword>bottom-up processing</md:keyword>
+    <md:keyword>difference threshold</md:keyword>
+    <md:keyword>inattentional blindness</md:keyword>
+    <md:keyword>just noticeable difference</md:keyword>
+    <md:keyword>Müller-Lyer</md:keyword>
+    <md:keyword>perception</md:keyword>
+    <md:keyword>sensation</md:keyword>
+    <md:keyword>sensory adaptation</md:keyword>
+    <md:keyword>signal detection theory</md:keyword>
+    <md:keyword>subliminal message</md:keyword>
+    <md:keyword>top-down processing</md:keyword>
+    <md:keyword>transduction</md:keyword>
+  </md:keywordlist>
+  <md:subjectlist>
+    <md:subject>Social Sciences</md:subject>
+  </md:subjectlist>
+  <md:abstract>By the end of this section, you will be able to:
+<list>
+<item>Distinguish between sensation and perception</item>
+<item>Describe the concepts of absolute threshold and difference threshold</item>
+<item>Discuss the roles attention, motivation, and sensory adaptation play in perception</item>
+</list></md:abstract>
+  <md:language>en</md:language>
+  <!-- WARNING! The 'metadata' section is read only. Do not edit above.
+       Changes to the metadata section in the source will not be saved. -->
+</metadata>
+
+<content>
+  <section id="fs-idp74342064">
+    <title>SENSATION</title>
+    <para id="fs-idp76436688">What does it mean to sense something? Sensory receptors are specialized neurons that respond to specific types of stimuli. When sensory information is detected by a sensory receptor, <term>sensation</term> has occurred. For example, light that enters the eye causes chemical changes in cells that line the back of the eye. These cells relay messages, in the form of action potentials (as you learned when studying biopsychology), to the central nervous system. The conversion from sensory stimulus energy to action potential is known as <term>transduction</term>.</para>
+    <para id="fs-idp141991584">You have probably known since elementary school that we have five senses: vision, hearing (audition), smell (olfaction), taste (gustation), and touch (somatosensation). It turns out that this notion of five senses is oversimplified. We also have sensory systems that provide information about balance (the vestibular sense), body position and movement (proprioception and kinesthesia), pain (nociception), and temperature (thermoception).</para>
+    <para id="fs-idp153394112">The sensitivity of a given sensory system to the relevant stimuli can be expressed as an absolute threshold. <term>Absolute threshold</term> refers to the minimum amount of stimulus energy that must be present for the stimulus to be detected 50% of the time. Another way to think about this is by asking how dim can a light be or how soft can a sound be and still be detected half of the time. The sensitivity of our sensory receptors can be quite amazing. It has been estimated that on a clear night, the most sensitive sensory cells in the back of the eye can detect a candle flame 30 miles away (Okawa &amp; Sampath, 2007). Under quiet conditions, the hair cells (the receptor cells of the inner ear) can detect the tick of a clock 20 feet away (Galanter, 1962).</para><para id="fs-idp78339328">It is also possible for us to get messages that are presented below the threshold for conscious awareness—these are called <term>subliminal messages</term>. A stimulus reaches a physiological threshold when it is strong enough to excite sensory receptors and send nerve impulses to the brain: This is an absolute threshold. A message below that threshold is said to be subliminal: We receive it, but we are not consciously aware of it. Over the years there has been a great deal of speculation about the use of subliminal messages in advertising, rock music, and self-help audio programs. Research evidence shows that in laboratory settings, people can process and respond to information outside of awareness. But this does not mean that we obey these messages like zombies; in fact, hidden messages have little effect on behavior outside the laboratory (Kunst-Wilson &amp; Zajonc, 1980; Rensink, 2004; Nelson, 2008; Radel, Sarrazin, Legrain, &amp; Gobancé, 2009; Loersch, Durso, &amp; Petty, 2013).</para>
+    <para id="fs-idp230235264">Absolute thresholds are generally measured under incredibly controlled conditions in situations that are optimal for sensitivity. Sometimes, we are more interested in how much difference in stimuli is required to detect a difference between them. This is known as the <term>just noticeable difference (jnd)</term> or <term>difference threshold</term>. Unlike the absolute threshold, the difference threshold changes depending on the stimulus intensity. As an example, imagine yourself in a very dark movie theater. If an audience member were to receive a text message on her cell phone which caused her screen to light up, chances are that many people would notice the change in illumination in the theater. However, if the same thing happened in a brightly lit arena during a basketball game, very few people would notice. The cell phone brightness does not change, but its ability to be detected as a change in illumination varies dramatically between the two contexts. Ernst Weber proposed this theory of change in difference threshold in the 1830s, and it has become known as Weber’s law: The difference threshold is a constant fraction of the original stimulus, as the example illustrates.</para> 
+  </section>
+  <section id="fs-idp192756560">
+    <title>PERCEPTION</title>
+    
+    <para id="fs-idp113205584">While our sensory receptors are constantly collecting information from the environment, it is ultimately how we interpret that information that affects how we interact with the world. <term>Perception</term> refers to the way sensory information is organized, interpreted, and consciously experienced. Perception involves both bottom-up and top-down processing. <term>Bottom-up processing</term> refers to the fact that perceptions are built from sensory input. On the other hand, how we interpret those sensations is influenced by our available knowledge, our experiences, and our thoughts. This is called <term>top-down processing</term>.</para>
+    <para id="fs-idp199393776">One way to think of this concept is that sensation is a physical process, whereas perception is psychological. For example, upon walking into a kitchen and smelling the scent of baking cinnamon rolls, the <emphasis effect="italics">sensation</emphasis> is the scent receptors detecting the odor of cinnamon, but the <emphasis effect="italics">perception</emphasis> may be “Mmm, this smells like the bread Grandma used to bake when the family gathered for holidays.”</para> 
+    <para id="fs-idp91534272">Although our perceptions are built from sensations, not all sensations result in perception. In fact, we often don’t perceive stimuli that remain relatively constant over prolonged periods of time. This is known as <term>sensory adaptation</term>. Imagine entering a classroom with an old analog clock. Upon first entering the room, you can hear the ticking of the clock; as you begin to engage in conversation with classmates or listen to your professor greet the class, you are no longer aware of the ticking. The clock is still ticking, and that information is still affecting sensory receptors of the auditory system. The fact that you no longer perceive the sound demonstrates sensory adaptation and shows that while closely associated, sensation and perception are different.</para> 
+    <para id="fs-idp55242896">There is another factor that affects sensation and perception: attention. Attention plays a significant role in determining what is sensed versus what is perceived. Imagine you are at a party full of music, chatter, and laughter. You get involved in an interesting conversation with a friend, and you tune out all the background noise. If someone interrupted you to ask what song had just finished playing, you would probably be unable to answer that question.</para> 
+    <note id="fs-idp175250128" class="psychology link-to-learning"><label>Link To Learning</label>
+<media id="fs-idp106451760" alt="">
+       <image mime-type="png" src="OSC_Interactive_150.png"/>
+        </media>
+     
+      <para id="fs-idp130413792">See for yourself how inattentional blindness works by checking out this <link url="http://openstaxcollege.org/l/blindness">selective attention test</link> from Simons and Chabris (1999).</para>
+    </note><para id="fs-idp156814928">One of the most interesting demonstrations of how important attention is in determining our perception of the environment occurred in a famous study conducted by Daniel Simons and Christopher Chabris (1999). In this study, participants watched a video of people dressed in black and white passing basketballs. Participants were asked to count the number of times the team in white passed the ball. During the video, a person dressed in a black gorilla costume walks among the two teams. You would think that someone would notice the gorilla, right? Nearly half of the people who watched the video didn’t notice the gorilla at all, despite the fact that he was clearly visible for nine seconds. Because participants were so focused on the number of times the white team was passing the ball, they completely tuned out other visual information. Failure to notice something that is completely visible because of a lack of attention is called <term>inattentional blindness</term>.</para> 
+    <para id="fs-idp30562224">In a similar experiment, researchers tested inattentional blindness by asking participants to observe images moving across a computer screen. They were instructed to focus on either white or black objects, disregarding the other color. When a red cross passed across the screen, about one third of subjects did not notice it (<link target-id="Figure_05_01_Cross"/>) (Most, Simons, Scholl, &amp; Chabris, 2000).</para> 
+    
+    <figure id="Figure_05_01_Cross">
+      <media id="fs-idp62446464" alt="A photograph shows a person staring at a screen that displays one red cross toward the left side and numerous black and white shapes all over.">
+        <image src="CNX_Psych_05_01_Cross.jpg" mime-type="image/jpg"/>
+      </media>
+      <caption>Nearly one third of participants in a study did not notice that a red cross passed on the screen because their attention was focused on the black or white figures. (credit: Cory Zanker)</caption>
+    </figure>
+    <para id="fs-idp20923600">Motivation can also affect perception. Have you ever been expecting a really important phone call and, while taking a shower, you think you hear the phone ringing, only to discover that it is not? If so, then you have experienced how motivation to detect a meaningful stimulus can shift our ability to discriminate between a true sensory stimulus and background noise. The ability to identify a stimulus when it is embedded in a distracting background is called <term>signal detection theory</term>. This might also explain why a mother is awakened by a quiet murmur from her baby but not by other sounds that occur while she is asleep. Signal detection theory has practical applications, such as increasing air traffic controller accuracy. Controllers need to be able to detect planes among many signals (blips) that appear on the radar screen and follow those planes as they move through the sky. In fact, the original work of the researcher who developed signal detection theory was focused on improving the sensitivity of air traffic controllers to plane blips (Swets, 1964).</para> 
+    <para id="fs-idp235780256">Our perceptions can also be affected by our beliefs, values, prejudices, expectations, and life experiences. As you will see later in this chapter, individuals who are deprived of the experience of binocular vision during critical periods of development have trouble perceiving depth (Fawcett, Wang, &amp; Birch, 2005). The shared experiences of people within a given cultural context can have pronounced effects on perception. For example, Marshall Segall, Donald Campbell, and Melville Herskovits (1963) published the results of a multinational study in which they demonstrated that individuals from Western <term class="no-emphasis">cultures</term> were more prone to experience certain types of visual illusions than individuals from non-Western cultures, and vice versa. One such illusion that Westerners were more likely to experience was the <term class="no-emphasis">Müller-Lyer</term> illusion (<link target-id="Figure_05_01_MullerLyer"/>): The lines appear to be different lengths, but they are actually the same length.</para> 
+    <figure id="Figure_05_01_MullerLyer">
+      <media id="fs-idp169651760" alt="Two vertical lines are shown on the left in (a). They each have V&#x2013;shaped brackets on their ends, but one line has the brackets angled toward its center, and the other has the brackets angled away from its center. The lines are the same length, but the second line appears longer due to the orientation of the brackets on its endpoints. To the right of these lines is a two-dimensional drawing of walls meeting at 90-degree angles. Within this drawing are 2 lines which are the same length, but appear different lengths. Because one line is bordering a window on a wall that has the appearance of being farther away from the perspective of the viewer, it appears shorter than the other line which marks the 90 degree angle where the facing wall appears closer to the viewer&#x2019;s perspective point.">
+        <image src="CNX_Psych_05_01_MullerLyer.jpg" mime-type="image/jpg"/>
+      </media>
+      <caption>In the Müller-Lyer illusion, lines appear to be different lengths although they are identical. (a) Arrows at the ends of lines may make the line on the right appear longer, although the lines are the same length. (b) When applied to a three-dimensional image, the line on the right again may appear longer although both black lines are the same length.</caption>
+    </figure>
+    
+    
+    <para id="fs-idp62443008">These perceptual differences were consistent with differences in the types of environmental features experienced on a regular basis by people in a given cultural context. People in Western cultures, for example, have a perceptual context of buildings with straight lines, what Segall’s study called a carpentered world (Segall et al., 1966). In contrast, people from certain non-Western cultures with an uncarpentered view, such as the Zulu of South Africa, whose villages are made up of round huts arranged in circles, are less susceptible to this illusion (Segall et al., 1999). It is not just vision that is affected by cultural factors. Indeed, research has demonstrated that the ability to identify an odor, and rate its pleasantness and its intensity, varies cross-culturally (Ayabe-Kanamura, Saito, Distel, Martínez-Gómez, &amp; Hudson, 1998).</para> 
+    <para id="fs-idp188022720">Children described as thrill seekers are more likely to show taste preferences for intense sour flavors (Liem, Westerbeek, Wolterink, Kok, &amp; de Graaf, 2004), which suggests that basic aspects of personality might affect perception. Furthermore, individuals who hold positive attitudes toward reduced-fat foods are more likely to rate foods labeled as reduced fat as tasting better than people who have less positive attitudes about these products (Aaron, Mela, &amp; Evans, 1994).</para> 
+  </section>
+  <section id="fs-idp63566880" class="summary">
+    <title>Summary</title>
+    <para id="fs-idp73201920">Sensation occurs when sensory receptors detect sensory stimuli. Perception involves the organization, interpretation, and conscious experience of those sensations. All sensory systems have both absolute and difference thresholds, which refer to the minimum amount of stimulus energy or the minimum amount of difference in stimulus energy required to be detected about 50% of the time, respectively. Sensory adaptation, selective attention, and signal detection theory can help explain what is perceived and what is not. In addition, our perceptions are affected by a number of factors, including beliefs, values, prejudices, culture, and life experiences.</para>
+  </section>
+  <section id="fs-idp119755328" class="review-questions">
+    <title>Review Questions</title>
+    <exercise id="fs-idp158937488">
+      <problem id="fs-idp50583920"><para id="fs-idp43705872">________ refers to the minimum amount of stimulus energy required to be detected 50% of the time.</para>
+        <list id="fs-idp81910384" list-type="enumerated" number-style="lower-alpha">
+          <item>absolute threshold</item>
+          <item>difference threshold</item>
+          <item>just noticeable difference</item>
+          <item>transduction</item>
+        </list>
+      </problem>
+      <solution id="fs-idp96511312"><para id="fs-idp141975488">A</para></solution>
+    </exercise>
+    
+    <exercise id="fs-idp63067264">
+      <problem id="fs-idp50193792"><para id="fs-idp266406864">Decreased sensitivity to an unchanging stimulus is known as ________.</para>
+        <list id="fs-idp54387120" list-type="enumerated" number-style="lower-alpha">
+          <item>transduction</item>
+          <item>difference threshold</item>
+          <item>sensory adaptation</item>
+          <item>inattentional blindness</item>
+        </list>
+      </problem>
+      <solution id="fs-idp187744976"><para id="fs-idp70230480">C</para></solution>
+    </exercise>
+    
+    <exercise id="fs-idp155381072">
+      <problem id="fs-idp163675968"><para id="fs-idp34197344">________ involves the conversion of sensory stimulus energy into neural impulses.</para>
+        <list id="fs-idp78363488" list-type="enumerated" number-style="lower-alpha">
+          <item>sensory adaptation</item>
+          <item>inattentional blindness</item>
+          <item>difference threshold</item>
+          <item>transduction</item>
+        </list>
+      </problem>
+      <solution id="fs-idp74306288"><para id="fs-idp205438832">D</para></solution>
+    </exercise>
+    
+    <exercise id="fs-idp79308960">
+      <problem id="fs-idp72681296"><para id="fs-idp166874416">________ occurs when sensory information is organized, interpreted, and consciously experienced.</para>
+        <list id="fs-idp76465248" list-type="enumerated" number-style="lower-alpha">
+          <item>sensation</item>
+          <item>perception</item>
+          <item>transduction</item>
+          <item>sensory adaptation</item>
+        </list>
+      </problem>
+      <solution id="fs-idp84074192"><para id="fs-idp53394208">B</para></solution>
+    </exercise>
+    
+  </section>
+  <section id="fs-idp81158736" class="critical-thinking">
+    <title>Critical Thinking Question</title>
+    <exercise id="fs-idp8729248">
+      <problem id="fs-idp63661312">
+        <para id="fs-idp195640576">Not everything that is sensed is perceived. Do you think there could ever be a case where something could be perceived without being sensed?</para>
+      </problem>
+      <solution id="fs-idp140336784">
+        <para id="fs-idp141972464">This would be a good time for students to think about claims of extrasensory perception. Another interesting topic would be the phantom limb phenomenon experienced by amputees.</para>
+      </solution>
+    </exercise>  
+    
+    <exercise id="fs-idp192398656">
+      <problem id="fs-idp118931760">
+        <para id="fs-idp74371936">Please generate a novel example of how just noticeable difference can change as a function of stimulus intensity.</para>
+      </problem>
+      <solution id="fs-idp80223616">
+        <para id="fs-idp66021456">There are many potential examples. One example involves the detection of weight differences. If two people are holding standard envelopes and one contains a quarter while the other is empty, the difference in weight between the two is easy to detect. However, if those envelopes are placed inside two textbooks of equal weight, the ability to discriminate which is heavier is much more difficult.</para>
+      </solution>
+    </exercise>
+    
+  </section>
+  <section id="fs-idp63183504" class="personal-application">
+    <title>Personal Application Question</title>
+    <exercise id="fs-idp121915584">
+      <problem id="fs-idp89845136">
+        <para id="fs-idp38428912">Think about a time when you failed to notice something around you because your attention was focused elsewhere. If someone pointed it out, were you surprised that you hadn’t noticed it right away?</para>
+      </problem>
+    </exercise>
+  </section>
+  
+</content>
+  <glossary>
+    <definition id="fs-idp46753072">
+<term>absolute threshold</term>
+<meaning id="fs-idp85164096">minimum amount of stimulus energy that must be present for the stimulus to be detected 50% of the time</meaning>
+</definition>
+<definition id="fs-idp47895040">
+<term>bottom-up processing</term>
+<meaning id="fs-idp62351792"> system in which perceptions are built from sensory input</meaning>
+</definition>
+<definition id="fs-idp26865472">
+<term>inattentional blindness</term>
+<meaning id="fs-idp73267536">failure to notice something that is completely visible because of a lack of attention</meaning>
+</definition>
+<definition id="fs-idp63655920">
+<term>just noticeable difference</term>
+<meaning id="fs-idp144909760">difference in stimuli required to detect a difference between the stimuli</meaning>
+</definition>
+<definition id="fs-idp21525328">
+<term>perception</term>
+<meaning id="fs-idp118022480">way that sensory information is interpreted and consciously experienced</meaning>
+</definition>
+<definition id="fs-idp71681376">
+<term>sensation</term>
+<meaning id="fs-idp49256656">what happens when sensory information is detected by a sensory receptor</meaning>
+</definition>
+<definition id="fs-idp76610336">
+<term>sensory adaptation</term>
+<meaning id="fs-idp100748736">not perceiving stimuli that remain relatively constant over prolonged periods of time</meaning>
+</definition> 
+<definition id="fs-idp52077088">
+<term>signal detection theory</term>
+<meaning id="fs-idp104962688">change in stimulus detection as a function of current mental state</meaning>
+</definition>
+<definition id="fs-idp46417504">
+<term>subliminal message</term>
+<meaning id="fs-idp62672336">message presented below the threshold of conscious awareness</meaning>
+</definition>
+<definition id="fs-idp51154512">
+<term>top-down processing</term>
+<meaning id="fs-idp67481792">interpretation of sensations is influenced by available knowledge, experiences, and thoughts</meaning>
+</definition>
+<definition id="fs-idp30192176">
+<term>transduction</term>
+<meaning id="fs-idp55777328">conversion from sensory stimulus energy to action potential</meaning>
+</definition>
+</glossary>
+</document>
