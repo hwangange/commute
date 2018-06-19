@@ -1,13 +1,18 @@
 package com.interns.team3.openstax.myttsapplication;
 
+import android.app.Activity;
+import android.content.Intent;
 import android.os.Bundle;
 import android.support.annotation.NonNull;
 import android.support.design.widget.BottomNavigationView;
 import android.support.v7.app.AppCompatActivity;
 import android.view.MenuItem;
+import android.view.View;
+import android.widget.AdapterView;
 import android.widget.ArrayAdapter;
 import android.widget.ListView;
 import android.widget.TextView;
+import android.widget.Toast;
 
 import org.jsoup.Jsoup;
 import org.jsoup.nodes.Document;
@@ -87,6 +92,22 @@ public class MainActivity extends AppCompatActivity {
         ArrayList<User> newUsers = User.fromJson(jsonArray)
         adapter.addAll(newUsers);
          */
+
+        listView.setOnItemClickListener(new AdapterView.OnItemClickListener(){
+            @Override
+            public void onItemClick(AdapterView<?>adapter, View v, int position, long id){
+                // what each variable means: https://developer.android.com/reference/android/widget/AdapterView.OnItemClickListener
+
+
+                String targetId = ((TextView) v.findViewById(R.id.itemID)).getText().toString();
+                //Toast.makeText(getApplicationContext(), targetId, Toast.LENGTH_SHORT).show();
+
+                Intent intent = new Intent(getApplicationContext(), TextbookView.class);
+                intent.putExtra("Module ID", targetId);
+                startActivity(intent);
+               // to put extra information: intent.putExtra(ImageTextListViewActivity.EXTRA_KMLSUMMARY, summary.get(position));
+            }
+        });
 
 
     }
