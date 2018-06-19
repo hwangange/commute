@@ -1,0 +1,211 @@
+<?xml version="1.0"?>
+<document xmlns="http://cnx.rice.edu/cnxml" xmlns:md="http://cnx.rice.edu/mdml" xmlns:bib="http://bibtexml.sf.net/" xmlns:m="http://www.w3.org/1998/Math/MathML" xmlns:q="http://cnx.rice.edu/qml/1.0" id="new" cnxml-version="0.7" module-id="new">
+
+<title>Ways to Enhance Memory</title>
+<metadata xmlns:md="http://cnx.rice.edu/mdml"
+          mdml-version="0.5">
+  <!-- WARNING! The 'metadata' section is read only. Do not edit below.
+       Changes to the metadata section in the source will not be saved. -->
+  <md:repository>http://legacy.cnx.org/content</md:repository>
+  <md:content-url>http://legacy.cnx.org/content/m49094/latest</md:content-url>
+  <md:content-id>m49094</md:content-id>
+  <md:title>Ways to Enhance Memory</md:title>
+  <md:version>1.6</md:version>
+  <md:created>2014/02/13 10:36:36 -0600</md:created>
+  <md:revised>2017/08/02 14:50:08 -0500</md:revised>
+  <md:actors>
+    <md:organization userid="OpenStaxCollege">
+      <md:shortname>OpenStax</md:shortname>
+      <md:fullname>OpenStax</md:fullname>
+      <md:email>info@openstax.org</md:email>
+    </md:organization>
+    <md:person userid="OSCRiceUniversity">
+      <md:firstname>Rice</md:firstname>
+      <md:surname>University</md:surname>
+      <md:fullname>Rice University</md:fullname>
+      <md:email>info@openstaxcollege.org</md:email>
+    </md:person>
+    <md:person userid="cnxpsych">
+      <md:firstname>CNX</md:firstname>
+      <md:surname>Psychology</md:surname>
+      <md:fullname>OpenStax Psychology</md:fullname>
+      <md:email>info@openstaxcollege.org</md:email>
+    </md:person>
+  </md:actors>
+  <md:roles>
+    <md:role type="author">OpenStaxCollege</md:role>
+    <md:role type="maintainer">OpenStaxCollege cnxpsych</md:role>
+    <md:role type="licensor">OSCRiceUniversity</md:role>
+  </md:roles>
+  <md:license url="http://creativecommons.org/licenses/by/4.0/">Creative Commons Attribution License 4.0</md:license>
+  <!-- For information on license requirements for use or modification, see license url in the
+       above <md:license> element.
+       For information on formatting required attribution, see the URL:
+         CONTENT_URL/content_info#cnx_cite_header
+       where CONTENT_URL is the value provided above in the <md:content-url> element.
+  -->
+  <md:keywordlist>
+    <md:keyword>elaborative rehearsal</md:keyword>
+    <md:keyword>memory-enhancing strategy</md:keyword>
+    <md:keyword>mnemonic</md:keyword>
+    <md:keyword>mnemonic device</md:keyword>
+    <md:keyword>studying</md:keyword>
+  </md:keywordlist>
+  <md:subjectlist>
+    <md:subject>Social Sciences</md:subject>
+  </md:subjectlist>
+  <md:abstract>By the end of this section, you will be able to:
+<list>
+<item>Recognize and apply memory-enhancing strategies</item>
+<item>Recognize and apply effective study techniques</item>
+</list></md:abstract>
+  <md:language>en</md:language>
+  <!-- WARNING! The 'metadata' section is read only. Do not edit above.
+       Changes to the metadata section in the source will not be saved. -->
+</metadata>
+
+<content>
+
+    <para id="eip-852">Most of us suffer from memory failures of one kind or another, and most of us would like to improve our memories so that we don’t forget where we put the car keys or, more importantly, the material we need to know for an exam. In this section, we’ll look at some ways to help you remember better, and at some strategies for more effective studying.</para><section id="fs-idm141776">
+        <title>MEMORY-ENHANCING STRATEGIES</title>
+    <para id="fs-idm12096000">What are some everyday ways we can improve our memory, including recall? To help make sure information goes from short-term memory to long-term memory, you can use <term>memory-enhancing strategies</term>. One strategy is <term class="no-emphasis">rehearsal</term>, or the conscious repetition of information to be remembered (Craik &amp; Watkins, 1973). Think about how you learned your multiplication tables as a child. You may recall that 6 x 6 = 36, 6 x 7 = 42, and 6 x 8 = 48. Memorizing these facts is rehearsal.</para><para id="fs-idm1752864">Another strategy is <term>chunking</term>: you organize information into manageable bits or chunks (Bodie, Powers, &amp; Fitch-Hauser, 2006). Chunking is useful when trying to remember information like dates and phone numbers. Instead of trying to remember 5205550467, you remember the number as 520-555-0467. So, if you met an interesting person at a party and you wanted to remember his phone number, you would naturally chunk it, and you could repeat the number over and over, which is the rehearsal strategy.</para><note id="fs-idm17405808" class="psychology link-to-learning"><label>Link to Learning</label>
+     
+       <media id="fs-idp141130160" alt=" ">
+         <image mime-type="png" src="OSC_Interactive_150.png"/>
+       </media>
+     
+     <para id="fs-idp25599760">Try this <link url="http://openstaxcollege.org/l/memgame">fun activity</link> that employs a memory-enhancing strategy.</para></note><para id="fs-idm22021648">You could also enhance memory by using <term>elaborative rehearsal</term>: a technique in which you think about the meaning of the new information and its relation to knowledge already stored in your memory (Tigner, 1999). For example, in this case, you could remember that 520 is an area code for Arizona and the person you met is from Arizona. This would help you better remember the 520 prefix. If the information is retained, it goes into long-term memory.</para>
+        <para xmlns:data="http://www.w3.org/TR/html5/dom.html#custom-data-attribute" id="fs-idp74523936"><term>Mnemonic devices</term> are memory aids that help us organize information for encoding (<link target-id="Figure_08_04_Knuckles"/>). They are especially useful when we want to recall larger bits of information such as steps, stages, phases, and parts of a system (Bellezza, 1981). Brian needs to learn the order of the planets in the solar system, but he’s having a hard time remembering the correct order. His friend Kelly suggests a mnemonic device that can help him remember. Kelly tells Brian to simply remember the name Mr. VEM J. SUN, and he can easily recall the correct order of the planets: <emphasis>M</emphasis>ercury, <emphasis>V</emphasis>enus, <emphasis>E</emphasis>arth, <emphasis>M</emphasis>ars, <emphasis>J</emphasis>upiter, <emphasis>S</emphasis>aturn, <emphasis>U</emphasis>ranus, and <emphasis>N</emphasis>eptune. You might use a mnemonic device to help you remember someone’s name, a mathematical formula, or the order of mathematical operations.</para><figure id="Figure_08_04_Knuckles"><media id="fs-idp17538192" alt="A photograph shows a person&#x2019;s two hands clenched into fists so the knuckles show. The knuckles are labeled with the months and the number of days in each month, with the knuckle protrusions corresponding to the months with 31 days, and the indentations between knuckles corresponding to February and the months with 30 days.">
+       <image mime-type="image/jpeg" src="CNX_Psych_08_04_Knuckles.jpg"/>
+     </media>
+     
+        <caption>This is a knuckle mnemonic to help you remember the number of days in each month. Months with 31 days are represented by the protruding knuckles and shorter months fall in the spots between knuckles. (credit: modification of work by Cory Zanker)</caption></figure><para id="fs-idp148338144">If you have ever watched the television show <emphasis effect="italics">Modern Family</emphasis>, you might have seen Phil Dunphy explain how he remembers names:</para>
+        
+        <para id="fs-idp104788512"><quote id="eip-idp44920976">The other day I met this guy named Carl. Now, I might forget that name, but he was wearing a Grateful Dead t-shirt. What’s a band like the Grateful Dead? Phish. Where do fish live? The ocean. What else lives in the ocean? Coral. Hello, Co-arl. (Wrubel &amp; Spiller, 2010)</quote></para><para id="fs-idp14708704">It seems the more vivid or unusual the mnemonic, the easier it is to remember. The key to using any mnemonic successfully is to find a strategy that works for you.</para>
+        
+        <note id="fs-idm19837504" class="psychology link-to-learning"><label>Link to Learning</label>
+  
+       <media id="fs-idp21619552" alt=" ">
+         <image mime-type="png" src="OSC_Interactive_150.png"/>
+       </media>
+
+     <para id="fs-idp62415296">Watch this fascinating <link url="http://openstaxcollege.org/l/foer">TED Talks lecture</link> titled “Feats of Memory Anyone Can Do.” The lecture is given by Joshua Foer, a science writer who “accidentally” won the U. S. Memory Championships. He explains a mnemonic device called the memory palace.</para>
+                   </note><para id="fs-idp93557136">Some other strategies that are used to improve memory include expressive writing and saying words aloud. Expressive writing helps boost your short-term memory, particularly if you write about a traumatic experience in your life. Masao Yogo and Shuji Fujihara (2008) had participants write for 20-minute intervals several times per month. The participants were instructed to write about a traumatic experience, their best possible future selves, or a trivial topic. The researchers found that this simple writing task increased short-term memory capacity after five weeks, but only for the participants who wrote about traumatic experiences. Psychologists can’t explain why this writing task works, but it does.</para>
+        
+        <para id="fs-idp111637504">What if you want to remember items you need to pick up at the store? Simply say them out loud to yourself. A series of studies (MacLeod, Gopie, Hourihan, Neary, &amp; Ozubko, 2010) found that saying a word out loud improves your memory for the word because it increases the word’s distinctiveness. Feel silly, saying random grocery items aloud? This technique works equally well if you just mouth the words. Using these techniques increased participants’ memory for the words by more than 10%. These techniques can also be used to help you study.</para>
+    </section>
+    <section id="fs-idp56168048">
+        <title>HOW TO STUDY EFFECTIVELY</title>
+        <para id="fs-idp10442048">Based on the information presented in this chapter, here are some strategies and suggestions to help you hone your study techniques (<link target-id="Figure_08_04_Study"/>). The key with any of these strategies is to figure out what works best for you.</para></section>
+    
+    <figure id="Figure_08_04_Study"><media id="fs-idp146092432" alt="A photograph shows students studying.">
+       <image mime-type="image/jpeg" src="CNX_Psych_08_04_Studyn.jpg"/>
+     </media>
+     
+    <caption>Memory techniques can be useful when studying for class. (credit: Barry Pousman)</caption></figure><list id="fs-idp11538448"><item><emphasis>Use elaborative rehearsal</emphasis>: In a famous article, Craik and Lockhart (1972) discussed their belief that information we process more deeply goes into long-term memory. Their theory is called <term>levels of processing</term>. If we want to remember a piece of information, we should think about it more deeply and link it to other information and memories to make it more meaningful. For example, if we are trying to remember that the hippocampus is involved with memory processing, we might envision a hippopotamus with excellent memory and then we could better remember the hippocampus.</item>
+<item><emphasis>Apply the self-reference effect</emphasis>: As you go through the process of elaborative rehearsal, it would be even more beneficial to make the material you are trying to memorize personally meaningful to you. In other words, make use of the self-reference effect. Write notes in your own words. Write definitions from the text, and then rewrite them in your own words. Relate the material to something you have already learned for another class, or think how you can apply the concepts to your own life. When you do this, you are building a web of retrieval cues that will help you access the material when you want to remember it.</item>
+<item><emphasis>Don’t forget the forgetting curve</emphasis>: As you know, the information you learn drops off rapidly with time. Even if you think you know the material, study it again right before test time to increase the likelihood the information will remain in your memory. Overlearning can help prevent storage decay.</item>
+<item><emphasis>Rehearse, rehearse, rehearse</emphasis>: Review the material over time, in spaced and organized study sessions. Organize and study your notes, and take practice quizzes/exams. Link the new information to other information you already know well.</item>
+<item><emphasis>Be aware of interference</emphasis>: To reduce the likelihood of interference, study during a quiet time without interruptions or distractions (like television or music).</item> 
+<item><emphasis>Keep moving</emphasis>: Of course you already know that exercise is good for your body, but did you also know it’s also good for your mind? Research suggests that regular aerobic exercise (anything that gets your heart rate elevated) is beneficial for memory (van Praag, 2008). Aerobic exercise promotes neurogenesis: the growth of new brain cells in the hippocampus, an area of the brain known to play a role in memory and learning.</item>
+<item><emphasis>Get enough sleep</emphasis>: While you are sleeping, your brain is still at work. During sleep the brain organizes and consolidates information to be stored in long-term memory (Abel &amp; Bäuml, 2013).</item> 
+<item><emphasis>Make use of mnemonic devices</emphasis>: As you learned earlier in this chapter, mnemonic devices often help us to remember and recall information. There are different types of mnemonic devices, such as the acronym. An acronym is a word formed by the first letter of each of the words you want to remember. For example, even if you live near one, you might have difficulty recalling the names of all five Great Lakes. What if I told you to think of the word Homes? HOMES is an acronym that represents Huron, Ontario, Michigan, Erie, and Superior: the five Great Lakes. Another type of mnemonic device is an acrostic: you make a phrase of all the first letters of the words. For example, if you are taking a math test and you are having difficulty remembering <emphasis effect="italics">the order of operations</emphasis>, recalling the following sentence will help you: “Please Excuse My Dear Aunt Sally,” because the order of mathematical operations is Parentheses, Exponents, Multiplication, Division, Addition, Subtraction. There also are jingles, which are rhyming tunes that contain key words related to the concept, such as <emphasis effect="italics">i before e, except after c</emphasis>.</item>
+    </list><section id="fs-idp74315584" class="summary"><title>Summary</title><para id="fs-idp16946288">There are many ways to combat the inevitable failures of our memory system. Some common strategies that can be used in everyday situations include mnemonic devices, rehearsal, self-referencing, and adequate sleep. These same strategies also can help you to study more effectively.</para>
+    </section><section id="fs-idp56961168" class="review-questions">
+        <title>Review Questions</title>
+        <exercise id="fs-idm32403888">
+        <problem id="fs-idp20435216"><para id="fs-idp58425984">When you are learning how to play the piano, the statement “Every good boy does fine” can help you remember the notes E, G, B, D, and F for the lines of the treble clef. This is an example of a (an) ________.</para>
+            <list id="fs-idp147743856" list-type="enumerated" number-style="lower-alpha">
+                <item>jingle</item>
+                <item>acronym</item>
+                <item>acrostic</item>
+                <item>acoustic</item>
+            </list>
+        </problem>
+        <solution id="fs-idp66670816"><para id="fs-idp18769072">C</para></solution>
+        </exercise>
+        
+        <exercise id="fs-idp2921264">
+        <problem id="fs-idm35033392"><para id="fs-idp55470448">According to a study by Yogo and Fujihara (2008), if you want to improve your short-term memory, you should spend time writing about ________.</para>
+            <list id="fs-idm13917696" list-type="enumerated" number-style="lower-alpha">
+                <item>your best possible future self</item>
+                <item>a traumatic life experience</item>
+                <item>a trivial topic</item>
+                <item>your grocery list</item>
+            </list>
+        </problem>
+        <solution id="fs-idp149074176"><para id="fs-idp56234912">B</para></solution>
+        </exercise>
+        
+        <exercise id="fs-idp2973584">
+        <problem id="fs-idm57822912"><para id="fs-idp77880832">The self-referencing effect refers to ________.</para>
+            <list id="fs-idp57180144" list-type="enumerated" number-style="lower-alpha">
+                <item>making the material you are trying to memorize personally meaningful to you</item>
+                <item>making a phrase of all the first letters of the words you are trying to memorize</item>
+                <item>making a word formed by the first letter of each of the words you are trying to memorize</item>
+                <item>saying words you want to remember out loud to yourself</item>
+            </list>
+        </problem>
+        <solution id="fs-idp9402064"><para id="fs-idm35129056">A</para></solution>
+        </exercise>
+        
+        <exercise id="fs-idp38792848">
+        <problem id="fs-idp146210464"><para id="fs-idp143029776">Memory aids that help organize information for encoding are ________.</para>
+            <list id="fs-idp21624464" list-type="enumerated" number-style="lower-alpha">
+                <item>mnemonic devices</item>
+                <item>memory-enhancing strategies</item>
+                <item>elaborative rehearsal</item>
+                <item>effortful processing</item>
+            </list>
+        </problem>
+        <solution id="fs-idp115128096"><para id="fs-idp57564384">A</para></solution>
+        </exercise>
+    </section>
+    <section id="fs-idp10352" class="critical-thinking"><title>Critical Thinking Questions</title><exercise id="fs-idp67725552">
+            <problem id="fs-idp30892416">
+                <para id="fs-idp150264480">What is the self-reference effect, and how can it help you study more effectively?</para>
+            </problem>
+<solution id="fs-idp9335504">
+    <para id="fs-idp32172032">The self-reference effect is the tendency an individual to have better memory for information that relates to oneself than information that is not personally relevant. You can use the self-reference effect to relate the material to something you have already learned for another class, or think how you can apply the concepts to your life. When you do this, you are building a web of retrieval cues that will help you access the material when you want to remember it.</para>
+</solution>
+        </exercise>
+        <exercise id="fs-idp58593984">
+            <problem id="fs-idp147190768">
+                <para id="fs-idm15915680">You and your roommate spent all of last night studying for your psychology test. You think you know the material; however, you suggest that you study again the next morning an hour prior to the test. Your roommate asks you to explain why you think this is a good idea. What do you tell her?</para>
+            </problem> 
+<solution id="fs-idp77894976">
+    <para id="fs-idp31754000">You remind her about Ebbinghaus’s forgetting curve: the information you learn drops off rapidly with time. Even if you think you know the material, you should study it again right before test time to increase the likelihood the information will remain in your memory. Overlearning can help prevent storage decay.</para>
+</solution>
+</exercise>
+    </section><section id="fs-idp102263152" class="personal-application"><title>Personal Application Questions</title><exercise id="fs-idp92562400">
+            <problem id="fs-idp16829248"><para id="fs-idp16390688">Create a mnemonic device to help you remember a term or concept from this chapter.</para></problem>
+</exercise>
+<exercise id="fs-idp72479888">
+<problem id="fs-idp76024000"><para id="fs-idp56036496">What is an effective study technique that you have used? How is it similar to/different from the strategies suggested in this chapter?</para>
+            </problem>
+        </exercise>
+    </section></content>
+    <glossary>
+        
+        <definition id="fs-idm17519200">
+            <term>chunking</term>
+            <meaning id="fs-idp147915680">organizing information into manageable bits or chunks</meaning></definition>
+        
+        <definition id="fs-idp112557920">
+            <term>elaborative rehearsal</term>
+            <meaning id="fs-idp149905296">thinking about the meaning of the new information and its relation to knowledge already stored in your memory</meaning></definition>
+        
+        <definition id="fs-idm13448016">
+            <term>levels of processing</term>
+            <meaning id="fs-idm15699952">information that is thought of more deeply becomes more meaningful and thus better committed to memory</meaning></definition>
+        
+        <definition id="fs-idm1644256">
+            <term>memory-enhancing strategy</term>
+            <meaning id="fs-idp58346336">technique to help make sure information goes from short-term memory to long-term memory</meaning></definition>
+        
+        <definition id="fs-idm15654448">
+            <term>mnemonic device</term>
+            <meaning id="fs-idm15648240">memory aids that help organize information for encoding</meaning></definition>
+        
+    </glossary>
+</document>

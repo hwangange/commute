@@ -1,0 +1,354 @@
+<?xml version="1.0"?>
+<document xmlns="http://cnx.rice.edu/cnxml" xmlns:md="http://cnx.rice.edu/mdml" xmlns:bib="http://bibtexml.sf.net/" xmlns:m="http://www.w3.org/1998/Math/MathML" xmlns:q="http://cnx.rice.edu/qml/1.0" id="new" cnxml-version="0.7" module-id="new">
+
+<title>Approaches to Research</title>
+<metadata xmlns:md="http://cnx.rice.edu/mdml"
+          mdml-version="0.5">
+  <!-- WARNING! The 'metadata' section is read only. Do not edit below.
+       Changes to the metadata section in the source will not be saved. -->
+  <md:repository>http://legacy.cnx.org/content</md:repository>
+  <md:content-url>http://legacy.cnx.org/content/m49012/latest/</md:content-url>
+  <md:content-id>m49012</md:content-id>
+  <md:title>Approaches to Research</md:title>
+  <md:version>1.5</md:version>
+  <md:created>2014/02/07 03:28:44 -0600</md:created>
+  <md:revised>2014/12/16 14:28:26.935 US/Central</md:revised>
+  <md:actors>
+    <md:organization userid="OpenStaxCollege">
+      <md:shortname>OpenStax College</md:shortname>
+      <md:fullname>OpenStax College</md:fullname>
+      <md:email>info@openstaxcollege.org</md:email>
+    </md:organization>
+    <md:person userid="OSCRiceUniversity">
+      <md:firstname>Rice</md:firstname>
+      <md:surname>University</md:surname>
+      <md:fullname>Rice University</md:fullname>
+      <md:email>daniel@openstaxcollege.org</md:email>
+    </md:person>
+    <md:person userid="cnxpsych">
+      <md:firstname>CNX</md:firstname>
+      <md:surname>Psychology</md:surname>
+      <md:fullname>CNX Psychology</md:fullname>
+      <md:email>info@openstaxcollege.org</md:email>
+    </md:person>
+  </md:actors>
+  <md:roles>
+    <md:role type="author">OpenStaxCollege</md:role>
+    <md:role type="maintainer">OpenStaxCollege cnxpsych</md:role>
+    <md:role type="licensor">OSCRiceUniversity</md:role>
+  </md:roles>
+  <md:license url="http://creativecommons.org/licenses/by/4.0/">Creative Commons Attribution License 4.0</md:license>
+  <!-- For information on license requirements for use or modification, see license url in the
+       above <md:license> element.
+       For information on formatting required attribution, see the URL:
+         CONTENT_URL/content_info#cnx_cite_header
+       where CONTENT_URL is the value provided above in the <md:content-url> element.
+  -->
+  <md:keywordlist>
+    <md:keyword>archival research</md:keyword>
+    <md:keyword>attrition</md:keyword>
+    <md:keyword>case study</md:keyword>
+    <md:keyword>clinical study</md:keyword>
+    <md:keyword>cross-sectional research</md:keyword>
+    <md:keyword>generalize</md:keyword>
+    <md:keyword>inter-rater reliability</md:keyword>
+    <md:keyword>longitudinal research</md:keyword>
+    <md:keyword>naturalistic observation</md:keyword>
+    <md:keyword>observer bias</md:keyword>
+    <md:keyword>population</md:keyword>
+    <md:keyword>research methods</md:keyword>
+    <md:keyword>sample</md:keyword>
+    <md:keyword>survey</md:keyword>
+  </md:keywordlist>
+  <md:subjectlist>
+    <md:subject>Social Sciences</md:subject>
+  </md:subjectlist>
+  <md:abstract>By the end of this section, you will be able to:
+<list>
+<item>Describe the different research methods used by psychologists</item> 
+<item>Discuss the strengths and weaknesses of case studies, naturalistic observation, surveys, and archival research</item>
+<item>Compare longitudinal and cross-sectional approaches to research</item>
+</list></md:abstract>
+  <md:language>en</md:language>
+  <!-- WARNING! The 'metadata' section is read only. Do not edit above.
+       Changes to the metadata section in the source will not be saved. -->
+</metadata>
+
+<content>
+<para id="fs-idp37050912">There are many research methods available to psychologists in their efforts to understand, describe, and explain behavior and the cognitive and biological processes that underlie it. Some methods rely on observational techniques. Other approaches involve interactions between the researcher and the individuals who are being studied—ranging from a series of simple questions to extensive, in-depth interviews—to well-controlled experiments.</para>
+<para id="fs-idp14955360">Each of these research methods has unique strengths and weaknesses, and each method may only be appropriate for certain types of research questions. For example, studies that rely primarily on observation produce incredible amounts of information, but the ability to apply this information to the larger population is somewhat limited because of small sample sizes. Survey research, on the other hand, allows researchers to easily collect data from relatively large samples. While this allows for results to be generalized to the larger population more easily, the information that can be collected on any given survey is somewhat limited and subject to problems associated with any type of self-reported data. Some researchers conduct archival research by using existing records. While this can be a fairly inexpensive way to collect data that can provide insight into a number of research questions, researchers using this approach have no control on how or what kind of data was collected. All of the methods described thus far are correlational in nature. This means that researchers can speak to important relationships that might exist between two or more variables of interest. However, correlational data cannot be used to make claims about cause-and-effect relationships.</para>
+<para id="fs-idp27758096">Correlational research can find a relationship between two variables, but the only way a researcher can claim that the relationship between the variables is cause and effect is to perform an experiment. In experimental research, which will be discussed later in this chapter, there is a tremendous amount of control over variables of interest. While this is a powerful approach, experiments are often conducted in very artificial settings. This calls into question the validity of experimental findings with regard to how they would apply in real-world settings. In addition, many of the questions that psychologists would like to answer cannot be pursued through experimental research because of ethical concerns.</para>
+
+<section id="fs-idp4081696">
+<title>CLINICAL OR CASE STUDIES </title>
+<para id="fs-idp37923472">In 2011, the <emphasis effect="italics">New York Times</emphasis> published a feature story on Krista and Tatiana Hogan, Canadian twin girls. These particular twins are unique because Krista and Tatiana are conjoined twins, connected at the head. There is evidence that the two girls are connected in a part of the brain called the thalamus, which is a major sensory relay center. Most incoming sensory information is sent through the thalamus before reaching higher regions of the cerebral cortex for processing.</para>
+<note id="fs-idp3735328" class="psychology link-to-learning"><label>Link to Learning</label>
+<media id="fs-idm27207104" alt=" ">
+<image mime-type="png" src="OSC_Interactive_150.png"/>
+</media>
+<para id="fs-idm3110272">To learn more about Krista and Tatiana, watch this <link url="http://openstaxcollege.org/l/hogans"><emphasis effect="italics">New York Times</emphasis> video</link> about their lives.</para></note><para id="fs-idm17646464">The implications of this potential connection mean that it might be possible for one twin to experience the sensations of the other twin. For instance, if Krista is watching a particularly funny television program, Tatiana might smile or laugh even if she is not watching the program. This particular possibility has piqued the interest of many neuroscientists who seek to understand how the brain uses sensory information.</para>
+<para id="fs-idp43343088">These twins represent an enormous resource in the study of the brain, and since their condition is very rare, it is likely that as long as their family agrees, scientists will follow these girls very closely throughout their lives to gain as much information as possible (Dominus, 2011).</para>
+<para id="fs-idp27779120">In observational research, scientists are conducting a <term>clinical</term> or <term>case study</term> when they focus on one person or just a few individuals. Indeed, some scientists spend their entire careers studying just 10–20 individuals. Why would they do this? Obviously, when they focus their attention on a very small number of people, they can gain a tremendous amount of insight into those cases. The richness of information that is collected in clinical or case studies is unmatched by any other single research method. This allows the researcher to have a very deep understanding of the individuals and the particular phenomenon being studied.</para>
+<para id="fs-idp16680592">If clinical or case studies provide so much information, why are they not more frequent among researchers? As it turns out, the major benefit of this particular approach is also a weakness. As mentioned earlier, this approach is often used when studying individuals who are interesting to researchers because they have a rare characteristic. Therefore, the individuals who serve as the focus of case studies are not like most other people. If scientists ultimately want to explain all behavior, focusing attention on such a special group of people can make it difficult to generalize any observations to the larger population as a whole. <term>Generalizing</term> refers to the ability to apply the findings of a particular research project to larger segments of society. Again, case studies provide enormous amounts of information, but since the cases are so specific, the potential to apply what’s learned to the average person may be very limited.</para>
+</section>
+
+<section id="fs-idp13106704">
+<title>NATURALISTIC OBSERVATION</title>
+<para id="fs-idp5222752">If you want to understand how behavior occurs, one of the best ways to gain information is to simply observe the behavior in its natural context. However, people might change their behavior in unexpected ways if they know they are being observed. How do researchers obtain accurate information when people tend to hide their natural behavior? As an example, imagine that your professor asks everyone in your class to raise their hand if they always wash their hands after using the restroom. Chances are that almost everyone in the classroom will raise their hand, but do you think hand washing after every trip to the restroom is really that universal?</para>
+<para id="fs-idp38906048">This is very similar to the phenomenon mentioned earlier in this chapter: many individuals do not feel comfortable answering a question honestly. But if we are committed to finding out the facts about hand washing, we have other options available to us.</para>
+<para id="fs-idp1651216">Suppose we send a classmate into the restroom to actually watch whether everyone washes their hands after using the restroom. Will our observer blend into the restroom environment by wearing a white lab coat, sitting with a clipboard, and staring at the sinks? We want our researcher to be inconspicuous—perhaps standing at one of the sinks pretending to put in contact lenses while secretly recording the relevant information. This type of observational study is called <term>naturalistic observation</term>: observing behavior in its natural setting. To better understand peer exclusion, Suzanne Fanger collaborated with colleagues at the University of Texas to observe the behavior of preschool children on a playground. How did the observers remain inconspicuous over the duration of the study? They equipped a few of the children with wireless microphones (which the children quickly forgot about) and observed while taking notes from a distance. Also, the children in that particular preschool (a “laboratory preschool”) were accustomed to having observers on the playground (Fanger, Frankel, &amp; Hazen, 2012).</para>
+<para id="fs-idm172048">It is critical that the observer be as unobtrusive and as inconspicuous as possible: when people know they are being watched, they are less likely to behave naturally. If you have any doubt about this, ask yourself how your driving behavior might differ in two situations: In the first situation, you are driving down a deserted highway during the middle of the day; in the second situation, you are being followed by a police car down the same deserted highway (<link target-id="CNX_Psych_02_02_policecar"/>).</para> 
+
+<figure id="CNX_Psych_02_02_policecar">
+<media id="fs-idm9288592" alt="A photograph shows two police cars driving, one with its lights flashing.">
+<image mime-type="image/jpeg" src="CNX_Psych_02_02_policecar.jpg"/>
+</media>
+<caption>Seeing a police car behind you would probably affect your driving behavior. (credit: Michael Gil)</caption>
+</figure>
+
+<para id="fs-idm1137056">It should be pointed out that naturalistic observation is not limited to research involving humans. Indeed, some of the best-known examples of naturalistic observation involve researchers going into the field to observe various kinds of animals in their own environments. As with human studies, the researchers maintain their distance and avoid interfering with the animal subjects so as not to influence their natural behaviors. Scientists have used this technique to study social hierarchies and interactions among animals ranging from ground squirrels to gorillas. The information provided by these studies is invaluable in understanding how those animals organize socially and communicate with one another. The anthropologist Jane <term class="no-emphasis">Goodall</term>, for example, spent nearly five decades observing the behavior of chimpanzees in Africa (<link target-id="CNX_Psych_02_02_goodall"/>). As an illustration of the types of concerns that a researcher might encounter in naturalistic observation, some scientists criticized Goodall for giving the chimps names instead of referring to them by numbers—using names was thought to undermine the emotional detachment required for the objectivity of the study (McKie, 2010).</para>
+
+<figure id="CNX_Psych_02_02_goodall">
+<media id="fs-idm18537840" alt="(a) A photograph shows Jane Goodall speaking from a lectern. (b) A photograph shows a chimpanzee&#x2019;s face.">
+<image mime-type="image/jpeg" src="CNX_Psych_02_02_goodall.jpg"/>
+</media>
+<caption>(a) Jane Goodall made a career of conducting naturalistic observations of (b) chimpanzee behavior. (credit “Jane Goodall”: modification of work by Erik Hersman; “chimpanzee”: modification of work by “Afrika Force”/Flickr.com)</caption>
+</figure>
+
+<para id="fs-idm6474704">The greatest benefit of naturalistic observation is the <term class="no-emphasis">validity</term>, or accuracy, of information collected unobtrusively in a natural setting. Having individuals behave as they normally would in a given situation means that we have a higher degree of ecological validity, or realism, than we might achieve with other research approaches. Therefore, our ability to generalize the findings of the research to real-world situations is enhanced. If done correctly, we need not worry about people or animals modifying their behavior simply because they are being observed. Sometimes, people may assume that reality programs give us a glimpse into authentic human behavior. However, the principle of inconspicuous observation is violated as reality stars are followed by camera crews and are interviewed on camera for personal confessionals. Given that environment, we must doubt how natural and realistic their behaviors are.</para>
+<para id="fs-idm29632464">The major downside of naturalistic observation is that they are often difficult to set up and control. In our restroom study, what if you stood in the restroom all day prepared to record people’s hand washing behavior and no one came in? Or, what if you have been closely observing a troop of gorillas for weeks only to find that they migrated to a new place while you were sleeping in your tent? The benefit of realistic data comes at a cost. As a researcher you have no control of when (or if) you have behavior to observe. In addition, this type of observational research often requires significant investments of time, money, and a good dose of luck.</para>
+<para id="fs-idm17305696">Sometimes studies involve structured observation. In these cases, people are observed while engaging in set, specific tasks. An excellent example of structured observation comes from Strange Situation by Mary Ainsworth (you will read more about this in the chapter on lifespan development). The Strange Situation is a procedure used to evaluate attachment styles that exist between an infant and caregiver. In this scenario, caregivers bring their infants into a room filled with toys. The Strange Situation involves a number of phases, including a stranger coming into the room, the caregiver leaving the room, and the caregiver’s return to the room. The infant’s behavior is closely monitored at each phase, but it is the behavior of the infant upon being reunited with the caregiver that is most telling in terms of characterizing the infant’s attachment style with the caregiver.</para>
+<para id="fs-idm28119200">Another potential problem in observational research is <term>observer bias</term>. Generally, people who act as observers are closely involved in the research project and may unconsciously skew their observations to fit their research goals or expectations. To protect against this type of bias, researchers should have clear criteria established for the types of behaviors recorded and how those behaviors should be classified. In addition, researchers often compare observations of the same event by multiple observers, in order to test <term>inter-rater reliability</term>: a measure of reliability that assesses the consistency of observations by different observers.</para>
+</section>
+
+<section id="fs-idp15875280">
+<title>SURVEYS</title>
+<para id="fs-idp2550784">Often, psychologists develop surveys as a means of gathering data. <term>Surveys</term> are lists of questions to be answered by research participants, and can be delivered as paper-and-pencil questionnaires, administered electronically, or conducted verbally (<link target-id="CNX_Psych_02_03_survey"/>). Generally, the survey itself can be completed in a short time, and the ease of administering a survey makes it easy to collect data from a large number of people.</para>
+<para id="fs-idm29791232">Surveys allow researchers to gather data from larger samples than may be afforded by other research methods<emphasis>.</emphasis> A <term>sample</term> is a subset of individuals selected from a <term>population</term>, which is the overall group of individuals that the researchers are interested in. Researchers study the sample and seek to generalize their findings to the population.</para>
+
+<figure id="CNX_Psych_02_03_survey"><media id="fs-idp2482176" alt="A sample online survey reads, &#x201C;Dear visitor, your opinion is important to us. We would like to invite you to participate in a short survey to gather your opinions and feedback on your news consumption habits. The survey will take approximately 10-15 minutes. Simply click the &#x201C;Yes&#x201D; button below to launch the survey. Would you like to participate?&#x201D; Two buttons are labeled &#x201C;yes&#x201D; and &#x201C;no.&#x201D;">
+<image mime-type="image/jpeg" src="CNX_Psych_02_03_surveyn.jpg"/>
+</media>
+
+<caption>Surveys can be administered in a number of ways, including electronically administered research, like the survey shown here. (credit: Robert Nyman)</caption></figure><para id="fs-idm8760560">There is both strength and weakness of the survey in comparison to case studies. By using surveys, we can collect information from a larger sample of people. A larger sample is better able to reflect the actual diversity of the population, thus allowing better generalizability. Therefore, if our sample is sufficiently large and diverse, we can assume that the data we collect from the survey can be generalized to the larger population with more certainty than the information collected through a case study. However, given the greater number of people involved, we are not able to collect the same depth of information on each person that would be collected in a case study.</para>
+<para id="fs-idp2566960">Another potential weakness of surveys is something we touched on earlier in this chapter: People don't always give accurate responses. They may lie, misremember, or answer questions in a way that they think makes them look good. For example, people may report drinking less alcohol than is actually the case.</para>
+<para id="fs-idp4054560">Any number of research questions can be answered through the use of surveys. One real-world example is the research conducted by Jenkins, Ruppel, Kizer, Yehl, and Griffin (2012) about the backlash against the US Arab-American community following the terrorist attacks of September 11, 2001. Jenkins and colleagues wanted to determine to what extent these negative attitudes toward Arab-Americans still existed nearly a decade after the attacks occurred. In one study, 140 research participants filled out a survey with 10 questions, including questions asking directly about the participant’s overt prejudicial attitudes toward people of various ethnicities. The survey also asked indirect questions about how likely the participant would be to interact with a person of a given ethnicity in a variety of settings (such as, “How likely do you think it is that you would introduce yourself to a person of Arab-American descent?”). The results of the research suggested that participants were unwilling to report prejudicial attitudes toward any ethnic group. However, there were significant differences between their pattern of responses to questions about social interaction with Arab-Americans compared to other ethnic groups: they indicated less willingness for social interaction with Arab-Americans compared to the other ethnic groups. This suggested that the participants harbored subtle forms of prejudice against Arab-Americans, despite their assertions that this was not the case (Jenkins et al., 2012).</para>
+</section>
+
+<section id="fs-idp26797008">
+<title>ARCHIVAL RESEARCH</title>
+<para id="fs-idp14856432">Some researchers gain access to large amounts of data without interacting with a single research participant. Instead, they use existing records to answer various research questions. This type of research approach is known as <term>archival research</term>. Archival research relies on looking at past records or data sets to look for interesting patterns or relationships.</para>
+<para id="fs-idp20270848">For example, a researcher might access the academic records of all individuals who enrolled in college within the past ten years and calculate how long it took them to complete their degrees, as well as course loads, grades, and extracurricular involvement. Archival research could provide important information about who is most likely to complete their education, and it could help identify important risk factors for struggling students (<link target-id="CNX_Psych_02_03_records"/>).</para> 
+<figure id="CNX_Psych_02_03_records"><media id="fs-idm26629616" alt="(a) A photograph shows stacks of paper files on shelves. (b) A photograph shows a computer.">
+<image mime-type="image/jpeg" src="CNX_Psych_02_03_records.jpg"/>
+</media>
+
+<caption>A researcher doing archival research examines records, whether archived as a (a) hardcopy or (b) electronically. (credit “paper files”: modification of work by “Newtown graffiti”/Flickr; “computer”: modification of work by INPIVIC Family/Flickr)</caption></figure><para id="fs-idp3359568">In comparing archival research to other research methods, there are several important distinctions. For one, the researcher employing archival research never directly interacts with research participants. Therefore, the investment of time and money to collect data is considerably less with archival research. Additionally, researchers have no control over what information was originally collected. Therefore, research questions have to be tailored so they can be answered within the structure of the existing data sets. There is also no guarantee of consistency between the records from one source to another, which might make comparing and contrasting different data sets problematic.</para>
+</section>
+
+<section id="fs-idm17180848">
+<title>LONGITUDINAL AND CROSS-SECTIONAL RESEARCH </title>
+<para id="fs-idp28905344">Sometimes we want to see how people change over time, as in studies of human development and lifespan. When we test the same group of individuals repeatedly over an extended period of time, we are conducting longitudinal research. <term>Longitudinal research</term> is a research design in which data-gathering is administered repeatedly over an extended period of time. For example, we may survey a group of individuals about their dietary habits at age 20, retest them a decade later at age 30, and then again at age 40.</para>
+<para id="fs-idm13862000">Another approach is cross-sectional research. In <term>cross-sectional research</term>, a researcher compares multiple segments of the population at the same time. Using the dietary habits example above, the researcher might directly compare different groups of people by age. Instead a group of people for 20 years to see how their dietary habits changed from decade to decade, the researcher would study a group of 20-year-old individuals and compare them to a group of 30-year-old individuals and a group of 40-year-old individuals. While cross-sectional research requires a shorter-term investment, it is also limited by differences that exist between the different generations (or cohorts) that have nothing to do with age per se, but rather reflect the social and cultural experiences of different generations of individuals make them different from one another.</para>
+<para id="fs-idm80859408">To illustrate this concept, consider the following survey findings. In recent years there has been significant growth in the popular support of same-sex marriage. Many studies on this topic break down survey participants into different age groups. In general, younger people are more supportive of same-sex marriage than are those who are older (Jones, 2013). Does this mean that as we age we become less open to the idea of same-sex marriage, or does this mean that older individuals have different perspectives because of the social climates in which they grew up? Longitudinal research is a powerful approach because the same individuals are involved in the research project over time, which means that the researchers need to be less concerned with differences among cohorts affecting the results of their study.</para>
+<para id="fs-idm27520992">Often longitudinal studies are employed when researching various diseases in an effort to understand particular risk factors. Such studies often involve tens of thousands of individuals who are followed for several decades. Given the enormous number of people involved in these studies, researchers can feel confident that their findings can be generalized to the larger population. The Cancer Prevention Study-3 (CPS-3) is one of a series of longitudinal studies sponsored by the American Cancer Society aimed at determining predictive risk factors associated with cancer. When participants enter the study, they complete a survey about their lives and family histories, providing information on factors that might cause or prevent the development of cancer. Then every few years the participants receive additional surveys to complete. In the end, hundreds of thousands of participants will be tracked over 20 years to determine which of them develop cancer and which do not.</para>
+<para id="fs-idp3823472">Clearly, this type of research is important and potentially very informative. For instance, earlier longitudinal studies sponsored by the American Cancer Society provided some of the first scientific demonstrations of the now well-established links between increased rates of cancer and smoking (American Cancer Society, n.d.) (<link target-id="CNX_Psych_02_03_cigarettes"/>).</para>
+
+<figure id="CNX_Psych_02_03_cigarettes">
+<media id="fs-idp38407616" alt="A photograph shows pack of cigarettes and cigarettes in an ashtray. The pack of cigarettes reads, &#x201C;Surgeon general&#x2019;s warning: smoking causes lung cancer, heart disease, emphysema, and may complicate pregnancy.&#x201D;">
+<image mime-type="image/jpeg" src="CNX_Psych_02_03_cigarettes.jpg"/>
+</media>
+<caption>Longitudinal research like the CPS-3 help us to better understand how smoking is associated with cancer and other diseases. (credit: CDC/Debora Cartagena)</caption>
+</figure>
+
+<para id="fs-idp7326832">As with any research strategy, longitudinal research is not without limitations. For one, these studies require an incredible time investment by the researcher and research participants. Given that some longitudinal studies take years, if not decades, to complete, the results will not be known for a considerable period of time. In addition to the time demands, these studies also require a substantial financial investment. Many researchers are unable to commit the resources necessary to see a longitudinal project through to the end.</para>
+<para id="fs-idp31341952">Research participants must also be willing to continue their participation for an extended period of time, and this can be problematic. People move, get married and take new names, get ill, and eventually die. Even without significant life changes, some people may simply choose to discontinue their participation in the project. As a result, the <term>attrition</term> rates, or reduction in the number of research participants due to dropouts, in longitudinal studies are quite high and increases over the course of a project. For this reason, researchers using this approach typically recruit many participants fully expecting that a substantial number will drop out before the end. As the study progresses, they continually check whether the sample still represents the larger population, and make adjustments as necessary.</para>
+</section>
+
+<section id="fs-idp7478256" class="summary">
+<title>Summary</title>
+<para id="fs-idm21591152">The clinical or case study involves studying just a few individuals for an extended period of time. While this approach provides an incredible depth of information, the ability to generalize these observations to the larger population is problematic. Naturalistic observation involves observing behavior in a natural setting and allows for the collection of valid, true-to-life information from realistic situations. However, naturalistic observation does not allow for much control and often requires quite a bit of time and money to perform. Researchers strive to ensure that their tools for collecting data are both reliable (consistent and replicable) and valid (accurate).</para>
+<para id="fs-idp19925040">Surveys can be administered in a number of ways and make it possible to collect large amounts of data quickly. However, the depth of information that can be collected through surveys is somewhat limited compared to a clinical or case study.</para>
+<para id="fs-idp25313904">Archival research involves studying existing data sets to answer research questions.</para>
+<para id="fs-idm34110976">Longitudinal research has been incredibly helpful to researchers who need to collect data on how people change over time. Cross-sectional research compares multiple segments of a population at a single time.</para>
+</section>
+
+<section id="fs-idm31223232" class="review-questions">
+<title>Review Questions</title>
+<exercise id="fs-idm58645520">
+<problem id="fs-idm57191104">
+<para id="fs-idp17368384">Sigmund Freud developed his theory of human personality by conducting in-depth interviews over an extended period of time with a few clients. This type of research approach is known as a(n): ________.</para>
+<list id="fs-idm6248320" list-type="enumerated" number-style="lower-alpha"><item>archival research</item>
+<item>case study</item>
+<item>naturalistic observation</item>
+<item>survey</item>
+</list></problem>
+<solution id="fs-idm26451328"><para id="fs-idm34084416">B</para></solution>
+</exercise>
+<exercise id="fs-idm28267056">
+<problem id="fs-idm29818512">
+<para id="fs-idp32466640">________ involves observing behavior in individuals in their natural environments.</para>
+<list id="fs-idp609648" list-type="enumerated" number-style="lower-alpha"><item>archival research</item>
+<item>case study</item>
+<item>naturalistic observation</item>
+<item>survey</item>
+</list></problem>
+<solution id="fs-idm34441904">
+<para id="fs-idp26774576">C</para>
+</solution>
+</exercise>
+<exercise id="fs-idm15501216">
+<problem id="fs-idm23003888">
+<para id="fs-idm2793200">The major limitation of case studies is ________.</para>
+<list id="fs-idm18231792" list-type="enumerated" number-style="lower-alpha"><item>the superficial nature of the information collected in this approach</item>
+<item>the lack of control that the researcher has in this approach</item>
+<item>the inability to generalize the findings from this approach to the larger population</item>
+<item>the absence of inter-rater reliability</item>
+</list></problem>
+<solution id="fs-idm18214656">
+<para id="fs-idm15185072">C</para>
+</solution>
+</exercise>
+<exercise id="fs-idm4568128">
+<problem id="fs-idp1324208">
+<para id="fs-idp19458560">The benefit of naturalistic observation studies is ________.</para>
+<list id="fs-idm5773216" list-type="enumerated" number-style="lower-alpha"><item>the honesty of the data that is collected in a realistic setting</item>
+<item>how quick and easy these studies are to perform</item>
+<item>the researcher’s capacity to make sure that data is collected as efficiently as possible</item>
+<item>the ability to determine cause and effect in this particular approach</item>
+</list></problem>
+<solution id="fs-idp38049600">
+<para id="fs-idm29630848">A</para>
+</solution>
+</exercise>
+<exercise id="fs-idm34278992">
+<problem id="fs-idm29719568">
+<para id="fs-idm26200976">Using existing records to try to answer a research question is known as ________.</para>
+<list id="fs-idp17355568" list-type="enumerated" number-style="lower-alpha"><item>naturalistic observation</item>
+<item>survey research</item>
+<item>longitudinal research</item>
+<item>archival research</item>
+</list></problem>
+<solution id="fs-idm55731088">
+<para id="fs-idp3691664">D</para>
+</solution>
+</exercise>
+<exercise id="fs-idp899008">
+<problem id="fs-idm80780208">
+<para id="fs-idp13161024">________ involves following a group of research participants for an extended period of time.</para>
+<list id="fs-idm3085584" list-type="enumerated" number-style="lower-alpha"><item>archival research</item>
+<item>longitudinal research</item>
+<item>naturalistic observation</item>
+<item>cross-sectional research</item>
+</list></problem>
+<solution id="fs-idp27634416">
+<para id="fs-idm7745616">B</para>
+</solution>
+</exercise>
+<exercise id="fs-idm124782544">
+<problem id="fs-idm16940560">
+<para id="fs-idm34224912">A(n) ________ is a list of questions developed by a researcher that can be administered in paper form.</para>
+<list id="fs-idp33906208" list-type="enumerated" number-style="lower-alpha"><item>archive</item>
+<item>case Study</item>
+<item>naturalistic observation</item>
+<item>survey</item>
+</list></problem>
+<solution id="fs-idm7237952">
+<para id="fs-idm7691408">D</para>
+</solution>
+</exercise>
+<exercise id="fs-idm30197456">
+<problem id="fs-idm4575840">
+<para id="fs-idp5494720">Longitudinal research is complicated by high rates of ________.</para>
+<list id="fs-idm13917312" list-type="enumerated" number-style="lower-alpha"><item>deception</item>
+<item>observation</item>
+<item>attrition</item>
+<item>generalization</item>
+</list></problem>
+<solution id="fs-idp20955152">
+<para id="fs-idp34156624">C</para>
+</solution>
+</exercise>
+</section>
+
+<section id="fs-idm28261776" class="critical-thinking">
+<title>Critical Thinking Questions</title>
+<exercise id="fs-idm28250112">
+<problem id="fs-idp15721936"><para id="fs-idm18406208">In this section, conjoined twins, Krista and Tatiana, were described as being potential participants in a case study. In what other circumstances would you think that this particular research approach would be especially helpful and why?</para></problem>
+<solution id="fs-idp14957552"><para id="fs-idm4514928">Case studies might prove especially helpful using individuals who have rare conditions. For instance, if one wanted to study multiple personality disorder then the case study approach with individuals diagnosed with multiple personality disorder would be helpful.</para></solution>
+</exercise>
+<exercise id="fs-idm576160">
+<problem id="fs-idm18576976"><para id="fs-idm30736160">Presumably, reality television programs aim to provide a realistic portrayal of the behavior displayed by the characters featured in such programs. This section pointed out why this is not really the case. What changes could be made in the way that these programs are produced that would result in more honest portrayals of realistic behavior?</para></problem>
+<solution id="fs-idp15603952"><para id="fs-idp15604080">The behavior displayed on these programs would be more realistic if the cameras were mounted in hidden locations, or if the people who appear on these programs did not know when they were being recorded.</para></solution>
+</exercise>
+<exercise id="fs-idp39220960">
+<problem id="fs-idm17191584"><para id="fs-idp7025744">Which of the research methods discussed in this section would be best suited to research the effectiveness of the D.A.R.E. program in preventing the use of alcohol and other drugs? Why?</para></problem>
+<solution id="fs-idm17283216"><para id="fs-idp7058464">Longitudinal research would be an excellent approach in studying the effectiveness of this program because it would follow students as they aged to determine if their choices regarding alcohol and drugs were affected by their participation in the program.</para></solution>
+</exercise>
+<exercise id="fs-idp7264656">
+<problem id="fs-idm34422080"><para id="fs-idm13385472">Aside from biomedical research, what other areas of research could greatly benefit by both longitudinal and archival research?</para></problem>
+<solution id="fs-idm76924464"><para id="fs-idp67503424">Answers will vary. Possibilities include research on hiring practices based on human resource records, and research that follows former prisoners to determine if the time that they were incarcerated provided any sort of positive influence on their likelihood of engaging in criminal behavior in the future.</para></solution>
+</exercise>
+</section>
+
+<section id="fs-idp19478960" class="personal-application">
+<title>Personal Application Questions</title>
+<exercise id="fs-idp7319552"><problem id="fs-idm28380448"><para id="fs-idm124788768">A friend of yours is working part-time in a local pet store. Your friend has become increasingly interested in how dogs normally communicate and interact with each other, and is thinking of visiting a local veterinary clinic to see how dogs interact in the waiting room. After reading this section, do you think this is the best way to better understand such interactions? Do you have any suggestions that might result in more valid data?</para></problem></exercise>
+<exercise id="fs-idp15705600"><problem id="fs-idp3449264"><para id="fs-idm2785520">As a college student, you are no doubt concerned about the grades that you earn while completing your coursework. If you wanted to know how overall GPA is related to success in life after college, how would you choose to approach this question and what kind of resources would you need to conduct this research?</para></problem></exercise>
+</section>
+
+
+
+
+</content>
+<glossary>
+<definition id="fs-idp20292208">
+<term>archival research</term>
+<meaning id="fs-idp1489744">method of research using past records or data sets to answer various research questions, or to search for interesting patterns or relationships</meaning>
+</definition>
+<definition id="fs-idm4850320">
+<term>attrition</term>
+<meaning id="fs-idm10757680">reduction in number of research participants as some drop out of the study over time</meaning>
+</definition>
+<definition id="fs-idm1038816">
+<term>clinical or case study</term>
+<meaning id="fs-idp32484832">observational research study focusing on one or a few people</meaning>
+</definition>
+<definition id="fs-idm11521904">
+<term>cross-sectional research</term> 
+<meaning id="fs-idp32669072">compares multiple segments of a population at a single time</meaning>
+</definition>
+<definition id="fs-idp33624096">
+<term>generalize</term> 
+<meaning id="fs-idm16834368">inferring that the results for a sample apply to the larger population</meaning>
+</definition>
+<definition id="fs-idp23349936">
+<term>inter-rater reliability</term>
+<meaning id="fs-idm9281232">measure of agreement among observers on how they record and classify a particular event</meaning>
+</definition>
+<definition id="fs-idm1563920">
+<term>longitudinal research</term>
+<meaning id="fs-idm35206736">studies in which the same group of individuals is surveyed or measured repeatedly over an extended period of time</meaning>
+</definition>
+<definition id="fs-idm6213360">
+<term>naturalistic observation</term> 
+<meaning id="fs-idm32537104">observation of behavior in its natural setting</meaning>
+</definition>
+<definition id="fs-idm16964224">
+<term>observer bias</term> 
+<meaning id="fs-idp26890416">when observations may be skewed to align with observer expectations</meaning>
+</definition>
+<definition id="fs-idm81845680">
+<term>population</term>
+<meaning id="fs-idm36802912">overall group of individuals that the researchers are interested in</meaning>
+</definition>
+<definition id="fs-idm25171680">
+<term>sample</term> 
+<meaning id="fs-idp5433520">subset of individuals selected from the larger population</meaning>
+</definition>
+<definition id="fs-idp9441440">
+<term>survey</term> 
+<meaning id="fs-idm8239488">list of questions to be answered by research participants—given as paper-and-pencil questionnaires, administered electronically, or conducted verbally—allowing researchers to collect data from a large number of people</meaning>
+</definition>
+</glossary>
+</document>

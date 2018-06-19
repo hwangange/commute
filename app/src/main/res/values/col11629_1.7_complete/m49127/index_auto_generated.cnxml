@@ -1,0 +1,219 @@
+<?xml version="1.0"?>
+<document xmlns="http://cnx.rice.edu/cnxml" xmlns:md="http://cnx.rice.edu/mdml" xmlns:bib="http://bibtexml.sf.net/" xmlns:m="http://www.w3.org/1998/Math/MathML" xmlns:q="http://cnx.rice.edu/qml/1.0" id="new" cnxml-version="0.7" module-id="new">
+
+<title>What Is Industrial and Organizational Psychology?</title>
+<metadata xmlns:md="http://cnx.rice.edu/mdml"
+          mdml-version="0.5">
+  <!-- WARNING! The 'metadata' section is read only. Do not edit below.
+       Changes to the metadata section in the source will not be saved. -->
+  <md:repository>http://legacy.cnx.org/content</md:repository>
+  <md:content-url>http://legacy.cnx.org/content/m49127/latest</md:content-url>
+  <md:content-id>m49127</md:content-id>
+  <md:title>What Is Industrial and Organizational Psychology?</md:title>
+  <md:version>1.5</md:version>
+  <md:created>2014/02/13 05:33:21 -0600</md:created>
+  <md:revised>2014/12/16 11:04:59 -0600</md:revised>
+  <md:actors>
+    <md:organization userid="OpenStaxCollege">
+      <md:shortname>OpenStax</md:shortname>
+      <md:fullname>OpenStax</md:fullname>
+      <md:email>info@openstax.org</md:email>
+    </md:organization>
+    <md:person userid="OSCRiceUniversity">
+      <md:firstname>Rice</md:firstname>
+      <md:surname>University</md:surname>
+      <md:fullname>Rice University</md:fullname>
+      <md:email>info@openstaxcollege.org</md:email>
+    </md:person>
+    <md:person userid="cnxpsych">
+      <md:firstname>CNX</md:firstname>
+      <md:surname>Psychology</md:surname>
+      <md:fullname>OpenStax Psychology</md:fullname>
+      <md:email>info@openstaxcollege.org</md:email>
+    </md:person>
+  </md:actors>
+  <md:roles>
+    <md:role type="author">OpenStaxCollege</md:role>
+    <md:role type="maintainer">OpenStaxCollege cnxpsych</md:role>
+    <md:role type="licensor">OSCRiceUniversity</md:role>
+  </md:roles>
+  <md:license url="http://creativecommons.org/licenses/by/4.0/">Creative Commons Attribution License 4.0</md:license>
+  <!-- For information on license requirements for use or modification, see license url in the
+       above <md:license> element.
+       For information on formatting required attribution, see the URL:
+         CONTENT_URL/content_info#cnx_cite_header
+       where CONTENT_URL is the value provided above in the <md:content-url> element.
+  -->
+  <md:keywordlist>
+    <md:keyword>Frederick Taylor</md:keyword>
+    <md:keyword>Hawthorne effect</md:keyword>
+    <md:keyword>human factors psychology</md:keyword>
+    <md:keyword>industrial and organizational psychology</md:keyword>
+    <md:keyword>industrial psychology</md:keyword>
+    <md:keyword>I-O psychology</md:keyword>
+    <md:keyword>Lillian Gilbreth</md:keyword>
+    <md:keyword>organizational psychology</md:keyword>
+    <md:keyword>Psychologists</md:keyword>
+    <md:keyword>Society for Industrial and Organizational</md:keyword>
+  </md:keywordlist>
+  <md:subjectlist>
+    <md:subject>Social Sciences</md:subject>
+  </md:subjectlist>
+  <md:abstract>By the end of this section, you will be able to:
+<list>
+<item>Understand the scope of study in the field of industrial and organizational psychology</item>
+<item>Describe the history of industrial and organizational psychology</item>
+</list></md:abstract>
+  <md:language>en</md:language>
+  <!-- WARNING! The 'metadata' section is read only. Do not edit above.
+       Changes to the metadata section in the source will not be saved. -->
+</metadata>
+
+<content>
+<para id="fs-idm186980416">In 2012, people who worked in the United States spent an average of 56.4 hours per week working (Bureau of Labor Statistics—U.S. Department of Labor, 2013). Sleeping was the only other activity they spent more time on with an average of 61.2 hours per week. The workday is a significant portion of workers’ time and energy. It impacts their lives and their family’s lives in positive and negative physical and psychological ways. <term>Industrial and organizational (I-O) psychology</term> is a branch of psychology that studies how human behavior and psychology affect work and how they are affected by work.</para>
+<para id="fs-idm75266544">Industrial and organizational psychologists work in four main contexts: academia, government, consulting firms, and business. Most I-O psychologists have a master’s or doctorate degree. The field of I-O psychology can be divided into three broad areas (<link target-id="CNX_Psych_13_01_IOTypes"/> and <link target-id="CNX_Psych_13_01_HumFact"/>): industrial, organizational, and human factors. <term>Industrial psychology</term> is concerned with describing job requirements and assessing individuals for their ability to meet those requirements. In addition, once employees are hired, industrial psychology studies and develops ways to train, evaluate, and respond to those evaluations. As a consequence of its concern for candidate characteristics, industrial psychology must also consider issues of legality regarding discrimination in hiring. <term>Organizational psychology</term> is a discipline interested in how the relationships among employees affect those employees and the performance of a business. This includes studying worker satisfaction, motivation, and commitment. This field also studies management, leadership, and organizational culture, as well as how an organization’s structures, management and leadership styles, social norms, and role expectations affect individual behavior. As a result of its interest in worker wellbeing and relationships, organizational psychology also considers the subjects of harassment, including sexual harassment, and workplace violence. <term>Human factors psychology</term> is the study of how workers interact with the tools of work and how to design those tools to optimize workers’ productivity, safety, and health. These studies can involve interactions as straightforward as the fit of a desk, chair, and computer to a human having to sit on the chair at the desk using the computer for several hours each day. They can also include the examination of how humans interact with complex displays and their ability to interpret them accurately and quickly. In Europe, this field is referred to as ergonomics.</para>
+<figure id="CNX_Psych_13_01_IOTypes">
+<media id="fs-idm76529968" alt="Photograph A shows two people sitting across from one another and conversing. Photograph B shows a room full of people sitting in front of computers.">
+<image mime-type="image/jpeg" src="CNX_Psych_13_01_IOTypes.jpg"/>
+</media>
+<caption>(a) Industrial psychology focuses on hiring and maintaining employees. (b) Organizational psychology is interested in employee relationships and organizational culture. (credit a: modification of work by Cory Zanker; credit b: modification of work by Vitor Lima)</caption>
+</figure>
+<figure id="CNX_Psych_13_01_HumFact">
+<media id="fs-idm27486128" alt="An illustration shows a person seated at a desk. Measurements are provided showing the proper distance and angle from work equipment. The labels are as follows: Viewing distance from head to monitor should be 19&#x2013;24 inches.&#x201D; For the viewing angle, the eyes should be about level with the top of the screen. The chair should provide lumbar support for the lower back. The forearm and upper arm should be at a 90 degree angle, with wrists straight over the keyboard. The seat back angle should also be 90 degrees, as should the angle of the bend of the knees. The top of the knees should be between 23 and 28 inches from the floor. If this distance cannot be met due to short stature, a footrest should be used below the feet. The seat should have an adjustable height to help in posturing oneself according to these suggested angles and distances.">
+<image mime-type="image/jpeg" src="CNX_Psych_13_01_HumFact.jpg"/>
+</media>
+<caption>Human factors psychology is the study of interactions between humans, tools, and work systems.</caption>
+</figure>
+<note id="fs-idm13433824" class="psychology link-to-learning"><label>Link to Learning</label>
+<media id="fs-idm31677344" alt="">
+<image mime-type="png" src="OSC_Interactive_150.png"/>
+</media>
+<para id="fs-idp32512368">Find out what I-O psychologists do on the <link url="http://openstaxcollege.org/l/siop">Society for Industrial and Organizational Psychology (SIOP)</link> website—a professional organization for people working in the discipline. This site also offers several I-O psychologist profiles.</para></note><section id="fs-idm233449840">
+<title>THE HISTORICAL DEVELOPMENT OF INDUSTRIAL AND ORGANIZATIONAL PSYCHOLOGY</title>
+<para id="fs-idm47074704">Industrial and organizational psychology had its origins in the early 20th century. Several influential early psychologists studied issues that today would be categorized as industrial psychology: James Cattell (1860–1944) at Columbia, Hugo Münsterberg (1863–1916) at Harvard, Walter Dill Scott (1869–1955) at Northwestern, Robert Yerkes (1876–1956) and Walter Bingham (1880–1952) at Dartmouth, and Lillian Gilbreth (1878–1972) at Purdue. Cattell, Münsterberg, and Scott had been students of Wilhelm Wundt, the father of experimental psychology. Some of these researchers had been involved in work in the area of industrial psychology before World War I. Cattell’s contribution to industrial psychology is largely reflected in his founding of a psychological consulting company, which is still operating today called the Psychological Corporation, and in the accomplishments of students at Columbia in the area of industrial psychology. In 1913, Münsterberg published <emphasis effect="italics">Psychology and Industrial Efficiency</emphasis>, which covered topics such as employee selection, employee training, and effective advertising.</para>
+<para id="fs-idm45531664"><term class="no-emphasis">Scott</term> was one of the first psychologists to apply psychology to advertising, management, and personnel selection. In 1903, Scott published two books: <emphasis effect="italics">The Theory of Advertising </emphasis>and <emphasis effect="italics">Psychology of Advertising</emphasis>. They are the first books to describe the use of psychology in the business world. By 1911 he published two more books, <emphasis effect="italics">Influencing Men in Business</emphasis> and <emphasis effect="italics">Increasing Human Efficiency in Business</emphasis>. In 1916 a newly formed division in the Carnegie Institute of Technology hired Scott to conduct applied research on employee selection (Katzell &amp; Austin, 1992).</para>
+<para id="fs-idm106215184">The focus of all this research was in what we now know as industrial psychology; it was only later in the century that the field of organizational psychology developed as an experimental science (Katzell &amp; Austin, 1992). In addition to their academic positions, these researchers also worked directly for businesses as consultants.</para>
+<para id="fs-idm81491040">The involvement of the United States in World War I in April 1917 catalyzed the participation in the military effort of psychologists working in this area. At that time Yerkes was the president of the 25-year-old <term class="no-emphasis">American Psychological Association (APA)</term>. The APA is a professional association in the United States for clinical and research psychologists. Today the APA performs a number of functions including holding conferences, accrediting university degree programs, and publishing scientific journals. Yerkes organized a group under the Surgeon General’s Office (SGO) that developed methods for screening and selecting enlisted men. They developed the Army Alpha test to measure mental abilities. The Army Beta test was a non-verbal form of the test that was administered to illiterate and non-English-speaking draftees. Scott and Bingham organized a group under the Adjutant General’s Office (AGO) with the goal to develop selection methods for officers. They created a catalogue of occupational needs for the Army, essentially a job-description system and a system of performance ratings and occupational skill tests for officers (Katzell &amp; Austin, 1992).</para>
+<para id="fs-idm28425424">After the war, work on personnel selection continued. For example, Millicent Pond, who received a PhD from Yale University, worked at several businesses and was director of employment test research at Scoville Manufacturing Company. She researched the selection of factory workers, comparing the results of pre-employment tests with various indicators of job performance. These studies were published in a series of research articles in the <emphasis effect="italics">Journal of Personnel Research</emphasis> in the late 1920s (Vinchur &amp; Koppes, 2014).</para>
+<para id="fs-idp60693392">From 1929 to 1932 Elton Mayo (1880–1949) and his colleagues began a series of studies at a plant near Chicago, Western Electric’s Hawthorne Works (<link target-id="CNX_Psych_13_01_Hawthorne"/>). This long-term project took industrial psychology beyond just employee selection and placement to a study of more complex problems of interpersonal relations, motivation, and organizational dynamics. These studies mark the origin of organizational psychology. They began as research into the effects of the physical work environment (e.g., level of lighting in a factory), but the researchers found that the psychological and social factors in the factory were of more interest than the physical factors. These studies also examined how human interaction factors, such as supervisorial style, enhanced or decreased productivity.</para> 
+<figure id="CNX_Psych_13_01_Hawthorne">
+<media id="fs-idm186925104" alt="An image of a factory complex with two functioning smokestacks and a number of buildings is shown.">
+<image mime-type="image/jpeg" src="CNX_Psych_13_01_Hawthorne.jpg"/>
+</media>
+<caption>Hawthorne Works provided the setting for several early I-O studies.</caption>
+</figure>
+<para id="fs-idm3327712">Analysis of the findings by later researchers led to the term the <term>Hawthorne effect</term>, which describes the increase in performance of individuals who are noticed, watched, and paid attention to by researchers or supervisors <link target-id="CNX_Psych_13_01_Employees"/>). What the original researchers found was that any change in a variable, such as lighting levels, led to an improvement in productivity; this was true even when the change was negative, such as a return to poor lighting. The effect faded when the attention faded (Roethlisberg &amp; Dickson, 1939). The Hawthorne-effect concept endures today as an important experimental consideration in many fields and a factor that has to be controlled for in an experiment. In other words, an experimental treatment of some kind may produce an effect simply because it involves greater attention of the researchers on the participants (McCarney et al., 2007).</para>
+<figure id="CNX_Psych_13_01_Employees">
+<media id="fs-idm37681008" alt="A photograph shows a warehouse full of people working with machines along assembly lines.">
+<image mime-type="image/jpeg" src="CNX_Psych_13_01_Employees.jpg"/>
+</media>
+<caption>Researchers discovered that employees performed better when researchers or supervisors observed and interacted with them, a dynamic termed the Hawthorne effect.</caption>
+</figure>
+<note id="fs-idm93710112" class="psychology link-to-learning"><label>Link to Learning</label>
+<media id="fs-idm112773408" alt="">
+<image mime-type="png" src="OSC_Interactive_150.png"/>
+</media>
+<para id="fs-idm60912896">Watch this <link url="http://openstaxcollege.org/l/ATT">video</link> to hear first-hand accounts of the original Hawthorne studies from those who participated in the research.</para> 
+</note><para id="fs-idm23731712">In the 1930s, researchers began to study employees’ feelings about their jobs. Kurt Lewin also conducted research on the effects of various leadership styles, team structure, and team dynamics (Katzell &amp; Austin, 1992). Lewin is considered the founder of social psychology and much of his work and that of his students produced results that had important influences in organizational psychology. Lewin and his students’ research included an important early study that used children to study the effect of leadership style on aggression, group dynamics, and satisfaction (Lewin, Lippitt, &amp; White, 1939). Lewin was also responsible for coining the term <emphasis effect="italics">group dynamics</emphasis>, and he was involved in studies of group interactions, cooperation, competition, and communication that bear on organizational psychology.</para>
+<para id="fs-idm151970688">Parallel to these studies in industrial and organizational psychology, the field of human factors psychology was also developing. Frederick <term class="no-emphasis">Taylor</term> was an engineer who saw that if one could redesign the workplace there would be an increase in both output for the company and wages for the workers. In 1911 he put forward his theory in a book titled, <emphasis effect="italics">The Principles of Scientific Management</emphasis> (<link target-id="CNX_Psych_13_01_Taylor"/>). His book examines management styles, personnel selection and training, as well as the work itself, using time and motion studies.</para> 
+<figure id="CNX_Psych_13_01_Taylor">
+<media id="fs-idm161960064" alt="Photograph A shows Frederick Taylor. Photograph B shows the cover of Taylor&#x2019;s book titled The Principles of Scientific Management. Across the top it reads &#x201C;The Principles of Scientific Management. Below that it says &#x201C;by Frederick Winslow Taylor, M.E., Sc.D. Past president of the American Society of Mechanical Engineers.&#x201D; Below that is a picture of a hand passing a torch to another hand, with foreign lettering behind. At the bottom it reads &#x201C;Harper and Brothers Publishers. New York and London. 1919.&#x201D; Photograph C shows a steam hammer.">
+<image mime-type="image/jpeg" src="CNX_Psych_13_01_Taylor.jpg"/>
+</media>
+<caption>(a) Frederick Taylor (1911) strived to engineer workplaces to increase productivity, based on the ideas he set forth in (b) his book, <emphasis effect="italics">The Principles of Scientific Management</emphasis>. (c) Taylor designed this steam hammer at the Midvale Steel Company. (credit c: modification of work by “Kheel Center, Cornell University”/Flickr)</caption>
+</figure>
+<para id="fs-idp30455440">One of the examples of Taylor’s theory in action involved workers handling heavy iron ingots. Taylor showed that the workers could be more productive by taking work rests. This method of rest increased worker productivity from 12.5 to 47.0 tons moved per day with less reported fatigue as well as increased wages for the workers who were paid by the ton. At the same time, the company’s cost was reduced from 9.2 cents to 3.9 cents per ton. Despite these increases in productivity, Taylor’s theory received a great deal of criticism at the time because it was believed that it would exploit workers and reduce the number of workers needed. Also controversial was the underlying concept that only a manager could determine the most efficient method of working, and that while at work, a worker was incapable of this. Taylor’s theory was underpinned by the notion that a worker was fundamentally lazy and the goal of Taylor’s scientific management approach was to maximize productivity without much concern for worker well-being. His approach was criticized by unions and those sympathetic to workers (Van De Water, 1997).</para> 
+<para id="fs-idm10577040"><term class="no-emphasis">Gilbreth</term> was another influential I-O psychologist who strove to find ways to increase productivity (<link target-id="CNX_Psych_13_01_Gilbreth"/>). Using time and motion studies, Gilbreth and her husband, Frank, worked to make workers more efficient by reducing the number of motions required to perform a task. She not only applied these methods to industry but also to the home, office, shops, and other areas. She investigated employee fatigue and time management stress and found many employees were motivated by money and job satisfaction. In 1914, Gilbreth wrote the book title, <emphasis effect="italics">The Psychology of Management: The Function of the Mind in Determining, Teaching, and Installing Methods of Least Waste</emphasis>, and she is known as the mother of modern management. Some of Gilbreth’s contributions are still in use today: you can thank her for the idea to put shelves inside on refrigerator doors, and she also came up with the concept of using a foot pedal to operate the lid of trash can (Gilbreth, 1914, 1998; Koppes, 1997; Lancaster, 2004). Gilbreth was the first woman to join the American Society of Mechanical Engineers in 1926, and in 1966 she was awarded the Hoover Medal of the American Society of Civil Engineers.</para>
+<para id="fs-idm51283456">Taylor and Gilbreth’s work improved productivity, but these innovations also improved the fit between technology and the human using it. The study of machine–human fit is known as ergonomics or human factors psychology.</para>
+<figure id="CNX_Psych_13_01_Gilbreth">
+<media id="fs-idm223420016" alt="Photograph A shows Lillian Gilbreth. Photograph B shows an open refrigerator with shelves inside and on the door. Photograph C shows a person stepping on a garbage can's foot-pedal, which causes the lid to open, and inserting garbage into the garbage can.">
+<image mime-type="image/jpeg" src="CNX_Psych_13_01_Gilbreth.jpg"/>
+</media>
+<caption>(a) Lillian Gilbreth studied efficiency improvements that were applicable in the workplace, home, and other areas. She is credited with the idea of (b) putting shelves on the inside of refrigerator doors and (c) foot-pedal-operated garbage cans. (credit b: modification of work by “Goedeker’s”/Flickr; credit c: modification of work by Kerry Ceszyk)</caption>
+</figure>
+</section>
+<section id="fs-idm76523824">
+<title>FROM WWII TO TODAY</title>
+<para id="fs-idm149941744">World War II also drove the expansion of industrial psychology. Bingham was hired as the chief psychologist for the War Department (now the Department of Defense) and developed new systems for job selection, classification, training, ad performance review, plus methods for team development, morale change, and attitude change  (Katzell &amp; Austin, 1992). Other countries, such as Canada and the United Kingdom, likewise saw growth in I-O psychology during World War II (McMillan, Stevens, &amp; Kelloway, 2009). In the years after the war, both industrial psychology and organizational psychology became areas of significant research effort. Concerns about the fairness of employment tests arose, and the ethnic and gender biases in various tests were evaluated with mixed results. In addition, a great deal of research went into studying job satisfaction and employee motivation (Katzell &amp; Austin, 1992). Today, I-O psychology is a diverse and deep field of research and practice, as you will learn about in the rest of this chapter. The <term class="no-emphasis">Society for Industrial and Organizational Psychology (SIOP)</term>, a division of the APA, lists 8,000 members (SIOP, 2014) and the Bureau of Labor Statistics—U.S. Department of Labor (2013) has projected this profession will have the greatest growth of all job classifications in the 20 years following 2012. On average, a person with a master’s degree in industrial-organizational psychology will earn over $80,000 a year, while someone with a doctorate will earn over $110,000 a year (Khanna, Medsker, &amp; Ginter, 2012).</para></section>
+<section id="fs-idm47944800" class="summary">
+<title>Summary</title>
+<para id="fs-idm53867856">The field of I-O psychology had its birth in industrial psychology and the use of psychological concepts to aid in personnel selection. However, with research such as the Hawthorne study, it was found that productivity was affected more by human interaction and not physical factors; the field of industrial psychology expanded to include organizational psychology. Both WWI and WWII had a strong influence on the development of an expansion of industrial psychology in the United States and elsewhere: The tasks the psychologists were assigned led to development of tests and research in how the psychological concepts could assist industry and other areas. This movement aided in expanding industrial psychology to include organizational psychology.</para>
+</section>
+<section id="fs-idm28914720" class="review-questions">
+<title>Review Questions</title>
+<exercise id="fs-idm14004480">
+<problem id="fs-idm153129936">
+<para id="fs-idm157594432">Who was the first psychologist to use psychology in advertising?</para>
+<list id="fs-idm147209776" list-type="enumerated" number-style="lower-alpha">
+<item>Hugo Münsterberg</item>
+<item>Elton Mayo</item>
+<item>Walter Dill Scott</item>
+<item>Walter Bingham</item>
+</list>
+</problem>
+<solution id="fs-idm60983888"><para id="fs-idm60903360">C</para></solution>
+</exercise>
+<exercise id="fs-idm136819632">
+<problem id="fs-idp1112784">
+<para id="fs-idm75850192">Which test designed for the Army was used for recruits who were not fluent in English?</para>
+<list id="fs-idm70303136" list-type="enumerated" number-style="lower-alpha">
+<item>Army Personality</item>
+<item>Army Alpha</item>
+<item>Army Beta</item>
+<item>Army Intelligence</item>
+</list>
+</problem>
+<solution id="fs-idm43857856"><para id="fs-idm129356496">C</para></solution>
+</exercise>
+<exercise id="fs-idm127451408">
+<problem id="fs-idm175562528">
+<para id="fs-idm98651200">Which area of I-O psychology measures job satisfaction?</para>
+<list id="fs-idm26310480" list-type="enumerated" number-style="lower-alpha">
+<item>industrial psychology</item>
+<item>organizational psychology</item>
+<item>human factors psychology</item>
+<item>advertising psychology</item>
+</list>
+</problem>
+<solution id="fs-idm186848848"><para id="fs-idm120617488">B</para></solution>
+</exercise>
+<exercise id="fs-idm147412752">
+<problem id="fs-idp10179968">
+<para id="fs-idm149292448">Which statement best describes the Hawthorne effect?</para>
+<list id="fs-idm120578560" list-type="enumerated" number-style="lower-alpha">
+<item>Giving workers rest periods seems like it should decrease productivity, but it actually increases productivity.</item>
+<item>Social relations among workers have a greater effect on productivity than physical environment.</item>
+<item>Changes in light levels improve working conditions and therefore increase productivity.</item>
+<item>The attention of researchers on subjects causes the effect the experimenter is looking for.</item>
+</list>
+</problem>
+<solution id="fs-idm72040560"><para id="fs-idm172392528">D</para></solution>
+</exercise>
+</section>
+<section id="fs-idp12591696" class="critical-thinking">
+<title>Critical Thinking Questions</title>
+<exercise id="fs-idm148516608">
+<problem id="fs-idm73407520"><para id="fs-idm185116384">What societal and management attitudes might have caused organizational psychology to develop later than industrial psychology?</para></problem>
+<solution id="fs-idm78062368"><para id="fs-idm135288528">Answers will vary. The student should allude to the fact that organizational psychology finds social relations of employees important and that historically workers were thought of more as individual machines rather than a social group.</para></solution>
+</exercise>
+<exercise id="fs-idm305051776">
+<problem id="fs-idm43888512"><para id="fs-idm159911600">Many of the examples of I-O psychology are applications to businesses. Name four different non-business contexts that I-O psychology could impact?</para></problem>
+<solution id="fs-idm113791088"><para id="fs-idm232706160">Answers will vary. The student should identify organizations that are dedicated to accomplishing specific tasks, in the general sense. Examples are hospitals, non-profit organizations, government agencies (including the military), law enforcement, universities, schools, and so on.</para></solution>
+</exercise>
+</section>
+<section id="fs-idm159729152" class="personal-application">
+<title>Personal Application Question</title>
+<exercise id="fs-idm13441296">
+<problem id="fs-idm45796400"><para id="fs-idm171692752">Which of the broad areas of I-O psychology interests you the most and why?</para></problem>
+</exercise>
+</section>
+
+</content>
+<glossary>
+<definition id="fs-idm173454784"><term>Hawthorne effect</term><meaning id="fs-idm78798208">increase in performance of individuals who are noticed, watched, and paid attention to by researchers or supervisors</meaning></definition>
+<definition id="fs-idm187654304"><term>human factors psychology</term><meaning id="fs-idm136021376">branch of psychology that studies how workers interact with the tools of work and how to design those tools to optimize workers’ productivity, safety, and health</meaning></definition>
+<definition id="fs-idm155158784"><term>industrial and organizational (I-O) psychology</term><meaning id="fs-idm171703168">field in psychology that applies scientific principles to the study of work and the workplace</meaning></definition>
+<definition id="fs-idm170512272"><term>industrial psychology</term><meaning id="fs-idm128265328">branch of psychology that studies job characteristics, applicant characteristics, and how to match them; also studies employee training and performance appraisal</meaning></definition>
+<definition id="fs-idm69802240"><term>organizational psychology</term><meaning id="fs-idm136020240">branch of psychology that studies the interactions between people working in organizations and the effects of those interactions on productivity</meaning></definition>
+</glossary>
+</document>

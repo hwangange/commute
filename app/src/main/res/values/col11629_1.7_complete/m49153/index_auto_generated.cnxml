@@ -1,0 +1,172 @@
+<?xml version="1.0"?>
+<document xmlns="http://cnx.rice.edu/cnxml" xmlns:md="http://cnx.rice.edu/mdml" xmlns:bib="http://bibtexml.sf.net/" xmlns:m="http://www.w3.org/1998/Math/MathML" xmlns:q="http://cnx.rice.edu/qml/1.0" id="new" cnxml-version="0.7" module-id="new">
+
+<title>Treatment Modalities</title>
+<metadata xmlns:md="http://cnx.rice.edu/mdml"
+          mdml-version="0.5">
+  <!-- WARNING! The 'metadata' section is read only. Do not edit below.
+       Changes to the metadata section in the source will not be saved. -->
+  <md:repository>http://legacy.cnx.org/content</md:repository>
+  <md:content-url>http://legacy.cnx.org/content/m49153/latest</md:content-url>
+  <md:content-id>m49153</md:content-id>
+  <md:title>Treatment Modalities</md:title>
+  <md:version>1.6</md:version>
+  <md:created>2014/02/13 07:07:45 -0600</md:created>
+  <md:revised>2014/12/22 15:28:11 -0600</md:revised>
+  <md:actors>
+    <md:organization userid="OpenStaxCollege">
+      <md:shortname>OpenStax</md:shortname>
+      <md:fullname>OpenStax</md:fullname>
+      <md:email>info@openstax.org</md:email>
+    </md:organization>
+    <md:person userid="OSCRiceUniversity">
+      <md:firstname>Rice</md:firstname>
+      <md:surname>University</md:surname>
+      <md:fullname>Rice University</md:fullname>
+      <md:email>info@openstaxcollege.org</md:email>
+    </md:person>
+    <md:person userid="cnxpsych">
+      <md:firstname>CNX</md:firstname>
+      <md:surname>Psychology</md:surname>
+      <md:fullname>OpenStax Psychology</md:fullname>
+      <md:email>info@openstaxcollege.org</md:email>
+    </md:person>
+  </md:actors>
+  <md:roles>
+    <md:role type="author">OpenStaxCollege</md:role>
+    <md:role type="maintainer">OpenStaxCollege cnxpsych</md:role>
+    <md:role type="licensor">OSCRiceUniversity</md:role>
+  </md:roles>
+  <md:license url="http://creativecommons.org/licenses/by/4.0/">Creative Commons Attribution License 4.0</md:license>
+  <!-- For information on license requirements for use or modification, see license url in the
+       above <md:license> element.
+       For information on formatting required attribution, see the URL:
+         CONTENT_URL/content_info#cnx_cite_header
+       where CONTENT_URL is the value provided above in the <md:content-url> element.
+  -->
+  <md:keywordlist>
+    <md:keyword>confidentiality</md:keyword>
+    <md:keyword>couples therapy</md:keyword>
+    <md:keyword>family therapy</md:keyword>
+    <md:keyword>group therapy</md:keyword>
+    <md:keyword>individual therapy</md:keyword>
+    <md:keyword>intake</md:keyword>
+    <md:keyword>modality</md:keyword>
+    <md:keyword>strategic family therapy</md:keyword>
+    <md:keyword>structural family therapy</md:keyword>
+  </md:keywordlist>
+  <md:subjectlist>
+    <md:subject>Social Sciences</md:subject>
+  </md:subjectlist>
+  <md:abstract>By the end of this section, you will be able to:
+<list>
+<item>Distinguish between the various modalities of treatment</item>
+<item>Discuss benefits of group therapy</item>
+</list></md:abstract>
+  <md:language>en</md:language>
+  <!-- WARNING! The 'metadata' section is read only. Do not edit above.
+       Changes to the metadata section in the source will not be saved. -->
+</metadata>
+
+<content>
+<para id="fs-idm38385040">Once a person seeks treatment, whether voluntarily or involuntarily, he has an <term>intake</term> done to assess his clinical needs. An intake is the therapist’s first meeting with the client. The therapist gathers specific information to address the client’s immediate needs, such as the presenting problem, the client’s support system, and insurance status. The therapist informs the client about confidentiality, fees, and what to expect in treatment. <term>Confidentiality</term> means the therapist cannot disclose confidential communications to any third party unless mandated or permitted by law to do so. During the intake, the therapist and client will work together to discuss treatment goals. Then a treatment plan will be formulated, usually with specific measurable objectives. Also, the therapist and client will discuss how treatment success will be measured and the estimated length of treatment. There are several different modalities of treatment (<link target-id="CNX_Psych_16_03_OneonOne"/>): Individual therapy, family therapy, couples therapy, and group therapy are the most common.</para>
+<figure id="CNX_Psych_16_03_OneonOne">
+<media id="fs-idm229083008" alt="Two photographs are shown. Photograph A depicts two people in conversation. Photograph B depicts a large group of people sitting in a circle on the beach.">
+<image mime-type="image/jpeg" src="CNX_Psych_16_03_OneonOne.jpg"/>
+</media>
+<caption>Therapy may occur (a) one-on-one between a therapist and client, or (b) in a group setting. (credit a: modification of work by Connor Ashleigh, AusAID/Department of Foreign Affairs and Trade)</caption>
+</figure>
+<section id="fs-idm107115968">
+<title>INDIVIDUAL THERAPY</title>
+<para id="fs-idm188965440">In <term>individual therapy</term>, also known as individual psychotherapy or individual counseling, the client and clinician meet one-on-one (usually from 45 minutes to 1 hour). These meetings typically occur weekly or every other week, and sessions are conducted in a confidential and caring environment (<link target-id="CNX_Psych_16_03_HandHead"/>). The clinician will work with clients to help them explore their feelings, work through life challenges, identify aspects of themselves and their lives that they wish to change, and set goals to help them work towards these changes. A client might see a clinician for only a few sessions, or the client may attend individual therapy sessions for a year or longer. The amount of time spent in therapy depends on the needs of the client as well as her personal goals.</para>
+<figure id="CNX_Psych_16_03_HandHead">
+<media id="fs-idm84031408" alt="A photograph depicting a woman in a therapy session with her therapist is shown.">
+<image mime-type="image/jpeg" src="CNX_Psych_16_03_HandHead.jpg"/>
+</media>
+<caption>In an individual therapy session, a client works one-on-one with a trained therapist. (credit: Alan Cleaver)</caption>
+</figure>
+</section>
+<section id="fs-idm91465696">
+<title>GROUP THERAPY</title>
+<para id="fs-idm122967136">In <term>group therapy</term>, a clinician meets together with several clients with similar problems (<link target-id="CNX_Psych_16_03_Group"/>). When children are placed in group therapy, it is particularly important to match clients for age and problems. One benefit of group therapy is that it can help decrease a client’s shame and isolation about a problem while offering needed support, both from the therapist and other members of the group (American Psychological Association, 2014). A nine-year-old sexual abuse victim, for example, may feel very embarrassed and ashamed. If he is placed in a group with other sexually abused boys, he will realize that he is not alone. A child struggling with poor social skills would likely benefit from a group with a specific curriculum to foster special skills. A woman suffering from post-partum depression could feel less guilty and more supported by being in a group with similar women.</para>
+<para id="fs-idm167732176">Group therapy also has some specific limitations. Members of the group may be afraid to speak in front of other people because sharing secrets and problems with complete strangers can be stressful and overwhelming. There may be personality clashes and arguments among group members. There could also be concerns about confidentiality: Someone from the group might share what another participant said to people outside of the group.</para>
+<figure id="CNX_Psych_16_03_Group"><media id="fs-idm92928896" alt="A group of people arranged in a circle having a conversation is shown.">
+<image mime-type="image/jpeg" src="CNX_Psych_16_03_Groupn.jpg"/>
+</media>
+
+<caption>In group therapy, usually 5–10 people meet with a trained therapist to discuss a common issue such as divorce, grief, an eating disorder, substance abuse, or anger management. (credit: Cory Zanker)</caption></figure><para id="fs-idm192167200">Another benefit of group therapy is that members can confront each other about their patterns. For those with some types of problems, such as sexual abusers, group therapy is the recommended treatment. Group treatment for this population is considered to have several benefits:</para> 
+<para id="fs-idm11379360"><quote id="eip-idp168736" display="block">Group treatment is more economical than individual, couples, or family therapy. Sexual abusers often feel more comfortable admitting and discussing their offenses in a treatment group where others are modeling openness. Clients often accept feedback about their behavior more willingly from other group members than from therapists. Finally, clients can practice social skills in group treatment settings. (McGrath, Cumming, Burchard, Zeoli, &amp; Ellerby, 2009)</quote></para><para id="fs-idm45049776">Groups that have a strong educational component are called psycho-educational groups. For example, a group for children whose parents have cancer might discuss in depth what cancer is, types of treatment for cancer, and the side effects of treatments, such as hair loss. Often, group therapy sessions with children take place in school. They are led by a school counselor, a school psychologist, or a school social worker. Groups might focus on test anxiety, social isolation, self-esteem, bullying, or school failure (Shechtman, 2002). Whether the group is held in school or in a clinician’s office, group therapy has been found to be effective with children facing numerous kinds of challenges (Shechtman, 2002).</para>
+<para id="fs-idm37368992">During a group session, the entire group could reflect on an individual’s problem or difficulties, and others might disclose what they have done in that situation. When a clinician is facilitating a group, the focus is always on making sure that everyone benefits and participates in the group and that no one person is the focus of the entire session. Groups can be organized in various ways: some have an overarching theme or purpose, some are time-limited, some have open membership that allows people to come and go, and some are closed. Some groups are structured with planned activities and goals, while others are unstructured: There is no specific plan, and group members themselves decide how the group will spend its time and on what goals it will focus. This can become a complex and emotionally charged process, but it is also an opportunity for personal growth (Page &amp; Berkow, 1994).</para>
+</section>
+<section id="fs-idm179627744">
+<title>COUPLES THERAPY</title>
+<para id="fs-idm37369776"><term>Couples therapy</term> involves two people in an intimate relationship who are having difficulties and are trying to resolve them (<link target-id="CNX_Psych_16_02_Cognitive"/>). The couple may be dating, partnered, engaged, or married. The primary therapeutic orientation used in couples counseling is cognitive-behavioral therapy (Rathus &amp; Sanderson, 1999). Couples meet with a therapist to discuss conflicts and/or aspects of their relationship that they want to change. The therapist helps them see how their individual backgrounds, beliefs, and actions are affecting their relationship. Often, a therapist tries to help the couple resolve these problems, as well as implement strategies that will lead to a healthier and happier relationship, such as how to listen, how to argue, and how to express feelings. However, sometimes, after working with a therapist, a couple will realize that they are too incompatible and will decide to separate. Some couples seek therapy to work out their problems, while others attend therapy to determine whether staying together is the best solution. Counseling couples in a high-conflict and volatile relationship can be difficult. In fact, psychologists Peter Pearson and Ellyn Bader, who founded the Couples Institute in Palo Alto, California, have compared the experience of the clinician in couples’ therapy to be like “piloting a helicopter in a hurricane” (Weil, 2012, para. 7).</para><figure id="CNX_Psych_16_02_Cognitive">
+<media id="fs-idm137002592" alt="A photograph shows two people talking to a third person.">
+<image mime-type="image/jpeg" src="CNX_Psych_16_03_Couple.jpg"/>
+</media>
+<caption>In couples counseling, a therapist helps people work on their relationship. (credit: Cory Zanker)</caption>
+</figure> 
+</section>
+<section id="fs-idp4488464">
+<title>FAMILY THERAPY</title>
+<para id="fs-idm92503904"><term>Family therapy</term> is a special form of group therapy, consisting of one or more families. Although there are many theoretical orientations in family therapy, one of the most predominant is the systems approach. The family is viewed as an organized system, and each individual within the family is a contributing member who creates and maintains processes within the system that shape behavior (Minuchin, 1985). Each member of the family influences and is influenced by the others. The goal of this approach is to enhance the growth of each family member as well as that of the family as a whole.</para>
+<para id="fs-idm60534144">Often, dysfunctional patterns of communication that develop between family members can lead to conflict. A family with this dynamic might wish to attend therapy together rather than individually. In many cases, one member of the family has problems that detrimentally affect everyone. For example, a mother’s depression, teen daughter’s eating disorder, or father’s alcohol dependence could affect all members of the family. The therapist would work with all members of the family to help them cope with the issue, and to encourage resolution and growth in the case of the individual family member with the problem.</para>
+<para id="fs-idm46678176">With family therapy, the nuclear family (i.e., parents and children) or the nuclear family plus whoever lives in the household (e.g., grandparent) come into treatment. Family therapists work with the whole family unit to heal the family. There are several different types of family therapy. In <term>structural family therapy</term>, the therapist examines and discusses the boundaries and structure of the family: who makes the rules, who sleeps in the bed with whom, how decisions are made, and what are the boundaries within the family. In some families, the parents do not work together to make rules, or one parent may undermine the other, leading the children to act out. The therapist helps them resolve these issues and learn to communicate more effectively.</para> 
+<note id="fs-idm6211696" class="psychology link-to-learning"><label>Link to Learning</label>
+<media id="fs-idm173491088" alt="">
+<image mime-type="png" src="OSC_Interactive_150.png"/>
+</media>
+<para id="fs-idm127045136">Watch this <link url="http://openstaxcollege.org/l/Sfamily">video</link> to view a structural family session.</para>
+</note><para id="fs-idm33526032">In <term>strategic family therapy</term>, the goal is to address specific problems within the family that can be dealt with in a relatively short amount of time. Typically, the therapist would guide what happens in the therapy session and design a detailed approach to resolving each member’s problem (Madanes, 1991).</para>
+</section>
+<section id="fs-idm146412176" class="summary">
+<title>Summary</title>
+<para id="fs-idm23471376">There are several modalities of treatment: individual therapy, group therapy, couples therapy, and family therapy are the most common. In an individual therapy session, a client works one-on-one with a trained therapist. In group therapy, usually 5–10 people meet with a trained group therapist to discuss a common issue (e.g., divorce, grief, eating disorders, substance abuse, or anger management). Couples therapy involves two people in an intimate relationship who are having difficulties and are trying to resolve them. The couple may be dating, partnered, engaged, or married. The therapist helps them resolve their problems as well as implement strategies that will lead to a healthier and happier relationship. Family therapy is a special form of group therapy. The therapy group is made up of one or more families. The goal of this approach is to enhance the growth of each individual family member and the family as a whole.</para>
+</section>
+<section id="fs-idm172726304" class="review-questions">
+<title>Review Questions</title>
+<exercise id="fs-idm161631280">
+<problem id="fs-idm32996992">
+<para id="fs-idm10090576">A treatment modality in which 5–10 people with the same issue or concern meet together with a trained clinician is known as ________.</para>
+<list id="fs-idm169626064" list-type="enumerated" number-style="lower-alpha"><item>family therapy</item>
+<item>couples therapy</item>
+<item>group therapy</item>
+<item>self-help group</item>
+</list></problem>
+<solution id="fs-idp14880208"><para id="fs-idm124923504">C</para></solution>
+</exercise>
+<exercise id="fs-idm109208208">
+<problem id="fs-idm34833072">
+<para id="fs-idm234202096">What happens during an intake?</para>
+<list id="fs-idm124891536" list-type="enumerated" number-style="lower-alpha"><item>The therapist gathers specific information to address the client’s immediate needs such as the presenting problem, the client’s support system, and insurance status. The therapist informs the client about confidentiality, fees, and what to expect in a therapy session.</item>
+<item>The therapist guides what happens in the therapy session and designs a detailed approach to resolving each member’s presenting problem.</item>
+<item>The therapist meets with a couple to help them see how their individual backgrounds, beliefs, and actions are affecting their relationship.</item>
+<item>The therapist examines and discusses with the family the boundaries and structure of the family: For example, who makes the rules, who sleeps in the bed with whom, and how decisions are made.</item>
+</list></problem>
+<solution id="fs-idm93619600"><para id="fs-idm203045168">A</para></solution>
+</exercise>
+</section>
+<section id="fs-idm91438624" class="critical-thinking">
+<title>Critical Thinking Question</title>
+<exercise id="fs-idm108305488">
+<problem id="fs-idm96930080"><para id="fs-idm136650352">Compare and contrast individual and group therapies.</para></problem>
+<solution id="fs-idm48178688"><para id="fs-idm132525648">In an individual therapy session, a client works one-on-one with a trained therapist. In group therapy, usually 5–10 people meet with a trained group therapist to discuss a common issue, such as divorce, grief, eating disorder, substance abuse, or anger management.</para></solution>
+</exercise>
+</section>
+<section id="fs-idm16424720" class="personal-application">
+<title>Personal Application</title>
+<exercise id="fs-idp13199488"><problem id="fs-idm157115744"><para id="fs-idm196586544">Your best friend tells you that she is concerned about her cousin. The cousin—a teenage girl—is constantly coming home after her curfew, and your friend suspects that she has been drinking. What treatment modality would you recommend to your friend and why?</para></problem></exercise>
+</section>
+
+</content>
+<glossary>
+<definition id="fs-idm166362864"><term>confidentiality</term><meaning id="fs-idm200525152">therapist cannot disclose confidential communications to any third party, unless mandated or permitted by law</meaning></definition>
+<definition id="fs-idm163779184"><term>couples therapy</term><meaning id="fs-idm133670192">two people in an intimate relationship, such as husband and wife, who are having difficulties and are trying to resolve them with therapy</meaning></definition>
+<definition id="fs-idm158882752"><term>family therapy</term><meaning id="fs-idm23500688">special form of group therapy consisting of one or more families</meaning></definition>
+<definition id="fs-idm166388912"><term>group therapy</term><meaning id="fs-idm92247600">treatment modality in which 5–10 people with the same issue or concern meet together with a trained clinician</meaning></definition>
+<definition id="fs-idm188563968"><term>individual therapy</term><meaning id="fs-idm169491040">treatment modality in which the client and clinician meet one-on-one</meaning></definition>
+<definition id="fs-idm86137248"><term>intake</term><meaning id="fs-idm192187696">therapist’s first meeting with the client in which the therapist gathers specific information to address the client’s immediate needs</meaning></definition>
+<definition id="fs-idm92679504"><term>strategic family therapy</term><meaning id="fs-idm159026720">therapist guides the therapy sessions and develops treatment plans for each family member for specific problems that can addressed in a short amount of time</meaning></definition>
+<definition id="fs-idm53428592"><term>structural family therapy</term><meaning id="fs-idm168456304">therapist examines and discusses with the family the boundaries and structure of the family: who makes the rules, who sleeps in the bed with whom, how decisions are made, and what are the boundaries within the family</meaning></definition>
+</glossary>
+</document>

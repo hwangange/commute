@@ -1,0 +1,146 @@
+<?xml version="1.0"?>
+<document xmlns="http://cnx.rice.edu/cnxml" xmlns:md="http://cnx.rice.edu/mdml" xmlns:bib="http://bibtexml.sf.net/" xmlns:m="http://www.w3.org/1998/Math/MathML" xmlns:q="http://cnx.rice.edu/qml/1.0" id="new" cnxml-version="0.7" module-id="new">
+
+<title>Death and Dying</title>
+<metadata xmlns:md="http://cnx.rice.edu/mdml"
+          mdml-version="0.5">
+  <!-- WARNING! The 'metadata' section is read only. Do not edit below.
+       Changes to the metadata section in the source will not be saved. -->
+  <md:repository>http://legacy.cnx.org/content</md:repository>
+  <md:content-url>http://legacy.cnx.org/content/m49114/latest</md:content-url>
+  <md:content-id>m49114</md:content-id>
+  <md:title>Death and Dying</md:title>
+  <md:version>1.5</md:version>
+  <md:created>2014/02/13 05:19:14 -0600</md:created>
+  <md:revised>2014/12/16 16:56:37 -0600</md:revised>
+  <md:actors>
+    <md:organization userid="OpenStaxCollege">
+      <md:shortname>OpenStax</md:shortname>
+      <md:fullname>OpenStax</md:fullname>
+      <md:email>info@openstax.org</md:email>
+    </md:organization>
+    <md:person userid="OSCRiceUniversity">
+      <md:firstname>Rice</md:firstname>
+      <md:surname>University</md:surname>
+      <md:fullname>Rice University</md:fullname>
+      <md:email>info@openstaxcollege.org</md:email>
+    </md:person>
+    <md:person userid="cnxpsych">
+      <md:firstname>CNX</md:firstname>
+      <md:surname>Psychology</md:surname>
+      <md:fullname>OpenStax Psychology</md:fullname>
+      <md:email>info@openstaxcollege.org</md:email>
+    </md:person>
+  </md:actors>
+  <md:roles>
+    <md:role type="author">OpenStaxCollege</md:role>
+    <md:role type="maintainer">OpenStaxCollege cnxpsych</md:role>
+    <md:role type="licensor">OSCRiceUniversity</md:role>
+  </md:roles>
+  <md:license url="http://creativecommons.org/licenses/by/4.0/">Creative Commons Attribution License 4.0</md:license>
+  <!-- For information on license requirements for use or modification, see license url in the
+       above <md:license> element.
+       For information on formatting required attribution, see the URL:
+         CONTENT_URL/content_info#cnx_cite_header
+       where CONTENT_URL is the value provided above in the <md:content-url> element.
+  -->
+  <md:keywordlist>
+    <md:keyword>death</md:keyword>
+    <md:keyword>DNR</md:keyword>
+    <md:keyword>do not resuscitate</md:keyword>
+    <md:keyword>dying</md:keyword>
+    <md:keyword>hospice</md:keyword>
+  </md:keywordlist>
+  <md:subjectlist>
+    <md:subject>Social Sciences</md:subject>
+  </md:subjectlist>
+  <md:abstract>By the end of this section, you will be able to:
+<list>
+<item>Discuss hospice care</item>
+<item>Describe the five stages of grief</item>
+<item>Define living will and DNR</item>
+</list></md:abstract>
+  <md:language>en</md:language>
+  <!-- WARNING! The 'metadata' section is read only. Do not edit above.
+       Changes to the metadata section in the source will not be saved. -->
+</metadata>
+
+<content>
+  <para id="fs-idm9064048">Every story has an ending. Death marks the end of your life story (<link target-id="Figure_09_05_Cemetery"/>). Our culture and individual backgrounds influence how we view death. In some cultures, death is accepted as a natural part of life and is embraced. In contrast, until about 50 years ago in the United States, a doctor might not inform someone that they were dying, and the majority of deaths occurred in hospitals. In 1967 that reality began to change with Cicely Saunders, who created the first modern <term>hospice</term> in England. The aim of hospice is to help provide a death with dignity and pain management in a humane and comfortable environment, which is usually outside of a hospital setting. In 1974, Florence Wald founded the first hospice in the United States. Today, hospice provides care for 1.65 million Americans and their families. Because of hospice care, many terminally ill people are able to spend their last days at home.</para> 
+<figure id="Figure_09_05_Cemetery"><media id="fs-idm40455232" alt="A cemetery with many gravestones among the grass and trees is shown.">
+<image mime-type="image/jpeg" src="CNX_Psych_09_05_Cemetery.jpg"/>
+</media>
+
+<caption>In some cultures, people’s bodies may be buried in a cemetery after death. (credit: Christina Rutz)</caption></figure><para id="fs-idm49531696">Research has indicated that hospice care is beneficial for the patient (Brumley, Enquidanos, &amp; Cherin, 2003; Brumley et al., 2007; Godkin, Krant, &amp; Doster, 1984) and for the patient’s family (Rhodes, Mitchell, Miller, Connor, &amp; Teno, 2008; Godkin et al., 1984). Hospice patients report high levels of satisfaction with hospice care because they are able to remain at home and are not completely dependent on strangers for care (Brumley et al., 2007). In addition, hospice patients tend to live longer than non-hospice patients (Connor, Pyenson, Fitch, Spence, &amp; Iwasaki, 2007; Temel et al., 2010). Family members receive emotional support and are regularly informed of their loved one’s treatment and condition. The family member’s burden of care is also reduced (McMillan et al., 2006). Both the patient and the patient’s family members report increased family support, increased social support, and improved coping while receiving hospice services (Godkin et al., 1984).</para> 
+<para id="fs-idm12082480">How do you think you might react if you were diagnosed with a terminal illness like cancer? Elizabeth Kübler-Ross (1969), who worked with the founders of hospice care, described the process of an individual accepting his own death. She proposed five stages of grief: denial, anger, bargaining, depression, and acceptance. Most individuals experience these stages, but the stages may occur in different orders, depending on the individual. In addition, not all people experience all of the stages. It is also important to note that some psychologists believe that the more a dying person fights death, the more likely he is to remain stuck in the denial phase. This could make it difficult for the dying person to face death with dignity. However, other psychologists believe that not facing death until the very end is an adaptive coping mechanism for some people.</para>
+<para id="fs-idp10571072">Whether due to illness or old age, not everyone facing death or the loss of a loved one experiences the negative emotions outlined in the Kübler-Ross model (Nolen-Hoeksema &amp; Larson, 1999). For example, research suggests that people with religious or spiritual beliefs are better able to cope with death because of their hope in an afterlife and because of social support from religious or spiritual associations (Hood, Spilka, Hunsberger, &amp; Corsuch, 1996; McIntosh, Silver, &amp; Wortman, 1993; Paloutzian, 1996; Samarel, 1991; Wortman &amp; Park, 2008).</para> 
+<para id="fs-idm23646528">A prominent example of a person creating meaning through death is Randy Pausch, who was a well-loved and respected professor at Carnegie Mellon University. Diagnosed with terminal pancreatic cancer in his mid-40s and given only 3–6 months to live, Pausch focused on living in a fulfilling way in the time he had left. Instead of becoming angry and depressed, he presented his now famous last lecture called “Really Achieving Your Childhood Dreams.” In his moving, yet humorous talk, he shares his insights on seeing the good in others, overcoming obstacles, and experiencing zero gravity, among many other things. Despite his terminal diagnosis, Pausch lived the final year of his life with joy and hope, showing us that our plans for the future still matter, even if we know that we are dying.</para>
+
+<note id="fs-idm35072512" class="psychology link-to-learning"><label>Link to Learning</label>
+<media id="fs-idm139091488" alt="">
+<image mime-type="png" src="OSC_Interactive_150.png"/>
+</media>
+<para id="fs-idm144698912"><link url="http://openstaxcollege.org/l/lastlecture"><emphasis effect="italics">Really Achieving Your Childhood Dreams</emphasis></link> is Randy Pausch’s last lecture. Listen to his inspiring talk.</para>
+</note><section id="fs-idp17484640" class="summary">
+<title>Summary</title>
+<para id="fs-idm38651232">Death marks the endpoint of our lifespan. There are many ways that we might react when facing death. Kübler-Ross developed a five-stage model of grief as a way to explain this process. Many people facing death choose hospice care, which allows their last days to be spent at home in a comfortable, supportive environment.</para>
+</section>
+
+<section id="fs-idm115883904" class="review-questions">
+<title>Review Questions</title>
+<exercise id="fs-idp45427200">
+<problem id="fs-idm94275952">
+<para id="fs-idm136157184">Who created the very first modern hospice?</para>
+<list id="fs-idm119758208" list-type="enumerated" number-style="lower-alpha">
+<item>Elizabeth Kübler-Ross</item>
+<item>Cicely Saunders</item>
+<item>Florence Wald</item>
+<item>Florence Nightingale</item>
+</list>
+</problem>
+<solution id="fs-idm19704368"><para id="fs-idm63699696">B</para></solution>
+</exercise>
+
+<exercise id="fs-idp4726576">
+<problem id="fs-idm37357280">
+<para id="fs-idp20230992">Which of the following is the order of stages in Kübler-Ross’s five-stage model of grief?</para>
+<list id="fs-idm18755392" list-type="enumerated" number-style="lower-alpha">
+<item>denial, bargaining, anger, depression, acceptance</item>
+<item>anger, depression, bargaining, acceptance, denial</item>
+<item>denial, anger, bargaining, depression, acceptance</item>
+<item>anger, acceptance, denial, depression, bargaining</item>
+</list>
+</problem>
+<solution id="fs-idm38807280"><para id="fs-idm12119584">C</para></solution>
+</exercise>
+</section>
+
+<section id="fs-idp34337632" class="critical-thinking">
+<title>Critical Thinking Questions</title>
+<exercise id="fs-idm46748400">
+<problem id="fs-idm20386000"><para id="fs-idp20626272">Describe the five stages of grief and provide examples of how a person might react in each stage.</para></problem>
+<solution id="fs-idp13437552"><para id="fs-idm33306608">The first stage is denial. The person receives news that he is dying, and either does not take it seriously or tries to escape from the reality of the situation. He might say something like, “Cancer could never happen to me. I take good care of myself. This has to be a mistake.” The next stage is anger. He realizes time is short, and he may not have a chance to accomplish what he wanted in life. “It’s not fair. I promised my grandchildren that we would go to Disney World, and now I’ll never have the chance to take them.” The third stage is bargaining. In this stage, he tries to delay the inevitable by bargaining or pleading for extra time, usually with God, family members, or medical care providers. “God, just give me one more year so I can take that trip with my grandchildren. They’re too young to understand what’s happening and why I can’t take them.” The fourth stage is depression. He becomes sad about his impending death. “I can’t believe this is how I’m going to die. I’m in so much pain. What’s going to become of my family when I’m gone?” The final stage is acceptance. This stage is usually reached in the last few days or weeks before death. He recognizes that death is inevitable. “I need to get everything in order and say all of my good-byes to the people I love.”</para></solution>
+</exercise>
+
+<exercise id="fs-idm41712544">
+<problem id="fs-idm98143232"><para id="fs-idp4509216">What is the purpose of hospice care?</para></problem>
+<solution id="fs-idm110145984"><para id="fs-idm125811824">Hospice is a program of services that provide medical, social, and spiritual support for dying people and their families.</para></solution>
+</exercise>
+
+</section>
+
+<section id="fs-idm97605568" class="personal-application">
+<title>Personal Application Questions</title>
+<exercise id="fs-idp37312384">
+<problem id="fs-idm132111632"><para id="fs-idp70481968">Have you ever had to cope with the loss of a loved one? If so, what concepts described in this section provide context that may help you understand your experience and process of grieving?</para></problem>
+</exercise>
+
+<exercise id="fs-idm41407888">
+<problem id="fs-idp41305200"><para id="fs-idm84467312">If you were diagnosed with a terminal illness would you choose hospice care or a traditional death in a hospital? Why?</para></problem>
+</exercise>
+
+</section>
+
+</content>
+<glossary><definition id="fs-idp51482704"><term>hospice </term><meaning id="fs-idm34630320">service that provides a death with dignity; pain management in a humane and comfortable environment; usually outside of a hospital setting</meaning></definition></glossary>
+</document>

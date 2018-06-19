@@ -1,0 +1,259 @@
+<?xml version="1.0"?>
+<document xmlns="http://cnx.rice.edu/cnxml" xmlns:md="http://cnx.rice.edu/mdml" xmlns:bib="http://bibtexml.sf.net/" xmlns:m="http://www.w3.org/1998/Math/MathML" xmlns:q="http://cnx.rice.edu/qml/1.0" id="new" cnxml-version="0.7" module-id="new">
+
+<title>Gestalt Principles of Perception</title>
+<metadata xmlns:md="http://cnx.rice.edu/mdml"
+          mdml-version="0.5">
+  <!-- WARNING! The 'metadata' section is read only. Do not edit below.
+       Changes to the metadata section in the source will not be saved. -->
+  <md:repository>http://legacy.cnx.org/content</md:repository>
+  <md:content-url>http://legacy.cnx.org/content/m49045/latest/</md:content-url>
+  <md:content-id>m49045</md:content-id>
+  <md:title>Gestalt Principles of Perception</md:title>
+  <md:version>1.5</md:version>
+  <md:created>2014/02/12 09:37:47 -0600</md:created>
+  <md:revised>2014/12/16 15:10:01.607 US/Central</md:revised>
+  <md:actors>
+    <md:organization userid="OpenStaxCollege">
+      <md:shortname>OpenStax College</md:shortname>
+      <md:fullname>OpenStax College</md:fullname>
+      <md:email>info@openstaxcollege.org</md:email>
+    </md:organization>
+    <md:person userid="OSCRiceUniversity">
+      <md:firstname>Rice</md:firstname>
+      <md:surname>University</md:surname>
+      <md:fullname>Rice University</md:fullname>
+      <md:email>daniel@openstaxcollege.org</md:email>
+    </md:person>
+    <md:person userid="cnxpsych">
+      <md:firstname>CNX</md:firstname>
+      <md:surname>Psychology</md:surname>
+      <md:fullname>CNX Psychology</md:fullname>
+      <md:email>info@openstaxcollege.org</md:email>
+    </md:person>
+  </md:actors>
+  <md:roles>
+    <md:role type="author">OpenStaxCollege</md:role>
+    <md:role type="maintainer">OpenStaxCollege cnxpsych</md:role>
+    <md:role type="licensor">OSCRiceUniversity</md:role>
+  </md:roles>
+  <md:license url="http://creativecommons.org/licenses/by/4.0/">Creative Commons Attribution License 4.0</md:license>
+  <!-- For information on license requirements for use or modification, see license url in the
+       above <md:license> element.
+       For information on formatting required attribution, see the URL:
+         CONTENT_URL/content_info#cnx_cite_header
+       where CONTENT_URL is the value provided above in the <md:content-url> element.
+  -->
+  <md:keywordlist>
+    <md:keyword>closure</md:keyword>
+    <md:keyword>continuity</md:keyword>
+    <md:keyword>figure-ground relationship</md:keyword>
+    <md:keyword>Gestalt psychology</md:keyword>
+    <md:keyword>good continuation</md:keyword>
+    <md:keyword>pattern perception</md:keyword>
+    <md:keyword>perceptual hypotheses</md:keyword>
+    <md:keyword>principle of closure</md:keyword>
+    <md:keyword>proximity</md:keyword>
+    <md:keyword>similarity</md:keyword>
+  </md:keywordlist>
+  <md:subjectlist>
+    <md:subject>Social Sciences</md:subject>
+  </md:subjectlist>
+  <md:abstract>By the end of this section, you will be able to:
+<list>
+<item>Explain the figure-ground relationship</item>
+<item>Define Gestalt principles of grouping</item>
+<item>Describe how perceptual set is influenced by an individual’s characteristics and mental state</item>
+</list></md:abstract>
+  <md:language>en</md:language>
+  <!-- WARNING! The 'metadata' section is read only. Do not edit above.
+       Changes to the metadata section in the source will not be saved. -->
+</metadata>
+
+<content>
+  <para id="fs-idm46397072">In the early part of the 20th century, Max Wertheimer published a paper demonstrating that individuals perceived motion in rapidly flickering static images—an insight that came to him as he used a child’s toy tachistoscope. Wertheimer, and his assistants Wolfgang Köhler and Kurt Koffka, who later became his partners, believed that perception involved more than simply combining sensory stimuli. This belief led to a new movement within the field of psychology known as <term>Gestalt psychology</term>. The word <emphasis effect="italics">gestalt </emphasis>literally means form or pattern, but its use reflects the idea that the whole is different from the sum of its parts. In other words, the brain creates a perception that is more than simply the sum of available sensory inputs, and it does so in predictable ways. Gestalt psychologists translated these predictable ways into principles by which we organize sensory information. As a result, Gestalt psychology has been extremely influential in the area of sensation and perception (Rock &amp; Palmer, 1990).</para>
+  
+  <para id="fs-idp71230224">One Gestalt principle is the <term>figure-ground relationship</term>. According to this principle, we tend to segment our visual world into figure and ground. Figure is the object or person that is the focus of the visual field, while the ground is the background. As <link target-id="Figure_05_06_FacesVase"/> shows, our perception can vary tremendously, depending on what is perceived as figure and what is perceived as ground. Presumably, our ability to interpret sensory information depends on what we label as figure and what we label as ground in any particular case, although this assumption has been called into question (Peterson &amp; Gibson, 1994; Vecera &amp; O’Reilly, 1998).</para>
+  <figure id="Figure_05_06_FacesVase">
+    <media id="fs-idp66190096" alt="An illustration shows two identical black face-like shapes that face towards one another, and one white vase-like shape that occupies all of the space in between them. Depending on which part of the illustration is focused on, either the black shapes or the white shape may appear to be the object of the illustration, leaving the other(s) perceived as negative space.">
+      <image src="CNX_Psych_05_06_FacesVase.jpg" mime-type="image/jpg"/>
+    </media>
+    <caption>The concept of figure-ground relationship explains why this image can be perceived either as a vase or as a pair of faces.</caption>
+  </figure>
+  
+    
+  <para id="fs-idp18944608">Another Gestalt principle for organizing sensory stimuli into meaningful perception is <term>proximity</term>. This principle asserts that things that are close to one another tend to be grouped together, as <link target-id="Figure_05_06_Proximity"/> illustrates.</para>
+  <figure id="Figure_05_06_Proximity">
+    <media id="fs-idp59298832" alt="Illustration A shows thirty-six dots in six evenly-spaced rows and columns. Illustration B shows thirty-six dots in six evenly-spaced rows but with the columns separated into three sets of two columns.">
+      <image src="CNX_Psych_05_06_Proximity.jpg" mime-type="image/jpg"/>
+    </media>
+    <caption>The Gestalt principle of proximity suggests that you see (a) one block of dots on the left side and (b) three columns on the right side.</caption>
+  </figure>
+  
+  
+  <para id="fs-idp9751952">How we read something provides another illustration of the proximity concept. For example, we read this sentence like this, notl iket hiso rt hat. We group the letters of a given word together because there are no spaces between the letters, and we perceive words because there are spaces between each word. Here are some more examples: Cany oum akes enseo ft hiss entence? What doth es e wor dsmea n?</para>
+  <para id="fs-idm14844416">We might also use the principle of <term>similarity</term> to group things in our visual fields. According to this principle, things that are alike tend to be grouped together (<link target-id="Figure_05_06_Similarity"/>). For example, when watching a football game, we tend to group individuals based on the colors of their uniforms. When watching an offensive drive, we can get a sense of the two teams simply by grouping along this dimension.</para>
+  <figure id="Figure_05_06_Similarity"><media id="fs-idp174529760" alt="An illustration shows six rows of six dots each. The rows of dots alternate between blue and white colored dots.">
+      <image src="CNX_Psych_05_06_Similarity.jpg" mime-type="image/jpg"/>
+    </media>
+    
+  <caption>When looking at this array of dots, we likely perceive alternating rows of colors. We are grouping these dots according to the principle of similarity.</caption></figure><para id="fs-idp105727920">Two additional Gestalt principles are the law of <term>continuity </term>(or <term>good continuation</term>) and <term>closure</term>. The law of continuity suggests that we are more likely to perceive continuous, smooth flowing lines rather than jagged, broken lines (<link target-id="Figure_05_06_Continuity"/>). The <term>principle of closure</term> states that we organize our perceptions into complete objects rather than as a series of parts (<link target-id="Figure_05_06_Closure"/>).</para> 
+  <figure id="Figure_05_06_Continuity">
+    <media id="fs-idp80182320" alt="An illustration shows two lines of diagonal dots that cross in the middle in the general shape of an &#x201C;X.&#x201D;">
+      <image src="CNX_Psych_05_06_Continuity.jpg" mime-type="image/jpg"/>
+    </media>
+    <caption>Good continuation would suggest that we are more likely to perceive this as two overlapping lines, rather than four lines meeting in the center.</caption>
+  </figure>
+  
+  
+  <figure id="Figure_05_06_Closure">
+    <media id="fs-idm6011520" alt="An illustration shows fragmented lines that would form a circle if they were connected. Another illustration shows fragmented lines that would form a square if they were connected.">
+      <image src="CNX_Psych_05_06_Closure.jpg" mime-type="image/jpg"/>
+    </media>
+    <caption>Closure suggests that we will perceive a complete circle and rectangle rather than a series of segments.</caption>
+  </figure>
+  
+  
+  <note id="fs-idp151698576" class="psychology link-to-learning"><label>Link To Learning</label>
+<media id="fs-idm55865584" alt="">
+       <image mime-type="png" src="OSC_Interactive_150.png"/>
+      </media>
+
+    <para id="fs-idm31841296">Watch this <link url="http://openstaxcollege.org/l/gestalt">video</link> showing real world illustrations of Gestalt principles.</para>
+  </note><para id="fs-idp9535152">According to Gestalt theorists, <term>pattern perception</term>, or our ability to discriminate among different figures and shapes, occurs by following the principles described above. You probably feel fairly certain that your perception accurately matches the real world, but this is not always the case. Our perceptions are based on <term>perceptual hypotheses</term>: educated guesses that we make while interpreting sensory information. These hypotheses are informed by a number of factors, including our personalities, experiences, and expectations. We use these hypotheses to generate our perceptual set. For instance, research has demonstrated that those who are given verbal priming produce a biased interpretation of complex ambiguous figures (Goolkasian &amp; Woodbury, 2010).</para>
+  
+  <note id="fs-idm59871472" class="psychology dig-deeper">
+    <label>Dig Deeper</label>
+    <title>The Depths of Perception: Bias, Prejudice, and Cultural Factors</title>
+    <para id="fs-idm31819776">In this chapter, you have learned that perception is a complex process. Built from sensations, but influenced by our own experiences, biases, prejudices, and <term class="no-emphasis">cultures</term>, perceptions can be very different from person to person. Research suggests that implicit racial <term class="no-emphasis">prejudice</term> and <term class="no-emphasis">stereotypes</term> affect perception. For instance, several studies have demonstrated that non-Black participants identify weapons faster and are more likely to identify non-weapons as weapons when the image of the weapon is paired with the image of a Black person (Payne, 2001; Payne, Shimizu, &amp; Jacoby, 2005). Furthermore, White individuals’ decisions to shoot an armed target in a video game is made more quickly when the target is Black (Correll, Park, Judd, &amp; Wittenbrink, 2002; Correll, Urland, &amp; Ito, 2006). This research is important, considering the number of very high-profile cases in the last few decades in which young Blacks were killed by people who claimed to believe that the unarmed individuals were armed and/or represented some threat to their personal safety.</para></note>
+  <section id="fs-idm17622032" class="summary">
+    <title>Summary</title>
+    <para id="fs-idm85565248">Gestalt theorists have been incredibly influential in the areas of sensation and perception. Gestalt principles such as figure-ground relationship, grouping by proximity or similarity, the law of good continuation, and closure are all used to help explain how we organize sensory information. Our perceptions are not infallible, and they can be influenced by bias, prejudice, and other factors.</para>
+  </section>
+  <section id="fs-idm22799328" class="review-questions">
+    <title>Review Questions</title>
+    <exercise id="fs-idm6246016">
+      <problem id="fs-idm15931008"><para id="fs-idm43142480">According to the principle of ________, objects that occur close to one another tend to be grouped together.</para>
+        <list id="fs-idm21052912" list-type="enumerated" number-style="lower-alpha">
+          <item>similarity</item>
+          <item>good continuation</item>
+          <item>proximity</item>
+          <item>closure</item>
+        </list>
+      </problem>
+      <solution id="fs-idm36124848"><para id="fs-idm26925840">C</para></solution>
+    </exercise>
+    
+    <exercise id="fs-idm10220304">
+      <problem id="fs-idm18309632"><para id="fs-idm39362848">Our tendency to perceive things as complete objects rather than as a series of parts is known as the principle of ________.</para>
+        <list id="fs-idm73617616" list-type="enumerated" number-style="lower-alpha">
+          <item>closure</item>
+          <item>good continuation</item>
+          <item>proximity</item>
+          <item>similarity</item>
+        </list>
+      </problem>
+      <solution id="fs-idp23841952"><para id="fs-idm24120864">A</para></solution>
+    </exercise>
+    
+    <exercise id="fs-idp12395808">
+      <problem id="fs-idm39908992"><para id="fs-idm19922560">According to the law of ________, we are more likely to perceive smoothly flowing lines rather than choppy or jagged lines.</para>
+        <list id="fs-idm22014640" list-type="enumerated" number-style="lower-alpha">
+          <item>closure</item>
+          <item>good continuation</item>
+          <item>proximity</item>
+          <item>similarity</item>
+        </list>
+      </problem>
+      <solution id="fs-idp36077904"><para id="fs-idp66396576">B</para></solution>
+    </exercise>
+    
+    <exercise id="fs-idm44658320">
+      <problem id="fs-idm92230528"><para id="fs-idp25518096">The main point of focus in a visual display is known as the ________.</para>
+        <list id="fs-idp171809616" list-type="enumerated" number-style="lower-alpha">
+          <item>closure</item>
+          <item>perceptual set</item>
+          <item>ground</item>
+          <item>figure</item>
+        </list>
+      </problem>
+      <solution id="fs-idp18865008"><para id="fs-idm21697712">D</para></solution>
+    </exercise>
+  </section>
+  
+  <section id="fs-idm19353216" class="critical-thinking">
+    <title>Critical Thinking Question</title>
+    <exercise id="fs-idp71782672">
+      <problem id="fs-idp13452960">
+        <para id="fs-idp19549248">The central tenet of Gestalt psychology is that the whole is different from the sum of its parts. What does this mean in the context of perception?</para>
+      </problem>
+      <solution id="fs-idm20980592">
+        <para id="fs-idm40608928">This means that perception cannot be understood completely simply by combining the parts. Rather, the relationship that exists among those parts (which would be established according to the principles described in this chapter) is important in organizing and interpreting sensory information into a perceptual set.</para>
+      </solution>
+    </exercise>  
+    
+    <exercise id="fs-idm31851488">
+      <problem id="fs-idm41730432">
+        <para id="fs-idm7940368">Take a look at the following figure. How might you influence whether people see a duck or a rabbit?</para>
+        <figure id="Figure_05_06_DuckRabbit">
+          <media id="fs-idp101137312" alt="A drawing appears to be a duck when viewed horizontally and a rabbit when viewed vertically.">
+            <image src="CNX_Psych_05_06_DuckRabbit.jpg" mime-type="image/jpg"/>
+          </media>
+          </figure>
+      </problem>
+      <solution id="fs-idp20364672">
+        <para id="fs-idp63992304">Playing on their expectations could be used to influence what they were most likely to see. For instance, telling a story about Peter Rabbit and then presenting this image would bias perception along rabbit lines.</para>
+      </solution>
+    </exercise>
+    
+   
+    
+  </section>
+  <section id="fs-idp20761808" class="personal-application">
+    <title>Personal Application Question</title>
+    <exercise id="fs-idp147994688">
+      <problem id="fs-idm36307456">
+        <para id="fs-idp60838928">Have you ever listened to a song on the radio and sung along only to find out later that you have been singing the wrong lyrics? Once you found the correct lyrics, did your perception of the song change?</para>
+      </problem>
+    </exercise>
+  </section>
+  
+ </content>
+<glossary>
+<definition id="fs-idp19002896">
+<term>closure</term>
+<meaning id="fs-idp20745376">organizing our perceptions into complete objects rather than as a series of parts</meaning>
+</definition>
+<definition id="fs-idm13977312">
+<term>figure-ground relationship</term>
+<meaning id="fs-idm39731776">segmenting our visual world into figure and ground</meaning>
+</definition>
+<definition id="fs-idm81335664">
+<term>Gestalt psychology</term>
+<meaning id="fs-idp63448880">field of psychology based on the idea that the whole is different from the sum of its parts</meaning>
+</definition>
+<definition id="fs-idm53830016">
+<term>good continuation</term>
+<meaning id="fs-idp25361552">(also, continuity) we are more likely to perceive continuous, smooth flowing lines rather than jagged, broken lines</meaning></definition>
+<definition id="fs-idm46804912">
+<term>pattern perception</term>
+<meaning id="fs-idp146851088">ability to discriminate among different figures and shapes</meaning>
+</definition>
+<definition id="fs-idm40257760">
+<term>perceptual hypothesis</term>
+<meaning id="fs-idm18987824">educated guess used to interpret sensory information</meaning>
+</definition>
+<definition id="fs-idm16148560">
+<term>principle of closure</term>
+<meaning id="fs-idp58962608">organize perceptions into complete objects rather than as a series of parts</meaning>
+</definition>
+<definition id="fs-idm34911616">
+<term>proximity</term>
+<meaning id="fs-idm3493024">things that are close to one another tend to be grouped together</meaning>
+</definition>
+<definition id="fs-idm45929168">
+<term>similarity</term>
+<meaning id="fs-idm87987744">things that are alike tend to be grouped together</meaning>
+</definition>
+</glossary>
+</document>

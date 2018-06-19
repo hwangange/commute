@@ -1,0 +1,382 @@
+<?xml version="1.0"?>
+<document xmlns="http://cnx.rice.edu/cnxml" xmlns:md="http://cnx.rice.edu/mdml" xmlns:bib="http://bibtexml.sf.net/" xmlns:m="http://www.w3.org/1998/Math/MathML" xmlns:q="http://cnx.rice.edu/qml/1.0" id="new" cnxml-version="0.7" module-id="new">
+
+<title>What Is Consciousness?</title>
+<metadata xmlns:md="http://cnx.rice.edu/mdml"
+          mdml-version="0.5">
+  <!-- WARNING! The 'metadata' section is read only. Do not edit below.
+       Changes to the metadata section in the source will not be saved. -->
+  <md:repository>https://legacy.cnx.org/content</md:repository>
+  <md:content-url>https://legacy.cnx.org/content/m49031/latest/</md:content-url>
+  <md:content-id>m49031</md:content-id>
+  <md:title>What Is Consciousness?</md:title>
+  <md:version>1.9</md:version>
+  <md:created>2014/02/12 07:45:21 -0600</md:created>
+  <md:revised>2018/02/28 11:11:06.465 US/Central</md:revised>
+  <md:actors>
+    <md:organization userid="OpenStaxCollege">
+      <md:shortname>OpenStax</md:shortname>
+      <md:fullname>OpenStax</md:fullname>
+      <md:email>info@openstax.org</md:email>
+    </md:organization>
+    <md:person userid="OSCRiceUniversity">
+      <md:firstname>Rice</md:firstname>
+      <md:surname>University</md:surname>
+      <md:fullname>Rice University</md:fullname>
+      <md:email>info@openstaxcollege.org</md:email>
+    </md:person>
+    <md:person userid="cnxpsych">
+      <md:firstname>CNX</md:firstname>
+      <md:surname>Psychology</md:surname>
+      <md:fullname>OpenStax Psychology</md:fullname>
+      <md:email>info@openstaxcollege.org</md:email>
+    </md:person>
+  </md:actors>
+  <md:roles>
+    <md:role type="author">OpenStaxCollege</md:role>
+    <md:role type="maintainer">OpenStaxCollege cnxpsych</md:role>
+    <md:role type="licensor">OSCRiceUniversity</md:role>
+  </md:roles>
+  <md:license url="http://creativecommons.org/licenses/by/4.0/">Creative Commons Attribution License 4.0</md:license>
+  <!-- For information on license requirements for use or modification, see license url in the
+       above <md:license> element.
+       For information on formatting required attribution, see the URL:
+         CONTENT_URL/content_info#cnx_cite_header
+       where CONTENT_URL is the value provided above in the <md:content-url> element.
+  -->
+  <md:keywordlist>
+    <md:keyword>biological rhythm</md:keyword>
+    <md:keyword>circadian rhythm</md:keyword>
+    <md:keyword>consciousness</md:keyword>
+    <md:keyword>homeostasis</md:keyword>
+    <md:keyword>hypnogram</md:keyword>
+    <md:keyword>insomnia</md:keyword>
+    <md:keyword>jet lag</md:keyword>
+    <md:keyword>melatonin</md:keyword>
+    <md:keyword>meta-analysis</md:keyword>
+    <md:keyword>pineal gland</md:keyword>
+    <md:keyword>rotating shift work</md:keyword>
+    <md:keyword>SCN</md:keyword>
+    <md:keyword>sleep</md:keyword>
+    <md:keyword>sleep debt</md:keyword>
+    <md:keyword>sleep deprivation</md:keyword>
+    <md:keyword>sleep regulation</md:keyword>
+    <md:keyword>suprachiasmatic nucleus</md:keyword>
+    <md:keyword>wakefulness</md:keyword>
+  </md:keywordlist>
+  <md:subjectlist>
+    <md:subject>Social Sciences</md:subject>
+  </md:subjectlist>
+  <md:abstract>By the end of this section, you will be able to:
+<list>
+<item>Understand what is meant by consciousness</item>
+<item>Explain how circadian rhythms are involved in regulating the sleep-wake cycle, and how circadian cycles can be disrupted</item>
+<item>Discuss the concept of sleep debt</item>
+</list></md:abstract>
+  <md:language>en</md:language>
+  <!-- WARNING! The 'metadata' section is read only. Do not edit above.
+       Changes to the metadata section in the source will not be saved. -->
+</metadata>
+
+<content>
+  <para id="fs-idm47110640"><term>Consciousness</term> describes our awareness of internal and external stimuli. Awareness of internal stimuli includes feeling pain, hunger, thirst, sleepiness, and being aware of our thoughts and emotions. Awareness of external stimuli includes seeing the light from the sun, feeling the warmth of a room, and hearing the voice of a friend.</para>
+  
+  <para id="fs-idm42122000">We experience different states of consciousness and different levels of awareness on a regular basis. We might even describe consciousness as a continuum that ranges from full awareness to a deep sleep. <term>Sleep</term> is a state marked by relatively low levels of physical activity and reduced sensory awareness that is distinct from periods of rest that occur during wakefulness. <term>Wakefulness</term> is characterized by high levels of sensory awareness, thought, and behavior. In between these extremes are states of consciousness related to daydreaming, intoxication as a result of alcohol or other drug use, meditative states, hypnotic states, and altered states of consciousness following sleep deprivation. We might also experience unconscious states of being via drug-induced anesthesia for medical purposes. Often, we are not completely aware of our surroundings, even when we are fully awake. For instance, have you ever daydreamed while driving home from work or school without really thinking about the drive itself? You were capable of engaging in the all of the complex tasks involved with operating a motor vehicle even though you were not aware of doing so. Many of these processes, like much of psychological behavior, are rooted in our biology.</para>
+  
+  <section id="fs-idm29007792">
+    <title>BIOLOGICAL RHYTHMS</title>
+    <para id="fs-idp44105008"><term>Biological rhythms</term> are internal rhythms of biological activity. A woman’s menstrual cycle is an example of a biological rhythm—a recurring, cyclical pattern of bodily changes. One complete menstrual cycle takes about 28 days—a lunar month—but many biological cycles are much shorter. For example, body temperature fluctuates cyclically over a 24-hour period (<link target-id="Figure_04_01_Rhythms"/>). Alertness is associated with higher body temperatures, and sleepiness with lower body temperatures.</para>
+    
+    <figure id="Figure_04_01_Rhythms"><media id="fs-idp71684752" alt="A line graph is titled &#x201C;Circadian Change in Body Temperature (Source: Waterhouse et al., 2012).&#x201D; The y-axis, is labeled &#x201C;temperature (degrees Fahrenheit),&#x201D; ranges from 97.2 to 99.3. The x-axis, which is labeled &#x201C;time,&#x201D; begins at 12:00 A.M. and ends at 4:00 A.M. the following day. The subjects slept from 12:00 A.M. until 8:00 A.M. during which time their average body temperatures dropped from around 98.8 degrees at midnight to 97.6 degrees at 4:00 A.M. and then gradually rose back to nearly the same starting temperature by 8:00 A.M. The average body temperature fluctuated slightly throughout the day with an upward tilt, until the next sleep cycle where the temperature again dropped. ">
+        <image src="CNX_Psych_04_01_Rhythmsn.jpg" mime-type="image/jpg"/>
+      </media>
+      
+    <caption>This chart illustrates the circadian change in body temperature over 28 hours in a group of eight young men. Body temperature rises throughout the waking day, peaking in the afternoon, and falls during sleep with the lowest point occurring during the very early morning hours. </caption></figure><para id="fs-idm34584048">This pattern of temperature fluctuation, which repeats every day, is one example of a circadian rhythm. A <term>circadian rhythm</term> is a biological rhythm that takes place over a period of about 24 hours. Our sleep-wake cycle, which is linked to our environment’s natural light-dark cycle, is perhaps the most obvious example of a circadian rhythm, but we also have daily fluctuations in heart rate, blood pressure, blood sugar, and body temperature. Some circadian rhythms play a role in changes in our state of consciousness.</para>
+    
+    <para id="fs-idm20651152">If we have biological rhythms, then is there some sort of <term class="no-emphasis">biological clock</term>? In the brain, the hypothalamus, which lies above the pituitary gland, is a main center of homeostasis. <term>Homeostasis</term> is the tendency to maintain a balance, or optimal level, within a biological system.</para>
+    
+    <para id="fs-idp25216784">The brain’s clock mechanism is located in an area of the hypothalamus known as the <term>suprachiasmatic nucleus (SCN)</term>. The axons of light-sensitive neurons in the retina provide information to the SCN based on the amount of light present, allowing this internal clock to be synchronized with the outside world (Klein, Moore, &amp; Reppert, 1991; Welsh, Takahashi, &amp; Kay, 2010) (<link target-id="Figure_04_01_SCN"/>).</para>
+
+    <figure id="Figure_04_01_SCN">
+      <media id="fs-idm19924576" alt="In this graphic, the outline of a person&#x2019;s head facing left is situated to the right of a picture of the sun, which is labeled &#x201D;light&#x201D; with an arrow pointing to a location in the brain where light input is processed. Inside the head is an illustration of a brain with the following parts&#x2019; locations identified: Suprachiasmatic nucleus (SCN), Hypothalamus, Pituitary gland, Pineal gland, and Output rhythms: Physiology and Behavior. ">
+        <image src="CNX_Psych_04_01_SCN.jpg" mime-type="image/jpg"/>
+      </media>
+      <caption>The suprachiasmatic nucleus (SCN) serves as the brain’s clock mechanism. The clock sets itself with light information received through projections from the retina.</caption>
+    </figure>
+  </section>
+
+  <section id="fs-idp26114320">
+    <title>PROBLEMS WITH CIRCADIAN RHYTHMS</title>
+    <para id="fs-idm54074304">Generally, and for most people, our circadian cycles are aligned with the outside world. For example, most people sleep during the night and are awake during the day. One important regulator of sleep-wake cycles is the hormone <term>melatonin</term>. The <term>pineal gland</term>, an endocrine structure located inside the brain that releases melatonin, is thought to be involved in the regulation of various biological rhythms and of the immune system during sleep (Hardeland, Pandi-Perumal, &amp; Cardinali, 2006). Melatonin release is stimulated by darkness and inhibited by light.</para>
+    
+    <para id="fs-idm4637104">There are individual differences with regards to our sleep-wake cycle. For instance, some people would say they are morning people, while others would consider themselves to be night owls. These individual differences in circadian patterns of activity are known as a person’s chronotype, and research demonstrates that morning larks and night owls differ with regard to sleep regulation (Taillard, Philip, Coste, Sagaspe, &amp; Bioulac, 2003). <term>Sleep regulation</term> refers to the brain’s control of switching between sleep and wakefulness as well as coordinating this cycle with the outside world.</para>
+    
+    <note id="fs-idm16509936" class="psychology link-to-learning"><label>Link to Learning</label>
+<media id="fs-idp41966160" alt=" ">
+       <image mime-type="png" src="OSC_Interactive_150.png"/>
+        </media>
+<para id="fs-idp30109728">Watch this brief <link url="http://openstaxcollege.org/l/circadian">video</link> describing circadian rhythms and how they affect sleep.</para>
+    </note><section id="fs-idm28705168">
+      <title>Disruptions of Normal Sleep</title>
+      <para id="fs-idm41606416">Whether lark, owl, or somewhere in between, there are situations in which a person’s circadian clock gets out of synchrony with the external environment. One way that this happens involves traveling across multiple time zones. When we do this, we often experience jet lag. <term>Jet lag</term> is a collection of symptoms that results from the mismatch between our internal circadian cycles and our environment. These symptoms include fatigue, sluggishness, irritability, and <term>insomnia</term> (i.e., a consistent difficulty in falling or staying asleep for at least three nights a week over a month’s time) (Roth, 2007).</para>
+      <para id="fs-idm48063792">Individuals who do rotating shift work are also likely to experience disruptions in circadian cycles. <term>Rotating shift work</term> refers to a work schedule that changes from early to late on a daily or weekly basis. For example, a person may work from 7:00 a.m. to 3:00 p.m. on Monday, 3:00 a.m. to 11:00 a.m. on Tuesday, and 11:00 a.m. to 7:00 p.m. on Wednesday. In such instances, the individual’s schedule changes so frequently that it becomes difficult for a normal circadian rhythm to be maintained. This often results in sleeping problems, and it can lead to signs of depression and anxiety. These kinds of schedules are common for individuals working in health care professions and service industries, and they are associated with persistent feelings of exhaustion and agitation that can make someone more prone to making mistakes on the job (Gold et al., 1992; Presser, 1995).</para>
+      <para id="fs-idm92675088">Rotating shift work has pervasive effects on the lives and experiences of individuals engaged in that kind of work, which is clearly illustrated in stories reported in a qualitative study that researched the experiences of middle-aged nurses who worked rotating shifts (West, Boughton &amp; Byrnes, 2009). Several of the nurses interviewed commented that their work schedules affected their relationships with their family. One of the nurses said, </para>
+      <quote id="fs-idm20662288">If you’ve had a partner who does work regular job 9 to 5 office hours . . . the ability to spend time, good time with them when you’re not feeling absolutely exhausted . . . that would be one of the problems that I’ve encountered. (West et al., 2009, p. 114) </quote>
+      <para id="fs-idm34106672">While disruptions in circadian rhythms can have negative consequences, there are things we can do to help us realign our biological clocks with the external environment. Some of these approaches, such as using a bright light as shown in <link target-id="Figure_04_01_BrightLight"/>, have been shown to alleviate some of the problems experienced by individuals suffering from jet lag or from the consequences of rotating shift work. Because the biological clock is driven by light, exposure to bright light during working shifts and dark exposure when not working can help combat insomnia and symptoms of anxiety and depression (Huang, Tsai, Chen, &amp; Hsu, 2013). </para>
+      
+      <figure id="Figure_04_01_BrightLight"><media id="fs-idp22555440" alt="A photograph shows a bright lamp.">
+          <image mime-type="image/jpg" src="CNX_Psych_04_01_Brightlight.jpg"/>
+        </media>
+        
+      <caption>Devices like this are designed to provide exposure to bright light to help people maintain a regular circadian cycle. They can be helpful for people working night shifts or for people affected by seasonal variations in light.</caption></figure><note id="fs-idm32516560" class="psychology link-to-learning"><label>Link to Learning</label>
+          <media id="fs-idm80335744" alt=" ">
+        <image mime-type="png" src="OSC_Interactive_150.png"/>
+          </media>
+        <para xmlns:data="http://www.w3.org/TR/html5/dom.html#custom-data-attribute" id="fs-idm32659936">Watch this <link url="https://www.youtube.com/watch?v=sbNkAcfNhh0">video</link> to hear tips on how to overcome jet lag.</para></note></section>
+    <section id="fs-idm40360640">
+      <title>Insufficient Sleep</title>
+      <para id="fs-idp54806272">When people have difficulty getting sleep due to their work or the demands of day-to-day life, they accumulate a sleep debt. A person with a <term>sleep debt</term> does not get sufficient sleep on a chronic basis. The consequences of sleep debt include decreased levels of alertness and mental efficiency. Interestingly, since the advent of electric light, the amount of sleep that people get has declined. While we certainly welcome the convenience of having the darkness lit up, we also suffer the consequences of reduced amounts of sleep because we are more active during the nighttime hours than our ancestors were. As a result, many of us sleep less than 7–8 hours a night and accrue a sleep debt. While there is tremendous variation in any given individual’s sleep needs, the National Sleep Foundation (n.d.) cites research to estimate that newborns require the most sleep (between 12 and 18 hours a night) and that this amount declines to just 7–9 hours by the time we are adults.</para>
+      <para xmlns:data="http://www.w3.org/TR/html5/dom.html#custom-data-attribute" id="fs-idp26164480">If you lie down to take a nap and fall asleep very easily, chances are you may have sleep debt. Given that college students are notorious for suffering from significant sleep debt (Hicks, Fernandez, &amp; Pelligrini, 2001; Hicks, Johnson, &amp; Pelligrini, 1992; Miller, Shattuck, &amp; Matsangas, 2010), chances are you and your classmates deal with sleep debt-related issues on a regular basis. In 2015, the National Sleep Foundation updated their sleep duration hours, to better accommodate individual differences. <link target-id="Table_04_01_01"/> shows the new recommendations, which describe sleep durations that are “recommended”, “may be appropriate”, and “not recommended”.</para><table xmlns:data="http://www.w3.org/TR/html5/dom.html#custom-data-attribute" id="Table_04_01_01" summary="This table has two columns and eight rows. The first row is a header row, and it labels the first column, &#x201C;age,&#x201D; and the second column &#x201C;nightly sleep needs.&#x201D; In the &#x201C;age&#x201D; column, the second row reads &#x201C;0&#x2013;3 months.&#x201D; In the &#x201C;nightly sleep needs&#x201D; column, the second row reads &#x201C;12&#x2013;18 hours.&#x201D; In the &#x201C;age&#x201D; column, the third row reads &#x201C;3 months&#x2013;1 year.&#x201D; In the &#x201C;nightly sleep needs&#x201D; column, the third row reads &#x201C;14&#x2013;15 hours.&#x201D; In the &#x201C;age&#x201D; column, the fourth row reads &#x201C;1&#x2013;3 years.&#x201D; In the &#x201C;nightly sleep needs&#x201D; column, the fourth row reads &#x201C;12&#x2013;14 hours.&#x201D; In the &#x201C;age&#x201D; column, the fifth row reads &#x201C;3&#x2013;5 years.&#x201D; In the &#x201C;nightly sleep needs&#x201D; column, the fifth row reads &#x201C;11&#x2013;13 hours.&#x201D; In the &#x201C;age&#x201D; column, the sixth row reads &#x201C;5&#x2013;10 years.&#x201D; In the &#x201C;nightly sleep needs&#x201D; column, the sixth row reads &#x201C;10&#x2013;11 hours.&#x201D; In the &#x201C;age&#x201D; column, the seventh row reads &#x201C;10&#x2013;18 years.&#x201D; In the &#x201C;nightly sleep needs&#x201D; column, the seventh row reads &#x201C;8&#x2013;10 hours.&#x201D; In the &#x201C;age&#x201D; column, the eighth row reads &#x201C;18 and older.&#x201D; In the &#x201C;nightly sleep needs&#x201D; column, the eighth row reads &#x201C;7&#x2013;9 hours.&#x201D;"><title>Sleep Needs at Different Ages</title>
+<tgroup cols="4"><thead>
+            <row>
+              <entry>Age</entry>
+              <entry>Recommended</entry>
+              <entry>May be appropriate</entry>
+              <entry>Not recommended</entry>
+            </row>
+          </thead>
+          <tbody>
+            <row>
+              <entry>0–3 months</entry>
+              <entry>14–17 hours</entry>
+              <entry>11–13 hours <newline/> 18–19 hours</entry>
+              <entry>Less than 11 hours <newline/> More than 19 hours</entry>
+  </row>
+            <row>
+              <entry>4–11 months</entry>
+              <entry>12–15 hours</entry>
+              <entry>10–11 hours <newline/> 16–18 hours</entry>
+              <entry>Less than 10 hours <newline/> More than 18 hours</entry>
+  </row>
+            <row>
+              <entry>1–2 years</entry>
+              <entry>11–14 hours</entry>
+              <entry>9–10 hours <newline/> 15–16 hours</entry>
+              <entry>Less than 9 hours <newline/> More than 16 hours</entry>
+  </row>
+            <row>
+              <entry>3–5 years</entry>
+              <entry>10–13 hours</entry>
+              <entry>8–9 hours <newline/> 14 hours</entry>
+              <entry>Less than 8 hours <newline/> More than 14 hours</entry>
+  </row>
+            <row>
+              <entry>6–13 years</entry>
+              <entry>9–11 hours</entry>
+              <entry>7–8 hours <newline/> 12 hours</entry>
+              <entry>Less than 7 hours <newline/> More than 12 hours</entry>
+  </row>
+            <row>
+              <entry>14–17 years</entry>
+              <entry>8–10 hours</entry>
+              <entry>7 hours <newline/> 11 hours</entry>
+              <entry>Less than 7 hours <newline/> More than 11 hours</entry>
+  </row>
+            <row>
+              <entry>18–25 years</entry>
+              <entry>7–9 hours</entry>
+              <entry>6 hours <newline/> 10–11 hours</entry>
+              <entry>Less than 6 hours <newline/> More than 11 hours</entry>
+  </row>
+            <row>
+              <entry>26–64 years</entry>
+              <entry>7–9 hours</entry>
+              <entry>6 hours <newline/> 10 hours</entry>
+              <entry>Less than 6 hours <newline/> More than 10 hours</entry>
+  </row>
+  <row>
+              <entry>≥65 years</entry>
+              <entry>7–8 hours</entry>
+              <entry>5–6 hours <newline/> 9 hours</entry>
+              <entry>Less than 5 hours <newline/> More than 9 hours</entry>
+  </row>
+</tbody>
+        
+
+
+
+</tgroup>
+</table><para xmlns:data="http://www.w3.org/TR/html5/dom.html#custom-data-attribute" id="fs-idp19885824">Sleep debt and sleep deprivation have significant negative psychological and physiological consequences <link target-id="Figure_04_01_Sleepless"/>. As mentioned earlier, lack of sleep can result in decreased mental alertness and cognitive function. In addition, sleep deprivation often results in depression-like symptoms. These effects can occur as a function of accumulated sleep debt or in response to more acute periods of sleep deprivation. It may surprise you to know that sleep deprivation is associated with obesity, increased blood pressure, increased levels of stress hormones, and reduced immune functioning (Banks &amp; Dinges, 2007). A sleep deprived individual generally will fall asleep more quickly than if she were not sleep deprived.  Some sleep-deprived individuals have difficulty staying awake when they stop moving (example sitting and watching television or driving a car). That is why individuals suffering from sleep deprivation can also put themselves and others at risk when they put themselves behind the wheel of a car or work with dangerous machinery. Some research suggests that sleep deprivation affects cognitive and motor function as much as, if not more than, alcohol intoxication (Williamson &amp; Feyer, 2000).</para><figure id="Figure_04_01_Sleepless">
+        <media id="fs-idm45314480" alt="An illustration of the top half of a human body identifies the locations in the body that correspond with various adverse affects of sleep deprivation. The brain is labeled with Irritability,&#x201D; &#x201C;Cognitive impairment,&#x201D; &#x201C;Memory lapses or loss,&#x201D; &#x201C;Impaired moral judgement,&#x201D; &#x201C;Severe yawning,&#x201D; &#x201C;Hallucinations,&#x201D; and &#x201C;Symptoms similar to ADHD.&#x201D; The heart is labeled with Increased heart rate variability and Risk of heart disease. The muscles are labeled with Increased reaction time, Decreased accuracy, Tremors, and Aches. There is an organ near the stomach labeled Risk of diabetes Type 2. Other risks include Growth suppression, Risk of obesity, Decreased temperature, and Impaired immune system.">
+          <image src="CNX_Psych_04_01_Sleepless.jpg" mime-type="image/jpg"/>
+        </media>
+        <caption>This figure illustrates some of the negative consequences of sleep deprivation. While cognitive deficits may be the most obvious, many body systems are negatively impacted by lack of sleep. (credit: modification of work by Mikael Häggström)</caption>
+      </figure>
+      
+      <note id="fs-idm44285824" class="psychology link-to-learning"><label>Link to Learning</label>
+          <media id="fs-idm107536112" alt=" ">
+       <image mime-type="png" src="OSC_Interactive_150.png"/>
+          </media>
+        <para id="fs-idm43401520">To assess your own sleeping habits, read this <link url="http://openstaxcollege.org/l/sleephabits">article</link> about sleep needs.</para>
+      </note><para id="fs-idm64851568">The amount of sleep we get varies across the lifespan. When we are very young, we spend up to 16 hours a day sleeping. As we grow older, we sleep less. In fact, a <term>meta-analysis</term>, which is a study that combines the results of many related studies, conducted within the last decade indicates that by the time we are 65 years old, we average fewer than 7 hours of sleep per day (Ohayon, Carskadon, Guilleminault, &amp; Vitiello, 2004). As the amount of time we sleep varies over our lifespan, presumably the sleep debt would adjust accordingly.</para>   
+        </section>
+  </section>
+
+  <section id="fs-idm70922672" class="summary">
+    <title>Summary</title>
+<para id="fs-idm77807808">States of consciousness vary over the course of the day and throughout our lives. Important factors in these changes are the biological rhythms, and, more specifically, the circadian rhythms generated by the suprachiasmatic nucleus (SCN). Typically, our biological clocks are aligned with our external environment, and light tends to be an important cue in setting this clock. When people travel across multiple time zones or work rotating shifts, they can experience disruptions of their circadian cycles that can lead to insomnia, sleepiness, and decreased alertness. Bright light therapy has shown to be promising in dealing with circadian disruptions. If people go extended periods of time without sleep, they will accrue a sleep debt and potentially experience a number of adverse psychological and physiological consequences.</para>
+  </section>
+
+  <section id="fs-idm11507936" class="review-questions">
+    <title>Review Questions</title>
+    <exercise id="fs-idm52639440">
+      <problem id="fs-idm17253760">
+        <para id="fs-idm64369616">The body’s biological clock is located in the ________.</para>
+        <list id="fs-idm68172832" list-type="enumerated" number-style="lower-alpha">
+          <item>hippocampus</item>
+          <item>thalamus</item>
+          <item>hypothalamus</item>
+          <item>pituitary gland</item>
+       </list>
+      </problem>
+      <solution id="fs-idm103301600">
+        <para id="fs-idm46496880">C</para></solution>
+    </exercise>
+    
+    <exercise id="fs-idm57322112">
+      <problem id="fs-idm153486640">
+       <para id="fs-idm66308416">________ occurs when there is a chronic deficiency in sleep.</para>
+        <list id="fs-idm64489200" list-type="enumerated" number-style="lower-alpha">
+          <item>jet lag</item>
+          <item>rotating shift work</item>
+          <item>circadian rhythm</item>
+          <item>sleep debt</item>
+        </list>
+      </problem>
+      <solution id="fs-idm57397648">
+        <para id="fs-idm81991344">D</para>
+      </solution>
+    </exercise>
+    
+    <exercise id="fs-idp30059616">
+      <problem id="fs-idp52362224"><para id="fs-idm16889264">________ cycles occur roughly once every 24 hours.</para>
+        <list id="fs-idm80805008" list-type="enumerated" number-style="lower-alpha">
+          <item>biological</item>
+          <item>circadian</item>
+          <item>rotating</item>
+          <item>conscious</item>
+        </list>
+      </problem>
+      <solution id="fs-idm73103664"><para id="fs-idm79251264">B</para></solution>
+    </exercise>
+   
+    <exercise id="fs-idp26678096">
+      <problem id="fs-idm68138368"><para id="fs-idp113348816">________ is one way in which people can help reset their biological clocks.</para>
+        <list id="fs-idm75434480" list-type="enumerated" number-style="lower-alpha">
+          <item>Light-dark exposure</item>
+          <item>coffee consumption</item>
+          <item>alcohol consumption</item>
+          <item>napping</item>
+        </list>
+      </problem>
+      <solution id="fs-idm72557744"><para id="fs-idm130158432">A</para></solution>
+    </exercise>
+  </section>
+
+  <section id="fs-idm83618640" class="critical-thinking">
+    <title>Critical Thinking Questions</title>
+    <exercise id="fs-idp34054592">
+      <problem id="fs-idm82241264">
+        <para id="fs-idm17356352">Healthcare professionals often work rotating shifts. Why is this problematic? What can be done to deal with potential problems?</para>
+      </problem>
+      <solution id="fs-idm54435456">
+        <para id="fs-idp104819168">Given that rotating shift work can lead to exhaustion and decreased mental efficiency, individuals working under these conditions are more likely to make mistakes on the job. The implications for this in the health care professions are obvious. Those in health care professions could be educated about the benefits of light-dark exposure to help alleviate such problems.</para>
+      </solution>
+    </exercise>
+    
+    <exercise id="fs-idm82051232">
+      <problem id="fs-idm44155296">
+        <para id="fs-idm111354848">Generally, humans are considered diurnal which means we are awake during the day and asleep during the night. Many rodents, on the other hand, are nocturnal. Why do you think different animals have such different sleep-wake cycles?</para>
+      </problem>
+      <solution id="fs-idm98434256">
+        <para id="fs-idm68126336">Different species have different evolutionary histories, and they have adapted to their environments in different ways. There are a number of different possible explanations as to why a given species is diurnal or nocturnal. Perhaps humans would be most vulnerable to threats during the evening hours when light levels are low. Therefore, it might make sense to be in shelter during this time. Rodents, on the other hand, are faced with a number of predatory threats, so perhaps being active at night minimizes the risk from predators such as birds that use their visual senses to locate prey.</para>
+      </solution>
+    </exercise>
+  </section>
+
+  <section id="fs-idm130319632" class="personal-application">
+    <title>Personal Application Questions</title>
+    <exercise id="fs-idp24553760">
+      <problem id="fs-idm67742784">
+        <para id="fs-idm81135936">We experience shifts in our circadian clocks in the fall and spring of each year with time changes associated with daylight saving time. Is springing ahead or falling back easier for you to adjust to, and why do you think that is?</para>
+      </problem>
+    </exercise>
+    <exercise id="fs-idm58779424">
+      <problem id="fs-idp93264512">
+        <para id="fs-idm45159904">What do you do to adjust to the differences in your daily schedule throughout the week? Are you running a sleep debt when daylight saving time begins or ends?</para>
+      </problem>
+    </exercise>
+  </section>
+
+  
+</content>
+<glossary>
+<definition id="fs-idm81986592">
+<term>biological rhythm</term>
+<meaning id="fs-idm49585472"> internal cycle of biological activity</meaning>
+</definition>
+  <definition id="fs-idm82476304">
+<term>circadian rhythm</term>
+<meaning id="fs-idm77651504">biological rhythm that occurs over approximately 24 hours</meaning>
+</definition>
+<definition id="fs-idm57145728">
+<term>consciousness</term>
+<meaning id="fs-idm62947344">awareness of internal and external stimuli</meaning>
+</definition>
+  <definition id="fs-idp79441392">
+<term>homeostasis</term>
+<meaning id="fs-idm8524000">tendency to maintain a balance, or optimal level, within a biological system</meaning>
+</definition>
+  <definition id="fs-idm58823392">
+<term>insomnia</term>
+<meaning id="fs-idm19210640">consistent difficulty in falling or staying asleep for at least three nights a week over a month’s time</meaning>
+</definition>
+  <definition id="fs-idp39238496">
+<term>jet lag</term>
+<meaning id="fs-idm56693936">collection of symptoms brought on by travel from one time zone to another that results from the mismatch between our internal circadian cycles and our environment</meaning>
+</definition>
+  <definition id="fs-idp79023776">
+<term>melatonin</term>
+<meaning id="fs-idm81208416">hormone secreted by the endocrine gland that serves as an important regulator of the sleep-wake cycle</meaning>
+</definition>
+  <definition id="fs-idm108943680">
+<term>meta-analysis</term>
+<meaning id="fs-idm60182784">study that combines the results of several related studies</meaning>
+</definition>
+  <definition id="fs-idm83660192">
+<term>pineal gland</term>
+<meaning id="fs-idp46499200">endocrine structure located inside the brain that releases melatonin</meaning>
+</definition>
+  <definition id="fs-idm19986992">
+<term>rotating shift work</term>
+<meaning id="fs-idm85799664">work schedule that changes from early to late on a daily or weekly basis</meaning>
+</definition>
+  <definition id="fs-idp36162992">
+<term>sleep</term>
+<meaning id="fs-idm12400656">state marked by relatively low levels of physical activity and reduced sensory awareness that is distinct from periods of rest that occur during wakefulness</meaning></definition>
+  <definition id="fs-idm65957072">
+<term>sleep debt</term>
+<meaning id="fs-idm83995760">result of insufficient sleep on a chronic basis</meaning></definition>
+  <definition id="fs-idm46655040">
+<term>sleep regulation</term>
+<meaning id="fs-idm57099360">brain’s control of switching between sleep and wakefulness as well as coordinating this cycle with the outside world</meaning></definition>
+  <definition id="fs-idm50634240">
+<term>suprachiasmatic nucleus (SCN)</term>
+<meaning id="fs-idm45368704">area of the hypothalamus in which the body’s biological clock is located</meaning>
+</definition>
+  <definition id="fs-idm19915680">
+<term>wakefulness</term>
+<meaning id="fs-idm57722912">characterized by high levels of sensory awareness, thought, and behavior</meaning>
+</definition>
+</glossary>
+</document>

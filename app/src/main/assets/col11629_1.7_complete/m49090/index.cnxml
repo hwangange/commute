@@ -1,0 +1,268 @@
+<?xml version="1.0"?>
+<document xmlns="http://cnx.rice.edu/cnxml" xmlns:md="http://cnx.rice.edu/mdml" xmlns:bib="http://bibtexml.sf.net/" xmlns:m="http://www.w3.org/1998/Math/MathML" xmlns:q="http://cnx.rice.edu/qml/1.0" id="new" cnxml-version="0.7" module-id="new" class="introduction">
+
+<title>Introduction</title>
+<metadata xmlns:md="http://cnx.rice.edu/mdml"
+          mdml-version="0.5">
+  <!-- WARNING! The 'metadata' section is read only. Do not edit below.
+       Changes to the metadata section in the source will not be saved. -->
+  <md:repository>http://legacy.cnx.org/content</md:repository>
+  <md:content-url>http://legacy.cnx.org/content/m49090/latest/</md:content-url>
+  <md:content-id>m49090</md:content-id>
+  <md:title>Introduction</md:title>
+  <md:version>1.4</md:version>
+  <md:created>2014/02/13 03:59:19 -0600</md:created>
+  <md:revised>2014/12/10 11:19:35.079 US/Central</md:revised>
+  <md:actors>
+    <md:organization userid="OpenStaxCollege">
+      <md:shortname>OpenStax College</md:shortname>
+      <md:fullname>OpenStax College</md:fullname>
+      <md:email>info@openstaxcollege.org</md:email>
+    </md:organization>
+    <md:person userid="OSCRiceUniversity">
+      <md:firstname>Rice</md:firstname>
+      <md:surname>University</md:surname>
+      <md:fullname>Rice University</md:fullname>
+      <md:email>daniel@openstaxcollege.org</md:email>
+    </md:person>
+    <md:person userid="cnxpsych">
+      <md:firstname>CNX</md:firstname>
+      <md:surname>Psychology</md:surname>
+      <md:fullname>CNX Psychology</md:fullname>
+      <md:email>info@openstaxcollege.org</md:email>
+    </md:person>
+  </md:actors>
+  <md:roles>
+    <md:role type="author">OpenStaxCollege</md:role>
+    <md:role type="maintainer">cnxpsych OpenStaxCollege</md:role>
+    <md:role type="licensor">OSCRiceUniversity</md:role>
+  </md:roles>
+  <md:license url="http://creativecommons.org/licenses/by/4.0/">Creative Commons Attribution License 4.0</md:license>
+  <!-- For information on license requirements for use or modification, see license url in the
+       above <md:license> element.
+       For information on formatting required attribution, see the URL:
+         CONTENT_URL/content_info#cnx_cite_header
+       where CONTENT_URL is the value provided above in the <md:content-url> element.
+  -->
+  <md:keywordlist>
+    <md:keyword>absentmindedness</md:keyword>
+    <md:keyword>acoustic encoding</md:keyword>
+    <md:keyword>amnesia</md:keyword>
+    <md:keyword>anterograde amnesia</md:keyword>
+    <md:keyword>arousal theory</md:keyword>
+    <md:keyword>Atkinson-Shiffrin model</md:keyword>
+    <md:keyword>automatic processing</md:keyword>
+    <md:keyword>bias</md:keyword>
+    <md:keyword>biopsychology</md:keyword>
+    <md:keyword>blocking</md:keyword>
+    <md:keyword>construction</md:keyword>
+    <md:keyword>declarative memory</md:keyword>
+    <md:keyword>effortful processing</md:keyword>
+    <md:keyword>elaborative rehearsal</md:keyword>
+    <md:keyword>encoding</md:keyword>
+    <md:keyword>engram</md:keyword>
+    <md:keyword>episodic memory</md:keyword>
+    <md:keyword>equipotentiality hypothesis</md:keyword>
+    <md:keyword>explicit memory</md:keyword>
+    <md:keyword>eyewitness</md:keyword>
+    <md:keyword>false memory syndrome</md:keyword>
+    <md:keyword>flashbulb memory</md:keyword>
+    <md:keyword>forgetting</md:keyword>
+    <md:keyword>hyperthymesia</md:keyword>
+    <md:keyword>implicit memory</md:keyword>
+    <md:keyword>interference</md:keyword>
+    <md:keyword>long-term memory</md:keyword>
+    <md:keyword>LTM</md:keyword>
+    <md:keyword>memory</md:keyword>
+    <md:keyword>memory consolidation</md:keyword>
+    <md:keyword>memory-enhancing strategy</md:keyword>
+    <md:keyword>memory errors</md:keyword>
+    <md:keyword>memory sins</md:keyword>
+    <md:keyword>misattribution</md:keyword>
+    <md:keyword>misinformation effect paradigm</md:keyword>
+    <md:keyword>mnemonic</md:keyword>
+    <md:keyword>mnemonic device</md:keyword>
+    <md:keyword>persistence</md:keyword>
+    <md:keyword>proactive interference</md:keyword>
+    <md:keyword>procedural memory</md:keyword>
+    <md:keyword>recall</md:keyword>
+    <md:keyword>recognition</md:keyword>
+    <md:keyword>reconstruction</md:keyword>
+    <md:keyword>relearning</md:keyword>
+    <md:keyword>retrieval</md:keyword>
+    <md:keyword>retroactive interference</md:keyword>
+    <md:keyword>retrograde amnesia</md:keyword>
+    <md:keyword>self-reference effect</md:keyword>
+    <md:keyword>semantic encoding</md:keyword>
+    <md:keyword>semantic memory</md:keyword>
+    <md:keyword>sensory memory</md:keyword>
+    <md:keyword>short-term memory</md:keyword>
+    <md:keyword>STM</md:keyword>
+    <md:keyword>storage</md:keyword>
+    <md:keyword>Stroop effect</md:keyword>
+    <md:keyword>studying</md:keyword>
+    <md:keyword>suggestibility</md:keyword>
+    <md:keyword>transience</md:keyword>
+    <md:keyword>visual encoding</md:keyword>
+  </md:keywordlist>
+  <md:subjectlist>
+    <md:subject>Social Sciences</md:subject>
+  </md:subjectlist>
+  <md:abstract></md:abstract>
+  <md:language>en</md:language>
+  <!-- WARNING! The 'metadata' section is read only. Do not edit above.
+       Changes to the metadata section in the source will not be saved. -->
+</metadata>
+
+<content>
+<?cnx.eoc class="summary" title="Summary"?>
+<?cnx.eoc class="review-questions" title="Review Questions"?>
+<?cnx.eoc class="critical-thinking" title="Critical Thinking Questions"?>
+<?cnx.eoc class="personal-application" title="Personal Application Questions"?>
+<?cnx.eoc class="references" title="References"?>
+
+<figure id="fs-idp52691456" class="splash">
+    <media id="fs-idp1652400" alt="A photograph shows a camera and a pile of photographs.">
+        <image src="CNX_Psych_08_00_Photos.jpg" mime-type="image/jpg"/>
+    </media>
+    <caption>Photographs can trigger our memories and bring past experiences back to life. (credit: modification of work by Cory Zanker)</caption>
+</figure>
+   <para id="fs-idm93595008">We may be top-notch learners, but if we don’t have a way to store what we’ve learned, what good is the knowledge we’ve gained?</para>
+
+<para id="fs-idm77730240">Take a few minutes to imagine what your day might be like if you could not remember anything you had learned. You would have to figure out how to get dressed. What clothing should you wear, and how do buttons and zippers work? You would need someone to teach you how to brush your teeth and tie your shoes. Who would you ask for help with these tasks, since you wouldn’t recognize the faces of these people in your house? Wait . . . is this even your house? Uh oh, your stomach begins to rumble and you feel hungry. You’d like something to eat, but you don’t know where the food is kept or even how to prepare it. Oh dear, this is getting confusing. Maybe it would be best just go back to bed. A bed . . . what is a bed?</para>
+
+<para id="fs-idp7458368">We have an amazing capacity for memory, but how, exactly, do we process and store information? Are there different kinds of memory, and if so, what characterizes the different types? How, exactly, do we retrieve our memories? And why do we forget? This chapter will explore these questions as we learn about memory.</para>
+ <section id="fs-idm160881248" class="references">
+        <title>References</title>
+    
+<para id="eip-idm4928992">Abel, M., &amp; Bäuml, K.-H. T. (2013). Sleep can reduce proactive interference. <emphasis effect="italics">Memory, 22</emphasis>(4), 332–339. doi:10.1080/09658211.2013.785570. Retrieved from http://www.psychologie.uni-regensburg.de/Baeuml/papers_in_press/sleepPI.pdf</para>
+
+<para id="fs-idm7395760">Anderson, N. S. (1969). The influence of acoustic similarity on serial recall of letter sequences. <emphasis effect="italics">Quarterly Journal of Experimental Psychology, 21</emphasis>(3), 248–255.</para>
+
+<para id="fs-idm160648624">Anderson, R. C. (1984). Role of the reader's schema in comprehension, learning, and memory. In R. C. Anderson, J. Osborn, &amp; R. J. Tierney (Eds<emphasis effect="italics">.</emphasis>),<emphasis effect="italics"> Learning to read in American schools: Basal Readers and Content Texts </emphasis>(pp. 243–257). Hillsdale, NJ: Erlbaum.</para>
+
+<para id="fs-idm4693408">Atkinson, R. C., &amp; Shiffrin, R. M. (1968). Human memory: A proposed system and its control processes. In K. W. Spence &amp; J. T. Spence (Eds.), <emphasis effect="italics">The psychology of learning and motivation: Volume 2 </emphasis>(pp. 89–195). New York, NY: Academic Press.</para>
+
+    <para id="fs-idm158225456">Baddeley, A. (2004). <emphasis effect="italics">Your memory: A user's guide</emphasis>. Richmond Hill, Canada: Firefly Books.</para>
+
+<para id="fs-idm121632816">Baddeley, A. D., &amp; Hitch, G. (1974). Working memory<emphasis effect="italics">.</emphasis> In G. H. Bower (Ed.), <emphasis effect="italics">The psychology of learning and motivation: Advances in research and theory</emphasis> (Vol. 8, pp. 47–89). New York, NY: Academic Press.</para>
+
+<para id="fs-idm187190592">Bayley, P. J., &amp; Squire, L. R. (2002). Medial temporal lobe amnesia: Gradual acquisition of factual information by nondeclarative memory. <emphasis effect="italics">Journal of Neuroscience, 22</emphasis>, 5741–5748.</para>
+
+ <para id="eip-idm75058896">Bellezza, F. S. (1981). Mnemonic devices: Classification, characteristics and criteria. <emphasis effect="italics">Review of Educational Research, 51</emphasis>, 247–275.</para>
+
+<para id="fs-idm160430304">Benjamin N. Cardozo School of Law, Yeshiva University. (2009). Reevaluating lineups: Why witnesses make mistakes and how to reduce the chance of a misidentification. Retrieved from The Innocence Project website: http://www.innocenceproject.org/docs/Eyewitness_ID_Report.pdf</para>
+
+<para id="fs-idp71099712">Blockland, A. (1996). Acetylcholine: A neurotransmitter for learning and memory? <emphasis effect="italics">Brain Research Reviews, 21</emphasis>, 285–300.</para>
+
+ <para id="eip-idm12697088">Bodie, G. D., Powers, W. G., &amp; Fitch-Hauser, M. (2006). Chunking, priming, and active learning: Toward an innovative approach to teaching communication-related skills. <emphasis effect="italics">Interactive Learning Environment,</emphasis> <emphasis effect="italics">14</emphasis>(2), 119–135.</para>
+
+<para id="fs-idm131316624">Bousfield, W. (1935). The occurrence of clustering in the recall of randomly arranged associates. <emphasis effect="italics">Journal of General Psychology, 49</emphasis>, 229–240.</para>
+
+<para id="fs-idm83448896">Bransford, J. D., &amp; McCarrell, N. S. (1974). A sketch of a cognitive approach to comprehension. In W. B. Weimer &amp; D. J. Palermo (Eds.), <emphasis effect="italics">Cognition and the symbolic processes </emphasis>(pp. 189–229). Hillsdale, NJ: Lawrence Erlbaum Associates.</para>
+
+<para id="fs-idm124682992">Briere, J., &amp; Conte, J. (1993). Self-reported amnesia for abuse in adults molested as children. <emphasis effect="italics">Journal of Traumatic Stress, 6</emphasis>, 21–31.</para>
+
+<para id="fs-idm160109872">Carli, L. (1999). Cognitive reconstruction, hindsight, and reactions to victims and perpetrators. <emphasis effect="italics">Personality and Social Psychology Bulletin, 25</emphasis>(8), 966–979. doi:10.1177/01461672992511005</para>
+
+<para id="fs-idm168604448">Ceci, S. J., &amp; Bruck, M. (1993). Child witness: Translating research into policy. <emphasis effect="italics">Social Policy Report, 7</emphasis>(3), 1–30.</para>
+
+<para id="fs-idm163036656">Ceci, S. J., &amp; Bruck, M. (1995). <emphasis effect="italics">Jeopardy in the courtroom: A scientific analysis of children’s testimony. </emphasis>Washington, DC: American Psychological Association.</para>
+
+<para id="fs-idm160192000">Cheit, R. E. (2007). <emphasis effect="italics">The recovered memory project.</emphasis> Retrieved from http://blogs.brown.edu/recoveredmemory/.</para>
+
+<para id="fs-idp54929040">Christianson, S. A. (1992). <emphasis effect="italics">The handbook of emotion and memory: Research and theory</emphasis>. Hillsdale, NJ: Erlbaum.</para>
+
+<para id="fs-idp131846544">Clark, R. E., Zola, S. M., &amp; Squire, L. R. (2000). Impaired recognition memory in rats after damage to the hippocampus. <emphasis effect="italics">The Journal of Neuroscience, 20</emphasis>(23), 8853–8860.</para>
+
+<para id="fs-idm180924976">Corkin, S. (1965). Tactually-guided maze learning in man: Effects of unilateral cortical excisions and bilateral hippocampal lesions. <emphasis effect="italics">Neuropsychologia, 3</emphasis>, 339–351.</para>
+
+<para id="fs-idm183112352">Corkin, S. (1968). Acquisition of motor skill after bilateral medial temporal-lobe excision. <emphasis effect="italics">Neuropsychologia, 6</emphasis>, 255–264.</para>
+
+<para id="fs-idm42550288">Corkin, S., Amaral D. G., González, R. G., Johnson, K. A., &amp; Hyman, B. T. (1997). H. M.’s medial temporal lobe lesion: Findings from magnetic resonance imaging. <emphasis effect="italics">Journal of Neuroscience, 17</emphasis>(10), 3964–3979.</para>
+
+<para id="eip-idm20584896">Craik, F. I. M., &amp; Lockhart, R. S. (1972). Levels of processing: A framework for memory research. <emphasis effect="italics">Journal of Verbal Learning and Verbal Behavior, 11</emphasis>, 671–684.</para>
+<para id="fs-idm47323168">Craik, F. I. M., Moroz, T. M., Moscovitch, M., Stuss, D. T., Winocur, G., Tulving, E., &amp; Kapur, S. (1999). In search of the self: A positron emission tomography study. <emphasis effect="italics">Psychological Science, 10</emphasis>(1), 26–34.</para>
+<para id="fs-idm54022624">Craik, F. I. M., &amp; Tulving, E. (1975). Depth of processing and the retention of words in episodic memory. <emphasis effect="italics">Journal of Experimental Psychology, 104</emphasis>(3), 268–294.</para>
+            <para id="eip-idm3478096">Craik, F. I. M., &amp; Watkins, M. J. (1973). The role of rehearsal in short-term memory. <emphasis effect="italics">Journal of Verbal Learning and Verbal Behavior, 12</emphasis>, 599–607.</para>
+
+
+<para id="fs-idp101989584">Green, J. T., &amp; Woodruff-Pak, D. S. (2000). Eyeblink classical conditioning in aging animals. In D. S. Woodruff-Pak &amp; J. E. Steinmetz (Eds.), <emphasis effect="italics">Eyeblink classical conditioning: Animal models</emphasis> (Vol. 2, pp.155–178). Boston, MA: Kluwer Academic.</para>
+
+<para id="fs-idm23774656">Greenberg, D. L. (2004). President Bush's false [flashbulb] memory of 9/11/01. <emphasis effect="italics">Applied. Cognitive Psychology, 18</emphasis>(3), 363–370. doi:10.1002/acp.1016</para>
+
+<para id="fs-idm211281040">Devilly, G. J. (2007). If nothing happened why do I still hurt? An update on the memory wars. <emphasis effect="italics">InPsych, 29</emphasis>(2), 16–18.</para>
+
+<para id="fs-idm124891344">Ebbinghaus, H. (1964). <emphasis effect="italics">Memory: A contribution to experimental psychology</emphasis> (H. A. Ruger &amp; C. E. Bussenius, Trans.). New York, NY: Dover. (Original work published 1885)</para>
+
+<para id="fs-idm194918656">Goodman, G. S. (2006). Children’s eyewitness memory: A modern history and contemporary commentary. <emphasis effect="italics">Journal of Social Issues, 62</emphasis>, 811–832.</para> 
+
+<para id="fs-idp4488640">Hassabis D., &amp; Maguire E. A. (2007). Deconstructing episodic memory with construction. <emphasis effect="italics">Trends in Cognitive Sciences</emphasis>, <emphasis effect="italics">11</emphasis>(7), 299–306.</para>
+
+<para id="fs-idm126301792">Jacobs, J. (1887). Experiments on “prehension.” <emphasis effect="italics">Mind, 12</emphasis>, 75–79.</para>
+
+<para id="fs-idp34672">Josselyn, J. A. (2010). Continuing the search for the engram: Examining the mechanism of fear memories. <emphasis effect="italics">Journal of Psychiatry Neuroscience, 35</emphasis>(4), 221–228.</para>
+
+<para id="fs-idm23931184">Kapur, S., Craik, F. I. M., Tulving, E., Wilson, A. A., Houle, S., &amp; Brown, G. M. (1994). Neuroanatomical correlates of encoding in episodic memory: Levels of processing effect. <emphasis effect="italics">Proceedings of the National Academy of Sciences of the United States of America, 91</emphasis>(6), 208–2011.</para>
+
+<para id="fs-idp28675088">Lashley K. S. (1950). In search of the engram. <emphasis effect="italics">Society of Experimental Biology Symposium, 4: Psychological Mechanisms in Animal Behavior</emphasis>. Cambridge, UK: Cambridge University Press.</para>
+
+<para id="fs-idm125225952">Loftus, E. F., &amp; Palmer, J. C. (1974). Reconstruction of auto-mobile destruction: An example of the interaction between language and memory. <emphasis effect="italics">Journal of Verbal Learning and Verbal Behavior, 13</emphasis>, 585–589.</para>
+
+  <para id="eip-idm28698816">MacLeod, C. M., Gopie, N., Hourihan, K. L., Neary, K. R., &amp; Ozubko, J. D. (2010). The production effect: Delineation of a phenomenon. <emphasis effect="italics">Journal of Experimental Psychology: Learning, Memory, and Cognition, 36</emphasis>(3), 671–685.</para>
+
+<para id="fs-idm18149104">Mayford, M., Siegelbaum, S. A., &amp; Kandel, E. R. (2012). <emphasis effect="italics">Synapses and memory storage. </emphasis>New York, NY: Cold Spring Harbor Perspectives in Biology, Cold Spring Harbor Laboratory Press.</para>
+
+<para id="fs-idp47809504">McGaugh, J. L. (2003). <emphasis effect="italics">Memory and emotion: The making of lasting memories</emphasis>. New York, NY: Columbia University Press.</para>
+
+<para id="fs-idm129350512">McLeod, S. A. (2011). Anterograde amnesia [Web log post]. Retrieved from http://www.simplypsychology.org/anterograde-amnesia.html</para>
+
+<para id="fs-idp2399424">Miller, G. A. (1956). The magical number seven, plus or minus two: Some limits on our capacity for processing information. <emphasis effect="italics">Psychological Review, 68</emphasis>, 81–87.</para>
+
+<para id="fs-idm24832592">Myhrer, T. (2003). Neurotransmitter systems involved in learning and memory in the rat: A meta-analysis based on studies of four behavioral tasks. <emphasis effect="italics">Brain Research Reviews, 41</emphasis>(2–3), 268–287.</para>
+
+<para id="fs-idm190404320">Newseum. (n.d.). G-men and journalists: D. C. sniper [Web log post]. Retrieved from http://www.newseum.org/exhibits-and-theaters/temporary-exhibits/g-men-and-journalists/sniper/</para>
+
+<para id="fs-idm166817328">Nickerson, R. S., &amp; Adams, M. J. (1979). Long-term memory for a common object. <emphasis effect="italics">Cognitive Psychology, 11</emphasis>(3), 287–307.</para>
+
+<para id="fs-idm177250208">Paivio, A. (1986). <emphasis effect="italics">Mental representations: A dual coding approach</emphasis>. New York, NY: Oxford University Press.</para>
+
+<para id="fs-idm167617936">Parker, E. S., Cahill, L., &amp; McGaugh, J. L. (2006). A case of unusual autobiographical remembering. <emphasis effect="italics">Neurocase, 12</emphasis>, 35–49.</para>
+
+<para id="fs-idm162256864">Payne, B. K., Jacoby, L. L., &amp; Lambert, A. J. (2004). Memory monitoring and the control of stereotype distortion. <emphasis effect="italics">Journal of Experimental Social Psychology, 40</emphasis>, 52–64.</para>
+
+<para id="fs-idm16821296">Pew Research Center (2011, September 1).<emphasis effect="italics"> Ten years after 9/11: United in remembrance, divided over policies. </emphasis>Washington, DC: People Press.</para>
+
+
+<para id="fs-idm192152032">Pipe, M.-E. (1996). Children’s eyewitness memory.<emphasis effect="italics"> New Zealand Journal of Psychology, 25</emphasis>(2), 36–43.</para>
+
+<para id="fs-idm170148304">Pipe, M.-E., Lamb, M., Orbach, Y., &amp; Esplin, P. W. (2004). Recent research on children’s testimony about experienced and witnessed events.<emphasis effect="italics"> Developmental Review, 24, </emphasis>440–468.</para>
+
+<para id="fs-idm48011984">Roediger, H. L., &amp; DeSoto, K. A. (in press). The psychology of reconstructive memory. In J. Wright (Ed.), <emphasis effect="italics">International Encyclopedia of the Social and Behavioral sciences,</emphasis> 2e. Oxford, UK: Elsevier.</para>
+
+<para id="fs-idp68865376">Roediger, H. L., III, &amp; McDermott, K. B. (2000). Tricks of memory. <emphasis effect="italics">Current Directions in Psychological Science, 9,</emphasis> 123–127.</para>
+
+<para id="fs-idm157479744">Rogers, T. B., Kuiper, N. A., &amp; Kirker, W. S. (1977). Self-reference and the encoding of personal information. <emphasis effect="italics">Journal of Personal Social Psychology, 35</emphasis>(9), 677–688.</para>
+
+<para id="fs-idm147422848">Schacter, D. (2001). <emphasis effect="italics">The seven sins of memory: How the mind forgets and remembers.</emphasis> New York, NY: Houghton Mifflin.</para>
+
+<para id="fs-idp103515584">Steinmetz, J. E. (1999). A renewed interest in human classical eyeblink conditioning. <emphasis effect="italics">Psychological Science, 10</emphasis>, 24–25.</para>
+
+ <para id="eip-idm98232848">Tigner, R. B. (1999). Putting memory research to good use. <emphasis effect="italics">College Teaching</emphasis>, <emphasis effect="italics">47</emphasis>(4), 149–152.</para>
+
+<para id="fs-idm31375328">Tulving, E. (1972). Episodic and semantic memory. In E. Tulving &amp; W. Dolandson (Eds.), <emphasis effect="italics">Organization of memory</emphasis> (pp. 381–403). New York, NY: Academic Press.</para>
+
+<para id="fs-idm80344576">Tulving, E. (2002, February). Episodic memory: From mind to brain. <emphasis effect="italics">Annual Review of</emphasis> <emphasis effect="italics">Psychology, 53</emphasis>, 1–25. doi:10.1146/annurev.psych.53.100901.135114</para>
+
+<para id="eip-idm9801280">van Praag, H. (2008). Neurogenesis and exercise: Past and future directions. <emphasis effect="italics">NeuroMolecular Medicine, 10</emphasis>(2), 128–140.</para>
+
+<para id="fs-idm193812480">Wells, G. L., &amp; Quinlivan, D. S. (2009). Suggestive eyewitness identification procedures and the Supreme Court’s reliability test in light of eyewitness science: 30 years later. <emphasis effect="italics">Law and Human Behavior, 33</emphasis>, 1–24. doi:10.1007/s10979-008-9130-3</para>
+
+<para id="eip-idm11592592">Wrubel, B. (Writer), &amp; Spiller, M. (Director). (2010). The Old Wagon [Television series episode]. In S. Levitan &amp; C. Lloyd (Executive producers), <emphasis effect="italics">Modern Family</emphasis>. 20th Century Fox Television.</para>
+
+<para id="eip-idm2009296">Yogo, M., &amp; Fujihara, S. (2008). Working memory capacity can be improved by expressive writing: A randomized experiment in a Japanese sample. <emphasis effect="italics">British Journal of Health Psychology, 13</emphasis>(1), 77–80. doi:10.1348/135910707X252440</para>
+                            
+</section>
+</content>
+
+</document>
