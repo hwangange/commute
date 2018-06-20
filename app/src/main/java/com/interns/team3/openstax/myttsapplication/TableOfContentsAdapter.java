@@ -1,46 +1,131 @@
 package com.interns.team3.openstax.myttsapplication;
 
-import android.content.Context;
+import android.support.v7.widget.RecyclerView;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
-import android.widget.ArrayAdapter;
 import android.widget.TextView;
-import android.widget.Toast;
+
+import org.w3c.dom.Text;
 
 import java.util.ArrayList;
 
-public class TableOfContentsAdapter extends ArrayAdapter<Module> {
+public class TableOfContentsAdapter extends RecyclerView.Adapter<RecyclerView.ViewHolder> {
 
-    private ArrayList<Module> list;
-    Context mContext;
+    public ArrayList<Module> dataSet;
 
 
-    public TableOfContentsAdapter(ArrayList<Module> data, Context context){
-        super(context, 0, data);
-        this.list = data;
-        this.mContext = context;
+    // Provide a reference to the views for each data item
+    // Complex data items may need more than one view per item, and
+    // you provide access to all the views for a data item in a view holder
+    public static class ModuleViewHolder extends RecyclerView.ViewHolder {
+        // each data item is just a string in this case
+        public TextView modID;
+        public TextView modTitle;
+        public TextView modChapter;
+        public ModuleViewHolder(View v) {
+            super(v);
+            modID = (TextView) v.findViewById(R.id.modID);
+            modTitle = (TextView) v.findViewById(R.id.modTitle);
+            modChapter = (TextView) v.findViewById(R.id.modChapter);
+        }
+    }
+
+    public static class ChapterViewHolder extends RecyclerView.ViewHolder {
+        // each data item is just a string in this case
+        public TextView chapterNum;
+        public TextView chapterTitle;
+        public ChapterViewHolder(View v) {
+            super(v);
+            chapterNum = (TextView) v.findViewById(R.id.chapterNum);
+            chapterTitle = (TextView) v.findViewById(R.id.chapterTitle);
+        }
+    }
+
+    public TableOfContentsAdapter(ArrayList<Module> dataSet)
+    {
+        this.dataSet = dataSet;
     }
 
     @Override
-    public View getView(int position, View convertView, ViewGroup parent) {
-        // Get the data item for this position
-        Module module = getItem(position);
+    public int getItemViewType(int position) {
+        // 0 = module, 1 = chapter
+        // Note that unlike in ListView adapters, types don't have to be contiguous
+        String type = dataSet.get(position).type;
+        if(type == "module")
+            return 0;
+        else if(type == "chapter")
+            return 1;
+        return -1;
+    }
 
-        //Check if an existing view is being reused, otherwise inflate the view
-        if(convertView == null){
-            convertView = LayoutInflater.from(getContext()).inflate(R.layout.table_of_contents, parent, false);
+    @Override
+    public RecyclerView.ViewHolder onCreateViewHolder(ViewGroup parent, int viewType) {
+        switch (viewType) {
+            case 0: // Module
+            {
+                // create a new view
+                View v = (View) LayoutInflater.from(parent.getContext())
+                        .inflate(R.layout.toc_module, parent, false);
+
+                TableOfContentsAdapter.ModuleViewHolder vh = new TableOfContentsAdapter.ModuleViewHolder(v);
+                return vh;
+            }
+            case 1: // Chapter
+            {
+                // create a new view
+                View v = (View) LayoutInflater.from(parent.getContext())
+                        .inflate(R.layout.toc_chapter, parent, false);
+
+                TableOfContentsAdapter.ChapterViewHolder vh = new TableOfContentsAdapter.ChapterViewHolder(v);
+                return vh;
+            }
         }
 
-        // Lookup view for data population
-        TextView itemTitle = (TextView) convertView.findViewById(R.id.itemTitle);
-        TextView itemID = (TextView) convertView.findViewById(R.id.itemID);
-        // Populate the data into the template view using the data object
-
-        itemTitle.setText(module.title);
-        itemID.setText(module.id);
-
-        // Return the completed view to render on screen
-        return convertView;
+        return null;
     }
+
+    @Override
+    public void onBindViewHolder(final RecyclerView.ViewHolder holder, final int position) {
+        switch (holder.getItemViewType()) {
+            case 0:
+                ModuleViewHolder moduleViewHolder = (ModuleViewHolder) holder;
+                TextView myModID = moduleViewHolder.modID;
+                TextView myModTitle = moduleViewHolder.modTitle;
+                TextView myModChapter = moduleViewHolder.modChapter;
+
+
+
+                myModID.setText(dataSet.get(position).id);
+
+                String tempModuleTitle;
+                if(!(dataSet.get(position).title.equals("Introduction")))
+                    tempModuleTitle = dataSet.get(position).chapter + " " + dataSet.get(position).title;
+                else tempModuleTitle = dataSet.get(position).title;
+                myModTitle.setText(tempModuleTitle);
+
+                myModChapter.setText(dataSet.get(position).chapter);
+                //System.out.println("MODULE: \t" + dataSet.get(position).id + "\t" + dataSet.get(position).title + "\t" + dataSet.get(position).chapter);
+                break;
+
+            case 1:
+                ChapterViewHolder chapterViewHolder = (ChapterViewHolder) holder;
+                TextView myChapterNum = chapterViewHolder.chapterNum;
+                TextView myChapterTitle = chapterViewHolder.chapterTitle;
+
+                myChapterNum.setText(dataSet.get(position).chapter);
+
+                String tempChapterTitle = dataSet.get(position).chapter + " " + dataSet.get(position).title;
+                myChapterTitle.setText(tempChapterTitle);
+               // System.out.println("CHAPTER: \t" + dataSet.get(position).title + "\t" + dataSet.get(position).chapter);
+                break;
+        }
+    }
+
+    // Return the size of your dataset (invoked by the layout manager)
+    @Override
+    public int getItemCount() {
+        return dataSet.size();
+    }
+
 }

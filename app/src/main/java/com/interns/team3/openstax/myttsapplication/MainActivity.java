@@ -1,18 +1,17 @@
 package com.interns.team3.openstax.myttsapplication;
 
-import android.app.Activity;
 import android.content.Intent;
 import android.os.Bundle;
 import android.support.annotation.NonNull;
 import android.support.design.widget.BottomNavigationView;
 import android.support.v7.app.AppCompatActivity;
+import android.support.v7.widget.GridLayoutManager;
+import android.support.v7.widget.RecyclerView;
 import android.view.MenuItem;
 import android.view.View;
 import android.widget.AdapterView;
-import android.widget.ArrayAdapter;
 import android.widget.ListView;
 import android.widget.TextView;
-import android.widget.Toast;
 
 import org.jsoup.Jsoup;
 import org.jsoup.nodes.Document;
@@ -20,9 +19,9 @@ import org.jsoup.nodes.Element;
 import org.jsoup.select.Elements;
 
 import java.io.BufferedReader;
-import java.io.File;
 import java.io.IOException;
 import java.io.InputStreamReader;
+import java.text.DecimalFormat;
 import java.util.ArrayList;
 
 //import static com.interns.team3.openstax.myttsapplication.demo.*;
@@ -31,10 +30,13 @@ import java.util.ArrayList;
 public class MainActivity extends AppCompatActivity {
 
     private TextView mTextMessage;
-    private ListView listView;
     private TableOfContentsAdapter adapter;
-    private ArrayList<Module> list;
+    private ArrayList<Module> dataSet;
 
+    private RecyclerView recyclerView;
+    private RecyclerView.LayoutManager layoutManager;
+
+    private DecimalFormat df;
     private BottomNavigationView.OnNavigationItemSelectedListener mOnNavigationItemSelectedListener
             = new BottomNavigationView.OnNavigationItemSelectedListener() {
 
@@ -66,13 +68,18 @@ public class MainActivity extends AppCompatActivity {
 
 
         // Construct the data source
-        list = new ArrayList<Module>();
+        dataSet = new ArrayList<Module>();
         // Create the adapter to convert the array to views
-        adapter = new TableOfContentsAdapter(list, this);
+        adapter = new TableOfContentsAdapter(dataSet);
 
         // Attach the adapter to a ListView
-        listView= (ListView) findViewById(R.id.list);
-        listView.setAdapter(adapter);
+        recyclerView= (RecyclerView) findViewById(R.id.my_recycler_view);
+        recyclerView.setAdapter(adapter);
+
+        // use a GRID layout manager
+        layoutManager = new GridLayoutManager(this, 1);
+        // layoutManager = new LinearLayoutManager(this);
+        recyclerView.setLayoutManager(layoutManager);
 
         // Add items to adapter
         /*Module newModule = new Module("Angela", "Hwang");
@@ -81,7 +88,8 @@ public class MainActivity extends AppCompatActivity {
         newModule = new Module("Connie", "Wang");
         adapter.add(newModule);*/
 
-        addItems(adapter);
+        addItems();
+
 
         /* JSON
 
@@ -93,7 +101,9 @@ public class MainActivity extends AppCompatActivity {
         adapter.addAll(newUsers);
          */
 
-        listView.setOnItemClickListener(new AdapterView.OnItemClickListener(){
+
+        // ON CLICK LISTENER
+        /*recyclerView.setOnItemClickListener(new AdapterView.OnItemClickListener(){
             @Override
             public void onItemClick(AdapterView<?>adapter, View v, int position, long id){
                 // what each variable means: https://developer.android.com/reference/android/widget/AdapterView.OnItemClickListener
@@ -107,12 +117,12 @@ public class MainActivity extends AppCompatActivity {
                 startActivity(intent);
                // to put extra information: intent.putExtra(ImageTextListViewActivity.EXTRA_KMLSUMMARY, summary.get(position));
             }
-        });
+        }); */
 
 
     }
 
-    public void addItems(TableOfContentsAdapter adapter){
+    public void addItems(){
 
 
         try {
@@ -130,9 +140,20 @@ public class MainActivity extends AppCompatActivity {
 
             Element body = doc.body();
             Elements subcollections = body.getElementsByTag("col:subcollection");
+
+            float num= 0; // track chapter number
+
             for (Element sub : subcollections) {
+
+                num = Math.round(Math.floor(num+1));
+
                 String subTitle = sub.getElementsByTag("md:title").first().ownText();
-                System.out.println("Title: " + subTitle);
+                df = new DecimalFormat("#");
+                String chapNum = df.format(num);
+
+                dataSet.add(new Module(subTitle, "0", "chapter", chapNum));
+                adapter.notifyDataSetChanged();
+                //System.out.println("Title: " + subTitle);
 
                 if (sub.hasText())
                     System.out.println(sub.ownText() + "\t" + sub.attributes());
@@ -141,9 +162,14 @@ public class MainActivity extends AppCompatActivity {
                 for (Element mod : modules) {
 
                     String modTitle = mod.getElementsByTag("md:title").first().ownText();
+                    if(!(modTitle.equals("Introduction"))) num += 0.1;
                     String modID = mod.attributes().get("document");
-                    adapter.add(new Module(modTitle, modID));
 
+                    df = new DecimalFormat("0.#");
+                    String modChapter = df.format(num);
+
+                    dataSet.add(new Module(modTitle, modID, "module", modChapter));
+                    adapter.notifyDataSetChanged();
                 }
 
 
