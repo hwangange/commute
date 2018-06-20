@@ -10,13 +10,13 @@ import android.widget.Toast;
 
 import java.util.ArrayList;
 
-public class CustomAdapter extends ArrayAdapter<Module> {
+public class TableOfContentsAdapter extends ArrayAdapter<Module> {
 
     private ArrayList<Module> list;
     Context mContext;
 
 
-    public CustomAdapter(ArrayList<Module> data, Context context){
+    public TableOfContentsAdapter(ArrayList<Module> data, Context context){
         super(context, 0, data);
         this.list = data;
         this.mContext = context;

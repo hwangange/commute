@@ -27,6 +27,7 @@ import org.jsoup.nodes.Element;
 import org.jsoup.select.Elements;
 
 import java.io.IOException;
+import java.util.ArrayList;
 
 public class demo {
 
@@ -77,34 +78,58 @@ public class demo {
          *
          */
 
+        ArrayList<String> lst = parse_module();
+        for (String s : lst)
+            System.out.println(s);
 
+
+    }
+
+    public static ArrayList<String> parse_module() throws Exception {
+        File input = new File("/Users/Linda/AndroidStudioProjects1/MyTTSApplication/app/src/main/res/values/col11629_1.7_complete/m48993/index.cnxml.html");
+        Document doc = Jsoup.parse(input, "UTF-8", "");
+
+        Element body = doc.body();
+        ArrayList<String> lst = new ArrayList<String>();
+
+        Elements elements = doc.body().children().select("*");
+        for (Element element : elements) {
+            lst.add(element.ownText());
+        }
+
+        return lst;
+
+
+    }
+
+    public static void parse_collection_xml() throws Exception {
         File input = new File("/Users/Linda/AndroidStudioProjects1/MyTTSApplication/app/src/main/res/values/col11629_1.7_complete/collection.xml");
-       Document doc = Jsoup.parse(input, "UTF-8", "");
+        Document doc = Jsoup.parse(input, "UTF-8", "");
 
 
-       String title = doc.title();
-       System.out.println(title);
-       Element body =  doc.body();
-       Elements subcollections = body.getElementsByTag("col:subcollection");
-       for (Element sub : subcollections)
-       {
-           String subTitle = sub.getElementsByTag("md:title").first().ownText();
-           System.out.println("Title: " + subTitle);
-           if(sub.hasText())
-               System.out.println(sub.ownText() + "\t" + sub.attributes());
+        String title = doc.title();
+        System.out.println(title);
+        Element body =  doc.body();
+        Elements subcollections = body.getElementsByTag("col:subcollection");
+        for (Element sub : subcollections)
+        {
+            String subTitle = sub.getElementsByTag("md:title").first().ownText();
+            System.out.println("Title: " + subTitle);
+            if(sub.hasText())
+                System.out.println(sub.ownText() + "\t" + sub.attributes());
 
-           Elements modules = sub.getElementsByTag("col:module");
-           for (Element mod : modules)
-           {
-               String modTitle = mod.getElementsByTag("md:title").first().ownText();
-               System.out.println("\t"+modTitle + "\t" + mod.attributes().get("document"));
-           }
+            Elements modules = sub.getElementsByTag("col:module");
+            for (Element mod : modules)
+            {
+                String modTitle = mod.getElementsByTag("md:title").first().ownText();
+                System.out.println("\t"+modTitle + "\t" + mod.attributes().get("document"));
+            }
 
-           System.out.println("------------------------");
-       }
+            System.out.println("------------------------");
+        }
 
 
-       /* important code. Keep this. */
+        /* important code. Keep this. */
 
        /*
        //src/main/res/values/col11629_1.7_complete/m48993/index.cnxml.html
@@ -128,8 +153,7 @@ public class demo {
        }
        */
 
-       /* end important code. Keep this. */
-
+        /* end important code. Keep this. */
     }
 
 
