@@ -32,7 +32,7 @@ public class MainActivity extends AppCompatActivity {
 
     private TextView mTextMessage;
     private ListView listView;
-    private CustomAdapter adapter;
+    private TableOfContentsAdapter adapter;
     private ArrayList<Module> list;
 
     private BottomNavigationView.OnNavigationItemSelectedListener mOnNavigationItemSelectedListener
@@ -68,7 +68,7 @@ public class MainActivity extends AppCompatActivity {
         // Construct the data source
         list = new ArrayList<Module>();
         // Create the adapter to convert the array to views
-        adapter = new CustomAdapter(list, this);
+        adapter = new TableOfContentsAdapter(list, this);
 
         // Attach the adapter to a ListView
         listView= (ListView) findViewById(R.id.list);
@@ -112,7 +112,7 @@ public class MainActivity extends AppCompatActivity {
 
     }
 
-    public void addItems(CustomAdapter adapter){
+    public void addItems(TableOfContentsAdapter adapter){
 
 
         try {
@@ -133,6 +133,7 @@ public class MainActivity extends AppCompatActivity {
             for (Element sub : subcollections) {
                 String subTitle = sub.getElementsByTag("md:title").first().ownText();
                 System.out.println("Title: " + subTitle);
+
                 if (sub.hasText())
                     System.out.println(sub.ownText() + "\t" + sub.attributes());
 
