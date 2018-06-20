@@ -1,5 +1,6 @@
 package com.interns.team3.openstax.myttsapplication;
 
+import android.content.Intent;
 import android.support.v7.widget.RecyclerView;
 import android.view.LayoutInflater;
 import android.view.View;
@@ -13,7 +14,21 @@ import java.util.ArrayList;
 public class TableOfContentsAdapter extends RecyclerView.Adapter<RecyclerView.ViewHolder> {
 
     public ArrayList<Module> dataSet;
+    public View.OnClickListener modOnClickListener = new ModOnClickListener();
 
+
+    public static class ModOnClickListener implements View.OnClickListener {
+        @Override
+        public void onClick(final View v) {
+            String targetId = ((TextView) v.findViewById(R.id.modID)).getText().toString();
+            //Toast.makeText(getApplicationContext(), targetId, Toast.LENGTH_SHORT).show();
+
+            Intent intent = new Intent(v.getContext(), TextbookView.class);
+            intent.putExtra("Module ID", targetId);
+            intent.setFlags(Intent.FLAG_ACTIVITY_NEW_TASK);
+            v.getContext().startActivity(intent);
+        }
+    }
 
     // Provide a reference to the views for each data item
     // Complex data items may need more than one view per item, and
@@ -23,12 +38,18 @@ public class TableOfContentsAdapter extends RecyclerView.Adapter<RecyclerView.Vi
         public TextView modID;
         public TextView modTitle;
         public TextView modChapter;
+
+
+
         public ModuleViewHolder(View v) {
             super(v);
             modID = (TextView) v.findViewById(R.id.modID);
             modTitle = (TextView) v.findViewById(R.id.modTitle);
             modChapter = (TextView) v.findViewById(R.id.modChapter);
+
         }
+
+
     }
 
     public static class ChapterViewHolder extends RecyclerView.ViewHolder {
@@ -69,6 +90,8 @@ public class TableOfContentsAdapter extends RecyclerView.Adapter<RecyclerView.Vi
                         .inflate(R.layout.toc_module, parent, false);
 
                 TableOfContentsAdapter.ModuleViewHolder vh = new TableOfContentsAdapter.ModuleViewHolder(v);
+                v.setOnClickListener(modOnClickListener);
+
                 return vh;
             }
             case 1: // Chapter

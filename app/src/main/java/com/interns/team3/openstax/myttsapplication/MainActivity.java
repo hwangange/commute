@@ -102,6 +102,7 @@ public class MainActivity extends AppCompatActivity {
          */
 
 
+
         // ON CLICK LISTENER
         /*recyclerView.setOnItemClickListener(new AdapterView.OnItemClickListener(){
             @Override
