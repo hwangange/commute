@@ -38,7 +38,7 @@ public class TextbookView extends AppCompatActivity {
         // in content do not change the layout size of the RecyclerView
         // recyclerView.setHasFixedSize(true);
 
-        // use a linear layout manager
+        // use a GRID layout manager
         layoutManager = new GridLayoutManager(this, 1);
        // layoutManager = new LinearLayoutManager(this);
         recyclerView.setLayoutManager(layoutManager);
@@ -60,6 +60,7 @@ public class TextbookView extends AppCompatActivity {
         Elements elements = content.body().children().select("*");
         for (Element element : elements) {
             dataSet.add(element.ownText());
+
             //adapter.notifyItemInserted(dataSet.size()-1);
             adapter.notifyDataSetChanged();
 
