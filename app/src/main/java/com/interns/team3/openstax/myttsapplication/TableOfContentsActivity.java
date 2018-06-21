@@ -171,7 +171,7 @@ public class TableOfContentsActivity extends AppCompatActivity {
                     df = new DecimalFormat("0.#");
                     String modChapter = df.format(num);
 
-                    dataSet.add(new Content.Module(modTitle, modID, modChapter, bookId));
+                    dataSet.add(new Content.Module(modTitle, modID, modChapter));
                     adapter.notifyDataSetChanged();
                 }
 

@@ -1,6 +1,9 @@
 package com.interns.team3.openstax.myttsapplication;
 
+import android.content.Context;
+import android.speech.tts.TextToSpeech;
 import android.support.v7.widget.RecyclerView;
+import android.util.Log;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
@@ -8,20 +11,23 @@ import android.widget.TextView;
 import android.widget.Toast;
 
 import java.util.ArrayList;
+import java.util.concurrent.TimeUnit;
 
 public class TextbookViewAdapter extends RecyclerView.Adapter<TextbookViewAdapter.ViewHolder>{
 
     public ArrayList<String> dataSet;
     public View.OnClickListener textOnClickListener = new TextOnClickListener();
-
+    public Context context;
+    public static TextToSpeech tts;
 
     public static class TextOnClickListener implements View.OnClickListener {
         @Override
         public void onClick(final View v) {
             String text = ((TextView) v.findViewById(R.id.item)).getText().toString();
-            Toast.makeText(v.getContext(), text, Toast.LENGTH_SHORT).show();
 
             // where TTS function will go
+            tts.speak(text, TextToSpeech.QUEUE_FLUSH, null, "id");
+
         }
     }
 
@@ -70,6 +76,23 @@ public class TextbookViewAdapter extends RecyclerView.Adapter<TextbookViewAdapte
     @Override
     public int getItemCount() {
         return dataSet.size();
+    }
+
+    public void setContext(Context context) {
+        this.context= context;
+        tts = new TextToSpeech(this.context, new TextToSpeech.OnInitListener() {
+            @Override
+            public void onInit(int i) {
+                if (i == TextToSpeech.SUCCESS) {
+                    //mButtonSpeak.setEnabled(true);
+                    Log.e("Initialization", "Initialization succeeded");
+
+                } else {
+                    Log.e("Initialization", "Initialization failed");
+                }
+
+            }
+        });
     }
 
 

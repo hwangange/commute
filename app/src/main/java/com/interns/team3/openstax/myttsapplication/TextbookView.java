@@ -55,6 +55,7 @@ public class TextbookView extends AppCompatActivity {
 
         // specify an adapter (see also next example)
         adapter = new TextbookViewAdapter(dataSet);
+        adapter.setContext(getApplicationContext()); // will also setup TTS instance
         recyclerView.setAdapter(adapter);
 
 

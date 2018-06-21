@@ -60,13 +60,11 @@ public interface Content {
         private String title;
         private String id;
         public String section_num;
-        public String book_id;
 
-        public Module(String title, String id, String section_num, String book_id) {
+        public Module(String title, String id, String section_num) {
             this.title = title;
             this.id = id;
             this.section_num = section_num;
-            this.book_id = book_id;
         }
 
         @Override
@@ -83,6 +81,5 @@ public interface Content {
             return this.section_num;
         }
 
-        public String getBookId() { return this.book_id; }
     }
 }
