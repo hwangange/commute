@@ -9,11 +9,9 @@ import android.view.ViewGroup;
 import android.widget.ImageView;
 import android.widget.TextView;
 
-import org.w3c.dom.Text;
-
 import java.util.ArrayList;
 
-public class TableOfContentsAdapter extends RecyclerView.Adapter<RecyclerView.ViewHolder> {
+public class ContentAdapter extends RecyclerView.Adapter<RecyclerView.ViewHolder> {
 
     public ArrayList<Content> dataSet;
     public View.OnClickListener modOnClickListener = new ModOnClickListener();
@@ -95,7 +93,7 @@ public class TableOfContentsAdapter extends RecyclerView.Adapter<RecyclerView.Vi
         }
     }
 
-    public TableOfContentsAdapter(ArrayList<Content> dataSet)
+    public ContentAdapter(ArrayList<Content> dataSet)
     {
         this.dataSet = dataSet;
     }
@@ -123,7 +121,7 @@ public class TableOfContentsAdapter extends RecyclerView.Adapter<RecyclerView.Vi
                 View v = (View) LayoutInflater.from(parent.getContext())
                         .inflate(R.layout.toc_module, parent, false);
 
-                TableOfContentsAdapter.ModuleViewHolder vh = new TableOfContentsAdapter.ModuleViewHolder(v);
+                ContentAdapter.ModuleViewHolder vh = new ContentAdapter.ModuleViewHolder(v);
                 v.setOnClickListener(modOnClickListener);
 
                 return vh;
@@ -134,14 +132,14 @@ public class TableOfContentsAdapter extends RecyclerView.Adapter<RecyclerView.Vi
                 View v = (View) LayoutInflater.from(parent.getContext())
                         .inflate(R.layout.toc_chapter, parent, false);
 
-                TableOfContentsAdapter.ChapterViewHolder vh = new TableOfContentsAdapter.ChapterViewHolder(v);
+                ContentAdapter.ChapterViewHolder vh = new ContentAdapter.ChapterViewHolder(v);
                 return vh;
             }
             case 2: // Book
                 View v = (View) LayoutInflater.from(parent.getContext())
                         .inflate(R.layout.textbook_card, parent, false);
 
-                TableOfContentsAdapter.BookViewHolder vh = new TableOfContentsAdapter.BookViewHolder(v);
+                ContentAdapter.BookViewHolder vh = new ContentAdapter.BookViewHolder(v);
                 v.setOnClickListener(bookOnClickListener);
                 return vh;
         }

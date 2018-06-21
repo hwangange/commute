@@ -5,12 +5,25 @@ import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 import android.widget.TextView;
+import android.widget.Toast;
 
 import java.util.ArrayList;
 
 public class TextbookViewAdapter extends RecyclerView.Adapter<TextbookViewAdapter.ViewHolder>{
 
     public ArrayList<String> dataSet;
+    public View.OnClickListener textOnClickListener = new TextOnClickListener();
+
+
+    public static class TextOnClickListener implements View.OnClickListener {
+        @Override
+        public void onClick(final View v) {
+            String text = ((TextView) v.findViewById(R.id.item)).getText().toString();
+            Toast.makeText(v.getContext(), text, Toast.LENGTH_SHORT).show();
+
+            // where TTS function will go
+        }
+    }
 
     // Provide a reference to the views for each data item
     // Complex data items may need more than one view per item, and
@@ -37,7 +50,9 @@ public class TextbookViewAdapter extends RecyclerView.Adapter<TextbookViewAdapte
         View v = (View) LayoutInflater.from(parent.getContext())
                 .inflate(R.layout.recycler_view, parent, false);
 
+
         ViewHolder vh = new ViewHolder(v);
+        v.setOnClickListener(textOnClickListener);
         return vh;
     }
 

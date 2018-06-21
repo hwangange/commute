@@ -2,12 +2,9 @@ package com.interns.team3.openstax.myttsapplication;
 
 import android.content.Intent;
 import android.os.Bundle;
-import android.support.annotation.NonNull;
-import android.support.design.widget.BottomNavigationView;
 import android.support.v7.app.AppCompatActivity;
 import android.support.v7.widget.GridLayoutManager;
 import android.support.v7.widget.RecyclerView;
-import android.view.MenuItem;
 import android.widget.TextView;
 
 import org.jsoup.Jsoup;
@@ -27,7 +24,7 @@ import java.util.ArrayList;
 public class TableOfContentsActivity extends AppCompatActivity {
 
     private TextView mTextMessage;
-    private TableOfContentsAdapter adapter;
+    private ContentAdapter adapter;
     private ArrayList<Content> dataSet;
 
     private RecyclerView recyclerView;
@@ -71,7 +68,7 @@ public class TableOfContentsActivity extends AppCompatActivity {
         // Construct the data source
         dataSet = new ArrayList<Content>();
         // Create the adapter to convert the array to views
-        adapter = new TableOfContentsAdapter(dataSet);
+        adapter = new ContentAdapter(dataSet);
 
         // Attach the adapter to a ListView
         recyclerView= (RecyclerView) findViewById(R.id.my_recycler_view);

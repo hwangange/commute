@@ -5,13 +5,12 @@ import android.os.Bundle;
 import android.support.v7.widget.GridLayoutManager;
 import android.support.v7.widget.RecyclerView;
 
-import java.io.File;
 import java.io.IOException;
 import java.util.ArrayList;
 
 public class MainActivity extends AppCompatActivity {
 
-    private TableOfContentsAdapter adapter;
+    private ContentAdapter adapter;
     private ArrayList<Content> dataSet;
 
     private RecyclerView recyclerView;
@@ -25,7 +24,7 @@ public class MainActivity extends AppCompatActivity {
         // Construct the data source
         dataSet = new ArrayList<Content>();
         // Create the adapter to convert the array to views
-        adapter = new TableOfContentsAdapter(dataSet);
+        adapter = new ContentAdapter(dataSet);
 
         // Attach the adapter to a ListView
         recyclerView= (RecyclerView) findViewById(R.id.book_recycler_view);
