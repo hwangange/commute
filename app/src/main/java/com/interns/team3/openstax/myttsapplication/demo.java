@@ -78,11 +78,22 @@ public class demo {
          *
          */
 
-        ArrayList<String> lst = parse_module();
+        /*ArrayList<String> lst = parse_module();
         for (String s : lst)
-            System.out.println(s);
+            System.out.println(s); */
+
+        print_files();
 
 
+    }
+
+    public static void print_files() {
+        File file = new File("/Users/Linda/AndroidStudioProjects1/MyTTSApplication/app/src/main/res/values/col11629_1.7_complete");
+        File[] files = file.listFiles();
+        for (File f:files)
+        {
+            System.out.println(f.getAbsolutePath());
+        }
     }
 
     public static ArrayList<String> parse_module() throws Exception {

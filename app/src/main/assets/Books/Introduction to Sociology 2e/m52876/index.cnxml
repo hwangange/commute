@@ -1,0 +1,73 @@
+<?xml version="1.0"?>
+<document xmlns="http://cnx.rice.edu/cnxml" id="imported-from-openoffice" module-id="imported-from-openoffice" cnxml-version="0.7" class="introduction">
+  <title>Introduction to Health and Medicine</title>
+<metadata xmlns:md="http://cnx.rice.edu/mdml"
+          mdml-version="0.5">
+  <!-- WARNING! The 'metadata' section is read only. Do not edit below.
+       Changes to the metadata section in the source will not be saved. -->
+  <md:repository>http://legacy.cnx.org/content</md:repository>
+  <md:content-url>http://legacy.cnx.org/content/m52876/latest/</md:content-url>
+  <md:content-id>m52876</md:content-id>
+  <md:title>Introduction to Health and Medicine</md:title>
+  <md:version>1.3</md:version>
+  <md:created>2015/01/20 14:50:41 -0600</md:created>
+  <md:revised>2015/03/15 17:15:26.175 GMT-5</md:revised>
+  <md:actors>
+    <md:person userid="OSCRiceUniversity">
+      <md:firstname>Rice</md:firstname>
+      <md:surname>University</md:surname>
+      <md:fullname>Rice University</md:fullname>
+      <md:email>daniel@openstaxcollege.org</md:email>
+    </md:person>
+    <md:organization userid="OpenStaxCollege">
+      <md:shortname>OpenStax College</md:shortname>
+      <md:fullname>OpenStax College</md:fullname>
+      <md:email>info@openstaxcollege.org</md:email>
+    </md:organization>
+    <md:person userid="cnxsoc2">
+      <md:firstname>Openstax College</md:firstname>
+      <md:surname>Sociology 2e</md:surname>
+      <md:fullname>Openstax College Sociology 2e</md:fullname>
+      <md:email>sanura@mac.com</md:email>
+    </md:person>
+  </md:actors>
+  <md:roles>
+    <md:role type="author">OpenStaxCollege</md:role>
+    <md:role type="maintainer">OpenStaxCollege cnxsoc2</md:role>
+    <md:role type="licensor">OSCRiceUniversity</md:role>
+  </md:roles>
+  <md:license url="http://creativecommons.org/licenses/by/4.0/">Creative Commons Attribution License 4.0</md:license>
+  <!-- For information on license requirements for use or modification, see license url in the
+       above <md:license> element.
+       For information on formatting required attribution, see the URL:
+         CONTENT_URL/content_info#cnx_cite_header
+       where CONTENT_URL is the value provided above in the <md:content-url> element.
+  -->
+  <md:derived-from url="http://legacy.cnx.org/content/m43019/1.2/">
+  </md:derived-from>
+  <md:subjectlist>
+    <md:subject>Social Sciences</md:subject>
+  </md:subjectlist>
+  <md:abstract></md:abstract>
+  <md:language>en</md:language>
+  <!-- WARNING! The 'metadata' section is read only. Do not edit above.
+       Changes to the metadata section in the source will not be saved. -->
+</metadata>
+
+<content>
+            <?chapter-toc label="Learning Objectives"?>
+            <?cnx.eoc class="section-summary" title="Section Summary"?>
+            <?cnx.eoc class="section-quiz" title="Section Quiz"?>
+            <?cnx.eoc class="short-answer" title="Short Answer"?>
+            <?cnx.eoc class="further-research" title="Further Research"?>
+            <?cnx.eoc class="references" title="References"?>
+    
+    
+   
+<figure xmlns:m="http://www.w3.org/1998/Math/MathML" xmlns:q="http://cnx.rice.edu/qml/1.0" id="import-auto-id2903149" class="splash"><media id="import-auto-id2101966" alt="This photo depicts medical workers with a face mask and gloves training for safety so they can enter infection zones.">
+        <image mime-type="image/jpg" src="CNX_Soc2e_Figure_19_01_001.jpg"/>
+      </media>
+      
+    <caption>Medical personnel are at the front lines of extremely dangerous work. Personal protective clothing is essential for any health worker entering an infection zone, as shown by these trainees for the UK's National Health Service. (Photo courtesy of DFID - UK Department for International Development/flickr)</caption></figure><para xmlns:m="http://www.w3.org/1998/Math/MathML" xmlns:q="http://cnx.rice.edu/qml/1.0" id="import-auto-id2662375">According to the World Health Organization and ABC Health News, on March 19, 2014 a "mystery" hemorrhagic fever outbreak occurred in Liberia and Sierra Leone.  This outbreak was later confirmed to be Ebola, a disease first discovered in what is now the Democratic Republic of Congo.  The 2014 outbreak started a chain reaction in West Africa, sickening more than 8,000 people and leaving more than 4,000 dead by October.</para><para xmlns:m="http://www.w3.org/1998/Math/MathML" xmlns:q="http://cnx.rice.edu/qml/1.0" id="import-auto-id1759022">At the time of this writing, Ebola is national news in the United States, and certainly global news as well.  Infection of U.S. medical staff (both in West Africa and at home)  has led to much fear and distrust, and discussion of  restrictions on flights from West Africa was one proposed way to stop the spread of the disease.  Ebola first entered the United States via U.S. missionary medical staff who were infected  in West Africa and then transported home for treatment.  The case of Thomas Eric Duncan, who unwittingly imported Ebola into the United States as he flew from Liberia to Texas in September 2014 to visit family, increased  the level of fear. </para><para xmlns:m="http://www.w3.org/1998/Math/MathML" xmlns:q="http://cnx.rice.edu/qml/1.0" id="import-auto-id1574116">How do we best respond to this horrific virus?  Restrict visitors from West Africa, enhance training and protective gear for all U.S. medical workers and law enforcement?  Many concerns surround this disease and few agree upon the appropriate response.  You can follow the progression of the  outbreak at <link url="http://abc7news.com/news/timeline-of-the-ebola-virus-in-america-/348789/">http://abc7news.com/news/timeline-of-the-ebola-virus-in-america-/348789/</link>.</para><para xmlns:m="http://www.w3.org/1998/Math/MathML" xmlns:q="http://cnx.rice.edu/qml/1.0" id="import-auto-id1343310">The Ebola case brings many issues to the forefront. Are we in the cross-hairs of a large-scale Ebola epidemic in the United States? Or are the few cases of infection (primarily of health professionals) as far as the disease will spread in the United States? In the short term, how do we best prevent, identify, and treat current and potential cases?</para><para xmlns:m="http://www.w3.org/1998/Math/MathML" xmlns:q="http://cnx.rice.edu/qml/1.0" id="eip-555">The sociology of health encompasses social epidemiology, disease, mental health, disability, and medicalization. The way that we perceive health and illness is in constant evolution. As we learn to control existing diseases, new diseases develop. As our society evolves to be more global, the way that diseases spread evolves with it. </para><para xmlns:m="http://www.w3.org/1998/Math/MathML" xmlns:q="http://cnx.rice.edu/qml/1.0" id="eip-290">What does “health” mean to you? Do you believe that there are too many people taking medications in U.S. society? Are you skeptical about people claiming they are “addicted” to gambling or “addicted” to sex? Can you think of anything that was historically considered a disease but is now considered within a range of normality? Or anything that has recently become known as a disease that before was considered evidence of laziness or other character flaws? Do you believe all children should receive vaccinations? These are questions examined in the sociology of health.</para><para xmlns:m="http://www.w3.org/1998/Math/MathML" xmlns:q="http://cnx.rice.edu/qml/1.0" id="eip-33">Sociologists may also understand these issues more fully by considering them through one of the main theoretical perspectives of the discipline. The functionalist perspective is a macroanalytical perspective that looks at the big picture and focuses on the way that all aspects of society are integral to the continued health and viability of the whole. For those working within the functionalist perspective, the focus is on how healthy individuals have the most to contribute to the stability of society. Functionalists might study the most efficient way to restore “sick” individuals to a healthy state. The conflict perspective is another macroanalytical perspective that focuses on the creation and reproduction of inequality. Someone applying the conflict perspective might focus on inequalities within the health system itself, by looking at disparities in race, ethnicity, gender, and age. Someone applying the interactionist perspective to health might focus on how people understand their health, and how their health affects their relationships with the people in their lives.</para><section xmlns:m="http://www.w3.org/1998/Math/MathML" xmlns:q="http://cnx.rice.edu/qml/1.0" id="ref1900" class="references" type="references"><title>References</title><para id="eip-id2171030"> ABC News Health News. "Ebola in America, Timeline of a Deadly Virus." Retrieved Oct. 23rd, 2014 (<link url="http://abcnews.go.com/Health/ebola-america-timeline/story?id=26159719">http://abcnews.go.com/Health/ebola-america-timeline/story?id=26159719</link>).</para><para id="import-auto-id1975453">Centers for Disease Control. 2011b.“Pertussis.” The Centers for Disease Control and Prevention. Retrieved December 15, 2011 (<link url="http://www.cdc.gov/pertussis/outbreaks.html">http://www.cdc.gov/pertussis/outbreaks.html</link>).</para><para id="import-auto-id2692916">Conrad, Peter, and Kristin Barker. 2010. “The Social Construction of Illness: Key Insights and Policy Implications.” <emphasis effect="italics">Journal of Health and Social Behavior</emphasis> 51:67–79. </para>
+    <para id="import-auto-id2793911">CNN. 2011. “Retracted Autism Study an 'Elaborate Fraud,' British Journal Finds.” <emphasis effect="italics">CNN</emphasis>, January 5. Retrieved December 16, 2011 (<link url="http://www.cnn.com/2011/HEALTH/01/05/autism.vaccines/index.html">http://www.cnn.com/2011/HEALTH/01/05/autism.vaccines/index.html</link>).</para><para id="import-auto-id2377397">Devlin, Kate. 2008. “Measles worry MMR as vaccination rates stall.” <emphasis effect="italics">The Telegraph</emphasis>, September 24. Retrieved January 19, 2012 (<link url="http://www.telegraph.co.uk/news/uknews/3074023/Measles-worries-as-MMR-vaccination-rates-stall.html">http://www.telegraph.co.uk/news/uknews/3074023/Measles-worries-as-MMR-vaccination-rates-stall.html</link>).</para><para id="import-auto-id1381186">Sugerman, David E., Albert E. Barskey, Maryann G. Delea, Ismael R. Ortega-Sanchez, Daoling Bi, Kimberly J. Ralston, Paul A. Rota, Karen Waters-Montijo, and Charles W. LeBaron. 2010. “Measles Outbreak in a Highly Vaccinated Population, San Diego, 2008: Role of the Intentionally Undervaccinated.” <emphasis effect="italics">Pediatrics</emphasis> 125(4):747–755. Retrieved December 16, 2011 (<link url="http://www.pediatricsdigest.mobi/content/125/4/747.full">http://www.pediatricsdigest.mobi/content/125/4/747.full</link>).</para><para id="eip-id7612713">World Health Organization. 2014. "Global Alert and Response." Retrieved Oct. 23rd 2014 (<link url="http://www.who.int/csr/disease/ebola/en/">http://www.who.int/csr/disease/ebola/en/</link>).</para><para id="import-auto-id3025733">Zacharyczuk, Colleen. 2011. “Myriad causes contributed to California pertussis outbreak.” Thorofar, NJ: Pediatric Supersite. Retrieved December 16, 2011 (<link url="http://www.pediatricsupersite.com/view.aspx?rid=90516">http://www.pediatricsupersite.com/view.aspx?rid=90516</link>).</para></section></content>
+</document>

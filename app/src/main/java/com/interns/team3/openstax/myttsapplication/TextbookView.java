@@ -24,7 +24,7 @@ public class TextbookView extends AppCompatActivity {
     private TextbookViewAdapter adapter;
     private RecyclerView.LayoutManager layoutManager;
 
-    public static String modId;
+    public static String modId, bookId;
     public static Document content;
     public ArrayList<String> dataSet;
 
@@ -47,6 +47,7 @@ public class TextbookView extends AppCompatActivity {
         //get content
         Intent intent = getIntent();
         modId = intent.getStringExtra("Module ID");
+        bookId = intent.getStringExtra("Book ID");
         // Toast.makeText(getApplicationContext(), modId, Toast.LENGTH_SHORT).show();
 
         content = getContent();
@@ -75,7 +76,7 @@ public class TextbookView extends AppCompatActivity {
 
         try {
 
-            String fileName = "col11629_1.7_complete/"+modId+"/index.cnxml.html";
+            String fileName = "Books/"+bookId+"/"+modId+"/index.cnxml.html";
             StringBuilder buf = new StringBuilder();
             InputStreamReader inputStream = new InputStreamReader(getAssets().open(fileName));
             BufferedReader bufferedReader = new BufferedReader(inputStream);

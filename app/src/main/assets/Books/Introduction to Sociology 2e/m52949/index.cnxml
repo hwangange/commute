@@ -1,0 +1,234 @@
+<?xml version="1.0"?>
+<document xmlns="http://cnx.rice.edu/cnxml" id="imported-from-openoffice" module-id="imported-from-openoffice" cnxml-version="0.7">
+  <title>Gender</title>
+<metadata xmlns:md="http://cnx.rice.edu/mdml"
+          mdml-version="0.5">
+  <!-- WARNING! The 'metadata' section is read only. Do not edit below.
+       Changes to the metadata section in the source will not be saved. -->
+  <md:repository>http://legacy.cnx.org/content</md:repository>
+  <md:content-url>http://legacy.cnx.org/content/m52949/latest/</md:content-url>
+  <md:content-id>m52949</md:content-id>
+  <md:title>Gender</md:title>
+  <md:version>1.3</md:version>
+  <md:created>2015/01/20 19:39:55 -0600</md:created>
+  <md:revised>2015/03/23 10:15:09.047 GMT-5</md:revised>
+  <md:actors>
+    <md:person userid="OSCRiceUniversity">
+      <md:firstname>Rice</md:firstname>
+      <md:surname>University</md:surname>
+      <md:fullname>Rice University</md:fullname>
+      <md:email>daniel@openstaxcollege.org</md:email>
+    </md:person>
+    <md:organization userid="OpenStaxCollege">
+      <md:shortname>OpenStax College</md:shortname>
+      <md:fullname>OpenStax College</md:fullname>
+      <md:email>info@openstaxcollege.org</md:email>
+    </md:organization>
+    <md:person userid="cnxsoc2">
+      <md:firstname>Openstax College</md:firstname>
+      <md:surname>Sociology 2e</md:surname>
+      <md:fullname>Openstax College Sociology 2e</md:fullname>
+      <md:email>sanura@mac.com</md:email>
+    </md:person>
+  </md:actors>
+  <md:roles>
+    <md:role type="author">OpenStaxCollege</md:role>
+    <md:role type="maintainer">OpenStaxCollege cnxsoc2</md:role>
+    <md:role type="licensor">OSCRiceUniversity</md:role>
+  </md:roles>
+  <md:license url="http://creativecommons.org/licenses/by/4.0/">Creative Commons Attribution License 4.0</md:license>
+  <!-- For information on license requirements for use or modification, see license url in the
+       above <md:license> element.
+       For information on formatting required attribution, see the URL:
+         CONTENT_URL/content_info#cnx_cite_header
+       where CONTENT_URL is the value provided above in the <md:content-url> element.
+  -->
+  <md:derived-from url="http://legacy.cnx.org/content/m42871/1.4/">
+  </md:derived-from>
+  <md:keywordlist>
+    <md:keyword>Doing gender</md:keyword>
+    <md:keyword>Sexism</md:keyword>
+  </md:keywordlist>
+  <md:subjectlist>
+    <md:subject>Social Sciences</md:subject>
+  </md:subjectlist>
+  <md:abstract><list>
+<item>Explain the influence of socialization on gender roles in the United States</item>
+<item>Understand the stratification of gender in major American institutions</item>
+<item>Describe gender from the view of each sociological perspective</item>
+</list></md:abstract>
+  <md:language>en</md:language>
+  <!-- WARNING! The 'metadata' section is read only. Do not edit above.
+       Changes to the metadata section in the source will not be saved. -->
+</metadata>
+
+<content>
+    
+    
+
+<figure xmlns:m="http://www.w3.org/1998/Math/MathML" xmlns:q="http://cnx.rice.edu/qml/1.0" id="import-auto-id2858898"><media id="import-auto-id1333072" alt="Woman in 1950s or 1960s dress putting coffee on buffet in a formally set family dining room.">
+        <image mime-type="image/png" src="Figure_12_02_01a.jpg" width="200"/>
+      </media>
+    <caption>Traditional images of U.S. gender roles reinforce the idea that women should be subordinate to men. (Photo courtesy of Sport Suburban/flickr)</caption></figure><section id="h21202_01">
+    <title>Gender and Socialization</title><para xmlns:m="http://www.w3.org/1998/Math/MathML" xmlns:q="http://cnx.rice.edu/qml/1.0" id="import-auto-id1684978">The phrase “boys will be boys” is often used to justify behavior such as pushing, shoving, or other forms of aggression from young boys. The phrase implies that such behavior is unchangeable and something that is part of a boy’s nature. Aggressive behavior, when it does not inflict significant harm, is often accepted from boys and men because it is congruent with the cultural script for masculinity. The “script” written by society is in some ways similar to a script written by a playwright. Just as a playwright expects actors to adhere to a prescribed script, society expects women and men to behave according to the expectations of their respective gender roles. Scripts are generally learned through a process known as socialization, which teaches people to behave according to social norms. </para><section id="h31202_01">
+    <title>Socialization</title><para id="import-auto-id2617082">Children learn at a young age that there are distinct expectations for boys and girls. Cross-cultural studies reveal that children are aware of gender roles by age two or three. At four or five, most children are firmly entrenched in culturally appropriate gender roles (Kane 1996). Children acquire these roles through socialization, a process in which people learn to behave in a particular way as dictated by societal values, beliefs, and attitudes. For example, society often views riding a motorcycle as a masculine activity and, therefore, considers it to be part of the male gender role. Attitudes such as this are typically based on stereotypes, oversimplified notions about members of a group. Gender stereotyping involves overgeneralizing about the attitudes, traits, or behavior patterns of women or men. For example, women may be thought of as too timid or weak to ride a motorcycle. </para>
+    <figure xmlns:m="http://www.w3.org/1998/Math/MathML" xmlns:q="http://cnx.rice.edu/qml/1.0" id="import-auto-id1453505"><media id="import-auto-id1373712" alt="A woman riding a pink motorcycle is shown here.">
+        <image mime-type="image/png" src="Figure_12_02_02a.jpg" width="250"/>
+      </media>
+    <caption>Although our society may have a stereotype that associates motorcycles with men, female bikers demonstrate that a woman’s place extends far beyond the kitchen in the modern United States. (Photo courtesy of Robert Couse-Baker/flickr)</caption></figure><para xmlns:m="http://www.w3.org/1998/Math/MathML" xmlns:q="http://cnx.rice.edu/qml/1.0" id="import-auto-id173921">Gender stereotypes form the basis of sexism. <term id="import-auto-id1332231">Sexism</term> <emphasis effect="bold"/>refers to prejudiced beliefs that value one sex over another. It varies in its level of severity. In parts of the world where women are strongly undervalued, young girls may not be given the same access to nutrition, healthcare, and education as boys. Further, they will grow up believing they deserve to be treated differently from boys (UNICEF 2011; Thorne 1993). While it is illegal in the United States when practiced as discrimination, unequal treatment of women continues to pervade social life. It should be noted that discrimination based on sex occurs at both the micro- and macro-levels. Many sociologists focus on discrimination that is built into the social structure; this type of discrimination is known as institutional discrimination (Pincus 2008).</para><para id="import-auto-id2011383">Gender socialization occurs through four major agents of socialization: family, education, peer groups, and mass media. Each agent reinforces gender roles by creating and maintaining normative expectations for gender-specific behavior. Exposure also occurs through secondary agents such as religion and the workplace. Repeated exposure to these agents over time leads men and women into a false sense that they are acting naturally rather than following a socially constructed role.</para>
+    <para id="import-auto-id1301053">Family is the first agent of socialization. There is considerable evidence that parents socialize sons and daughters differently. Generally speaking, girls are given more latitude to step outside of their prescribed gender role (Coltrane and Adams 2004; Kimmel 2000; Raffaelli and Ontai 2004). However, differential socialization typically results in greater privileges afforded to sons. For instance, boys are allowed more autonomy and independence at an earlier age than daughters. They may be given fewer restrictions on appropriate clothing, dating habits, or curfew. Sons are also often free from performing domestic duties such as cleaning or cooking and other household tasks that are considered feminine. Daughters are limited by their expectation to be passive and nurturing, generally obedient, and to assume many of the domestic responsibilities. </para>
+    <para xmlns:m="http://www.w3.org/1998/Math/MathML" xmlns:q="http://cnx.rice.edu/qml/1.0" id="import-auto-id2660068">Even when parents set gender equality as a goal, there may be underlying indications of inequality. For example, boys may be asked to take out the garbage or perform other tasks that require strength or toughness, while girls may be asked to fold laundry or perform duties that require neatness and care. It has been found that fathers are firmer in their expectations for gender conformity than are mothers, and their expectations are stronger for sons than they are for daughters (Kimmel 2000). This is true in many types of activities, including preference for toys, play styles, discipline, chores, and personal achievements. As a result, boys tend to be particularly attuned to their father’s disapproval when engaging in an activity that might be considered feminine, like dancing or singing (Coltraine and Adams 2008). Parental socialization and normative expectations also vary along lines of social class, race, and ethnicity. African American families, for instance, are more likely than Caucasians to model an egalitarian role structure for their children (Staples and Boulin Johnson 2004).</para><para xmlns:m="http://www.w3.org/1998/Math/MathML" xmlns:q="http://cnx.rice.edu/qml/1.0" id="import-auto-id882508">The reinforcement of gender roles and stereotypes continues once a child reaches school age. Until very recently, schools were rather explicit in their efforts to stratify boys and girls. The first step toward stratification was segregation. Girls were encouraged to take home economics or humanities courses and boys to take math and science. </para><para xmlns:m="http://www.w3.org/1998/Math/MathML" xmlns:q="http://cnx.rice.edu/qml/1.0" id="import-auto-id2101327">Studies suggest that gender socialization still occurs in schools today, perhaps in less obvious forms (Lips 2004). Teachers may not even realize they are acting in ways that reproduce gender differentiated behavior patterns. Yet any time they ask students to arrange their seats or line up according to gender, teachers may be asserting that boys and girls should be treated differently (Thorne 1993). </para><para xmlns:m="http://www.w3.org/1998/Math/MathML" xmlns:q="http://cnx.rice.edu/qml/1.0" id="import-auto-id2868948">Even in levels as low as kindergarten, schools subtly convey messages to girls indicating that they are less intelligent or less important than boys. For example, in a study of teacher responses to male and female students, data indicated that teachers praised male students far more than female students. Teachers interrupted girls more often and gave boys more opportunities to expand on their ideas (Sadker and Sadker 1994). Further, in social as well as academic situations, teachers have traditionally treated boys and girls in opposite ways, reinforcing a sense of competition rather than collaboration (Thorne 1993). Boys are also permitted a greater degree of freedom to break rules or commit minor acts of deviance, whereas girls are expected to follow rules carefully and adopt an obedient role (Ready 2001).</para><para id="import-auto-id1001656">Mimicking the actions of significant others is the first step in the development of a separate sense of self (Mead 1934). Like adults, children become agents who actively facilitate and apply normative gender expectations to those around them. When children do not conform to the appropriate gender role, they may face negative sanctions such as being criticized or marginalized by their peers. Though many of these sanctions are informal, they can be quite severe. For example, a girl who wishes to take karate class instead of dance lessons may be called a “tomboy” and face difficulty gaining acceptance from both male and female peer groups (Ready 2001). Boys, especially, are subject to intense ridicule for gender nonconformity (Coltrane and Adams 2004; Kimmel 2000).</para>
+    <para xmlns:m="http://www.w3.org/1998/Math/MathML" xmlns:q="http://cnx.rice.edu/qml/1.0" id="import-auto-id1763733">Mass media serves as another significant agent of gender socialization. In television and movies, women tend to have less significant roles and are often portrayed as wives or mothers. When women are given a lead role, it often falls into one of two extremes: a wholesome, saint-like figure or a malevolent, hypersexual figure (Etaugh and Bridges 2003). This same inequality is pervasive in children’s movies (Smith 2008). Research indicates that in the ten top-grossing G-rated movies released between 1991 and 2013, nine out of ten characters were male (Smith 2008). </para><para id="import-auto-id2195594">Television commercials and other forms of advertising also reinforce inequality and gender-based stereotypes. Women are almost exclusively present in ads promoting cooking, cleaning, or childcare-related products (Davis 1993). Think about the last time you saw a man star in a dishwasher or laundry detergent commercial. In general, women are underrepresented in roles that involve leadership, intelligence, or a balanced psyche. Of particular concern is the depiction of women in ways that are dehumanizing, especially in music videos. Even in mainstream advertising, however, themes intermingling violence and sexuality are quite common (Kilbourne 2000).</para>
+    </section>
+
+    <section id="h31202_02">
+    <title>Social Stratification and Inequality</title><para xmlns:m="http://www.w3.org/1998/Math/MathML" xmlns:q="http://cnx.rice.edu/qml/1.0" id="import-auto-id1449338">Stratification refers to a system in which groups of people experience unequal access to basic, yet highly valuable, social resources. The United States is characterized by gender stratification (as well as stratification of race, income, occupation, and the like). Evidence of gender stratification is especially keen within the economic realm. Despite making up nearly half (49.8 percent) of payroll employment, men vastly outnumber women in authoritative, powerful, and, therefore, high-earning jobs (U.S. Census Bureau 2010). Even when a woman’s employment status is equal to a man’s, she will generally make only 77 cents for every dollar made by her male counterpart (U.S. Census Bureau 2010). Women in the paid labor force also still do the majority of the unpaid work at home. On an average day, 84 percent of women (compared to 67 percent of men) spend time doing household management activities (U.S. Census Bureau 2011). This double duty keeps working women in a subordinate role in the family structure (Hochschild and Machung 1989).</para><para xmlns:m="http://www.w3.org/1998/Math/MathML" xmlns:q="http://cnx.rice.edu/qml/1.0" id="import-auto-id2217754">Gender stratification through the division of labor is not exclusive to the United States. According to George Murdock’s classic work, <emphasis effect="italics">Outline of World Cultures</emphasis> (1954), all societies classify work by gender. When a pattern appears in all societies, it is called a cultural universal. While the phenomenon of assigning work by gender is universal, its specifics are not. The same task is not assigned to either men or women worldwide. But the way each task’s associated gender is valued is notable. In Murdock’s examination of the division of labor among 324 societies around the world, he found that in nearly all cases the jobs assigned to men were given greater prestige (Murdock and White 1968). Even if the job types were very similar and the differences slight, men’s work was still considered more vital. </para><para id="import-auto-id2631142">There is a long history of gender stratification in the United States. When looking to the past, it would appear that society has made great strides in terms of abolishing some of the most blatant forms of gender inequality (see timeline below) but underlying effects of male dominance still permeate many aspects of society. </para>
+    <list id="import-auto-id1738674">
+    <item>Before 1809—Women could not execute a will</item>
+    <item>Before 1840—Women were not allowed to own or control property</item>
+    <item>Before 1920—Women were not permitted to vote</item>
+    <item>Before 1963—Employers could legally pay a woman less than a man for the same work</item>
+    <item>Before 1973—Women did not have the right to a safe and legal abortion (Imbornoni 2009)</item>
+    </list>
+
+    <figure xmlns:m="http://www.w3.org/1998/Math/MathML" xmlns:q="http://cnx.rice.edu/qml/1.0" id="import-auto-id1461862"><media id="import-auto-id3644107" alt="A woman is shown kneeling on bathroom floor scrubbing toilet.">
+        <image mime-type="image/png" src="Figure_12_02_04a.jpg" width="300"/>
+      </media>
+    <caption>In some cultures, women do all of the household chores with no help from men, as doing housework is a sign of weakness, considered by society as a feminine trait. (Photo courtesy of Evil Erin/flickr) </caption></figure></section>
+    </section>
+
+    <section id="h21202_02">
+    <title>Theoretical Perspectives on Gender<emphasis effect="bold"/></title><para xmlns:m="http://www.w3.org/1998/Math/MathML" xmlns:q="http://cnx.rice.edu/qml/1.0" id="import-auto-id2184459">Sociological theories help sociologists to develop questions and interpret data. For example, a sociologist studying why middle-school girls are more likely than their male counterparts to fall behind grade-level expectations in math and science might use a feminist perspective to frame her research. Another scholar might proceed from the conflict perspective to investigate why women are underrepresented in political office, and an interactionist might examine how the symbols of femininity interact with symbols of political authority to affect how women in Congress are treated by their male counterparts in meetings. </para><section id="h31202_03">
+    <title>Structural Functionalism</title><para id="import-auto-id2649102">Structural functionalism has provided one of the most important perspectives of sociological research in the twentieth century and has been a major influence on research in the social sciences, including gender studies. Viewing the family as the most integral component of society, assumptions about gender roles within marriage assume a prominent place in this perspective. </para>
+    <para id="import-auto-id3175282">Functionalists argue that gender roles were established well before the pre-industrial era when men typically took care of responsibilities outside of the home, such as hunting, and women typically took care of the domestic responsibilities in or around the home. These roles were considered functional because women were often limited by the physical restraints of pregnancy and nursing and unable to leave the home for long periods of time. Once established, these roles were passed on to subsequent generations since they served as an effective means of keeping the family system functioning properly. </para>
+    <para xmlns:m="http://www.w3.org/1998/Math/MathML" xmlns:q="http://cnx.rice.edu/qml/1.0" id="import-auto-id3634563">When changes occurred in the social and economic climate of the United States during World War II, changes in the family structure also occurred. Many women had to assume the role of breadwinner (or modern hunter-gatherer) alongside their domestic role in order to stabilize a rapidly changing society. When the men returned from war and wanted to reclaim their jobs, society fell back into a state of imbalance, as many women did not want to forfeit their wage-earning positions (Hawke 2007).</para></section>
+
+    <section id="h31202_04">
+    <title>Conflict Theory</title><para id="import-auto-id2651770">According to conflict theory, society is a struggle for dominance among social groups (like women versus men) that compete for scarce resources. When sociologists examine gender from this perspective, we can view men as the dominant group and women as the subordinate group. According to conflict theory, social problems are created when dominant groups exploit or oppress subordinate groups. Consider the Women’s Suffrage Movement or the debate over women’s “right to choose” their reproductive futures. It is difficult for women to rise above men, as dominant group members create the rules for success and opportunity in society (Farrington and Chertok 1993). </para>
+    <para id="import-auto-id1677306">Friedrich Engels, a German sociologist, studied family structure and gender roles. Engels suggested that the same owner-worker relationship seen in the labor force is also seen in the household, with women assuming the role of the proletariat. This is due to women’s dependence on men for the attainment of wages, which is even worse for women who are entirely dependent upon their spouses for economic support. Contemporary conflict theorists suggest that when women become wage earners, they can gain power in the family structure and create more democratic arrangements in the home, although they may still carry the majority of the domestic burden, as noted earlier (Rismanand and Johnson-Sumerford 1998).</para>
+    </section>
+    
+    <section id="h31202_05">
+    <title>Feminist Theory</title><para xmlns:m="http://www.w3.org/1998/Math/MathML" xmlns:q="http://cnx.rice.edu/qml/1.0" id="import-auto-id1195550">Feminist theory is a type of conflict theory that examines inequalities in gender-related issues. It uses the conflict approach to examine the maintenance of gender roles and inequalities. Radical feminism, in particular, considers the role of the family in perpetuating male dominance. In patriarchal societies, men’s contributions are seen as more valuable than those of women. Patriarchal perspectives and arrangements are widespread and taken for granted. As a result, women’s viewpoints tend to be silenced or marginalized to the point of being discredited or considered invalid. </para><para xmlns:m="http://www.w3.org/1998/Math/MathML" xmlns:q="http://cnx.rice.edu/qml/1.0" id="import-auto-id1461157">Sanday’s study of the Indonesian Minangkabau (2004) revealed that in societies some consider to be matriarchies (where women comprise the dominant group), women and men tend to work cooperatively rather than competitively regardless of whether a job is considered feminine by U.S. standards. The men, however, do not experience the sense of bifurcated consciousness under this social structure that modern U.S. females encounter (Sanday 2004).</para></section>    
+
+    <section id="h31202_06">
+    <title>Symbolic Interactionism</title><para xmlns:m="http://www.w3.org/1998/Math/MathML" xmlns:q="http://cnx.rice.edu/qml/1.0" id="import-auto-id1662532">Symbolic interactionism aims to understand human behavior by analyzing the critical role of symbols in human interaction. This is certainly relevant to the discussion of masculinity and femininity. Imagine that you walk into a bank hoping to get a small loan for school, a home, or a small business venture. If you meet with a male loan officer, you may state your case logically by listing all the hard numbers that make you a qualified applicant as a means of appealing to the analytical characteristics associated with masculinity. If you meet with a female loan officer, you may make an emotional appeal by stating your good intentions as a means of appealing to the caring characteristics associated with femininity. </para><para xmlns:m="http://www.w3.org/1998/Math/MathML" xmlns:q="http://cnx.rice.edu/qml/1.0" id="import-auto-id1681614">Because the meanings attached to symbols are socially created and not natural, and fluid, not static, we act and react to symbols based on the current assigned meaning. The word <emphasis effect="italics">gay</emphasis>, for example, once meant “cheerful,” but by the 1960s it carried the primary meaning of “homosexual.” In transition, it was even known to mean “careless” or “bright and showing” (Oxford American Dictionary 2010). Furthermore, the word <emphasis effect="italics">gay</emphasis> (as it refers to a homosexual), carried a somewhat negative and unfavorable meaning fifty years ago, but it has since gained more neutral and even positive connotations.  When people perform tasks or possess characteristics based on the gender role assigned to them, they are said to be <term>doing gender</term>. This notion is based on the work of West and Zimmerman (1987). Whether we are expressing our masculinity or femininity, West and Zimmerman argue, we are always "doing gender." Thus, gender is something we do or perform, not something we are. </para><para xmlns:m="http://www.w3.org/1998/Math/MathML" xmlns:q="http://cnx.rice.edu/qml/1.0" id="import-auto-id3139357">In other words, both gender and sexuality are socially constructed.  The <term>social construction of sexuality</term> refers to the way in which socially created definitions about the cultural appropriateness of sex-linked behavior shape the way people see and experience sexuality. This is in marked contrast to theories of sex, gender, and  sexuality that link male and female behavior to <term>biological determinism</term>, or the belief that men and women behave differently due to differences in their biology.   </para></section>
+    </section>
+
+    <note xmlns:m="http://www.w3.org/1998/Math/MathML" xmlns:q="http://cnx.rice.edu/qml/1.0" id="mcsr1202" class="sociological-research"><label/><title>Being Male, Being Female, and Being Healthy</title>
+    <para id="import-auto-id2275052">In 1971, Broverman and Broverman conducted a groundbreaking study on the traits mental health workers ascribed to males and females. When asked to name the characteristics of a female, the list featured words such as unaggressive, gentle, emotional, tactful, less logical, not ambitious, dependent, passive, and neat. The list of male characteristics featured words such as aggressive, rough, unemotional, blunt, logical, direct, active, and sloppy (Seem and Clark 2006). Later, when asked to describe the characteristics of a healthy person (not gender specific), the list was nearly identical to that of a male. </para>
+    <para id="import-auto-id1386113">This study uncovered the general assumption that being female is associated with being somewhat unhealthy or not of sound mind. This concept seems extremely dated, but in 2006, Seem and Clark replicated the study and found similar results. Again, the characteristics associated with a healthy male were very similar to that of a healthy (genderless) adult. The list of characteristics associated with being female broadened somewhat but did not show significant change from the original study (Seem and Clark 2006). This interpretation of feminine characteristic may help us one day better understand gender disparities in certain illnesses, such as why one in eight women can be expected to develop clinical depression in her lifetime (National Institute of Mental Health 1999). Perhaps these diagnoses are not just a reflection of women’s health, but also a reflection of society’s labeling of female characteristics, or the result of institutionalized sexism.</para>
+    </note><section id="summary_1202" class="section-summary" type="section-summary">
+    <title>Summary</title>
+    <para id="import-auto-id2764498">Children become aware of gender roles in their earliest years, and they come to understand and perform these roles through socialization, which occurs through four major agents: family, education, peer groups, and mass media. Socialization into narrowly prescribed gender roles results in the stratification of males and females. Each sociological perspective offers a valuable view for understanding how and why gender inequality occurs in our society.</para>
+    </section>
+
+    <section id="sq1202" class="section-quiz" type="section-quiz">
+    <title>Section Quiz</title>
+
+    <exercise id="sq1202_ex1" type="section-quiz">
+        <problem id="sq1202_prob01">
+            <para id="import-auto-id1671290">Which of the following is the best example of a gender stereotype?</para>
+                <list xmlns:m="http://www.w3.org/1998/Math/MathML" xmlns:q="http://cnx.rice.edu/qml/1.0" id="sq01" list-type="enumerated" number-style="lower-alpha"><item>Women are typically shorter than men.</item>
+                <item>Men do not live as long as women.</item>
+                <item>Women tend to be overly emotional, while men tend to be levelheaded.</item>
+                <item>Men hold more high-earning, leadership jobs than women. </item>
+                </list></problem>  <solution id="fs-id1169762532323">
+          <label/>
+          <title>Answer</title>
+          <para id="fs-id1169762776987">C</para>
+        </solution>
+    </exercise>
+
+    <exercise id="sq1202_ex2" type="section-quiz">
+        <problem id="sq1202_prob02">
+            <para id="import-auto-id1373883">Which of the following is the best example of the role peers play as an agent of socialization for school-aged children?</para>
+                <list xmlns:m="http://www.w3.org/1998/Math/MathML" xmlns:q="http://cnx.rice.edu/qml/1.0" id="sq02" list-type="enumerated" number-style="lower-alpha"><item>Children can act however they wish around their peers because children are unaware of gender roles.</item>
+    <item>Peers serve as a support system for children who wish to act outside of their assigned gender roles.</item>
+    <item>Peers tend to reinforce gender roles by criticizing and marginalizing those who behave outside of their assigned roles.</item>
+    <item>None of the above</item>
+                </list></problem>  <solution id="fs-id1169762383884">
+          <label/>
+          <title>Answer</title>
+          <para id="fs-id1169762610693">C</para>
+        </solution>
+    </exercise>
+
+    <exercise id="sq1202_ex3" type="section-quiz">
+        <problem id="sq1202_prob03">
+             <para id="import-auto-id2884097">To which theoretical perspective does the following statement most likely apply: Women continue to assume the responsibility in the household along with a paid occupation because it keeps the household running smoothly, i.e., at a state of balance?</para>
+                  <list xmlns:m="http://www.w3.org/1998/Math/MathML" xmlns:q="http://cnx.rice.edu/qml/1.0" id="sq03" list-type="enumerated" number-style="lower-alpha"><item>Conflict theory</item>
+    <item>Functionalism</item>
+    <item>Feminist theory</item>
+    <item>Symbolic interactionism</item>
+                </list></problem>  <solution id="fs-id1169762725985">
+          <label/>
+          <title>Answer</title>
+          <para id="fs-id1169762387453">B</para>
+        </solution>
+    </exercise>
+
+    <exercise xmlns:m="http://www.w3.org/1998/Math/MathML" xmlns:q="http://cnx.rice.edu/qml/1.0" id="eip-609" type="section-quiz"><problem id="sq1202_prob04">
+    <para id="import-auto-id1884864">Only women are affected by gender stratification.</para>
+    <list id="sq04" list-type="enumerated" number-style="lower-alpha"><item>True</item>
+    <item>False</item>
+    </list></problem>
+    
+
+<solution id="eip-627">
+          <label/>
+          <title>Answer</title>
+  <para id="eip-944">B</para>
+</solution>
+</exercise><exercise id="sq1202_ex5" type="section-quiz">
+        <problem id="sq1202_prob05">
+    <para id="import-auto-id1371542">According to the symbolic interactionist perspective, we “do gender”:</para>
+    <list xmlns:m="http://www.w3.org/1998/Math/MathML" xmlns:q="http://cnx.rice.edu/qml/1.0" id="sq05" list-type="enumerated" number-style="lower-alpha"><item>during half of our activities</item>
+    <item>only when they apply to our biological sex</item>
+    <item>only if we are actively following gender roles</item>
+    <item>all of the time, in everything we do</item>
+    </list></problem>
+ 
+      <solution id="fs-id1169762494504">
+          <label/>
+          <title>Answer</title>
+          <para id="fs-id1169760117194">D</para>
+        </solution>
+    </exercise>
+    </section>
+
+    <section xmlns:m="http://www.w3.org/1998/Math/MathML" xmlns:q="http://cnx.rice.edu/qml/1.0" id="sh1202" class="short-answer" type="short-answer"><title>Short Answer</title><exercise id="sh1202_ex1" type="short-answer">
+        <problem id="sh1202_prob01">
+    <para id="import-auto-id3144287">In what way do parents treat sons and daughters differently? How do sons and daughters typically respond to this treatment?</para></problem>
+    </exercise>
+
+    <exercise id="sh1202_ex2" type="short-answer">
+        <problem id="sh1202_prob02">
+    <para id="import-auto-id1654243">What can be done to lessen the effects of gender stratification in the workplace? How does gender stratification harm both men and women?</para>
+        </problem>
+    </exercise>
+    </section><section xmlns:m="http://www.w3.org/1998/Math/MathML" xmlns:q="http://cnx.rice.edu/qml/1.0" id="fresearch1202" class="further-research" type="further-research"><title>Further Research</title><para id="import-auto-id2681129">Learn more about gender at the Kinsey Institute here: <link url="http://openstaxcollege.org/l/2EKinsey">http://openstaxcollege.org/l/2EKinsey</link></para></section>
+
+<section id="ref1202" class="references" type="references">
+      <title>References</title>
+      <para xmlns:m="http://www.w3.org/1998/Math/MathML" xmlns:q="http://cnx.rice.edu/qml/1.0" id="eip-697">Box Office Mojo. n.d. "Domestic Grosses by MPAA Rating." Retrieved December 29, 2014 (<link url="http://www.boxofficemojo.com/alltime/domestic/mpaa.htm?page=G&amp;p=.htm">http://www.boxofficemojo.com/alltime/domestic/mpaa.htm?page=G&amp;p=.htm</link>).</para><para xmlns:m="http://www.w3.org/1998/Math/MathML" xmlns:q="http://cnx.rice.edu/qml/1.0" id="import-auto-id3123636">Campbell, Patricia, and Jennifer Storo. 1994. "Girls Are … Boys Are … : Myths, Stereotypes &amp; Gender Differences.” Office of Educational Research and Improvement U.S. Department of Education. Retrieved February 13, 2012 (<link url="http://www.campbell-kibler.com/Stereo.pdf">http://www.campbell-kibler.com/Stereo.pdf</link>). </para><para xmlns:m="http://www.w3.org/1998/Math/MathML" xmlns:q="http://cnx.rice.edu/qml/1.0" id="import-auto-id2768417">Coltrane, Scott, and Michele Adams. 2008. <emphasis effect="italics">Gender and Families</emphasis> Lanham, MD: Rowman &amp; Littlefield.</para><para id="import-auto-id1461854">Cooley, Charles Horton. 1902. <emphasis effect="italics">Human Nature and the Social Order</emphasis>. New York: Scribner’s. </para>
+      <para id="import-auto-id1495059">Davis, Donald M. 1993. “TV Is a Blonde, Blonde World.” <emphasis effect="italics">American Demographics, Special Issue: Women Change Places</emphasis> 15(5):34–41. </para>
+      <para xmlns:m="http://www.w3.org/1998/Math/MathML" xmlns:q="http://cnx.rice.edu/qml/1.0" id="import-auto-id3119208">Etaugh, Clair, and Judith Bridges. 2004. <emphasis effect="italics">Women’s Lives: a Topical Approach</emphasis><emphasis effect="italics">. </emphasis>Boston, MA: Allyn &amp; Bacon. </para><para xmlns:m="http://www.w3.org/1998/Math/MathML" xmlns:q="http://cnx.rice.edu/qml/1.0" id="import-auto-id2783357">Farrington, K., and W. Chertok. 1993. “Social Conflict Theories of the Family.” Pp. 357–381 in <emphasis effect="italics">Sourcebook of Family Theories and Methods: A Contextual Approach</emphasis>, edited by P.G. Boss, W.J. Doherty, R. LaRossa, W.R. Schumm and S.K. Steinmetz. New York: Plenum.</para><para xmlns:m="http://www.w3.org/1998/Math/MathML" xmlns:q="http://cnx.rice.edu/qml/1.0" id="eip-178">Hardwick, Courtney. 2014. "10 of the Highest Paid Child Stars." The Richest.com. Retrieved December 29, 2014 (<link url="http://www.therichest.com/expensive-lifestyle/money/10-of-the-highest-paid-child-stars/">http://www.therichest.com/expensive-lifestyle/money/10-of-the-highest-paid-child-stars/</link>). </para><para xmlns:m="http://www.w3.org/1998/Math/MathML" xmlns:q="http://cnx.rice.edu/qml/1.0" id="import-auto-id1315706">Hawke, Lucy A. 2008. “Gender Roles Within American Marriage: Are They Really Changing?” <emphasis effect="italics">ESSAI</emphasis> 5:70-74. Retrieved February 22, 2012 (<link url="http://dc.cod.edu/cgi/viewcontent.cgi?article=1023&amp;context=essai">http://dc.cod.edu/cgi/viewcontent.cgi?article=1023&amp;context=essai</link>).</para><para xmlns:m="http://www.w3.org/1998/Math/MathML" xmlns:q="http://cnx.rice.edu/qml/1.0" id="import-auto-id1357604">Hochschild, Arlie R., and Anne Machung. 1989. <emphasis effect="italics">The Second Shift: Working Parents and the Revolution at Home</emphasis><emphasis effect="italics">. </emphasis>New York: Viking. </para><para xmlns:m="http://www.w3.org/1998/Math/MathML" xmlns:q="http://cnx.rice.edu/qml/1.0" id="import-auto-id2269528">Imbornoni, Ann-Marie. 2009. “Women’s Rights Movement in the United States.” Retrieved January 10, 2012 (<link url="http://www.infoplease.com/spot/womenstimeline1.html">http://www.infoplease.com/spot/womenstimeline1.html</link>).</para><para id="import-auto-id1669547">Kane, Eileen. 1996. “Gender, Culture, and Learning.” Washington, DC: Academy for Educational Development.</para>
+      <para id="import-auto-id2660115">Kilbourne, Jean. 2000. <emphasis effect="italics">Can’t Buy Me Love: How Advertising Changed the Way We Think and Feel</emphasis><emphasis effect="italics">. </emphasis>New York: Touchstone Publishing.</para>
+      <para id="import-auto-id1495314">Kimmel, Michael. 2000. <emphasis effect="italics">The Gendered Society</emphasis>. Oxford, UK: Oxford University Press.</para>
+      <para id="import-auto-id1291216">Lips, Hillary M. 2004. “The Gender Gap in Possible Selves: Divergence of Academic Self-Views among High School and University Students. <emphasis effect="italics">Sex Roles</emphasis> 50(5/6):357–371.</para>
+      <para xmlns:m="http://www.w3.org/1998/Math/MathML" xmlns:q="http://cnx.rice.edu/qml/1.0" id="eip-902">Mead, George Herbert. 1967 [1934]. <emphasis effect="italics">Mind, Self, and Society: From the Standpoint of a Social Behaviorist</emphasis>. Chicago, IL: University of Chicago Press.</para><para xmlns:m="http://www.w3.org/1998/Math/MathML" xmlns:q="http://cnx.rice.edu/qml/1.0" id="import-auto-id1413952">Murdock, George Peter, and Douglas R. White. 1969. “Standard Cross-Cultural Sample.” <emphasis effect="italics">Ethnology</emphasis> 9:329–369. </para><para id="import-auto-id2343143">National Institute of Mental Health. 1999. Unpublished Epidemiological Catchment Area Analyses.</para>
+      <para id="import-auto-id1350103"><emphasis effect="italics">Oxford American Dictionary</emphasis>. 2010. 3rd ed. Oxford, U.K.: Oxford University Press. </para>
+      <para xmlns:m="http://www.w3.org/1998/Math/MathML" xmlns:q="http://cnx.rice.edu/qml/1.0" id="import-auto-id2826038">Pincus, Fred. 2000. “Discrimination Comes in Many Forms: Individual, Institutional, and Structural.” Pp. 31-35 in <emphasis effect="italics">Readings for Diversity and Social Justice</emphasis>. New York, NY: Routledge. </para><para xmlns:m="http://www.w3.org/1998/Math/MathML" xmlns:q="http://cnx.rice.edu/qml/1.0" id="import-auto-id2106970">Raffaelli, Marcela, and Lenna L. Ontai. 2004. “Gender Socialization in Latino/a Families: Results from Two Retrospective Studies.” <emphasis effect="italics">Sex Roles: A Journal of Research</emphasis> 50(5/6):287–299.</para><para id="import-auto-id2111192">Ready, Diane. 2001. “‘Spice Girls,’ ‘Nice Girls,’ ‘Girlies,’ and ‘Tomboys’: Gender Discourses, Girls’ Cultures and Femininities in the Primary Classroom.” <emphasis effect="italics">Gender and Education</emphasis> 13(2):153-167.</para>
+      <para xmlns:m="http://www.w3.org/1998/Math/MathML" xmlns:q="http://cnx.rice.edu/qml/1.0" id="import-auto-id1348605">Risman, Barbara, and Danette Johnson-Sumerford. 1998. “Doing It Fairly: A Study of Postgender Marriages.” <emphasis effect="italics">Journal of Marriage and Family</emphasis> (60)1:23–40.</para><para xmlns:m="http://www.w3.org/1998/Math/MathML" xmlns:q="http://cnx.rice.edu/qml/1.0" id="import-auto-id1310144">Sadker, David, and Myra Sadker. 1994. <emphasis effect="italics">Failing at Fairness: How Our Schools Cheat Girls</emphasis>. Toronto, ON: Simon &amp; Schuster.</para><para id="import-auto-id1763545">Sanday, Peggy Reeves. 2004. <emphasis effect="italics">Women at the Center: Life in a Modern Matriarchy</emphasis>. Ithaca, NY: Cornell University Press.</para>
+      <para xmlns:m="http://www.w3.org/1998/Math/MathML" xmlns:q="http://cnx.rice.edu/qml/1.0" id="import-auto-id2276193">Seem, Susan Rachael, and Diane M. Clark. 2006. “<link url="http://www.mendeley.com/research/healthy-women-healthy-men-healthy-adults-evaluation-gender-role-stereotypes-twentyfirst-century/">Healthy Women, Healthy Men, and Healthy Adults: An Evaluation of Gender Role Stereotypes in the Twenty-first Century</link>.” <emphasis effect="italics">Sex Roles</emphasis> 55(3-4):247–258.</para><para xmlns:m="http://www.w3.org/1998/Math/MathML" xmlns:q="http://cnx.rice.edu/qml/1.0" id="import-auto-id2282203">Smith, Stacy. 2008. “Gender Stereotypes: An Analysis of Popular Films and TV.” Geena Davis Institute on Gender in Media. Retrieved on January 10, 2012 (<link url="http://www.thegeenadavisinstitute.org/downloads/GDIGM_Gender_Stereotypes.pdf">http://www.thegeenadavisinstitute.org/downloads/GDIGM_Gender_Stereotypes.pdf</link>).</para><para xmlns:m="http://www.w3.org/1998/Math/MathML" xmlns:q="http://cnx.rice.edu/qml/1.0" id="import-auto-id2874001">Staples, Robert, and Leanor Boulin Johnson. 2004. <emphasis effect="italics">Black Families at the Crossroads: Challenges and Prospects</emphasis>. San Francisco, CA: Jossey-Bass. </para><para id="import-auto-id1899981">Thorne, Barrie. 1993. <emphasis effect="italics">Gender Play: Girls and Boys in School</emphasis><emphasis effect="italics">. </emphasis>New Brunswick, NJ: Rutgers University Press. </para>
+      <para xmlns:m="http://www.w3.org/1998/Math/MathML" xmlns:q="http://cnx.rice.edu/qml/1.0" id="import-auto-id2318223">UNICEF. 2007. “Early Gender Socialization.” August 29. Retrieved January 10, 2012 (<link url="http://www.unicef.org/earlychildhood/index_40749.html">http://www.unicef.org/earlychildhood/index_40749.html</link>).</para><para xmlns:m="http://www.w3.org/1998/Math/MathML" xmlns:q="http://cnx.rice.edu/qml/1.0" id="import-auto-id1653297">U.S. Census Bureau. 2010. “Income, Poverty, and Health Insurance Coverage in the United States: 2009.” Retrieved January 10, 2012 (<link url="http://www.census.gov/prod/2010pubs/p60-238.pdf">http://www.census.gov/prod/2010pubs/p60-238.pdf</link>).</para>
+<para xmlns:m="http://www.w3.org/1998/Math/MathML" xmlns:q="http://cnx.rice.edu/qml/1.0" id="import-auto-id1291105">U.S. Census Bureau. 2011. “American Time Use Survey Summary.” June 22. Retrieved January 10, 2012 (<link url="http://www.bls.gov/news.release/atus.nr0.htm">http://www.bls.gov/news.release/atus.nr0.htm</link>).</para><para xmlns:m="http://www.w3.org/1998/Math/MathML" xmlns:q="http://cnx.rice.edu/qml/1.0" id="import-auto-id2012284">West, Candace, and Don Zimmerman. 1987. “Doing Gender.” <emphasis effect="italics">Gender and Society</emphasis> 1(2):125–151.</para></section>
+  </content>
+   <glossary>
+<definition id="fs-id1166135925592"><term>biological determinism</term><meaning id="fs-id1166133441696">the belief that men and women behave differently due to inherent sex differences related to their biology</meaning></definition>
+    <definition id="import-auto-id1459977"><term>doing gender</term> <meaning id="fs-id1899792">the performance of tasks based upon the gender assigned to us by society and, in turn, ourselves</meaning></definition>
+    <definition id="import-auto-id2879122"><term>sexism</term> <meaning id="fs-id2727491">the prejudiced belief that one sex should be valued over another </meaning></definition>
+ <definition id="fs-id1164382114702"><term>social construction of sexuality</term><meaning id="fs-id1164379689599">socially created definitions about the cultural appropriateness of sex-linked behavior  which shape how people see and experience sexuality</meaning></definition>
+    </glossary>
+</document>

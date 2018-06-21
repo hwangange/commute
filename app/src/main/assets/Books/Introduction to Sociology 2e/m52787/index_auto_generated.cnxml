@@ -1,0 +1,288 @@
+<?xml version="1.0"?>
+<document xmlns="http://cnx.rice.edu/cnxml" id="imported-from-openoffice" module-id="imported-from-openoffice" cnxml-version="0.7">
+  <title>Elements of Culture</title>
+<metadata xmlns:md="http://cnx.rice.edu/mdml"
+          mdml-version="0.5">
+  <!-- WARNING! The 'metadata' section is read only. Do not edit below.
+       Changes to the metadata section in the source will not be saved. -->
+  <md:repository>http://legacy.cnx.org/content</md:repository>
+  <md:content-url>http://legacy.cnx.org/content/m52787/latest</md:content-url>
+  <md:content-id>m52787</md:content-id>
+  <md:title>Elements of Culture</md:title>
+  <md:version>1.5</md:version>
+  <md:created>2015/01/20 05:13:08 -0600</md:created>
+  <md:revised>2015/03/13 09:36:50 -0500</md:revised>
+  <md:actors>
+    <md:person userid="OSCRiceUniversity">
+      <md:firstname>Rice</md:firstname>
+      <md:surname>University</md:surname>
+      <md:fullname>Rice University</md:fullname>
+      <md:email>info@openstaxcollege.org</md:email>
+    </md:person>
+    <md:organization userid="OpenStaxCollege">
+      <md:shortname>OpenStax</md:shortname>
+      <md:fullname>OpenStax</md:fullname>
+      <md:email>info@openstax.org</md:email>
+    </md:organization>
+    <md:person userid="cnxsoc2">
+      <md:firstname>Openstax College</md:firstname>
+      <md:surname>Sociology 2e</md:surname>
+      <md:fullname>Openstax Sociology 2e</md:fullname>
+      <md:email>info@openstaxcollege.org</md:email>
+    </md:person>
+  </md:actors>
+  <md:roles>
+    <md:role type="author">OpenStaxCollege</md:role>
+    <md:role type="maintainer">OpenStaxCollege cnxsoc2</md:role>
+    <md:role type="licensor">OSCRiceUniversity</md:role>
+  </md:roles>
+  <md:license url="http://creativecommons.org/licenses/by/4.0/">Creative Commons Attribution License 4.0</md:license>
+  <!-- For information on license requirements for use or modification, see license url in the
+       above <md:license> element.
+       For information on formatting required attribution, see the URL:
+         CONTENT_URL/content_info#cnx_cite_header
+       where CONTENT_URL is the value provided above in the <md:content-url> element.
+  -->
+  <md:derived-from url="http://legacy.cnx.org/content/m42807/1.3">
+  <md:repository>http://legacy.cnx.org/content</md:repository>
+  <md:content-url>http://legacy.cnx.org/content/m42807/1.3</md:content-url>
+  <md:content-id>m42807</md:content-id>
+  <md:title>Elements of Culture</md:title>
+  <md:version>1.3</md:version>
+  <md:created>2012/01/27 16:01:39 -0600</md:created>
+  <md:revised>2013/07/29 16:26:01 -0500</md:revised>
+  <md:actors>
+    <md:organization userid="OpenStaxCollege">
+      <md:shortname>OpenStax</md:shortname>
+      <md:fullname>OpenStax</md:fullname>
+      <md:email>info@openstax.org</md:email>
+    </md:organization>
+    <md:person userid="OSCRiceUniversity">
+      <md:firstname>Rice</md:firstname>
+      <md:surname>University</md:surname>
+      <md:fullname>Rice University</md:fullname>
+      <md:email>info@openstaxcollege.org</md:email>
+    </md:person>
+    <md:person userid="soccap">
+      <md:firstname>Sociology</md:firstname>
+      <md:surname>Cap</md:surname>
+      <md:fullname>OpenStax Sociology 1e</md:fullname>
+      <md:email>dcwill@rice.edu</md:email>
+    </md:person>
+  </md:actors>
+  <md:roles>
+    <md:role type="author">OpenStaxCollege</md:role>
+    <md:role type="maintainer">OpenStaxCollege soccap</md:role>
+    <md:role type="licensor">OSCRiceUniversity</md:role>
+  </md:roles>
+  <md:license url="http://creativecommons.org/licenses/by/3.0/" />
+  <!-- For information on license requirements for use or modification, see license url in the
+       above <md:license> element.
+       For information on formatting required attribution, see the URL:
+         CONTENT_URL/content_info#cnx_cite_header
+       where CONTENT_URL is the value provided above in the <md:content-url> element.
+  -->
+  </md:derived-from>
+  <md:keywordlist>
+    <md:keyword>Beliefs</md:keyword>
+    <md:keyword>Folkways</md:keyword>
+    <md:keyword>Formal norms</md:keyword>
+    <md:keyword>Ideal culture</md:keyword>
+    <md:keyword>Informal norms</md:keyword>
+    <md:keyword>Language</md:keyword>
+    <md:keyword>Mores</md:keyword>
+    <md:keyword>Norms</md:keyword>
+    <md:keyword>Real culture</md:keyword>
+    <md:keyword>Sanction</md:keyword>
+    <md:keyword>Sapir-Whorf hypothesis</md:keyword>
+    <md:keyword>Social control</md:keyword>
+    <md:keyword>Symbols</md:keyword>
+    <md:keyword>Values</md:keyword>
+  </md:keywordlist>
+  <md:subjectlist>
+    <md:subject>Social Sciences</md:subject>
+  </md:subjectlist>
+  <md:abstract><list>
+<item>Understand how values and beliefs differ from norms</item>
+<item>Explain the significance of symbols and language to a culture</item>
+<item>Explain the Sapir-Whorf hypothesis</item>
+<item>Discuss the role of social control within culture</item>
+</list></md:abstract>
+  <md:language>en</md:language>
+  <!-- WARNING! The 'metadata' section is read only. Do not edit above.
+       Changes to the metadata section in the source will not be saved. -->
+</metadata>
+
+<content>
+
+    <section id="fs-id1165528305183">
+    <title>Values and Beliefs</title>
+    <para id="import-auto-id2626149">The first, and perhaps most crucial, elements of culture we will discuss are its values and beliefs. <term id="import-auto-id2418045">Values</term> are a culture’s standard for discerning what is good and just in society. Values are deeply embedded and critical for transmitting and teaching a culture’s beliefs. <term id="import-auto-id1453105">Beliefs</term> are the tenets or convictions that people hold to be true. Individuals in a society have specific beliefs, but they also share collective values. To illustrate the difference, Americans commonly believe in the American Dream—that anyone who works hard enough will be successful and wealthy. Underlying this belief is the American value that wealth is good and important.</para>
+    <para xmlns:m="http://www.w3.org/1998/Math/MathML" xmlns:q="http://cnx.rice.edu/qml/1.0" id="import-auto-id1510047">Values help shape a society by suggesting what is good and bad, beautiful and ugly, sought or avoided. Consider the value that the United States places upon youth. Children represent innocence and purity, while a youthful adult appearance signifies sexuality. Shaped by this value, individuals spend millions of dollars each year on cosmetic products and surgeries to look young and beautiful. The United States also has an individualistic culture, meaning people place a high value on individuality and independence. In contrast, many other cultures are collectivist, meaning the welfare of the group and group relationships are a primary value.</para><para id="import-auto-id1406788">Living up to a culture’s values can be difficult. It’s easy to value good health, but it’s hard to quit smoking. Marital monogamy is valued, but many spouses engage in infidelity. Cultural diversity and equal opportunities for all people are valued in the United States, yet the country’s highest political offices have been dominated by white men.</para>
+    <para xmlns:m="http://www.w3.org/1998/Math/MathML" xmlns:q="http://cnx.rice.edu/qml/1.0" id="import-auto-id2001761">Values often suggest how people should behave, but they don’t accurately reflect how people do behave. Values portray an <term id="import-auto-id1936466">ideal culture</term>, the standards society would like to embrace and live up to. But ideal culture differs from <term id="import-auto-id1682982">real culture</term>, the way society actually is, based on what occurs and exists. In an ideal culture, there would be no traffic accidents, murders, poverty, or racial tension. But in real culture, police officers, lawmakers, educators, and social workers constantly strive to prevent or repair those accidents, crimes, and injustices. American teenagers are encouraged to value celibacy. However, the number of unplanned pregnancies among teens reveals that not only is the ideal hard to live up to, but the value alone is not enough to spare teenagers the potential consequences of having sex. </para><para xmlns:m="http://www.w3.org/1998/Math/MathML" xmlns:q="http://cnx.rice.edu/qml/1.0" id="import-auto-id1391029">One way societies strive to put values into action is through rewards, sanctions, and punishments. When people observe the norms of society and uphold its values, they are often rewarded. A boy who helps an elderly woman board a bus may receive a smile and a “thank you.” A business manager who raises profit margins may receive a quarterly bonus. People <term id="import-auto-id1315798">sanction</term> certain behaviors by giving their support, approval, or permission, or by instilling formal actions of disapproval and nonsupport. Sanctions are a form of <term id="import-auto-id1377465">social control</term>, a way to encourage conformity to cultural norms. Sometimes people conform to norms in anticipation or expectation of positive sanctions: good grades, for instance, may mean praise from parents and teachers.  From a criminal justice perspective, properly used social control is also inexpensive crime control. Utilizing social control approaches pushes most people to conform to societal rules, regardless of whether authority figures (such as law enforcement) are present. </para><para xmlns:m="http://www.w3.org/1998/Math/MathML" xmlns:q="http://cnx.rice.edu/qml/1.0" id="import-auto-id1252102">When people go against a society’s values, they are punished. A boy who shoves an elderly woman aside to board the bus first may receive frowns or even a scolding from other passengers. A business manager who drives away customers will likely be fired. Breaking norms and rejecting values can lead to cultural sanctions such as earning a negative label—lazy, no-good bum—or to legal sanctions, such as traffic tickets, fines, or imprisonment. </para><para id="import-auto-id1494644">Values are not static; they vary across time and between groups as people evaluate, debate, and change collective societal beliefs. Values also vary from culture to culture. For example, cultures differ in their values about what kinds of physical closeness are appropriate in public. It’s rare to see two male friends or coworkers holding hands in the United States where that behavior often symbolizes romantic feelings. But in many nations, masculine physical intimacy is considered natural in public. This difference in cultural values came to light when people reacted to photos of former president George W. Bush holding hands with the Crown Prince of Saudi Arabia in 2005. A simple gesture, such as hand-holding, carries great symbolic differences across cultures.</para>
+    <figure xmlns:m="http://www.w3.org/1998/Math/MathML" xmlns:q="http://cnx.rice.edu/qml/1.0" id="import-auto-id2868210"><media id="import-auto-id787296" alt="Two male soldiers in uniform are shown from behind walking and holding hands.">
+        <image mime-type="image/jpg" src="Figure_03_02_01a.jpg" width="325"/>
+      </media>
+    <caption>In many parts of Africa and the Middle East, it is considered normal for men to hold hands in friendship. How would Americans react to these two soldiers? (Photo courtesy of Geordie Mott/Wikimedia Commons)</caption></figure></section>
+
+    <section id="fs-id1165528376552">
+    <title>Norms</title>
+    <para id="import-auto-id2024255">So far, the examples in this chapter have often described how people are expected to behave in certain situations—for example, when buying food or boarding a bus. These examples describe the visible and invisible rules of conduct through which societies are structured, or what sociologists call norms. <term id="import-auto-id1367324">Norms</term> define how to behave in accordance with what a society has defined as good, right, and important, and most members of the society adhere to them. </para>
+    <para xmlns:m="http://www.w3.org/1998/Math/MathML" xmlns:q="http://cnx.rice.edu/qml/1.0" id="import-auto-id2633138"><term id="import-auto-id1199689">Formal norms</term> are established, written rules. They are behaviors worked out and agreed upon in order to suit and serve the most people. Laws are formal norms, but so are employee manuals, college entrance exam requirements, and “no running” signs at swimming pools. Formal norms are the most specific and clearly stated of the various types of norms, and they are the most strictly enforced. But even formal norms are enforced to varying degrees and are reflected in cultural values.</para><para id="import-auto-id2738660">For example, money is highly valued in the United States, so monetary crimes are punished. It’s against the law to rob a bank, and banks go to great lengths to prevent such crimes. People safeguard valuable possessions and install antitheft devices to protect homes and cars. A less strictly enforced social norm is driving while intoxicated. While it’s against the law to drive drunk, drinking is for the most part an acceptable social behavior. And though there are laws to punish drunk driving, there are few systems in place to prevent the crime. These examples show a range of enforcement in formal norms.</para>
+    <para xmlns:m="http://www.w3.org/1998/Math/MathML" xmlns:q="http://cnx.rice.edu/qml/1.0" id="import-auto-id1425877">There are plenty of formal norms, but the list of <term id="import-auto-id3592304">informal norms</term>—casual behaviors that are generally and widely conformed to—is longer. People learn informal norms by observation, imitation, and general socialization. Some informal norms are taught directly—“Kiss your Aunt Edna” or “Use your napkin”—while others are learned by observation, including observations of the consequences when someone else violates a norm. But although informal norms define personal interactions, they extend into other systems as well. In the United States, there are informal norms regarding behavior at fast food restaurants. Customers line up to order their food and leave when they are done. They don’t sit down at a table with strangers, sing loudly as they prepare their condiments, or nap in a booth. Most people don’t commit even benign breaches of informal norms. Informal norms dictate appropriate behaviors without the need of written rules.</para><note xmlns:m="http://www.w3.org/1998/Math/MathML" xmlns:q="http://cnx.rice.edu/qml/1.0" id="fs-id1165528296635" class="sociological-research"><label/><title>Breaching Experiments</title><para id="import-auto-id2621408">Sociologist Harold Garfinkel (1917–2011) studied people’s customs in order to find out how societal rules and norms not only influenced behavior but also shaped social order. He believed that members of society together create a social order (Weber 2011). His resulting book, <emphasis effect="italics">Studies in Ethnomethodology</emphasis>, published in 1967, discusses people’s assumptions about the social makeup of their communities.</para><para id="import-auto-id2649373">One of Garfinkel's research methods was known as a “breaching experiment,” in which the researcher behaves in a socially awkward manner in order to test the sociological concepts of social norms and conformity. The participants are not aware an experiment is in progress. If the breach is successful, however, these “innocent bystanders” will respond in some way. For example, if the experimenter is, say, a man in a business suit, and he skips down the sidewalk or hops on one foot, the passersby are likely to stare at him with surprised expressions on their faces. But the experimenter does not simply “act weird” in public. Rather, the point is to deviate from a specific social norm in a small way, to subtly break some form of social etiquette, and see what happens. </para><para id="import-auto-id1356404">To conduct his ethnomethodology, Garfinkel deliberately imposed strange behaviors on unknowing people. Then he observed their responses. He suspected that odd behaviors would shatter conventional expectations, but he wasn’t sure how. For example, he set up a simple game of tic-tac-toe. One player was asked beforehand to mark Xs and Os not in the boxes but on the lines dividing the spaces instead. The other player, in the dark about the study, was flabbergasted and did not know how to continue. The second player's reactions of outrage, anger, puzzlement, or other emotions illustrated the existence of cultural norms that constitute social life. These cultural norms play an important role. They let us know how to behave around each other and how to feel comfortable in our community. </para><para id="import-auto-id1291633">There are many rules about speaking with strangers in public. It’s OK to tell a woman you like her shoes. It’s not OK to ask if you can try them on. It’s OK to stand in line behind someone at the ATM. It’s not OK to look over his shoulder as he makes his transaction. It’s OK to sit beside someone on a crowded bus. It’s weird to sit beside a stranger in a half-empty bus. </para><para id="import-auto-id2217541">For some breaches, the researcher directly engages with innocent bystanders. An experimenter might strike up a conversation in a public bathroom, where it’s common to respect each other’s privacy so fiercely as to ignore other people’s presence. In a grocery store, an experimenter might take a food item out of another person’s grocery cart, saying, “That looks good! I think I’ll try it.” An experimenter might sit down at a table with others in a fast food restaurant or follow someone around a museum and study the same paintings. In those cases, the bystanders are pressured to respond, and their discomfort illustrates how much we depend on social norms. Breaching experiments uncover and explore the many unwritten social rules we live by.</para></note><para xmlns:m="http://www.w3.org/1998/Math/MathML" xmlns:q="http://cnx.rice.edu/qml/1.0" id="import-auto-id1486864">Norms may be further classified as either mores or folkways. <term id="import-auto-id2184462">Mores</term> (mor-ays) are norms that embody the moral views and principles of a group. Violating them can have serious consequences. The strongest mores are legally protected with laws or other formal norms. In the United States, for instance, murder is considered immoral, and it’s punishable by law (a formal norm). But more often, mores are judged and guarded by public sentiment (an informal norm). People who violate mores are seen as shameful. They can even be shunned or banned from some groups. The mores of the U.S. school system require that a student’s writing be in the student’s own words or use special forms (such as quotation marks and a whole system of citation) for crediting other writers. Writing another person’s words as if they are one’s own has a name—plagiarism. The consequences for violating this norm are severe and usually result in expulsion.</para><para xmlns:m="http://www.w3.org/1998/Math/MathML" xmlns:q="http://cnx.rice.edu/qml/1.0" id="import-auto-id1188431">Unlike mores, <term id="import-auto-id1684289">folkways</term> are norms without any moral underpinnings. Rather, folkways direct appropriate behavior in the day-to-day practices and expressions of a culture. They indicate whether to shake hands or kiss on the cheek when greeting another person. They specify whether to wear a tie and blazer or a T-shirt and sandals to an event. In Canada, women can smile and say hello to men on the street. In Egypt, that’s not acceptable. In regions in the southern United States, bumping into an acquaintance means stopping to chat. It’s considered rude not to, no matter how busy one is. In other regions, people guard their privacy and value time efficiency. A simple nod of the head is enough.  Other accepted folkways in the United States may include holding the door open for a stranger or giving someone a gift on their birthday. The rules regarding these folkways may change from culture to culture. </para><para xmlns:m="http://www.w3.org/1998/Math/MathML" xmlns:q="http://cnx.rice.edu/qml/1.0" id="import-auto-id2329365">Many folkways are actions we take for granted. People need to act without thinking in order to get seamlessly through daily routines; they can’t stop and analyze every action (Sumner 1906). Those who experience culture shock may find that it subsides as they learn the new culture’s folkways and are able to move through their daily routines more smoothly. Folkways might be small manners, learned by observation and imitated, but they are by no means trivial. Like mores and laws, these norms help people negotiate their daily lives within a given culture.</para></section>
+
+    <section id="fs-id1165528320291">
+    <title>Symbols and Language</title>
+    <para xmlns:m="http://www.w3.org/1998/Math/MathML" xmlns:q="http://cnx.rice.edu/qml/1.0" id="import-auto-id1463416">Humans, consciously and subconsciously, are always striving to make sense of their surrounding world. <term id="import-auto-id474131">Symbols</term>—such as gestures, signs, objects, signals, and words—help people understand that world. They provide clues to understanding experiences by conveying recognizable meanings that are shared by societies. </para><para xmlns:m="http://www.w3.org/1998/Math/MathML" xmlns:q="http://cnx.rice.edu/qml/1.0" id="import-auto-id2797110">The world is filled with symbols. Sports uniforms, company logos, and traffic signs are symbols. In some cultures, a gold ring is a symbol of marriage. Some symbols are highly functional; stop signs, for instance, provide useful instruction. As physical objects, they belong to material culture, but because they function as symbols, they also convey nonmaterial cultural meanings. Some symbols are valuable only in what they represent. Trophies, blue ribbons, or gold medals, for example, serve no other purpose than to represent accomplishments. But many objects have both material and nonmaterial symbolic value. </para><para id="import-auto-id1343938">A police officer’s badge and uniform are symbols of authority and law enforcement. The sight of an officer in uniform or a squad car triggers reassurance in some citizens, and annoyance, fear, or anger in others. </para>
+    <para id="import-auto-id2622414">It’s easy to take symbols for granted. Few people challenge or even think about stick figure signs on the doors of public bathrooms. But those figures are more than just symbols that tell men and women which bathrooms to use. They also uphold the value, in the United States, that public restrooms should be gender exclusive. Even though stalls are relatively private, most places don’t offer unisex bathrooms.</para>
+<figure xmlns:m="http://www.w3.org/1998/Math/MathML" xmlns:q="http://cnx.rice.edu/qml/1.0" id="fs-id1169762614786" orient="horizontal"><subfigure id="fs-id1169762401153">
+                <media id="fs-id1169762319820" alt="The photo (a) shows a sign of a pedestrian crossing and an arrow.">
+                <image mime-type="image/jpg" src="Figure_03_02_02_a.jpg" width="150"/>
+                </media>
+        </subfigure>
+        
+        <subfigure id="fs-id1169762609870">
+                <media id="fs-id1169762631967" alt="The photo (b) shows a sign with writing in Chinese.">
+                <image mime-type="image/jpg" src="Figure_03_02_02_b.jpg" width="150"/>
+                </media>
+        </subfigure>
+<caption>Some road signs are universal. But how would you interpret the signage on the right? (Photo (a) courtesy of Andrew Bain/flickr; Photo (b) courtesy of HonzaSoukup/flickr)</caption></figure><para xmlns:m="http://www.w3.org/1998/Math/MathML" xmlns:q="http://cnx.rice.edu/qml/1.0" id="import-auto-id2617950">Symbols often get noticed when they are out of context. Used unconventionally, they convey strong messages. A stop sign on the door of a corporation makes a political statement, as does a camouflage military jacket worn in an antiwar protest. Together, the semaphore signals for “N” and “D” represent nuclear disarmament—and form the well-known peace sign (Westcott 2008). Today, some college students have taken to wearing pajamas and bedroom slippers to class, clothing that was formerly associated only with privacy and bedtime. Though students might deny it, the outfit defies traditional cultural norms and makes a statement. </para><para xmlns:m="http://www.w3.org/1998/Math/MathML" xmlns:q="http://cnx.rice.edu/qml/1.0" id="import-auto-id1460999">Even the destruction of symbols is symbolic. Effigies representing public figures are burned to demonstrate anger at certain leaders. In 1989, crowds tore down the Berlin Wall, a decades-old symbol of the division between East and West Germany, communism, and capitalism. </para><para xmlns:m="http://www.w3.org/1998/Math/MathML" xmlns:q="http://cnx.rice.edu/qml/1.0" id="import-auto-id1203521">While different cultures have varying systems of symbols, one symbol is common to all: language. <term id="import-auto-id2109712">Language</term> is a symbolic system through which people communicate and through which culture is transmitted. Some languages contain a system of symbols used for written communication, while others rely on only spoken communication and nonverbal actions. </para><para xmlns:m="http://www.w3.org/1998/Math/MathML" xmlns:q="http://cnx.rice.edu/qml/1.0" id="import-auto-id1370698">Societies often share a single language, and many languages contain the same basic elements. An alphabet is a written system made of symbolic shapes that refer to spoken sound. Taken together, these symbols convey specific meanings. The English alphabet uses a combination of twenty-six letters to create words; these twenty-six letters make up over 600,000 recognized English words (OED Online 2011). </para><para id="import-auto-id1932158">Rules for speaking and writing vary even within cultures, most notably by region. Do you refer to a can of carbonated liquid as “soda,” pop,” or “Coke”? Is a household entertainment room a “family room,” “rec room,” or “den”? When leaving a restaurant, do you ask your server for a “check,” the “ticket,” or your “bill”?</para>
+    <para id="import-auto-id3625378">Language is constantly evolving as societies create new ideas. In this age of technology, people have adapted almost instantly to new nouns such as “e-mail” and “Internet,” and verbs such as “downloading,” “texting,” and “blogging.” Twenty years ago, the general public would have considered these nonsense words. </para>
+    <para xmlns:m="http://www.w3.org/1998/Math/MathML" xmlns:q="http://cnx.rice.edu/qml/1.0" id="import-auto-id784416">Even while it constantly evolves, language continues to shape our reality. This insight was established in the 1920s by two linguists, Edward Sapir and Benjamin Whorf. They believed that reality is culturally determined, and that any interpretation of reality is based on a society’s language. To prove this point, the sociologists argued that every language has words or expressions specific to that language. In the United States, for example, the number thirteen is associated with bad luck. In Japan, however, the number four is considered unlucky, since it is pronounced similarly to the Japanese word for “death.” </para><para xmlns:m="http://www.w3.org/1998/Math/MathML" xmlns:q="http://cnx.rice.edu/qml/1.0" id="import-auto-id2324672">The <term id="import-auto-id1202060">Sapir-Whorf hypothesis</term> is based on the idea that people experience their world through their language, and that they therefore understand their world through the culture embedded in their language. The hypothesis, which has also been called linguistic relativity, states that language shapes thought (Swoyer 2003). Studies have shown, for instance, that unless people have access to the word “ambivalent,” they don’t recognize an experience of uncertainty from having conflicting positive and negative feelings about one issue. Essentially, the hypothesis argues, if a person can’t describe the experience, the person is not having the experience.</para><para xmlns:m="http://www.w3.org/1998/Math/MathML" xmlns:q="http://cnx.rice.edu/qml/1.0" id="import-auto-id1335127">In addition to using language, people communicate without words. Nonverbal communication is symbolic, and, as in the case of language, much of it is learned through one’s culture. Some gestures are nearly universal: smiles often represent joy, and crying often represents sadness. Other nonverbal symbols vary across cultural contexts in their meaning. A thumbs-up, for example, indicates positive reinforcement in the United States, whereas in Russia and Australia, it is an offensive curse (Passero 2002). Other gestures vary in meaning depending on the situation and the person. A wave of the hand can mean many things, depending on how it’s done and for whom. It may mean “hello,” “goodbye,” “no thank you,” or “I’m royalty.” Winks convey a variety of messages, including “We have a secret,” “I’m only kidding,” or “I’m attracted to you.” From a distance, a person can understand the emotional gist of two people in conversation just by watching their body language and facial expressions. Furrowed brows and folded arms indicate a serious topic, possibly an argument. Smiles, with heads lifted and arms open, suggest a lighthearted, friendly chat.</para><note xmlns:m="http://www.w3.org/1998/Math/MathML" xmlns:q="http://cnx.rice.edu/qml/1.0" id="fs-id1165528386379" class="sociology-policy-debate"><label/><title>Is the United States Bilingual?</title><para id="import-auto-id800124">In 1991, when she was six years old, Lucy Alvarez attended a school that allowed for the use of both English and Spanish. Lucy’s teacher was bilingual, the librarian offered bilingual books, and many of the school staff spoke both Spanish and English. Lucy and many of her classmates who spoke only Spanish at home were lucky. According to the U.S. Census, 13.8 percent of U.S. residents speak a non-English language at home. That’s a significant figure, but not enough to ensure that Lucy would be encouraged to use her native language in school (Mount 2010).</para><para id="import-auto-id1455187">Lucy’s parents, who moved to Texas from Mexico, struggled under the pressure to speak English. Lucy might easily have gotten lost and left behind if she’d felt the same pressure in school. In 2008, researchers from Johns Hopkins University conducted a series of studies on the effects of bilingual education (Slavin et al. 2008). They found that students taught in both their native tongue and English make better progress than those taught only in English.</para>
+    <para id="import-auto-id1153948">Technically, the United States has no official language. But many believe English to be the rightful language of the United States, and over thirty states have passed laws specifying English as the official tongue. Proponents of English-only laws suggest that a national ruling will save money on translation, printing, and human resource costs, including funding for bilingual teachers. They argue that setting English as the official language will encourage non-English speakers to learn English faster and adapt to the culture of the United States more easily (Mount 2010).</para><para id="import-auto-id1306677">Groups such as the American Civil Liberties Union (ACLU) oppose making English the official language and claim that it violates the rights of non-English speakers. English-only laws, they believe, deny the reality of our nation’s diversity and unfairly target Latinos and Asians. They point to the fact that much of the debate on this topic has risen since 1970, a time when the United States experienced new waves of immigration from Asia and Mexico.</para><para id="import-auto-id1463075">Today, a lot of product information gets written in multiple languages. Enter a store like Home Depot and you’ll find signs in both English and Spanish. Buy a children’s product, and the safety warnings could be presented in multiple languages. While marketers are financially motivated to reach the largest number of consumers possible, this trend also may help people acclimate to a culture of bilingualism. </para><para id="import-auto-id1095774">Studies show that most U.S. immigrants eventually abandon their native tongues and become fluent in English. Bilingual education helps with that transition. Today, Lucy Alvarez is an ambitious and high-achieving college student. Fluent in both English and Spanish, Lucy is studying law enforcement—a field that seeks bilingual employees. The same bilingualism that contributed to her success in grade school will help her thrive professionally as a law officer serving her community.</para><figure id="import-auto-id1493200" type="2"><media id="import-auto-id2768417" alt="A keep out sign with text in English and Spanish is shown.">
+    <image mime-type="image/png" src="Figure_03_02_03a.jpg" width="300"/>
+    </media>
+    <caption>Nowadays, many signs—on streets and in stores—include both English and Spanish. What effect does this have on members of society? What effect does it have on our culture? (Photo courtesy of istolethetv/flickr)</caption></figure></note></section>
+
+    <section id="fs-id1165528389142" class="section-summary" type="section-summary">
+    <title>Summary</title>
+    <para id="import-auto-id1350230">A culture consists of many elements, such as the values and beliefs of its society. Culture is also governed by norms, including laws, mores, and folkways. The symbols and language of a society are key to developing and conveying culture.</para>
+    </section>
+
+    <section id="fs-id1165528317764" class="section-quiz" type="section-quiz">
+    <title>Section Quiz</title>
+
+    <exercise xmlns:m="http://www.w3.org/1998/Math/MathML" xmlns:q="http://cnx.rice.edu/qml/1.0" id="fs-id1165528304715" type="section-quiz"><problem id="fs-id1165528322359">
+    <para id="import-auto-id2654101">A nation’s flag is:</para>
+    <list id="fs-id1165528317205" list-type="enumerated" number-style="lower-alpha">
+    <item>A symbol</item>
+    <item>A value</item>
+    <item>A culture</item>
+    <item>A folkway</item>
+    </list>
+    </problem>
+    
+    <solution id="eip-id2315383"><label/>
+    <title>Answer</title>
+    <para id="eip-id1863354">A</para>
+    </solution></exercise><exercise xmlns:m="http://www.w3.org/1998/Math/MathML" xmlns:q="http://cnx.rice.edu/qml/1.0" id="fs-id1165528356832" type="section-quiz"><problem id="fs-id1165528322567">
+    <para id="import-auto-id1356248">The existence of social norms, both formal and informal, is one of the main things that inform ___________, otherwise known as a way to encourage social conformity.</para>
+    <list id="fs-id1165528320369" list-type="enumerated" number-style="lower-alpha">
+    <item>values</item>
+    <item>sanctions</item>
+    <item>social control</item>
+    <item>mores</item>
+    </list>
+    </problem>
+
+    <solution id="eip-id2119258"><label/>
+    <title>Answer</title>
+    <para id="eip-id1494060">C</para>
+    </solution>
+    </exercise><exercise xmlns:m="http://www.w3.org/1998/Math/MathML" xmlns:q="http://cnx.rice.edu/qml/1.0" id="fs-id1165528386507" type="section-quiz"><problem id="fs-id1165528318231">
+    <para id="import-auto-id2875474">The biggest difference between mores and folkways is that</para>
+    <list id="fs-id1165528386542" list-type="enumerated" number-style="lower-alpha">
+    <item>mores are primarily linked to morality, whereas folkways are primarily linked to being commonplace within a culture</item>
+    <item>mores are absolute, whereas folkways are temporary</item>
+    <item>mores refer to material culture, whereas folkways refer to nonmaterial culture</item>
+    <item>mores refer to nonmaterial culture, whereas folkways refer to material culture</item>
+    </list>
+    </problem>
+ 
+    <solution id="eip-id2813974"><label/>
+    <title>Answer</title>
+    <para id="eip-id1834039">A</para>
+    </solution>   </exercise><exercise xmlns:m="http://www.w3.org/1998/Math/MathML" xmlns:q="http://cnx.rice.edu/qml/1.0" id="fs-id1165528386486" type="section-quiz"><problem id="fs-id1165528323404">
+    <para id="import-auto-id2082391">The notion that people cannot feel or experience something that they do not have a word for can be explained by:</para>
+    <list id="fs-id1165528379727" list-type="enumerated" number-style="lower-alpha">
+    <item>linguistics</item>
+    <item>Sapir-Whorf</item>
+    <item>Ethnographic imagery</item>
+    <item>bilingualism</item>
+    </list>
+    </problem>
+    
+
+    <solution id="eip-id1928458"><label/>
+    <title>Answer</title>
+    <para id="eip-id1250786">B</para>
+    </solution></exercise><exercise xmlns:m="http://www.w3.org/1998/Math/MathML" xmlns:q="http://cnx.rice.edu/qml/1.0" id="fs-id1165528306935" type="section-quiz"><problem id="fs-id1165528302564">
+    <para id="import-auto-id2827190">Cultural sanctions can also be viewed as ways that society:</para>
+    <list id="fs-id1165528376802" list-type="enumerated" number-style="lower-alpha">
+    <item>Establishes leaders</item>
+    <item>Determines language</item>
+    <item>Regulates behavior</item>
+    <item>Determines laws</item>
+    </list>
+    </problem>
+
+    <solution id="fs-id1165528318419"><label/>
+    <title>Answer</title>
+    <para id="import-auto-id1339788">C</para>
+    </solution>
+
+    </exercise></section>
+
+    <section id="fs-id1165528317493" class="short-answer" type="short-answer">
+
+    <title>Short Answer</title>
+
+    <exercise id="fs-id1165528302726" type="short-answer">
+    <problem id="fs-id1165528353544">
+    <para id="import-auto-id1374789">What do you think of the Sapir-Whorf hypothesis? Do you agree or disagree with it? Cite examples or research to support your point of view.</para>
+    </problem>
+    </exercise>
+
+    <exercise id="fs-id1165528324170" type="short-answer">
+    <problem id="fs-id1165528295070">
+    <para id="import-auto-id1488048">How do you think your culture would exist if there were no such thing as a social “norm”? Do you think chaos would ensue or relative peace could be kept? Explain.</para>
+    </problem>
+    </exercise>
+
+    </section>
+
+    <section id="fs-id1165528304476" class="further-research" type="further-research">
+    <title>Further Research</title>
+    <para xmlns:m="http://www.w3.org/1998/Math/MathML" xmlns:q="http://cnx.rice.edu/qml/1.0" id="import-auto-id1489498">The science-fiction novel, <emphasis effect="italics">Babel-17</emphasis>, by Samuel R. Delaney was based upon the principles of the Sapir-Whorf hypothesis. Read an excerpt from the novel here: <link url="http://openstaxcollege.org/l/Babel-17">http://openstaxcollege.org/l/Babel-17</link> </para></section>
+
+
+    <section id="fs-id1165528379290" class="references" type="references">
+    <title>References</title>
+    
+    <para xmlns:m="http://www.w3.org/1998/Math/MathML" xmlns:q="http://cnx.rice.edu/qml/1.0" id="fs-id1671299">Mount, Steve. 2010. “Constitutional Topic: Official Language.” <emphasis effect="italics">USConstitution.net</emphasis>, last modified January 24. Retrieved January 3, 2012 (<link url="http://www.usconstitution.net/consttop_lang.html">http://www.usconstitution.net/consttop_lang.html</link>).</para><para xmlns:m="http://www.w3.org/1998/Math/MathML" xmlns:q="http://cnx.rice.edu/qml/1.0" id="fs-id1822593"><emphasis effect="italics">OED Online</emphasis>. 2011. Oxford University Press. Retrieved May 5, 2011 (<link url="http://www.oed.com/view/Entry/260911">http://www.oed.com/view/Entry/260911</link>).</para><para id="fs-id1447903">Passero, Kathy. 2002. “Global Travel Expert Roger Axtell Explains Why.” <emphasis effect="italics">Biography</emphasis> July:70–73,97–98.</para>
+    <para id="fs-id1848847">Slavin, R. E., A. Cheung, C. Groff, and C. Lake. 2008. “Effective Reading Programs for Middle and High Schools: A Best-Evidence Synthesis.” <emphasis effect="italics">Reading Research Quarterly</emphasis> 43(3):290–322.</para>
+    <para id="fs-id3465319">Sumner, William G. 1906. <emphasis effect="italics">Folkways: A Study of the Sociological Importance of Usages, Manners, Customs, Mores, and Morals</emphasis>. New York: Ginn and Co.</para>
+    <para xmlns:m="http://www.w3.org/1998/Math/MathML" xmlns:q="http://cnx.rice.edu/qml/1.0" id="fs-id1459181">Swoyer, Chris. 2003. “The Linguistic Relativity Hypothesis.” In <emphasis effect="italics">The Stanford Encyclopedia of Philosophy</emphasis>, edited by E. N. Zalta, Winter. Retrieved May 5, 2011 (<link url="http://plato.stanford.edu/archives/win2003/entries/relativism/supplement2.html">http://plato.stanford.edu/archives/win2003/entries/relativism/supplement2.html</link>).</para><para id="fs-id1666884">Vaughan, R. M. 2007. “Cairo’s Man Show.” <emphasis effect="italics">Utne Reader</emphasis> March–April:94–95.</para>
+    <para xmlns:m="http://www.w3.org/1998/Math/MathML" xmlns:q="http://cnx.rice.edu/qml/1.0" id="fs-id1567563">Weber, Bruce. 2001. “Harold Garfinkel, a Common-Sense Sociologist, Dies at 93.” <emphasis effect="italics">The New York Times</emphasis>, May 3. Retrieved February 10, 2012 (<link url="http://www.nytimes.com/2011/05/04/us/04garfinkel.html?_r=2">http://www.nytimes.com/2011/05/04/us/04garfinkel.html?_r=2</link>).</para><para xmlns:m="http://www.w3.org/1998/Math/MathML" xmlns:q="http://cnx.rice.edu/qml/1.0" id="fs-id1694616">Westcott, Kathryn. 2008. “World’s Best-Known Protest Symbol Turns 50.” <emphasis effect="italics">BBC News</emphasis>, March 20. Retrieved January 3, 2012 (<link url="http://news.bbc.co.uk/2/hi/uk_news/magazine/7292252.stm">http://news.bbc.co.uk/2/hi/uk_news/magazine/7292252.stm</link>).</para></section>
+  
+  </content>
+
+
+    <glossary>
+    <definition id="import-auto-id2287833"><term>beliefs</term> <meaning id="fs-id1165528376804">tenets or convictions that people hold to be true</meaning></definition>
+    <definition id="import-auto-id2094767"><term>folkways</term> <meaning id="fs-id1165528320755">direct, appropriate behavior in the day-to-day practices and expressions of a culture</meaning></definition>
+    <definition id="import-auto-id2638015"><term>formal norms</term> <meaning id="fs-id1165528321022">established, written rules</meaning></definition>
+    <definition id="import-auto-id1861322"><term>ideal culture</term> <meaning id="fs-id1165528342341">the standards a society would like to embrace and live up to</meaning></definition>
+    <definition id="import-auto-id1203500"><term>informal norms</term> <meaning id="fs-id1165528379160">casual behaviors that are generally and widely conformed to</meaning></definition>
+    <definition id="import-auto-id2110202"><term>language</term> <meaning id="fs-id1165528322789">a symbolic system of communication</meaning></definition>
+    <definition id="import-auto-id1462837"><term>mores</term> <meaning id="fs-id1165528355923">the moral views and principles of a group</meaning></definition>
+    <definition id="import-auto-id2637282"><term>norms</term> <meaning id="fs-id1165528320318">the visible and invisible rules of conduct through which societies are structured</meaning></definition>
+    <definition id="import-auto-id2653772"><term>real culture</term> <meaning id="fs-id1165528319749">the way society really is based on what actually occurs and exists</meaning></definition>
+    <definition id="import-auto-id1685509"><term>sanctions</term> <meaning id="fs-id1165528372262">a way to authorize or formally disapprove of certain behaviors</meaning></definition>
+    <definition id="import-auto-id2102347"><term>Sapir-Whorf hypothesis</term> <meaning id="fs-id1165528322006">the way that people understand the world based on their form of language</meaning></definition>
+    <definition id="import-auto-id2816465"><term>social control</term> <meaning id="fs-id1165528316842">a way to encourage conformity to cultural norms</meaning></definition>
+    <definition id="import-auto-id2653617"><term>symbols</term> <meaning id="fs-id1165528324164">gestures or objects that have meanings associated with them that are recognized by people who share a culture</meaning></definition>
+    <definition id="import-auto-id2617282"><term>values</term> <meaning id="fs-id1165528357173">a culture’s standard for discerning what is good and just in society</meaning></definition>
+    </glossary>
+
+</document>

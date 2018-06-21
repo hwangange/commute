@@ -21,6 +21,7 @@
             </intent-filter>
         </activity>
         <activity android:name=".TextbookView" />
+        <activity android:name=".TableOfContentsActivity"></activity>
     </application>
 
 </manifest>

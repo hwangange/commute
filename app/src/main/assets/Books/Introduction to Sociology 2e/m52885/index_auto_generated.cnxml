@@ -1,0 +1,314 @@
+<?xml version="1.0"?>
+<document xmlns="http://cnx.rice.edu/cnxml" id="imported-from-openoffice" module-id="imported-from-openoffice" cnxml-version="0.7">
+  <title>Theoretical Perspectives on Media and Technology</title>
+  <metadata xmlns:md="http://cnx.rice.edu/mdml"
+          mdml-version="0.5">
+  <!-- WARNING! The 'metadata' section is read only. Do not edit below.
+       Changes to the metadata section in the source will not be saved. -->
+  <md:repository>http://legacy.cnx.org/content</md:repository>
+  <md:content-url>http://legacy.cnx.org/content/m52885/latest</md:content-url>
+  <md:content-id>m52885</md:content-id>
+  <md:title>Theoretical Perspectives on Media and Technology</md:title>
+  <md:version>1.8</md:version>
+  <md:created>2015/01/20 14:47:40 -0600</md:created>
+  <md:revised>2017/07/17 10:56:29 -0500</md:revised>
+  <md:actors>
+    <md:person userid="OSCRiceUniversity">
+      <md:firstname>Rice</md:firstname>
+      <md:surname>University</md:surname>
+      <md:fullname>Rice University</md:fullname>
+      <md:email>info@openstaxcollege.org</md:email>
+    </md:person>
+    <md:organization userid="OpenStaxCollege">
+      <md:shortname>OpenStax</md:shortname>
+      <md:fullname>OpenStax</md:fullname>
+      <md:email>info@openstax.org</md:email>
+    </md:organization>
+    <md:person userid="cnxsoc2">
+      <md:firstname>Openstax College</md:firstname>
+      <md:surname>Sociology 2e</md:surname>
+      <md:fullname>Openstax Sociology 2e</md:fullname>
+      <md:email>info@openstaxcollege.org</md:email>
+    </md:person>
+  </md:actors>
+  <md:roles>
+    <md:role type="author">OpenStaxCollege</md:role>
+    <md:role type="maintainer">OpenStaxCollege cnxsoc2</md:role>
+    <md:role type="licensor">OSCRiceUniversity</md:role>
+  </md:roles>
+  <md:license url="http://creativecommons.org/licenses/by/4.0/">Creative Commons Attribution License 4.0</md:license>
+  <!-- For information on license requirements for use or modification, see license url in the
+       above <md:license> element.
+       For information on formatting required attribution, see the URL:
+         CONTENT_URL/content_info#cnx_cite_header
+       where CONTENT_URL is the value provided above in the <md:content-url> element.
+  -->
+  <md:derived-from url="http://legacy.cnx.org/content/m42838/1.3">
+  <md:repository>http://legacy.cnx.org/content</md:repository>
+  <md:content-url>http://legacy.cnx.org/content/m42838/1.3</md:content-url>
+  <md:content-id>m42838</md:content-id>
+  <md:title>Theoretical Perspectives on Media and Technology</md:title>
+  <md:version>1.3</md:version>
+  <md:created>2012/01/27 16:18:49 -0600</md:created>
+  <md:revised>2013/07/29 13:05:46 -0500</md:revised>
+  <md:actors>
+    <md:organization userid="OpenStaxCollege">
+      <md:shortname>OpenStax</md:shortname>
+      <md:fullname>OpenStax</md:fullname>
+      <md:email>info@openstax.org</md:email>
+    </md:organization>
+    <md:person userid="OSCRiceUniversity">
+      <md:firstname>Rice</md:firstname>
+      <md:surname>University</md:surname>
+      <md:fullname>Rice University</md:fullname>
+      <md:email>info@openstaxcollege.org</md:email>
+    </md:person>
+    <md:person userid="soccap">
+      <md:firstname>Sociology</md:firstname>
+      <md:surname>Cap</md:surname>
+      <md:fullname>OpenStax Sociology 1e</md:fullname>
+      <md:email>dcwill@rice.edu</md:email>
+    </md:person>
+  </md:actors>
+  <md:roles>
+    <md:role type="author">OpenStaxCollege</md:role>
+    <md:role type="maintainer">OpenStaxCollege soccap</md:role>
+    <md:role type="licensor">OSCRiceUniversity</md:role>
+  </md:roles>
+  <md:license url="http://creativecommons.org/licenses/by/3.0/" />
+  <!-- For information on license requirements for use or modification, see license url in the
+       above <md:license> element.
+       For information on formatting required attribution, see the URL:
+         CONTENT_URL/content_info#cnx_cite_header
+       where CONTENT_URL is the value provided above in the <md:content-url> element.
+  -->
+  </md:derived-from>
+  <md:keywordlist>
+    <md:keyword>Cyberfeminism</md:keyword>
+    <md:keyword>Gatekeeping</md:keyword>
+    <md:keyword>Neo-Luddites</md:keyword>
+    <md:keyword>Panoptic surveillance</md:keyword>
+    <md:keyword>Technophiles</md:keyword>
+  </md:keywordlist>
+  <md:subjectlist>
+    <md:subject>Social Sciences</md:subject>
+  </md:subjectlist>
+  <md:abstract><list>
+<item>Understand and discuss how we analyze media and technology through various sociological perspectives</item>
+</list></md:abstract>
+  <md:language>en</md:language>
+  <!-- WARNING! The 'metadata' section is read only. Do not edit above.
+       Changes to the metadata section in the source will not be saved. -->
+</metadata>
+
+<content>
+
+      <para xmlns:m="http://www.w3.org/1998/Math/MathML" xmlns:q="http://cnx.rice.edu/qml/1.0" id="import-auto-id1486813">It is difficult to conceive of any one theory or theoretical perspective that can explain the variety of ways in which people interact with technology and the media. Technology runs the gamut from the match you strike to light a candle all the way up to sophisticated nuclear power plants that might power the factory where that candle was made. Media could refer to the television you watch, the ads wrapping the bus you take to work or school, or the magazines you flip through in a dentist's waiting room, not to mention all the forms of new media, including Instagram, Facebook, blogs, YouTube, and the like. Are media and technology critical to the forward march of humanity? Are they pernicious capitalist tools that lead to the exploitation of workers worldwide? Are they the magic bullet the world has been waiting for to level the playing field and raise the world’s poor out of extreme poverty? Choose any opinion and you will find studies and scholars who agree with you––and those who disagree. </para><section id="fs-id1559733">
+        <title>Functionalism</title>
+        <para xmlns:m="http://www.w3.org/1998/Math/MathML" xmlns:q="http://cnx.rice.edu/qml/1.0" id="import-auto-id1463235">Because functionalism focuses on how media and technology contribute to the smooth functioning of society, a good place to begin understanding this perspective is to write a list of functions you perceive media and technology to perform. Your list might include the ability to find information on the Internet, television’s entertainment value, or how advertising and product placement contribute to social norms. </para><section id="fs-id1765431">
+        <title>Commercial Function</title>
+        <figure xmlns:m="http://www.w3.org/1998/Math/MathML" xmlns:q="http://cnx.rice.edu/qml/1.0" id="import-auto-id2104512"><media id="import-auto-id1359163" alt="A boy and girl are shown from behind watching a football game on television. A coffee table sits between them and the television, and a bookshelf is beside the TV.">
+          <image mime-type="image/png" src="Figure_08_04_01a.jpg" width="250"/>
+        </media>
+          <caption>TV commercials can carry significant cultural currency. For some, the ads during the Super Bowl are more water cooler-worthy than the game itself. (Photo courtesy of Dennis Yang/flickr)</caption></figure><para xmlns:m="http://www.w3.org/1998/Math/MathML" xmlns:q="http://cnx.rice.edu/qml/1.0" id="import-auto-id1074909">As you might guess, with nearly every U.S. household possessing a television, and the 250 billion hours of television watched annually by people in the United States, companies that wish to connect with consumers find television an irresistible platform to promote their goods and services (Nielsen 2012). Television advertising is a highly functional way to meet a market demographic where it lives. Sponsors can use the sophisticated data gathered by network and cable television companies regarding their viewers and target their advertising accordingly. Whether you are watching cartoons on Nick Jr. or a cooking show on Telemundo, chances are advertisers have a plan to reach you.</para><para xmlns:m="http://www.w3.org/1998/Math/MathML" xmlns:q="http://cnx.rice.edu/qml/1.0" id="import-auto-id2015778">And it certainly doesn’t stop with television. Commercial advertising precedes movies in theaters and shows up on and inside public transportation, as well as on the sides of building and roadways. Major corporations such as Coca-Cola bring their advertising into public schools, by sponsoring sports fields or tournaments, as well as filling the halls and cafeterias of those schools with vending machines hawking their goods. With rising concerns about childhood obesity and attendant diseases, the era of soda machines in schools may be numbered. In fact, as part of the United States Department of Agriculture's Healthy, Hunger Free Kids Act and Michelle Obama's Let's Move! Initiative, a ban on junk food in school began in July 2014.</para></section>
+      
+      <section id="fs-id1734286">
+        <title>Entertainment Function</title>
+        <para id="import-auto-id1333378">An obvious manifest function of media is its entertainment value. Most people, when asked why they watch television or go to the movies, would answer that they enjoy it. And the numbers certainly illustrate that. While 2012 Nielsen research shows a slight reduction of U.S. homes with televisions, the reach of television is still vast. And the amount of time spent watching is equally large. Clearly, enjoyment is paramount. On the technology side, as well, there is a clear entertainment factor to the use of new innovations. From online gaming to chatting with friends on Facebook, technology offers new and more exciting ways for people to entertain themselves.</para>
+      </section>
+      
+      <section id="fs-id1741507">
+        <title>Social Norm Functions</title>
+        <para xmlns:m="http://www.w3.org/1998/Math/MathML" xmlns:q="http://cnx.rice.edu/qml/1.0" id="import-auto-id1065655">Even while the media is selling us goods and entertaining us, it also serves to socialize us, helping us pass along norms, values, and beliefs to the next generation. In fact, we are socialized and resocialized by media throughout our whole lives. All forms of media teach us what is good and desirable, how we should speak, how we should behave, and how we should react to events. Media also provide us with cultural touchstones during events of national significance. How many of your older relatives can recall watching the explosion of the space shuttle <emphasis effect="italics">Challenger</emphasis> on television? How many of those reading this textbook followed the events of September 11 or Hurricane Katrina on television or the Internet? </para><para xmlns:m="http://www.w3.org/1998/Math/MathML" xmlns:q="http://cnx.rice.edu/qml/1.0" id="import-auto-id1318541">Just as in Anderson and Bushman's (2011) evidence in the Violence in Media and Video Games: Does It Matter? feature, debate still exists over the extent and impact of media socialization. One recent study (Krahe et al. 2011) demonstrated that violent media content does have a desensitizing affect and is correlated with aggressive thoughts. Another group of scholars (Gentile, Mathieson, and Crick 2011) found that among children exposure to media violence led to an increase in both physical and relational aggression. Yet, a meta-analysis study covering four decades of research (Savage 2003) could not establish a definitive link between viewing violence and committing criminal violence. </para><para xmlns:m="http://www.w3.org/1998/Math/MathML" xmlns:q="http://cnx.rice.edu/qml/1.0" id="import-auto-id961484">It is clear from watching people emulate the styles of dress and talk that appear in media that media has a socializing influence. What is not clear, despite nearly fifty years of empirical research, is how much socializing influence the media has when compared to other agents of socialization, which include any social institution that passes along norms, values, and beliefs (such as peers, family, religious institutions, and the like).</para></section>
+      
+      <section id="fs-id1741072">
+        <title>Life-Changing Functions</title>
+        <para id="import-auto-id1017168"> Like media, many forms of technology do indeed entertain us, provide a venue for commercialization, and socialize us. For example, some studies suggest the rising obesity rate is correlated with the decrease in physical activity caused by an increase in use of some forms of technology, a latent function of the prevalence of media in society (Kautiainen et al. 2011). Without a doubt, a manifest function of technology is to change our lives, sometimes for the better and sometimes for the worse. Think of how the digital age has improved the ways we communicate. Have you ever used Skype or another webcast to talk to a friend or family member far away? Or maybe you have organized a fund drive, raising thousands of dollars, all from your desk chair. </para>
+        <para xmlns:m="http://www.w3.org/1998/Math/MathML" xmlns:q="http://cnx.rice.edu/qml/1.0" id="import-auto-id1761081">Of course, the downside to this ongoing information flow is the near impossibility of disconnecting from technology that leads to an expectation of constant convenient access to information and people. Such a fast-paced dynamic is not always to our benefit. Some sociologists assert that this level of media exposure leads to <term id="import-auto-id1904407">narcotizing dysfunction</term>, a result in which people are too overwhelmed with media input to really care about the issue, so their involvement becomes defined by awareness instead of by action (Lazerfeld and Merton 1948).</para></section>
+      </section>
+
+      <section id="fs-id1669480">
+        <title>Conflict Perspective</title>
+        <para xmlns:m="http://www.w3.org/1998/Math/MathML" xmlns:q="http://cnx.rice.edu/qml/1.0" id="import-auto-id1406686">In contrast to theories in the functional perspective, the conflict perspective focuses on the creation and reproduction of inequality—social processes that tend to disrupt society rather than contribute to its smooth operation. When we take a conflict perspective, one major focus is the differential access to media and technology embodied in the digital divide. Conflict theorists also look at who controls the media, and how media promotes the norms of upper-middle-class white people in the United States while minimizing the presence of the working class, especially people of color.</para><section id="fs-id1752314">
+        <title>Control of Media and Technology</title>
+        <para xmlns:m="http://www.w3.org/1998/Math/MathML" xmlns:q="http://cnx.rice.edu/qml/1.0" xmlns:data="http://www.w3.org/TR/html5/dom.html#custom-data-attribute" id="import-auto-id1500142">Powerful individuals and social institutions have a great deal of influence over which forms of technology are released, when and where they are released, and what kind of media is available for our consumption, which is a form of gatekeeping. Shoemaker and Vos (2009) define <term id="import-auto-id2655874">gatekeeping</term> as the sorting process by which thousands of possible messages are shaped into a mass media-appropriate form and reduced to a manageable amount. In other words, the people in charge of the media decide what the public is exposed to, which, as C. Wright Mills (1956) famously noted, is the heart of media’s power. Take a moment to think of the way “new media” evolve and replace traditional forms of hegemonic media. With hegemonic media, a culturally diverse society can be dominated by one race, gender, or class that manipulates the media to impose its worldview as a societal norm. New media weakens the gatekeeper role in information distribution. Popular sites such as YouTube and Facebook not only allow more people to freely share information but also engage in a form of self-policing. Users are encouraged to report inappropriate behavior that moderators will then address.</para><para xmlns:m="http://www.w3.org/1998/Math/MathML" xmlns:q="http://cnx.rice.edu/qml/1.0" id="import-auto-id1488267">In addition, some conflict theorists suggest that the way U.S. media are generated results in an unbalanced political arena. Those with the most money can buy the most media exposure, run smear campaigns against their competitors, and maximize their visual presence. Almost a year before the 2012 U.S. presidential election, the candidates––Barack Obama for the Democrats and numerous Republican contenders––had raised more than $186 million (Carmi et al. 2012). Some would say that the <emphasis effect="italics">Citizens United vs. Federal Election Committee</emphasis> is a major contributing factor to our unbalanced political arena. In <emphasis effect="italics">Citizens United</emphasis>, the Supreme Court affirmed the right of outside groups, including Super Political Action Committees (SuperPACs) with undisclosed donor lists, to spend unlimited amounts of money on political ads as long as they don't coordinate with the candidate's campaign or specifically advocate for a candidate. What do you think a conflict perspective theorist would suggest about the potential for the non-rich to be heard in politics, especially when SuperPACs ensure that the richest groups have the most say? </para></section>
+      
+      <section id="fs-id1298475">
+        <title>Technological Social Control and Digital Surveillance</title>
+        <para xmlns:m="http://www.w3.org/1998/Math/MathML" xmlns:q="http://cnx.rice.edu/qml/1.0" id="import-auto-id3647663">Social scientists take the idea of the surveillance society so seriously that there is an entire journal devoted to its study, <emphasis effect="italics">Surveillance and Society</emphasis>. The <term id="import-auto-id2332625">panoptic surveillance</term> envisioned by Jeremy Bentham, depicted in the form of an all-powerful, all-seeing government by George Orwell in <emphasis effect="italics">1984</emphasis>, and later analyzed by Michel Foucault (1975) is increasingly realized in the form of technology used to monitor our every move. This surveillance was imagined as a form of constant monitoring in which the observation posts are decentralized and the observed is never communicated with directly. Today, digital security cameras capture our movements, observers can track us through our cell phones, and police forces around the world use facial-recognition software.</para></section>
+      
+      <section id="fs-id1703293">
+        <title>Feminist Perspective</title>
+        <figure xmlns:m="http://www.w3.org/1998/Math/MathML" xmlns:q="http://cnx.rice.edu/qml/1.0" id="import-auto-id889776"><media id="import-auto-id2621674" alt="A thin female model is shown participating in New York&#x2019;s fashion week.">
+          <image mime-type="image/png" src="Figure_08_04_02aa.jpg" width="250"/>
+        </media>
+          <caption>What types of women are we exposed to in the media? Some would argue that the range of female images is misleadingly narrow. (Photo courtesy of Cliff1066/flickr)</caption></figure><para xmlns:m="http://www.w3.org/1998/Math/MathML" xmlns:q="http://cnx.rice.edu/qml/1.0" id="import-auto-id1367992">Take a look at popular television shows, advertising campaigns, and online game sites. In most, women are portrayed in a particular set of parameters and tend to have a uniform look that society recognizes as attractive. Most are thin, white or light-skinned, beautiful, and young. Why does this matter? Feminist perspective theorists believe this idealized image is crucial in creating and reinforcing stereotypes. For example, Fox and Bailenson (2009) found that online female avatars conforming to gender stereotypes enhance negative attitudes toward women, and Brasted (2010) found that media (advertising in particular) promotes gender stereotypes. As early as 1990, <emphasis effect="italics">Ms.</emphasis> magazine instituted a policy to publish without any commercial advertising.</para><para xmlns:m="http://www.w3.org/1998/Math/MathML" xmlns:q="http://cnx.rice.edu/qml/1.0" id="import-auto-id1493244">The gender gap in tech-related fields (science, technology, engineering, and math) is no secret. A 2011 U.S. Department of Commerce Report suggested that gender stereotyping is one reason for this gap which acknowledges the bias toward men as keepers of technological knowledge (US Department of Commerce 2011). But gender stereotypes go far beyond the use of technology. Press coverage in the media reinforces stereotypes that subordinate women; it gives airtime to looks over skills, and coverage disparages women who defy accepted norms. </para><para id="import-auto-id1221419">Recent research in new media has offered a mixed picture of its potential to equalize the status of men and women in the arenas of technology and public discourse. A European agency, the Advisory Committee on Equal Opportunities for Men and Women (2010), issued an opinion report suggesting that while there is the potential for new media forms to perpetuate gender stereotypes and the gender gap in technology and media access, at the same time new media could offer alternative forums for feminist groups and the exchange of feminist ideas. Still, the committee warned against the relatively unregulated environment of new media and the potential for antifeminist activities, from pornography to human trafficking, to flourish there. </para>
+        <para id="import-auto-id3631058">Increasingly prominent in the discussion of new media and feminism is <term id="import-auto-id2308567">cyberfeminism</term>, the application to, and promotion of, feminism online. Research on cyberfeminism runs the gamut from the liberating use of blogs by women living in Iraq during the second Gulf War (Peirce 2011) to an investigation of the Suicide Girls web site (Magnet 2007).</para>
+      </section>
+      </section>
+
+      <section id="fs-id1765633">
+        <title>Symbolic Interactionism</title>
+        <para xmlns:m="http://www.w3.org/1998/Math/MathML" xmlns:q="http://cnx.rice.edu/qml/1.0" id="import-auto-id1354867">Technology itself may act as a symbol for many. The kind of computer you own, the kind of car you drive, your ability to afford the latest Apple product—these serve as a social indicator of wealth and status. <term id="import-auto-id1472471">Neo-Luddites</term> are people who see technology as symbolizing the coldness and alienation of modern life. But for <term id="import-auto-id1344014">technophiles</term>, technology symbolizes the potential for a brighter future. For those adopting an ideological middle ground, technology might symbolize status (in the form of a massive flat-screen television) or failure (ownership of a basic old mobile phone with no bells or whistles).</para><section id="fs-id1765644">
+        <title>Social Construction of Reality</title>
+        <para xmlns:m="http://www.w3.org/1998/Math/MathML" xmlns:q="http://cnx.rice.edu/qml/1.0" id="import-auto-id2672376">Meanwhile, media create and spread symbols that become the basis for our shared understanding of society. Theorists working in the interactionist perspective focus on this social construction of reality, an ongoing process in which people subjectively create and understand reality. Media constructs our reality in a number of ways. For some, the people they watch on a screen can become a primary group, meaning the small informal groups of people who are closest to them. For many others, media becomes a reference group: a group that influences an individual and to which an individual compares himself or herself, and by which we judge our successes and failures. We might do very well without the latest smartphone, until we see characters using it on our favorite television show or our classmates whipping it out between classes. </para><para xmlns:m="http://www.w3.org/1998/Math/MathML" xmlns:q="http://cnx.rice.edu/qml/1.0" id="import-auto-id1349962">While media may indeed be the medium to spread the message of rich white males, Gamson, Croteau, Hoynes, and Sasson (1992) point out that some forms of media discourse allow competing constructions of reality to appear. For example, advertisers find new and creative ways to sell us products we don’t need and probably wouldn’t want without their prompting, but some networking sites such as Freecycle offer a commercial-free way of requesting and trading items that would otherwise be discarded. The web is also full of blogs chronicling lives lived “off the grid,” or without participation in the commercial economy. </para></section>
+      
+      <section id="fs-id1567914">
+        <title>Social Networking and Social Construction</title>
+        <para xmlns:m="http://www.w3.org/1998/Math/MathML" xmlns:q="http://cnx.rice.edu/qml/1.0" id="import-auto-id2783843">While Tumblr and Facebook encourage us to check in and provide details of our day through online social networks, corporations can just as easily promote their products on these sites. Even supposedly crowd-sourced sites like Yelp (which aggregates local reviews) are not immune to corporate shenanigans. That is, we think we are reading objective observations when in reality we may be buying into one more form of advertising.</para><para xmlns:m="http://www.w3.org/1998/Math/MathML" xmlns:q="http://cnx.rice.edu/qml/1.0" id="import-auto-id1312863">Facebook, which started as a free social network for college students, is increasingly a monetized business, selling you goods and services in subtle ways. But chances are you don’t think of Facebook as one big online advertisement. What started out as a symbol of coolness and insider status, unavailable to parents and corporate shills, now promotes consumerism in the form of games and fandom. For example, think of all the money spent to upgrade popular Facebook games like Candy Crush. And notice that whenever you become a “fan,” you likely receive product updates and special deals that promote online and real-world consumerism. It is unlikely that millions of people want to be “friends” with Pampers. But if it means a weekly coupon, they will, in essence, rent out space on their Facebook pages for Pampers to appear. Thus, we develop both new ways to spend money and brand loyalties that will last even after Facebook is considered outdated and obsolete. </para></section>
+      </section>
+      
+      <section id="fs-id1787016" class="section-summary" type="section-summary">
+        <title>Summary</title>
+        <para id="import-auto-id1375912">There are myriad theories about how society, technology, and media will progress. Functionalism sees the contribution that technology and media provide to the stability of society, from facilitating leisure time to increasing productivity. Conflict theorists are more concerned with how technology reinforces inequalities among communities, both within and among countries. They also look at how media typically give voice to the most powerful, and how new media might offer tools to help those who are disenfranchised. Symbolic interactionists see the symbolic uses of technology as signs of everything from a sterile futuristic world to a successful professional life.</para>
+      </section>
+ 
+    
+    <section id="fs-id1546221" class="section-quiz" type="section-quiz">
+      <title>Section Quiz</title>
+      
+      <exercise xmlns:m="http://www.w3.org/1998/Math/MathML" xmlns:q="http://cnx.rice.edu/qml/1.0" id="fs-id1324789" type="section-quiz"><problem id="fs-id1748927">
+          <para id="import-auto-id1356351">A parent secretly monitoring the babysitter through the use of GPS, site blocker, and nanny cam is a good example of: </para>
+          <list id="fs-id1701033" list-type="enumerated" number-style="lower-alpha"><item>the social construction of reality</item>
+<item>technophilia</item>
+<item>a neo-Luddite</item>
+<item>panoptic surveillance</item>
+          </list></problem>
+
+        <solution id="eip-id3627674">
+        <label/>
+        <title>Answer</title>
+          <para id="eip-id3396614">D</para>
+        </solution>
+      </exercise><exercise xmlns:m="http://www.w3.org/1998/Math/MathML" xmlns:q="http://cnx.rice.edu/qml/1.0" id="fs-id1730576" type="section-quiz"><problem id="fs-id1414585">
+          <para id="import-auto-id1448388">The use of Facebook to create an online persona by only posting images that match your ideal self exemplifies the_____________ that can occur in forms of new media. </para>
+          <list id="fs-id1454293" list-type="enumerated" number-style="lower-alpha">
+            <item>social construction of reality</item>
+            <item>cyberfeminism </item>
+            <item>market segmentation</item>
+            <item>referencing</item>
+          </list>
+        </problem>
+
+        <solution id="eip-id3202392">
+        <label/>
+        <title>Answer</title>
+          <para id="eip-id3382255">A</para>
+        </solution>
+      </exercise><exercise xmlns:m="http://www.w3.org/1998/Math/MathML" xmlns:q="http://cnx.rice.edu/qml/1.0" id="fs-id1770471" type="section-quiz"><problem id="fs-id1739739">
+          <para id="import-auto-id2101327">_________ tend to be more pro-technology, while _______ view technology as a symbol of the coldness of modern life. </para>
+          <list id="fs-id1317328" list-type="enumerated" number-style="lower-alpha"><item>Luddites; technophiles</item>
+<item>technophiles; Luddites</item>
+<item>cyberfeminists; technophiles</item>
+<item>liberal feminists; conflict theorists</item>
+          </list></problem>
+
+        <solution id="eip-id2064943">
+        <label/>
+        <title>Answer</title>
+          <para id="eip-id2464028">B</para>
+        </solution>
+      </exercise><exercise xmlns:m="http://www.w3.org/1998/Math/MathML" xmlns:q="http://cnx.rice.edu/qml/1.0" id="fs-id1269309" type="section-quiz"><problem id="fs-id1521803">
+          <para id="import-auto-id1904230">When it comes to media and technology, a functionalist would focus on: </para>
+          <list id="fs-id1800714" list-type="enumerated" number-style="lower-alpha">
+            <item>the symbols created and reproduced by the media</item>
+            <item>the association of technology and technological skill with men</item>
+            <item>the way that various forms of media socialize users </item>
+            <item>the digital divide between the technological haves and have-nots</item>
+          </list>
+        </problem>
+
+        <solution id="eip-id2339269">
+        <label/>
+        <title>Answer</title>
+          <para id="eip-id3291322">C</para>
+        </solution>
+      </exercise><exercise xmlns:m="http://www.w3.org/1998/Math/MathML" xmlns:q="http://cnx.rice.edu/qml/1.0" id="fs-id1752267" type="section-quiz"><problem id="fs-id1519038">
+          <para id="import-auto-id2747592">When all media sources report a simplified version of the environmental impact of hydraulic fracturing, with no effort to convey the hard science and complicated statistical data behind the story, ___________ is probably occurring. </para>
+          <list id="fs-id1789681" list-type="enumerated" number-style="lower-alpha"><item>gatekeeping</item>
+<item>the digital divide</item>
+<item>technophilia</item>
+<item>market segmentation</item></list></problem>
+        
+        
+        <solution id="eip-id2050257">
+        <label/>
+        <title>Answer</title>
+          <para id="eip-id2321251">A</para>
+        </solution>
+      </exercise></section>
+    
+    <section id="fs-id1442706" class="short-answer" type="short-answer">
+      <title>Short Answer</title>
+      <exercise id="fs-id1577940" type="short-answer">
+        <problem id="fs-id1558890">
+          <para id="import-auto-id1338201">Contrast a functionalist viewpoint of digital surveillance with a conflict perspective viewpoint.</para>
+        </problem>
+      </exercise>
+      
+      
+      
+      <exercise id="fs-id1464901" type="short-answer">
+        <problem id="fs-id1555851">
+          <para xmlns:m="http://www.w3.org/1998/Math/MathML" xmlns:q="http://cnx.rice.edu/qml/1.0" id="import-auto-id1490897">In what ways has the Internet affected how you view reality? Explain using a symbolic interactionist perspective.</para></problem>
+      </exercise>
+      
+      
+      
+      <exercise id="fs-id1778732" type="short-answer">
+        <problem id="fs-id1484094">
+          <para id="import-auto-id2774549">Describe how a cyberfeminist might address the fact that powerful female politicians are often demonized in traditional media.</para>
+        </problem>
+      </exercise>
+      
+      
+      
+      <exercise id="fs-id1728454" type="short-answer">
+        <problem id="fs-id1728418">
+          <para xmlns:m="http://www.w3.org/1998/Math/MathML" xmlns:q="http://cnx.rice.edu/qml/1.0" id="import-auto-id1325658">The issue of airplane-pilot exhaustion is an issue of growing media concern. Select a theoretical perspective, and describe how it would explain this.</para></problem>
+      </exercise>
+      
+      
+      <exercise id="fs-id1787060" type="short-answer">
+        <problem id="fs-id1485404">
+          <para xmlns:m="http://www.w3.org/1998/Math/MathML" xmlns:q="http://cnx.rice.edu/qml/1.0" id="import-auto-id2826197">Would you characterize yourself as a technophile or a Luddite? Explain, and use examples.</para></problem>
+      </exercise>
+      </section>
+    
+    
+    
+    <section id="fs-id1509107" class="further-research" type="further-research">
+      <title>Further Research</title>
+      <para xmlns:m="http://www.w3.org/1998/Math/MathML" xmlns:q="http://cnx.rice.edu/qml/1.0" id="import-auto-id1474531">To learn more about cyberfeminism, check out the interdisciplinary artist collective, subRosa: <link url="http://openstaxcollege.org/l/cyberfeminism/">http://openstaxcollege.org/l/cyberfeminism</link></para><para xmlns:m="http://www.w3.org/1998/Math/MathML" xmlns:q="http://cnx.rice.edu/qml/1.0" id="import-auto-id2217671">To explore the implications of panoptic surveillance, review some surveillance studies at the free, open source Surveillance and Society site: <link url="http://openstaxcollege.org/l/Surveillance">http://openstaxcollege.org/l/Surveillance</link></para><para xmlns:m="http://www.w3.org/1998/Math/MathML" xmlns:q="http://cnx.rice.edu/qml/1.0" id="eip-352">Read an example of socialist media from <emphasis effect="italics">Jacobin</emphasis> magazine here: <link url="http://openstaxcollege.org/l/2EJacobin">http://openstaxcollege.org/l/2EJacobin</link></para></section>
+    
+    <section id="fs-id1548507" class="references" type="references">
+      <title>References</title>
+      
+        <para id="fs-id1665173">Brasted, Monica. 2010. “Care Bears vs. Transformers: Gender Stereotypes in Advertisements.” Retrieved January 10, 2012 (<link url="http://www.sociology.org/media-studies/care-bears-vs-transformers-gender-stereotypes-in-advertisements">http://www.sociology.org/media-studies/care-bears-vs-transformers-gender-stereotypes-in-advertisements</link>).</para>
+          <para id="fs-id2095397">Carmi, Evan, Matthew Ericson, David Nolen, Kevin Quealy, Michael Strickland, Jeremy White, and Derek Willis. 2012. “The 2012 Money Race: Compare the Candidates.” <emphasis effect="italics">New York Times</emphasis>. Retrieved January 15, 2012 (<link url="http://elections.nytimes.com/2012/campaign-finance">http://elections.nytimes.com/2012/campaign-finance</link>).</para>
+            <para id="fs-id2098361">Foucault, Michel. 1975. <emphasis effect="italics">Discipline and Punish: The Birth of the Prison</emphasis>. New York: Vintage Books. </para>
+              <para xmlns:m="http://www.w3.org/1998/Math/MathML" xmlns:q="http://cnx.rice.edu/qml/1.0" id="fs-id1502669">Fox, Jesse, and Jeremy Bailenson. 2009. “Virtual Virgins and Vamps: The Effects of Exposure to Female Characters’ Sexualized Appearance and Gaze in an Immersive Virtual Environment.” <emphasis effect="italics">Sex Roles</emphasis> 61:147–157.</para><para id="fs-id1916068">Gamson, William, David Croteau, William Hoynes, and Theodore Sasson. 1992. “Media Images and the Social Construction of Reality.” <emphasis effect="italics">Annual Review of Sociology</emphasis> 18:373–393.</para>
+                  <para id="fs-id1117057">Gentile, Douglas, Lindsay Mathieson, and Nikki Crick. 2011. “Media Violence Associations with the Form and Function of Aggression among Elementary School Children.” <emphasis effect="italics">Social Development</emphasis> 20:213–232.</para>
+                    <para id="fs-id1881844">Kautiainen, S., L. Koivusilta, T. Lintonen, S. M. Virtanen, and A. Rimpelä. 2005. <sup>“</sup>Use of Information and Communication Technology and Prevalence of Overweight and Obesity Among Adolescents.” <emphasis effect="italics">International Journal of Obesity</emphasis> 29:925–933</para>
+                      <para id="fs-id1130322">Krahe, Barbara, Ingrid Moller, L. Huesmann, Lucyna Kirwil, Julianec Felber, and Anja Berger. 2011. “Desensitization to Media Violence: Links With Habitual Media Violence</para>
+                        <para id="fs-id1695248">Exposure, Aggressive Cognitions, and Aggressive Behavior.” <emphasis effect="italics">Journal of Personality and Social Psychology</emphasis> 100:630–646. </para>
+                          <para id="fs-id1239795">Lazerfeld, Paul F. and Robert K. Merton. 1948. “Mass Communication, Popular Taste, and Organized Social Action.” <emphasis effect="italics">The Communication of Ideas</emphasis>. New York: Harper &amp; Bros. </para>
+                            <para id="fs-id2277341">Magnet, Shoshana. 2007. “Feminist Sexualities, Race, and The Internet: An Investigation of suicidegirls.com.” <emphasis effect="italics">New Media &amp; Society</emphasis> 9:577-602.</para>
+                              <para xmlns:m="http://www.w3.org/1998/Math/MathML" xmlns:q="http://cnx.rice.edu/qml/1.0" id="fs-id2402035">Mills, C. Wright. 2000 [1956]. <emphasis effect="italics">The Power Elite</emphasis>. New York: Oxford University Press.</para><para id="fs-id2085439">NielsenWire. 2011. “Nielsen Estimates Number of U.S. Television Homes to be 114.7 Million.” May 3. Retrieved January 15, 2012 (<link url="http://blog.nielsen.com/nielsenwire/media_entertainment/nielsen-estimates-number-of-u-s-television-homes-to-be-114-7-million/">http://blog.nielsen.com/nielsenwire/media_entertainment/nielsen-estimates-number-of-u-s-television-homes-to-be-114-7-million/</link>).</para>
+                                  <para id="fs-id1137708">Pierce, Tess. 2011. “Singing at the Digital Well: Blogs as Cyberfeminist Sites of Resistance.” <emphasis effect="italics">Feminist Formations</emphasis> 23:196–209.</para>
+                                    <para id="fs-id2239740">Savage, Joanne. 2003. “Does Viewing Violent Media Really Cause Criminal Violence?</para>
+                                      <para id="fs-id2278057">A Methodological Review.” <emphasis effect="italics">Aggression and Violent Behavior</emphasis> 10:99–128.</para>
+                                        <para xmlns:m="http://www.w3.org/1998/Math/MathML" xmlns:q="http://cnx.rice.edu/qml/1.0" xmlns:data="http://www.w3.org/TR/html5/dom.html#custom-data-attribute" id="fs-id1664238">Shoemaker, Pamela and Tim Vos. 2009. “Media Gatekeeping.” Pp. 75–89 in <emphasis effect="italics">An Integrated Approach to Communication Theory and Research, 2nd ed.</emphasis>, edited by D. Stacks and M. Salwen. New York: Routledge. </para><para id="fs-id2025126">U.S. Department of Commerce. 2011. “Women in STEM: A Gender Gap to Innovation.” August.  Retrieved February 22, 2012 (<link url="http://blog.nielsen.com/nielsenwire/media_entertainment/nielsen-estimates-number-of-u-s-television-homes-to-be-114-7-million/"> http://www.esa.doc.gov/sites/default/files/reports/documents/womeninstemagaptoinnovation8311.pdf/</link>).</para>
+      
+    </section>
+    
+  </content>
+  
+  <glossary>
+    <definition id="import-auto-id1208606"><term>cyberfeminism</term> <meaning id="fs-id1433209">the application to and promotion of feminism online</meaning></definition>
+    <definition id="import-auto-id2748528"><term>gatekeeping</term> <meaning id="fs-id1434118">the sorting process by which thousands of possible messages are shaped into a mass media-appropriate form and reduced to a manageable amount</meaning></definition>
+    <definition id="import-auto-id1083477"><term>neo-Luddites</term> <meaning id="fs-id1353668">those who see technology as a symbol of the coldness of modern life</meaning></definition>
+    <definition id="import-auto-id3636572"><term>panoptic surveillance</term> <meaning id="fs-id1316964">a form of constant monitoring in which the observation posts are decentralized and the observed is never communicated with directly</meaning></definition>
+    <definition id="import-auto-id1166826"><term>technophiles</term> <meaning id="fs-id1787918">those who see technology as symbolizing the potential for a brighter future</meaning></definition>
+  </glossary>
+</document>

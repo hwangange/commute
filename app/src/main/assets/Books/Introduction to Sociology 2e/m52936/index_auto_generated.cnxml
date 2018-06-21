@@ -1,0 +1,360 @@
+<?xml version="1.0"?>
+<document xmlns="http://cnx.rice.edu/cnxml" id="imported-from-openoffice" module-id="imported-from-openoffice" cnxml-version="0.7">
+    <title>Global Stratification and Classification</title>
+    <metadata xmlns:md="http://cnx.rice.edu/mdml"
+          mdml-version="0.5">
+  <!-- WARNING! The 'metadata' section is read only. Do not edit below.
+       Changes to the metadata section in the source will not be saved. -->
+  <md:repository>http://legacy.cnx.org/content</md:repository>
+  <md:content-url>http://legacy.cnx.org/content/m52936/latest</md:content-url>
+  <md:content-id>m52936</md:content-id>
+  <md:title>Global Stratification and Classification</md:title>
+  <md:version>1.3</md:version>
+  <md:created>2015/01/20 18:21:18 -0600</md:created>
+  <md:revised>2015/03/13 11:51:29 -0500</md:revised>
+  <md:actors>
+    <md:person userid="OSCRiceUniversity">
+      <md:firstname>Rice</md:firstname>
+      <md:surname>University</md:surname>
+      <md:fullname>Rice University</md:fullname>
+      <md:email>info@openstaxcollege.org</md:email>
+    </md:person>
+    <md:organization userid="OpenStaxCollege">
+      <md:shortname>OpenStax</md:shortname>
+      <md:fullname>OpenStax</md:fullname>
+      <md:email>info@openstax.org</md:email>
+    </md:organization>
+    <md:person userid="cnxsoc2">
+      <md:firstname>Openstax College</md:firstname>
+      <md:surname>Sociology 2e</md:surname>
+      <md:fullname>Openstax Sociology 2e</md:fullname>
+      <md:email>info@openstaxcollege.org</md:email>
+    </md:person>
+  </md:actors>
+  <md:roles>
+    <md:role type="author">OpenStaxCollege</md:role>
+    <md:role type="maintainer">OpenStaxCollege cnxsoc2</md:role>
+    <md:role type="licensor">OSCRiceUniversity</md:role>
+  </md:roles>
+  <md:license url="http://creativecommons.org/licenses/by/4.0/">Creative Commons Attribution License 4.0</md:license>
+  <!-- For information on license requirements for use or modification, see license url in the
+       above <md:license> element.
+       For information on formatting required attribution, see the URL:
+         CONTENT_URL/content_info#cnx_cite_header
+       where CONTENT_URL is the value provided above in the <md:content-url> element.
+  -->
+  <md:derived-from url="http://legacy.cnx.org/content/m42847/1.4">
+  <md:repository>http://legacy.cnx.org/content</md:repository>
+  <md:content-url>http://legacy.cnx.org/content/m42847/1.4</md:content-url>
+  <md:content-id>m42847</md:content-id>
+  <md:title>Global Stratification and Classification</md:title>
+  <md:version>1.4</md:version>
+  <md:created>2012/01/27 16:22:08 -0600</md:created>
+  <md:revised>2015/01/05 10:57:34 -0600</md:revised>
+  <md:actors>
+    <md:organization userid="OpenStaxCollege">
+      <md:shortname>OpenStax</md:shortname>
+      <md:fullname>OpenStax</md:fullname>
+      <md:email>info@openstax.org</md:email>
+    </md:organization>
+    <md:person userid="OSCRiceUniversity">
+      <md:firstname>Rice</md:firstname>
+      <md:surname>University</md:surname>
+      <md:fullname>Rice University</md:fullname>
+      <md:email>info@openstaxcollege.org</md:email>
+    </md:person>
+    <md:person userid="soccap">
+      <md:firstname>Sociology</md:firstname>
+      <md:surname>Cap</md:surname>
+      <md:fullname>OpenStax Sociology 1e</md:fullname>
+      <md:email>dcwill@rice.edu</md:email>
+    </md:person>
+  </md:actors>
+  <md:roles>
+    <md:role type="author">OpenStaxCollege</md:role>
+    <md:role type="maintainer">OpenStaxCollege soccap</md:role>
+    <md:role type="licensor">OSCRiceUniversity</md:role>
+  </md:roles>
+  <md:license url="http://creativecommons.org/licenses/by/4.0/" />
+  <!-- For information on license requirements for use or modification, see license url in the
+       above <md:license> element.
+       For information on formatting required attribution, see the URL:
+         CONTENT_URL/content_info#cnx_cite_header
+       where CONTENT_URL is the value provided above in the <md:content-url> element.
+  -->
+  </md:derived-from>
+  <md:keywordlist>
+    <md:keyword>capital flight</md:keyword>
+    <md:keyword>core nations</md:keyword>
+    <md:keyword>debt accumulation</md:keyword>
+    <md:keyword>deindustrialization</md:keyword>
+    <md:keyword>first world</md:keyword>
+    <md:keyword>fourth world</md:keyword>
+    <md:keyword>global feminization</md:keyword>
+    <md:keyword>global inequality</md:keyword>
+    <md:keyword>global stratification</md:keyword>
+    <md:keyword>gross national income</md:keyword>
+    <md:keyword>peripheral nations</md:keyword>
+    <md:keyword>second world</md:keyword>
+    <md:keyword>semi-peripheral nations</md:keyword>
+    <md:keyword>third world</md:keyword>
+  </md:keywordlist>
+  <md:subjectlist>
+    <md:subject>Social Sciences</md:subject>
+  </md:subjectlist>
+  <md:abstract><list>
+<item>Describe global stratification</item>
+<item>Understand how different classification systems have developed</item>
+<item>Use terminology from Wallerstein’s world systems approach</item>
+<item>Explain the World Bank’s classification of economies</item>
+</list></md:abstract>
+  <md:language>en</md:language>
+  <!-- WARNING! The 'metadata' section is read only. Do not edit above.
+       Changes to the metadata section in the source will not be saved. -->
+</metadata>
+
+<content>
+        
+            
+            <para xmlns:m="http://www.w3.org/1998/Math/MathML" xmlns:q="http://cnx.rice.edu/qml/1.0" id="import-auto-id1169033065229">Just as the United States' wealth is increasingly concentrated among its richest citizens while the middle class slowly disappears, <term>global inequality</term> is concentrating resources in certain nations and is significantly affecting the opportunities of individuals in poorer and less powerful countries. In fact, a recent Oxfam (2014) report that suggested the richest eighty-five people in the world are worth more than the poorest 3.5 billion combined. The <term>GINI coefficient</term> measures income inequality between countries using a 100-point scale on which 1 represents complete equality and 100 represents the highest possible inequality. In  2007, the global GINI coefficient that measured the wealth gap between the core nations in the northern part of the world and the mostly peripheral nations in the southern part of the world was 75.5 percent (Korseniewicz and Moran 2009). But before we delve into the complexities of global inequality, let’s consider how the three major sociological perspectives might contribute to our understanding of it.</para><para id="import-auto-id1169033065440">The functionalist perspective is a macroanalytical view that focuses on the way that all aspects of society are integral to the continued health and viability of the whole. A functionalist might focus on why we have global inequality and what social purposes it serves. This view might assert, for example, that we have global inequality because some nations are better than others at adapting to new technologies and profiting from a globalized economy, and that when core nation companies locate in peripheral nations, they expand the local economy and benefit the workers. </para>
+            <para xmlns:m="http://www.w3.org/1998/Math/MathML" xmlns:q="http://cnx.rice.edu/qml/1.0" id="import-auto-id1169033070363">Conflict theory focuses on the creation and reproduction of inequality. A conflict theorist would likely address the systematic inequality created when core nations exploit the resources of peripheral nations. For example, how many U.S. companies take advantage of overseas workers who lack the constitutional protection and guaranteed minimum wages that exist in the United States? Doing so allows them to maximize profits, but at what cost?</para><para id="import-auto-id1169033062973">The symbolic interaction perspective studies the day-to-day impact of global inequality, the meanings individuals attach to global stratification, and the subjective nature of poverty. Someone applying this view to global inequality would probably focus on understanding the difference between what someone living in a core nation defines as poverty (relative poverty, defined as being unable to live the lifestyle of the average person in your country) and what someone living in a peripheral nation defines as poverty (absolute poverty, defined as being barely able, or unable, to afford basic necessities, such as food). </para>
+            <section id="fs-id2826424">
+                <title>Global Stratification</title>
+                <para id="import-auto-id1169033062421">While stratification in the United States refers to the unequal distribution of resources among individuals, <term id="import-auto-id1169033106110">global stratification</term> refers to this unequal distribution among nations. There are two dimensions to this stratification: gaps between nations and gaps within nations. When it comes to global inequality, both economic inequality and social inequality may concentrate the burden of poverty among certain segments of the earth’s population (Myrdal 1970). As the chart below illustrates, people’s life expectancy depends heavily on where they happen to be born.</para>
+                <table xmlns:m="http://www.w3.org/1998/Math/MathML" xmlns:q="http://cnx.rice.edu/qml/1.0" id="import-auto-id1169033057214" summary="Table 10.1: Statistics such as infant mortality rates and life expectancy vary greatly by country of origin (Central Intelligence Agency 2011). Table has three columns: &#x201C;Country,&#x201D; &#x201C;Infant Mortality Rate,&#x201D; and &#x201C;Life Expectancy.&#x201D; The first row is Norway: 2.48 deaths per 1000 live births, and 81 year life expectancy. The second row is The United States: 6.17 deaths per 1000 live births, and 79 year life expectancy. The third row is North Korea: 24.50 deaths per 1000 live births, and 70 year life expectancy. The last row is Afghanistan: 117.3 deaths per 1000 live births, 50 year life expectancy.">
+<tgroup cols="3"><colspec colnum="1" colname="c1"/>
+                        <colspec colnum="2" colname="c2"/>
+                        <colspec colnum="3" colname="c3"/>
+                        <thead>
+                            <row>
+                                <entry>
+                                    Country
+                                </entry>
+                                <entry>
+                                    
+                                    Infant Mortality Rate
+                                </entry>
+                                <entry>
+                                    
+                                    Life Expectancy
+                                </entry>
+                            </row>
+                        </thead>
+                        <tbody>
+                            <row>
+                                <entry>Norway</entry>
+                                <entry>2.48 deaths per 1000 live births</entry>
+                                <entry>81 years</entry>
+                            </row>
+                            <row>
+                                <entry>The United States</entry>
+                                <entry>6.17 deaths per 1000 live births</entry>
+                                <entry>79 years</entry>
+                            </row>
+<row>
+                                <entry>North Korea</entry>
+                                <entry>24.50 deaths per 1000 live births</entry>
+                                <entry>70 years</entry>
+                            </row>
+                            <row>
+                                <entry>Afghanistan</entry>
+                                <entry>117.3 deaths per 1000 live births</entry>
+                                <entry>50 years</entry>
+                            </row>
+                        </tbody>
+                        
+                        
+                        
+                    
+
+
+
+
+
+
+</tgroup><caption>Statistics such as infant mortality rates and life expectancy vary greatly by country of origin. (Central Intelligence Agency 2011)</caption>
+</table><para xmlns:m="http://www.w3.org/1998/Math/MathML" xmlns:q="http://cnx.rice.edu/qml/1.0" id="import-auto-id1169033070220">Most of us are accustomed to thinking of global stratification as economic inequality. For example, we can compare the United States’ average worker’s wage to America’s average wage. Social inequality, however, is just as harmful as economic discrepancies. Prejudice and discrimination—whether against a certain race, ethnicity, religion, or the like—can create and aggravate conditions of economic equality, both within and between nations. Think about the inequity that existed for decades within the nation of South Africa. Apartheid, one of the most extreme cases of institutionalized and legal racism, created a social inequality that earned it the world’s condemnation.</para><para id="import-auto-id1169033140120">Gender inequity is another global concern. Consider the controversy surrounding female genital mutilation. Nations that practice this female circumcision procedure defend it as a longstanding cultural tradition in certain tribes and argue that the West shouldn’t interfere. Western nations, however, decry the practice and are working to stop it. </para>
+                <para xmlns:m="http://www.w3.org/1998/Math/MathML" xmlns:q="http://cnx.rice.edu/qml/1.0" id="import-auto-id1169033060518">Inequalities based on sexual orientation and gender identity exist around the globe. According to Amnesty International, a number of crimes are committed against individuals who do not conform to traditional gender roles or sexual orientations (however those are culturally defined). From culturally sanctioned rape to state-sanctioned executions, the abuses are serious. These legalized and culturally accepted forms of prejudice and discrimination exist everywhere—from the United States to Somalia to Tibet—restricting the freedom of individuals and often putting their lives at risk (Amnesty International 2012). </para></section>
+            <section id="fs-id1967266">
+                <title>Global Classification</title>
+                <para xmlns:m="http://www.w3.org/1998/Math/MathML" xmlns:q="http://cnx.rice.edu/qml/1.0" id="import-auto-id1169033064495">A major concern when discussing global inequality is how to avoid an ethnocentric bias implying that less-developed nations want to be like those who’ve attained post-industrial global power. Terms such as developing (nonindustrialized) and developed (industrialized) imply that unindustrialized countries are somehow inferior, and must improve to participate successfully in the global economy, a label indicating that all aspects of the economy cross national borders. We must take care how we delineate different countries. Over time, terminology has shifted to make way for a more inclusive view of the world.</para><section id="fs-id2337590">
+                    <title>Cold War Terminology</title>
+                    <para xmlns:m="http://www.w3.org/1998/Math/MathML" xmlns:q="http://cnx.rice.edu/qml/1.0" id="import-auto-id1169033066778">Cold War terminology was developed during the Cold War era (1945–1980). Familiar and still used by many, it classifies countries into first world, second world, and third world nations based on their respective economic development and standards of living. When this nomenclature was developed, capitalistic democracies such as the United States and Japan were considered part of the <term id="import-auto-id1169033103460">first world</term>. The poorest, most undeveloped countries were referred to as the <term id="import-auto-id1169033103545">third world</term> and included most of sub-Saharan Africa, Latin America, and Asia. The <term id="import-auto-id1169033060641">second world</term> was the in-between category: nations not as limited in development as the third world, but not as well off as the first world, having moderate economies and standard of living, such as China or Cuba. Later, sociologist Manual Castells (1998) added the term <term id="import-auto-id1169033119743">fourth world</term> to refer to stigmatized minority groups that were denied a political voice all over the globe (indigenous minority populations, prisoners, and the homeless, for example). </para><para id="import-auto-id1169033102827">Also during the Cold War, global inequality was described in terms of economic development. Along with developing and developed nations, the terms less-developed nation and underdeveloped nation were used. This was the era when the idea of <emphasis effect="italics">noblesse oblige</emphasis> (first-world responsibility) took root, suggesting that the so-termed developed nations should provide foreign aid to the less-developed and underdeveloped nations in order to raise their standard of living. </para>
+                </section>
+                <section id="fs-id3701031">
+                    <title>Immanuel Wallerstein: World Systems Approach</title>
+                    <para xmlns:m="http://www.w3.org/1998/Math/MathML" xmlns:q="http://cnx.rice.edu/qml/1.0" id="import-auto-id1169033109934">Immanuel Wallerstein’s (1979) world systems approach uses an economic basis to understand global inequality. Wallerstein conceived of the global economy as a complex system that supports an economic hierarchy that placed some nations in positions of power with numerous resources and other nations in a state of economic subordination. Those that were in a state of subordination faced significant obstacles to mobilization. </para><para xmlns:m="http://www.w3.org/1998/Math/MathML" xmlns:q="http://cnx.rice.edu/qml/1.0" id="import-auto-id1169033103921"><term id="import-auto-id1169033106782">Core nations</term> are dominant capitalist countries, highly industrialized, technological, and urbanized. For example, Wallerstein contends that the United States is an economic powerhouse that can support or deny support to important economic legislation with far-reaching implications, thus exerting control over every aspect of the global economy and exploiting both semi-peripheral and peripheral nations. We can look at free trade agreements such as the North American Free Trade Agreement (NAFTA) as an example of how a core nation is able to leverage its power to gain the most advantageous position in the matter of global trade.</para><para xmlns:m="http://www.w3.org/1998/Math/MathML" xmlns:q="http://cnx.rice.edu/qml/1.0" id="import-auto-id1169033057628"><term id="import-auto-id1169033122237">Peripheral nations</term> have very little industrialization; what they do have often represents the outdated castoffs of core nations or the factories and means of production owned by core nations. They typically have unstable governments, inadequate social programs, and are economically dependent on core nations for jobs and aid. There are abundant examples of countries in this category, such as Vietnam and Cuba. We can be sure the workers in a Cuban cigar factory, for example, which are owned or leased by global core nation companies, are not enjoying the same privileges and rights as U.S. workers. </para><para xmlns:m="http://www.w3.org/1998/Math/MathML" xmlns:q="http://cnx.rice.edu/qml/1.0" id="import-auto-id1169033139519"><term id="import-auto-id1169033062541">Semi-peripheral nations</term> are in-between nations, not powerful enough to dictate policy but nevertheless acting as a major source for raw material and an expanding middle-class marketplace for core nations, while also exploiting peripheral nations. Mexico is an example, providing abundant cheap agricultural labor to the U.S., and supplying goods to the United States market at a rate dictated by the U.S. without the constitutional protections offered to United States workers. </para></section>
+                <section id="fs-id3660013">
+                    <title>World Bank Economic Classification by Income</title>
+                    <para xmlns:m="http://www.w3.org/1998/Math/MathML" xmlns:q="http://cnx.rice.edu/qml/1.0" id="import-auto-id1169033105425">While the World Bank is often criticized, both for its policies and its method of calculating data, it is still a common source for global economic data. 
+
+ Along with tracking the economy, the World Bank tracks demographics and environmental health to provide a complete picture of whether a nation is high income, middle income, or low income. 
+<figure id="eip-id1168337908034">
+<media id="eip-id1168329144593" alt="This world map shows advanced, transitioning, less, and least developed countries."><image mime-type="jpg" src="CNX_Soc2e_Figure_10_01_002.jpg"/></media>
+<caption>
+This world map shows advanced, transitioning, less, and least developed countries. (Map courtesy of Sbw01f, data obtained from the CIA World Factbook/Wikimedia Commons)</caption>
+</figure></para></section>
+                <section id="fs-id1365174">
+                    <title>High-Income Nations</title>
+                    <para xmlns:m="http://www.w3.org/1998/Math/MathML" xmlns:q="http://cnx.rice.edu/qml/1.0" id="import-auto-id1169033102002">The World Bank defines high-income nations as having a gross national income of at least $12,746 per capita. The OECD (Organization for Economic and Cooperative Development) countries make up a group of thirty-four nations whose governments work together to promote economic growth and sustainability. According to the World Bank (2014b), in 2013, the average <term>gross national income (GNI) per capita</term>, or the mean income of the people in a nation, found by dividing total GNI by the total population, of a high-income nation belonging to the OECD was $43,903 per capita and the total population was over one billion (1.045 billion); on average, 81 percent of the population in these nations was urban. Some of these countries include the United States, Germany, Canada, and the United Kingdom (World Bank 2014b).</para><para xmlns:m="http://www.w3.org/1998/Math/MathML" xmlns:q="http://cnx.rice.edu/qml/1.0" id="import-auto-id1169033105437">High-income countries face two major issues: capital flight and deindustrialization. <term id="import-auto-id1169033102913">Capital flight</term> refers to the movement (flight) of capital from one nation to another, as when General Motors automotive company closed U.S. factories in Michigan and opened factories in Mexico. <term id="import-auto-id1169033099064">Deindustrialization</term>, a related issue, occurs as a consequence of capital flight, as no new companies open to replace jobs lost to foreign nations. As expected, global companies move their industrial processes to the places where they can get the most production with the least cost, including the building of infrastructure, training of workers, shipping of goods, and, of course, paying employee wages. This means that as emerging economies create their own industrial zones, global companies see the opportunity for existing infrastructure and much lower costs. Those opportunities lead to businesses closing the factories that provide jobs to the middle class within core nations and moving their industrial production to peripheral and semi-peripheral nations. </para><note xmlns:m="http://www.w3.org/1998/Math/MathML" xmlns:q="http://cnx.rice.edu/qml/1.0" id="fs-id2417353" class="sociology-big-picture"><label/><title>Capital Flight, Outsourcing, and Jobs in the United States</title>
+                            <figure id="import-auto-id1169033140153"><media id="import-auto-id1169033103927" alt="A run-down auto parts building is shown here.">
+                                <image mime-type="image/png" src="Figure_10_01_01.jpg" width="300"/>
+                            </media>
+                                <caption>This dilapidated auto supply store in Detroit is a victim of auto industry outsourcing. (Photo courtesy of Bob Jagendorf/flickr)</caption></figure><para id="import-auto-id1169033121839">Capital flight describes jobs and infrastructure moving from one nation to another. Look at the U.S. automobile industry. In the early twentieth century, the cars driven in the United States were made here, employing thousands of workers in Detroit and in the companies that produced everything that made building cars possible. However, once the fuel crisis of the 1970s hit and people in the United States increasingly looked to imported cars with better gas mileage, U.S. auto manufacturing began to decline. During the 2007–2009 recession, the U.S. government bailed out the three main auto companies, underscoring their vulnerability. At the same time, Japanese-owned Toyota and Honda and South Korean Kia maintained stable sales levels. </para><para id="import-auto-id1169033106024">Capital flight also occurs when services (as opposed to manufacturing) are relocated. Chances are if you have called the tech support line for your cell phone or Internet provider, you’ve spoken to someone halfway across the globe. This professional might tell you her name is Susan or Joan, but her accent makes it clear that her real name might be Parvati or Indira. It might be the middle of the night in that country, yet these service providers pick up the line saying, “Good morning,” as though they are in the next town over. They know everything about your phone or your modem, often using a remote server to log in to your home computer to accomplish what is needed. These are the workers of the twenty-first century. They are not on factory floors or in traditional sweatshops; they are educated, speak at least two languages, and usually have significant technology skills. They are skilled workers, but they are paid a fraction of what similar workers are paid in the United States. For U.S. and multinational companies, the equation makes sense. India and other semi-peripheral countries have emerging infrastructures and education systems to fill their needs, without core nation costs.</para><para id="import-auto-id1169033124070">As services are relocated, so are jobs. In the United States, unemployment is high. Many college-educated people are unable to find work, and those with only a high school diploma are in even worse shape. We have, as a country, outsourced ourselves out of jobs, and not just menial jobs, but white-collar work as well. But before we complain too bitterly, we must look at the culture of consumerism that we embrace. A flat screen television that might have cost $1,000 a few years ago is now $350. That cost savings has to come from somewhere. When consumers seek the lowest possible price, shop at big box stores for the biggest discount they can get, and generally ignore other factors in exchange for low cost, they are building the market for outsourcing. And as the demand is built, the market will ensure it is met, even at the expense of the people who wanted it in the first place.</para><para id="import-auto-id1169033058133">
+                                <figure id="import-auto-id1169033058134"><media id="import-auto-id1169033058135" alt="Many people at workstations in a call center are shown here.">
+                                    <image mime-type="image/png" src="Figure_10_01_02.jpg" width="300"/>
+                                </media>
+                                    <caption>Is this international call center the wave of the future? (Photo courtesy of Vilma.com/flickr)</caption></figure></para>
+                        </note></section>
+                <section id="fs-id1491263">
+                    <title>Middle-Income Nations</title>
+                    <para xmlns:m="http://www.w3.org/1998/Math/MathML" xmlns:q="http://cnx.rice.edu/qml/1.0" id="import-auto-id1169033058949">The World Bank defines middle-income economies areas those with a GNI per capita of more than $1,045 but less than $12,746. According to the World Bank (2014), in 2013, the average GNI per capita of an upper middle income nation was $7,594 per capita with a total population of 2.049 billion, of which 62 percent was urban. Thailand, China, and Namibia are examples of middle-income nations (World Bank 2014a). </para><para xmlns:m="http://www.w3.org/1998/Math/MathML" xmlns:q="http://cnx.rice.edu/qml/1.0" id="import-auto-id1169033064322">Perhaps the most pressing issue for middle-income nations is the problem of debt accumulation. As the name suggests, <term id="import-auto-id1169033069390">debt accumulation</term> is the buildup of external debt, wherein countries borrow money from other nations to fund their expansion or growth goals. As the uncertainties of the global economy make repaying these debts, or even paying the interest on them, more challenging, nations can find themselves in trouble. Once global markets have reduced the value of a country’s goods, it can be very difficult to ever manage the debt burden. Such issues have plagued middle-income countries in Latin America and the Caribbean, as well as East Asian and Pacific nations (Dogruel and Dogruel 2007). By way of example, even in the European Union, which is composed of more core nations than semi-peripheral nations, the semi-peripheral nations of Italy and Greece face increasing debt burdens. The economic downturns in both Greece and Italy still threaten the economy of the entire European Union. </para></section>
+                <section id="fs-id2079172">
+                    <title>Low-Income Nations</title>
+                    <para xmlns:m="http://www.w3.org/1998/Math/MathML" xmlns:q="http://cnx.rice.edu/qml/1.0" id="import-auto-id1169033069396">The World Bank defines low-income countries as nations whose per capita GNI was $1,045 per capita or less in 2013. According to the World Bank (2014a), in 2013, the average per capita GNI of a low-income nation was $528 per capita and the total population was 796,261,360, with 28 percent located in urban areas. For example, Myanmar, Ethiopia, and Somalia are considered low-income countries. Low-income economies are primarily found in Asia and Africa (World Bank 2014a), where most of the world’s population lives. There are two major challenges that these countries face: women are disproportionately affected by poverty (in a trend toward a global feminization of poverty) and much of the population lives in absolute poverty. </para></section>
+            </section>
+            <section id="fs-id3036818" class="section-summary" type="section-summary">
+                <title>Summary</title>
+                <para id="import-auto-id1169033120887">Stratification refers to the gaps in resources both between nations and within nations. While economic equality is of great concern, so is social equality, like the discrimination stemming from race, ethnicity, gender, religion, and/or sexual orientation. While global inequality is nothing new, several factors make it more relevant than ever, like the global marketplace and the pace of information sharing. Researchers try to understand global inequality by classifying it according to factors such as how industrialized a nation is, whether a country serves as a means of production or as an owner, and what income a nation produces.</para>
+            </section>
+            <section id="fs-id3595100" type="section-quiz" class="section-quiz">
+                <title>Section Quiz</title>
+                <exercise id="fs-id2901267" type="section-quiz">
+                    <problem id="fs-id2651658">
+                        <para id="import-auto-id1169033104992">A sociologist who focuses on the way that multinational corporations headquartered in core nations exploit the local workers in their peripheral nation factories is using a _________ perspective to understand the global economy.</para>
+                        <list id="fs-id2570566" list-type="enumerated" number-style="lower-alpha">
+                            <item>functional</item>
+                            <item>conflict theory</item>
+                            <item>feminist</item>
+                            <item>symbolic interactionist</item>
+                        </list>
+                    </problem>
+                   <solution id="fs-id1169762538399">
+                        <label/>
+                        <title>Answer</title>
+                        <para id="fs-id1169762370951">B</para>
+                    </solution>
+                </exercise>
+                <exercise id="fs-id1310992" type="section-quiz">
+                    <problem id="fs-id1302028">
+                        <para id="import-auto-id1169033101694">A ____________ perspective theorist might find it particularly noteworthy that wealthy corporations improve the quality of life in peripheral nations by providing workers with jobs, pumping money into the local economy, and improving transportation infrastructure.</para>
+                        <list id="fs-id2021191" list-type="enumerated" number-style="lower-alpha">
+                            <item>functional</item>
+                            <item>conflict</item>
+                            <item>feminist</item>
+                            <item>symbolic interactionist</item>
+                        </list>
+                    </problem>
+                  <solution id="fs-id1169762793099">
+                        <label/>
+                        <title>Answer</title>
+                        <para xmlns:m="http://www.w3.org/1998/Math/MathML" xmlns:q="http://cnx.rice.edu/qml/1.0" id="fs-id1169762362157">A</para></solution>
+                </exercise>
+                <exercise id="fs-id1772752" type="section-quiz">
+                    <problem id="fs-id2648440">
+                        <para id="import-auto-id1169033060183">A sociologist working from a symbolic interaction perspective would:</para>
+                        <list id="fs-id3157683" list-type="enumerated" number-style="lower-alpha">
+                            <item>study how inequality is created and reproduced</item>
+                            <item>study how corporations can improve the lives of their low-income workers</item>
+                            <item>try to understand how companies provide an advantage to high-income nations compared to low-income nations</item>
+                            <item>want to interview women working in factories to understand how they manage the expectations of their supervisors, make ends meet, and support their households on a day-to-day basis</item>
+                        </list>
+                    </problem>
+            <solution id="fs-id1169762389642">
+                        <label/>
+                        <title>Answer</title>
+                        <para id="fs-id1169760499518">D</para>
+                    </solution>
+                </exercise>
+                <exercise id="fs-id3656886" type="section-quiz">
+                    <problem id="fs-id3135802">
+                        <para id="import-auto-id1169033119762">France might be classified as which kind of nation?</para>
+                        <list id="fs-id2395345" list-type="enumerated" number-style="lower-alpha">
+                            <item>Global</item>
+                            <item>Core</item>
+                            <item>Semi-peripheral</item>
+                            <item>Peripheral</item>
+                        </list>
+                    </problem>
+                  <solution id="fs-id1169762601912">
+                        <label/>
+                        <title>Answer</title>
+                        <para id="fs-id1169762365352">B</para>
+                    </solution>
+                </exercise>
+                <exercise id="fs-id2880933" type="section-quiz">
+                    <problem id="fs-id2189780">
+                        <para xmlns:m="http://www.w3.org/1998/Math/MathML" xmlns:q="http://cnx.rice.edu/qml/1.0" id="import-auto-id1169033060887">In the past, the United States manufactured clothes. Many clothing corporations have shut down their U.S. factories and relocated to China. This is an example of:</para><list id="fs-id3634616" list-type="enumerated" number-style="lower-alpha">
+                            <item>conflict theory</item>
+                            <item>OECD</item>
+                            <item>global inequality</item>
+                            <item>capital flight</item>
+                        </list>
+                    </problem>
+                    <solution id="fs-id1169762398587">
+                        <label/>
+                        <title>Answer</title>
+                        <para id="fs-id1169762408443">D</para>
+                    </solution>
+                </exercise>
+            </section>
+            <section id="fs-id2105149" type="short-answer" class="short-answer">
+                <title>Short Answer</title>
+                <exercise id="fs-id2218331" type="short-answer">
+                    <problem id="fs-id3172795">
+                        <para xmlns:m="http://www.w3.org/1998/Math/MathML" xmlns:q="http://cnx.rice.edu/qml/1.0" id="import-auto-id1169033057256">Consider the matter of rock-bottom prices at Walmart. What would a functionalist think of Walmart's model of squeezing vendors to get the absolute lowest prices so it can pass them along to core nation consumers?</para></problem>
+                </exercise>
+                <exercise id="fs-id1509665" type="short-answer">
+                    <problem id="fs-id2277060">
+                        <para id="import-auto-id1169033178322">Why do you think some scholars find Cold War terminology (“first world” and so on) objectionable?</para>
+                    </problem>
+                </exercise>
+                <exercise id="fs-id1428798" type="short-answer">
+                    <problem id="fs-id2431848">
+                        <para id="import-auto-id1169033122424">Give an example of the feminization of poverty in core nations. How is it the same or different in peripheral nations?</para>
+                    </problem>
+                </exercise>
+                <exercise id="fs-id2669996" type="short-answer">
+                    <problem id="fs-id1367138">
+                        <para id="import-auto-id1169033059597">Pretend you are a sociologist studying global inequality by looking at child labor manufacturing Barbie dolls in China. What do you focus on? How will you find this information? What theoretical perspective might you use?</para>
+                    </problem>
+                </exercise>
+            </section>
+            <section id="fs-id2850992" type="further-research" class="further-research">
+                <title>Further Research</title>
+                <para xmlns:m="http://www.w3.org/1998/Math/MathML" xmlns:q="http://cnx.rice.edu/qml/1.0" id="import-auto-id1169033122410">To learn more about the United Nations Millennium Development Goals, look here: <link url="http://openstaxcollege.org/l/UN_development_goals">http://openstaxcollege.org/l/UN_development_goals</link></para><para xmlns:m="http://www.w3.org/1998/Math/MathML" xmlns:q="http://cnx.rice.edu/qml/1.0" id="import-auto-id1169033122413">To learn more about the existence and impact of global poverty, peruse the data here: <link url="http://openstaxcollege.org/l/poverty_data">http://openstaxcollege.org/l/poverty_data</link></para></section>
+            <section id="fs-id1879310" type="references" class="references">
+                <title>References</title>  
+                <para xmlns:m="http://www.w3.org/1998/Math/MathML" xmlns:q="http://cnx.rice.edu/qml/1.0" id="import-auto-id1169033103606">Amnesty International. 2012. “Sexual Orientation and Gender Identity.” Retrieved January 3, 2012 (<link url="http://www.amnesty.org/en/sexual-orientation-and-gender-identity">http://www.amnesty.org/en/sexual-orientation-and-gender-identity</link>).</para><para id="import-auto-id1169033127632">Castells, Manuel. 1998. <emphasis effect="italics">End of Millennium</emphasis>. Malden, MA: Blackwell. </para>
+                <para xmlns:m="http://www.w3.org/1998/Math/MathML" xmlns:q="http://cnx.rice.edu/qml/1.0" id="import-auto-id1169033127634">Central Intelligence Agency. 2012. “The World Factbook.” Retrieved January 5, 2012 (<link url="https://www.cia.gov/library/publications/the-world-factbook/wfbExt/region_noa.html">https://www.cia.gov/library/publications/the-world-factbook/wfbExt/region_noa.html</link>).</para><para xmlns:m="http://www.w3.org/1998/Math/MathML" xmlns:q="http://cnx.rice.edu/qml/1.0" id="eip-214">Central Intelligence Agency. 2014. “Country Comparison: Infant Mortality Rate.”  Retrieved November 7, 2014 (https://www.cia.gov/library/publications/the-worldfactbook/rankorder/2091rank.html?countryname=Canada&amp;countrycode=ca&amp;regionCode=noa&amp;rank=182#ca).</para><para xmlns:m="http://www.w3.org/1998/Math/MathML" xmlns:q="http://cnx.rice.edu/qml/1.0" id="import-auto-id1169033058100">Dogruel, Fatma, and A. Suut Dogruel. 2007. “Foreign Debt Dynamics in Middle Income Countries.” Paper presented January 4, 2007 at Middle East Economic Association Meeting, Allied Social Science Associations, Chicago, IL. </para><para id="import-auto-id1169033058104">Moghadam, Valentine M. 2005. “The Feminization of Poverty and Women’s Human Rights.” Gender Equality and Development Section UNESCO, July. Paris, France.</para>
+                <para id="import-auto-id1169033058108">Myrdal, Gunnar. 1970. <emphasis effect="italics">The Challenge of World Poverty: A World Anti-Poverty Program in Outline</emphasis>. New York: Pantheon.</para>
+                <para xmlns:m="http://www.w3.org/1998/Math/MathML" xmlns:q="http://cnx.rice.edu/qml/1.0" id="eip-397">Oxfam. 2014. “Working for the Few: Political Capture and Economic Inequality.”  Oxfam.org. Retrieved November 7, 2014 (http://www.oxfam.org/sites/www.oxfam.org/files/bp-working-for-few-political-capture-economic-inequality-200114-summ-en.pdf).</para><para xmlns:m="http://www.w3.org/1998/Math/MathML" xmlns:q="http://cnx.rice.edu/qml/1.0" id="eip-460">United Nations. 2013. "Millennium Development Goals." Retrieved November 7, 2014 (http://www.un.org/millenniumgoals/bkgd.shtml).
+</para><para id="import-auto-id1169033100493">Wallerstein, Immanuel. 1979. <emphasis effect="italics">The Capitalist World Economy</emphasis>. Cambridge, England: Cambridge World Press. </para>
+                <para xmlns:m="http://www.w3.org/1998/Math/MathML" xmlns:q="http://cnx.rice.edu/qml/1.0" id="import-auto-id1169033100496">World Bank. 2014a. “Gender Overview.”  Retrieved November 7, 2014 (http://www.worldbank.org/en/topic/gender/overview#1).
+<newline/><newline/>
+World Bank. 2014b. “High Income: OECD: Data.” Retrieved November 7, 2014 (http://data.worldbank.org/income-level/OEC).
+<newline/><newline/>
+World Bank. 2014c. “Low Income: Data.” Retrieved November 7, 2014  (http://data.worldbank.org/income-level/LIC).
+<newline/><newline/>
+World Bank. 2014d. “Upper Middle Income: Data.”  Retrieved November 7, 2014 (http://data.worldbank.org/income-level/UMC).</para></section>
+        
+    </content>
+    <glossary>
+        <definition id="fs-id1347434"><term>capital flight</term> <meaning id="fs-id1662734">the movement (flight) of capital from one nation to another, via jobs and resources</meaning></definition>
+        <definition id="fs-id1515290"><term>core nations</term> <meaning id="fs-id2581008">dominant capitalist countries</meaning></definition>
+<definition id="fs-id3051803"><term>debt accumulation</term><meaning id="fs-id2912019">the buildup of external debt, wherein countries borrow money from other nations to fund their expansion or growth goals</meaning></definition>
+<definition id="fs-id2874522"><term>deindustrialization</term> <meaning id="fs-id2018690">the loss of industrial production, usually to peripheral and semi-peripheral nations where the costs are lower</meaning></definition>
+        <definition id="fs-id1736945"><term>first world</term> <meaning id="fs-id1902354">a term from the Cold War era that is used to describe industrialized capitalist democracies</meaning></definition>
+        <definition id="fs-id2618913"><term>fourth world</term> <meaning id="fs-id1377157">a term that describes stigmatized minority groups who have no voice or representation on the world stage  </meaning></definition>
+<definition id="fs-id1166123484006"><term>GINI coefficient</term><meaning id="fs-id1166115684450">a measure of income inequality between countries using a 100-point scale, in which 1 represents complete equality and 100 represents the highest possible inequality</meaning></definition>
+
+        <definition id="fs-id2827190"><term>global inequality</term> <meaning id="fs-id788132">the concentration of resources in core nations and in the hands of a wealthy minority</meaning></definition>
+<definition id="fs-id1775578"><term>global feminization of poverty</term><meaning id="fs-id2090828">a pattern that occurs when women bear a disproportionate percentage of the burden of poverty</meaning></definition>
+        <definition id="fs-id1325574"><term>global stratification</term> <meaning id="fs-id1738656">the unequal distribution of resources between countries</meaning></definition>
+        <definition id="fs-id1393743"><term>gross national income (GNI)</term> <meaning id="fs-id1175765">the income of a nation calculated based on goods and services produced, plus income earned by citizens and corporations headquartered in that country</meaning></definition>
+        <definition id="fs-id3650288"><term>peripheral nations</term> <meaning id="fs-id3635233">nations on the fringes of the global economy, dominated by core nations, with very little industrialization</meaning></definition>
+        <definition id="fs-id1845796"><term>second world</term> <meaning id="fs-id2696710">a term from the Cold War era that describes nations with moderate economies and standards of living </meaning></definition>
+        <definition id="fs-id2633332"><term>semi-peripheral nations</term> <meaning id="fs-id1260688">in-between nations, not powerful enough to dictate policy but acting as a major source of raw materials and an expanding middle class marketplace</meaning></definition>
+        <definition id="fs-id2185696"><term>third world</term> <meaning id="fs-id1677352">a term from the Cold War era that refers to poor, unindustrialized countries </meaning></definition>
+    </glossary>
+</document>

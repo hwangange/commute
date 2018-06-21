@@ -1,0 +1,315 @@
+<?xml version="1.0"?>
+<document xmlns="http://cnx.rice.edu/cnxml" id="imported-from-openoffice" module-id="imported-from-openoffice" cnxml-version="0.7">
+    <title>Power and Authority</title>
+    <metadata xmlns:md="http://cnx.rice.edu/mdml"
+          mdml-version="0.5">
+  <!-- WARNING! The 'metadata' section is read only. Do not edit below.
+       Changes to the metadata section in the source will not be saved. -->
+  <md:repository>http://legacy.cnx.org/content</md:repository>
+  <md:content-url>http://legacy.cnx.org/content/m52985/latest</md:content-url>
+  <md:content-id>m52985</md:content-id>
+  <md:title>Power and Authority</md:title>
+  <md:version>1.2</md:version>
+  <md:created>2015/01/20 21:28:44 -0600</md:created>
+  <md:revised>2015/02/16 09:01:31 -0600</md:revised>
+  <md:actors>
+    <md:person userid="OSCRiceUniversity">
+      <md:firstname>Rice</md:firstname>
+      <md:surname>University</md:surname>
+      <md:fullname>Rice University</md:fullname>
+      <md:email>info@openstaxcollege.org</md:email>
+    </md:person>
+    <md:organization userid="OpenStaxCollege">
+      <md:shortname>OpenStax</md:shortname>
+      <md:fullname>OpenStax</md:fullname>
+      <md:email>info@openstax.org</md:email>
+    </md:organization>
+    <md:person userid="cnxsoc2">
+      <md:firstname>Openstax College</md:firstname>
+      <md:surname>Sociology 2e</md:surname>
+      <md:fullname>Openstax Sociology 2e</md:fullname>
+      <md:email>info@openstaxcollege.org</md:email>
+    </md:person>
+  </md:actors>
+  <md:roles>
+    <md:role type="author">OpenStaxCollege</md:role>
+    <md:role type="maintainer">OpenStaxCollege cnxsoc2</md:role>
+    <md:role type="licensor">OSCRiceUniversity</md:role>
+  </md:roles>
+  <md:license url="http://creativecommons.org/licenses/by/4.0/">Creative Commons Attribution License 4.0</md:license>
+  <!-- For information on license requirements for use or modification, see license url in the
+       above <md:license> element.
+       For information on formatting required attribution, see the URL:
+         CONTENT_URL/content_info#cnx_cite_header
+       where CONTENT_URL is the value provided above in the <md:content-url> element.
+  -->
+  <md:derived-from url="http://legacy.cnx.org/content/m42912/1.3">
+  <md:repository>http://legacy.cnx.org/content</md:repository>
+  <md:content-url>http://legacy.cnx.org/content/m42912/1.3</md:content-url>
+  <md:content-id>m42912</md:content-id>
+  <md:title>Power and Authority</md:title>
+  <md:version>1.3</md:version>
+  <md:created>2012/01/27 16:52:25 -0600</md:created>
+  <md:revised>2013/07/29 13:00:26 -0500</md:revised>
+  <md:actors>
+    <md:organization userid="OpenStaxCollege">
+      <md:shortname>OpenStax</md:shortname>
+      <md:fullname>OpenStax</md:fullname>
+      <md:email>info@openstax.org</md:email>
+    </md:organization>
+    <md:person userid="OSCRiceUniversity">
+      <md:firstname>Rice</md:firstname>
+      <md:surname>University</md:surname>
+      <md:fullname>Rice University</md:fullname>
+      <md:email>info@openstaxcollege.org</md:email>
+    </md:person>
+    <md:person userid="soccap">
+      <md:firstname>Sociology</md:firstname>
+      <md:surname>Cap</md:surname>
+      <md:fullname>OpenStax Sociology 1e</md:fullname>
+      <md:email>dcwill@rice.edu</md:email>
+    </md:person>
+  </md:actors>
+  <md:roles>
+    <md:role type="author">OpenStaxCollege</md:role>
+    <md:role type="maintainer">OpenStaxCollege soccap</md:role>
+    <md:role type="licensor">OSCRiceUniversity</md:role>
+  </md:roles>
+  <md:license url="http://creativecommons.org/licenses/by/3.0/" />
+  <!-- For information on license requirements for use or modification, see license url in the
+       above <md:license> element.
+       For information on formatting required attribution, see the URL:
+         CONTENT_URL/content_info#cnx_cite_header
+       where CONTENT_URL is the value provided above in the <md:content-url> element.
+  -->
+  </md:derived-from>
+  <md:keywordlist>
+    <md:keyword>Authority</md:keyword>
+    <md:keyword>Charismatic authority</md:keyword>
+    <md:keyword>Patrimonialism</md:keyword>
+    <md:keyword>Power</md:keyword>
+    <md:keyword>Rational-legal authority</md:keyword>
+    <md:keyword>Traditional authority</md:keyword>
+  </md:keywordlist>
+  <md:subjectlist>
+    <md:subject>Social Sciences</md:subject>
+  </md:subjectlist>
+  <md:abstract><list>
+<item>Define and differentiate between power and authority</item>
+<item>Identify and describe the three types of authority</item>
+</list></md:abstract>
+  <md:language>en</md:language>
+  <!-- WARNING! The 'metadata' section is read only. Do not edit above.
+       Changes to the metadata section in the source will not be saved. -->
+</metadata>
+
+<content>
+        
+            
+            <figure xmlns:m="http://www.w3.org/1998/Math/MathML" xmlns:q="http://cnx.rice.edu/qml/1.0" id="import-auto-id1233263"><media id="import-auto-id2316529" alt="The White House and the fountains and gardens in front of it are shown.">
+                <image mime-type="image/jpg" src="Figure_17_01_01.jpg" width="200"/>
+            </media>
+                <caption>The White House, one of the world’s most widely recognized state buildings, symbolizes the authority of the U.S. presidency. (Courtesy U.S. National Archives/Wikimedia Commons)</caption></figure><para xmlns:m="http://www.w3.org/1998/Math/MathML" xmlns:q="http://cnx.rice.edu/qml/1.0" id="import-auto-id1934709">Despite the differences between government systems in the Middle East and the United States, their governments play the same fundamental role: in some fashion, they exert control over the people they govern. The nature of that control—what we will define as power and authority—is an important feature of society.</para><para id="import-auto-id2659783">Sociologists have a distinctive approach to studying governmental power and authority that differs from the perspective of political scientists. For the most part, political scientists focus on studying how power is distributed in different types of political systems. They would observe, for example, that the United States’ political system is divided into three distinct branches (legislative, executive, and judicial), and they would explore how public opinion affects political parties, elections, and the political process in general. Sociologists, however, tend to be more interested in the influences of governmental power on society and in how social conflicts arise from the distribution of power. Sociologists also examine how the use of power affects local, state, national, and global agendas, which in turn affect people differently based on status, class, and socioeconomic standing.</para>
+            <section id="fs-id2798179">
+                <title>What Is Power?</title>
+                <figure xmlns:m="http://www.w3.org/1998/Math/MathML" xmlns:q="http://cnx.rice.edu/qml/1.0" id="import-auto-id2696910"><media id="import-auto-id1382209" alt="Adolf Hitler and Benito Mussolini are show riding together in a car.">
+                    <image mime-type="image/jpg" src="Figure_17_01_02.jpg" width="250"/>
+                </media>
+                    <caption>Nazi leader Adolf Hitler was one of the most powerful and destructive dictators in modern history. He is pictured here with fascist Benito Mussolini of Italy. (Photo courtesy of U.S. National Archives and Records Administration)</caption></figure><para xmlns:m="http://www.w3.org/1998/Math/MathML" xmlns:q="http://cnx.rice.edu/qml/1.0" id="import-auto-id1306677">For centuries, philosophers, politicians, and social scientists have explored and commented on the nature of power. Pittacus (c. 640–568 B.C.E.) opined, “The measure of a man is what he does with power,” and Lord Acton perhaps more famously asserted, “Power tends to corrupt; absolute power corrupts absolutely” (1887). Indeed, the concept of power can have decidedly negative connotations, and the term itself is difficult to define.</para><para xmlns:m="http://www.w3.org/1998/Math/MathML" xmlns:q="http://cnx.rice.edu/qml/1.0" id="import-auto-id3081641">Many scholars adopt the definition developed by German sociologist Max Weber, who said that <term id="import-auto-id2625988">power</term> is the ability to exercise one’s will over others (Weber 1922). Power affects more than personal relationships; it shapes larger dynamics like social groups, professional organizations, and governments. Similarly, a government’s power is not necessarily limited to control of its own citizens. A dominant nation, for instance, will often use its clout to influence or support other governments or to seize control of other nation states. Efforts by the U.S. government to wield power in other countries have included joining with other nations to form the Allied forces during World War II, entering Iraq in 2002 to topple Saddam Hussein’s regime, and imposing sanctions on the government of North Korea in the hopes of constraining its development of nuclear weapons.</para><para xmlns:m="http://www.w3.org/1998/Math/MathML" xmlns:q="http://cnx.rice.edu/qml/1.0" id="import-auto-id1675149">Endeavors to gain power and influence do not necessarily lead to violence, exploitation, or abuse. Leaders such as Martin Luther King Jr. and Mohandas Gandhi, for example, commanded powerful movements that effected positive change without military force. Both men organized nonviolent protests to combat corruption and injustice and succeeded in inspiring major reform. They relied on a variety of nonviolent protest strategies such as rallies, sit-ins, marches, petitions, and boycotts.</para><para xmlns:m="http://www.w3.org/1998/Math/MathML" xmlns:q="http://cnx.rice.edu/qml/1.0" id="import-auto-id3643172">Modern technology has made such forms of nonviolent reform easier to implement. Today, protesters can use cell phones and the Internet to disseminate information and plans to masses of protesters in a rapid and efficient manner. In the Arab Spring uprisings, for example, Twitter feeds and other social media helped protesters coordinate their movements, share ideas, and bolster morale, as well as gain global support for their causes. Social media was also important in getting accurate accounts of the demonstrations out to the world, in contrast to many earlier situations in which government control of the media censored news reports. Notice that in these examples, the users of power were the citizens rather than the governments. They found they had power because they were able to exercise their will over their own leaders. Thus, government power does not necessarily equate to absolute power.</para><figure xmlns:m="http://www.w3.org/1998/Math/MathML" xmlns:q="http://cnx.rice.edu/qml/1.0" id="import-auto-id1348196"><media id="import-auto-id3592166" alt="A large group of people marching in protest.">
+                    <image mime-type="image/jpg" src="Figure_17_01_03.jpg" width="250"/>
+                </media>
+                    <caption>Young people and students were among the most ardent supporters of democratic reform in the recent Arab Spring. Social media also played an important role in rallying grassroots support. (Photo courtesy of cjb22/flickr)</caption></figure><note xmlns:m="http://www.w3.org/1998/Math/MathML" xmlns:q="http://cnx.rice.edu/qml/1.0" id="fs-id1935848" class="sociology-big-picture"><label/><title>Social Media as a Terrorist Tool</title>
+                            <para id="import-auto-id1453767">British aid worker, Alan Henning, was the fourth victim of the Islamic State (known as ISIS or ISIL) to be beheaded before video cameras in a recording titled, “Another Message to America and Its Allies,”  which was posted on YouTube and pro-Islamic state Twitter feeds in the fall of 2014. Henning was captured during his participation in a convoy taking medical supplies to a hospital in conflict-ravaged northern Syria. His death was publicized via social media, as were the earlier beheadings of U.S. journalists Jim Foley and Steven Sotloff and British aid worker David Haines. The terrorist groups also used social media to demand an end to intervention in the Middle East by U.S., British, French, and Arab forces.</para><para id="import-auto-id1680729">An international coalition, led by the United States, has been formed to combat ISIS in response to this series of publicized murders. France and the United Kingdom, members of the North Atlantic Treaty Organization (NATO), and Belgium are seeking government approval through their respective parliaments to participate in airstrikes. The specifics of target locations are a key point, however, and they emphasize the delicate and political nature of current conflict in the region. Due to perceived national interest and geopolitical dynamics, Britain and France are more willing to be a part of airstrikes on ISIS targets in Iran and likely to avoid striking targets in Syria. Several Arab nations are a part of the coalition, including Bahrain, Jordan, Saudi Arabia, Qatar, and the United Arab Emirates. Turkey, another NATO member, has not announced involvement in airstrikes, presumably because ISIS is holding forty-nine Turkish citizens hostage.</para><para id="import-auto-id1373751">U.S. intervention in Libya and Syria is controversial, and it arouses debate about the role of the United States in world affairs, as well as the practical need for, and outcome of, military action in the Middle East. Experts and the U.S. public alike are weighing the need for fighting terrorism in its current form of the Islamic State and the bigger issue of helping to restore peace in the Middle East. Some consider ISIS a direct and growing threat to the United States if left unchecked. Others believe U.S. intervention unnecessarily worsens the Middle East situation and prefer that resources be used at home rather than increasing military involvement in an area of the world where they believe the United States has intervened long enough.</para></note></section>
+            <section id="fs-id2624039">
+                <title>Types of Authority</title>
+                <para xmlns:m="http://www.w3.org/1998/Math/MathML" xmlns:q="http://cnx.rice.edu/qml/1.0" id="import-auto-id1216640">The protesters in Tunisia and the civil rights protesters of Martin Luther King, Jr.’s day had influence apart from their position in a government. Their influence came, in part, from their ability to advocate for what many people held as important values. Government leaders might have this kind of influence as well, but they also have the advantage of wielding power associated with their position in the government. As this example indicates, there is more than one type of authority in a community.</para><para id="import-auto-id1358288"><term id="import-auto-id2912957">Authority</term> refers to accepted power—that is, power that people agree to follow. People listen to authority figures because they feel that these individuals are worthy of respect. Generally speaking, people perceive the objectives and demands of an authority figure as reasonable and beneficial, or true.</para>
+                <para id="import-auto-id1387675">A citizen’s interaction with a police officer is a good example of how people react to authority in everyday life. For instance, a person who sees the flashing red and blue lights of a police car in his rearview mirror usually pulls to the side of the road without hesitation. Such a driver most likely assumes that the police officer behind him serves as a legitimate source of authority and has the right to pull him over. As part of her official duties, the police officer then has the power to issue a speeding ticket if the driver was driving too fast. If the same officer, however, were to command the driver to follow her home and mow her lawn, the driver would likely protest that the officer does not have the authority to make such a request.</para>
+                <para xmlns:m="http://www.w3.org/1998/Math/MathML" xmlns:q="http://cnx.rice.edu/qml/1.0" id="import-auto-id1274345">Not all authority figures are police officers, elected officials or government authorities. Besides formal offices, authority can arise from tradition and personal qualities. Economist and sociologist Max Weber realized this when he examined individual action as it relates to authority, as well as large-scale structures of authority and how they relate to a society’s economy. Based on this work, Weber developed a classification system for authority. His three types of authority are traditional authority, charismatic authority and legal-rational authority (Weber 1922).</para><table xmlns:m="http://www.w3.org/1998/Math/MathML" xmlns:q="http://cnx.rice.edu/qml/1.0" id="import-auto-id1371760" summary="Table is titled &#x201C;Weber&#x2019;s Three Types of Authority.&#x201D; The top row describes the three types of authority, &#x201C;Traditional,&#x201D; &#x201C;Charismatic,&#x201D; and &#x201C;Legal-Rational.&#x201D; Each type of power is its own column. Down the left side of the chart, and starting at the top of the chart, the rows are titled &#x201C;Source of Power,&#x201D; &#x201C;Leadership Style,&#x201D; and &#x201C;Example.&#x201D; Information for the &#x201C;Traditional&#x201D; authority power is; source of power: legitimized by long-standing custom; leadership style: historic personality; and example: patriarchy (traditional positions of authority). Information for the &#x201C;Charismatic&#x201D; authority power is; source of power: based on a leader&#x2019;s personal qualities; leadership style: dynamic personality; and example: Napoleon, Jesus Christ, Mother Teresa, Martin Luther King, Jr. Information for the &#x201C;Legal-Rational&#x201D; authority is; source of power: authority resides in the office, not the person; leadership style: bureaucratic officials; and example: U.S. presidency and Congress, Modern British Parliament."><title>Weber’s Three Types of Authority</title>
+<tgroup cols="4"><colspec colnum="1" colname="c1"/>
+                            <colspec colnum="2" colname="c2"/>
+                            <colspec colnum="3" colname="c3"/>
+                            <thead>
+                                <row><entry/>
+                                    <entry align="center">Traditional</entry>
+                                    <entry align="center">Charismatic</entry>
+                                    <entry align="center">Legal-Rational</entry>
+                                </row>
+                            </thead>
+                            <tbody>
+                                <row><entry><emphasis>Source of Power</emphasis></entry>
+                                    <entry>Legitimized by long-standing custom</entry>
+                                    <entry>Based on a leader’s personal qualities</entry>
+                                    <entry>Authority resides in the office, not the person</entry>
+                                </row>
+                                <row><entry><emphasis>Leadership Style</emphasis></entry>
+                                    <entry>Historic personality</entry>
+                                    <entry>Dynamic personality</entry>
+                                    <entry>Bureaucratic officials</entry>
+                                </row>
+                                <row><entry><emphasis>Example</emphasis></entry>
+                                    <entry>Patriarchy (traditional positions of authority)</entry>
+                                    <entry>Napoleon, Jesus Christ, Mother Teresa, Martin Luther King, Jr.</entry>
+                                    <entry>U.S. presidency and Congress<newline/>
+Modern British Parliament</entry>
+
+                                </row>
+                            </tbody>
+                            
+                            
+                        
+
+
+
+
+
+
+
+
+
+
+</tgroup><caption>Max Weber identified and explained three distinct types of authority:</caption>
+</table><section id="fs-id2362160">
+                    <title>Traditional Authority</title>
+                    <para id="import-auto-id1169033063151">According to Weber, the power of <term id="import-auto-id1169033057670">traditional authority</term> is accepted because that has traditionally been the case; its legitimacy exists because it has been accepted for a long time. Britain’s Queen Elizabeth, for instance, occupies a position that she inherited based on the traditional rules of succession for the monarchy. People adhere to traditional authority because they are invested in the past and feel obligated to perpetuate it. In this type of authority, a ruler typically has no real force to carry out his will or maintain his position but depends primarily on a group’s respect.</para>
+                    <para xmlns:m="http://www.w3.org/1998/Math/MathML" xmlns:q="http://cnx.rice.edu/qml/1.0" id="import-auto-id1169033113931">A more modern form of traditional authority is <term id="import-auto-id1169033121726">patrimonialism</term>, which is traditional domination facilitated by an administration and military that are purely personal instruments of the master (Eisenberg 1998). In this form of authority, all officials are personal favorites appointed by the ruler. These officials have no rights, and their privileges can be increased or withdrawn based on the caprices of the leader. The political organization of ancient Egypt typified such a system: when the royal household decreed that a pyramid be built, every Egyptian was forced to work toward its construction.</para><para xmlns:m="http://www.w3.org/1998/Math/MathML" xmlns:q="http://cnx.rice.edu/qml/1.0" id="import-auto-id1169033170860">Traditional authority can be intertwined with race, class, and gender. In most societies, for instance, men are more likely to be privileged than women and thus are more likely to hold roles of authority. Similarly, members of dominant racial groups or upper-class families also win respect more readily. In the United States, the Kennedy family, which has produced many prominent politicians, exemplifies this model.</para></section>
+                <section id="fs-id1294681">
+                    <title>Charismatic Authority</title>
+                    <para xmlns:m="http://www.w3.org/1998/Math/MathML" xmlns:q="http://cnx.rice.edu/qml/1.0" id="import-auto-id1169033109480">Followers accept the power of <term id="import-auto-id1169033057830">charismatic authority</term> because they are drawn to the leader’s personal qualities. The appeal of a charismatic leader can be extraordinary, and can inspire followers to make unusual sacrifices or to persevere in the midst of great hardship and persecution. Charismatic leaders usually emerge in times of crisis and offer innovative or radical solutions. They may even offer a vision of a new world order. Hitler’s rise to power in the postwar economic depression of Germany is an example.</para><para id="import-auto-id1169033056044">Charismatic leaders tend to hold power for short durations, and according to Weber, they are just as likely to be tyrannical as they are heroic. Diverse male leaders such as Hitler, Napoleon, Jesus Christ, César Chávez, Malcolm X, and Winston Churchill are all considered charismatic leaders. Because so few women have held dynamic positions of leadership throughout history, the list of charismatic female leaders is comparatively short. Many historians consider figures such as Joan of Arc, Margaret Thatcher, and Mother Teresa to be charismatic leaders.</para>
+                </section>
+                <section id="fs-id2543714">
+                    <title>Rational-Legal Authority</title>
+                    <para xmlns:m="http://www.w3.org/1998/Math/MathML" xmlns:q="http://cnx.rice.edu/qml/1.0" id="import-auto-id1169033100396">According to Weber, power made legitimate by laws, written rules, and regulations is termed <term id="import-auto-id1169033145531">rational-legal authority</term>. In this type of authority, power is vested in a particular rationale, system, or ideology and not necessarily in the person who implements the specifics of that doctrine. A nation that follows a constitution applies this type of authority. On a smaller scale, you might encounter rational-legal authority in the workplace via the standards set forth in the employee handbook, which provides a different type of authority than that of your boss. </para><para xmlns:m="http://www.w3.org/1998/Math/MathML" xmlns:q="http://cnx.rice.edu/qml/1.0" id="import-auto-id1169033056585">Of course, ideals are seldom replicated in the real world. Few governments or leaders can be neatly categorized. Some leaders, like Mohandas Gandhi for instance, can be considered charismatic <emphasis effect="italics">and</emphasis> legal-rational authority figures. Similarly, a leader or government can start out exemplifying one type of authority and gradually evolve or change into another type.</para></section>
+            </section> 
+            <section id="fs-id2422874" class="section-summary" type="section-summary">
+                <title>Summary</title>
+                <para id="import-auto-id1169033110712">Sociologists examine government and politics in terms of their impact on individuals and larger social systems. Power is an entity or individual’s ability to control or direct others, while authority is influence that is predicated on perceived legitimacy. Max Weber studied power and authority, differentiating between the two concepts and formulating a system for classifying types of authority.</para>
+            </section>
+            <section id="fs-id1332324" class="section-quiz" type="section-quiz">
+                <title>Section Quiz</title>
+                <exercise id="fs-id1366727" type="section-quiz">
+                    <problem id="fs-id1681559">
+                        <para id="import-auto-id1169033066409">Which statement best expresses the difference between power and authority?</para>
+                        <list id="fs-id2688563" list-type="enumerated" number-style="lower-alpha">
+                            <item>Authority involves intimidation.</item>
+                            <item>Authority is more subtle than power.</item>
+                            <item>Authority is based on the perceived legitimacy of the individual in power.</item>
+                            <item>Authority is inherited, but power is seized by military force.</item>
+                        </list>
+                    </problem>    <solution id="fs-id1169762862092">
+          <label/>
+          <title>Answer</title>
+          <para id="fs-id1169762610619">C</para>
+        </solution>
+                </exercise>
+                <exercise xmlns:m="http://www.w3.org/1998/Math/MathML" xmlns:q="http://cnx.rice.edu/qml/1.0" id="fs-id1880610" type="section-quiz"><problem id="fs-id1938066">
+                        <para id="import-auto-id1169033128324">Which of the following types of authority does <emphasis effect="italics"><emphasis effect="italics">not</emphasis></emphasis> reside primarily in a leader?</para>
+                        <list id="fs-id3175340" list-type="enumerated" number-style="lower-alpha">
+                            <item>Dictatorial</item>
+                            <item>Traditional</item>
+                            <item>Charismatic</item>
+                            <item>Legal-rational</item>
+                        </list>
+                    </problem>    <solution id="fs-id1169762350991">
+          <label/>
+          <title>Answer</title>
+          <para id="fs-id1169760269293">D</para>
+        </solution>
+                </exercise><exercise id="fs-id1387844" type="section-quiz">
+                    <problem id="fs-id1975184">
+                        <para id="import-auto-id1169033060402">In the U.S. Senate, it is customary to assign each senator a seniority ranking based on years of government service and the population of the state he or she represents. A top ranking gives the senator priority for assignments to office space, committee chair positions, and seating on the senate floor. What type of authority does this example best illustrate?</para>
+                        <list id="fs-id2388646" list-type="enumerated" number-style="lower-alpha">
+                            <item>Dictatorial</item>
+                            <item>Traditional</item>
+                            <item>Charismatic</item>
+                            <item>Legal-rational</item>
+                        </list>
+                    </problem>    <solution id="fs-id1169762477483">
+          <label/>
+          <title>Answer</title>
+          <para id="fs-id1169760276378">B</para>
+        </solution>
+                </exercise>
+                <exercise id="fs-id3025239" type="section-quiz">
+                    <problem id="fs-id1367119">
+                        <para xmlns:m="http://www.w3.org/1998/Math/MathML" xmlns:q="http://cnx.rice.edu/qml/1.0" id="import-auto-id1169033109107">Dr. Martin Luther King, Jr. used his public speaking abilities and magnetism to inspire African Americans to stand up against injustice in an extremely hostile environment. He is an example of a(n) __________ leader.</para><list id="fs-id1588905" list-type="enumerated" number-style="lower-alpha">
+                            <item>traditional</item>
+                            <item>charismatic</item>
+                            <item>legal-rational</item>
+                            <item>illegitimate</item>
+                        </list>
+                    </problem>    <solution id="fs-id1169762307208">
+          <label/>
+          <title>Answer</title>
+          <para id="fs-id1169762365272">B</para>
+        </solution>
+                </exercise>
+                <exercise id="fs-id1947604" type="section-quiz">
+                    <problem id="fs-id2219015">
+                        <para id="import-auto-id1169033063143">Which current world figure has the least amount of political power?</para>
+                        <list id="fs-id2269408" list-type="enumerated" number-style="lower-alpha">
+                            <item>President Barack Obama</item>
+                            <item>Queen Elizabeth II</item>
+                            <item>British Prime Minister David Cameron</item>
+                            <item>North Korean leader Kim Jong-Un</item>
+                        </list>
+                    </problem>    <solution id="fs-id1169762631615">
+          <label/>
+          <title>Answer</title>
+          <para id="fs-id1169762336541">B</para>
+        </solution>
+                </exercise>
+                <exercise id="fs-id1306686" type="section-quiz">
+                    <problem id="fs-id1308908">
+                        <para id="import-auto-id1169033056225">Which statement best expresses why there have been so few charismatic female leaders throughout history?</para>
+                        <list xmlns:m="http://www.w3.org/1998/Math/MathML" xmlns:q="http://cnx.rice.edu/qml/1.0" id="fs-id2323665" list-type="enumerated" number-style="lower-alpha"><item>Women have different leadership styles than men.</item>
+                            <item>Women are not interested in leading at all.</item>
+                            <item>Few women have had the opportunity to hold leadership roles over the courseof history.</item>
+                            <item>Male historians have refused to acknowledge the contributions of female leaders in their records.</item>
+                        </list></problem>
+                       <solution id="fs-id1169762473958">
+          <label/>
+          <title>Answer</title>
+          <para id="fs-id1169762642850">C</para>
+        </solution>
+                </exercise>
+            </section>
+            <section id="fs-id1257871" class="short-answer" type="short-answer">
+                <title>Short Answer</title>
+                <exercise id="fs-id1961461" type="short-answer">
+                    <problem id="fs-id2884958">
+                        <para id="import-auto-id1169033103768">Explain why leaders as divergent as Hitler and Jesus Christ are both categorized as charismatic authorities.</para>
+                    </problem>
+                </exercise>
+                <exercise id="fs-id1820364" type="short-answer">
+                    <problem id="fs-id2419074">
+                        <para id="import-auto-id1169033140162">Why do people accept traditional authority figures even though these types of leaders have limited means of enforcing their power?</para>
+                    </problem>
+                </exercise>
+                <exercise id="fs-id2024424" type="short-answer">
+                    <problem id="fs-id1415090">
+                        <para xmlns:m="http://www.w3.org/1998/Math/MathML" xmlns:q="http://cnx.rice.edu/qml/1.0" id="import-auto-id1169033124150">Charismatic leaders are among the most fascinating figures in history. Select a charismatic leader about whom you wish to learn more and conduct online research to find out about this individual. Then write a paragraph describing the personal qualities that led to this person’s influence, considering the society in which he or she emerged.</para></problem>
+                </exercise>
+            </section>
+            <section id="fs-id2881219" class="further-research" type="further-research">
+                <title>Further Research</title>
+                <para xmlns:m="http://www.w3.org/1998/Math/MathML" xmlns:q="http://cnx.rice.edu/qml/1.0" id="import-auto-id1169033066050">Want to learn more about sociologists at work in the real world? Read this blog posting to learn more about the roles sociology scholars played in the midst of the Arab Spring uprising: <link url="http://openstaxcollege.org/l/sociology_Arab_Spring">http://openstaxcollege.org/l/sociology_Arab_Spring</link></para></section>
+            <section id="fs-id1981602" class="references" type="references">
+                <title>References</title>
+                
+                    <para id="fs-id1654286">Acton, Lord. 2010 [1887]. <emphasis effect="italics">Essays on Freedom and Power.</emphasis> Auburn, AL: Ludwig von Mises Institute. </para>
+                    <para xmlns:m="http://www.w3.org/1998/Math/MathML" xmlns:q="http://cnx.rice.edu/qml/1.0" id="eip-984">Catrer, Chelsea, and Fantz, Ashley. 2014.  “ISIS Video Shows Beheading of American Journalist Steven Sotloft.”  CNN, September 9. Retrieved October 5, 2014 (<link url="http://www.cnn.com/2014/09/02/world/meast/isis-american-journalist-sotloff/">http://www.cnn.com/2014/09/02/world/meast/isis-american-journalist-sotloff/</link>) </para><para id="fs-id1287949">Eisenberg, Andrew. 1998. “Weberian Patrimonialism and Imperial Chinese History.” <emphasis effect="italics">Theory and Society</emphasis> 27(1):83–102.</para>
+                    <para xmlns:m="http://www.w3.org/1998/Math/MathML" xmlns:q="http://cnx.rice.edu/qml/1.0" id="eip-750">Hosenball, Mark, and Westall, Slyvia. 2014. “Islamic State Video Shows Second British Hostage Beheaded.” Reuters, October 4. Retrieved October 5, 2014 (<link url="http://www.reuters.com/article/2014/10/04/us-mideast-crisis-henning-behading-idUSKCN0HS1XX20141004">http://www.reuters.com/article/2014/10/04/us-mideast-crisis-henning-behading-idUSKCN0HS1XX20141004</link>)</para><para xmlns:m="http://www.w3.org/1998/Math/MathML" xmlns:q="http://cnx.rice.edu/qml/1.0" id="eip-81">NPR. 2014. “Debate: Does U.S. Military Intervention in the Middle East help or Hurt?” October 7. Retrieved October 7, 2014 (<link url="http://www.npr.org/2014/10/07/353294026/debate-does-u-s-military-intervention-in-the-middle-east-help-or-hurt">http://www.npr.org/2014/10/07/353294026/debate-does-u-s-military-intervention-in-the-middle-east-help-or-hurt</link>)</para><para xmlns:m="http://www.w3.org/1998/Math/MathML" xmlns:q="http://cnx.rice.edu/qml/1.0" id="eip-135">Mullen, Jethro. 2014. “U.S.-led airstrikes on ISIS in Syria: What you need to know.” CNN,  September 24. Retrieved October 5, 2014 (<link url="http://www.cnn.com/2014/09/23/world/meast/syria-isis-airstrikes-explainer/">http://www.cnn.com/2014/09/23/world/meast/syria-isis-airstrikes-explainer/</link>) </para><para xmlns:m="http://www.w3.org/1998/Math/MathML" xmlns:q="http://cnx.rice.edu/qml/1.0" id="eip-922">Mullen, Jethro (2014). “U.S.-led airstrikes on ISIS in Syria: Who's in, who's not”.  CNN, October 2, 2014. Retrieved October 5, 2014 (<link url="http://www.cnn.com/2014/09/23/world/meast/syria-airstrikes-countries-involved/">http://www.cnn.com/2014/09/23/world/meast/syria-airstrikes-countries-involved/</link>) </para><para id="fs-id1526786">Pollock, John. 2011. “How Egyptian and Tunisian Youth Hijacked the Arab Spring.” <emphasis effect="italics">Technology Review</emphasis>, September/October. Retrieved January 23, 2012 (<link url="http://www.technologyreview.com/web/38379/">http://www.technologyreview.com/web/38379/</link>).</para>
+                    <para id="fs-id1970589">Weber, Max. 1978 [1922]. <emphasis effect="italics">Economy and Society: An Outline of Interpretive Sociology</emphasis>. Berkeley: University of California Press.</para>
+                    <para id="fs-id1895237">Weber, Max. 1947 [1922]. <emphasis effect="italics">The Theory of Social and Economic Organization</emphasis><emphasis effect="italics">. </emphasis>Translated by A. M. Henderson and T. Parsons. New York: Oxford University Press.</para>
+                    </section>
+        
+    </content>
+    <glossary>
+        <definition id="import-auto-id1169033184309"><term>authority</term> <meaning id="fs-id2376628">power that people accept because it comes from a source that is perceived as legitimate</meaning></definition>
+        <definition id="import-auto-id1169033144293"><term>charismatic authority</term> <meaning id="fs-id2732824">power legitimized on the basis of a leader’s exceptional personal qualities</meaning></definition>
+        <definition id="import-auto-id1169033140005"><term>patrimonialism</term> <meaning id="fs-id2730543">a type of authority wherein military and administrative factions enforce the power of the master</meaning></definition>
+        <definition id="import-auto-id1169033064552"><term>power</term> <meaning id="fs-id1334789">the ability to exercise one’s will over others</meaning></definition>
+        <definition id="import-auto-id1169033113271"><term>rational-legal authority</term> <meaning id="fs-id1275174">power that is legitimized by rules, regulations, and laws</meaning></definition>
+        <definition id="import-auto-id1169033056283"><term>traditional authority</term> <meaning id="fs-id2696827">power legitimized on the basis of long-standing customs</meaning></definition>
+    </glossary>
+</document>

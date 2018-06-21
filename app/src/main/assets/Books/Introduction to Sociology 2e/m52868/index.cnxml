@@ -1,0 +1,182 @@
+<?xml version="1.0"?>
+<document xmlns="http://cnx.rice.edu/cnxml" id="imported-from-openoffice" module-id="imported-from-openoffice" cnxml-version="0.7">
+  <title>Global Health</title>
+<metadata xmlns:md="http://cnx.rice.edu/mdml"
+          mdml-version="0.5">
+  <!-- WARNING! The 'metadata' section is read only. Do not edit below.
+       Changes to the metadata section in the source will not be saved. -->
+  <md:repository>http://legacy.cnx.org/content</md:repository>
+  <md:content-url>http://legacy.cnx.org/content/m52868/latest/</md:content-url>
+  <md:content-id>m52868</md:content-id>
+  <md:title>Global Health</md:title>
+  <md:version>1.2</md:version>
+  <md:created>2015/01/20 14:52:04 -0600</md:created>
+  <md:revised>2015/02/19 16:58:28.733 US/Central</md:revised>
+  <md:actors>
+    <md:person userid="OSCRiceUniversity">
+      <md:firstname>Rice</md:firstname>
+      <md:surname>University</md:surname>
+      <md:fullname>Rice University</md:fullname>
+      <md:email>daniel@openstaxcollege.org</md:email>
+    </md:person>
+    <md:organization userid="OpenStaxCollege">
+      <md:shortname>OpenStax College</md:shortname>
+      <md:fullname>OpenStax College</md:fullname>
+      <md:email>info@openstaxcollege.org</md:email>
+    </md:organization>
+    <md:person userid="cnxsoc2">
+      <md:firstname>Openstax College</md:firstname>
+      <md:surname>Sociology 2e</md:surname>
+      <md:fullname>Openstax College Sociology 2e</md:fullname>
+      <md:email>sanura@mac.com</md:email>
+    </md:person>
+  </md:actors>
+  <md:roles>
+    <md:role type="author">OpenStaxCollege</md:role>
+    <md:role type="maintainer">OpenStaxCollege cnxsoc2</md:role>
+    <md:role type="licensor">OSCRiceUniversity</md:role>
+  </md:roles>
+  <md:license url="http://creativecommons.org/licenses/by/4.0/">Creative Commons Attribution License 4.0</md:license>
+  <!-- For information on license requirements for use or modification, see license url in the
+       above <md:license> element.
+       For information on formatting required attribution, see the URL:
+         CONTENT_URL/content_info#cnx_cite_header
+       where CONTENT_URL is the value provided above in the <md:content-url> element.
+  -->
+  <md:derived-from url="http://legacy.cnx.org/content/m42929/1.3/">
+  </md:derived-from>
+  <md:keywordlist>
+    <md:keyword>Social epidemiology</md:keyword>
+  </md:keywordlist>
+  <md:subjectlist>
+    <md:subject>Social Sciences</md:subject>
+  </md:subjectlist>
+  <md:abstract><list>
+<item>Define social epidemiology</item>
+<item>Apply theories of social epidemiology to an understanding of global health issues</item>
+<item>Understand the differences between high-income and low-income nations</item>
+</list></md:abstract>
+  <md:language>en</md:language>
+  <!-- WARNING! The 'metadata' section is read only. Do not edit above.
+       Changes to the metadata section in the source will not be saved. -->
+</metadata>
+
+<content>
+
+   
+    
+    <para xmlns:m="http://www.w3.org/1998/Math/MathML" xmlns:q="http://cnx.rice.edu/qml/1.0" id="import-auto-id1169034209185"><term id="import-auto-id1169034199751">Social epidemiology</term> is the study of the causes and distribution of diseases. Social epidemiology can reveal how social problems are connected to the health of different populations. These epidemiological studies show that the health problems of high-income nations differ greatly from those of low-income nations. Some diseases, like cancer, are universal. But others, like obesity, heart disease, respiratory disease, and diabetes are much more common in high-income countries and are a direct result of a sedentary lifestyle combined with poor diet. High-income nations also have a higher incidence of depression (Bromet et al. 2011). In contrast, low-income nations suffer significantly from malaria and tuberculosis.</para><para xmlns:m="http://www.w3.org/1998/Math/MathML" xmlns:q="http://cnx.rice.edu/qml/1.0" id="import-auto-id1169034186822">How does health differ around the world? Some theorists differentiate among three types of countries: core nations, semi-peripheral nations, and peripheral nations. Core nations are those that we think of as highly developed or industrialized, semi-peripheral nations are those that are often called developing or newly industrialized, and peripheral nations are those that are relatively undeveloped. While the most pervasive issue in the U.S. healthcare system is affordable access to healthcare, other core countries have different issues, and semi-peripheral and peripheral nations are faced with a host of additional concerns. Reviewing the status of global health offers insight into the various ways that politics and wealth shape access to healthcare, and it shows which populations are most affected by health disparities. </para><section id="h21902_01">
+    <title xmlns:m="http://www.w3.org/1998/Math/MathML" xmlns:q="http://cnx.rice.edu/qml/1.0">Health in High-Income Nations</title><para id="import-auto-id1169034222686">Obesity, which is on the rise in high-income nations, has been linked to many diseases, including cardiovascular problems, musculoskeletal problems, diabetes, and respiratory issues. According to the Organization for Economic Cooperation and Development (2011), obesity rates are rising in all countries, with the greatest gains being made in the highest-income countries. The United States has the highest obesity rate. Wallace Huffman and his fellow researchers (2006) contend that several factors are contributing to the rise in obesity in developed countries: </para>
+    <list xmlns:m="http://www.w3.org/1998/Math/MathML" xmlns:q="http://cnx.rice.edu/qml/1.0" id="import-auto-id1169034196100" list-type="enumerated" number-style="arabic"><item>Improvements in technology and reduced family size have led to a reduction of work to be done in household production.</item>
+    <item>Unhealthy market goods, including processed foods, sweetened drinks, and sweet and salty snacks are replacing home-produced goods. </item>
+    <item> Leisure activities are growing more sedentary, for example, computer games, web surfing, and television viewing.</item>
+    <item>More workers are shifting from active work (agriculture and manufacturing) to service industries.</item>
+    <item>Increased access to passive transportation has led to more driving and less walking.</item>
+    </list><para id="import-auto-id1169034183842">Obesity and weight issues have significant societal costs, including lower life expectancies and higher shared healthcare costs.</para>
+    <para xmlns:m="http://www.w3.org/1998/Math/MathML" xmlns:q="http://cnx.rice.edu/qml/1.0" id="import-auto-id1169034196925">High-income countries also have higher rates of depression than less affluent nations. A recent study (Bromet et al. 2011) shows that the average lifetime prevalence of major depressive episodes in the ten highest-income countries in the study was 14.6 percent; this compared to 11.1 percent in the eight low- and middle-income countries. The researchers speculate that the higher rate of depression may be linked to the greater income inequality that exists in the highest-income nations.</para></section>
+
+    <section id="h21902_02">
+    <title xmlns:m="http://www.w3.org/1998/Math/MathML" xmlns:q="http://cnx.rice.edu/qml/1.0">Health in Low-Income Nations</title><figure xmlns:m="http://www.w3.org/1998/Math/MathML" xmlns:q="http://cnx.rice.edu/qml/1.0" id="import-auto-id1169034186303"><media id="import-auto-id1169034211309" alt="Children&#x2019;s protruding bellies are shown here.">
+          <image mime-type="image/jpg" src="Figure_19_02_01.jpg" width="250"/>
+        </media>
+        
+      <caption>In low-income countries, malnutrition and lack of access to clean water contribute to a high child mortality rate. (Photo courtesy of Steve Evans/flickr)</caption></figure><para xmlns:m="http://www.w3.org/1998/Math/MathML" xmlns:q="http://cnx.rice.edu/qml/1.0" id="import-auto-id1169034244307">In peripheral nations with low per capita income, it is not the cost of healthcare that is the most pressing concern. Rather, low-income countries must manage such problems as infectious disease, high infant mortality rates, scarce medical personnel, and inadequate water and sewer systems. Such issues, which high-income countries rarely even think about, are central to the lives of most people in low-income nations. Due to such health concerns, low-income nations have higher rates of infant mortality and lower average life spans. </para><para xmlns:m="http://www.w3.org/1998/Math/MathML" xmlns:q="http://cnx.rice.edu/qml/1.0" id="import-auto-id1169034191773">One of the biggest contributors to medical issues in low-income countries is the lack of access to clean water and basic sanitation resources. According to a 2014 UNICEF report, almost half of the developing world’s population lacks improved sanitation facilities. The World Health Organization (WHO) tracks health-related data for 193 countries. In their 2011 World Health Statistics report, they document the following statistics:</para><list xmlns:m="http://www.w3.org/1998/Math/MathML" xmlns:q="http://cnx.rice.edu/qml/1.0" id="import-auto-id1169034188963" list-type="enumerated" number-style="arabic"><item>Globally, the rate of mortality for children under five was 60 per 1,000 live births. In low-income countries, however, that rate is almost double at 117 per 1,000 live births. In high-income countries, that rate is significantly lower than seven per 1,000 live births.</item>
+    <item>The most frequent causes of death for children under five were pneumonia and diarrheal diseases, accounting for 18 percent and 15 percent, respectively. These deaths could be easily avoidable with cleaner water and more coverage of available medical care.</item>
+    <item>The availability of doctors and nurses in low-income countries is one-tenth that of nations with a high income. Challenges in access to medical education and access to patients exacerbate this issue for would-be medical professionals in low-income countries (World Health Organization 2011).</item>
+    </list></section>
+    
+
+    <section id="summary1902" class="section-summary" type="section-summary">
+    <title>Summary</title>
+    <para id="import-auto-id1169034186143">Social epidemiology is the study of the causes and distribution of diseases. From a global perspective, the health issues of high-income nations tend toward diseases like cancer as well as those that are linked to obesity, like heart disease, diabetes, and musculoskeletal disorders. Low-income nations are more likely to contend with infectious disease, high infant mortality rates, scarce medical personnel, and inadequate water and sanitation systems.</para>
+    </section>
+
+    <section id="sq1902" class="section-quiz" type="section-quiz">
+    <title>Section Quiz</title>
+
+    <exercise id="sq1902_ex01" type="section-quiz">
+    <problem id="fs-id2007538">
+    <para id="import-auto-id1169034210309">What is social epidemiology?</para>
+    <list xmlns:m="http://www.w3.org/1998/Math/MathML" xmlns:q="http://cnx.rice.edu/qml/1.0" id="sq01" list-type="enumerated" number-style="lower-alpha"><item>The study of why some diseases are stigmatized and others are not</item>
+    <item>The study of why diseases spread</item>
+    <item>The study of the mental health of a society</item>
+    <item>The study of the causes and distribution of diseases</item>
+    </list></problem>    <solution id="fs-id1695754">
+          <label/>
+          <title>Answer</title>
+          <para id="fs-id1368590">D</para>
+        </solution>
+    </exercise>
+
+    <exercise id="sq1902_ex02" type="section-quiz">
+    <problem id="fs-id2021364">
+    <para id="import-auto-id1169034215607">Core nations are also known as __________________</para>
+    <list xmlns:m="http://www.w3.org/1998/Math/MathML" xmlns:q="http://cnx.rice.edu/qml/1.0" id="sq02" list-type="enumerated" number-style="lower-alpha"><item>high-income nations</item>
+    <item>newly industrialized nations</item>
+    <item>low-income nations</item>
+    <item>developing nations</item>
+    </list></problem>    <solution id="fs-id1771947">
+          <label/>
+          <title>Answer</title>
+          <para id="fs-id910212">A</para>
+        </solution>
+    </exercise>
+
+    <exercise id="sq1902_ex03" type="section-quiz">
+    <problem id="fs-id2651823">
+    <para id="import-auto-id1169034211590">Many deaths in high-income nations are linked to __________________</para>
+    <list xmlns:m="http://www.w3.org/1998/Math/MathML" xmlns:q="http://cnx.rice.edu/qml/1.0" id="sq03" list-type="enumerated" number-style="lower-alpha"><item>lung cancer</item>
+    <item>obesity</item>
+    <item>mental illness</item>
+    <item>lack of clean water</item>
+    </list></problem>    <solution id="fs-id1599613">
+          <label/>
+          <title>Answer</title>
+          <para id="fs-id1600520">B</para>
+        </solution>
+    </exercise>
+
+    <exercise id="sq1902_ex04" type="section-quiz">
+    <problem id="fs-id1370832">
+    <para xmlns:m="http://www.w3.org/1998/Math/MathML" xmlns:q="http://cnx.rice.edu/qml/1.0" id="import-auto-id1169034189197">According to the World Health Organization, what was the most frequent cause of death for children under five in low-income countries?</para><list xmlns:m="http://www.w3.org/1998/Math/MathML" xmlns:q="http://cnx.rice.edu/qml/1.0" id="sq04" list-type="enumerated" number-style="lower-alpha"><item>Starvation</item>
+    <item>Thirst</item>
+    <item>Pneumonia and diarrheal diseases</item>
+    <item>All of the above</item>
+    </list></problem>
+
+        <solution id="fs-id1334834">
+          <label/>
+          <title>Answer</title>
+          <para id="fs-id1475770">C</para>
+        </solution>
+    </exercise>
+    </section>
+
+    <section id="sh1902" class="short-answer" type="short-answer">
+    <title>Short Answer</title>
+    <exercise id="sh1902_ex01" type="short-answer">
+    <problem id="fs-id2332371">
+    <para id="import-auto-id1169034182134">If social epidemiologists studied the United States in the colonial period, what differences would they find between now and then?</para>
+    </problem>
+    </exercise>
+
+    <exercise id="sh1902_ex02" type="short-answer">
+    <problem id="fs-id1681599">
+    <para id="import-auto-id1169034216641">What do you think are some of the contributing factors to obesity-related diseases in the United States?</para>
+    </problem>
+    </exercise>
+    </section>
+
+    <section id="fresearch1902" class="further-research" type="further-research">
+    <title>Further Research</title>
+    <para xmlns:m="http://www.w3.org/1998/Math/MathML" xmlns:q="http://cnx.rice.edu/qml/1.0" id="import-auto-id1169034181206">Study this map on global life expectancies: <link url="http://openstaxcollege.org/l/global_life_expectancies">http://openstaxcollege.org/l/global_life_expectancies</link>. What trends do you notice?</para></section>
+    
+    <section xmlns:m="http://www.w3.org/1998/Math/MathML" xmlns:q="http://cnx.rice.edu/qml/1.0" id="ref1902" class="references" type="references"><title>References</title><para id="import-auto-id1169034180354">Bromet et al. 2011. “Cross-National Epidemiology of DSM-IV Major Depressive Episode.” <emphasis effect="italics">BMC Medicine</emphasis> 9:90. Retrieved December 12, 2011 (<link url="http://www.biomedcentral.com/1741-7015/9/90">http://www.biomedcentral.com/1741-7015/9/90</link>).</para><para id="import-auto-id1169034179803">Huffman, Wallace E., Sonya Kostova Huffman, AbebayehuTegene, and KyrreRickertsen. 2006. “The Economics of Obesity-Related Mortality among High Income Countries” International Association of Agricultural Economists. Retrieved December 12, 2011 (<link url="http://purl.umn.edu/25567">http://purl.umn.edu/25567</link>).</para>
+    <para id="import-auto-id1169034204924">Organization for Economic Cooperation and Development. 2011. <emphasis effect="italics">Health at a Glance 2011: OECD Indicators</emphasis>. OECD Publishing. Retrieved December 12, 2011 (<link url="http://dx.doi.org/10.1787/health_glance-2011-en">http://dx.doi.org/10.1787/health_glance-2011-en</link>).</para>
+    <para id="import-auto-id1169034209216">UNICEF. 2011. “Water, Sanitation and Hygiene.” Retrieved December 12, 2011 (<link url="http://www.unicef.org/wash">http://www.unicef.org/wash</link>).</para>
+    <para id="import-auto-id1169034210280">World Health Organization. 2011. “World Health Statistics 2011.” Retrieved December 12, 2011 (<link url="http://www.who.int/gho/publications/world_health_statistics/EN_WHS2011_Part1.pdf">http://www.who.int/gho/publications/world_health_statistics/EN_WHS2011_Part1.pdf</link>).</para>
+    </section></content>
+    <glossary>
+    <definition id="import-auto-id1169034221966"><term>social epidemiology</term> <meaning id="fs-id3125324">the study of the causes and distribution of diseases</meaning></definition>
+    </glossary>
+</document>

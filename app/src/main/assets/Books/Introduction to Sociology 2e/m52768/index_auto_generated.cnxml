@@ -1,0 +1,116 @@
+<?xml version="1.0"?>
+<document xmlns="http://cnx.rice.edu/cnxml" id="imported-from-openoffice" module-id="imported-from-openoffice" cnxml-version="0.7" class="introduction">
+    <title>Introduction to Sociological Research</title>
+    <metadata xmlns:md="http://cnx.rice.edu/mdml"
+          mdml-version="0.5">
+  <!-- WARNING! The 'metadata' section is read only. Do not edit below.
+       Changes to the metadata section in the source will not be saved. -->
+  <md:repository>http://legacy.cnx.org/content</md:repository>
+  <md:content-url>http://legacy.cnx.org/content/m52768/latest</md:content-url>
+  <md:content-id>m52768</md:content-id>
+  <md:title>Introduction to Sociological Research</md:title>
+  <md:version>1.8</md:version>
+  <md:created>2015/01/19 16:41:42 -0600</md:created>
+  <md:revised>2015/03/12 16:45:10 -0500</md:revised>
+  <md:actors>
+    <md:person userid="OSCRiceUniversity">
+      <md:firstname>Rice</md:firstname>
+      <md:surname>University</md:surname>
+      <md:fullname>Rice University</md:fullname>
+      <md:email>info@openstaxcollege.org</md:email>
+    </md:person>
+    <md:organization userid="OpenStaxCollege">
+      <md:shortname>OpenStax</md:shortname>
+      <md:fullname>OpenStax</md:fullname>
+      <md:email>info@openstax.org</md:email>
+    </md:organization>
+    <md:person userid="cnxsoc2">
+      <md:firstname>Openstax College</md:firstname>
+      <md:surname>Sociology 2e</md:surname>
+      <md:fullname>Openstax Sociology 2e</md:fullname>
+      <md:email>info@openstaxcollege.org</md:email>
+    </md:person>
+  </md:actors>
+  <md:roles>
+    <md:role type="author">OpenStaxCollege</md:role>
+    <md:role type="maintainer">OpenStaxCollege cnxsoc2</md:role>
+    <md:role type="licensor">OSCRiceUniversity</md:role>
+  </md:roles>
+  <md:license url="http://creativecommons.org/licenses/by/4.0/">Creative Commons Attribution License 4.0</md:license>
+  <!-- For information on license requirements for use or modification, see license url in the
+       above <md:license> element.
+       For information on formatting required attribution, see the URL:
+         CONTENT_URL/content_info#cnx_cite_header
+       where CONTENT_URL is the value provided above in the <md:content-url> element.
+  -->
+  <md:derived-from url="http://legacy.cnx.org/content/m42982/1.4">
+  <md:repository>http://legacy.cnx.org/content</md:repository>
+  <md:content-url>http://legacy.cnx.org/content/m42982/1.4</md:content-url>
+  <md:content-id>m42982</md:content-id>
+  <md:title>Introduction to Sociological Research</md:title>
+  <md:version>1.4</md:version>
+  <md:created>2012/01/31 15:23:41 -0600</md:created>
+  <md:revised>2012/07/12 23:58:11 -0500</md:revised>
+  <md:actors>
+    <md:organization userid="OpenStaxCollege">
+      <md:shortname>OpenStax</md:shortname>
+      <md:fullname>OpenStax</md:fullname>
+      <md:email>info@openstax.org</md:email>
+    </md:organization>
+    <md:person userid="OSCRiceUniversity">
+      <md:firstname>Rice</md:firstname>
+      <md:surname>University</md:surname>
+      <md:fullname>Rice University</md:fullname>
+      <md:email>info@openstaxcollege.org</md:email>
+    </md:person>
+    <md:person userid="soccap">
+      <md:firstname>Sociology</md:firstname>
+      <md:surname>Cap</md:surname>
+      <md:fullname>OpenStax Sociology 1e</md:fullname>
+      <md:email>dcwill@rice.edu</md:email>
+    </md:person>
+  </md:actors>
+  <md:roles>
+    <md:role type="author">OpenStaxCollege</md:role>
+    <md:role type="maintainer">OpenStaxCollege soccap</md:role>
+    <md:role type="licensor">OSCRiceUniversity</md:role>
+  </md:roles>
+  <md:license url="http://creativecommons.org/licenses/by/3.0/" />
+  <!-- For information on license requirements for use or modification, see license url in the
+       above <md:license> element.
+       For information on formatting required attribution, see the URL:
+         CONTENT_URL/content_info#cnx_cite_header
+       where CONTENT_URL is the value provided above in the <md:content-url> element.
+  -->
+  </md:derived-from>
+  <md:keywordlist>
+    <md:keyword>Empirical evidence</md:keyword>
+  </md:keywordlist>
+  <md:subjectlist>
+    <md:subject>Social Sciences</md:subject>
+  </md:subjectlist>
+  <md:abstract></md:abstract>
+  <md:language>en</md:language>
+  <!-- WARNING! The 'metadata' section is read only. Do not edit above.
+       Changes to the metadata section in the source will not be saved. -->
+</metadata>
+
+<content>
+        <?chapter-toc label="Learning Objectives"?>
+        <?cnx.eoc class="section-summary" title="Section Summary"?>
+        <?cnx.eoc class="section-quiz" title="Section Quiz"?>
+        <?cnx.eoc class="short-answer" title="Short Answer"?>
+        <?cnx.eoc class="further-research" title="Further Research"?>
+        <?cnx.eoc class="references" title="References"?>
+
+        <figure xmlns:m="http://www.w3.org/1998/Math/MathML" xmlns:q="http://cnx.rice.edu/qml/1.0" id="import-auto-id1683874" class="splash"><media id="import-auto-id1325657" alt="A panorama of New York Harbor at dusk with a full moon in the sky">
+            <image mime-type="image/png" src="CNX_Soc2e_Figure_02_01_001.jpg" width="350"/>
+        </media>
+            
+            <caption>Many believe that crime rates go up during the full moon, but scientific research does not support this conclusion. (Photo courtesy of Jubula 2/flickr)</caption></figure><para xmlns:m="http://www.w3.org/1998/Math/MathML" xmlns:q="http://cnx.rice.edu/qml/1.0" id="import-auto-id2886676">Have you ever wondered if home schooling affects a person’s later success in college or how many people wait until they are in their forties to get married? Do you wonder if texting is changing teenagers’ abilities to spell correctly or to communicate clearly? How do social movements like Occupy Wall Street develop? How about the development of social phenomena like the massive public followings for Star Trek and Harry Potter? The goal of research is to answer questions. Sociological research attempts to answer a vast variety of questions, such as these and more, about our social world.</para><para xmlns:m="http://www.w3.org/1998/Math/MathML" xmlns:q="http://cnx.rice.edu/qml/1.0" id="import-auto-id2818960">We often have opinions about social situations, but these may be biased by our expectations or based on limited data. Instead, scientific research is based on <term>empirical evidence</term>, which is evidence that comes from direct experience, scientifically gathered data, or experimentation. Many people believe, for example, that crime rates go up when there’s a full moon, but research doesn’t support this opinion. Researchers Rotton and Kelly (1985) conducted a <term>meta-analysis</term> of research on the full moon’s effects on behavior.  Meta-analysis is a technique in which the results of virtually all previous studies on a specific subject are evaluated together. Rotton and Kelly’s meta-analysis included thirty-seven prior studies on the effects of the full moon on crime rates, and the overall findings were that full moons are entirely unrelated to crime, suicide, psychiatric problems, and crisis center calls (cited in Arkowitz and Lilienfeld 2009). We may each know of an instance in which a crime happened during a full moon, but it was likely just a coincidence. </para><para xmlns:m="http://www.w3.org/1998/Math/MathML" xmlns:q="http://cnx.rice.edu/qml/1.0" id="import-auto-id1304176">People commonly try to understand the happenings in their world by finding or creating an explanation for an occurrence. Social scientists may develop a <term>hypothesis</term> for the same reason. A hypothesis is a testable educated guess about predicted outcomes between two or more variables; it’s a possible explanation for specific happenings in the social world and allows for testing to determine whether the explanation holds true in many instances, as well as among various groups or in different places. Sociologists use empirical data and the <term>scientific method</term>, or an interpretative framework, to increase understanding of societies and social interactions, but research begins with the search for an answer to a question. </para>
+<section id="fs-id1163685180339" class="references" type="references"><title xmlns:m="http://www.w3.org/1998/Math/MathML" xmlns:q="http://cnx.rice.edu/qml/1.0">References</title><para xmlns:m="http://www.w3.org/1998/Math/MathML" xmlns:q="http://cnx.rice.edu/qml/1.0" id="fs-id1163687448619">Arkowitz, Hal, and Scott O. Lilienfeld. 2009. "Lunacy and the Full Moon: Does a full moon really trigger strange behavior?" <emphasis effect="italics">Scientific American</emphasis>. Retrieved December 30, 2014 (<link url="http://www.scientificamerican.com/article/lunacy-and-the-full-moon/">http://www.scientificamerican.com/article/lunacy-and-the-full-moon/</link>). </para><para xmlns:m="http://www.w3.org/1998/Math/MathML" xmlns:q="http://cnx.rice.edu/qml/1.0" id="eip-900">Rotton, James, and Ivan W. Kelly. 1985. "Much Ado about the Full Moon: A Meta-analysis of Lunar-Lunacy Research." <emphasis effect="italics">Psychological Bulletin</emphasis> 97 (no. 2): 286–306.</para></section></content>
+        <glossary>
+        <definition id="import-auto-id1652516"><term>empirical evidence</term> <meaning id="fs-id3139326">evidence that comes from direct experience, scientifically gathered data, or experimentation</meaning></definition>
+<definition id="fs-id1165684861466"><term>meta-analysis</term><meaning id="fs-id2477739">a technique in which the results of virtually all previous studies on a specific subject are evaluated together</meaning></definition>
+        </glossary>
+</document>

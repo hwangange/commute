@@ -1,0 +1,268 @@
+<?xml version="1.0"?>
+<document xmlns="http://cnx.rice.edu/cnxml" id="imported-from-openoffice" module-id="imported-from-openoffice" cnxml-version="0.7">
+    <title>Deviance and Control</title>
+    <metadata xmlns:md="http://cnx.rice.edu/mdml"
+          mdml-version="0.5">
+  <!-- WARNING! The 'metadata' section is read only. Do not edit below.
+       Changes to the metadata section in the source will not be saved. -->
+  <md:repository>http://legacy.cnx.org/content</md:repository>
+  <md:content-url>http://legacy.cnx.org/content/m52841/latest</md:content-url>
+  <md:content-id>m52841</md:content-id>
+  <md:title>Deviance and Control</md:title>
+  <md:version>1.5</md:version>
+  <md:created>2015/01/20 14:03:23 -0600</md:created>
+  <md:revised>2015/03/13 14:28:18 -0500</md:revised>
+  <md:actors>
+    <md:person userid="OSCRiceUniversity">
+      <md:firstname>Rice</md:firstname>
+      <md:surname>University</md:surname>
+      <md:fullname>Rice University</md:fullname>
+      <md:email>info@openstaxcollege.org</md:email>
+    </md:person>
+    <md:organization userid="OpenStaxCollege">
+      <md:shortname>OpenStax</md:shortname>
+      <md:fullname>OpenStax</md:fullname>
+      <md:email>info@openstax.org</md:email>
+    </md:organization>
+    <md:person userid="cnxsoc2">
+      <md:firstname>Openstax College</md:firstname>
+      <md:surname>Sociology 2e</md:surname>
+      <md:fullname>Openstax Sociology 2e</md:fullname>
+      <md:email>info@openstaxcollege.org</md:email>
+    </md:person>
+  </md:actors>
+  <md:roles>
+    <md:role type="author">OpenStaxCollege</md:role>
+    <md:role type="maintainer">OpenStaxCollege cnxsoc2</md:role>
+    <md:role type="licensor">OSCRiceUniversity</md:role>
+  </md:roles>
+  <md:license url="http://creativecommons.org/licenses/by/4.0/">Creative Commons Attribution License 4.0</md:license>
+  <!-- For information on license requirements for use or modification, see license url in the
+       above <md:license> element.
+       For information on formatting required attribution, see the URL:
+         CONTENT_URL/content_info#cnx_cite_header
+       where CONTENT_URL is the value provided above in the <md:content-url> element.
+  -->
+  <md:derived-from url="http://legacy.cnx.org/content/m42834/1.3">
+  <md:repository>http://legacy.cnx.org/content</md:repository>
+  <md:content-url>http://legacy.cnx.org/content/m42834/1.3</md:content-url>
+  <md:content-id>m42834</md:content-id>
+  <md:title>Deviance and Control</md:title>
+  <md:version>1.3</md:version>
+  <md:created>2012/01/27 16:11:17 -0600</md:created>
+  <md:revised>2013/07/29 13:21:59 -0500</md:revised>
+  <md:actors>
+    <md:organization userid="OpenStaxCollege">
+      <md:shortname>OpenStax</md:shortname>
+      <md:fullname>OpenStax</md:fullname>
+      <md:email>info@openstax.org</md:email>
+    </md:organization>
+    <md:person userid="OSCRiceUniversity">
+      <md:firstname>Rice</md:firstname>
+      <md:surname>University</md:surname>
+      <md:fullname>Rice University</md:fullname>
+      <md:email>info@openstaxcollege.org</md:email>
+    </md:person>
+    <md:person userid="soccap">
+      <md:firstname>Sociology</md:firstname>
+      <md:surname>Cap</md:surname>
+      <md:fullname>OpenStax Sociology 1e</md:fullname>
+      <md:email>dcwill@rice.edu</md:email>
+    </md:person>
+  </md:actors>
+  <md:roles>
+    <md:role type="author">OpenStaxCollege</md:role>
+    <md:role type="maintainer">OpenStaxCollege soccap</md:role>
+    <md:role type="licensor">OSCRiceUniversity</md:role>
+  </md:roles>
+  <md:license url="http://creativecommons.org/licenses/by/3.0/" />
+  <!-- For information on license requirements for use or modification, see license url in the
+       above <md:license> element.
+       For information on formatting required attribution, see the URL:
+         CONTENT_URL/content_info#cnx_cite_header
+       where CONTENT_URL is the value provided above in the <md:content-url> element.
+  -->
+  </md:derived-from>
+  <md:keywordlist>
+    <md:keyword>Deviance</md:keyword>
+    <md:keyword>Formal sanctions</md:keyword>
+    <md:keyword>Informal sanctions</md:keyword>
+    <md:keyword>Negative sanctions</md:keyword>
+    <md:keyword>Positive sanctions</md:keyword>
+    <md:keyword>Sanctions</md:keyword>
+    <md:keyword>Social control</md:keyword>
+    <md:keyword>Social order</md:keyword>
+  </md:keywordlist>
+  <md:subjectlist>
+    <md:subject>Social Sciences</md:subject>
+  </md:subjectlist>
+  <md:abstract><list>
+<item>Define deviance, and explain the nature of deviant behavior</item>
+<item>Differentiate between methods of social control</item>
+</list></md:abstract>
+  <md:language>en</md:language>
+  <!-- WARNING! The 'metadata' section is read only. Do not edit above.
+       Changes to the metadata section in the source will not be saved. -->
+</metadata>
+
+<content>
+
+        
+        <figure xmlns:m="http://www.w3.org/1998/Math/MathML" xmlns:q="http://cnx.rice.edu/qml/1.0" id="import-auto-id1107791"><media id="import-auto-id1763614" alt="Five men dressed in pink drag attire, one in drag, are shown here.">
+            <image mime-type="image/png" src="Figure_07_01_01a.jpg" width="300"/>
+        </media>
+
+        <caption>Much of the appeal of watching entertainers perform in drag comes from the humor inherent in seeing everyday norms violated. (Photo courtesy of Cassiopeija/Wikimedia Commons)</caption></figure><para xmlns:m="http://www.w3.org/1998/Math/MathML" xmlns:q="http://cnx.rice.edu/qml/1.0" id="import-auto-id1299070">What, exactly, is deviance? And what is the relationship between deviance and crime?  According to sociologist William Graham Sumner, <term id="import-auto-id2228571">deviance</term> is a violation of established contextual, cultural, or social norms, whether folkways, mores, or codified law (1906). It can be as minor as picking your nose in public or as major as committing murder. Although the word “deviance” has a negative connotation in everyday language, sociologists recognize that deviance is not necessarily bad (Schoepflin 2011). In fact, from a structural functionalist perspective, one of the positive contributions of deviance is that it fosters social change. For example, during the U.S. civil rights movement, Rosa Parks violated social norms when she refused to move to the “black section” of the bus, and the Little Rock Nine broke customs of segregation to attend an Arkansas public school.</para><para xmlns:m="http://www.w3.org/1998/Math/MathML" xmlns:q="http://cnx.rice.edu/qml/1.0" id="import-auto-id2858322">“What is deviant behavior?” cannot be answered in a straightforward manner. Whether an act is labeled deviant or not depends on many factors, including location, audience, and the individual committing the act (Becker 1963). Listening to your iPod on the way to class is considered acceptable behavior. Listening to your iPod during your 2 p.m. sociology lecture is considered rude. Listening to your iPod when on the witness stand before a judge may cause you to be held in contempt of court and consequently fined or jailed. </para><para id="import-auto-id2792730">As norms vary across culture and time, it makes sense that notions of deviance change also. Fifty years ago, public schools in the United States had strict dress codes that, among other stipulations, often banned women from wearing pants to class. Today, it’s socially acceptable for women to wear pants, but less so for men to wear skirts. In a time of war, acts usually considered morally reprehensible, such as taking the life of another, may actually be rewarded. Whether an act is deviant or not depends on society’s response to that act.</para>
+<note id="fs-id1330258" class="sociology-real-world">
+<label/>
+        <title>Why I Drive a Hearse</title>
+        <para xmlns:m="http://www.w3.org/1998/Math/MathML" xmlns:q="http://cnx.rice.edu/qml/1.0" id="import-auto-id2290830">When sociologist Todd Schoepflin ran into his childhood friend Bill, he was shocked to see him driving a hearse instead of an ordinary car. A professionally trained researcher, Schoepflin wondered what effect driving a hearse had on his friend and what effect it might have on others on the road. Would using such a vehicle for everyday errands be considered deviant by most people?</para><para xmlns:m="http://www.w3.org/1998/Math/MathML" xmlns:q="http://cnx.rice.edu/qml/1.0" id="import-auto-id1274793">Schoepflin interviewed Bill, curious first to know why he drove such an unconventional car. Bill had simply been on the lookout for a reliable winter car; on a tight budget, he searched used car ads and stumbled upon one for the hearse. The car ran well, and the price was right, so he bought it.</para><para xmlns:m="http://www.w3.org/1998/Math/MathML" xmlns:q="http://cnx.rice.edu/qml/1.0" id="import-auto-id3017214">Bill admitted that others’ reactions to the car had been mixed. His parents were appalled, and he received odd stares from his coworkers. A mechanic once refused to work on it, and stated that it was “a dead person machine.” On the whole, however, Bill received mostly positive reactions. Strangers gave him a thumbs-up on the highway and stopped him in parking lots to chat about his car. His girlfriend loved it, his friends wanted to take it tailgating, and people offered to buy it. Could it be that driving a hearse isn’t really so deviant after all?</para><para xmlns:m="http://www.w3.org/1998/Math/MathML" xmlns:q="http://cnx.rice.edu/qml/1.0" id="import-auto-id1428082">Schoepflin theorized that, although viewed as outside conventional norms, driving a hearse is such a mild form of deviance that it actually becomes a mark of distinction. Conformists find the choice of vehicle intriguing or appealing, while nonconformists see a fellow oddball to whom they can relate. As one of Bill’s friends remarked, “Every guy wants to own a unique car like this, and <emphasis effect="italics">you</emphasis> can certainly pull it off.” Such anecdotes remind us that although deviance is often viewed as a violation of norms, it’s not always viewed in a negative light (Schoepflin 2011).</para><figure xmlns:m="http://www.w3.org/1998/Math/MathML" xmlns:q="http://cnx.rice.edu/qml/1.0" id="import-auto-id2274676"><media id="import-auto-id919837" alt="A hearse with the license plate &#x201C;LASTRYD&#x201D; is shown here.">
+            <image mime-type="image/png" src="Figure_07_01_02a.jpg" width="300"/>
+        </media>
+
+        <caption>A hearse with the license plate “LASTRYD.” How would you view the owner of this car? (Photo courtesy of Brian Teutsch/flickr)</caption></figure></note>
+        <section id="fs-id863824">
+        <title>Social Control</title>
+        <para xmlns:m="http://www.w3.org/1998/Math/MathML" xmlns:q="http://cnx.rice.edu/qml/1.0" id="import-auto-id2316644">When a person violates a social norm, what happens? A driver caught speeding can receive a speeding ticket. A student who wears a bathrobe to class gets a warning from a professor. An adult belching loudly is avoided. All societies practice <term id="import-auto-id2081360">social control</term>, the regulation and enforcement of norms. The underlying goal of social control is to maintain <term id="import-auto-id1329082">social order</term>, an arrangement of practices and behaviors on which society’s members base their daily lives. Think of social order as an employee handbook and social control as a manager. When a worker violates a workplace guideline, the manager steps in to enforce the rules; when an employee is doing an exceptionally good job at following the rules, the manager may praise or promote the employee.</para><para id="import-auto-id1662741">The means of enforcing rules are known as <term id="import-auto-id1313360">sanctions</term>. Sanctions can be positive as well as negative. <term id="import-auto-id786940">Positive sanctions</term> are rewards given for conforming to norms. A promotion at work is a positive sanction for working hard. <term id="import-auto-id3701064">Negative sanctions</term> are punishments for violating norms. Being arrested is a punishment for shoplifting. Both types of sanctions play a role in social control.</para>
+        <para xmlns:m="http://www.w3.org/1998/Math/MathML" xmlns:q="http://cnx.rice.edu/qml/1.0" id="import-auto-id1395260">Sociologists also classify sanctions as formal or informal. Although shoplifting, a form of social deviance, may be illegal, there are no laws dictating the proper way to scratch your nose. That doesn’t mean picking your nose in public won’t be punished; instead, you will encounter <term id="import-auto-id2689677">informal sanctions</term>. Informal sanctions emerge in face-to-face social interactions. For example, wearing flip-flops to an opera or swearing loudly in church may draw disapproving looks or even verbal reprimands, whereas behavior that is seen as positive—such as helping an old man carry grocery bags across the street—may receive positive informal reactions, such as a smile or pat on the back.</para><para id="import-auto-id1221405"><term id="import-auto-id3117360">Formal sanctions</term>, on the other hand, are ways to officially recognize and enforce norm violations. If a student violates her college’s code of conduct, for example, she might be expelled. Someone who speaks inappropriately to the boss could be fired. Someone who commits a crime may be arrested or imprisoned. On the positive side, a soldier who saves a life may receive an official commendation. </para>
+        <para id="import-auto-id2691703">The table below shows the relationship between different types of sanctions. </para>
+ 
+       
+        <table xmlns:m="http://www.w3.org/1998/Math/MathML" xmlns:q="http://cnx.rice.edu/qml/1.0" id="import-auto-id1351343" summary="A table displaying informal positive sanctions (an expression of thanks), formal positive sanctions (a promotion at work), informal negative sanctions (an angry comment), and formal negative sanctions (a parking fine)."><title>Informal/Formal Sanctions </title>
+<tgroup cols="3"><colspec colnum="1" colname="c1"/>
+                <colspec colnum="2" colname="c2"/>
+                <colspec colnum="3" colname="c3"/>
+                <thead>
+                    <row>
+                        <entry/>
+                        <entry align="center">Informal</entry>
+                        <entry align="center">Formal</entry>
+                    </row>
+                </thead>
+                <tbody>
+                    <row>
+                        <entry>Positive</entry>
+                        <entry>An expression of thanks</entry>
+                        <entry>A promotion at work</entry>
+                    </row>
+                    <row>
+                        <entry>Negative</entry>
+                        <entry>An angry comment</entry>
+                        <entry>A parking fine</entry>
+                    </row>
+                </tbody>
+            
+</tgroup><caption>Formal and informal sanctions may be positive or negative. Informal sanctions arise in social interactions, whereas formal sanctions officially enforce norms.</caption>
+</table></section>
+
+        <section id="fs-id3024684" class="section-summary" type="section-summary">
+        <title>Summary</title>  
+        <para id="import-auto-id2755240">Deviance is a violation of norms. Whether or not something is deviant depends on contextual definitions, the situation, and people’s response to the behavior. Society seeks to limit deviance through the use of sanctions that help maintain a system of social control.</para>
+</section>
+
+        <section id="fs-id2266112" class="section-quiz" type="section-quiz">
+        <title>Section Quiz</title>
+ <exercise xmlns:m="http://www.w3.org/1998/Math/MathML" xmlns:q="http://cnx.rice.edu/qml/1.0" id="fs-id1370636" type="section-quiz"><problem id="fs-id1488132">
+        <para id="import-auto-id1308884">Which of the following best describes how deviance is defined?</para>
+        <list id="fs-id2851000" list-type="enumerated" number-style="lower-alpha">
+        <item>Deviance is defined by federal, state, and local laws.</item>
+        <item>Deviance’s definition is determined by one’s religion.</item>
+        <item>Deviance occurs whenever someone else is harmed by an action.</item>
+        <item>Deviance is socially defined.</item>
+        </list>
+</problem>
+
+<solution id="eip-id1445446">
+<label/>
+<title>Answer</title>
+        <para id="eip-id2031159">D</para>
+</solution>
+</exercise><exercise xmlns:m="http://www.w3.org/1998/Math/MathML" xmlns:q="http://cnx.rice.edu/qml/1.0" id="fs-id1303155" type="section-quiz"><problem id="fs-id2308814">
+        <para id="import-auto-id2660333">During the civil rights movement, Rosa Parks and other black protestors spoke out against segregation by refusing to sit at the back of the bus. This is an example of ________.</para>
+        <list id="fs-id2307558" list-type="enumerated" number-style="lower-alpha">
+        <item>An act of social control</item>
+        <item>An act of deviance</item>
+        <item>A social norm</item>
+        <item>Criminal mores</item>
+        </list>
+</problem>
+
+<solution id="eip-id1360723">
+<label/>
+<title>Answer</title>
+        <para id="eip-id1984596">B</para>
+</solution>
+</exercise><exercise xmlns:m="http://www.w3.org/1998/Math/MathML" xmlns:q="http://cnx.rice.edu/qml/1.0" id="fs-id1385827" type="section-quiz"><problem id="fs-id2693741">
+        <para id="import-auto-id1345349">A student has a habit of talking on her cell phone during class. One day, the professor stops his lecture and asks her to respect the other students in the class by turning off her phone. In this situation, the professor used __________ to maintain social control.</para>
+       <list id="fs-id1506521" list-type="enumerated" number-style="lower-alpha">
+       <item>Informal negative sanctions</item>
+        <item>Informal positive sanctions</item>
+        <item>Formal negative sanctions</item>
+        <item>Formal positive sanctions</item>
+       </list>
+</problem>
+
+<solution id="eip-id1990129">
+<label/>
+<title>Answer</title>
+        <para id="eip-id1989208">A</para>
+</solution>
+</exercise><exercise xmlns:m="http://www.w3.org/1998/Math/MathML" xmlns:q="http://cnx.rice.edu/qml/1.0" id="fs-id3135713" type="section-quiz"><problem id="fs-id1304270">
+        <para id="import-auto-id1428533">Societies practice social control to maintain ________.</para>
+       <list id="fs-id1313039" list-type="enumerated" number-style="lower-alpha">
+        <item>formal sanctions</item>
+        <item>social order</item>
+        <item>cultural deviance</item>
+        <item>sanction labeling</item>
+        </list>
+</problem>
+
+<solution id="eip-id1694553">
+<label/>
+<title>Answer</title>
+        <para id="eip-id1673793">B</para>
+</solution></exercise><exercise xmlns:m="http://www.w3.org/1998/Math/MathML" xmlns:q="http://cnx.rice.edu/qml/1.0" id="fs-id2640604" type="section-quiz"><problem id="fs-id2687218">
+        <para id="import-auto-id1473191">One day, you decide to wear pajamas to the grocery store. While you shop, you notice people giving you strange looks and whispering to others. In this case, the grocery store patrons are demonstrating _______.</para>
+        <list id="fs-id3698165" list-type="enumerated" number-style="lower-alpha">
+        <item>deviance</item>
+        <item>formal sanctions</item>
+        <item>informal sanctions</item>
+        <item>positive sanctions</item>
+        </list>
+</problem>
+<solution id="eip-id1393371">
+<label/>
+<title>Answer</title>
+        <para id="eip-id1687042">C</para>
+</solution>
+</exercise></section>
+<section id="fs-id1154391" class="short-answer" type="short-answer">
+        <title>Short Answer</title>
+<exercise id="fs-id1720876" type="short-answer"><problem id="fs-id1388061">
+        <para id="import-auto-id1349026">If given the choice, would you purchase an unusual car such as a hearse for everyday use? How would your friends, family, or significant other react? Since deviance is culturally defined, most of the decisions we make are dependent on the reactions of others. Is there anything the people in your life encourage you to do that you don’t? Why don’t you?</para>
+</problem></exercise>
+<exercise id="fs-id2195969" type="short-answer"><problem id="fs-id1306558">
+        <para id="import-auto-id1364756">Think of a recent time when you used informal negative sanctions. To what act of deviance were you responding? How did your actions affect the deviant person or persons? How did your reaction help maintain social control?</para>
+</problem></exercise>
+</section>
+<section id="fs-id1345457" class="further-research" type="further-research">
+        <title>Further Research</title>
+        <para xmlns:m="http://www.w3.org/1998/Math/MathML" xmlns:q="http://cnx.rice.edu/qml/1.0" id="import-auto-id2195439">Although we rarely think of it in this way, deviance can have a positive effect on society. Check out the Positive Deviance Initiative, a program initiated by Tufts University to promote social movements around the world that strive to improve people’s lives, at <link url="http://openstaxcollege.org/l/Positive_Deviance">http://openstaxcollege.org/l/Positive_Deviance</link>.</para></section>
+<section id="fs-id2761946" class="references" type="references"> 
+        <title>References</title>  
+        <para id="fs-id1920301">Becker, Howard. 1963. <emphasis effect="italics">Outsiders: Studies in the Sociology of Deviance</emphasis>. New York: Free Press.</para>
+        <para xmlns:m="http://www.w3.org/1998/Math/MathML" xmlns:q="http://cnx.rice.edu/qml/1.0" id="fs-id2058879">Schoepflin, Todd. 2011. “Deviant While Driving?” Everyday Sociology Blog, January 28. Retrieved February 10, 2012 (<link url="http://nortonbooks.typepad.com/everydaysociology/2011/01/deviant-while-driving.html">http://nortonbooks.typepad.com/everydaysociology/2011/01/deviant-while-driving.html</link>).</para><para xmlns:m="http://www.w3.org/1998/Math/MathML" xmlns:q="http://cnx.rice.edu/qml/1.0" id="fs-id2424759">Sumner, William Graham. 1955 [1906]. <emphasis effect="italics">Folkways.</emphasis> New York, NY: Dover. </para></section>
+
+    </content>
+        <glossary>
+        <definition id="import-auto-id1327652"><term>deviance</term> <meaning id="fs-id1654775">a violation of contextual, cultural, or social norms</meaning></definition>
+        <definition id="import-auto-id920115"><term>formal sanctions</term> <meaning id="fs-id2730911">sanctions that are officially recognized and enforced</meaning></definition>
+        <definition id="import-auto-id762117"><term>informal sanctions</term> <meaning id="fs-id2363739">sanctions that occur in face-to-face interactions</meaning></definition>
+        <definition id="import-auto-id2669346"><term>negative sanctions</term><meaning id="fs-id1278213">punishments for violating norms</meaning></definition>
+
+<definition id="fs-id2577853"><term>positive sanctions</term> <meaning id="fs-id1452122">rewards given for conforming to norms</meaning></definition>
+        <definition id="import-auto-id1552269"><term>sanctions</term> <meaning id="fs-id786940">the means of enforcing rules</meaning></definition>
+        <definition id="import-auto-id1982298"><term>social control</term> <meaning id="fs-id1587171">the regulation and enforcement of norms</meaning></definition>
+        <definition id="import-auto-id2753262"><term>social order</term> <meaning id="fs-id2852171">an arrangement of practices and behaviors on which society’s members base their daily lives</meaning></definition>
+        </glossary>
+</document>

@@ -1,0 +1,244 @@
+<?xml version="1.0"?>
+<document xmlns="http://cnx.rice.edu/cnxml" id="imported-from-openoffice" module-id="imported-from-openoffice" cnxml-version="0.7">
+  <title>Group Size and Structure</title>
+<metadata xmlns:md="http://cnx.rice.edu/mdml"
+          mdml-version="0.5">
+  <!-- WARNING! The 'metadata' section is read only. Do not edit below.
+       Changes to the metadata section in the source will not be saved. -->
+  <md:repository>http://legacy.cnx.org/content</md:repository>
+  <md:content-url>http://legacy.cnx.org/content/m52835/latest</md:content-url>
+  <md:content-id>m52835</md:content-id>
+  <md:title>Group Size and Structure</md:title>
+  <md:version>1.5</md:version>
+  <md:created>2015/01/20 07:31:40 -0600</md:created>
+  <md:revised>2018/03/07 16:17:57 -0600</md:revised>
+  <md:actors>
+    <md:person userid="OSCRiceUniversity">
+      <md:firstname>Rice</md:firstname>
+      <md:surname>University</md:surname>
+      <md:fullname>Rice University</md:fullname>
+      <md:email>info@openstaxcollege.org</md:email>
+    </md:person>
+    <md:organization userid="OpenStaxCollege">
+      <md:shortname>OpenStax</md:shortname>
+      <md:fullname>OpenStax</md:fullname>
+      <md:email>info@openstax.org</md:email>
+    </md:organization>
+    <md:person userid="cnxsoc2">
+      <md:firstname>Openstax College</md:firstname>
+      <md:surname>Sociology 2e</md:surname>
+      <md:fullname>Openstax Sociology 2e</md:fullname>
+      <md:email>info@openstaxcollege.org</md:email>
+    </md:person>
+  </md:actors>
+  <md:roles>
+    <md:role type="author">OpenStaxCollege</md:role>
+    <md:role type="maintainer">OpenStaxCollege cnxsoc2</md:role>
+    <md:role type="licensor">OSCRiceUniversity</md:role>
+  </md:roles>
+  <md:license url="http://creativecommons.org/licenses/by/4.0/">Creative Commons Attribution License 4.0</md:license>
+  <!-- For information on license requirements for use or modification, see license url in the
+       above <md:license> element.
+       For information on formatting required attribution, see the URL:
+         CONTENT_URL/content_info#cnx_cite_header
+       where CONTENT_URL is the value provided above in the <md:content-url> element.
+  -->
+  <md:derived-from url="http://legacy.cnx.org/content/m42832/1.3">
+  <md:repository>http://legacy.cnx.org/content</md:repository>
+  <md:content-url>http://legacy.cnx.org/content/m42832/1.3</md:content-url>
+  <md:content-id>m42832</md:content-id>
+  <md:title>Group Size and Structure</md:title>
+  <md:version>1.3</md:version>
+  <md:created>2012/01/27 16:10:13 -0600</md:created>
+  <md:revised>2013/07/30 09:41:34 -0500</md:revised>
+  <md:actors>
+    <md:organization userid="OpenStaxCollege">
+      <md:shortname>OpenStax</md:shortname>
+      <md:fullname>OpenStax</md:fullname>
+      <md:email>info@openstax.org</md:email>
+    </md:organization>
+    <md:person userid="OSCRiceUniversity">
+      <md:firstname>Rice</md:firstname>
+      <md:surname>University</md:surname>
+      <md:fullname>Rice University</md:fullname>
+      <md:email>info@openstaxcollege.org</md:email>
+    </md:person>
+    <md:person userid="soccap">
+      <md:firstname>Sociology</md:firstname>
+      <md:surname>Cap</md:surname>
+      <md:fullname>OpenStax Sociology 1e</md:fullname>
+      <md:email>dcwill@rice.edu</md:email>
+    </md:person>
+  </md:actors>
+  <md:roles>
+    <md:role type="author">OpenStaxCollege</md:role>
+    <md:role type="maintainer">OpenStaxCollege soccap</md:role>
+    <md:role type="licensor">OSCRiceUniversity</md:role>
+  </md:roles>
+  <md:license url="http://creativecommons.org/licenses/by/3.0/" />
+  <!-- For information on license requirements for use or modification, see license url in the
+       above <md:license> element.
+       For information on formatting required attribution, see the URL:
+         CONTENT_URL/content_info#cnx_cite_header
+       where CONTENT_URL is the value provided above in the <md:content-url> element.
+  -->
+  </md:derived-from>
+  <md:keywordlist>
+    <md:keyword>Authoritarian leader</md:keyword>
+    <md:keyword>Conformity</md:keyword>
+    <md:keyword>Democratic leader</md:keyword>
+    <md:keyword>Dyad</md:keyword>
+    <md:keyword>Expressive leader</md:keyword>
+    <md:keyword>Generalizability</md:keyword>
+    <md:keyword>Instrumental leader</md:keyword>
+    <md:keyword>Laissez-faire leader</md:keyword>
+    <md:keyword>Leadership function</md:keyword>
+    <md:keyword>Leadership style</md:keyword>
+    <md:keyword>Triad</md:keyword>
+  </md:keywordlist>
+  <md:subjectlist>
+    <md:subject>Social Sciences</md:subject>
+  </md:subjectlist>
+  <md:abstract><list>
+<item>How size influences group dynamics</item>
+<item>Different styles of leadership</item>
+<item>How conformity is impacted by groups</item>
+</list></md:abstract>
+  <md:language>en</md:language>
+  <!-- WARNING! The 'metadata' section is read only. Do not edit above.
+       Changes to the metadata section in the source will not be saved. -->
+</metadata>
+
+<content>
+    <figure xmlns:m="http://www.w3.org/1998/Math/MathML" xmlns:q="http://cnx.rice.edu/qml/1.0" id="import-auto-id1430007"><media id="import-auto-id2639486" alt="A group of soldiers is shown marching down the road while spectators look on.">
+        <image mime-type="image/png" src="Figure_06_02_01new.jpg" width="300"/>
+      </media>
+      
+    <caption>Cadets illustrate how strongly conformity can define groups. (Photo courtesy David Spender/flickr)</caption></figure><section id="fs-id1447297">
+    <title>Dyads, Triads, and Large Groups</title>
+    <para xmlns:m="http://www.w3.org/1998/Math/MathML" xmlns:q="http://cnx.rice.edu/qml/1.0" id="import-auto-id2757018">A small group is typically one where the collection of people is small enough that all members of the group know each other and share simultaneous interaction, such as a nuclear family, a dyad, or a triad. Georg Simmel (1858–1915) wrote extensively about the difference between a <term id="import-auto-id1512605">dyad</term>, or two-member group, and a <term id="import-auto-id796996">triad</term>, which is a three-member group (Simmel 1902). In the former, if one person withdraws, the group can no longer exist. We can think of a divorce, which effectively ends the “group” of the married couple or of two best friends never speaking again. In a triad, however, the dynamic is quite different. If one person withdraws, the group lives on. A triad has a different set of relationships. If there are three in the group, two-against-one dynamics can develop, and there exists the potential for a majority opinion on any issue. Small groups generally have strong internal cohesiveness and a sense of connection. The challenge, however, is for small groups to achieve large goals. They can struggle to be heard or to be a force for change if they are pushing against larger groups. In short, they are easier to ignore.</para><para xmlns:m="http://www.w3.org/1998/Math/MathML" xmlns:q="http://cnx.rice.edu/qml/1.0" id="import-auto-id1460190">It is difficult to define exactly when a small group becomes a large group. Perhaps it occurs when there are too many people to join in a simultaneous discussion. Or perhaps a group joins with other groups as part of a movement that unites them. These larger groups may share a geographic space, such as a fraternity or sorority on the same campus, or they might be spread out around the globe. The larger the group, the more attention it can garner, and the more pressure members can put toward whatever goal they wish to achieve. At the same time, the larger the group becomes, the more the risk grows for division and lack of cohesion.</para></section>
+    <section id="fs-id3202354">
+    <title>Group Leadership</title>
+    <para xmlns:m="http://www.w3.org/1998/Math/MathML" xmlns:q="http://cnx.rice.edu/qml/1.0" id="import-auto-id2639938">Often, larger groups require some kind of leadership. In small, primary groups, leadership tends to be informal. After all, most families don’t take a vote on who will rule the group, nor do most groups of friends. This is not to say that <emphasis effect="italics">de facto</emphasis> leaders don’t emerge, but formal leadership is rare. In secondary groups, leadership is usually more overt. There are often clearly outlined roles and responsibilities, with a chain of command to follow. Some secondary groups, like the military, have highly structured and clearly understood chains of command, and many lives depend on those. After all, how well could soldiers function in a battle if they had no idea whom to listen to or if different people were calling out orders? Other secondary groups, like a workplace or a classroom, also have formal leaders, but the styles and functions of leadership can vary significantly.</para><para xmlns:m="http://www.w3.org/1998/Math/MathML" xmlns:q="http://cnx.rice.edu/qml/1.0" id="import-auto-id1839360"><term id="import-auto-id2662629">Leadership function</term> refers to the main focus or goal of the leader. An <term id="import-auto-id2662724">instrumental leader</term> is one who is goal-oriented and largely concerned with accomplishing set tasks. We can imagine that an army general or a Fortune 500 CEO would be an instrumental leader. In contrast, <term id="import-auto-id1482679">expressive leaders</term> are more concerned with promoting emotional strength and health, and ensuring that people feel supported. Social and religious leaders—rabbis, priests, imams, directors of youth homes and social service programs—are often perceived as expressive leaders. There is a longstanding stereotype that men are more instrumental leaders, and women are more expressive leaders. And although gender roles have changed, even today many women and men who exhibit the opposite-gender manner can be seen as deviants and can encounter resistance. Former Secretary of State Hillary Clinton's experiences provide an example of the way society reacts to a high-profile woman who is an instrumental leader. Despite the stereotype, Boatwright and Forrest (2000) have found that both men and women prefer leaders who use a combination of expressive and instrumental leadership.</para><para xmlns:m="http://www.w3.org/1998/Math/MathML" xmlns:q="http://cnx.rice.edu/qml/1.0" xmlns:data="http://www.w3.org/TR/html5/dom.html#custom-data-attribute" id="import-auto-id1051188">In addition to these leadership functions, there are three different <term id="import-auto-id2703014">leadership styles</term>. <term id="import-auto-id2843875">Democratic leaders</term> encourage group participation in all decision making. They work hard to build consensus before choosing a course of action and moving forward. This type of leader is particularly common, for example, in a club where the members vote on which activities or projects to pursue. Democratic leaders can be well liked, but there is often a danger that they will proceed slowly since consensus building is time-consuming. A further risk is that group members might pick sides and entrench themselves into opposing factions rather than reaching a solution. In contrast, a <term id="import-auto-id2662467">laissez-faire leader</term> (French for “leave it alone”) is hands-off, allowing group members to self-manage and make their own decisions. An example of this kind of leader might be an art teacher who opens the art cupboard, leaves materials on the shelves, and tells students to help themselves and make some art. While this style can work well with highly motivated and mature participants who have clear goals and guidelines, it risks group dissolution and a lack of progress. As the name suggests, <term id="import-auto-id3214956">authoritarian leaders</term> issue orders and assigns tasks. These leaders are clear instrumental leaders with a strong focus on meeting goals. Often, entrepreneurs fall into this mold, like Facebook founder Mark Zuckerberg. Not surprisingly, the authoritarian leader risks alienating the workers. There are times, however, when this style of leadership can be required. In different circumstances, each of these leadership styles can be effective and successful. Consider what leadership style you prefer. Why? Do you like the same style in different areas of your life, such as a classroom, a workplace, and a sports team?</para><note id="fs-id2811457" class="sociology-big-picture"><label/>
+    <title>Women Leaders and the Hillary Clinton/Sarah Palin Phenomenon</title>
+      <figure xmlns:m="http://www.w3.org/1998/Math/MathML" xmlns:q="http://cnx.rice.edu/qml/1.0" id="import-auto-id2703619"><media id="import-auto-id2899081" alt="Then-presidential candidate Hillary Clinton is shown standing behind a podium with a placard stating: Countdown to a New Beginning. A number of children are shown in the background.">
+          <image mime-type="image/png" src="Figure_06_02_02.jpg" width="275"/>
+        </media>
+        
+      <caption>Presidential candidate Hillary Clinton drew fire for her leadership style. (Photo courtesy marcn/flickr)</caption></figure><para xmlns:m="http://www.w3.org/1998/Math/MathML" xmlns:q="http://cnx.rice.edu/qml/1.0" id="import-auto-id1404858">The 2008 presidential election marked a dynamic change when two female politicians entered the race. Of the 200 people who have run for president during the country’s history, fewer than thirty have been women. Democratic presidential candidate and former First Lady Hillary Clinton was both famously polarizing and popular. She had almost as many passionate supporters as she did people who reviled her.</para><para xmlns:m="http://www.w3.org/1998/Math/MathML" xmlns:q="http://cnx.rice.edu/qml/1.0" id="import-auto-id1674651">On the other side of the aisle was Republican vice-presidential candidate Sarah Palin. The former governor of Alaska, Palin was, to some, the perfect example of the modern woman. She juggled her political career with raising a growing family and relied heavily on the use of social media to spread her message. </para><para xmlns:m="http://www.w3.org/1998/Math/MathML" xmlns:q="http://cnx.rice.edu/qml/1.0" id="import-auto-id2831841">So what light did these candidates’ campaigns shed on the possibilities of a female presidency? According to some political analysts, women candidates face a paradox: They must be as tough as their male opponents on issues such as foreign policy, or they risk appearing weak. However, the stereotypical expectation of women as expressive leaders is still prevalent. Consider that Hillary Clinton’s popularity surged in her 2008 campaign after she cried on the campaign trail. It was enough for the <emphasis effect="italics">New York Times</emphasis> to publish an editorial, “Can Hillary Cry Her Way Back to the White House?” (Dowd 2008). Harsh, but her approval ratings soared afterward. In fact, many compared it to how politically likable she was in the aftermath of President Clinton’s Monica Lewinsky scandal. Sarah Palin’s expressive qualities were promoted to a greater degree. While she has benefited from the efforts of feminists before her, she self-identified as a traditional woman with traditional values, a point she illustrated by frequently bringing her young children up on stage with her.</para><para xmlns:m="http://www.w3.org/1998/Math/MathML" xmlns:q="http://cnx.rice.edu/qml/1.0" id="import-auto-id2274761">So what does this mean for women who would be president, and for those who would vote for them? On the positive side, a recent study of eighteen- to twenty-five-year-old women that asked whether female candidates in the 2008 election made them believe a woman would be president during their lifetime found that the majority thought they would (Weeks 2011). And the more that young women demand female candidates, the more commonplace female contenders will become. Women as presidential candidates may no longer be a novelty with the focus of their campaign, no matter how obliquely, on their gender. Some, however, remain skeptical. As one political analyst said bluntly, “Women don’t succeed in politics––or other professions––unless they act like men. The standard for running for national office remains distinctly male” (Weeks 2011).</para></note>
+    <figure xmlns:m="http://www.w3.org/1998/Math/MathML" xmlns:q="http://cnx.rice.edu/qml/1.0" id="import-auto-id1712383"><media id="import-auto-id1389137" alt="A toy figure of Hilary Clinton is shown in a packaging box reading &#x201C;Is America Ready for This Nutcracker?&#x201D;">
+        <image mime-type="image/png" src="Figure_06_02_03.jpg" width="175"/>
+      </media>
+      
+    <caption>This gag gift demonstrates how female leaders may be viewed if they violate social norms. (Photo courtesy of istolethetv/flickr)</caption></figure></section>
+    <section id="fs-id1852245">
+    <title>Conformity</title>
+    <para id="import-auto-id2652599">We all like to fit in to some degree. Likewise, when we want to stand out, we want to choose how we stand out and for what reasons. For example, a woman who loves cutting-edge fashion and wants to dress in thought-provoking new styles likely wants to be noticed, but most likely she will want to be noticed within a framework of high fashion. She wouldn’t want people to think she was too poor to find proper clothes. <term id="import-auto-id1455956">Conformity</term> is the extent to which an individual complies with group norms or expectations. As you might recall, we use reference groups to assess and understand how to act, to dress, and to behave. Not surprisingly, young people are particularly aware of who conforms and who does not. A high school boy whose mother makes him wear ironed button-down shirts might protest that he will look stupid––that everyone else wears T-shirts. Another high school boy might like wearing those shirts as a way of standing out. How much do you enjoy being noticed? Do you consciously prefer to conform to group norms so as not to be singled out? Are there people in your class who immediately come to mind when you think about those who don’t want to conform?</para>
+    <para xmlns:m="http://www.w3.org/1998/Math/MathML" xmlns:q="http://cnx.rice.edu/qml/1.0" id="import-auto-id1236037">Psychologist Solomon Asch (1907–1996) conducted experiments that illustrated how great the pressure to conform is, specifically within a small group (1956). After reading about his work in the Sociological Research feature, ask yourself what you would do in Asch’s experiment. Would you speak up? What would help you speak up and what would discourage it?</para><note id="fs-id2811497" class="sociological-research"><label/>
+    <title>Conforming to Expectations</title>
+    <para xmlns:m="http://www.w3.org/1998/Math/MathML" xmlns:q="http://cnx.rice.edu/qml/1.0" id="import-auto-id3232138">In 1951, psychologist Solomon Asch sat a small group of about eight people around a table. Only one of the people sitting there was the true subject; the rest were associates of the experimenter. However, the subject was led to believe that the others were all, like him, people brought in for an experiment in visual judgments. The group was shown two cards, the first card with a single vertical line, and the second card with three vertical lines differing in length. The experimenter polled the group and asked each participant one at a time which line on the second card matched up with the line on the first card.</para><para xmlns:m="http://www.w3.org/1998/Math/MathML" xmlns:q="http://cnx.rice.edu/qml/1.0" id="import-auto-id2771308">However, this was not really a test of visual judgment. Rather, it was Asch’s study on the pressures of conformity. He was curious to see what the effect of multiple wrong answers would be on the subject, who presumably was able to tell which lines matched. In order to test this, Asch had each planted respondent answer in a specific way. The subject was seated in such a way that he had to hear almost everyone else’s answers before it was his turn. Sometimes the nonsubject members would unanimously choose an answer that was clearly wrong. </para><para xmlns:m="http://www.w3.org/1998/Math/MathML" xmlns:q="http://cnx.rice.edu/qml/1.0" id="import-auto-id3088934">So what was the conclusion? Asch found that thirty-seven out of fifty test subjects responded with an “obviously erroneous” answer at least once. When faced by a unanimous wrong answer from the rest of the group, the subject conformed to a mean of four of the staged answers. Asch revised the study and repeated it, wherein the subject still heard the staged wrong answers, but was allowed to write down his answer rather than speak it aloud. In this version, the number of examples of conformity––giving an incorrect answer so as not to contradict the group––fell by two thirds. He also found that group size had an impact on how much pressure the subject felt to conform.</para><para xmlns:m="http://www.w3.org/1998/Math/MathML" xmlns:q="http://cnx.rice.edu/qml/1.0" id="import-auto-id1733055">The results showed that speaking up when only one other person gave an erroneous answer was far more common than when five or six people defended the incorrect position. Finally, Asch discovered that people were far more likely to give the correct answer in the face of near-unanimous consent if they had a single ally. If even one person in the group also dissented, the subject conformed only a quarter as often. Clearly, it was easier to be a minority of two than a minority of one.</para><para id="import-auto-id2717916">Asch concluded that there are two main causes for conformity: people want to be liked by the group or they believe the group is better informed than they are. He found his study results disturbing. To him, they revealed that intelligent, well-educated people would, with very little coaxing, go along with an untruth. He believed this result highlighted real problems with the education system and values in our society (Asch 1956).</para><para xmlns:m="http://www.w3.org/1998/Math/MathML" xmlns:q="http://cnx.rice.edu/qml/1.0" id="eip-207">Stanley Milgram, a Yale psychologist, had similar results in his experiment that is now known simply as the Milgram Experiment. In 1962, Milgram found that research subjects were overwhelmingly willing to perform acts that directly conflicted with their consciences when directed by a person of authority. In the experiment, subjects were willing to administer painful, even supposedly deadly, shocks to others who answered questions incorrectly. </para><para xmlns:m="http://www.w3.org/1998/Math/MathML" xmlns:q="http://cnx.rice.edu/qml/1.0" id="eip-860">To learn more about similar research, visit <link url="http://www.prisonexp.org/">http://www.prisonexp.org/</link> and read an account of Philip Zimbardo's prison experiment conducted at Stanford University in 1971.</para></note>
+    </section>
+    <section xmlns:m="http://www.w3.org/1998/Math/MathML" xmlns:q="http://cnx.rice.edu/qml/1.0" id="fs-id1486757" class="section-summary" type="section-summary"><title>Summary</title><para id="import-auto-id2777921">The size and dynamic of a group greatly affects how members act. Primary groups rarely have formal leaders, although there can be informal leadership. Groups generally are considered large when there are too many members for a simultaneous discussion. In secondary groups there are two types of leadership functions, with expressive leaders focused on emotional health and wellness, and instrumental leaders more focused on results. Further, there are different leadership styles: democratic leaders, authoritarian leaders, and laissez-faire leaders.</para>
+    <para id="import-auto-id3669710">Within a group, conformity is the extent to which people want to go along with the norm. A number of experiments have illustrated how strong the drive to conform can be. It is worth considering real-life examples of how conformity and obedience can lead people to ethically and morally suspect acts.</para></section><section xmlns:m="http://www.w3.org/1998/Math/MathML" xmlns:q="http://cnx.rice.edu/qml/1.0" id="fs-id2006474" class="section-quiz" type="section-quiz"><title>Section Quiz</title><exercise xmlns:data="http://www.w3.org/TR/html5/dom.html#custom-data-attribute" id="fs-id3021967" type="section-quiz"><problem id="fs-id2764955">
+    <para id="import-auto-id2669381">Two people who have just had a baby have turned from a _______ to a _________.</para>
+    <list id="fs-id1689775" list-type="enumerated" number-style="lower-alpha">
+    <item>primary group; secondary group</item>
+    <item>dyad; triad</item>
+    <item>couple; family</item>
+    <item>de facto group; nuclear family</item>
+    </list>
+    </problem>
+<solution id="eip-idm1640682304">   
+<label/><title>Answer</title>
+    <para id="eip-idm197886512">B</para>
+</solution></exercise><exercise xmlns:data="http://www.w3.org/TR/html5/dom.html#custom-data-attribute" id="fs-id1430848" type="section-quiz"><problem id="fs-id3093585">
+    <para id="import-auto-id1856685">Who is more likely to be an expressive leader?</para>
+    <list id="fs-id1300832" list-type="enumerated" number-style="lower-alpha">
+    <item>The sales manager of a fast-growing cosmetics company</item>
+    <item>A high school teacher at a reform school</item>
+    <item>The director of a summer camp for chronically ill children</item>
+    <item>A manager at a fast-food restaurant</item>
+    </list>
+    </problem>
+    <solution id="eip-idm998700736">   
+<label/><title>Answer</title>
+    <para id="eip-idm390491424">C</para>
+</solution></exercise><exercise xmlns:data="http://www.w3.org/TR/html5/dom.html#custom-data-attribute" id="fs-id2804952" type="section-quiz"><problem id="fs-id1455663">
+    <para id="import-auto-id1763426">Which of the following is <emphasis effect="italics">not</emphasis> an appropriate group for democratic leadership?</para><list id="fs-id1417955" list-type="enumerated" number-style="lower-alpha">
+    <item>A fire station</item>
+    <item>A college classroom</item>
+    <item>A high school prom committee</item>
+    <item>A homeless shelter</item>
+    </list>
+    </problem>
+    <solution id="eip-idm349855152">   
+<label/><title>Answer</title>
+    <para id="eip-idm417082928">A</para>
+</solution></exercise><exercise xmlns:data="http://www.w3.org/TR/html5/dom.html#custom-data-attribute" id="fs-id2841617" type="section-quiz"><problem id="fs-id2719506">
+    <para id="import-auto-id773149">In Asch’s study on conformity, what contributed to the ability of subjects to resist conforming?</para>
+    <list id="fs-id1182475" list-type="enumerated" number-style="lower-alpha">
+    <item>A very small group of witnesses</item>
+    <item>The presence of an ally</item>
+    <item>The ability to keep one’s answer private</item>
+    <item>All of the above</item>
+    </list>
+    </problem>
+    <solution id="eip-idm1820488560">   
+<label/><title>Answer</title>
+    <para id="eip-idm1754096448">D</para>
+</solution></exercise><exercise xmlns:data="http://www.w3.org/TR/html5/dom.html#custom-data-attribute" id="fs-id1882979" type="section-quiz"><problem id="fs-id1204381">
+    <para id="import-auto-id2524996">Which type of group leadership has a communication pattern that flows from the top down?</para>
+    <list id="fs-id3121763" list-type="enumerated" number-style="lower-alpha">
+    <item>Authoritarian</item>
+    <item>Democratic</item>
+    <item>Laissez-faire</item>
+    <item>Expressive</item>
+    </list>
+    </problem>
+<solution id="eip-idm1801382320">   
+<label/><title>Answer</title>
+    <para id="eip-idm1445779904">A</para>
+</solution>
+    </exercise></section><section id="fs-id1599706" class="short-answer" type="short-answer"><title>Short Answer</title>
+    <exercise id="fs-id1598978" type="short-answer"><problem id="fs-id3199213">
+    <para id="import-auto-id3043061">Think of a scenario where an authoritarian leadership style would be beneficial. Explain. What are the reasons it would work well? What are the risks?</para>
+    </problem></exercise>
+    <exercise id="fs-id2784912" type="short-answer"><problem id="fs-id2736075">
+    <para id="import-auto-id2635146">Describe a time you were led by a leader using, in your opinion, a leadership style that didn’t suit the situation. When and where was it? What could she or he have done better?</para>
+    </problem></exercise>
+    <exercise id="fs-id2847132" type="short-answer"><problem id="fs-id772726">
+    <para id="import-auto-id1281769">Imagine you are in Asch’s study. Would you find it difficult to give the correct answer in that scenario? Why or why not? How would you change the study now to improve it?</para>
+    </problem></exercise>
+    <exercise id="fs-id3130599" type="short-answer"><problem id="fs-id1596734">
+    <para id="import-auto-id2805061">What kind of leader do you tend to be? Do you embrace different leadership styles and functions as the situation changes? Give an example of a time you were in a position of leadership and what function and style you expressed.</para>
+    </problem></exercise>
+</section>
+
+<section id="fs-id1763302" class="further-research" type="further-research"> 
+    <title>Further Research</title>
+    <para xmlns:m="http://www.w3.org/1998/Math/MathML" xmlns:q="http://cnx.rice.edu/qml/1.0" id="import-auto-id2980388">What is your leadership style? The website <link url="http://openstaxcollege.org/l/Leadership">http://openstaxcollege.org/l/Leadership</link> offers a quiz to help you find out!</para><para xmlns:m="http://www.w3.org/1998/Math/MathML" xmlns:q="http://cnx.rice.edu/qml/1.0" id="import-auto-id1981831">Explore other experiments on conformity at <link url="http://openstaxcollege.org/l/Stanford-Prison">http://openstaxcollege.org/l/Stanford-Prison</link></para></section>
+
+<section id="fs-id1979863" class="references" type="references"><title>References</title>
+<para xmlns:m="http://www.w3.org/1998/Math/MathML" xmlns:q="http://cnx.rice.edu/qml/1.0" id="eip-324">Asch, Solomon. 1956. “Studies of Independence and Conformity: A Minority of One Against a Unanimous Majority.” <emphasis effect="italics">Psychological Monographs</emphasis> 70(9, Whole No. 416).</para><para xmlns:m="http://www.w3.org/1998/Math/MathML" xmlns:q="http://cnx.rice.edu/qml/1.0" id="eip-424">Boatwright, K.J., and L. Forrest. 2000. “Leadership Preferences: The Influence of Gender and Needs for Connection on Workers’ Ideal Preferences for Leadership Behaviors.” <emphasis effect="italics">The Journal of Leadership Studies</emphasis> 7(2): 18–34.
+</para><para xmlns:m="http://www.w3.org/1998/Math/MathML" xmlns:q="http://cnx.rice.edu/qml/1.0" id="eip-354">Cox, Ana Marie. 2006. “How Americans View Hillary: Popular but Polarizing.” <emphasis effect="italics">Time</emphasis>, August 19. Retrieved February 10, 2012 (<link url="http://www.time.com/time/magazine/article/0,9171,1229053,00.html">http://www.time.com/time/magazine/article/0,9171,1229053,00.html</link>).
+</para><para xmlns:m="http://www.w3.org/1998/Math/MathML" xmlns:q="http://cnx.rice.edu/qml/1.0" id="eip-700">Dowd, Maureen. 2008. “Can Hillary Cry Her Way to the White House?” <emphasis effect="italics">New York Times</emphasis>, January 9. Retrieved February 10, 2012 (<link url="http://www.nytimes.com/2008/01/09/opinion/08dowd.html?pagewanted=all">http://www.nytimes.com/2008/01/09/opinion/08dowd.html?pagewanted=all</link>).
+</para><para xmlns:m="http://www.w3.org/1998/Math/MathML" xmlns:q="http://cnx.rice.edu/qml/1.0" id="eip-394">Kurtieben, Danielle. 2010. “Sarah Palin, Hillary Clinton, Michelle Obama, and Women in Politics.” <emphasis effect="italics">US News and World Report</emphasis>, September 30. Retrieved February 10, 2012 (<link url="http://www.usnews.com/opinion/articles/2010/09/30/sarah-palin-hillary-clinton-michelle-obama-and-women-in-politics">http://www.usnews.com/opinion/articles/2010/09/30/sarah-palin-hillary-clinton-michelle-obama-and-women-in-politics</link>).
+</para><para xmlns:m="http://www.w3.org/1998/Math/MathML" xmlns:q="http://cnx.rice.edu/qml/1.0" id="eip-320">Milgram, Stanley. 1963. “Behavioral Study of Obedience.” <emphasis effect="italics">Journal of Abnormal and Social Psychology</emphasis> 67: 371–378.
+</para><para xmlns:m="http://www.w3.org/1998/Math/MathML" xmlns:q="http://cnx.rice.edu/qml/1.0" id="eip-949">Simmel, Georg. 1950. <emphasis effect="italics">The Sociology of Georg Simmel</emphasis>. Glencoe, IL: The Free Press.
+</para><para xmlns:m="http://www.w3.org/1998/Math/MathML" xmlns:q="http://cnx.rice.edu/qml/1.0" id="eip-516">Weeks, Linton. 2011. “The Feminine Effect on Politics.” National Public Radio (NPR), June 9. Retrieved February 10, 2012 (<link url="http://www.npr.org/2011/06/09/137056376/the-feminine-effect-on-presidential-politics">http://www.npr.org/2011/06/09/137056376/the-feminine-effect-on-presidential-politics</link>).
+</para></section>
+  </content>
+    <glossary>
+    <definition id="import-auto-id2663988"><term>authoritarian leader</term> <meaning id="fs-id1980200">a leader who issues orders and assigns tasks</meaning></definition>
+    <definition id="import-auto-id2972864"><term>conformity</term> <meaning id="fs-id1553351">the extent to which an individual complies with group or societal norms</meaning></definition>
+    <definition id="import-auto-id1140171"><term>democratic leader</term> <meaning id="fs-id1474801">a leader who encourages group participation and consensus-building before moving into action</meaning></definition>
+    <definition id="import-auto-id2255696"><term>dyad</term> <meaning id="fs-id896409">a two-member group</meaning></definition>
+    <definition id="import-auto-id2845499"><term>expressive leader</term> <meaning id="fs-id2980388">a leader who is concerned with process and with ensuring everyone’s emotional wellbeing</meaning></definition>
+   
+    <definition id="import-auto-id1328694"><term>instrumental leader</term> <meaning id="fs-id2756550">a leader who is goal oriented with a primary focus on accomplishing tasks</meaning></definition>
+    <definition id="import-auto-id2764959"><term>laissez-faire leader</term> <meaning id="fs-id2612450">a hands-off leader who allows members of the group to make their own decisions</meaning></definition>
+    <definition id="import-auto-id2931729"><term>leadership function</term> <meaning id="fs-id1973118">the main focus or goal of a leader</meaning></definition>
+    <definition id="import-auto-id3095153"><term>leadership style</term> <meaning id="fs-id2260146">the style a leader uses to achieve goals or elicit action from group members</meaning></definition>
+    <definition id="import-auto-id2634960"><term>triad</term> <meaning id="fs-id1482012">a three-member group</meaning></definition>
+    </glossary>
+</document>

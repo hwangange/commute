@@ -1,0 +1,108 @@
+<?xml version="1.0"?>
+<document xmlns="http://cnx.rice.edu/cnxml" id="imported-from-openoffice" module-id="imported-from-openoffice" cnxml-version="0.7" class="introduction">
+    <title>Introduction to Society and Social Interaction</title>
+    <metadata xmlns:md="http://cnx.rice.edu/mdml"
+          mdml-version="0.5">
+  <!-- WARNING! The 'metadata' section is read only. Do not edit below.
+       Changes to the metadata section in the source will not be saved. -->
+  <md:repository>http://legacy.cnx.org/content</md:repository>
+  <md:content-url>http://legacy.cnx.org/content/m52797/latest</md:content-url>
+  <md:content-id>m52797</md:content-id>
+  <md:title>Introduction to Society and Social Interaction</md:title>
+  <md:version>1.3</md:version>
+  <md:created>2015/01/20 12:05:14 -0600</md:created>
+  <md:revised>2015/04/23 16:59:23 -0500</md:revised>
+  <md:actors>
+    <md:person userid="OSCRiceUniversity">
+      <md:firstname>Rice</md:firstname>
+      <md:surname>University</md:surname>
+      <md:fullname>Rice University</md:fullname>
+      <md:email>info@openstaxcollege.org</md:email>
+    </md:person>
+    <md:organization userid="OpenStaxCollege">
+      <md:shortname>OpenStax</md:shortname>
+      <md:fullname>OpenStax</md:fullname>
+      <md:email>info@openstax.org</md:email>
+    </md:organization>
+    <md:person userid="cnxsoc2">
+      <md:firstname>Openstax College</md:firstname>
+      <md:surname>Sociology 2e</md:surname>
+      <md:fullname>Openstax Sociology 2e</md:fullname>
+      <md:email>info@openstaxcollege.org</md:email>
+    </md:person>
+  </md:actors>
+  <md:roles>
+    <md:role type="author">OpenStaxCollege</md:role>
+    <md:role type="maintainer">OpenStaxCollege cnxsoc2</md:role>
+    <md:role type="licensor">OSCRiceUniversity</md:role>
+  </md:roles>
+  <md:license url="http://creativecommons.org/licenses/by/4.0/">Creative Commons Attribution License 4.0</md:license>
+  <!-- For information on license requirements for use or modification, see license url in the
+       above <md:license> element.
+       For information on formatting required attribution, see the URL:
+         CONTENT_URL/content_info#cnx_cite_header
+       where CONTENT_URL is the value provided above in the <md:content-url> element.
+  -->
+  <md:derived-from url="http://legacy.cnx.org/content/m42986/1.2">
+  <md:repository>http://legacy.cnx.org/content</md:repository>
+  <md:content-url>http://legacy.cnx.org/content/m42986/1.2</md:content-url>
+  <md:content-id>m42986</md:content-id>
+  <md:title>Introduction to Society and Social Interaction</md:title>
+  <md:version>1.2</md:version>
+  <md:created>2012/01/31 15:24:43 -0600</md:created>
+  <md:revised>2012/05/07 11:51:10 -0500</md:revised>
+  <md:actors>
+    <md:organization userid="OpenStaxCollege">
+      <md:shortname>OpenStax</md:shortname>
+      <md:fullname>OpenStax</md:fullname>
+      <md:email>info@openstax.org</md:email>
+    </md:organization>
+    <md:person userid="OSCRiceUniversity">
+      <md:firstname>Rice</md:firstname>
+      <md:surname>University</md:surname>
+      <md:fullname>Rice University</md:fullname>
+      <md:email>info@openstaxcollege.org</md:email>
+    </md:person>
+    <md:person userid="soccap">
+      <md:firstname>Sociology</md:firstname>
+      <md:surname>Cap</md:surname>
+      <md:fullname>OpenStax Sociology 1e</md:fullname>
+      <md:email>dcwill@rice.edu</md:email>
+    </md:person>
+  </md:actors>
+  <md:roles>
+    <md:role type="author">OpenStaxCollege</md:role>
+    <md:role type="maintainer">OpenStaxCollege soccap</md:role>
+    <md:role type="licensor">OSCRiceUniversity</md:role>
+  </md:roles>
+  <md:license url="http://creativecommons.org/licenses/by/3.0/" />
+  <!-- For information on license requirements for use or modification, see license url in the
+       above <md:license> element.
+       For information on formatting required attribution, see the URL:
+         CONTENT_URL/content_info#cnx_cite_header
+       where CONTENT_URL is the value provided above in the <md:content-url> element.
+  -->
+  </md:derived-from>
+  <md:subjectlist>
+    <md:subject>Social Sciences</md:subject>
+  </md:subjectlist>
+  <md:abstract></md:abstract>
+  <md:language>en</md:language>
+  <!-- WARNING! The 'metadata' section is read only. Do not edit above.
+       Changes to the metadata section in the source will not be saved. -->
+</metadata>
+
+<content>
+        <?chapter-toc label="Learning Objectives"?>
+        <?cnx.eoc class="section-summary" title="Section Summary"?>
+        <?cnx.eoc class="section-quiz" title="Section Quiz"?>
+        <?cnx.eoc class="short-answer" title="Short Answer"?>
+        <?cnx.eoc class="further-research" title="Further Research"?>
+        <?cnx.eoc class="references" title="References"?>
+        
+        <figure xmlns:m="http://www.w3.org/1998/Math/MathML" xmlns:q="http://cnx.rice.edu/qml/1.0" id="import-auto-id3119144" class="splash"><media id="import-auto-id1485289" alt="Photo of a teenage girl and guy looking at a cell phone">
+            <image mime-type="image/png" src="CNX_Soc2e_Figure_04_01_001_new.jpg" width="400"/>
+        </media>
+            
+            <caption>Sociologists study how societies interact with the environment and how they use technology. (Photo courtesty of Garry Knight/flickr)</caption></figure><para xmlns:m="http://www.w3.org/1998/Math/MathML" xmlns:q="http://cnx.rice.edu/qml/1.0" id="import-auto-id1366947">It was a school day, and Adriana, who was just entering eighth grade, woke up at 6:15 a.m. Before she got out of bed, she sent three text messages. One was to Jenn, who last year had moved five states away to a different time zone. Even though they now lived far apart, the two friends texted on and off every day. Now Adriana wanted to tell Jenn that she liked the new boots in the photo that Jenn had posted on a social media site last night. </para><para xmlns:m="http://www.w3.org/1998/Math/MathML" xmlns:q="http://cnx.rice.edu/qml/1.0" id="import-auto-id1510047">Throughout the day, Adriana used her smart phone to send fifty more texts, but she made no phone calls. She even texted her mother in the next room when she had a question about her homework. She kept in close electronic contact with all of her friends on a daily basis. In fact, when she wasn't doing homework or attending class, she was chatting and laughing with her friends via texts, tweets, and social media websites. Her smart phone was her main source of social interaction.</para><para xmlns:m="http://www.w3.org/1998/Math/MathML" xmlns:q="http://cnx.rice.edu/qml/1.0" id="import-auto-id1552386">We can consider Adriana a typical teenager in the digital age—she constantly communicates with a large group of people who are not confined to one geographical area. This is definitely one of the benefits of new forms of communication: it is cheap and easy, and you can keep in touch with everyone at the same time. However, with these new forms of communication come new forms of societal interaction. </para><para xmlns:m="http://www.w3.org/1998/Math/MathML" xmlns:q="http://cnx.rice.edu/qml/1.0" id="import-auto-id1361118">As we connect with each other more and more in an online environment, we make less time to interact in person. So the obvious question is this: are these forms of communication good developments in terms of social interaction? Or, if there are negative effects, what will they be? As we shall see, our reliance on electronic communication does have consequences. Beyond popularizing new forms of communication, it also alters the traditional ways in which we deal with conflict, the way we view ourselves in relationship to our surroundings, and the ways in which we understand social status.</para><section xmlns:m="http://www.w3.org/1998/Math/MathML" xmlns:q="http://cnx.rice.edu/qml/1.0" id="id780807" class="references" type="references"><title>References</title><para id="ref1">Maasai Association. “Facing the Lion.” Retrieved January 4, 2012 (<link url="http://www.maasai-association.org/lion.html">http://www.maasai-association.org/lion.html</link>).</para></section></content>
+</document>

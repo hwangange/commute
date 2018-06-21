@@ -1,0 +1,228 @@
+<?xml version="1.0"?>
+<document xmlns="http://cnx.rice.edu/cnxml" id="imported-from-openoffice" module-id="imported-from-openoffice" cnxml-version="0.7">
+  <title>The History of Sociology</title>
+<metadata xmlns:md="http://cnx.rice.edu/mdml"
+          mdml-version="0.5">
+  <!-- WARNING! The 'metadata' section is read only. Do not edit below.
+       Changes to the metadata section in the source will not be saved. -->
+  <md:repository>https://legacy.cnx.org/content</md:repository>
+  <md:content-url>https://legacy.cnx.org/content/m52765/latest/</md:content-url>
+  <md:content-id>m52765</md:content-id>
+  <md:title>The History of Sociology</md:title>
+  <md:version>1.10</md:version>
+  <md:created>2015/01/20 03:24:21 -0600</md:created>
+  <md:revised>2018/03/09 13:22:27.946 US/Central</md:revised>
+  <md:actors>
+    <md:person userid="OSCRiceUniversity">
+      <md:firstname>Rice</md:firstname>
+      <md:surname>University</md:surname>
+      <md:fullname>Rice University</md:fullname>
+      <md:email>info@openstaxcollege.org</md:email>
+    </md:person>
+    <md:organization userid="OpenStaxCollege">
+      <md:shortname>OpenStax</md:shortname>
+      <md:fullname>OpenStax</md:fullname>
+      <md:email>info@openstax.org</md:email>
+    </md:organization>
+    <md:person userid="cnxsoc2">
+      <md:firstname>Openstax College</md:firstname>
+      <md:surname>Sociology 2e</md:surname>
+      <md:fullname>Openstax Sociology 2e</md:fullname>
+      <md:email>info@openstaxcollege.org</md:email>
+    </md:person>
+  </md:actors>
+  <md:roles>
+    <md:role type="author">OpenStaxCollege</md:role>
+    <md:role type="maintainer">OpenStaxCollege cnxsoc2</md:role>
+    <md:role type="licensor">OSCRiceUniversity</md:role>
+  </md:roles>
+  <md:license url="http://creativecommons.org/licenses/by/4.0/">Creative Commons Attribution License 4.0</md:license>
+  <!-- For information on license requirements for use or modification, see license url in the
+       above <md:license> element.
+       For information on formatting required attribution, see the URL:
+         CONTENT_URL/content_info#cnx_cite_header
+       where CONTENT_URL is the value provided above in the <md:content-url> element.
+  -->
+  <md:derived-from url="https://legacy.cnx.org/content/m42794/1.3/">
+  </md:derived-from>
+  <md:keywordlist>
+    <md:keyword>Antipositivism</md:keyword>
+    <md:keyword>Positivism</md:keyword>
+    <md:keyword>Qualitative sociology</md:keyword>
+    <md:keyword>Quantitative sociology</md:keyword>
+    <md:keyword>Verstehen</md:keyword>
+  </md:keywordlist>
+  <md:subjectlist>
+    <md:subject>Social Sciences</md:subject>
+  </md:subjectlist>
+  <md:abstract><list>
+<item>Explain why sociology emerged when it did</item>
+<item>Describe how sociology became a separate academic discipline</item>
+</list></md:abstract>
+  <md:language>en</md:language>
+  <!-- WARNING! The 'metadata' section is read only. Do not edit above.
+       Changes to the metadata section in the source will not be saved. -->
+</metadata>
+
+<content>
+<figure xmlns:m="http://www.w3.org/1998/Math/MathML" xmlns:q="http://cnx.rice.edu/qml/1.0" id="import-auto-id909878" orient="horizontal"><subfigure id="fs-id1632786">
+  <media id="import-auto-id1328174" alt="Figure (a) shows two ancient Greeks.">
+  <image mime-type="image/jpg" src="Figure_01_02_01a.jpg" width="140"/>
+  </media>
+</subfigure>
+<subfigure id="fs-id2648593">
+  <media id="import-auto-id2649536" alt="Figure (b) shows an ancient Chinese man.">
+  <image mime-type="image/jpg" src="Figure_01_02_01b.jpg" width="100"/>
+  </media>
+</subfigure>
+<subfigure id="fs-id2064810">
+  <media id="import-auto-id1677344" alt="Figure (c) shows a statue of a man.">
+  <image mime-type="image/jpeg" src="Figure_01_02_01ca.jpg" width="140"/>
+  </media>
+</subfigure>
+<subfigure id="fs-id2054452">  
+  <media id="import-auto-id2655875" alt="Figure (d) shows a portrait of a Frenchman.">
+  <image mime-type="image/jpg" src="Figure_01_02_01d.jpg" width="160"/>
+  </media>
+</subfigure>
+
+<caption>People have been thinking like sociologists long before sociology became a separate academic discipline: Plato and Aristotle, Confucius, Khaldun, and Voltaire all set the stage for modern sociology. (Photos (a),(b),(d) courtesy of Wikimedia Commons; Photo (c) courtesy of Moumou82/Wikimedia Commons)</caption></figure><para xmlns:m="http://www.w3.org/1998/Math/MathML" xmlns:q="http://cnx.rice.edu/qml/1.0" id="import-auto-id3036948">Since ancient times, people have been fascinated by the relationship between individuals and the societies to which they belong. Many topics studied in modern sociology were also studied by ancient philosophers in their desire to describe an ideal society, including theories of social conflict, economics, social cohesion, and power (Hannoum 2003).
+</para><para xmlns:m="http://www.w3.org/1998/Math/MathML" xmlns:q="http://cnx.rice.edu/qml/1.0" id="import-auto-id1461550">In the thirteenth century, Ma Tuan-Lin, a Chinese historian, first recognized social dynamics as an underlying component of historical development in his seminal encyclopedia, <emphasis effect="italics">General Study of Literary Remains</emphasis>. The next century saw the emergence of the historian some consider to be the world’s first sociologist: Ibn Khaldun (1332–1406) of Tunisia. He wrote about many topics of interest today, setting a foundation for both modern sociology and economics, including a theory of social conflict, a comparison of nomadic and sedentary life, a description of political economy, and a study connecting a tribe’s social cohesion to its capacity for power (Hannoum 2003).</para><para xmlns:m="http://www.w3.org/1998/Math/MathML" xmlns:q="http://cnx.rice.edu/qml/1.0" id="import-auto-id1301703">In the eighteenth century, Age of Enlightenment philosophers developed general principles that could be used to explain social life. Thinkers such as John Locke, Voltaire, Immanuel Kant, and Thomas Hobbes responded to what they saw as social ills by writing on topics that they hoped would lead to social reform. Mary Wollstonecraft (1759–1797) wrote about women’s conditions in society. Her works were long ignored by the male academic structure, but since the 1970s, Wollstonecraft has been widely considered the first feminist thinker of consequence.</para><para xmlns:m="http://www.w3.org/1998/Math/MathML" xmlns:q="http://cnx.rice.edu/qml/1.0" id="import-auto-id1641982">The early nineteenth century saw great changes with the Industrial Revolution, increased mobility, and new kinds of employment. It was also a time of great social and political upheaval with the rise of empires that exposed many people—for the first time—to societies and cultures other than their own. Millions of people moved into cities and many people turned away from their traditional religious beliefs.</para><section xmlns:m="http://www.w3.org/1998/Math/MathML" xmlns:q="http://cnx.rice.edu/qml/1.0" id="fs-id1169033124106"><title>Creating a Discipline</title><section id="fs-id8125616"><title xmlns:data="http://www.w3.org/TR/html5/dom.html#custom-data-attribute">Auguste Comte (1798–1857)</title><figure xmlns:data="http://www.w3.org/TR/html5/dom.html#custom-data-attribute" id="import-auto-id2744412"><media id="import-auto-id1677341" alt="A portrait of August Comte.">
+        <image mime-type="image/png" src="Figure_01_02_02a.jpg" width="150"/>
+      </media>
+      
+    <caption>Auguste Comte played an important role in the development of sociology as a recognized discipline. (Photo courtesy of Wikimedia Commons)</caption></figure><para id="import-auto-id1300071">The term sociology was first coined in 1780 by the French essayist Emmanuel-Joseph Sieyès (1748–1836) in an unpublished manuscript (Fauré et al. 1999). In 1838, the term was reinvented by Auguste Comte (1798–1857). Comte originally studied to be an engineer, but later became a pupil of social philosopher Claude Henri de Rouvroy Comte de Saint-Simon (1760–1825). They both thought that social scientists could study society using the same scientific methods utilized in natural sciences. Comte also believed in the potential of social scientists to work toward the betterment of society. He held that once scholars identified the laws that governed society, sociologists could address problems such as poor education and poverty (Abercrombie et al. 2000).</para><para id="import-auto-id2619052">Comte named the scientific study of social patterns <term id="import-auto-id2298441">positivism</term>. He described his philosophy in a series of books called <emphasis effect="italics">The Course in Positive Philosophy</emphasis> (1830–1842) and <emphasis effect="italics">A General View of Positivism</emphasis> (1848). He believed that using scientific methods to reveal the laws by which societies and individuals interact would usher in a new “positivist” age of history. While the field and its terminology have grown, sociologists still believe in the positive impact of their work.</para>
+</section>    
+<section id="eip-396"><title>Harriet Martineau (1802–1876)—the First Woman Sociologist</title><para xmlns:data="http://www.w3.org/TR/html5/dom.html#custom-data-attribute" id="eip-503">Harriet Martineau was a writer who addressed a wide range of social science issues. She was an early observer of social practices, including economics, social class, religion, suicide, government, and women’s rights. Her writing career began in 1832 with a series of stories titled <emphasis effect="italics">Illustrations of Political Economy</emphasis>, in which she tried to educate ordinary people about the principles of economics (Johnson 2003).</para><para id="eip-id3855488">Martineau was the first to translate Comte’s writing from French to English and thereby introduced sociology to English-speaking scholars (Hill 1991). She is also credited with the first systematic methodological international comparisons of social institutions in two of her most famous sociological works: <emphasis effect="italics">Society in America</emphasis> (1837) and <emphasis effect="italics">Retrospect of Western Travel</emphasis> (1838). Martineau found the workings of capitalism at odds with the professed moral principles of people in the United States; she pointed out the faults with the free enterprise system in which workers were exploited and impoverished while business owners became wealthy. She further noted that the belief in all being created equal was inconsistent with the lack of women’s rights. Much like Mary Wollstonecraft, Martineau was often discounted in her own time by the male domination of academic sociology.
+</para></section><section id="fs-id1169033109367">
+     <title>Karl Marx (1818–1883)</title>
+<figure id="id2744413"><media id="import-auto-id1677342" alt="A photo of Karl Marx.">
+    <image mime-type="image/jpeg" src="Figure_01_02_03.jpg" width="180"/>
+  </media>
+<caption>Karl Marx was one of the founders of sociology. His ideas about social conflict are still relevant today. (Photo courtesy of John Mayall/Wikimedia Commons)</caption></figure><para id="import-auto-id1748115">Karl Marx (1818–1883) was a German philosopher and economist. In 1848 he and Friedrich Engels (1820–1895) coauthored the <emphasis effect="italics">Communist Manifesto</emphasis>. This book is one of the most influential political manuscripts in history. It also presents Marx's theory of society, which differed from what Comte proposed.</para>
+    <para id="import-auto-id1365379">Marx rejected Comte's positivism. He believed that societies grew and changed as a result of the struggles of different social classes over the means of production. At the time he was developing his theories, the Industrial Revolution and the rise of capitalism led to great disparities in wealth between the owners of the factories and workers. Capitalism, an economic system characterized by private or corporate ownership of goods and the means to produce them, grew in many nations.</para>
+    <para id="import-auto-id1684316">Marx predicted that inequalities of capitalism would become so extreme that workers would eventually revolt. This would lead to the collapse of capitalism, which would be replaced by communism. Communism is an economic system under which there is no private or corporate ownership: everything is owned communally and distributed as needed. Marx believed that communism was a more equitable system than capitalism.</para>
+    <para id="import-auto-id1369857">While his economic predictions may not have come true in the time frame he predicted, Marx’s idea that social conflict leads to change in society is still one of the major theories used in modern sociology.</para>
+    </section>
+    <section id="fs-id1169033069407">
+     <title>Herbert Spencer (1820–1903)</title>
+    <para id="import-auto-id1362363">In 1873, the English philosopher Herbert Spencer published <emphasis effect="italics">The Study of Sociology</emphasis>, the first book with the term “sociology” in the title. Spencer rejected much of Comte’s philosophy as well as Marx's theory of class struggle and his support of communism. Instead, he favored a form of government that allowed market forces to control capitalism. His work influenced many early sociologists including Émile Durkheim (1858–1917).</para></section>
+    <section id="eip-919"><title>Georg Simmel (1858–1918)</title><para id="eip-180">
+Georg Simmel was a German art critic who wrote widely on social and political issues as well. Simmel took an anti-positivism stance and addressed topics such as social conflict, the function of money, individual identity in city life, and the European fear of outsiders (Stapley 2010). Much of his work focused on the micro-level theories, and it analyzed the dynamics of two-person and three-person groups. His work also emphasized individual culture as the creative capacities of individuals. Simmel’s contributions to sociology are not often included in academic histories of the discipline, perhaps overshadowed by his contemporaries Durkheim, Mead, and Weber (Ritzer and Goodman 2004). 
+</para></section>
+<section id="eip-id1170985915840"><title>Émile Durkheim (1858–1917)</title><para xmlns:data="http://www.w3.org/TR/html5/dom.html#custom-data-attribute" id="import-auto-id2770260">Durkheim helped establish sociology as a formal academic discipline by establishing the first European department of sociology at the University of Bordeaux in 1895 and by publishing his <emphasis effect="italics">Rules of the Sociological Method</emphasis> in 1895. In another important work, <emphasis effect="italics">Division of Labour in Society</emphasis> (1893), Durkheim laid out his theory on how societies transformed from a primitive state into a capitalist, industrial society. According to Durkheim, people rise to their proper levels in society based on belief in a meritocracy.</para><para id="import-auto-id1207081">Durkheim believed that sociologists could study objective “social facts” (Poggi 2000). He also believed that through such studies it would be possible to determine if a society was “healthy” or “pathological.” He saw healthy societies as stable, while pathological societies experienced a breakdown in social norms between individuals and society.</para>
+    <para id="import-auto-id1453104">In 1897, Durkheim attempted to demonstrate the effectiveness of his rules of social research when he published a work titled <emphasis effect="italics">Suicide</emphasis>. Durkheim examined suicide statistics in different police districts to research differences between Catholic and Protestant communities. He attributed the differences to socioreligious forces rather than to individual or psychological causes.</para></section>
+<section id="eip-id1169402148869"><title>George Herbert Mead (1863–1931)</title>
+<para id="eip-id1169421212762">George Herbert Mead was a philosopher and sociologist whose work focused on the ways in which the mind and the self were developed as a result of social processes (Cronk n.d.). He argued that how an individual comes to view himself or herself is based to a very large extent on interactions with others. Mead called specific individuals that impacted a person’s life <term>significant others,</term> and he also conceptualized “<term>generalized others</term>” as the organized and generalized attitude of a social group. Mead’s work is closely associated with the symbolic interactionist approach and emphasizes the micro-level of analysis.</para> 
+</section>
+<section id="eip-id1169418601065">    <title>Max Weber (1864–1920) </title><para id="import-auto-id2916989">Prominent sociologist Max Weber established a sociology department in Germany at the Ludwig Maximilians University of Munich in 1919. Weber wrote on many topics related to sociology including political change in Russia and social forces that affect factory workers. He is known best for his 1904 book, <emphasis effect="italics">The Protestant Ethic and the Spirit of Capitalism</emphasis>. The theory that Weber sets forth in this book is still controversial. Some believe that Weber argued that the beliefs of many Protestants, especially Calvinists, led to the creation of capitalism. Others interpret it as simply claiming that the ideologies of capitalism and Protestantism are complementary.</para><para id="import-auto-id2281913">Weber believed that it was difficult, if not impossible, to use standard scientific methods to accurately predict the behavior of groups as people hoped to do. They argued that the influence of culture on human behavior had to be taken into account. This even applied to the researchers themselves, who, they believed, should be aware of how their own cultural biases could influence their research. To deal with this problem, Weber and Dilthey introduced the concept of <term id="import-auto-id1510093"><emphasis effect="italics">verstehen</emphasis></term>, a German word that means to understand in a deep way. In seeking verstehen, outside observers of a social world—an entire culture or a small setting—attempt to understand it from an insider’s point of view.</para><para id="import-auto-id2859898">In his book <emphasis effect="italics">The Nature of Social Action</emphasis> (1922), Weber described sociology as striving to "interpret the meaning of social action and thereby give a causal explanation of the way in which action proceeds and the effects it produces." He and other like-minded sociologists proposed a philosophy of <term id="import-auto-id1311983">antipositivism</term> whereby social researchers would strive for subjectivity as they worked to represent social processes, cultural norms, and societal values. This approach led to some research methods whose aim was not to generalize or predict (traditional in science), but to systematically gain an in-depth understanding of social worlds.</para>
+    <para id="import-auto-id1472366">The different approaches to research based on positivism or antipositivism are often considered the foundation for the differences found today between quantitative sociology and qualitative sociology. <term id="import-auto-id1663681">Quantitative sociology</term> uses statistical methods such as surveys with large numbers of participants. Researchers analyze data using statistical techniques to see if they can uncover patterns of human behavior. <term id="import-auto-id1588657">Qualitative sociology</term> seeks to understand human behavior by learning about it through in-depth interviews, focus groups, and analysis of content sources (like books, magazines, journals, and popular media).</para>
+</section>
+  <note id="fs-id1435922" class="sociology-policy-debate"><label/><title>Should We Raise the Minimum Wage?</title>
+    <para id="import-auto-id2351172">In the 2014 State of the Union Address, President Obama called on Congress to raise the national minimum wage, and he signed an executive order putting this into effect for individuals working on new federal service contracts. Congress did not pass legislation to change the national minimum wage more broadly. The result has become a national controversy, with various economists taking different sides on the issue, and public protests being staged by several groups of minimum-wage workers.
+</para>
+    <para id="import-auto-id1761085">Opponents of raising the minimum wage argue that some workers would get larger paychecks while others would lose their jobs, and companies would be less likely to hire new workers because of the increased cost of paying them (Bernstein 2014; cited in CNN).</para><para id="import-auto-id2268584">Proponents of raising the minimum wage contend that some job loss would be greatly offset by the positive effects on the economy of low-wage workers having more income (Hassett 2014; cited in CNN).</para>
+    <para id="import-auto-id889910">Sociologists may consider the minimum wage issue from differing perspectives as well. How much of an impact would a minimum wage raise have for a single mother? Some might study the economic effects, such as her ability to pay bills and keep food on the table. Others might look at how reduced economic stress could improve family relationships. Some sociologists might research the impact on the status of small business owners. These could all be examples of public sociology,  a branch of sociology that strives to bring sociological dialogue to public forums. The goals of public sociology are to increase understanding of the social factors that underlie social problems and assist in finding solutions. According to Michael Burawoy (2005), the challenge of public sociology is to engage multiple publics in multiple ways.</para></note></section><section id="fs-id1169033058196" class="section-summary" type="section-summary">
+    <title>Summary</title>
+    <para xmlns:m="http://www.w3.org/1998/Math/MathML" xmlns:q="http://cnx.rice.edu/qml/1.0" id="import-auto-id1390478">Sociology was developed as a way to study and try to understand the changes to society brought on by the Industrial Revolution in the eighteenth and nineteenth centuries. Some of the earliest sociologists thought that societies and individuals’ roles in society could be studied using the same scientific methodologies that were used in the natural sciences, while others believed that is was impossible to predict human behavior scientifically, and still others debated the value of such predictions. Those perspectives continue to be represented within sociology today.</para></section>
+
+    <section id="fs-id1466432" class="section-quiz" type="section-quiz">
+    <title>Section Quiz</title>
+    <exercise xmlns:m="http://www.w3.org/1998/Math/MathML" xmlns:q="http://cnx.rice.edu/qml/1.0" id="fs-id1169033060946" type="section-quiz"><problem id="fs-id1169033100420">
+    <para id="import-auto-id1387570">Which of the following was a topic of study in early sociology?</para>
+    <list id="fs-id1169033139839" list-type="enumerated" number-style="lower-alpha">
+    <item>Astrology</item>
+    <item>Economics</item>
+    <item>Physics</item>
+    <item>History</item>
+    </list>
+    </problem>
+    <solution id="eip-id2161600">
+      <label/><title>Answers</title>
+    <para id="eip-id1895361">B</para>
+    </solution>    </exercise><exercise xmlns:m="http://www.w3.org/1998/Math/MathML" xmlns:q="http://cnx.rice.edu/qml/1.0" id="fs-id1169033067407" type="section-quiz"><problem id="fs-id1169033055931">
+    <para id="import-auto-id1329310">Which founder of sociology believed societies changed due to class struggle?</para>
+    <list xmlns:data="http://www.w3.org/TR/html5/dom.html#custom-data-attribute" id="fs-id1169033100515" list-type="enumerated" number-style="lower-alpha"><item>Émile Comte</item>
+    <item>Karl Marx</item>
+    <item>Plato</item>
+    <item>Herbert Spencer</item>
+    </list></problem>
+    <solution id="eip-id2115084">
+      <label/><title>Answers</title>
+    <para id="eip-id1933774">B</para>
+    </solution>          </exercise><exercise xmlns:m="http://www.w3.org/1998/Math/MathML" xmlns:q="http://cnx.rice.edu/qml/1.0" id="fs-id1169033122620" type="section-quiz"><problem id="fs-id1169033122623">
+    <para id="import-auto-id2434862">The difference between positivism and antipositivism relates to:</para>
+    <list id="fs-id1169033067454" list-type="enumerated" number-style="lower-alpha">
+    <item>whether individuals like or dislike their society</item>
+    <item>whether research methods use statistical data or person-to-person research</item>
+    <item>whether sociological studies can predict or improve society</item>
+    <item>all of the above</item>
+    </list>
+      </problem>
+    <solution id="eip-id1169305409846">
+      <label/><title>Answers</title>
+    <para id="eip-id1169305409852">C</para>
+    </solution>        </exercise><exercise xmlns:m="http://www.w3.org/1998/Math/MathML" xmlns:q="http://cnx.rice.edu/qml/1.0" id="fs-id1169033106082" type="section-quiz"><problem id="fs-id1169033135239">
+    <para id="import-auto-id1625375">Which would a quantitative sociologists use to gather data?</para>
+    <list id="fs-id1169033055757" list-type="enumerated" number-style="lower-alpha">
+    <item>A large survey</item>
+    <item>A literature search</item>
+    <item>An in-depth interview</item>
+    <item>A review of television programs</item>
+    </list>
+    </problem>
+    <solution id="eip-id1169305452808">
+      <label/><title>Answers</title>
+    <para id="eip-id1169305452814">A</para>
+    </solution>          </exercise><exercise id="fs-id1169033139889" type="section-quiz"> 
+    <problem id="fs-id1169033139893">
+    <para id="import-auto-id2078629">Weber believed humans could not be studied purely objectively because they were influenced by:</para>
+    <list id="fs-id1169033070375" list-type="enumerated" number-style="lower-alpha">
+    <item>drugs</item>
+    <item>their culture</item>
+    <item>their genetic makeup</item>
+    <item>the researcher</item>
+    </list>
+    </problem>
+    <solution id="fs-id1169033201290">
+      <label/><title>Answers</title>
+    <para xmlns:m="http://www.w3.org/1998/Math/MathML" xmlns:q="http://cnx.rice.edu/qml/1.0" id="import-auto-id1625574">B</para></solution>
+      </exercise>
+    </section>
+
+    <section id="fs-id1169033100995" class="short-answer" type="short-answer">
+    <title>Short Answer</title>
+      <exercise id="fs-id1169033101000" type="short-answer"> 
+      <problem id="fs-id1169033065393">
+    <para id="import-auto-id2866120">What do you make of Karl Marx’s contributions to sociology? What perceptions of Marx have you been exposed to in your society, and how do those perceptions influence your views?</para>
+      </problem>
+        </exercise>
+       <exercise id="fs-id1169033100582" type="short-answer"> 
+      <problem id="fs-id1169033070594">
+    <para xmlns:m="http://www.w3.org/1998/Math/MathML" xmlns:q="http://cnx.rice.edu/qml/1.0" id="import-auto-id1461810">Do you tend to place more value on qualitative or quantitative research? Why? Does it matter what topic you are studying?</para></problem>
+         </exercise>
+    </section>
+    <section id="fs-id1169033109922" class="further-research" type="further-research">
+    <title>Further Research</title>
+    <para xmlns:m="http://www.w3.org/1998/Math/MathML" xmlns:q="http://cnx.rice.edu/qml/1.0" xmlns:data="http://www.w3.org/TR/html5/dom.html#custom-data-attribute" id="import-auto-id1773704">Many sociologists helped shape the discipline. To learn more about prominent sociologists and how they changed sociology check out <link url="http://www.macionis.com/gallery-of-sociologists/ferdinand-toennies/">http://www.macionis.com/gallery-of-sociologists/ferdinand-toennies/</link>.</para></section>
+  <section id="fs-id1169033184258" class="references" type="references">
+    <title>References</title>
+    <para id="import-auto-id2106568">Abercrombie, Nicholas, Stephen Hill, and Bryan S. Turner. 2000. <emphasis effect="italics">The Penguin Dictionary of Sociology</emphasis>. London: Penguin.</para>
+    <para xmlns:m="http://www.w3.org/1998/Math/MathML" xmlns:q="http://cnx.rice.edu/qml/1.0" id="eip-1000">Buroway, Michael. 2005. "2004 Presidential Address: For Public Sociology." <emphasis effect="italics">American Sociological Review</emphasis> 70 (February): 4–28. Retrieved December 30, 2014 (http://burawoy.berkeley.edu/Public%20Sociology,%20Live/Burawoy.pdf).</para><para xmlns:m="http://www.w3.org/1998/Math/MathML" xmlns:q="http://cnx.rice.edu/qml/1.0" id="eip-21">Cable Network News (CNN). 2014. "Should the minimum wage be raised?" CNN Money. Retrieved December 30, 2014 (http://money.cnn.com/infographic/pf/low-wage-worker/). 
+</para><para xmlns:m="http://www.w3.org/1998/Math/MathML" xmlns:q="http://cnx.rice.edu/qml/1.0" id="eip-421">Cronk, George. n.d. “George Herbert Mead.” <emphasis effect="italics">Internet Encyclopedia of Philosophy: A Peer-Reviewed Academic Resource</emphasis>. Retrieved October 14, 2014 (http://www.iep.utm.edu/mead/). 
+</para><para xmlns:m="http://www.w3.org/1998/Math/MathML" xmlns:q="http://cnx.rice.edu/qml/1.0" id="import-auto-id2653759">Durkheim, Émile. 1964 [1895]. <emphasis effect="italics">The Rules of Sociological Method</emphasis>, edited by J. Mueller, E. George and E. Caitlin. 8th ed. Translated by S. Solovay. New York: Free Press.</para><para xmlns:m="http://www.w3.org/1998/Math/MathML" xmlns:q="http://cnx.rice.edu/qml/1.0" id="import-auto-id1449324">Fauré, Christine, Jacques Guilhaumou, Jacques Vallier, and Françoise Weil. 2007 [1999]. <emphasis effect="italics">Des Manuscrits de Sieyès, 1773–1799</emphasis>, Volumes I and II. Paris: Champion.</para><para id="import-auto-id2742700">Hannoum, Abdelmajid. 2003. <emphasis effect="italics">Translation and the Colonial Imaginary: Ibn Khaldun Orientalist</emphasis>. Middletown, CT: Wesleyan University. Retrieved January 19, 2012 (<link url="http://www.jstor.org/pss/3590803">http://www.jstor.org/pss/3590803</link>).</para>
+    <para xmlns:m="http://www.w3.org/1998/Math/MathML" xmlns:q="http://cnx.rice.edu/qml/1.0" id="eip-613">Hill, Michael. 1991. “Harriet Martineau.”  <emphasis effect="italics">Women in Sociology: A Bio-Bibliographic Sourcebook</emphasis>, edited by Mary Jo Deegan. New York: Greenwood Press.</para><para xmlns:m="http://www.w3.org/1998/Math/MathML" xmlns:q="http://cnx.rice.edu/qml/1.0" id="eip-916">Johnson, Bethany. 2003. “Harriet Martineau: Theories and Contributions to Sociology.” <emphasis effect="italics">Education Portal</emphasis>. Retrieved October 14, 2014 (http://education-portal.com/academy/lesson/harriet-martineau-theories-and-contributions-to-sociology.html#lesson). </para><para id="import-auto-id2101032">Poggi, Gianfranco. 2000. <emphasis effect="italics">Durkheim</emphasis>. Oxford, United Kingdom: Oxford University Press.</para>
+    <para xmlns:m="http://www.w3.org/1998/Math/MathML" xmlns:q="http://cnx.rice.edu/qml/1.0" id="eip-3">Ritzer, George, and Goodman, Douglas. 2004. <emphasis effect="italics">Sociological Theory, 6th Edition</emphasis>. New York: McGraw Hill Education. </para><para xmlns:m="http://www.w3.org/1998/Math/MathML" xmlns:q="http://cnx.rice.edu/qml/1.0" id="eip-95">Stapley, Pierre. 2010. “Georg Simmel.” Cardiff University School of Social Sciences. Retrieved October 21, 2014 (http://www.cf.ac.uk/socsi/undergraduate/introsoc/simmel.html).</para><para id="import-auto-id1673284">U.S. Congress Joint Economic Committee. 2010. <emphasis effect="italics">Women and the Economy, 2010: 25 Years of Progress But Challenges Remain</emphasis>. August. Washington, DC: Congressional Printing Office. Retrieved January 19, 2012 (<link url="http://jec.senate.gov/public/?a=Files.Serve&amp;File_id=8be22cb0-8ed0-4a1a-841b-aa91dc55fa81">http://jec.senate.gov/public/?a=Files.Serve&amp;File_id=8be22cb0-8ed0-4a1a-841b-aa91dc55fa81</link>).</para>
+  </section>
+
+</content>
+      <glossary>
+    <definition id="import-auto-id1383216"><term>antipositivism</term> <meaning id="fs-id1169033063495">the view that social researchers should strive for subjectivity as they worked to represent social processes, cultural norms, and societal values</meaning></definition>
+<definition id="fs-id1169568155294"><term>generalized others</term><meaning id="fs-id1169584333746">the organized and generalized attitude of a social group</meaning></definition>
+    <definition id="import-auto-id2110123"><term>positivism</term><meaning id="fs-id1169033103199">the scientific study of social patterns</meaning></definition>
+    <definition id="import-auto-id1361826"><term>qualitative sociology</term><meaning id="fs-id2483726">in-depth interviews, focus groups, and/or analysis of content sources as the source of its data</meaning></definition>
+    <definition id="fs-id2648958"><term>quantitative sociology</term><meaning id="fs-id1169033060465">statistical methods such as surveys with large numbers of participants</meaning></definition>
+<definition id="fs-id1166175011306"><term>significant others</term><meaning id="fs-id1166168628826">specific individuals that impact a person's life</meaning></definition>
+    <definition id="import-auto-id1205323"><term>verstehen</term> <meaning id="fs-id1169033069059">a German word that means to understand in a deep way</meaning></definition>
+    </glossary>
+</document>

@@ -1,0 +1,263 @@
+<?xml version="1.0"?>
+<document xmlns="http://cnx.rice.edu/cnxml" xmlns:md="http://cnx.rice.edu/mdml" id="imported-from-openoffice" module-id="imported-from-openoffice" cnxml-version="0.7">
+  <title>Types of Groups</title>
+<metadata xmlns:md="http://cnx.rice.edu/mdml"
+          mdml-version="0.5">
+  <!-- WARNING! The 'metadata' section is read only. Do not edit below.
+       Changes to the metadata section in the source will not be saved. -->
+  <md:repository>http://legacy.cnx.org/content</md:repository>
+  <md:content-url>http://legacy.cnx.org/content/m52833/latest</md:content-url>
+  <md:content-id>m52833</md:content-id>
+  <md:title>Types of Groups</md:title>
+  <md:version>1.4</md:version>
+  <md:created>2015/01/20 13:30:32 -0600</md:created>
+  <md:revised>2018/03/07 16:17:05 -0600</md:revised>
+  <md:actors>
+    <md:person userid="OSCRiceUniversity">
+      <md:firstname>Rice</md:firstname>
+      <md:surname>University</md:surname>
+      <md:fullname>Rice University</md:fullname>
+      <md:email>info@openstaxcollege.org</md:email>
+    </md:person>
+    <md:organization userid="OpenStaxCollege">
+      <md:shortname>OpenStax</md:shortname>
+      <md:fullname>OpenStax</md:fullname>
+      <md:email>info@openstax.org</md:email>
+    </md:organization>
+    <md:person userid="cnxsoc2">
+      <md:firstname>Openstax College</md:firstname>
+      <md:surname>Sociology 2e</md:surname>
+      <md:fullname>Openstax Sociology 2e</md:fullname>
+      <md:email>info@openstaxcollege.org</md:email>
+    </md:person>
+  </md:actors>
+  <md:roles>
+    <md:role type="author">OpenStaxCollege</md:role>
+    <md:role type="maintainer">OpenStaxCollege cnxsoc2</md:role>
+    <md:role type="licensor">OSCRiceUniversity</md:role>
+  </md:roles>
+  <md:license url="http://creativecommons.org/licenses/by/4.0/">Creative Commons Attribution License 4.0</md:license>
+  <!-- For information on license requirements for use or modification, see license url in the
+       above <md:license> element.
+       For information on formatting required attribution, see the URL:
+         CONTENT_URL/content_info#cnx_cite_header
+       where CONTENT_URL is the value provided above in the <md:content-url> element.
+  -->
+  <md:derived-from url="http://legacy.cnx.org/content/m42831/1.5">
+  <md:repository>http://legacy.cnx.org/content</md:repository>
+  <md:content-url>http://legacy.cnx.org/content/m42831/1.5</md:content-url>
+  <md:content-id>m42831</md:content-id>
+  <md:title>Types of Groups</md:title>
+  <md:version>1.5</md:version>
+  <md:created>2012/01/27 16:09:50 -0600</md:created>
+  <md:revised>2013/07/29 16:54:49 -0500</md:revised>
+  <md:actors>
+    <md:organization userid="OpenStaxCollege">
+      <md:shortname>OpenStax</md:shortname>
+      <md:fullname>OpenStax</md:fullname>
+      <md:email>info@openstax.org</md:email>
+    </md:organization>
+    <md:person userid="OSCRiceUniversity">
+      <md:firstname>Rice</md:firstname>
+      <md:surname>University</md:surname>
+      <md:fullname>Rice University</md:fullname>
+      <md:email>info@openstaxcollege.org</md:email>
+    </md:person>
+    <md:person userid="soccap">
+      <md:firstname>Sociology</md:firstname>
+      <md:surname>Cap</md:surname>
+      <md:fullname>OpenStax Sociology 1e</md:fullname>
+      <md:email>dcwill@rice.edu</md:email>
+    </md:person>
+  </md:actors>
+  <md:roles>
+    <md:role type="author">OpenStaxCollege</md:role>
+    <md:role type="maintainer">OpenStaxCollege soccap</md:role>
+    <md:role type="licensor">OSCRiceUniversity</md:role>
+  </md:roles>
+  <md:license url="http://creativecommons.org/licenses/by/3.0/" />
+  <!-- For information on license requirements for use or modification, see license url in the
+       above <md:license> element.
+       For information on formatting required attribution, see the URL:
+         CONTENT_URL/content_info#cnx_cite_header
+       where CONTENT_URL is the value provided above in the <md:content-url> element.
+  -->
+  </md:derived-from>
+  <md:keywordlist>
+    <md:keyword>Aggregate</md:keyword>
+    <md:keyword>Category</md:keyword>
+    <md:keyword>Expressive function</md:keyword>
+    <md:keyword>Group</md:keyword>
+    <md:keyword>In-group Instrumental function</md:keyword>
+    <md:keyword>Out-group</md:keyword>
+    <md:keyword>Reference groups</md:keyword>
+    <md:keyword>Secondary groups</md:keyword>
+  </md:keywordlist>
+  <md:subjectlist>
+    <md:subject>Social Sciences</md:subject>
+  </md:subjectlist>
+  <md:abstract><list>
+<item>Understand primary and secondary groups as the two sociological groups</item>
+<item>Recognize in-groups and out-groups as subtypes of primary and secondary groups</item>
+<item>Define reference groups</item></list></md:abstract>
+  <md:language>en</md:language>
+  <!-- WARNING! The 'metadata' section is read only. Do not edit above.
+       Changes to the metadata section in the source will not be saved. -->
+</metadata>
+
+<content>
+    <para xmlns:m="http://www.w3.org/1998/Math/MathML" xmlns:q="http://cnx.rice.edu/qml/1.0" id="import-auto-id3228330">Most of us feel comfortable using the word “group” without giving it much thought. In everyday use, it can be a generic term, although it carries important clinical and scientific meanings. Moreover, the concept of a group is central to much of how we think about society and human interaction. Often, we might mean different things by using that word. We might say that a group of kids all saw the dog, and it could mean 250 students in a lecture hall or four siblings playing on a front lawn. In everyday conversation, there isn’t a clear distinguishing use. So how can we hone the meaning more precisely for sociological purposes?</para><section id="fs-id2835017">
+    <title>Defining a Group</title>
+    <para xmlns:m="http://www.w3.org/1998/Math/MathML" xmlns:q="http://cnx.rice.edu/qml/1.0" id="import-auto-id2854136">The term <term id="import-auto-id1855855">group</term> is an amorphous one and can refer to a wide variety of gatherings, from just two people (think about a “group project” in school when you partner with another student), a club, a regular gathering of friends, or people who work together or share a hobby. In short, the term refers to any collection of at least two people who interact with some frequency and who share a sense that their identity is somehow aligned with the group. Of course, every time people are gathered it is not necessarily a group. A rally is usually a one-time event, for instance, and belonging to a political party doesn’t imply interaction with others. People who exist in the same place at the same time but who do not interact or share a sense of identity—such as a bunch of people standing in line at Starbucks—are considered an <term id="import-auto-id1164824">aggregate</term>, or a crowd. Another example of a nongroup is people who share similar characteristics but are not tied to one another in any way. These people are considered a <term id="import-auto-id2836177">category</term>, and as an example all children born from approximately 1980–2000 are referred to as “Millennials.” Why are Millennials a category and not a group? Because while some of them may share a sense of identity, they do not, as a whole, interact frequently with each other.</para><para id="import-auto-id1353991">Interestingly, people within an aggregate or category can become a group. During disasters, people in a neighborhood (an aggregate) who did not know each other might become friendly and depend on each other at the local shelter. After the disaster ends and the people go back to simply living near each other, the feeling of cohesiveness may last since they have all shared an experience. They might remain a group, practicing emergency readiness, coordinating supplies for next time, or taking turns caring for neighbors who need extra help. Similarly, there may be many groups within a single category. Consider teachers, for example. Within this category, groups may exist like teachers’ unions, teachers who coach, or staff members who are involved with the PTA.</para>
+</section>
+<section xmlns:m="http://www.w3.org/1998/Math/MathML" xmlns:q="http://cnx.rice.edu/qml/1.0" id="fs-id2639486"><title>Types of Groups</title><para id="import-auto-id3083699">Sociologist Charles Horton Cooley (1864–1929) suggested that groups can broadly be divided into two categories: <term id="import-auto-id2715953">primary groups</term> and <term id="import-auto-id1556482">secondary groups</term> (Cooley 1909). According to Cooley, primary groups play the most critical role in our lives. The primary group is usually fairly small and is made up of individuals who generally engage face-to-face in long-term emotional ways. This group serves emotional needs: <term id="import-auto-id2881219">expressive functions</term> rather than pragmatic ones. The primary group is usually made up of significant others, those individuals who have the most impact on our socialization. The best example of a primary group is the family.</para><para id="import-auto-id1483196">Secondary groups are often larger and impersonal. They may also be task-focused and time-limited. These groups serve an <term id="import-auto-id3227066">instrumental function</term> rather than an expressive one, meaning that their role is more goal- or task-oriented than emotional. A classroom or office can be an example of a secondary group. Neither primary nor secondary groups are bound by strict definitions or set limits. In fact, people can move from one group to another. A graduate seminar, for example, can start as a secondary group focused on the class at hand, but as the students work together throughout their program, they may find common interests and strong ties that transform them into a primary group.</para>
+    <note id="fs-id2811457" class="sociology-real-world"><label/><title>Best Friends She’s Never Met</title>
+    <para id="import-auto-id1816570">Writer Allison Levy worked alone. While she liked the freedom and flexibility of working from home, she sometimes missed having a community of coworkers, both for the practical purpose of brainstorming and the more social “water cooler” aspect. Levy did what many do in the Internet age: she found a group of other writers online through a web forum. Over time, a group of approximately twenty writers, who all wrote for a similar audience, broke off from the larger forum and started a private invitation-only forum. While writers in general represent all genders, ages, and interests, it ended up being a collection of twenty- and thirty-something women who comprised the new forum; they all wrote fiction for children and young adults.</para><para id="import-auto-id1346172">At first, the writers’ forum was clearly a secondary group united by the members’ professions and work situations. As Levy explained, “On the Internet, you can be present or absent as often as you want. No one is expecting you to show up.” It was a useful place to research information about different publishers and about who had recently sold what and to track industry trends. But as time passed, Levy found it served a different purpose. Since the group shared other characteristics beyond their writing (such as age and gender), the online conversation naturally turned to matters such as child-rearing, aging parents, health, and exercise. Levy found it was a sympathetic place to talk about any number of subjects, not just writing. Further, when people didn’t post for several days, others expressed concern, asking whether anyone had heard from the missing writers. It reached a point where most members would tell the group if they were traveling or needed to be offline for awhile.</para><para id="import-auto-id2229374">The group continued to share. One member on the site who was going through a difficult family illness wrote, “I don’t know where I’d be without you women. It is so great to have a place to vent that I know isn’t hurting anyone.” Others shared similar sentiments.</para>
+    <para id="import-auto-id1882747">So is this a primary group? Most of these people have never met each other. They live in Hawaii, Australia, Minnesota, and across the world. They may never meet. Levy wrote recently to the group, saying, “Most of my ‘real-life’ friends and even my husband don’t really get the writing thing. I don’t know what I’d do without you.” Despite the distance and the lack of physical contact, the group clearly fills an expressive need.</para>
+    </note>
+    <figure id="import-auto-id1141409"><media id="import-auto-id2799444" alt="Students wearing bright orange and yellow construction vests are shown standing around an outdoor job site.">
+        <image mime-type="image/jpg" src="Figure_06_01_04.jpg" width="275"/>
+      </media>
+      
+    <caption>Engineering and construction students gather around a job site. How do your academic interests define your in- and out-groups? (Photo courtesy of USACEpublicaffairs/flickr)</caption></figure></section><section id="fs-id2625270">
+    <title>In-Groups and Out-Groups</title>
+    <para xmlns:m="http://www.w3.org/1998/Math/MathML" xmlns:q="http://cnx.rice.edu/qml/1.0" id="import-auto-id1529366">One of the ways that groups can be powerful is through inclusion, and its inverse, exclusion. The feeling that we belong in an elite or select group is a heady one, while the feeling of not being allowed in, or of being in competition with a group, can be motivating in a different way. Sociologist William Sumner (1840–1910) developed the concepts of <term id="import-auto-id1720683">in-group</term> and <term id="import-auto-id3094168">out-group</term> to explain this phenomenon (Sumner 1906). In short, an in-group is the group that an individual feels she belongs to, and she believes it to be an integral part of who she is. An out-group, conversely, is a group someone doesn’t belong to; often we may feel disdain or competition in relationship to an out-group. Sports teams, unions, and sororities are examples of in-groups and out-groups; people may belong to, or be an outsider to, any of these. Primary groups consist of both in-groups and out-groups, as do secondary groups.</para><para xmlns:m="http://www.w3.org/1998/Math/MathML" xmlns:q="http://cnx.rice.edu/qml/1.0" id="import-auto-id3490432">While group affiliations can be neutral or even positive, such as the case of a team sport competition, the concept of in-groups and out-groups can also explain some negative human behavior, such as white supremacist movements like the Ku Klux Klan, or the bullying of gay or lesbian students. By defining others as “not like us” and inferior, in-groups can end up practicing ethnocentrism, racism, sexism, ageism, and heterosexism—manners of judging others negatively based on their culture, race, sex, age, or sexuality. Often, in-groups can form within a secondary group. For instance, a workplace can have cliques of people, from senior executives who play golf together, to engineers who write code together, to young singles who socialize after hours. While these in-groups might show favoritism and affinity for other in-group members, the overall organization may be unable or unwilling to acknowledge it. Therefore, it pays to be wary of the politics of in-groups, since members may exclude others as a form of gaining status within the group.</para><note id="fs-id1484863" class="sociology-big-picture"><label/><title>Bullying and Cyberbullying: How Technology Has Changed the Game</title>
+    <para xmlns:m="http://www.w3.org/1998/Math/MathML" xmlns:q="http://cnx.rice.edu/qml/1.0" id="import-auto-id2625249">Most of us know that the old rhyme “sticks and stones may break my bones, but words will never hurt me” is inaccurate. Words can hurt, and never is that more apparent than in instances of bullying. Bullying has always existed and has often reached extreme levels of cruelty in children and young adults. People at these stages of life are especially vulnerable to others’ opinions of them, and they’re deeply invested in their peer groups. Today, technology has ushered in a new era of this dynamic. Cyberbullying is the use of interactive media by one person to torment another, and it is on the rise. Cyberbullying can mean sending threatening texts, harassing someone in a public forum (such as Facebook), hacking someone’s account and pretending to be him or her, posting embarrassing images online, and so on. A study by the Cyberbullying Research Center found that 20 percent of middle school students admitted to “seriously thinking about committing suicide” as a result of online bullying (Hinduja and Patchin 2010). Whereas bullying face-to-face requires willingness to interact with your victim, cyberbullying allows bullies to harass others from the privacy of their homes without witnessing the damage firsthand. This form of bullying is particularly dangerous because it’s widely accessible and therefore easier to accomplish.</para><para xmlns:m="http://www.w3.org/1998/Math/MathML" xmlns:q="http://cnx.rice.edu/qml/1.0" id="import-auto-id3198492">Cyberbullying, and bullying in general, made international headlines in 2010 when a fifteen-year-old girl, Phoebe Prince, in South Hadley, Massachusetts, committed suicide after being relentlessly bullied by girls at her school. In the aftermath of her death, the bullies were prosecuted in the legal system and the state passed anti-bullying legislation. This marked a significant change in how bullying, including cyberbullying, is viewed in the United States. Now there are numerous resources for schools, families, and communities to provide education and prevention on this issue. The White House hosted a Bullying Prevention summit in March 2011, and President and First Lady Obama have used Facebook and other social media sites to discuss the importance of the issue.</para><para xmlns:m="http://www.w3.org/1998/Math/MathML" xmlns:q="http://cnx.rice.edu/qml/1.0" id="eip-255">According to a report released in 2013 by the National Center for Educational Statistics, close to 1 in every 3 (27.8 percent) students report being bullied by their school peers. Seventeen percent of students reported being the victims of cyberbullying.</para><para xmlns:m="http://www.w3.org/1998/Math/MathML" xmlns:q="http://cnx.rice.edu/qml/1.0" id="import-auto-id2258446">Will legislation change the behavior of would-be cyberbullies? That remains to be seen. But we can hope communities will work to protect victims before they feel they must resort to extreme measures.</para></note>
+</section>
+<section id="fs-id3148470">
+    <title>Reference Groups</title>
+    
+    <figure xmlns:m="http://www.w3.org/1998/Math/MathML" xmlns:q="http://cnx.rice.edu/qml/1.0" id="import-auto-id3118448"><media id="import-auto-id2717916" alt="This is a picture of the U.S. Naval Academy's football team in their locker room.">
+        <image mime-type="image/jpg" src="Figure_06_01_02.jpg.jpg" width="350"/>
+      </media>
+    <caption>Athletes are often viewed as a reference group for young people. (Photo courtesy of Johnny Bivera/U.S. Navy/Wikimedia Commons)</caption></figure><para xmlns:m="http://www.w3.org/1998/Math/MathML" xmlns:q="http://cnx.rice.edu/qml/1.0" id="import-auto-id1389137">A <term id="import-auto-id2784003">reference group</term> is a group that people compare themselves to—it provides a standard of measurement. In U.S. society, peer groups are common reference groups. Kids and adults pay attention to what their peers wear, what music they like, what they do with their free time—and they compare themselves to what they see. Most people have more than one reference group, so a middle school boy might look not just at his classmates but also at his older brother’s friends and see a different set of norms. And he might observe the antics of his favorite athletes for yet another set of behaviors.</para><para xmlns:m="http://www.w3.org/1998/Math/MathML" xmlns:q="http://cnx.rice.edu/qml/1.0" id="import-auto-id3094292">Some other examples of reference groups can be one’s cultural center, workplace, family gathering, and even parents. Often, reference groups convey competing messages. For instance, on television and in movies, young adults often have wonderful apartments and cars and lively social lives despite not holding a job. In music videos, young women might dance and sing in a sexually aggressive way that suggests experience beyond their years. At all ages, we use reference groups to help guide our behavior and show us social norms. So how important is it to surround yourself with positive reference groups? You may not recognize a reference group, but it still influences the way you act. Identifying your reference groups can help you understand the source of the social identities you aspire to or want to distance yourself from.</para><note id="fs-id1545918" class="sociology-real-world"><label/><title>College: A World of In-Groups, Out-Groups, and Reference Groups</title>
+    
+    <figure xmlns:m="http://www.w3.org/1998/Math/MathML" xmlns:q="http://cnx.rice.edu/qml/1.0" id="import-auto-id2971380"><media id="import-auto-id1506772" alt="About a dozen young females are shown sitting in chairs at a sorority recruitment on campus.">
+        <image mime-type="image/jpg" src="Figure_06_01_03.jpg" width="275"/>
+      </media>
+      
+    <caption>Which fraternity or sorority would you fit into, if any? Sorority recruitment day offers students an opportunity to learn about these different groups. (Photo courtesy of Murray State/flickr)</caption></figure><para xmlns:m="http://www.w3.org/1998/Math/MathML" xmlns:q="http://cnx.rice.edu/qml/1.0" id="import-auto-id2815094">For a student entering college, the sociological study of groups takes on an immediate and practical meaning. After all, when we arrive someplace new, most of us glance around to see how well we fit in or stand out in the ways we want. This is a natural response to a reference group, and on a large campus, there can be many competing groups. Say you are a strong athlete who wants to play intramural sports, and your favorite musicians are a local punk band. You may find yourself engaged with two very different reference groups.</para><para xmlns:m="http://www.w3.org/1998/Math/MathML" xmlns:q="http://cnx.rice.edu/qml/1.0" id="import-auto-id2257117">These reference groups can also become your in-groups or out-groups. For instance, different groups on campus might solicit you to join. Are there fraternities and sororities at your school? If so, chances are they will try to convince students—that is, students they deem worthy—to join them. And if you love playing soccer and want to play on a campus team, but you’re wearing shredded jeans, combat boots, and a local band T-shirt, you might have a hard time convincing the soccer team to give you a chance. While most campus groups refrain from insulting competing groups, there is a definite sense of an in-group versus an out-group. “Them?” a member might say. “They’re all right, but their parties are nowhere near as cool as ours.” Or, “Only serious engineering geeks join that group.” This immediate categorization into in-groups and out-groups means that students must choose carefully, since whatever group they associate with won’t just define their friends—it may also define their enemies.</para></note>
+</section>
+
+<section xmlns:m="http://www.w3.org/1998/Math/MathML" xmlns:q="http://cnx.rice.edu/qml/1.0" id="fs-id2417719" class="section-summary" type="section-summary"><title>Summary</title><para id="import-auto-id1515691">Groups largely define how we think of ourselves. There are two main types of groups: primary and secondary. As the names suggest, the primary group is the long-term, complex one. People use groups as standards of comparison to define themselves—both who they are and who they are not. Sometimes groups can be used to exclude people or as a tool that strengthens prejudice.</para>
+</section><section xmlns:m="http://www.w3.org/1998/Math/MathML" xmlns:q="http://cnx.rice.edu/qml/1.0" id="fs-id2006474" class="section-quiz" type="section-quiz"><title>Section Quiz</title><exercise xmlns:data="http://www.w3.org/TR/html5/dom.html#custom-data-attribute" id="fs-id2669315" type="section-quiz"><problem id="fs-id1506801">
+    <para id="import-auto-id2780637">What does a Functionalist consider when studying a phenomenon like the Occupy Wall Street movement?</para>
+     <list id="fs-id1459875" list-type="enumerated" number-style="lower-alpha"><item>The minute functions that every person at the protests plays in the whole</item>
+    <item>The internal conflicts that play out within such a diverse and leaderless group</item>
+    <item>How the movement contributes to the stability of society by offering the discontented a safe, controlled outlet for dissension</item>
+    <item>The factions and divisions that form within the movement</item>
+     </list>
+    </problem>
+    <solution id="eip-idm387783856">   
+<label/><title>Answer</title>
+    <para id="eip-idm465270640">C</para>
+</solution></exercise><exercise xmlns:data="http://www.w3.org/TR/html5/dom.html#custom-data-attribute" id="fs-id2717916" type="section-quiz"><problem id="fs-id2931729">
+    <para id="import-auto-id3474006">What is the largest difference between the Functionalist and Conflict perspectives and the Interactionist perspective?</para>
+     <list id="fs-id1068845" list-type="enumerated" number-style="lower-alpha"><item>The former two consider long-term repercussions of the group or situation, while the latter focuses on the present.</item>
+    <item>The first two are the more common sociological perspective, while the latter is a newer sociological model.</item>
+    <item>The first two focus on hierarchical roles within an organization, while the last takes a more holistic view.</item>
+    <item>The first two perspectives address large-scale issues facing groups, while the last examines more detailed aspects.</item>
+     </list></problem>
+    <solution id="eip-idm384987952">   
+<label/><title>Answer</title>
+    <para id="eip-idm309447120">D</para>
+</solution></exercise><exercise xmlns:data="http://www.w3.org/TR/html5/dom.html#custom-data-attribute" id="fs-id875536" type="section-quiz"><problem id="fs-id1118819">
+    <para id="import-auto-id3137945">What role do secondary groups play in society?</para>
+     <list id="fs-id2031576" list-type="enumerated" number-style="lower-alpha"><item>They are transactional, task-based, and short-term, filling practical needs.</item>
+    <item>They provide a social network that allows people to compare themselves to others.</item>
+    <item>The members give and receive emotional support.</item>
+    <item>They allow individuals to challenge their beliefs and prejudices.</item>
+     </list>
+    </problem>
+    <solution id="eip-idm1651936864">   
+<label/><title>Answer</title>
+    <para id="eip-idm327811808">A</para>
+</solution></exercise><exercise xmlns:data="http://www.w3.org/TR/html5/dom.html#custom-data-attribute" id="fs-id2229374" type="section-quiz"><problem id="fs-id2673006">
+    <para id="import-auto-id1509892">When a high school student gets teased by her basketball team for receiving an academic award, she is dealing with competing ______________.</para>
+     <list id="fs-id2764955" list-type="enumerated" number-style="lower-alpha"><item>primary groups</item>
+    <item>out-groups</item>
+    <item>reference groups</item>
+    <item>secondary groups</item>
+     </list>
+    </problem>
+    <solution id="eip-idm1366876224">   
+<label/><title>Answer</title>
+    <para id="eip-idm1262101584">C</para>
+</solution></exercise><exercise xmlns:data="http://www.w3.org/TR/html5/dom.html#custom-data-attribute" id="fs-id2862296" type="section-quiz"><problem id="fs-id2941182">
+    <para id="import-auto-id2702843">Which of the following is <emphasis effect="italics">not</emphasis> an example of an in-group?</para><list id="fs-id1476816" list-type="enumerated" number-style="lower-alpha"><item>The Ku Klux Klan</item>
+    <item>A fraternity</item>
+    <item>A synagogue</item>
+    <item>A high school</item>
+     </list>
+    </problem>
+    
+<solution id="eip-idm325648944">   
+<label/><title>Answer</title>
+    <para id="eip-idm1380934752">D</para>
+</solution></exercise><exercise xmlns:data="http://www.w3.org/TR/html5/dom.html#custom-data-attribute" id="fs-id972166" type="section-quiz"><problem id="fs-id2662140">
+        <para id="import-auto-id2005988">What is a group whose values, norms, and beliefs come to serve as a standard for one's own behavior?</para>
+     <list id="fs-id2841370" list-type="enumerated" number-style="lower-alpha"><item>Secondary group</item>
+    <item>Formal organization</item>
+    <item>Reference group</item>
+    <item>Primary group</item>
+    </list>
+    </problem>
+
+<solution id="eip-idm751197392">   
+<label/><title>Answer</title>
+    <para id="eip-idm393304448">C</para>
+</solution></exercise><exercise xmlns:data="http://www.w3.org/TR/html5/dom.html#custom-data-attribute" id="fs-id2304744" type="section-quiz"><problem id="fs-id3037558">
+    <para id="import-auto-id2841961">A parent who is worrying over her teenager’s dangerous and self-destructive behavior and low self-esteem may wish to look at her child’s:</para><list id="fs-id2756550" list-type="enumerated" number-style="lower-alpha"><item>reference group</item>
+    <item>in-group</item>
+    <item>out-group</item>
+    <item>All of the above</item>
+    </list>
+</problem>
+
+<solution id="eip-idm1504768000">   
+<label/><title>Answer</title>
+    <para id="eip-idm1244166880">D</para>
+</solution></exercise></section><section id="fs-id1335579" class="short-answer" type="short-answer"><title>Short Answer</title><exercise id="eip-id1417918" type="short-answer">
+<problem id="eip-id1723031">
+    <para xmlns:m="http://www.w3.org/1998/Math/MathML" xmlns:q="http://cnx.rice.edu/qml/1.0" id="import-auto-id1725669">How has technology changed your primary groups and secondary groups? Do you have more (and separate) primary groups due to online connectivity? Do you believe that someone, like Levy, can have a true primary group made up of people she has never met? Why, or why not?</para></problem></exercise>
+
+<exercise id="eip-id1389621" type="short-answer">
+<problem id="eip-id3125630">
+    <para xmlns:m="http://www.w3.org/1998/Math/MathML" xmlns:q="http://cnx.rice.edu/qml/1.0" id="import-auto-id1679165">Compare and contrast two different political groups or organizations, such as the Occupy and Tea Party movements, or one of the Arab Spring uprisings. How do the groups differ in terms of leadership, membership, and activities? How do the group’s goals influence participants? Are any of them in-groups (and have they created out-groups)? Explain your answer.</para></problem></exercise>
+
+<exercise id="eip-id1332502" type="short-answer">
+<problem id="eip-id2931946">
+    <para id="import-auto-id2353852">The concept of hate crimes has been linked to in-groups and out-groups. Can you think of an example where people have been excluded or tormented due to this kind of group dynamic?</para>
+</problem></exercise>
+</section>
+
+<section id="fs-id2808777" class="further-research" type="further-research">
+    <title>Further Research</title>
+    <para xmlns:m="http://www.w3.org/1998/Math/MathML" xmlns:q="http://cnx.rice.edu/qml/1.0" id="import-auto-id2701960">For more information about cyberbullying causes and statistics, check out this website: <link url="http://openstaxcollege.org/l/Cyberbullying">http://openstaxcollege.org/l/Cyberbullying</link></para></section>
+
+<section id="fs-id2875820" class="references" type="references"><title>References</title>
+<para xmlns:m="http://www.w3.org/1998/Math/MathML" xmlns:q="http://cnx.rice.edu/qml/1.0" id="eip-3">Cooley, Charles Horton.1963 [1909]. <emphasis effect="italics">Social Organizations: A Study of the Larger Mind</emphasis>. New York: Shocken.
+</para><para xmlns:m="http://www.w3.org/1998/Math/MathML" xmlns:q="http://cnx.rice.edu/qml/1.0" id="eip-572">Cyberbullying Research Center. n.d. Retrieved November 30, 2011 (<link url="http://www.cyberbullying.us">http://www.cyberbullying.us</link>).
+</para><para xmlns:m="http://www.w3.org/1998/Math/MathML" xmlns:q="http://cnx.rice.edu/qml/1.0" id="eip-87">Hinduja, Sameer, and Justin W. Patchin.2010. “Bullying, Cyberbullying, and Suicide.”<emphasis effect="italics">Archives of Suicide Research</emphasis> 14(3): 206–221.
+</para><para xmlns:m="http://www.w3.org/1998/Math/MathML" xmlns:q="http://cnx.rice.edu/qml/1.0" id="eip-882">Khandaroo, Stacy T. 2010. “Phoebe Prince Case a ‘Watershed’ in Fight Against School Bullying.” <emphasis effect="italics">Christian Science Monitor</emphasis>, April 1. Retrieved February 10, 2012 (<link url="http://www.csmonitor.com/USA/Education/2010/0401/Phoebe-Prince-case-a-watershed-in-fight-against-school-bullying">http://www.csmonitor.com/USA/Education/2010/0401/Phoebe-Prince-case-a-watershed-in-fight-against-school-bullying</link>).
+</para><para xmlns:m="http://www.w3.org/1998/Math/MathML" xmlns:q="http://cnx.rice.edu/qml/1.0" id="eip-894">Leibowitz, B. Matt. 2011. “On Facebook, Obamas Denounce Cyberbullying.” <link url="http://msnbc.com">http://msnbc.com</link>, March 9. Retrieved February 13, 2012 (<link url="http://www.msnbc.msn.com/id/41995126/ns/technology_and_science-security/t/facebook-obamas-denounce-cyberbullying/#.TtjrVUqY07A">http://www.msnbc.msn.com/id/41995126/ns/technology_and_science-security/t/facebook-obamas-denounce-cyberbullying/#.TtjrVUqY07A</link>).
+</para><para xmlns:m="http://www.w3.org/1998/Math/MathML" xmlns:q="http://cnx.rice.edu/qml/1.0" id="eip-337">Occupy Wall Street. Retrieved November 27, 2011. (<link url="http://occupywallst.org/about/">http://occupywallst.org/about/</link>).
+</para><para xmlns:m="http://www.w3.org/1998/Math/MathML" xmlns:q="http://cnx.rice.edu/qml/1.0" id="eip-420">Schwartz, Mattathias. 2011. “Pre-Occupied: The Origins and Future of Occupy Wall St.” <emphasis effect="italics">New Yorker Magazine</emphasis>, November 28.
+</para><para xmlns:m="http://www.w3.org/1998/Math/MathML" xmlns:q="http://cnx.rice.edu/qml/1.0" id="eip-960">Sumner, William. 1959 [1906]. <emphasis effect="italics">Folkways</emphasis>. New York: Dover.
+</para><para xmlns:m="http://www.w3.org/1998/Math/MathML" xmlns:q="http://cnx.rice.edu/qml/1.0" id="eip-214">“Times Topics: Occupy Wall Street.” <emphasis effect="italics">New York Times.</emphasis> 2011. Retrieved February 10, 2012 (<link url="http://topics.nytimes.com/top/reference/timestopics/organizations/o/occupy_wall_street/index.html?scp=1-spot&amp;sq=occupy%20wall%20street&amp;st=cse">http://topics.nytimes.com/top/reference/timestopics/organizations/o/occupy_wall_street/index.html?scp=1-spot&amp;sq=occupy%20wall%20street&amp;st=cse</link>).
+</para><para xmlns:m="http://www.w3.org/1998/Math/MathML" xmlns:q="http://cnx.rice.edu/qml/1.0" id="eip-690">We Are the 99 Percent. Retrieved November 28, 2011 (<link url="http://wearethe99percent.tumblr.com/page/2">http://wearethe99percent.tumblr.com/page/2</link>).
+</para></section>
+  </content>
+<glossary>
+    <definition id="import-auto-id2679595"><term>aggregate</term> <meaning id="fs-id3122281">a collection of people who exist in the same place at the same time, but who don’t interact or share a sense of identity</meaning></definition>
+    <definition id="import-auto-id2806275"><term>category</term> <meaning id="fs-id1491276">people who share similar characteristics but who are not connected in any way</meaning></definition>
+    <definition id="import-auto-id2397075"><term>expressive function</term> <meaning id="fs-id1276777">a group function that serves an emotional need</meaning></definition>
+    <definition id="import-auto-id1323178"><term>group</term> <meaning id="fs-id3006241">any collection of at least two people who interact with some frequency and who share some sense of aligned identity</meaning></definition>
+    <definition id="import-auto-id2274761"><term>in-group</term> <meaning id="fs-id1675129">a group a person belongs to and feels is an integral part of his identity</meaning></definition>
+    <definition id="import-auto-id1919314"><term>instrumental function</term> <meaning id="fs-id1599079">being oriented toward a task or goal</meaning></definition>
+    <definition id="import-auto-id1475602"><term>out-group</term> <meaning id="fs-id1496342">a group that an individual is not a member of, and may even compete with</meaning></definition>
+    <definition id="import-auto-id1476816"><term>primary groups</term> <meaning id="fs-id1449947">small, informal groups of people who are closest to us</meaning></definition>
+    <definition id="import-auto-id2243762"><term>reference groups</term> <meaning id="fs-id1764788">groups to which an individual compares herself</meaning></definition>
+    <definition id="import-auto-id2789136"><term>secondary groups</term> <meaning id="fs-id2703603">larger and more impersonal groups that are task-focused and time limited</meaning></definition>
+</glossary>
+</document>
