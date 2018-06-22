@@ -11,17 +11,23 @@ import android.view.ViewGroup;
 import android.widget.TextView;
 import android.widget.Toast;
 
+import org.w3c.dom.Text;
+
 import java.util.ArrayList;
 import java.util.concurrent.TimeUnit;
 
 public class TextbookViewAdapter extends RecyclerView.Adapter<TextbookViewAdapter.ViewHolder>{
 
     public ArrayList<String> dataSet;
-    public View.OnClickListener textOnClickListener = new TextOnClickListener();
+    public TextOnClickListener textOnClickListener; //public View.OnClickListener textOnClickListener = new TextOnClickListener();
     public static Context context;
     public static TextToSpeech tts;
 
-    public static class TextOnClickListener implements View.OnClickListener {
+    public interface TextOnClickListener {
+        void onClick(String text, View v);
+    }
+
+    /*public static class TextOnClickListener implements View.OnClickListener {
         @Override
         public void onClick(final View v) {
             String text = ((TextView) v.findViewById(R.id.item)).getText().toString();
@@ -34,7 +40,7 @@ public class TextbookViewAdapter extends RecyclerView.Adapter<TextbookViewAdapte
             v.findViewById(R.id.item).setBackgroundColor(ContextCompat.getColor(context, R.color.defaultGrey));
 
         }
-    }
+    } */
 
     // Provide a reference to the views for each data item
     // Complex data items may need more than one view per item, and
@@ -46,11 +52,21 @@ public class TextbookViewAdapter extends RecyclerView.Adapter<TextbookViewAdapte
             super(v);
             textView = (TextView) v.findViewById(R.id.item);
         }
+
+        public void bind(final String text, final TextOnClickListener listener){
+            textView.setText(text);
+            textView.setOnClickListener(new View.OnClickListener(){
+                @Override public void onClick(View v){
+                    listener.onClick(text, v);
+                }
+            });
+        }
     }
 
     // Provide a suitable constructor (depends on the kind of dataset)
-    public TextbookViewAdapter(ArrayList<String> dataSet){
+    public TextbookViewAdapter(ArrayList<String> dataSet, TextOnClickListener textOnClickListener){
         this.dataSet = dataSet;
+        this.textOnClickListener = textOnClickListener;
     }
 
     // Create new views (invoked by the layout manager)
@@ -63,7 +79,6 @@ public class TextbookViewAdapter extends RecyclerView.Adapter<TextbookViewAdapte
 
 
         ViewHolder vh = new ViewHolder(v);
-        v.setOnClickListener(textOnClickListener);
         return vh;
     }
 
@@ -72,8 +87,9 @@ public class TextbookViewAdapter extends RecyclerView.Adapter<TextbookViewAdapte
     public void onBindViewHolder(ViewHolder holder, int position) {
         // - get element from your dataset at this position
         // - replace the contents of the view with that element
-        TextView item = (TextView) holder.textView;
-        item.setText(dataSet.get(position));
+
+        holder.bind(dataSet.get(position), textOnClickListener);
+
 
     }
 

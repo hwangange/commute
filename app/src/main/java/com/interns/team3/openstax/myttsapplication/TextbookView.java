@@ -1,11 +1,15 @@
 package com.interns.team3.openstax.myttsapplication;
 
 import android.content.Intent;
+import android.speech.tts.TextToSpeech;
+import android.support.v4.content.ContextCompat;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.support.v7.widget.GridLayoutManager;
 import android.support.v7.widget.LinearLayoutManager;
 import android.support.v7.widget.RecyclerView;
+import android.util.Log;
+import android.view.View;
 
 import org.jsoup.Jsoup;
 import org.jsoup.nodes.Document;
@@ -27,6 +31,8 @@ public class TextbookView extends AppCompatActivity {
     public static String modId, bookId;
     public static Document content;
     public ArrayList<String> dataSet;
+
+    public TextToSpeech tts;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -53,9 +59,30 @@ public class TextbookView extends AppCompatActivity {
         content = getContent();
         dataSet = new ArrayList<String>();
 
+        tts = new TextToSpeech(getApplicationContext(), new TextToSpeech.OnInitListener() {
+            @Override
+            public void onInit(int i) {
+                if (i == TextToSpeech.SUCCESS) {
+                    //mButtonSpeak.setEnabled(true);
+                    Log.e("Initialization", "Initialization succeeded");
+
+                } else {
+                    Log.e("Initialization", "Initialization failed");
+                }
+
+            }
+        });
         // specify an adapter (see also next example)
-        adapter = new TextbookViewAdapter(dataSet);
-        adapter.setContext(getApplicationContext()); // will also setup TTS instance
+        adapter = new TextbookViewAdapter(dataSet, new TextbookViewAdapter.TextOnClickListener(){
+            @Override public void onClick(String text, View v){
+                tts.speak(text, TextToSpeech.QUEUE_FLUSH, null, "id");
+                while(tts.isSpeaking()){
+                    v.findViewById(R.id.item).setBackgroundColor(ContextCompat.getColor(getApplicationContext(), R.color.colorSelected));
+                }
+                v.findViewById(R.id.item).setBackgroundColor(ContextCompat.getColor(getApplicationContext(), R.color.defaultGrey));
+            }
+        });
+       // adapter.setContext(getApplicationContext()); // nOT NEEDED // will also setup TTS instance
         recyclerView.setAdapter(adapter);
 
 
