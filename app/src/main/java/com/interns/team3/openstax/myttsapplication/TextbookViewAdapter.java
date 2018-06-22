@@ -1,7 +1,6 @@
 package com.interns.team3.openstax.myttsapplication;
 
 import android.content.Context;
-import android.speech.tts.TextToSpeech;
 import android.support.v4.content.ContextCompat;
 import android.support.v7.widget.RecyclerView;
 import android.util.Log;
@@ -21,26 +20,10 @@ public class TextbookViewAdapter extends RecyclerView.Adapter<TextbookViewAdapte
     public ArrayList<String> dataSet;
     public TextOnClickListener textOnClickListener; //public View.OnClickListener textOnClickListener = new TextOnClickListener();
     public static Context context;
-    public static TextToSpeech tts;
 
     public interface TextOnClickListener {
         void onClick(String text, View v);
     }
-
-    /*public static class TextOnClickListener implements View.OnClickListener {
-        @Override
-        public void onClick(final View v) {
-            String text = ((TextView) v.findViewById(R.id.item)).getText().toString();
-
-            // where TTS function will go
-            tts.speak(text, TextToSpeech.QUEUE_FLUSH, null, "id");
-            while(tts.isSpeaking()){
-                v.findViewById(R.id.item).setBackgroundColor(ContextCompat.getColor(context, R.color.colorSelected));
-            }
-            v.findViewById(R.id.item).setBackgroundColor(ContextCompat.getColor(context, R.color.defaultGrey));
-
-        }
-    } */
 
     // Provide a reference to the views for each data item
     // Complex data items may need more than one view per item, and
@@ -101,19 +84,6 @@ public class TextbookViewAdapter extends RecyclerView.Adapter<TextbookViewAdapte
 
     public void setContext(Context context) {
         this.context= context;
-        tts = new TextToSpeech(this.context, new TextToSpeech.OnInitListener() {
-            @Override
-            public void onInit(int i) {
-                if (i == TextToSpeech.SUCCESS) {
-                    //mButtonSpeak.setEnabled(true);
-                    Log.e("Initialization", "Initialization succeeded");
-
-                } else {
-                    Log.e("Initialization", "Initialization failed");
-                }
-
-            }
-        });
     }
 
 
