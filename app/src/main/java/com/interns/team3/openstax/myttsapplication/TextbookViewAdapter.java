@@ -2,6 +2,7 @@ package com.interns.team3.openstax.myttsapplication;
 
 import android.content.Context;
 import android.speech.tts.TextToSpeech;
+import android.support.v4.content.ContextCompat;
 import android.support.v7.widget.RecyclerView;
 import android.util.Log;
 import android.view.LayoutInflater;
@@ -17,7 +18,7 @@ public class TextbookViewAdapter extends RecyclerView.Adapter<TextbookViewAdapte
 
     public ArrayList<String> dataSet;
     public View.OnClickListener textOnClickListener = new TextOnClickListener();
-    public Context context;
+    public static Context context;
     public static TextToSpeech tts;
 
     public static class TextOnClickListener implements View.OnClickListener {
@@ -27,6 +28,10 @@ public class TextbookViewAdapter extends RecyclerView.Adapter<TextbookViewAdapte
 
             // where TTS function will go
             tts.speak(text, TextToSpeech.QUEUE_FLUSH, null, "id");
+            while(tts.isSpeaking()){
+                v.findViewById(R.id.item).setBackgroundColor(ContextCompat.getColor(context, R.color.colorSelected));
+            }
+            v.findViewById(R.id.item).setBackgroundColor(ContextCompat.getColor(context, R.color.defaultGrey));
 
         }
     }
