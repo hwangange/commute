@@ -18,7 +18,7 @@ import java.util.concurrent.TimeUnit;
 
 public class TextbookViewAdapter extends RecyclerView.Adapter<TextbookViewAdapter.ViewHolder>{
 
-    public ArrayList<String> dataSet;
+    public ArrayList<TextChunk> dataSet;
     public TextOnClickListener textOnClickListener; //public View.OnClickListener textOnClickListener = new TextOnClickListener();
     public static Context context;
 
@@ -48,7 +48,7 @@ public class TextbookViewAdapter extends RecyclerView.Adapter<TextbookViewAdapte
     }
 
     // Provide a suitable constructor (depends on the kind of dataset)
-    public TextbookViewAdapter(ArrayList<String> dataSet, TextOnClickListener textOnClickListener){
+    public TextbookViewAdapter(ArrayList<TextChunk> dataSet, TextOnClickListener textOnClickListener){
         this.dataSet = dataSet;
         this.textOnClickListener = textOnClickListener;
     }
@@ -71,8 +71,14 @@ public class TextbookViewAdapter extends RecyclerView.Adapter<TextbookViewAdapte
     public void onBindViewHolder(ViewHolder holder, int position) {
         // - get element from your dataset at this position
         // - replace the contents of the view with that element
-        holder.bind(dataSet.get(position), textOnClickListener);
 
+
+        //taking precautions: https://stackoverflow.com/questions/39424212/how-to-stop-recyclerview-from-recycling-items-that-are-toggled-visible-and-gone?noredirect=1&lq=1
+        TextChunk tc = dataSet.get(position);
+        if(tc.isSelected()) holder.textView.setBackgroundColor(ContextCompat.getColor(context, R.color.colorSelected));
+        else holder.textView.setBackgroundColor(ContextCompat.getColor(context, R.color.defaultGrey));
+
+        holder.bind(tc.getText(), textOnClickListener);
 
     }
 

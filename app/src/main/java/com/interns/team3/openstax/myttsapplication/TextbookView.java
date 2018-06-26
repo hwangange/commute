@@ -32,7 +32,7 @@ public class TextbookView extends AppCompatActivity {
 
     public static String modId, bookId;
     public static Document content;
-    public ArrayList<String> dataSet;
+    public ArrayList<TextChunk> dataSet;
 
     public TextToSpeech tts;
     public MyUtteranceProgressListener myUtteranceProgressListener;
@@ -61,7 +61,7 @@ public class TextbookView extends AppCompatActivity {
         // Toast.makeText(getApplicationContext(), modId, Toast.LENGTH_SHORT).show();
 
         content = getContent();
-        dataSet = new ArrayList<String>();
+        dataSet = new ArrayList<TextChunk>();
 
         myUtteranceProgressListener = new MyUtteranceProgressListener();
         tts = new TextToSpeech(getApplicationContext(), new TextToSpeech.OnInitListener() {
@@ -83,20 +83,22 @@ public class TextbookView extends AppCompatActivity {
         adapter = new TextbookViewAdapter(dataSet, new TextbookViewAdapter.TextOnClickListener(){
 
             @Override public void onClick(String text, View v, int position){
-                
+                TextChunk tc = dataSet.get(position);
+                tc.setSelected(true);
+
                 v.findViewById(R.id.item).setBackgroundColor(ContextCompat.getColor(getApplicationContext(), R.color.colorSelected));
                 readText(this, text, v, position);
             }
 
         });
 
-       // adapter.setContext(getApplicationContext()); // nOT NEEDED // will also setup TTS instance
+        adapter.setContext(getApplicationContext()); // nOT NEEDED // will also setup TTS instance
         recyclerView.setAdapter(adapter);
 
 
         Elements elements = content.body().children().select("*");
         for (Element element : elements) {
-            dataSet.add(element.ownText());
+            dataSet.add(new TextChunk(element.ownText()));
 
             adapter.notifyItemInserted(dataSet.size()-1);
             //adapter.notifyDataSetChanged();
@@ -183,41 +185,40 @@ public class TextbookView extends AppCompatActivity {
         @Override
         public void onDone(final String position){
             Log.i("onDone", position);
-
-            runOnUiThread(new Runnable() {
-                @Override
-                public void run() {
-
-                    // old method
-                    //View v = recyclerView.getLayoutManager().findViewByPosition(Integer.parseInt(position));
-
-                    TextbookViewAdapter.ViewHolder vh = (TextbookViewAdapter.ViewHolder) recyclerView.findViewHolderForAdapterPosition(Integer.parseInt(position));
-                    if (vh != null) {
-                        View v = vh.textView;
-                        v.findViewById(R.id.item).setBackgroundColor(ContextCompat.getColor(getApplicationContext(), R.color.defaultGrey));
-                    }
-                }
-
-
-            });
+            backToNormal(position);
         }
 
         @Override
         public void onStop(final String position, boolean interrupted){
             if(interrupted) Log.i("onStop", "Interrupted");
             else Log.i("onStop", "Completed");
+
+            backToNormal(position);
+
+        }
+
+        public void backToNormal(String pos){
+
+            final int position = Integer.parseInt(pos);
+
             runOnUiThread(new Runnable() {
                 @Override
                 public void run() {
+
                     // old method
                     //View v = recyclerView.getLayoutManager().findViewByPosition(Integer.parseInt(position));
-                    TextbookViewAdapter.ViewHolder vh = (TextbookViewAdapter.ViewHolder) recyclerView.findViewHolderForAdapterPosition(Integer.parseInt(position));
+
+                    TextbookViewAdapter.ViewHolder vh = (TextbookViewAdapter.ViewHolder) recyclerView.findViewHolderForAdapterPosition(position);
                     if (vh != null) {
                         View v = vh.textView;
                         v.findViewById(R.id.item).setBackgroundColor(ContextCompat.getColor(getApplicationContext(), R.color.defaultGrey));
                     }
                 }
+
+
             });
+
+            dataSet.get(position).setSelected(false);
 
         }
     }
