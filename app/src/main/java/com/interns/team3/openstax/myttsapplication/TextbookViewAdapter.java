@@ -32,8 +32,10 @@ public class TextbookViewAdapter extends RecyclerView.Adapter<TextbookViewAdapte
     public static class ViewHolder extends RecyclerView.ViewHolder {
         // each data item is just a string in this case
         public TextView textView;
+        public View view;
         public ViewHolder(View v) {
             super(v);
+            view = v;
             textView = (TextView) v.findViewById(R.id.item);
         }
 

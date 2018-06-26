@@ -11,6 +11,7 @@ import android.support.v7.widget.LinearLayoutManager;
 import android.support.v7.widget.RecyclerView;
 import android.util.Log;
 import android.view.View;
+import android.widget.TextView;
 import android.widget.Toast;
 
 import org.jsoup.Jsoup;
@@ -83,11 +84,8 @@ public class TextbookView extends AppCompatActivity {
         adapter = new TextbookViewAdapter(dataSet, new TextbookViewAdapter.TextOnClickListener(){
 
             @Override public void onClick(String text, View v, int position){
-                TextChunk tc = dataSet.get(position);
-                tc.setSelected(true);
 
-                v.findViewById(R.id.item).setBackgroundColor(ContextCompat.getColor(getApplicationContext(), R.color.colorSelected));
-                readText(this, text, v, position);
+                readText(text, v, position);
             }
 
         });
@@ -120,7 +118,17 @@ public class TextbookView extends AppCompatActivity {
 
     }
 
-    public void readText(final TextbookViewAdapter.TextOnClickListener textOnClickListener, final String text, final View v, final int position) {
+    public void readText(final String text, final View v, final int position) {
+
+        TextChunk tc = dataSet.get(position);
+        tc.setSelected(true);
+        runOnUiThread(new Runnable() {
+            @Override
+            public void run() {
+                v.findViewById(R.id.item).setBackgroundColor(ContextCompat.getColor(getApplicationContext(), R.color.colorSelected));
+            }
+        });
+
         Thread readTextThread = new Thread()
         {
             public void run() {
@@ -183,9 +191,37 @@ public class TextbookView extends AppCompatActivity {
         }
 
         @Override
-        public void onDone(final String position){
-            Log.i("onDone", position);
-            backToNormal(position);
+        public void onDone(final String pos){
+            Log.i("onDone", pos);
+            backToNormal(pos);
+
+            // autoplay
+            final int position = Integer.parseInt(pos) +1;
+            if(position < dataSet.size()) {
+                TextbookViewAdapter.ViewHolder vh = (TextbookViewAdapter.ViewHolder) recyclerView.findViewHolderForAdapterPosition(position);
+                if (vh == null) {
+
+                    runOnUiThread(new Runnable() {
+                        @Override
+                        public void run() {
+
+                            layoutManager.scrollToPosition(position);
+                            adapter.notifyDataSetChanged();
+                        }
+                    });
+                    vh = (TextbookViewAdapter.ViewHolder) recyclerView.findViewHolderForAdapterPosition(position);
+                }
+
+                if(vh !=null){
+                    TextView tv = vh.textView;
+                    String text = (String) tv.getText();
+                    View v = vh.view;
+                    readText(text, v, position);
+                }
+                else Log.i("ViewHolder is null", ":( Could it be because the text isn't visible?");
+
+            }
+
         }
 
         @Override
