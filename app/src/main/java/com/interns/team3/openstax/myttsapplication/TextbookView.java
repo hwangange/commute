@@ -2,6 +2,7 @@ package com.interns.team3.openstax.myttsapplication;
 
 import android.content.Intent;
 import android.speech.tts.TextToSpeech;
+import android.speech.tts.UtteranceProgressListener;
 import android.support.v4.content.ContextCompat;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
@@ -10,6 +11,7 @@ import android.support.v7.widget.LinearLayoutManager;
 import android.support.v7.widget.RecyclerView;
 import android.util.Log;
 import android.view.View;
+import android.widget.Toast;
 
 import org.jsoup.Jsoup;
 import org.jsoup.nodes.Document;
@@ -33,6 +35,8 @@ public class TextbookView extends AppCompatActivity {
     public ArrayList<String> dataSet;
 
     public TextToSpeech tts;
+    public MyUtteranceProgressListener myUtteranceProgressListener;
+
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -59,6 +63,7 @@ public class TextbookView extends AppCompatActivity {
         content = getContent();
         dataSet = new ArrayList<String>();
 
+        myUtteranceProgressListener = new MyUtteranceProgressListener();
         tts = new TextToSpeech(getApplicationContext(), new TextToSpeech.OnInitListener() {
             @Override
             public void onInit(int i) {
@@ -72,16 +77,19 @@ public class TextbookView extends AppCompatActivity {
 
             }
         });
+        tts.setOnUtteranceProgressListener(myUtteranceProgressListener);
+
         // specify an adapter (see also next example)
         adapter = new TextbookViewAdapter(dataSet, new TextbookViewAdapter.TextOnClickListener(){
-            @Override public void onClick(String text, View v){
-                tts.speak(text, TextToSpeech.QUEUE_FLUSH, null, "id");
-                while(tts.isSpeaking()){
-                    v.findViewById(R.id.item).setBackgroundColor(ContextCompat.getColor(getApplicationContext(), R.color.colorSelected));
-                }
-                v.findViewById(R.id.item).setBackgroundColor(ContextCompat.getColor(getApplicationContext(), R.color.defaultGrey));
+
+            @Override public void onClick(String text, View v, int position){
+                
+                v.findViewById(R.id.item).setBackgroundColor(ContextCompat.getColor(getApplicationContext(), R.color.colorSelected));
+                readText(this, text, v, position);
             }
+
         });
+
        // adapter.setContext(getApplicationContext()); // nOT NEEDED // will also setup TTS instance
         recyclerView.setAdapter(adapter);
 
@@ -90,13 +98,36 @@ public class TextbookView extends AppCompatActivity {
         for (Element element : elements) {
             dataSet.add(element.ownText());
 
-            //adapter.notifyItemInserted(dataSet.size()-1);
-            adapter.notifyDataSetChanged();
+            adapter.notifyItemInserted(dataSet.size()-1);
+            //adapter.notifyDataSetChanged();
 
         }
 
+        recyclerView.addOnLayoutChangeListener(new View.OnLayoutChangeListener() {
+
+            @Override
+            public void onLayoutChange(View v, int left, int top, int right, int bottom, int oldLeft, int oldTop, int oldRight, int oldBottom) {
+                recyclerView.removeOnLayoutChangeListener(this);
+                Log.e("LayoutChangeListener", "updated");
+            }
+        });
+        adapter.notifyDataSetChanged();
 
 
+
+
+    }
+
+    public void readText(final TextbookViewAdapter.TextOnClickListener textOnClickListener, final String text, final View v, final int position) {
+        Thread readTextThread = new Thread()
+        {
+            public void run() {
+                tts.speak(text, TextToSpeech.QUEUE_FLUSH, null, String.valueOf(position));
+            }
+
+        };
+
+        readTextThread.start();
 
     }
 
@@ -136,4 +167,68 @@ public class TextbookView extends AppCompatActivity {
 
         return lst;
     }
+
+    public class MyUtteranceProgressListener extends UtteranceProgressListener{
+
+        @Override
+        public void onStart(String position){
+            Log.i("onStart", position);
+        }
+
+        @Override
+        public void onError(String position){
+            Log.i("onError", position);
+        }
+
+        @Override
+        public void onDone(final String position){
+            Log.i("onDone", position);
+
+            runOnUiThread(new Runnable() {
+                @Override
+                public void run() {
+
+                    // old method
+                    //View v = recyclerView.getLayoutManager().findViewByPosition(Integer.parseInt(position));
+
+                    TextbookViewAdapter.ViewHolder vh = (TextbookViewAdapter.ViewHolder) recyclerView.findViewHolderForAdapterPosition(Integer.parseInt(position));
+                    if (vh != null) {
+                        View v = vh.textView;
+                        v.findViewById(R.id.item).setBackgroundColor(ContextCompat.getColor(getApplicationContext(), R.color.defaultGrey));
+                    }
+                }
+
+
+            });
+        }
+
+        @Override
+        public void onStop(final String position, boolean interrupted){
+            if(interrupted) Log.i("onStop", "Interrupted");
+            else Log.i("onStop", "Completed");
+            runOnUiThread(new Runnable() {
+                @Override
+                public void run() {
+                    // old method
+                    //View v = recyclerView.getLayoutManager().findViewByPosition(Integer.parseInt(position));
+                    TextbookViewAdapter.ViewHolder vh = (TextbookViewAdapter.ViewHolder) recyclerView.findViewHolderForAdapterPosition(Integer.parseInt(position));
+                    if (vh != null) {
+                        View v = vh.textView;
+                        v.findViewById(R.id.item).setBackgroundColor(ContextCompat.getColor(getApplicationContext(), R.color.defaultGrey));
+                    }
+                }
+            });
+
+        }
+    }
+
+    @Override
+    protected void onDestroy() {
+        if (tts != null) {
+            tts.stop();
+            tts.shutdown();
+        }
+        super.onDestroy();
+    }
+
 }

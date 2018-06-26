@@ -1,6 +1,7 @@
 package com.interns.team3.openstax.myttsapplication;
 
 import android.content.Context;
+import android.speech.tts.UtteranceProgressListener;
 import android.support.v4.content.ContextCompat;
 import android.support.v7.widget.RecyclerView;
 import android.util.Log;
@@ -22,7 +23,7 @@ public class TextbookViewAdapter extends RecyclerView.Adapter<TextbookViewAdapte
     public static Context context;
 
     public interface TextOnClickListener {
-        void onClick(String text, View v);
+        void onClick(String text, View v, int position);
     }
 
     // Provide a reference to the views for each data item
@@ -40,7 +41,7 @@ public class TextbookViewAdapter extends RecyclerView.Adapter<TextbookViewAdapte
             textView.setText(text);
             textView.setOnClickListener(new View.OnClickListener(){
                 @Override public void onClick(View v){
-                    listener.onClick(text, v);
+                    listener.onClick(text, v, getAdapterPosition());
                 }
             });
         }
@@ -70,7 +71,6 @@ public class TextbookViewAdapter extends RecyclerView.Adapter<TextbookViewAdapte
     public void onBindViewHolder(ViewHolder holder, int position) {
         // - get element from your dataset at this position
         // - replace the contents of the view with that element
-
         holder.bind(dataSet.get(position), textOnClickListener);
 
 
@@ -88,3 +88,5 @@ public class TextbookViewAdapter extends RecyclerView.Adapter<TextbookViewAdapte
 
 
 }
+
+
