@@ -5,6 +5,7 @@
     <color name="colorAccent">#FF4081</color>
     <color name="colorPressed">#cac4c4</color>
     <color name="colorSelected">#a3a3a3</color>
+    <color name="colorHighlighted">#ffe605</color>
     <color name="defaultGrey">#00eeeeee</color>
 
 

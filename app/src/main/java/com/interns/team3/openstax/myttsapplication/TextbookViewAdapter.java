@@ -16,6 +16,8 @@ import org.w3c.dom.Text;
 import java.util.ArrayList;
 import java.util.concurrent.TimeUnit;
 
+import static android.content.ContentValues.TAG;
+
 public class TextbookViewAdapter extends RecyclerView.Adapter<TextbookViewAdapter.ViewHolder>{
 
     public ArrayList<TextChunk> dataSet;
@@ -92,6 +94,18 @@ public class TextbookViewAdapter extends RecyclerView.Adapter<TextbookViewAdapte
 
     public void setContext(Context context) {
         this.context= context;
+    }
+
+    @Override
+    public void onViewRecycled(ViewHolder vh){
+        // view appears.
+        //Log.wtf(TAG,"onViewRecycled "+vh);
+    }
+
+    @Override
+    public void onViewDetachedFromWindow(ViewHolder viewHolder){
+        // view leaves.
+        //Log.wtf(TAG,"onViewDetachedFromWindow "+viewHolder);
     }
 
 
