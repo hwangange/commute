@@ -38,5 +38,9 @@ dependencies {
     //SnappyLayout
     implementation 'com.nshmura:snappysmoothscroller:1.0.0'
 
+    //Otto bus
+    implementation 'com.squareup:otto:1.3.8'
+
+
 
 }

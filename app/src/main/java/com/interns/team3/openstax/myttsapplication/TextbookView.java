@@ -24,6 +24,8 @@ import com.nshmura.snappysmoothscroller.LinearLayoutScrollVectorDetector;
 import com.nshmura.snappysmoothscroller.SnapType;
 import com.nshmura.snappysmoothscroller.SnappyLinearLayoutManager;
 import com.nshmura.snappysmoothscroller.SnappySmoothScroller;
+import com.squareup.otto.Produce;
+import com.squareup.otto.Subscribe;
 
 import org.jsoup.Jsoup;
 import org.jsoup.nodes.Document;
@@ -53,7 +55,6 @@ public class TextbookView extends AppCompatActivity {
 
     public ExecutorService executorService;
 
-    public TextbookViewAdapter.ViewHolder vh;
 
 
     @Override
@@ -79,6 +80,7 @@ public class TextbookView extends AppCompatActivity {
         layoutManager.setSnapInterpolator(new DecelerateInterpolator());
         layoutManager.setSnapPaddingEnd(20);
         recyclerView.setLayoutManager(layoutManager);
+
 
 
         //get content
@@ -143,6 +145,23 @@ public class TextbookView extends AppCompatActivity {
 
 
     }
+
+    @Override
+    protected void onStart() {
+        super.onStart();
+        GlobalBus.getBus().register(this);
+    }
+
+    @Produce
+    public String createMessage(String event){
+        return "";
+    }
+
+    @Subscribe
+     public void getMessage(String event) { 
+        //Write code to perform some action.
+    }
+
 
     public void readText(final String text, final View v, final int position) {
 
@@ -324,47 +343,73 @@ public class TextbookView extends AppCompatActivity {
         if(executorService !=null) {
             executorService.shutdownNow();
         }
+
         super.onDestroy();
     }
 
-    public class Autoplay extends AsyncTask<String, Void, String> {
+    @Override
+    protected void onStop(){
+        super.onStop();
+        GlobalBus.getBus().unregister(this);
+    }
+
+
+    public class Autoplay extends AsyncTask<String, Void, View> {
 
         private int position;
 
-        protected String doInBackground(String... pos){
+        protected View doInBackground(String... pos){
+            TextbookViewAdapter.ViewHolder vh;
 
             position = Integer.parseInt(pos[0]) +1;
             if(position < dataSet.size()) {
-                vh = (TextbookViewAdapter.ViewHolder) recyclerView.findViewHolderForAdapterPosition(position);
-            }
-            if (vh == null) {
+               // vh = (TextbookViewAdapter.ViewHolder) recyclerView.findViewHolderForAdapterPosition(position);
+                View v = layoutManager.findViewByPosition(position);
 
-                runOnUiThread(new Runnable() {
-                    @Override
-                    public void run() {
+                if (v == null) {
+                    runOnUiThread(new Runnable() {
+                        @Override
+                        public void run() {
+                            recyclerView.smoothScrollToPosition(position);
+                            //adapter.notifyDataSetChanged();
 
-                        recyclerView.smoothScrollToPosition(position);
-                        adapter.notifyDataSetChanged();
-                    }
-                });
+                        }
+                    });
+                    //vh = (TextbookViewAdapter.ViewHolder) recyclerView.findViewHolderForAdapterPosition(position);
+                    v = layoutManager.findViewByPosition(position);
+                    Log.i("1", "View: " + v);
+                }
+
+                return v;
             }
-            return "";
+
+            return null;
         }
 
         protected void onProgressUpdate(){
 
         }
 
-        protected void onPostExecute(String s){
-            vh = (TextbookViewAdapter.ViewHolder) recyclerView.findViewHolderForAdapterPosition(position);
+        protected void onPostExecute(View v){
 
+            /*adapter.notifyDataSetChanged();
             if(vh !=null){
                 TextView tv = vh.textView;
                 String text = (String) tv.getText();
                 View v = vh.view;
                 readText(text, v, position);
+            } */
+
+            if(v != null){
+                TextView tv = v.findViewById(R.id.item);
+                String text = (String) tv.getText();
+                readText(text, v, position);
             }
-            else Log.i("ViewHolder is null", ":( Could it be because the text isn't visible?");
+            else {
+                Log.i("View is null", "View: " + v + "\tPosition: " + position + "\nLast Visible Item: " + layoutManager.findLastVisibleItemPosition());
+            }
+
+
 
         }
 
