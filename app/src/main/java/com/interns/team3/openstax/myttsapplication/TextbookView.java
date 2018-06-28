@@ -154,8 +154,6 @@ public class TextbookView extends AppCompatActivity {
         recyclerView.setLayoutManager(layoutManager);
         recyclerView.addOnScrollListener(customScrollListener);
 
-        Toast.makeText(getApplicationContext(), "I'm creating...", Toast.LENGTH_SHORT).show();
-
         //get content
         Intent intent = getIntent();
         modId = intent.getStringExtra("Module ID");
@@ -330,7 +328,14 @@ public class TextbookView extends AppCompatActivity {
                 }
                 else{
                     Log.i("About to Read: ", String.valueOf(posn));
-                    doneScrolling(posn);
+                    int first = layoutManager.findFirstCompletelyVisibleItemPosition();
+                    int last = layoutManager.findLastCompletelyVisibleItemPosition();
+
+                    if(posn < first || posn > last){
+                        customScrollListener.setTarget(posn);
+                        recyclerView.smoothScrollToPosition(posn);
+                    }
+                    else doneScrolling(posn);
                     //bus.post(posn);
                 }
 

@@ -10,6 +10,7 @@
         android:layout_marginLeft="@dimen/activity_horizontal_margin"
         android:layout_marginStart="@dimen/activity_horizontal_margin"
         android:layout_marginTop="@dimen/activity_vertical_margin"
-        android:background="@drawable/list_item_text_selector"/>
+        android:background="@drawable/list_item_text_selector"
+        android:textSize="20dp"/>
 
 </LinearLayout>
