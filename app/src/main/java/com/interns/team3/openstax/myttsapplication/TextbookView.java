@@ -24,8 +24,10 @@ import com.nshmura.snappysmoothscroller.LinearLayoutScrollVectorDetector;
 import com.nshmura.snappysmoothscroller.SnapType;
 import com.nshmura.snappysmoothscroller.SnappyLinearLayoutManager;
 import com.nshmura.snappysmoothscroller.SnappySmoothScroller;
+import com.squareup.otto.Bus;
 import com.squareup.otto.Produce;
 import com.squareup.otto.Subscribe;
+import com.squareup.otto.ThreadEnforcer;
 
 import org.jsoup.Jsoup;
 import org.jsoup.nodes.Document;
@@ -44,7 +46,7 @@ public class TextbookView extends AppCompatActivity {
 
     private RecyclerView recyclerView;
     private TextbookViewAdapter adapter;
-    private SnappyLinearLayoutManager layoutManager;
+    private LinearLayoutManager layoutManager;
 
     public static String modId, bookId;
     public static Document content;
@@ -54,6 +56,10 @@ public class TextbookView extends AppCompatActivity {
     public MyUtteranceProgressListener myUtteranceProgressListener;
 
     public ExecutorService executorService;
+
+    public CustomScrollListener customScrollListener;
+
+   // public static Bus bus;
 
 
 
@@ -65,6 +71,9 @@ public class TextbookView extends AppCompatActivity {
 
         executorService = Executors.newSingleThreadExecutor();
 
+        //bus = new Bus(ThreadEnforcer.ANY);
+        //bus.register(this);
+
         // use this setting to improve performance if you know that changes
         // in content do not change the layout size of the RecyclerView
         // recyclerView.setHasFixedSize(true);
@@ -72,16 +81,80 @@ public class TextbookView extends AppCompatActivity {
         // use a GRID layout manager
        // layoutManager = new GridLayoutManager(this, 1);
 
-        layoutManager = new SnappyLinearLayoutManager(getApplicationContext());
+        // OPTION 1
+        /*layoutManager = new SnappyLinearLayoutManager(getApplicationContext());
         // Set the SnapType
         layoutManager.setSnapType(SnapType.CENTER);
 
         // Set the Interpolator
         layoutManager.setSnapInterpolator(new DecelerateInterpolator());
         layoutManager.setSnapPaddingEnd(20);
+        recyclerView.setLayoutManager(layoutManager); */
+
+        //OPTION 2
+        layoutManager = new LinearLayoutManager(getApplicationContext(), LinearLayoutManager.VERTICAL, false) {
+
+            @Override
+            public void smoothScrollToPosition(RecyclerView recyclerView, RecyclerView.State state, int position) {
+                Log.i("on smooth scroll", "hmm");
+                SnappySmoothScroller scroller = new SnappySmoothScroller.Builder()
+                        .setSnapType(SnapType.CENTER)
+                        .setSnapInterpolator(new DecelerateInterpolator())
+                        .setSnapPaddingEnd(20)
+                        .setPosition(position)
+                        .setScrollVectorDetector(new LinearLayoutScrollVectorDetector(this))
+                        .build(recyclerView.getContext());
+
+                startSmoothScroll(scroller);
+                //bus.post(position);
+
+            }
+
+            @Override
+            public int scrollVerticallyBy(int dy, RecyclerView.Recycler recycler, RecyclerView.State state) {
+
+                final int result = super.scrollVerticallyBy(dy, recycler, state);
+                int target = customScrollListener.getTarget();
+                Log.i("excellent", "In scrollVerticallyBy\t" + "Position: " + String.valueOf(target));
+
+                int front = findFirstVisibleItemPosition();
+                int back = findLastVisibleItemPosition();
+
+                if ( target >=front && target <=back) {
+                    Log.i("Target is visible", "Target is not -1!!");
+                    doneScrolling(target);
+                    customScrollListener.setTarget(-1);
+                }
+
+                return result;
+
+            }
+
+            @Override
+            public void onLayoutChildren(RecyclerView.Recycler recycler, RecyclerView.State state) {
+
+
+
+                super.onLayoutChildren(recycler, state);
+                int target = customScrollListener.getTarget();
+                Log.i("excellent", "In onLayoutChildren\t"+ "Position: " + String.valueOf(target));
+
+                int front = findFirstVisibleItemPosition();
+                int back = findLastVisibleItemPosition();
+
+                if ( target >=front && target <=back) {
+                    Log.i("Target is visible", "Target is not -1!!");
+                    doneScrolling(target);
+                    customScrollListener.setTarget(-1);
+                }
+            }
+        };
+
+        customScrollListener = new CustomScrollListener();
         recyclerView.setLayoutManager(layoutManager);
+        recyclerView.addOnScrollListener(customScrollListener);
 
-
+        Toast.makeText(getApplicationContext(), "I'm creating...", Toast.LENGTH_SHORT).show();
 
         //get content
         Intent intent = getIntent();
@@ -149,17 +222,6 @@ public class TextbookView extends AppCompatActivity {
     @Override
     protected void onStart() {
         super.onStart();
-        GlobalBus.getBus().register(this);
-    }
-
-    @Produce
-    public String createMessage(String event){
-        return "";
-    }
-
-    @Subscribe
-     public void getMessage(String event) { 
-        //Write code to perform some action.
     }
 
 
@@ -225,6 +287,11 @@ public class TextbookView extends AppCompatActivity {
 
     public class MyUtteranceProgressListener extends UtteranceProgressListener{
 
+        public MyUtteranceProgressListener(){
+            super();
+            //bus.register(this);
+        }
+
         @Override
         public void onStart(String position){
             //Log.i("onStart", position);
@@ -236,66 +303,38 @@ public class TextbookView extends AppCompatActivity {
         }
 
         @Override
-        public void onDone(final String pos){
-           // Log.i("onDone", pos);
+        public void onDone(final String pos) {
+            // Log.i("onDone", pos);
             backToNormal(pos);
 
-            new Autoplay().execute(pos);
+            // new Autoplay().execute(pos);
 
-            // autoplay
-            /*
-            final int position = Integer.parseInt(pos) +1;
-            if(position < dataSet.size()) {
-                vh = (TextbookViewAdapter.ViewHolder) recyclerView.findViewHolderForAdapterPosition(position);
+            final int posn = Integer.parseInt(pos) + 1;
+            if (posn < dataSet.size()) {
+                View v = layoutManager.findViewByPosition(posn);
 
-                executorService.submit(new Runnable() {
-                    @Override
-                    public void run(){
+                if (v == null) {
 
-                        if (vh == null) {
+                    customScrollListener.setTarget(posn);
 
-                            runOnUiThread(new Runnable() {
-                                @Override
-                                public void run() {
+                    runOnUiThread(new Runnable() {
+                        @Override
+                        public void run() {
+                            recyclerView.smoothScrollToPosition(posn);
 
-                                    layoutManager.scrollToPosition(position);
-                                    adapter.notifyDataSetChanged();
-                                }
-                            });
+                            //adapter.notifyDataSetChanged();
+
                         }
+                    });
 
+                }
+                else{
+                    Log.i("About to Read: ", String.valueOf(posn));
+                    doneScrolling(posn);
+                    //bus.post(posn);
+                }
 
-
-                    }
-                });
-
-                executorService.submit(new Runnable() {
-                    @Override
-                    public void run() {
-
-                        vh = (TextbookViewAdapter.ViewHolder) recyclerView.findViewHolderForAdapterPosition(position);
-
-
-                    }
-                });
-
-                executorService.submit(new Runnable() {
-                    @Override
-                    public void run() {
-
-                        if(vh !=null){
-                            TextView tv = vh.textView;
-                            String text = (String) tv.getText();
-                            View v = vh.view;
-                            readText(text, v, position);
-                        }
-                        else Log.i("ViewHolder is null", ":( Could it be because the text isn't visible?");
-                    }
-                });
-
-
-            } */
-
+            }
         }
 
         @Override
@@ -306,31 +345,47 @@ public class TextbookView extends AppCompatActivity {
             backToNormal(position);
 
         }
+    }
 
-        public void backToNormal(String pos){
+    public void backToNormal(String pos){
 
-            final int position = Integer.parseInt(pos);
+        final int position = Integer.parseInt(pos);
 
-            runOnUiThread(new Runnable() {
-                @Override
-                public void run() {
+        runOnUiThread(new Runnable() {
+            @Override
+            public void run() {
 
-                    // old method
-                    //View v = recyclerView.getLayoutManager().findViewByPosition(Integer.parseInt(position));
+                // old method
+                //View v = recyclerView.getLayoutManager().findViewByPosition(Integer.parseInt(position));
 
-                    TextbookViewAdapter.ViewHolder vh = (TextbookViewAdapter.ViewHolder) recyclerView.findViewHolderForAdapterPosition(position);
-                    if (vh != null) {
-                        View v = vh.textView;
-                        v.findViewById(R.id.item).setBackgroundColor(ContextCompat.getColor(getApplicationContext(), R.color.defaultGrey));
-                    }
+                TextbookViewAdapter.ViewHolder vh = (TextbookViewAdapter.ViewHolder) recyclerView.findViewHolderForAdapterPosition(position);
+                if (vh != null) {
+                    View v = vh.textView;
+                    v.findViewById(R.id.item).setBackgroundColor(ContextCompat.getColor(getApplicationContext(), R.color.defaultGrey));
                 }
+            }
 
 
-            });
+        });
 
-            dataSet.get(position).setSelected(false);
+        dataSet.get(position).setSelected(false);
+    }
 
+    //@Subscribe
+    public void doneScrolling(int posn){
+        Log.i("GOOD", "IN DONE SCROLLING");
+        //Toast.makeText(getApplicationContext(), "In doneScrolling", Toast.LENGTH_SHORT).show();
+        View v = layoutManager.findViewByPosition(posn);
+
+        if(v != null){
+            TextView tv = v.findViewById(R.id.item);
+            String text = (String) tv.getText();
+            readText(text, v, posn);
         }
+        else {
+            Log.i("View is null", "View: " + v + "\tPosition: " + posn + "\nLast Visible Item: " + layoutManager.findLastVisibleItemPosition());
+        }
+
     }
 
     @Override
@@ -350,7 +405,7 @@ public class TextbookView extends AppCompatActivity {
     @Override
     protected void onStop(){
         super.onStop();
-        GlobalBus.getBus().unregister(this);
+        //bus.unregister(this);
     }
 
 
@@ -392,14 +447,6 @@ public class TextbookView extends AppCompatActivity {
 
         protected void onPostExecute(View v){
 
-            /*adapter.notifyDataSetChanged();
-            if(vh !=null){
-                TextView tv = vh.textView;
-                String text = (String) tv.getText();
-                View v = vh.view;
-                readText(text, v, position);
-            } */
-
             if(v != null){
                 TextView tv = v.findViewById(R.id.item);
                 String text = (String) tv.getText();
@@ -413,6 +460,62 @@ public class TextbookView extends AppCompatActivity {
 
         }
 
+    }
+
+    public class CustomScrollListener extends RecyclerView.OnScrollListener {
+
+        int target;
+
+        public CustomScrollListener() {
+            super();
+            target = -1;
+        }
+
+        public void setTarget(int num) {target = num;}
+
+        public int getTarget() {return target;}
+
+        public boolean matchesTarget(int num) {return num == target;}
+
+        public void onScrollStateChanged(RecyclerView recyclerView, int newState) {
+            switch (newState) {
+                case RecyclerView.SCROLL_STATE_IDLE:
+                    //System.out.println("The RecyclerView is not scrolling");
+                    break;
+                case RecyclerView.SCROLL_STATE_DRAGGING:
+                    //System.out.println("Scrolling now");
+                    break;
+                case RecyclerView.SCROLL_STATE_SETTLING:
+                    //System.out.println("Scroll Settling");
+                    //Log.i("ScrollStateChanged", "Scroll Settling\tTarget: " + String.valueOf(target));
+                    /*if(target != -1) {
+                        Log.i("ScrollStateChanged", "Target is not -1!!");
+                        doneScrolling(target);
+                        target = -1;
+                    } */
+                    break;
+
+            }
+
+        }
+
+        public void onScrolled(RecyclerView recyclerView, int dx, int dy) {
+            if (dx > 0) {
+                //System.out.println("Scrolled Right");
+            } else if (dx < 0) {
+                //System.out.println("Scrolled Left");
+            } else {
+                //System.out.println("No Horizontal Scrolled");
+            }
+
+            if (dy > 0) {
+                //System.out.println("Scrolled Downwards");
+            } else if (dy < 0) {
+               // System.out.println("Scrolled Upwards");
+            } else {
+                //System.out.println("No Vertical Scrolled");
+            }
+        }
     }
 
 }
