@@ -1,0 +1,201 @@
+<?xml version="1.0"?>
+<document xmlns="http://cnx.rice.edu/cnxml" xmlns:md="http://cnx.rice.edu/mdml" xmlns:bib="http://bibtexml.sf.net/" xmlns:m="http://www.w3.org/1998/Math/MathML" xmlns:q="http://cnx.rice.edu/qml/1.0" id="new" cnxml-version="0.7" module-id="new">
+
+<title>Preface</title>
+<metadata xmlns:md="http://cnx.rice.edu/mdml"
+          mdml-version="0.5">
+  <!-- WARNING! The 'metadata' section is read only. Do not edit below.
+       Changes to the metadata section in the source will not be saved. -->
+  <md:repository>http://legacy.cnx.org/content</md:repository>
+  <md:content-url>http://legacy.cnx.org/content/m62049/latest</md:content-url>
+  <md:content-id>m62049</md:content-id>
+  <md:title>Preface</md:title>
+  <md:version>1.15</md:version>
+  <md:created>2016/06/29 16:08:56 -0500</md:created>
+  <md:revised>2018/03/15 14:38:25 -0500</md:revised>
+  <md:actors>
+    <md:person userid="cnxamgov">
+      <md:firstname>OpenStax</md:firstname>
+      <md:surname>American Government</md:surname>
+      <md:fullname>OpenStax American Government</md:fullname>
+      <md:email>info@openstaxcollege.org</md:email>
+    </md:person>
+  </md:actors>
+  <md:roles>
+    <md:role type="author">cnxamgov</md:role>
+    <md:role type="maintainer">cnxamgov</md:role>
+    <md:role type="licensor">cnxamgov</md:role>
+  </md:roles>
+  <md:license url="http://creativecommons.org/licenses/by/4.0/">Creative Commons Attribution License 4.0</md:license>
+  <!-- For information on license requirements for use or modification, see license url in the
+       above <md:license> element.
+       For information on formatting required attribution, see the URL:
+         CONTENT_URL/content_info#cnx_cite_header
+       where CONTENT_URL is the value provided above in the <md:content-url> element.
+  -->
+  <md:abstract></md:abstract>
+  <md:language>en</md:language>
+  <!-- WARNING! The 'metadata' section is read only. Do not edit above.
+       Changes to the metadata section in the source will not be saved. -->
+</metadata>
+
+<content>
+<para xmlns:data="http://www.w3.org/TR/html5/dom.html#custom-data-attribute" id="fs-id1172504463682">Welcome to <emphasis effect="italics">American Government</emphasis>, an OpenStax resource. This textbook was written to increase student access to high-quality learning materials, maintaining highest standards of academic rigor at little to no cost.</para><section id="fs-id1172504638084">
+<title xmlns:data="http://www.w3.org/TR/html5/dom.html#custom-data-attribute">About OpenStax</title><para xmlns:data="http://www.w3.org/TR/html5/dom.html#custom-data-attribute" id="fs-id1172504661262">OpenStax is a nonprofit based at Rice University, and it’s our mission to improve student access to education. Our first openly licensed college textbook was published in 2012, and our library has since scaled to over 25 books for college and AP<sup>®</sup> courses used by hundreds of thousands of students. OpenStax Tutor, our low-cost personalized learning tool, is being used in college courses throughout the country. Through our partnerships with philanthropic foundations and our alliance with other educational resource organizations, OpenStax is breaking down the most common barriers to learning and empowering students and instructors to succeed.</para></section>
+<section xmlns:data="http://www.w3.org/TR/html5/dom.html#custom-data-attribute" id="fs-id1172504783111"><title>About OpenStax's resources</title><section id="fs-id1172504321798">
+<title>Customization</title>
+<para id="fs-id1172504599145"><emphasis effect="italics">American Government</emphasis> is licensed under a Creative Commons Attribution 4.0 International (CC BY) license, which means that you can distribute, remix, and build upon the content, as long as you provide attribution to OpenStax and its content contributors.</para><para id="fs-id1172504605892">Because our books are openly licensed, you are free to use the entire book or pick and choose the sections that are most relevant to the needs of your course. Feel free to remix the content by assigning your students certain chapters and sections in your syllabus, in the order that you prefer. You can even provide a direct link in your syllabus to the sections in the web view of your book.</para><para id="eip-848">Instructors also have the option of creating a customized version of their OpenStax book. The custom version can be made available to students in low-cost print or digital form through their campus bookstore. Visit your book page on OpenStax.org for more information.</para></section>
+<section id="fs-id1172504673751">
+<title>Errata</title>
+<para id="fs-id1172504347740">All OpenStax textbooks undergo a rigorous review process. However, like any professional-grade textbook, errors sometimes occur. Since our books are web-based, we can make updates periodically when deemed pedagogically necessary. If you have a correction to suggest, submit it through the link on your book page on OpenStax.org. Subject matter experts review all errata suggestions. OpenStax is committed to remaining transparent about all updates, so you will also find a list of past errata changes on your book page on OpenStax.org.</para></section>
+<section id="fs-id1172504347849">
+<title>Format</title>
+<para id="fs-id1172504446494">You can access this textbook for free in web view or PDF through OpenStax.org, and in low-cost print and iBooks editions.</para></section>
+</section><section id="fs-id1172504312178">
+<title xmlns:data="http://www.w3.org/TR/html5/dom.html#custom-data-attribute">About <emphasis effect="italics">American Government</emphasis></title><para id="fs-id1172504780521"><emphasis effect="italics">American Government</emphasis> is designed to meet the scope and sequence requirements of the single-semester American Government course. This title includes innovative features designed to enhance student learning, including Insider Perspective features and a Get Connected module that shows students how they can get engaged in the political process. The book provides an important opportunity for students to learn the core concepts of American Government and understand how those concepts apply to their lives and the world around them.</para>
+<section id="fs-id1172504785908">
+<title xmlns:data="http://www.w3.org/TR/html5/dom.html#custom-data-attribute">Coverage and scope</title><para id="fs-id1172504605790">Our <emphasis effect="italics">American Government</emphasis> textbook adheres to the scope and sequence of introductory American government courses nationwide. We have endeavored to make the workings of American Government interesting and accessible to students while maintaining the conceptual coverage and rigor inherent in the subject at the college level. With this objective in mind, the content of this textbook has been developed and arranged to provide a logical progression from the fundamental principles of institutional design at the founding, to avenues of political participation, to thorough coverage of the political structures that constitute American government. The book builds upon what students have already learned and emphasizes connections between topics as well as between theory and applications. The goal of each section is to enable students not just to recognize concepts, but to work with them in ways that will be useful in later courses, future careers, and as engaged citizens. The organization and pedagogical features were developed and vetted with feedback from American government instructors dedicated to the project.</para>
+<para id="fs-id1172504673723"><emphasis effect="bold">Unit I: Students and the System</emphasis></para>
+<list id="fs-id1172504391507" list-type="bulleted" bullet-style="bullet">
+<item>Chapter 1: American Government and Civic Engagement</item>
+<item>Chapter 2: The Constitution and Its Origins</item>
+<item>Chapter 3: American Federalism</item>
+</list>
+<para id="fs-id1172504290131"><emphasis effect="bold">Unit II: Individual Agency and Action</emphasis></para>
+<list id="fs-id1172504272986" list-type="bulleted" bullet-style="bullet">
+<item>Chapter 4: Civil Liberties</item>
+<item>Chapter 5: Civil Rights</item>
+<item>Chapter 6: The Politics of Public Opinion</item>
+<item>Chapter 7: Voting and Elections</item>
+</list>
+<para id="fs-id1172504334903"><emphasis effect="bold">Unit III: Toward Collective Action: Mediating Institutions</emphasis></para>
+<list id="fs-id1172504418906" list-type="bulleted" bullet-style="bullet">
+<item>Chapter 8: The Media</item>
+<item>Chapter 9: Political Parties</item>
+<item>Chapter 10: Interest Groups and Lobbying</item>
+</list>
+<para id="fs-id1172504772874"><emphasis effect="bold">Unit IV: Delivering Collective Action: Formal Institutions</emphasis></para>
+<list id="fs-id1172504387430" list-type="bulleted" bullet-style="bullet">
+<item>Chapter 11: Congress</item>
+<item>Chapter 12: The Presidency</item>
+<item>Chapter 13: The Courts</item>
+<item>Chapter 14: State and Local Government</item>
+</list>
+<para id="fs-id1172504428635"><emphasis effect="bold">Unit V: Outputs of Government</emphasis></para>
+<list id="fs-id1172504388182" list-type="bulleted" bullet-style="bullet">
+<item>Chapter 15: The Bureaucracy</item>
+<item>Chapter 16: Domestic Policy</item>
+<item>Chapter 17: Foreign Policy</item>
+</list>
+<para id="fs-id1172504398638"><emphasis effect="bold">Appendixes</emphasis></para>
+<list id="fs-id1172504416966" list-type="bulleted" bullet-style="bullet">
+<item>Appendix A: Declaration of Independence</item>
+<item>Appendix B: The Constitution of the United States</item>
+<item>Appendix C: Federalist Papers #10 and #51</item>
+<item>Appendix D: Electoral College Votes by State, 2012–2020</item>
+<item>Appendix E: Selected Supreme Court Cases</item>
+</list>
+</section>
+<section id="fs-id1172504417993">
+<title xmlns:data="http://www.w3.org/TR/html5/dom.html#custom-data-attribute">Engaging feature boxes</title><para id="fs-id1172504368476">Throughout <emphasis effect="italics">American Government</emphasis>, you will find features that engage students by taking selected topics a step further. Our features include:</para>
+<list xmlns:data="http://www.w3.org/TR/html5/dom.html#custom-data-attribute" id="fs-id1172504368861" list-type="bulleted" bullet-style="bullet"><item><emphasis effect="bold">Get Connected!</emphasis> This feature shows students ways they can become engaged in the U.S. political system. Follow-up may include an activity prompt or a discussion question on how students might address a particular problem.</item>
+<item><emphasis effect="bold">Finding a Middle Ground.</emphasis> This feature highlights a tradeoff or compromise related to the chapter’s content area. Follow-up questions guide students to examine multiple perspectives on an issue, think critically about the complexities of the topic, and share their opinions.</item>
+<item><emphasis effect="bold">Insider Perspective.</emphasis> This feature takes students behind the scenes of the governmental system to see how things actually work. Follow-up questions ask students for their reaction to this peek inside the “black box” of politics.</item>
+<item><emphasis effect="bold">Link to Learning.</emphasis> This feature provides a very brief introduction to a website that is pertinent to students’ exploration of the topic at hand. Included in every module, Link to Learning boxes allow students to connect easily to the most current data on ever-changing content such as poll research, budget statistics, and election coverage.</item>
+<item><emphasis effect="bold">Milestone.</emphasis> This feature looks at a key historical moment or series of events in the topic area. Follow-up questions link the milestone to the larger chapter theme and probe students’ knowledge and opinions about the events under discussion.</item>
+</list></section>
+<section id="fs-id1172504666752">
+<title xmlns:data="http://www.w3.org/TR/html5/dom.html#custom-data-attribute">Effective art program</title><para id="fs-id1172504557972">Our art program is designed to enhance students’ understanding of concepts through clear and effective statistical graphs, tables, and photographs.</para>
+<media id="fs-id1172504433494" alt="A chart on the left shows the widening partisan differences in political values between 1987 and 2012. In the center of the chart is a vertical axis line. On the right side of the line are the years 1987 through 2012 marked with ticks. On the left side of the line are percentages, labeled &#x201C;the percentage-point differences between Republicans and Democrats on questions about values&#x201D;. The percentages are as follows: 10% in 1987, 9% in 1988, 10% in 1990, 11% in 1994, 9% in 1997, 11% in 1999, 11% in 2002, 14% in 2003, 14% in 2007, 16% in 2009, and 18% in 2012. At the bottom of the chart, a source is cited: &#x201C;Pew research center, &#x201C;2012 values survey.&#x201D; April 2012&#x201D;. A chart on the right shows the percentage intergenerational resemblance in partisan orientation in 1992. People who identify as strong democrat reported their parents&#x2019; political orientation as follows: 31% reported both of their parents as democrats, 6% reported both of their parents as republicans, and 10% reported no consistent partisanship among parents. Weak democrats reported their parents&#x2019; political orientation as follows: 27% reported both parents as democrat, 6% reported both their parents as republicans, and 14% reported no consistent partisanship among parents. Independent democrats reported their parents&#x2019; political orientation as follows: 14% reported both parents as democrats, 6% reported both parents as republicans, and 18% reported no consistent partisanship among parents. Pure independents reported their parents&#x2019; political orientation as follows: 7% reported both parents as democrats. 7% reported both parents as republicans. 17% reported no consistent partisanship among parents. Independent republicans reported their parents&#x2019; political orientation as follows: 7% reported both parents as democrats, 16% reported both parents as republicans. 16% reported no consistent partisanship among parents. Weak republicans reported their parents&#x2019; political orientation as follows: 8% reported both parents as democrats, 32% reported both parents as republicans, 14% reported no consistent partisanship among parents. Strong republicans reported their parents&#x2019; political orientation as follows: 6% reported both parents as democrats, 27% report both parents as republicans, and 9% reported no consistent partisanship among parents. At the bottom of the chart, a source is cited: &#x201C;Miller, Warren E., Donald R. Kinder, Steven J. Rosenstone, and National Election Studies. American National Election Study, 1992: Pre- and Post-Election Survey [Enhanced with 1990 and 1991 Data]. ICPSR06067-v2. Ann Arbor, MI: Inter-university Consortium for Political and Social Research [distributor], 1999. http://doi.org/10.3886/ICPSR06067.v2&#x201D;.">
+<image mime-type="image/jpeg" src="OSC_AmGov_00_PR_Graph1_img.jpg"/>
+</media>
+<media id="fs-id1172504315519" alt="A chart titled &#x201C;Appointments of the Current Supreme Court Justices&#x201D;. A horizontal timeline runs through the center of the chart. Starting from the left, the first point marked on the line is labeled &#x201C;Anthony Kennedy, Appointed by Ronald Regan in 1988&#x201D;. The label is colored blue and red to indicate both liberal and conservative. The second point is labeled &#x201C;Clarence Thomas, Appointed by George H. W. Bush in 1991&#x201D;. The label is colored red to indicate conservative. The third point is labeled &#x201C;Ruth Bader Ginsburg, Appointed by Bill Clinton in 1993&#x201D;. The label is colored blue to indicate liberal. The fourth point is labeled &#x201C;Stephen Breyer, Appointed by Bill Clinton in 1994&#x201D;. The label is colored blue to indicate liberal. The fifth point is labeled &#x201C;John Roberts (Chief), Appointed by George W. Bush in 2005&#x201D;. The label is colored red to indicate conservative. The sixth point is labeled &#x201C;Samuel Alito, Appointed by George W. Bush in 2006&#x201D;. The label is colored red to indicate conservative. The seventh point is labeled &#x201C;Sonia Sotomayor, Appointed by Barack Obama in 2009&#x201D;. The label is colored blue to indicate liberal. The eight point is labeled &#x201C;Elena Kagan, Appointed by Barack Obama in 2010&#x201D;. The label is colored blue to indicate liberal. The last point is labeled with an uncolored question mark.">
+<image mime-type="image/jpeg" src="OSC_AmGov_00_Pr_Graph2_img.jpg"/>
+</media>
+</section>
+<section id="fs-id1172504429585">
+<title xmlns:data="http://www.w3.org/TR/html5/dom.html#custom-data-attribute">Module materials that reinforce key concepts</title><list xmlns:data="http://www.w3.org/TR/html5/dom.html#custom-data-attribute" id="fs-id1172504354009" list-type="bulleted" bullet-style="bullet"><item><emphasis effect="bold">Learning Objectives.</emphasis> Every module begins with a set of clear and concise learning objectives. These objectives are designed to help the instructor decide what content to include or assign, and to guide students with respect to what they can expect to learn. After completing the module and end-of-module exercises, students should be able to demonstrate mastery of the learning objectives.</item>
+<item><emphasis effect="bold">Summaries.</emphasis> Section summaries distill the information in each module for both students and instructors down to key, concise points addressed in the section.</item>
+<item><emphasis effect="bold">Key Terms.</emphasis> Key terms are in bold and are followed by a definition in context. Definitions of key terms are also listed in the Glossary, which appears at the end of the module online and at the end of the chapter in print.</item>
+<item><emphasis effect="bold">Assessments.</emphasis> Multiple-choice and short-answer Review Questions provide opportunities to recall and test the information students learn throughout each module. End-of-chapter Critical Thinking Questions encourage deeper reflection on the chapter concepts and themes.</item>
+<item><emphasis effect="bold">Suggestions for Further Study.</emphasis> This curated list of books, films, and online resources helps students further explore the chapter topic.</item>
+</list></section>
+</section>
+<section id="fs-id1172504294297">
+<title xmlns:data="http://www.w3.org/TR/html5/dom.html#custom-data-attribute">Additional resources</title><section id="fs-id1172504441033">
+<title xmlns:data="http://www.w3.org/TR/html5/dom.html#custom-data-attribute">Student and instructor resources</title><para xmlns:data="http://www.w3.org/TR/html5/dom.html#custom-data-attribute" id="fs-id1172504315191">We’ve compiled additional resources for both students and instructors, including Getting Started Guides, PowerPoint slides, and an instructor answer guide. Instructor resources require a verified instructor account, which you can apply for when you log in or create your account on OpenStax.org. Take advantage of these resources to supplement your OpenStax book.</para></section>
+<section xmlns:data="http://www.w3.org/TR/html5/dom.html#custom-data-attribute" id="eip-774"><title>Community Hubs</title><para id="eip-229">
+OpenStax partners with the Institute for the Study of Knowledge Management in Education (ISKME) to offer Community Hubs on OER Commons – a platform for instructors to share community-created resources that support OpenStax books, free of charge. Through our Community Hubs, instructors can upload their own materials or download resources to use in their own courses, including additional ancillaries, teaching material, multimedia, and relevant course content. We encourage instructors to join the hubs for the subjects most relevant to your teaching and research as an opportunity both to enrich your courses and to engage with other faculty.  
+
+</para><para id="eip-idm1598099088">To reach the Community Hubs, visit <link url="https://www.oercommons.org/hubs/OpenStax">OER Commons</link>.</para></section><section id="fs-id1172504598473">
+<title xmlns:data="http://www.w3.org/TR/html5/dom.html#custom-data-attribute">Partner resources</title><para xmlns:data="http://www.w3.org/TR/html5/dom.html#custom-data-attribute" id="fs-id1172504557142">OpenStax Partners are our allies in the mission to make high-quality learning materials affordable and accessible to students and instructors everywhere. Their tools integrate seamlessly with our OpenStax titles at a low cost. To access the partner resources for your text, visit your book page on OpenStax.org.</para></section>
+</section>
+<section xmlns:data="http://www.w3.org/TR/html5/dom.html#custom-data-attribute" id="fs-id1172504599660"><title>About the authors</title><section id="eip-171" class="sr-contrib-auth"><title>Senior contributing authors</title><para id="eip-628" class="sr-contrib-auth"><emphasis>Glen Krutz (Content Lead), University of Oklahoma</emphasis><newline/>
+Dr. Glen Krutz received his BA and MPA from the University of Nevada–Reno, and his PhD from Texas A&amp;M University. He joined the University of Oklahoma’s Department of Political Science in 2002 and serves as Professor of Political Science, teaching the American Government course to hundreds of students each semester. Prior to his academic career, Dr. Krutz worked in politics and policy, as a campaign assistant and then Capitol Hill aide to a U.S. senator, and as a research analyst for what would become the Nevada System of Higher Education. He has authored and co-authored several books, and his work has appeared in numerous leading journals. Dr. Krutz’s current research probes questions of public policy agenda-setting in democratic political institutions, especially Congress.</para><para id="eip-683"><emphasis>Sylvie Waskiewicz (Lead Editor), PhD</emphasis><newline/>
+Dr. Waskiewicz received her BSBA from Georgetown University and her MA and PhD from the Institute of French Studies at New York University. With a specialization in Franco-American relations and over ten years of teaching experience at the university level, Sylvie left academia to join the ranks of higher education publishing. She has spent the last nine years editing college textbooks and academic journals in the humanities, social sciences, and world languages.</para></section>
+
+
+
+
+<section id="eip-401" class="contrib-auth"><title>Contributing authors</title><para id="eip-614">Prosper Bernard, Jr., City University of New York<newline/>
+Jennifer Danley-Scott, Texas Woman’s University<newline/>
+Ann Kordas, Johnson &amp; Wales University<newline/>
+Christopher Lawrence, Middle Georgia State College<newline/>
+Tonya Neaves, George Mason University<newline/>
+Adam Newmark, Appalachian State University<newline/>
+Brooks D. Simpson, Arizona State University<newline/>
+Joel Webb, Tulane University<newline/>
+Shawn Williams, Campbellsville University<newline/>
+Rhonda Wrzenski, Indiana University Southeast</para></section>
+<section id="eip-276"><title>Reviewers</title><para id="eip-194">
+Brad Allard, Hill College<newline/>
+Milan Andrejevich, Ivy Tech Community College<newline/>
+Thomas Arndt, Rowan University<newline/>
+Sue Atkinson, University of Maryland–University College<newline/>
+Edward Bond, Alabama A&amp;M University<newline/>
+Joseph Campbell, Rose State College<newline/>
+James Davenport, Rose State College<newline/>
+Sharon Deubreau, Rhodes State College<newline/>
+Henry Esparza, University of Texas–San Antonio<newline/>
+Terri Fine, University of Central Florida<newline/>
+Mark Francisco, Volunteer State Community College<newline/>
+Sarah Gershon, Georgia State University<newline/>
+Rick Gianni, Indiana University Northwest<newline/>
+Travis Grasser, Commerce High School<newline/>
+Eric Herzik, University of Nevada–Reno<newline/>
+Matthew Hipps, Dalton State College<newline/>
+Alexander Hogan, Lone Star College–CyFair<newline/>
+Cynthia Hunter-Summerlin, Tarrant County College<newline/>
+Tseggai Isaac, University of Missouri-Rolla<newline/>
+Walter Jatkowski, III, Northwest College<newline/>
+Kevin Jeffries, Alvin Community College<newline/>
+J. Aaron Knight, Houston Community College<newline/>
+Robert Lancaster, Kentucky State University<newline/>
+John Lund, Keene State College<newline/>
+Shari MacLachlan, Palm Beach State College<newline/>
+Carol Marmaduke-Sands, North Central Texas College<newline/>
+James McCormick, Iowa State University<newline/>
+Eric Miller, Blinn College<newline/>
+Sara Moats, Florida International University<newline/>
+Marie Natoli, Emmanuel College<newline/>
+Caryn Neumann, Miami University of Ohio<newline/>
+James Newman, Southeast Missouri State University<newline/>
+Cynthia Newton, Wesley College<newline/>
+Jeffrey S. Peake, Clemson University<newline/>
+G. David Price, Santa Fe College<newline/>
+James Ronan, Rowan University<newline/>
+David Smith, Texas A&amp;M University-Corpus Christi<newline/>
+Leniece Smith, Jackson State University<newline/>
+Kai Sorensen, Central Michigan University<newline/>
+James Starkey, Pasadena City College<newline/>
+Karen Stewart, Collin College<newline/>
+Abram Trosky, United States Coast Guard Academy<newline/>
+Adam Warber, Clemson University<newline/>
+Alexander Wathen, University of Houston–Downtown<newline/>
+Reed Welch, West Texas A&amp;M University<newline/>
+Yvonne Wollenberg, Rutgers University<newline/>
+John Wood, University of Central Oklahoma<newline/>
+Laura Wood, Tarrant County College<newline/>
+Michael Zarkin, Westminster College
+</para></section></section></content>
+</document>

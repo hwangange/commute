@@ -1,0 +1,65 @@
+<?xml version="1.0"?>
+<document xmlns="http://cnx.rice.edu/cnxml" xmlns:md="http://cnx.rice.edu/mdml" xmlns:bib="http://bibtexml.sf.net/" xmlns:m="http://www.w3.org/1998/Math/MathML" xmlns:q="http://cnx.rice.edu/qml/1.0" id="new" cnxml-version="0.7" module-id="new" class="introduction">
+
+<title>Introduction</title>
+<metadata xmlns:md="http://cnx.rice.edu/mdml"
+          mdml-version="0.5">
+  <!-- WARNING! The 'metadata' section is read only. Do not edit below.
+       Changes to the metadata section in the source will not be saved. -->
+  <md:repository>http://legacy.cnx.org/content</md:repository>
+  <md:content-url>http://legacy.cnx.org/content/m58997/latest/</md:content-url>
+  <md:content-id>m58997</md:content-id>
+  <md:title>Introduction</md:title>
+  <md:version>1.2</md:version>
+  <md:created>2015/12/23 10:39:54 -0600</md:created>
+  <md:revised>2016/07/01 11:38:46.948 GMT-5</md:revised>
+  <md:actors>
+    <md:person userid="cnxamgov">
+      <md:firstname>OpenStax</md:firstname>
+      <md:surname>American Goverment</md:surname>
+      <md:fullname>OpenStax American Goverment</md:fullname>
+      <md:email>info@openstaxcollege.org</md:email>
+    </md:person>
+  </md:actors>
+  <md:roles>
+    <md:role type="author">cnxamgov</md:role>
+    <md:role type="maintainer">cnxamgov</md:role>
+    <md:role type="licensor">cnxamgov</md:role>
+  </md:roles>
+  <md:license url="http://creativecommons.org/licenses/by/4.0/">Creative Commons Attribution License 4.0</md:license>
+  <!-- For information on license requirements for use or modification, see license url in the
+       above <md:license> element.
+       For information on formatting required attribution, see the URL:
+         CONTENT_URL/content_info#cnx_cite_header
+       where CONTENT_URL is the value provided above in the <md:content-url> element.
+  -->
+  <md:keywordlist>
+    <md:keyword>Journalism</md:keyword>
+    <md:keyword>Media</md:keyword>
+  </md:keywordlist>
+  <md:subjectlist>
+    <md:subject>Social Sciences</md:subject>
+    <md:subject>Social Sciences</md:subject>
+  </md:subjectlist>
+  <md:abstract></md:abstract>
+  <md:language>en</md:language>
+  <!-- WARNING! The 'metadata' section is read only. Do not edit above.
+       Changes to the metadata section in the source will not be saved. -->
+</metadata>
+
+<content>
+<?cnx.eoc class="summary" title="Summary"?>
+<?cnx.eoc class="review-questions" title="Review Questions"?>
+<?cnx.eoc class="critical-thinking" title="Critical Thinking Questions"?>
+<?cnx.eoc class="suggested-reading" title="Suggested Reading"?>
+<?cnx.eoc class="references" title="References"?>
+<figure id="OSC_AmGov_08_00_SandersBLM" class="splash">
+<media id="fs-id1171470997104" alt="An image of Bernie Sanders on a stage. Bernie is standing to the right and several people are standing in front of a podium.">
+<image mime-type="image/jpeg" src="OSC_AmGov_08_00_SandersBLM.jpg"/>
+</media>
+<caption>On August 8, 2015, activists for Black Lives Matter in Seattle commandeered presidential candidate Bernie Sanders’ campaign rally in an effort to get their message out. (credit: modification of work by Tiffany Von Arnim)</caption>
+</figure>
+<para id="fs-id1171473140640">Democratic primary candidate Bernie <term class="no-emphasis">Sanders</term> arrived in Seattle on August 8, 2015, to give a speech at a rally to promote his presidential campaign. Instead, the rally was interrupted—and eventually co-opted—by activists for <term class="no-emphasis">Black Lives Matter</term> (<link target-id="OSC_AmGov_08_00_SandersBLM"/>).<cite target-id="rf-1"><note class="reference" display="inline" id="rf-1">Dan Merica, “Black Lives Matter Protesters Shut Down Sanders Event in Seattle,” <emphasis effect="italics">CNN</emphasis>, 10 August 2015.</note></cite> Why did the group risk alienating Democratic voters by preventing Sanders from speaking? Because Black Lives Matter had been trying to raise awareness of the treatment of black citizens in the United States, and the media has the power to elevate such issues.<cite target-id="rf-2"><note class="reference" display="inline" id="rf-2">http://blacklivesmatter.com/about/ (August 29, 2015).</note></cite> While some questioned its tactics, the organization’s move underscores how important the media are to gaining recognition, and the lengths to which organizations are willing to go to get media attention.<cite target-id="rf-3"><note class="reference" display="inline" id="rf-3">Conor Friedersdorf, “A Conversation about Black Lives Matter and Bernie Sanders,” <emphasis effect="italics">The Atlantic</emphasis>, 21 August 2015.</note></cite></para>
+<para id="fs-id1171471317880">Freedom of the press and an independent media are important dimensions of a liberal society and a necessary part of a healthy democracy. “No government ought to be without censors,” said Thomas Jefferson, “and where the press is free, no one ever will.”<cite target-id="rf-4"><note class="reference" display="inline" id="rf-4">Anthony R. Fellow. 2013. <emphasis effect="italics">American Media History</emphasis>. Boston: Cengage, page 67.</note></cite> What does it mean to have a free news media? What regulations limit what media can do? How do the media contribute to informing citizens and monitoring politicians and the government, and how do we measure their impact? This chapter explores these and other questions about the role of the media in the United States.</para>
+</content>
+</document>

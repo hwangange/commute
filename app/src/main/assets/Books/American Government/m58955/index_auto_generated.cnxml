@@ -1,0 +1,64 @@
+<?xml version="1.0"?>
+<document xmlns="http://cnx.rice.edu/cnxml" xmlns:md="http://cnx.rice.edu/mdml" xmlns:bib="http://bibtexml.sf.net/" xmlns:m="http://www.w3.org/1998/Math/MathML" xmlns:q="http://cnx.rice.edu/qml/1.0" id="new" cnxml-version="0.7" module-id="new" class="introduction">
+
+<title>Introduction</title>
+<metadata xmlns:md="http://cnx.rice.edu/mdml"
+          mdml-version="0.5">
+  <!-- WARNING! The 'metadata' section is read only. Do not edit below.
+       Changes to the metadata section in the source will not be saved. -->
+  <md:repository>http://legacy.cnx.org/content</md:repository>
+  <md:content-url>http://legacy.cnx.org/content/m58955/latest</md:content-url>
+  <md:content-id>m58955</md:content-id>
+  <md:title>Introduction</md:title>
+  <md:version>1.3</md:version>
+  <md:created>2015/12/22 05:21:08 -0600</md:created>
+  <md:revised>2016/12/01 12:27:11 -0600</md:revised>
+  <md:actors>
+    <md:person userid="cnxamgov">
+      <md:firstname>OpenStax</md:firstname>
+      <md:surname>American Government</md:surname>
+      <md:fullname>OpenStax American Government</md:fullname>
+      <md:email>info@openstaxcollege.org</md:email>
+    </md:person>
+  </md:actors>
+  <md:roles>
+    <md:role type="author">cnxamgov</md:role>
+    <md:role type="maintainer">cnxamgov</md:role>
+    <md:role type="licensor">cnxamgov</md:role>
+  </md:roles>
+  <md:license url="http://creativecommons.org/licenses/by/4.0/">Creative Commons Attribution License 4.0</md:license>
+  <!-- For information on license requirements for use or modification, see license url in the
+       above <md:license> element.
+       For information on formatting required attribution, see the URL:
+         CONTENT_URL/content_info#cnx_cite_header
+       where CONTENT_URL is the value provided above in the <md:content-url> element.
+  -->
+  <md:keywordlist>
+    <md:keyword>Civic engagement</md:keyword>
+    <md:keyword>Government</md:keyword>
+  </md:keywordlist>
+  <md:subjectlist>
+    <md:subject>Social Sciences</md:subject>
+    <md:subject>Social Sciences</md:subject>
+  </md:subjectlist>
+  <md:abstract></md:abstract>
+  <md:language>en</md:language>
+  <!-- WARNING! The 'metadata' section is read only. Do not edit above.
+       Changes to the metadata section in the source will not be saved. -->
+</metadata>
+
+<content>
+<?cnx.eoc class="summary" title="Summary"?>
+<?cnx.eoc class="review-questions" title="Review Questions"?>
+<?cnx.eoc class="critical-thinking" title="Critical Thinking Questions"?>
+<?cnx.eoc class="suggested-reading" title="Suggested Reading"?>
+<?cnx.eoc class="references" title="References"?>
+<figure id="OSC_AmGov_01_00_Voting" class="splash">
+<media id="fs-id1171472100552" alt="An image of a poster that reads &#x201C;This is America where you vote as you please, where the privileges of democracy belong to all people equally, where your government is your servant, not your master. This is your America&#x2026;Keep it Free!&#x201D;">
+<image mime-type="image/jpeg" src="OSC_AmGov_01_00_Voting.jpg"/>
+</media>
+<caption>In the United States, the right to vote is an important feature of the nation’s system of government, and over the years many people have fought and sacrificed to obtain it. Yet, today, many people ignore this important means of civic engagement. (credit: modification of work by the National Archives and Records Administration)</caption>
+</figure>
+<para xmlns:data="http://www.w3.org/TR/html5/dom.html#custom-data-attribute" id="fs-id1171472269687">Since its founding, the United States has relied on citizen participation to govern at the local, state, and national levels. This civic engagement ensures that representative democracy will continue to flourish and that people will continue to influence government. The right of citizens to participate in government is an important feature of democracy, and over the centuries many have fought to acquire and defend this right. During the American Revolution (1775–1783), British colonists fought for the right to govern themselves. In the early nineteenth century, agitated citizens called for the removal of property requirements for voting so poor white men could participate in government just as wealthy men could. Throughout the late nineteenth and twentieth centuries, women, African Americans, Native Americans, and many other groups fought for the right to vote and hold office. </para><para id="fs-id1171472143696">The poster shown above (<link target-id="OSC_AmGov_01_00_Voting"/>), created during World War II, depicts voting as an important part of the fight to keep the United States free. The purpose of voting and other forms of political engagement is to ensure that government serves the people, and not the other way around. But what does government do to serve the people? What different forms of government exist? How do they differ? How can citizens best engage with and participate in the crucial process of governing the nation? This chapter seeks to answer these questions.</para>
+</content>
+</document>

@@ -1,0 +1,66 @@
+<?xml version="1.0"?>
+<document xmlns="http://cnx.rice.edu/cnxml" xmlns:md="http://cnx.rice.edu/mdml" xmlns:bib="http://bibtexml.sf.net/" xmlns:m="http://www.w3.org/1998/Math/MathML" xmlns:q="http://cnx.rice.edu/qml/1.0" id="new" cnxml-version="0.7" module-id="new" class="introduction">
+
+<title>Introduction</title>
+<metadata xmlns:md="http://cnx.rice.edu/mdml"
+          mdml-version="0.5">
+  <!-- WARNING! The 'metadata' section is read only. Do not edit below.
+       Changes to the metadata section in the source will not be saved. -->
+  <md:repository>http://legacy.cnx.org/content</md:repository>
+  <md:content-url>http://legacy.cnx.org/content/m59048/latest/</md:content-url>
+  <md:content-id>m59048</md:content-id>
+  <md:title>Introduction</md:title>
+  <md:version>1.2</md:version>
+  <md:created>2015/12/23 13:03:03 -0600</md:created>
+  <md:revised>2016/07/01 11:52:59.743 GMT-5</md:revised>
+  <md:actors>
+    <md:person userid="cnxamgov">
+      <md:firstname>OpenStax</md:firstname>
+      <md:surname>American Goverment</md:surname>
+      <md:fullname>OpenStax American Goverment</md:fullname>
+      <md:email>info@openstaxcollege.org</md:email>
+    </md:person>
+  </md:actors>
+  <md:roles>
+    <md:role type="author">cnxamgov</md:role>
+    <md:role type="maintainer">cnxamgov</md:role>
+    <md:role type="licensor">cnxamgov</md:role>
+  </md:roles>
+  <md:license url="http://creativecommons.org/licenses/by/4.0/">Creative Commons Attribution License 4.0</md:license>
+  <!-- For information on license requirements for use or modification, see license url in the
+       above <md:license> element.
+       For information on formatting required attribution, see the URL:
+         CONTENT_URL/content_info#cnx_cite_header
+       where CONTENT_URL is the value provided above in the <md:content-url> element.
+  -->
+  <md:keywordlist>
+    <md:keyword>Presidency</md:keyword>
+    <md:keyword>President</md:keyword>
+    <md:keyword>Presidential Election</md:keyword>
+  </md:keywordlist>
+  <md:subjectlist>
+    <md:subject>Social Sciences</md:subject>
+    <md:subject>Social Sciences</md:subject>
+  </md:subjectlist>
+  <md:abstract></md:abstract>
+  <md:language>en</md:language>
+  <!-- WARNING! The 'metadata' section is read only. Do not edit above.
+       Changes to the metadata section in the source will not be saved. -->
+</metadata>
+
+<content>
+<?cnx.eoc class="summary" title="Summary"?>
+<?cnx.eoc class="review-questions" title="Review Questions"?>
+<?cnx.eoc class="critical-thinking" title="Critical Thinking Questions"?>
+<?cnx.eoc class="suggested-reading" title="Suggested Reading"?>
+<?cnx.eoc class="references" title="References"?>
+<figure id="OSC_AmGov_12_00_Inaugurate" class="splash">
+<media id="fs-id1172503306390" alt="The left image shows a crowd of people waving American flags in front of the Capitol. The right image shows Barack Obama being sworn in as President of the United States.">
+<image mime-type="image/jpeg" src="OSC_AmGov_12_00_Inaugurate.jpg"/>
+</media>
+<caption>On January 20, 2009, crowds of people waited on the National Mall in the cold to see the inauguration of Barack Obama. (credit left: modification of work by Teddy Wade; credit right: modification of work by Cecilio Ricardo)</caption>
+</figure>
+<para id="fs-id1172503351016">The presidency is the most visible position in the U.S. government (<link target-id="OSC_AmGov_12_00_Inaugurate"/>). During the Constitutional Convention of 1787, delegates accepted the need to empower a relatively strong and vigorous chief executive. But they also wanted this chief executive to be bound by checks from the other branches of the federal government as well as by the Constitution itself. Over time, the power of the presidency has grown in response to circumstances and challenges. However, to this day, a president must still work with the other branches to be most effective. Unilateral actions, in which the president acts alone on important and consequential matters, such as President Barack Obama’s strategy on the Iran nuclear deal, are bound to be controversial and suggest potentially serious problems within the federal government. Effective presidents, especially in peacetime, are those who work with the other branches through persuasion and compromise to achieve policy objectives.</para>
+<para id="fs-id1172503325207">What are the powers, opportunities, and limitations of the presidency? How does the chief executive lead in our contemporary political system? What guides his or her actions, including unilateral actions? If it is most effective to work with others to get things done, how does the president do so? What can get in the way of this goal? This chapter answers these and other questions about the nation’s most visible leader.</para>
+</content>
+</document>

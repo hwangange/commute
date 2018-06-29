@@ -1,0 +1,1619 @@
+<?xml version="1.0"?>
+<col:collection xmlns="http://cnx.rice.edu/collxml"
+                xmlns:cnx="http://cnx.rice.edu/cnxml"
+                xmlns:cnxorg="http://cnx.rice.edu/system-info"
+                xmlns:md="http://cnx.rice.edu/mdml"
+                xmlns:col="http://cnx.rice.edu/collxml"
+                xmlns:cnxml="http://cnx.rice.edu/cnxml"
+                xmlns:m="http://www.w3.org/1998/Math/MathML"
+                xmlns:q="http://cnx.rice.edu/qml/1.0"
+                xmlns:xhtml="http://www.w3.org/1999/xhtml"
+                xmlns:bib="http://bibtexml.sf.net/"
+                xmlns:cc="http://web.resource.org/cc/"
+                xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+                xml:lang="en">
+  <metadata xmlns:md="http://cnx.rice.edu/mdml"
+          mdml-version="0.5">
+  <!-- WARNING! The 'metadata' section is read only. Do not edit below.
+       Changes to the metadata section in the source will not be saved. -->
+
+  <md:repository>https://legacy.cnx.org/content</md:repository>
+  <md:content-url>https://legacy.cnx.org/content/col11995/1.17</md:content-url>
+  <md:content-id>col11995</md:content-id>
+  <md:title>American Government</md:title>
+  
+  
+  <md:version>1.17</md:version>
+  <md:created>2016/01/06 10:19:41.033 US/Central</md:created>
+  <md:revised>2018/06/25 11:27:52.365 GMT-5</md:revised>
+
+  <md:actors>
+    
+    
+    <md:person userid="cnxamgov">
+      <md:firstname>OpenStax</md:firstname>
+      <md:surname>American Government</md:surname>
+      <md:fullname>OpenStax American Government</md:fullname>
+      <md:email>info@openstaxcollege.org</md:email>
+    </md:person>
+    
+  </md:actors>
+  <md:roles>
+    <md:role type="author">cnxamgov</md:role>
+    <md:role type="maintainer">cnxamgov</md:role>
+    <md:role type="licensor">cnxamgov</md:role>
+    
+    
+  </md:roles>
+
+  <md:license url="http://creativecommons.org/licenses/by/4.0/">Creative Commons Attribution License 4.0</md:license>
+  <!-- For information on license requirements for use or modification, see license url in the
+       above <md:license> element.
+       For information on formatting required attribution, see the URL:
+         CONTENT_URL/content_info#cnx_cite_header
+       where CONTENT_URL is the value provided above in the <md:content-url> element.
+  -->
+  
+  
+  
+  
+
+  
+
+  
+
+  <md:subjectlist>
+    <md:subject>Humanities</md:subject>
+  </md:subjectlist>
+
+  <md:abstract>American Government is designed to meet the scope and sequence requirements of the single-semester American government course. This title includes innovative features designed to enhance student learning, including Insider Perspective features and a Get Connected Module that shows students how they can get engaged in the political process. The book provides an important opportunity for students to learn the core concepts of American government and understand how those concepts apply to their lives and the world around them. American Government includes updated information on the 2016 presidential election.</md:abstract>
+
+  <md:language>en</md:language>
+
+  
+
+  
+  
+  
+  
+  
+
+  <!-- WARNING! The 'metadata' section is read only. Do not edit above.
+       Changes to the metadata section in the source will not be saved. -->
+</metadata>
+
+  <col:parameters>
+    <col:param name="real-imaginary-notation" value="font"/>
+    <col:param name="and-or-notation"
+               value="propositional-logic"/>
+    <col:param name="gradient-notation" value="text"/>
+    <col:param name="mean-notation" value="bar"/>
+    <col:param name="remainder-notation" value="text"/>
+    <col:param name="conjugate-notation" value="bar"/>
+    <col:param name="imaginary-i-notation" value="i"/>
+    <col:param name="scalar-product-notation"
+               value="angle-bracket"/>
+    <col:param name="print-font-size" value="10pt"/>
+    <col:param name="curl-notation" value="text"/>
+    <col:param name="for-all-equation-layout"
+               value="symbolic"/>
+    <col:param name="vector-notation" value="bold"/>
+    <col:param name="print-paper-size" value="8.5x11"/>
+    <col:param name="print-font" value="computer-modern"/>
+    <col:param name="print-style"
+               value="ccap-american-government"/>
+    <col:param name="print-paragraph-spacing"
+               value="compact"/>
+  </col:parameters>
+  
+  <col:content>
+    
+      <col:module document="m62049" version="latest"
+                  repository="https://legacy.cnx.org/content"
+                  cnxorg:version-at-this-collection-version="1.15">
+        <md:title>Preface</md:title>
+        
+        
+        
+      </col:module>
+        
+      
+    
+    
+      
+        
+      <col:subcollection>
+        <md:title>Students and the System</md:title>
+        
+        
+        
+
+        <col:content>
+          
+    
+      
+        
+      <col:subcollection>
+        <md:title>American Government and Civic Engagement</md:title>
+        
+        
+        
+
+        <col:content>
+          
+    
+      <col:module document="m58955" version="latest"
+                  repository="https://legacy.cnx.org/content"
+                  cnxorg:version-at-this-collection-version="1.3">
+        <md:title>Introduction</md:title>
+        
+        
+        
+      </col:module>
+        
+      
+    
+    
+      <col:module document="m58956" version="latest"
+                  repository="https://legacy.cnx.org/content"
+                  cnxorg:version-at-this-collection-version="1.4">
+        <md:title>What is Government?</md:title>
+        
+        
+        
+      </col:module>
+        
+      
+    
+    
+      <col:module document="m58957" version="latest"
+                  repository="https://legacy.cnx.org/content"
+                  cnxorg:version-at-this-collection-version="1.5">
+        <md:title>Who Governs? Elitism, Pluralism, and Tradeoffs</md:title>
+        
+        
+        
+      </col:module>
+        
+      
+    
+    
+      <col:module document="m58958" version="latest"
+                  repository="https://legacy.cnx.org/content"
+                  cnxorg:version-at-this-collection-version="1.5">
+        <md:title>Engagement in a Democracy</md:title>
+        
+        
+        
+      </col:module>
+        
+      
+    
+        </col:content>
+      </col:subcollection>
+    
+    
+      
+        
+      <col:subcollection>
+        <md:title>The Constitution and Its Origins</md:title>
+        
+        
+        
+
+        <col:content>
+          
+    
+      <col:module document="m58960" version="latest"
+                  repository="https://legacy.cnx.org/content"
+                  cnxorg:version-at-this-collection-version="1.3">
+        <md:title>Introduction</md:title>
+        
+        
+        
+      </col:module>
+        
+      
+    
+    
+      <col:module document="m58961" version="latest"
+                  repository="https://legacy.cnx.org/content"
+                  cnxorg:version-at-this-collection-version="1.3">
+        <md:title>The Pre-Revolutionary Period and the Roots of the American Political Tradition</md:title>
+        
+        
+        
+      </col:module>
+        
+      
+    
+    
+      <col:module document="m58962" version="latest"
+                  repository="https://legacy.cnx.org/content"
+                  cnxorg:version-at-this-collection-version="1.8">
+        <md:title>The Articles of Confederation</md:title>
+        
+        
+        
+      </col:module>
+        
+      
+    
+    
+      <col:module document="m58963" version="latest"
+                  repository="https://legacy.cnx.org/content"
+                  cnxorg:version-at-this-collection-version="1.5">
+        <md:title>The Development of the Constitution</md:title>
+        
+        
+        
+      </col:module>
+        
+      
+    
+    
+      <col:module document="m58964" version="latest"
+                  repository="https://legacy.cnx.org/content"
+                  cnxorg:version-at-this-collection-version="1.3">
+        <md:title>The Ratification of the Constitution</md:title>
+        
+        
+        
+      </col:module>
+        
+      
+    
+    
+      <col:module document="m58965" version="latest"
+                  repository="https://legacy.cnx.org/content"
+                  cnxorg:version-at-this-collection-version="1.5">
+        <md:title>Constitutional Change</md:title>
+        
+        
+        
+      </col:module>
+        
+      
+    
+        </col:content>
+      </col:subcollection>
+    
+    
+      
+        
+      <col:subcollection>
+        <md:title>American Federalism</md:title>
+        
+        
+        
+
+        <col:content>
+          
+    
+      <col:module document="m58966" version="latest"
+                  repository="https://legacy.cnx.org/content"
+                  cnxorg:version-at-this-collection-version="1.2">
+        <md:title>Introduction</md:title>
+        
+        
+        
+      </col:module>
+        
+      
+    
+    
+      <col:module document="m58967" version="latest"
+                  repository="https://legacy.cnx.org/content"
+                  cnxorg:version-at-this-collection-version="1.3">
+        <md:title>The Division of Powers</md:title>
+        
+        
+        
+      </col:module>
+        
+      
+    
+    
+      <col:module document="m58968" version="latest"
+                  repository="https://legacy.cnx.org/content"
+                  cnxorg:version-at-this-collection-version="1.2">
+        <md:title>The Evolution of American Federalism</md:title>
+        
+        
+        
+      </col:module>
+        
+      
+    
+    
+      <col:module document="m58969" version="latest"
+                  repository="https://legacy.cnx.org/content"
+                  cnxorg:version-at-this-collection-version="1.3">
+        <md:title>Intergovernmental Relationships</md:title>
+        
+        
+        
+      </col:module>
+        
+      
+    
+    
+      <col:module document="m58970" version="latest"
+                  repository="https://legacy.cnx.org/content"
+                  cnxorg:version-at-this-collection-version="1.2">
+        <md:title>Competitive Federalism Today</md:title>
+        
+        
+        
+      </col:module>
+        
+      
+    
+    
+      <col:module document="m58971" version="latest"
+                  repository="https://legacy.cnx.org/content"
+                  cnxorg:version-at-this-collection-version="1.2">
+        <md:title>Advantages and Disadvantages of Federalism</md:title>
+        
+        
+        
+      </col:module>
+        
+      
+    
+        </col:content>
+      </col:subcollection>
+    
+        </col:content>
+      </col:subcollection>
+    
+    
+      
+        
+      <col:subcollection>
+        <md:title>Individual Agency and Action</md:title>
+        
+        
+        
+
+        <col:content>
+          
+    
+      
+        
+      <col:subcollection>
+        <md:title>Civil Liberties</md:title>
+        
+        
+        
+
+        <col:content>
+          
+    
+      <col:module document="m58976" version="latest"
+                  repository="https://legacy.cnx.org/content"
+                  cnxorg:version-at-this-collection-version="1.2">
+        <md:title>Introduction</md:title>
+        
+        
+        
+      </col:module>
+        
+      
+    
+    
+      <col:module document="m58977" version="latest"
+                  repository="https://legacy.cnx.org/content"
+                  cnxorg:version-at-this-collection-version="1.4">
+        <md:title>What Are Civil Liberties?</md:title>
+        
+        
+        
+      </col:module>
+        
+      
+    
+    
+      <col:module document="m58978" version="latest"
+                  repository="https://legacy.cnx.org/content"
+                  cnxorg:version-at-this-collection-version="1.3">
+        <md:title>Securing Basic Freedoms</md:title>
+        
+        
+        
+      </col:module>
+        
+      
+    
+    
+      <col:module document="m58979" version="latest"
+                  repository="https://legacy.cnx.org/content"
+                  cnxorg:version-at-this-collection-version="1.2">
+        <md:title>The Rights of Suspects</md:title>
+        
+        
+        
+      </col:module>
+        
+      
+    
+    
+      <col:module document="m58980" version="latest"
+                  repository="https://legacy.cnx.org/content"
+                  cnxorg:version-at-this-collection-version="1.3">
+        <md:title>Interpreting the Bill of Rights</md:title>
+        
+        
+        
+      </col:module>
+        
+      
+    
+        </col:content>
+      </col:subcollection>
+    
+    
+      
+        
+      <col:subcollection>
+        <md:title>Civil Rights</md:title>
+        
+        
+        
+
+        <col:content>
+          
+    
+      <col:module document="m58981" version="latest"
+                  repository="https://legacy.cnx.org/content"
+                  cnxorg:version-at-this-collection-version="1.2">
+        <md:title>Introduction</md:title>
+        
+        
+        
+      </col:module>
+        
+      
+    
+    
+      <col:module document="m58982" version="latest"
+                  repository="https://legacy.cnx.org/content"
+                  cnxorg:version-at-this-collection-version="1.2">
+        <md:title>What Are Civil Rights and How Do We Identify Them?</md:title>
+        
+        
+        
+      </col:module>
+        
+      
+    
+    
+      <col:module document="m58983" version="latest"
+                  repository="https://legacy.cnx.org/content"
+                  cnxorg:version-at-this-collection-version="1.7">
+        <md:title>The African American Struggle for Equality</md:title>
+        
+        
+        
+      </col:module>
+        
+      
+    
+    
+      <col:module document="m58984" version="latest"
+                  repository="https://legacy.cnx.org/content"
+                  cnxorg:version-at-this-collection-version="1.3">
+        <md:title>The Fight for Women’s Rights</md:title>
+        
+        
+        
+      </col:module>
+        
+      
+    
+    
+      <col:module document="m58985" version="latest"
+                  repository="https://legacy.cnx.org/content"
+                  cnxorg:version-at-this-collection-version="1.3">
+        <md:title>Civil Rights for Indigenous Groups: Native Americans, Alaskans, and Hawaiians</md:title>
+        
+        
+        
+      </col:module>
+        
+      
+    
+    
+      <col:module document="m62048" version="latest"
+                  repository="https://legacy.cnx.org/content"
+                  cnxorg:version-at-this-collection-version="1.4">
+        <md:title>Equal Protection for Other Groups</md:title>
+        
+        
+        
+      </col:module>
+        
+      
+    
+        </col:content>
+      </col:subcollection>
+    
+    
+      
+        
+      <col:subcollection>
+        <md:title>The Politics of Public Opinion</md:title>
+        
+        
+        
+
+        <col:content>
+          
+    
+      <col:module document="m58986" version="latest"
+                  repository="https://legacy.cnx.org/content"
+                  cnxorg:version-at-this-collection-version="1.3">
+        <md:title>Introduction</md:title>
+        
+        
+        
+      </col:module>
+        
+      
+    
+    
+      <col:module document="m58987" version="latest"
+                  repository="https://legacy.cnx.org/content"
+                  cnxorg:version-at-this-collection-version="1.2">
+        <md:title>The Nature of Public Opinion</md:title>
+        
+        
+        
+      </col:module>
+        
+      
+    
+    
+      <col:module document="m58988" version="latest"
+                  repository="https://legacy.cnx.org/content"
+                  cnxorg:version-at-this-collection-version="1.4">
+        <md:title>How Is Public Opinion Measured?</md:title>
+        
+        
+        
+      </col:module>
+        
+      
+    
+    
+      <col:module document="m58989" version="latest"
+                  repository="https://legacy.cnx.org/content"
+                  cnxorg:version-at-this-collection-version="1.5">
+        <md:title>What Does the Public Think?</md:title>
+        
+        
+        
+      </col:module>
+        
+      
+    
+    
+      <col:module document="m58990" version="latest"
+                  repository="https://legacy.cnx.org/content"
+                  cnxorg:version-at-this-collection-version="1.5">
+        <md:title>The Effects of Public Opinion</md:title>
+        
+        
+        
+      </col:module>
+        
+      
+    
+        </col:content>
+      </col:subcollection>
+    
+    
+      
+        
+      <col:subcollection>
+        <md:title>Voting and Elections</md:title>
+        
+        
+        
+
+        <col:content>
+          
+    
+      <col:module document="m58991" version="latest"
+                  repository="https://legacy.cnx.org/content"
+                  cnxorg:version-at-this-collection-version="1.3">
+        <md:title>Introduction</md:title>
+        
+        
+        
+      </col:module>
+        
+      
+    
+    
+      <col:module document="m58992" version="latest"
+                  repository="https://legacy.cnx.org/content"
+                  cnxorg:version-at-this-collection-version="1.3">
+        <md:title>Voter Registration</md:title>
+        
+        
+        
+      </col:module>
+        
+      
+    
+    
+      <col:module document="m58993" version="latest"
+                  repository="https://legacy.cnx.org/content"
+                  cnxorg:version-at-this-collection-version="1.6">
+        <md:title>Voter Turnout</md:title>
+        
+        
+        
+      </col:module>
+        
+      
+    
+    
+      <col:module document="m58994" version="latest"
+                  repository="https://legacy.cnx.org/content"
+                  cnxorg:version-at-this-collection-version="1.3">
+        <md:title>Elections</md:title>
+        
+        
+        
+      </col:module>
+        
+      
+    
+    
+      <col:module document="m58995" version="latest"
+                  repository="https://legacy.cnx.org/content"
+                  cnxorg:version-at-this-collection-version="1.4">
+        <md:title>Campaigns and Voting</md:title>
+        
+        
+        
+      </col:module>
+        
+      
+    
+    
+      <col:module document="m58996" version="latest"
+                  repository="https://legacy.cnx.org/content"
+                  cnxorg:version-at-this-collection-version="1.3">
+        <md:title>Direct Democracy</md:title>
+        
+        
+        
+      </col:module>
+        
+      
+    
+        </col:content>
+      </col:subcollection>
+    
+        </col:content>
+      </col:subcollection>
+    
+    
+      
+        
+      <col:subcollection>
+        <md:title>Toward Collective Action: Mediating Institutions</md:title>
+        
+        
+        
+
+        <col:content>
+          
+    
+      
+        
+      <col:subcollection>
+        <md:title>The Media</md:title>
+        
+        
+        
+
+        <col:content>
+          
+    
+      <col:module document="m58997" version="latest"
+                  repository="https://legacy.cnx.org/content"
+                  cnxorg:version-at-this-collection-version="1.2">
+        <md:title>Introduction</md:title>
+        
+        
+        
+      </col:module>
+        
+      
+    
+    
+      <col:module document="m58998" version="latest"
+                  repository="https://legacy.cnx.org/content"
+                  cnxorg:version-at-this-collection-version="1.3">
+        <md:title>What Is the Media?</md:title>
+        
+        
+        
+      </col:module>
+        
+      
+    
+    
+      <col:module document="m58999" version="latest"
+                  repository="https://legacy.cnx.org/content"
+                  cnxorg:version-at-this-collection-version="1.4">
+        <md:title>The Evolution of the Media</md:title>
+        
+        
+        
+      </col:module>
+        
+      
+    
+    
+      <col:module document="m59000" version="latest"
+                  repository="https://legacy.cnx.org/content"
+                  cnxorg:version-at-this-collection-version="1.3">
+        <md:title>Regulating the Media</md:title>
+        
+        
+        
+      </col:module>
+        
+      
+    
+    
+      <col:module document="m59003" version="latest"
+                  repository="https://legacy.cnx.org/content"
+                  cnxorg:version-at-this-collection-version="1.3">
+        <md:title>The Impact of the Media</md:title>
+        
+        
+        
+      </col:module>
+        
+      
+    
+        </col:content>
+      </col:subcollection>
+    
+    
+      
+        
+      <col:subcollection>
+        <md:title>Political Parties</md:title>
+        
+        
+        
+
+        <col:content>
+          
+    
+      <col:module document="m59004" version="latest"
+                  repository="https://legacy.cnx.org/content"
+                  cnxorg:version-at-this-collection-version="1.2">
+        <md:title>Introduction</md:title>
+        
+        
+        
+      </col:module>
+        
+      
+    
+    
+      <col:module document="m59016" version="latest"
+                  repository="https://legacy.cnx.org/content"
+                  cnxorg:version-at-this-collection-version="1.2">
+        <md:title>What Are Parties and How Did They Form?</md:title>
+        
+        
+        
+      </col:module>
+        
+      
+    
+    
+      <col:module document="m59010" version="latest"
+                  repository="https://legacy.cnx.org/content"
+                  cnxorg:version-at-this-collection-version="1.3">
+        <md:title>The Two-Party System</md:title>
+        
+        
+        
+      </col:module>
+        
+      
+    
+    
+      <col:module document="m59013" version="latest"
+                  repository="https://legacy.cnx.org/content"
+                  cnxorg:version-at-this-collection-version="1.5">
+        <md:title>The Shape of Modern Political Parties</md:title>
+        
+        
+        
+      </col:module>
+        
+      
+    
+    
+      <col:module document="m59014" version="latest"
+                  repository="https://legacy.cnx.org/content"
+                  cnxorg:version-at-this-collection-version="1.4">
+        <md:title>Divided Government and Partisan Polarization</md:title>
+        
+        
+        
+      </col:module>
+        
+      
+    
+        </col:content>
+      </col:subcollection>
+    
+    
+      
+        
+      <col:subcollection>
+        <md:title>Interest Groups and Lobbying</md:title>
+        
+        
+        
+
+        <col:content>
+          
+    
+      <col:module document="m59017" version="latest"
+                  repository="https://legacy.cnx.org/content"
+                  cnxorg:version-at-this-collection-version="1.2">
+        <md:title>Introduction</md:title>
+        
+        
+        
+      </col:module>
+        
+      
+    
+    
+      <col:module document="m59018" version="latest"
+                  repository="https://legacy.cnx.org/content"
+                  cnxorg:version-at-this-collection-version="1.2">
+        <md:title>Interest Groups Defined</md:title>
+        
+        
+        
+      </col:module>
+        
+      
+    
+    
+      <col:module document="m59019" version="latest"
+                  repository="https://legacy.cnx.org/content"
+                  cnxorg:version-at-this-collection-version="1.3">
+        <md:title>Collective Action and Interest Group Formation</md:title>
+        
+        
+        
+      </col:module>
+        
+      
+    
+    
+      <col:module document="m59020" version="latest"
+                  repository="https://legacy.cnx.org/content"
+                  cnxorg:version-at-this-collection-version="1.3">
+        <md:title>Interest Groups as Political Participation</md:title>
+        
+        
+        
+      </col:module>
+        
+      
+    
+    
+      <col:module document="m59041" version="latest"
+                  repository="https://legacy.cnx.org/content"
+                  cnxorg:version-at-this-collection-version="1.3">
+        <md:title>Pathways of Interest Group Influence</md:title>
+        
+        
+        
+      </col:module>
+        
+      
+    
+    
+      <col:module document="m59025" version="latest"
+                  repository="https://legacy.cnx.org/content"
+                  cnxorg:version-at-this-collection-version="1.2">
+        <md:title>Free Speech and the Regulation of Interest Groups</md:title>
+        
+        
+        
+      </col:module>
+        
+      
+    
+        </col:content>
+      </col:subcollection>
+    
+        </col:content>
+      </col:subcollection>
+    
+    
+      
+        
+      <col:subcollection>
+        <md:title>Delivering Collective Action: Formal Institutions</md:title>
+        
+        
+        
+
+        <col:content>
+          
+    
+      
+        
+      <col:subcollection>
+        <md:title>Congress</md:title>
+        
+        
+        
+
+        <col:content>
+          
+    
+      <col:module document="m59027" version="latest"
+                  repository="https://legacy.cnx.org/content"
+                  cnxorg:version-at-this-collection-version="1.2">
+        <md:title>Introduction</md:title>
+        
+        
+        
+      </col:module>
+        
+      
+    
+    
+      <col:module document="m59028" version="latest"
+                  repository="https://legacy.cnx.org/content"
+                  cnxorg:version-at-this-collection-version="1.3">
+        <md:title>The Institutional Design of Congress</md:title>
+        
+        
+        
+      </col:module>
+        
+      
+    
+    
+      <col:module document="m59029" version="latest"
+                  repository="https://legacy.cnx.org/content"
+                  cnxorg:version-at-this-collection-version="1.2">
+        <md:title>Congressional Elections</md:title>
+        
+        
+        
+      </col:module>
+        
+      
+    
+    
+      <col:module document="m59044" version="latest"
+                  repository="https://legacy.cnx.org/content"
+                  cnxorg:version-at-this-collection-version="1.3">
+        <md:title>Congressional Representation</md:title>
+        
+        
+        
+      </col:module>
+        
+      
+    
+    
+      <col:module document="m59034" version="latest"
+                  repository="https://legacy.cnx.org/content"
+                  cnxorg:version-at-this-collection-version="1.3">
+        <md:title>House and Senate Organizations</md:title>
+        
+        
+        
+      </col:module>
+        
+      
+    
+    
+      <col:module document="m59035" version="latest"
+                  repository="https://legacy.cnx.org/content"
+                  cnxorg:version-at-this-collection-version="1.4">
+        <md:title>The Legislative Process</md:title>
+        
+        
+        
+      </col:module>
+        
+      
+    
+        </col:content>
+      </col:subcollection>
+    
+    
+      
+        
+      <col:subcollection>
+        <md:title>The Presidency</md:title>
+        
+        
+        
+
+        <col:content>
+          
+    
+      <col:module document="m59048" version="latest"
+                  repository="https://legacy.cnx.org/content"
+                  cnxorg:version-at-this-collection-version="1.2">
+        <md:title>Introduction</md:title>
+        
+        
+        
+      </col:module>
+        
+      
+    
+    
+      <col:module document="m59050" version="latest"
+                  repository="https://legacy.cnx.org/content"
+                  cnxorg:version-at-this-collection-version="1.3">
+        <md:title>The Design and Evolution of the Presidency</md:title>
+        
+        
+        
+      </col:module>
+        
+      
+    
+    
+      <col:module document="m59051" version="latest"
+                  repository="https://legacy.cnx.org/content"
+                  cnxorg:version-at-this-collection-version="1.7">
+        <md:title>The Presidential Election Process</md:title>
+        
+        
+        
+      </col:module>
+        
+      
+    
+    
+      <col:module document="m59052" version="latest"
+                  repository="https://legacy.cnx.org/content"
+                  cnxorg:version-at-this-collection-version="1.3">
+        <md:title>Organizing to Govern</md:title>
+        
+        
+        
+      </col:module>
+        
+      
+    
+    
+      <col:module document="m59053" version="latest"
+                  repository="https://legacy.cnx.org/content"
+                  cnxorg:version-at-this-collection-version="1.3">
+        <md:title>The Public Presidency</md:title>
+        
+        
+        
+      </col:module>
+        
+      
+    
+    
+      <col:module document="m59055" version="latest"
+                  repository="https://legacy.cnx.org/content"
+                  cnxorg:version-at-this-collection-version="1.3">
+        <md:title>Presidential Governance: Direct Presidential Action</md:title>
+        
+        
+        
+      </col:module>
+        
+      
+    
+        </col:content>
+      </col:subcollection>
+    
+    
+      
+        
+      <col:subcollection>
+        <md:title>The Courts</md:title>
+        
+        
+        
+
+        <col:content>
+          
+    
+      <col:module document="m59059" version="latest"
+                  repository="https://legacy.cnx.org/content"
+                  cnxorg:version-at-this-collection-version="1.2">
+        <md:title>Introduction</md:title>
+        
+        
+        
+      </col:module>
+        
+      
+    
+    
+      <col:module document="m59060" version="latest"
+                  repository="https://legacy.cnx.org/content"
+                  cnxorg:version-at-this-collection-version="1.3">
+        <md:title>Guardians of the Constitution and Individual Rights</md:title>
+        
+        
+        
+      </col:module>
+        
+      
+    
+    
+      <col:module document="m59061" version="latest"
+                  repository="https://legacy.cnx.org/content"
+                  cnxorg:version-at-this-collection-version="1.2">
+        <md:title>The Dual Court System</md:title>
+        
+        
+        
+      </col:module>
+        
+      
+    
+    
+      <col:module document="m59062" version="latest"
+                  repository="https://legacy.cnx.org/content"
+                  cnxorg:version-at-this-collection-version="1.3">
+        <md:title>The Federal Court System</md:title>
+        
+        
+        
+      </col:module>
+        
+      
+    
+    
+      <col:module document="m59064" version="latest"
+                  repository="https://legacy.cnx.org/content"
+                  cnxorg:version-at-this-collection-version="1.4">
+        <md:title>The Supreme Court</md:title>
+        
+        
+        
+      </col:module>
+        
+      
+    
+    
+      <col:module document="m59068" version="latest"
+                  repository="https://legacy.cnx.org/content"
+                  cnxorg:version-at-this-collection-version="1.2">
+        <md:title>Judicial Decision-Making and Implementation by the Supreme Court</md:title>
+        
+        
+        
+      </col:module>
+        
+      
+    
+        </col:content>
+      </col:subcollection>
+    
+    
+      
+        
+      <col:subcollection>
+        <md:title>State and Local Government</md:title>
+        
+        
+        
+
+        <col:content>
+          
+    
+      <col:module document="m59069" version="latest"
+                  repository="https://legacy.cnx.org/content"
+                  cnxorg:version-at-this-collection-version="1.2">
+        <md:title>Introduction</md:title>
+        
+        
+        
+      </col:module>
+        
+      
+    
+    
+      <col:module document="m59070" version="latest"
+                  repository="https://legacy.cnx.org/content"
+                  cnxorg:version-at-this-collection-version="1.3">
+        <md:title>State Power and Delegation</md:title>
+        
+        
+        
+      </col:module>
+        
+      
+    
+    
+      <col:module document="m59071" version="latest"
+                  repository="https://legacy.cnx.org/content"
+                  cnxorg:version-at-this-collection-version="1.2">
+        <md:title>State Political Culture</md:title>
+        
+        
+        
+      </col:module>
+        
+      
+    
+    
+      <col:module document="m59072" version="latest"
+                  repository="https://legacy.cnx.org/content"
+                  cnxorg:version-at-this-collection-version="1.3">
+        <md:title>Governors and State Legislatures</md:title>
+        
+        
+        
+      </col:module>
+        
+      
+    
+    
+      <col:module document="m59074" version="latest"
+                  repository="https://legacy.cnx.org/content"
+                  cnxorg:version-at-this-collection-version="1.2">
+        <md:title>State Legislative Term Limits</md:title>
+        
+        
+        
+      </col:module>
+        
+      
+    
+    
+      <col:module document="m59075" version="latest"
+                  repository="https://legacy.cnx.org/content"
+                  cnxorg:version-at-this-collection-version="1.2">
+        <md:title>County and City Government</md:title>
+        
+        
+        
+      </col:module>
+        
+      
+    
+        </col:content>
+      </col:subcollection>
+    
+        </col:content>
+      </col:subcollection>
+    
+    
+      
+        
+      <col:subcollection>
+        <md:title>The Outputs of Government</md:title>
+        
+        
+        
+
+        <col:content>
+          
+    
+      
+        
+      <col:subcollection>
+        <md:title>The Bureaucracy</md:title>
+        
+        
+        
+
+        <col:content>
+          
+    
+      <col:module document="m59076" version="latest"
+                  repository="https://legacy.cnx.org/content"
+                  cnxorg:version-at-this-collection-version="1.2">
+        <md:title>Introduction</md:title>
+        
+        
+        
+      </col:module>
+        
+      
+    
+    
+      <col:module document="m59077" version="latest"
+                  repository="https://legacy.cnx.org/content"
+                  cnxorg:version-at-this-collection-version="1.2">
+        <md:title>Bureaucracy and the Evolution of Public Administration</md:title>
+        
+        
+        
+      </col:module>
+        
+      
+    
+    
+      <col:module document="m59078" version="latest"
+                  repository="https://legacy.cnx.org/content"
+                  cnxorg:version-at-this-collection-version="1.2">
+        <md:title>Toward a Merit-Based Civil Service</md:title>
+        
+        
+        
+      </col:module>
+        
+      
+    
+    
+      <col:module document="m59079" version="latest"
+                  repository="https://legacy.cnx.org/content"
+                  cnxorg:version-at-this-collection-version="1.3">
+        <md:title>Understanding Bureaucracies and their Types</md:title>
+        
+        
+        
+      </col:module>
+        
+      
+    
+    
+      <col:module document="m59080" version="latest"
+                  repository="https://legacy.cnx.org/content"
+                  cnxorg:version-at-this-collection-version="1.2">
+        <md:title>Controlling the Bureaucracy</md:title>
+        
+        
+        
+      </col:module>
+        
+      
+    
+        </col:content>
+      </col:subcollection>
+    
+    
+      
+        
+      <col:subcollection>
+        <md:title>Domestic Policy</md:title>
+        
+        
+        
+
+        <col:content>
+          
+    
+      <col:module document="m59081" version="latest"
+                  repository="https://legacy.cnx.org/content"
+                  cnxorg:version-at-this-collection-version="1.2">
+        <md:title>Introduction</md:title>
+        
+        
+        
+      </col:module>
+        
+      
+    
+    
+      <col:module document="m59082" version="latest"
+                  repository="https://legacy.cnx.org/content"
+                  cnxorg:version-at-this-collection-version="1.2">
+        <md:title>What Is Public Policy?</md:title>
+        
+        
+        
+      </col:module>
+        
+      
+    
+    
+      <col:module document="m59083" version="latest"
+                  repository="https://legacy.cnx.org/content"
+                  cnxorg:version-at-this-collection-version="1.2">
+        <md:title>Categorizing Public Policy</md:title>
+        
+        
+        
+      </col:module>
+        
+      
+    
+    
+      <col:module document="m59084" version="latest"
+                  repository="https://legacy.cnx.org/content"
+                  cnxorg:version-at-this-collection-version="1.2">
+        <md:title>Policy Arenas</md:title>
+        
+        
+        
+      </col:module>
+        
+      
+    
+    
+      <col:module document="m59085" version="latest"
+                  repository="https://legacy.cnx.org/content"
+                  cnxorg:version-at-this-collection-version="1.3">
+        <md:title>Policymakers</md:title>
+        
+        
+        
+      </col:module>
+        
+      
+    
+    
+      <col:module document="m59086" version="latest"
+                  repository="https://legacy.cnx.org/content"
+                  cnxorg:version-at-this-collection-version="1.2">
+        <md:title>Budgeting and Tax Policy</md:title>
+        
+        
+        
+      </col:module>
+        
+      
+    
+        </col:content>
+      </col:subcollection>
+    
+    
+      
+        
+      <col:subcollection>
+        <md:title>Foreign Policy</md:title>
+        
+        
+        
+
+        <col:content>
+          
+    
+      <col:module document="m59087" version="latest"
+                  repository="https://legacy.cnx.org/content"
+                  cnxorg:version-at-this-collection-version="1.2">
+        <md:title>Introduction</md:title>
+        
+        
+        
+      </col:module>
+        
+      
+    
+    
+      <col:module document="m59088" version="latest"
+                  repository="https://legacy.cnx.org/content"
+                  cnxorg:version-at-this-collection-version="1.3">
+        <md:title>Defining Foreign Policy</md:title>
+        
+        
+        
+      </col:module>
+        
+      
+    
+    
+      <col:module document="m59089" version="latest"
+                  repository="https://legacy.cnx.org/content"
+                  cnxorg:version-at-this-collection-version="1.2">
+        <md:title>Foreign Policy Instruments</md:title>
+        
+        
+        
+      </col:module>
+        
+      
+    
+    
+      <col:module document="m59090" version="latest"
+                  repository="https://legacy.cnx.org/content"
+                  cnxorg:version-at-this-collection-version="1.3">
+        <md:title>Institutional Relations in Foreign Policy</md:title>
+        
+        
+        
+      </col:module>
+        
+      
+    
+    
+      <col:module document="m59091" version="latest"
+                  repository="https://legacy.cnx.org/content"
+                  cnxorg:version-at-this-collection-version="1.5">
+        <md:title>Approaches to Foreign Policy</md:title>
+        
+        
+        
+      </col:module>
+        
+      
+    
+        </col:content>
+      </col:subcollection>
+    
+        </col:content>
+      </col:subcollection>
+    
+    
+      <col:module document="m58972" version="latest"
+                  repository="https://legacy.cnx.org/content"
+                  cnxorg:version-at-this-collection-version="1.3">
+        <md:title>Declaration of Independence</md:title>
+        
+        
+        
+      </col:module>
+        
+      
+    
+    
+      <col:module document="m58973" version="latest"
+                  repository="https://legacy.cnx.org/content"
+                  cnxorg:version-at-this-collection-version="1.2">
+        <md:title>The Constitution of the United States</md:title>
+        
+        
+        
+      </col:module>
+        
+      
+    
+    
+      <col:module document="m58974" version="latest"
+                  repository="https://legacy.cnx.org/content"
+                  cnxorg:version-at-this-collection-version="1.2">
+        <md:title>Federalist Papers #10 and #51</md:title>
+        
+        
+        
+      </col:module>
+        
+      
+    
+    
+      <col:module document="m58975" version="latest"
+                  repository="https://legacy.cnx.org/content"
+                  cnxorg:version-at-this-collection-version="1.3">
+        <md:title>Electoral College Votes by State, 2012–2020</md:title>
+        
+        
+        
+      </col:module>
+        
+      
+    
+    
+      <col:module document="m62053" version="latest"
+                  repository="https://legacy.cnx.org/content"
+                  cnxorg:version-at-this-collection-version="1.3">
+        <md:title>Selected Supreme Court Cases</md:title>
+        
+        
+        
+      </col:module>
+        
+      
+    
+  </col:content>
+</col:collection>

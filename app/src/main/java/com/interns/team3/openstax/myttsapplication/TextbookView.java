@@ -24,9 +24,7 @@ import com.nshmura.snappysmoothscroller.LinearLayoutScrollVectorDetector;
 import com.nshmura.snappysmoothscroller.SnapType;
 import com.nshmura.snappysmoothscroller.SnappyLinearLayoutManager;
 import com.nshmura.snappysmoothscroller.SnappySmoothScroller;
-import com.squareup.otto.Produce;
-import com.squareup.otto.Subscribe;
-import com.squareup.otto.ThreadEnforcer;
+
 
 import org.jsoup.Jsoup;
 import org.jsoup.nodes.Document;

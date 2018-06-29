@@ -1,0 +1,68 @@
+<?xml version="1.0"?>
+<document xmlns="http://cnx.rice.edu/cnxml" xmlns:md="http://cnx.rice.edu/mdml" xmlns:bib="http://bibtexml.sf.net/" xmlns:m="http://www.w3.org/1998/Math/MathML" xmlns:q="http://cnx.rice.edu/qml/1.0" id="new" cnxml-version="0.7" module-id="new" class="introduction">
+
+<title>Introduction</title>
+<metadata xmlns:md="http://cnx.rice.edu/mdml"
+          mdml-version="0.5">
+  <!-- WARNING! The 'metadata' section is read only. Do not edit below.
+       Changes to the metadata section in the source will not be saved. -->
+  <md:repository>http://legacy.cnx.org/content</md:repository>
+  <md:content-url>http://legacy.cnx.org/content/m59081/latest/</md:content-url>
+  <md:content-id>m59081</md:content-id>
+  <md:title>Introduction</md:title>
+  <md:version>1.2</md:version>
+  <md:created>2015/12/23 14:42:35 -0600</md:created>
+  <md:revised>2016/07/01 12:00:14.966 GMT-5</md:revised>
+  <md:actors>
+    <md:person userid="cnxamgov">
+      <md:firstname>OpenStax</md:firstname>
+      <md:surname>American Goverment</md:surname>
+      <md:fullname>OpenStax American Goverment</md:fullname>
+      <md:email>info@openstaxcollege.org</md:email>
+    </md:person>
+  </md:actors>
+  <md:roles>
+    <md:role type="author">cnxamgov</md:role>
+    <md:role type="maintainer">cnxamgov</md:role>
+    <md:role type="licensor">cnxamgov</md:role>
+  </md:roles>
+  <md:license url="http://creativecommons.org/licenses/by/4.0/">Creative Commons Attribution License 4.0</md:license>
+  <!-- For information on license requirements for use or modification, see license url in the
+       above <md:license> element.
+       For information on formatting required attribution, see the URL:
+         CONTENT_URL/content_info#cnx_cite_header
+       where CONTENT_URL is the value provided above in the <md:content-url> element.
+  -->
+  <md:keywordlist>
+    <md:keyword>Budget policy</md:keyword>
+    <md:keyword>Domestic policy</md:keyword>
+    <md:keyword>Public policy</md:keyword>
+    <md:keyword>Tax policy</md:keyword>
+  </md:keywordlist>
+  <md:subjectlist>
+    <md:subject>Social Sciences</md:subject>
+    <md:subject>Social Sciences</md:subject>
+  </md:subjectlist>
+  <md:abstract></md:abstract>
+  <md:language>en</md:language>
+  <!-- WARNING! The 'metadata' section is read only. Do not edit above.
+       Changes to the metadata section in the source will not be saved. -->
+</metadata>
+
+<content>
+<?cnx.eoc class="summary" title="Summary"?>
+<?cnx.eoc class="review-questions" title="Review Questions"?>
+<?cnx.eoc class="critical-thinking" title="Critical Thinking Questions"?>
+<?cnx.eoc class="suggested-reading" title="Suggested Reading"?>
+<?cnx.eoc class="references" title="References"?>
+<figure id="OSC_AmGov_16_00_Medicare" class="splash">
+<media id="fs-id1171474142010" alt="An image of a crowd of people holding signs and flags. One sign reads &#x201C;WWII Combat Infantrymen No Socialized Medicine&#x201D;.">
+<image mime-type="image/jpeg" src="OSC_AmGov_16_00_Medicare.jpg"/>
+</media>
+<caption>Minnesota Tea Party members protest in 2011, demanding repeal of the recently enacted Patient Protection and Affordable Care Act. Protests against expanding the federal government’s role in the economy often use “socialism” as a negative label, even when defending existing examples of government-run programs such as Medicare. (credit: modification of work by “Fibonacci Blue”/Flickr)</caption>
+</figure>
+<para id="fs-id1171472115237">On March 25, 2010, both chambers of Congress passed the <term class="no-emphasis">Health Care and Education Reconciliation Act</term> (HCERA).<cite target-id="rf-1"><note class="reference" display="inline" id="rf-1">“H.R. 4872 — Health Care and Education Reconciliation Act of 2010,” https://www.congress.gov/bill/111th-congress/house-bill/4872 (March 1, 2016).</note></cite> The story of the HCERA, which expanded and improved some provisions of the <term class="no-emphasis">Patient Protection and Affordable Care Act</term> (ACA), also known as Obamacare, is a complicated tale of insider politics in which the Democratic Party was able to enact sweeping health care and higher education reforms over fierce Republican opposition (<link target-id="OSC_AmGov_16_00_Medicare"/>). Some people laud the HCERA as an example of getting things done in the face of partisan gridlock in Congress; others see it a case of government power run amok. Regardless of your view, the HCERA vividly demonstrates public policymaking in action.</para>
+<para id="fs-id1171472317712">Each of the individual actors and institutions in the U.S. political system, such as the president, Congress, the courts, interest groups, and the media, gives us an idea of the component parts of the system and their functions. But in the study of public policy, we look at the larger picture and see all the parts working together to make laws, like the HCERA, that ultimately affect citizens and their communities.</para>
+<para id="fs-id1171472317306">What is public policy? How do different areas of policy differ, and what roles do policy analysts and advocates play? What programs does the national government currently provide? And how do budgetary policy and politics operate? This chapter answers these questions and more.</para>
+</content>
+</document>

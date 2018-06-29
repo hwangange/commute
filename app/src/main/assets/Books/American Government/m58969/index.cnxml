@@ -1,0 +1,171 @@
+<?xml version="1.0"?>
+<document xmlns="http://cnx.rice.edu/cnxml" xmlns:md="http://cnx.rice.edu/mdml" xmlns:bib="http://bibtexml.sf.net/" xmlns:m="http://www.w3.org/1998/Math/MathML" xmlns:q="http://cnx.rice.edu/qml/1.0" id="new" cnxml-version="0.7" module-id="new">
+
+<title>Intergovernmental Relationships</title>
+<metadata xmlns:md="http://cnx.rice.edu/mdml"
+          mdml-version="0.5">
+  <!-- WARNING! The 'metadata' section is read only. Do not edit below.
+       Changes to the metadata section in the source will not be saved. -->
+  <md:repository>https://legacy.cnx.org/content</md:repository>
+  <md:content-url>https://legacy.cnx.org/content/m58969/latest/</md:content-url>
+  <md:content-id>m58969</md:content-id>
+  <md:title>Intergovernmental Relationships</md:title>
+  <md:version>1.3</md:version>
+  <md:created>2015/12/22 11:50:06 -0600</md:created>
+  <md:revised>2016/11/10 14:47:16.921 US/Central</md:revised>
+  <md:actors>
+    <md:person userid="cnxamgov">
+      <md:firstname>OpenStax</md:firstname>
+      <md:surname>American Goverment</md:surname>
+      <md:fullname>OpenStax American Goverment</md:fullname>
+      <md:email>info@openstaxcollege.org</md:email>
+    </md:person>
+  </md:actors>
+  <md:roles>
+    <md:role type="author">cnxamgov</md:role>
+    <md:role type="maintainer">cnxamgov</md:role>
+    <md:role type="licensor">cnxamgov</md:role>
+  </md:roles>
+  <md:license url="http://creativecommons.org/licenses/by/4.0/">Creative Commons Attribution License 4.0</md:license>
+  <!-- For information on license requirements for use or modification, see license url in the
+       above <md:license> element.
+       For information on formatting required attribution, see the URL:
+         CONTENT_URL/content_info#cnx_cite_header
+       where CONTENT_URL is the value provided above in the <md:content-url> element.
+  -->
+  <md:keywordlist>
+    <md:keyword>Block grant</md:keyword>
+    <md:keyword>Categorical grant</md:keyword>
+    <md:keyword>Creeping categorization</md:keyword>
+    <md:keyword>Unfunded mandates</md:keyword>
+  </md:keywordlist>
+  <md:subjectlist>
+    <md:subject>Social Sciences</md:subject>
+    <md:subject>Social Sciences</md:subject>
+  </md:subjectlist>
+  <md:abstract></md:abstract>
+  <md:language>en</md:language>
+  <!-- WARNING! The 'metadata' section is read only. Do not edit above.
+       Changes to the metadata section in the source will not be saved. -->
+</metadata>
+
+<content>
+<section id="fs-id1163758412366" class="learning-objectives">
+<title>Learning Objectives</title>
+<para id="fs-id1163758427603">By the end of this section, you will be able to:</para>
+<list id="fs-id1163758474660">
+<item>Explain how federal intergovernmental grants have evolved over time</item>
+<item>Identify the types of federal intergovernmental grants</item>
+<item>Describe the characteristics of federal unfunded mandates</item>
+</list>
+</section>
+<para id="fs-id1163758385468">The national government’s ability to achieve its objectives often requires the participation of state and local governments. Intergovernmental grants offer positive financial inducements to get states to work toward selected national goals. A grant is commonly likened to a “carrot” to the extent that it is designed to entice the recipient to do something. On the other hand, unfunded mandates impose federal requirements on state and local authorities. Mandates are typically backed by the threat of penalties for non-compliance and provide little to no compensation for the costs of implementation. Thus, given its coercive nature, a mandate is commonly likened to a “stick.”</para>
+<section id="fs-id1163758408153">
+<title>GRANTS</title>
+<para id="fs-id1163758408519">The national government has used grants to influence state actions as far back as the <term class="no-emphasis">Articles of Confederation</term> when it provided states with land grants. In the first half of the 1800s, land grants were the primary means by which the federal government supported the states. Millions of acres of federal land were donated to support road, railroad, bridge, and canal construction projects, all of which were instrumental in piecing together a national transportation system to facilitate migration, interstate commerce, postal mail service, and movement of military people and equipment. Numerous universities and colleges across the country, such as Ohio State University and the University of Maine, are land-grant institutions because their campuses were built on land donated by the federal government. At the turn of the twentieth century, cash grants replaced land grants as the main form of federal intergovernmental transfers and have become a central part of modern federalism.<cite target-id="rf-042"><note class="reference" display="inline" id="rf-042">Dilger, “Federal Grants to State and Local Governments.”</note></cite></para>
+<para id="fs-id1163758488544">Federal cash grants do come with strings attached; the national government has an interest in seeing that public monies are used for policy activities that advance national objectives. <term>Categorical grants</term> are federal transfers formulated to limit recipients’ discretion in the use of funds and subject them to strict administrative criteria that guide project selection, performance, and financial oversight, among other things. These grants also often require some commitment of matching funds. Medicaid and the food stamp program are examples of categorical grants. <term>Block grants</term> come with less stringent federal administrative conditions and provide recipients more flexibility over how to spend grant funds. Examples of block grants include the <term class="no-emphasis">Workforce Investment Act</term> program, which provides state and local agencies money to help youths and adults obtain skill sets that will lead to better-paying jobs, and the <term class="no-emphasis">Surface Transportation Program</term>, which helps state and local governments maintain and improve highways, bridges, tunnels, sidewalks, and bicycle paths. Finally, recipients of general revenue sharing faced the least restrictions on the use of federal grants. From 1972 to 1986, when revenue sharing was abolished, upwards of $85 billion of federal money was distributed to states, cities, counties, towns, and villages.<cite target-id="rf-043"><note class="reference" display="inline" id="rf-043">John Mikesell. 2014. <emphasis effect="italics">Fiscal Administration</emphasis>, 9th ed. Boston: Wadsworth Publishing.</note></cite></para>
+<para id="fs-id1163758318855">During the 1960s and 1970s, funding for federal grants grew significantly, as the trend line shows in <link target-id="OSC_AmGov_03_03_GTrend"/>. Growth picked up again in the 1990s and 2000s. The upward slope since the 1990s is primarily due to the increase in federal grant money going to Medicaid. Federally funded health-care programs jumped from $43.8 billion in 1990 to $320 billion in 2014.<cite target-id="rf-044"><note class="reference" display="inline" id="rf-044">Dilger, “Federal Grants to State and Local Governments,” 5.</note></cite> Health-related grant programs such as Medicaid and the <term class="no-emphasis">Children’s Health Insurance Program</term> (CHIP) represented more than half of total federal grant expenses.</para>
+<figure id="OSC_AmGov_03_03_GTrend">
+<media id="fs-id1163758313836" alt="These two graphs show the federal grants to the state and local government from 1960-2014. The first graph in the shape of a thermometer shows the increase of federal grants. In 1960, grants were around 7,019 dollars. In 1970, grants were around 24,065 dollars. In 1980, grants were around 91,385 dollars. In 1990, grants were around 135,325. In 2000, grants were around 285,874 dollars. In 2005, grants were around 428,018 dollars. In 2010, grants were around 544,569 dollars. In 2014, grants were around 608,390 dollars. The pie chart next to this graph shows the breakdown of the 2014 Federal grant of 608,390 dollars. Health received 55%, income security received 17%, transportation received 11%, Education, training, employment and social services received 11%, community and regional development received 2%. Other departments had received around 4%. At the bottom of the chart, a source is cited: &#x201C;Congressional Research Service. Table 2 in Federal Grants to State and Local Governments: A Historic Perspective on Contemporary Issues. March 5, 2015.">
+<image mime-type="image/jpeg" src="OSC_AmGov_03_03_GTrend.jpg"/>
+</media>
+<caption>As the thermometer shows, federal grants to state and local governments have steadily increased since the 1960s. The pie chart shows how federal grants are allocated among different functional categories today.</caption>
+</figure>
+<note id="fs-id1163758393604" class="american government link-to-learning">
+<media id="fs-id1163758438442" alt="Link to learning graphic">
+<image mime-type="image/png" src="OSC_Interactive_150.png"/>
+</media>
+<para id="fs-id1163758440830">The federal government uses grants and other tools to achieve its national policy priorities. Take a look at the <link url="https://www.openstaxcollege.org/l/29natpriproj">National Priorities Project</link> to find out more.</para>
+</note>
+<para id="fs-id1163758325728">The national government has greatly preferred using categorical grants to transfer funds to state and local authorities because this type of grant gives them more control and discretion in how the money is spent. In 2014, the federal government distributed 1,099 grants, 1,078 of which were categorical, while only 21 were block grants.<cite target-id="rf-045"><note class="reference" display="inline" id="rf-045">——, “Federal Grants to State and Local Governments,” Table 4.</note></cite> In response to the terrorist attack on the United States on September 11, 2001, more than a dozen new federal grant programs relating to homeland security were created, but as of 2011, only three were block grants.</para>
+<para id="fs-id1163758399693">There are a couple of reasons that categorical grants are more popular than block grants despite calls to decentralize public policy. One reason is that elected officials who sponsor these grants can take credit for their positive outcomes (e.g., clean rivers, better-performing schools, healthier children, a secure homeland) since elected officials, not state officials, formulate the administrative standards that lead to the results. Another reason is that categorical grants afford federal officials greater command over grant program performance. A common criticism leveled against block grants is that they lack mechanisms to hold state and local administrators accountable for outcomes, a reproach the Obama administration has made about the Community Services Block Grant program. Finally, once categorical grants have been established, vested interests in Congress and the federal bureaucracy seek to preserve them. The legislators who enact them and the federal agencies that implement them invest heavily in defending them, ensuring their continuation.<cite target-id="rf-046"><note class="reference" display="inline" id="rf-046">Schick, <emphasis effect="italics">The Federal Budget</emphasis>.</note></cite></para>
+<para id="fs-id1163758420648">Reagan’s “devolution revolution” contributed to raising the number of block grants from six in 1981 to fourteen in 1989. Block grants increased to twenty-four in 1999 during the Clinton administration and to twenty-six during Obama’s presidency, but by 2014 the total had dropped to twenty-one, accounting for 10 percent of total federal grant outlay.<cite target-id="rf-047"><note class="reference" display="inline" id="rf-047">Robert Jay Dilger and Eugene Boyd, “Block Grants: Perspectives and Controversies,” <emphasis effect="italics">Congressional Research Service</emphasis>, Report R40486, 15 July 2014, 1–3.</note></cite></para>
+<para id="fs-id1163758534657">In 1994, the Republican-controlled Congress passed legislation that called for block-granting Medicaid, which would have capped federal Medicaid spending. President Clinton vetoed the legislation. However, congressional efforts to convert <term class="no-emphasis">Aid to Families with Dependent Children</term> (AFDC) to a block grant succeeded. The <term class="no-emphasis">Temporary Assistance for Needy Families</term> (TANF) block grant replaced the AFDC in 1996, marking the first time the federal government transformed an entitlement program (which guarantees individual rights to benefits) into a block grant. Under the AFDC, the federal government had reimbursed states a portion of the costs they bore for running the program without placing a ceiling on the amount. In contrast, the TANF block grant caps annual federal funding at $16.489 billion and provides a yearly lump sum to each state, which it can use to manage its own program.</para>
+<para xmlns:data="http://www.w3.org/TR/html5/dom.html#custom-data-attribute" id="fs-id1163758375495">Block grants have been championed for their cost-cutting effects. By eliminating uncapped federal funding, as the TANF issue illustrates, the national government can reverse the escalating costs of federal grant programs. This point has not been lost on Speaker of the House Paul <term class="no-emphasis">Ryan</term> (R-WI), former chair of the House Budget Committee and the House Ways and Means Committee, who has tried multiple times but without success to convert Medicaid into a block grant, a reform he estimates could save the federal government upwards of $732 billion over ten years.<cite target-id="rf-048"><note class="reference" display="inline" id="rf-048">Jonathan Weisman, “Ryan’s Budget Would Cut $5 trillion in Spending Over a Decade,” <emphasis effect="italics">New York Times</emphasis>, 1 April 2014.</note></cite></para><para id="fs-id1163758441053">Another noteworthy characteristic of block grants is that their flexibility has been undermined over time as a result of <term>creeping categorization</term>, a process in which the national government places new administrative requirements on state and local governments or supplants block grants with new categorical grants.<cite target-id="rf-049"><note class="reference" display="inline" id="rf-049">Kenneth Finegold, Laura Wherry, and Stephanie Schardin. 2014. “Block Grants: Historical Overview and Lessons Learned,” <emphasis effect="italics">New Federalism: Issues and Options for States</emphasis> Series A, No A-63: 1–7.</note></cite> Among the more common measures used to restrict block grants’ programmatic flexibility are set-asides (i.e., requiring a certain share of grant funds to be designated for a specific purpose) and cost ceilings (i.e., placing a cap on funding other purposes).</para>
+</section>
+<section id="fs-id1163758340087">
+<title>UNFUNDED MANDATES</title>
+<para id="fs-id1163758502527"><term>Unfunded mandates</term> are federal laws and regulations that impose obligations on state and local governments without fully compensating them for the administrative costs they incur. The federal government has used mandates increasingly since the 1960s to promote national objectives in policy areas such as the environment, civil rights, education, and homeland security. One type of mandate threatens civil and criminal penalties for state and local authorities that fail to comply with them across the board in all programs, while another provides for the suspension of federal grant money if the mandate is not followed. These types of mandates are commonly referred to as <emphasis effect="italics">crosscutting</emphasis> mandates. Failure to fully comply with crosscutting mandates can result in punishments that normally include reduction of or suspension of federal grants, prosecution of officials, fines, or some combination of these penalties. If only one requirement is not met, state or local governments may not get any money at all.</para>
+<para id="fs-id1163758326749">For example, Title VI of the <term class="no-emphasis">Civil Rights Act</term> of 1964 authorizes the federal government to withhold federal grants as well as file lawsuits against state and local officials for practicing racial discrimination. Finally, some mandates come in the form of partial preemption regulations, whereby the federal government sets national regulatory standards but delegates the enforcement to state and local governments. For example, the <term class="no-emphasis">Clean Air Act</term> sets air quality regulations but instructs states to design implementation plans to achieve such standards (<link target-id="OSC_AmGov_03_03_CleanAir"/>).<cite target-id="rf-050"><note class="reference" display="inline" id="rf-050">Martha Derthick. 1987. “American Federalism: Madison’s Middle Ground in the 1980s,” <emphasis effect="italics">Public Administration Review</emphasis> 47, No. 1: 66–74.</note></cite></para>
+<figure id="OSC_AmGov_03_03_CleanAir">
+<media id="fs-id1163758334949" alt="An illustration shows the Uncle Sam character reading a document titled &#x201C;Clean Air Act&#x201D;. In the background is a landscape of mountains and a river. Next to the EPA logo is the label &#x201C;The Plain English Guide to the Clean Air Act&#x201D;.">
+<image mime-type="image/jpeg" src="OSC_AmGov_03_03_CleanAir.jpg"/>
+</media>
+<caption>The Clean Air Act is an example of an unfunded mandate. The Environmental Protection Agency sets federal standards regarding air and water quality, but it is up to each state to implement plans to achieve these standards.</caption>
+</figure>
+<para id="fs-id1163758415364">The widespread use of federal mandates in the 1970s and 1980s provoked a backlash among state and local authorities, which culminated in the <term class="no-emphasis">Unfunded Mandates Reform Act</term> (UMRA) in 1995. The UMRA’s main objective has been to restrain the national government’s use of mandates by subjecting rules that impose unfunded requirements on state and local governments to greater procedural scrutiny. However, since the act’s implementation, states and local authorities have obtained limited relief. A new piece of legislation aims to take this approach further. The 2015 <term class="no-emphasis">Unfunded Mandates and Information Transparency Act</term>, HR 50, passed the House early in 2015 before being referred to the Senate, where it waits committee consideration.<cite target-id="rf-051"><note class="reference" display="inline" id="rf-051">U.S. Congress. Senate. 2015–2016. H. R. 50 – <emphasis effect="italics">Unfunded Mandates Information and Transparency Act of 2015</emphasis> H. Rept. 114-11. https://www.congress.gov/bill/114th-congress/house-bill/50</note></cite></para>
+<para id="fs-id1163758332881">The number of mandates has continued to rise, and some have been especially costly to states and local authorities. Consider the <term class="no-emphasis">Real ID Act</term> of 2005, a federal law designed to beef up homeland security. The law requires driver’s licenses and state-issued identification cards (DL/IDs) to contain standardized anti-fraud security features, specific data, and machine-readable technology. It also requires states to verify the identity of everyone being reissued DL/IDs. The Department of Homeland Security announced a phased enforcement of the law in 2013, which requires individuals to present compliant DL/IDs to board commercial airlines starting in 2016. The cost to states of re-issuing DL/IDs, implementing new identity verification procedures, and redesigning DL/IDs is estimated to be $11 billion, and the federal government stands to reimburse only a small fraction.<cite target-id="rf-052"><note class="reference" display="inline" id="rf-052">National Governors Association, National Conference of State Legislatures, and American Association of Motor Vehicle Administrators. 2006. <emphasis effect="italics">The Real ID Act: National Impact Analysis</emphasis>. http://www.ncsl.org/print/statefed/real_id_impact_report_final_sept19.pdf</note></cite> Compliance with the federal law has been onerous for many states; only twenty-two were in full compliance with Real ID in 2015.<cite target-id="rf-053"><note class="reference" display="inline" id="rf-053">Homeland Security. “REAL ID Enforcement in Brief.” http://www.dhs.gov/real-id-enforcement-brief# (June 12, 2015); National Conference of State Legislatures. “Countdown to REAL ID.” http://www.ncsl.org/research/transportation/count-down-to-real-id.aspx (June 12, 2015).</note></cite></para>
+<para id="fs-id1163758439635">The continued use of unfunded mandates clearly contradicts new federalism’s call for giving states and local governments more flexibility in carrying out national goals. The temptation to use them appears to be difficult for the federal government to resist, however, as the UMRA’s poor track record illustrates. This is because mandates allow the federal government to fulfill its national priorities while passing most of the cost to the states, an especially attractive strategy for national lawmakers trying to cut federal spending.<cite target-id="rf-054"><note class="reference" display="inline" id="rf-054">Robert Jay Dilger and Richard S. Beth, “Unfunded Mandates Reform Act: History, Impact, and Issues,” <emphasis effect="italics">Congressional Research Service</emphasis>, Report 7-5700, 17 November 2014.</note></cite> Some leading federalism scholars have used the term <emphasis effect="italics">coercive federalism</emphasis> to capture this aspect of contemporary U.S. federalism.<cite target-id="rf-055"><note class="reference" display="inline" id="rf-055">John Kincaid. 1990. “From Cooperative Federalism to Coercive Federalism,” <emphasis effect="italics">Annals of the American Academy of Political and Social Science</emphasis> 509: 139–152.</note></cite> In other words, Washington has been as likely to use the stick of mandates as the carrot of grants to accomplish its national objectives. As a result, there have been more instances of confrontational interactions between the states and the federal government.</para>
+<note id="fs-id1163758531064" class="milestone">
+<title>The Clery Act</title>
+<para id="fs-id1163758385187">The <term class="no-emphasis">Clery Act</term> of 1990, formally the Jeanne Clery Disclosure of Campus Security Policy and Campus Crime Statistics Act, requires public and private colleges and universities that participate in federal student aid programs to disclose information about campus crime. The Act is named after Jeanne <term class="no-emphasis">Clery</term>, who in 1986 was raped and murdered by a fellow student in her Lehigh University dorm room.</para>
+<para id="fs-id1163758413629">The <term class="no-emphasis">U.S. Department of Education</term>’s Clery Act Compliance Division is responsible for enforcing the 1990 Act. Specifically, to remain eligible for federal financial aid funds and avoid penalties, colleges and universities must comply with the following provisions:</para>
+<list id="fs-id1163758413448" list-type="bulleted" bullet-style="bullet">
+<item>Publish an annual security report and make it available to current and prospective students and employees;</item>
+<item>Keep a public crime log that documents each crime on campus and is accessible to the public;</item>
+<item>Disclose information about incidents of criminal homicide, sex offenses, robbery, aggravated assault, burglary, motor vehicle theft, arson, and hate crimes that occurred on or near campus;</item>
+<item>Issue warnings about Clery Act crimes that pose a threat to students and employees;</item>
+<item>Develop a campus community emergency response and notification strategy that is subject to annual testing;</item>
+<item>Gather and report fire data to the federal government and publish an annual fire safety report;</item>
+<item>Devise procedures to address reports of missing students living in on-campus housing.</item>
+</list>
+<para id="fs-id1163758400666">For more about the Clery Act, see Clery Center for Security on Campus, <emphasis effect="underline">http://clerycenter.org</emphasis>.</para>
+<para id="fs-id1163758420597"><emphasis effect="italics">Were you made aware of your campus’s annual security report before you enrolled? Do you think reporting about campus security is appropriately regulated at the federal level under the Clery Act? Why or why not?</emphasis></para>
+</note>
+</section>
+<section id="fs-id1163758512721" class="summary">
+<para id="fs-id1163758440677">To accomplish its policy priorities, the federal government often needs to elicit the cooperation of states and local governments, using various strategies. Block and categorical grants provide money to lower government levels to subsidize the cost of implementing policy programs fashioned in part by the federal government. This strategy gives state and local authorities some degree of flexibility and discretion as they coordinate with the federal government. On the other hand, mandate compels state and local governments to abide by federal laws and regulations or face penalties.</para>
+</section>
+<section id="fs-id1163758382275" class="review-questions">
+<exercise id="fs-id1163758412221">
+<problem id="fs-id1163758390436">
+<para id="fs-id1163758372550">Which statement about federal grants in recent decades is most accurate?</para>
+<list id="fs-id1163758414090" list-type="enumerated" number-style="lower-alpha">
+<item>The federal government allocates the most grant money to income security.</item>
+<item>The amount of federal grant money going to states has steadily increased since the 1960s.</item>
+<item>The majority of federal grants are block grants.</item>
+<item>Block grants tend to gain more flexibility over time.</item>
+</list>
+</problem>
+</exercise>
+<exercise id="fs-id1163758300241">
+<problem id="fs-id1163758388998">
+<para id="fs-id1163758468312">Which statement about unfunded mandates is <emphasis effect="italics">false?</emphasis></para>
+<list id="fs-id1163758427590" list-type="enumerated" number-style="lower-alpha">
+<item>The Unfunded Mandates Reform Act has prevented Congress from using unfunded mandates.</item>
+<item>The Clean Air Act is a type of federal partial preemptive regulation.</item>
+<item>Title VI of the Civil Rights Act establishes crosscutting requirements.</item>
+<item>New federalism does not promote the use of unfunded mandates.</item>
+</list>
+</problem>
+<solution id="fs-id1163758369906">
+<para id="fs-id1163758473321">D</para>
+</solution>
+</exercise>
+<exercise id="fs-id1163758366187">
+<problem id="fs-id1163758386090">
+<para id="fs-id1163758408846">What does it mean to refer to the carrot of grants and the stick of mandates?</para>
+</problem>
+</exercise>
+</section>
+</content>
+<glossary>
+<definition id="fs-id1163758438898">
+<term>block grant</term>
+<meaning id="fs-id1163758369205">a type of grant that comes with less stringent federal administrative conditions and provide recipients more latitude over how to spend grant funds</meaning>
+</definition>
+<definition id="fs-id1163758414449">
+<term>categorical grant</term>
+<meaning id="fs-id1163758409368">a federal transfer formulated to limit recipients’ discretion in the use of funds and subject them to strict administrative criteria</meaning>
+</definition>
+<definition id="fs-id1163758473724">
+<term>creeping categorization</term>
+<meaning id="fs-id1163758431449">a process in which the national government attaches new administrative requirements to block grants or supplants them with new categorical grants</meaning>
+</definition>
+<definition id="fs-id1163758400293">
+<term>unfunded mandates</term>
+<meaning id="fs-id1163758511185">federal laws and regulations that impose obligations on state and local governments without fully compensating them for the costs of implementation
+</meaning>
+</definition>
+</glossary>
+</document>

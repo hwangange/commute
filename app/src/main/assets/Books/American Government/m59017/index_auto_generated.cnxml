@@ -1,0 +1,66 @@
+<?xml version="1.0"?>
+<document xmlns="http://cnx.rice.edu/cnxml" xmlns:md="http://cnx.rice.edu/mdml" xmlns:bib="http://bibtexml.sf.net/" xmlns:m="http://www.w3.org/1998/Math/MathML" xmlns:q="http://cnx.rice.edu/qml/1.0" id="new" cnxml-version="0.7" module-id="new" class="introduction">
+
+<title>Introduction</title>
+<metadata xmlns:md="http://cnx.rice.edu/mdml"
+          mdml-version="0.5">
+  <!-- WARNING! The 'metadata' section is read only. Do not edit below.
+       Changes to the metadata section in the source will not be saved. -->
+  <md:repository>http://legacy.cnx.org/content</md:repository>
+  <md:content-url>http://legacy.cnx.org/content/m59017/latest</md:content-url>
+  <md:content-id>m59017</md:content-id>
+  <md:title>Introduction</md:title>
+  <md:version>1.2</md:version>
+  <md:created>2015/12/23 11:27:34 -0600</md:created>
+  <md:revised>2016/07/01 11:42:16 -0500</md:revised>
+  <md:actors>
+    <md:person userid="cnxamgov">
+      <md:firstname>OpenStax</md:firstname>
+      <md:surname>American Government</md:surname>
+      <md:fullname>OpenStax American Government</md:fullname>
+      <md:email>info@openstaxcollege.org</md:email>
+    </md:person>
+  </md:actors>
+  <md:roles>
+    <md:role type="author">cnxamgov</md:role>
+    <md:role type="maintainer">cnxamgov</md:role>
+    <md:role type="licensor">cnxamgov</md:role>
+  </md:roles>
+  <md:license url="http://creativecommons.org/licenses/by/4.0/">Creative Commons Attribution License 4.0</md:license>
+  <!-- For information on license requirements for use or modification, see license url in the
+       above <md:license> element.
+       For information on formatting required attribution, see the URL:
+         CONTENT_URL/content_info#cnx_cite_header
+       where CONTENT_URL is the value provided above in the <md:content-url> element.
+  -->
+  <md:keywordlist>
+    <md:keyword>Interest groups</md:keyword>
+    <md:keyword>Lobbying</md:keyword>
+    <md:keyword>Lobbyist</md:keyword>
+  </md:keywordlist>
+  <md:subjectlist>
+    <md:subject>Social Sciences</md:subject>
+  </md:subjectlist>
+  <md:abstract></md:abstract>
+  <md:language>en</md:language>
+  <!-- WARNING! The 'metadata' section is read only. Do not edit above.
+       Changes to the metadata section in the source will not be saved. -->
+</metadata>
+
+<content>
+<?cnx.eoc class="summary" title="Summary"?>
+<?cnx.eoc class="review-questions" title="Review Questions"?>
+<?cnx.eoc class="critical-thinking" title="Critical Thinking Questions"?>
+<?cnx.eoc class="suggested-reading" title="Suggested Reading"?>
+<?cnx.eoc class="references" title="References"?>
+<figure id="OSC_AmGov_10_00_Obamacare" class="splash">
+<media id="fs-id1171471320335" alt="">
+<image mime-type="image/jpeg" src="OSC_AmGov_10_00_Obamacare.jpg"/>
+</media>
+<caption>On April 15 (or “tax day”), 2010, members of the Tea Party movement rallied at the Minnesota State Capitol in St. Paul in favor of smaller government and against the Affordable Care Act (left). Two years later, supporters of the law (right) demonstrated in front of the U.S. Supreme Court during oral arguments in <term class="no-emphasis"><emphasis effect="italics">National Federation of Independent Business v. Sebelius</emphasis></term>, in which the Court eventually upheld most provisions of the law. (credit left: modification of work by “Fibonacci Blue”/Flickr; credit right: modification of work by LaDawna Howard)</caption>
+</figure>
+<para id="fs-id1171471009521">The 2010 <term class="no-emphasis">Patient Protection and Affordable Care Act</term> (ACA), also known as <term class="no-emphasis">Obamacare</term>, represented a substantial overhaul of the U.S. healthcare system.<cite target-id="rf-001"><note class="reference" display="inline" id="rf-001">Lawrence R. Jacobs and Theda Skocpol 2010. <emphasis effect="italics">Health Care Reform and American Politics: What Everyone Needs to Know</emphasis> Oxford: Oxford University Press.</note></cite> Given its potential impact, interest group representatives (lobbyists) from the insurance industry, hospitals, medical device manufacturers, and organizations representing doctors, patients, and employers all tried to influence what the law would look like and the way it would operate. Ordinary people took to the streets to voice their opinion (<link target-id="OSC_AmGov_10_00_Obamacare"/>). Some state governors sued to prevent a requirement in the law that their states expand Medicaid coverage. A number of interest groups challenged the law in court, where two Supreme Court decisions have left it largely intact.</para>
+<para id="fs-id1171473141020">Interest groups like those for and against the ACA play a fundamental role in representing individuals, corporate interests, and the public before the government. They help inform the public and lawmakers about issues, monitor government actions, and promote policies that benefit their interests, using all three branches of government at the federal, state, and local levels.</para>
+<para id="fs-id1171471184159">In this chapter, we answer several key questions about interest groups. What are they, and why and how do they form? How do they provide avenues for political participation? Why are some groups advantaged by the lobbying of government representatives, while others are disadvantaged? Finally, how do interest groups try to achieve their objectives, and how are they regulated?</para>
+</content>
+</document>

@@ -1,0 +1,67 @@
+<?xml version="1.0"?>
+<document xmlns="http://cnx.rice.edu/cnxml" xmlns:md="http://cnx.rice.edu/mdml" xmlns:bib="http://bibtexml.sf.net/" xmlns:m="http://www.w3.org/1998/Math/MathML" xmlns:q="http://cnx.rice.edu/qml/1.0" id="new" cnxml-version="0.7" module-id="new" class="introduction">
+
+<title>Introduction</title>
+<metadata xmlns:md="http://cnx.rice.edu/mdml"
+          mdml-version="0.5">
+  <!-- WARNING! The 'metadata' section is read only. Do not edit below.
+       Changes to the metadata section in the source will not be saved. -->
+  <md:repository>http://legacy.cnx.org/content</md:repository>
+  <md:content-url>http://legacy.cnx.org/content/m58966/latest/</md:content-url>
+  <md:content-id>m58966</md:content-id>
+  <md:title>Introduction</md:title>
+  <md:version>1.2</md:version>
+  <md:created>2015/12/22 11:46:00 -0600</md:created>
+  <md:revised>2016/07/01 11:16:27.529 GMT-5</md:revised>
+  <md:actors>
+    <md:person userid="cnxamgov">
+      <md:firstname>OpenStax</md:firstname>
+      <md:surname>American Goverment</md:surname>
+      <md:fullname>OpenStax American Goverment</md:fullname>
+      <md:email>info@openstaxcollege.org</md:email>
+    </md:person>
+  </md:actors>
+  <md:roles>
+    <md:role type="author">cnxamgov</md:role>
+    <md:role type="maintainer">cnxamgov</md:role>
+    <md:role type="licensor">cnxamgov</md:role>
+  </md:roles>
+  <md:license url="http://creativecommons.org/licenses/by/4.0/">Creative Commons Attribution License 4.0</md:license>
+  <!-- For information on license requirements for use or modification, see license url in the
+       above <md:license> element.
+       For information on formatting required attribution, see the URL:
+         CONTENT_URL/content_info#cnx_cite_header
+       where CONTENT_URL is the value provided above in the <md:content-url> element.
+  -->
+  <md:keywordlist>
+    <md:keyword>Centralization</md:keyword>
+    <md:keyword>Constitution</md:keyword>
+    <md:keyword>Federalism</md:keyword>
+  </md:keywordlist>
+  <md:subjectlist>
+    <md:subject>Social Sciences</md:subject>
+    <md:subject>Social Sciences</md:subject>
+  </md:subjectlist>
+  <md:abstract></md:abstract>
+  <md:language>en</md:language>
+  <!-- WARNING! The 'metadata' section is read only. Do not edit above.
+       Changes to the metadata section in the source will not be saved. -->
+</metadata>
+
+<content>
+<?cnx.eoc class="summary" title="Summary"?>
+<?cnx.eoc class="review-questions" title="Review Questions"?>
+<?cnx.eoc class="critical-thinking" title="Critical Thinking Questions"?>
+<?cnx.eoc class="suggested-reading" title="Suggested Reading"?>
+<?cnx.eoc class="references" title="References"?>       
+<figure id="OSC_AmGov_03_00_Postcards" class="splash">
+<media id="fs-id1163758414716" alt="A series of postcards from different states, with the slogan &#x201C;Greetings From&#x201D; above each state&#x2019;s name. Iconic images and scenery decorates each states&#x2019; postcard. States includes are Virginia, South Carolina,Utah, Oklahoma, Arizona, Wisconsin, West Virginia, Georgia, Maine, Delaware, New Hampshire, and Pennsylvania.">
+<image mime-type="image/jpeg" src="OSC_AmGov_03_00_Postcards.jpg"/>
+</media>
+<caption>Your first encounter with differences across states may have come from a childhood experience—perhaps visiting relatives in another state or going on a cross-country trip with your parents during summer vacation. The distinct postcard images of different states that come to your mind are symbolic of American federalism. (credit: modification of work by Boston Public Library)</caption>
+</figure>
+<para id="fs-id1163758420918">Federalism figures prominently in the U.S. political system. Specifically, the federal design spelled out in the Constitution divides powers between two levels of government—the states and the federal government—and creates a mechanism for them to check and balance one another. As an institutional design, <term class="no-emphasis">federalism</term> both safeguards state interests and creates a strong union led by a capable central government.</para>
+<para id="fs-id1163758303835">American federalism also seeks to balance the forces of <term class="no-emphasis">decentralization</term> and <term class="no-emphasis">centralization</term>. We see decentralization when we cross state lines and encounter different taxation levels, welfare eligibility requirements, and voting regulations, to name just a few. Centralization is apparent in the fact that the federal government is the only entity permitted to print money, to challenge the legality of state laws, or to employ money grants and mandates to shape state actions. Colorful billboards with simple messages may greet us at state borders (<link target-id="OSC_AmGov_03_00_Postcards"/>), but behind them lies a complex and evolving federal design that has structured relationships between states and the federal government since the late 1700s.</para>
+<para id="fs-id1163758330065">What specific powers and responsibilities are granted to the federal and state governments? How does our process of government keep these separate governing entities in balance? To answer these questions and more, this chapter traces the origins, evolution, and functioning of the American system of federalism, as well as its advantages and disadvantages for citizens.</para>
+</content>
+</document>

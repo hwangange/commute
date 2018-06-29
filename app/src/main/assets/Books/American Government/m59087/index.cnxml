@@ -1,0 +1,63 @@
+<?xml version="1.0"?>
+<document xmlns="http://cnx.rice.edu/cnxml" xmlns:md="http://cnx.rice.edu/mdml" xmlns:bib="http://bibtexml.sf.net/" xmlns:m="http://www.w3.org/1998/Math/MathML" xmlns:q="http://cnx.rice.edu/qml/1.0" id="new" cnxml-version="0.7" module-id="new" class="introduction">
+
+<title>Introduction</title>
+<metadata xmlns:md="http://cnx.rice.edu/mdml"
+          mdml-version="0.5">
+  <!-- WARNING! The 'metadata' section is read only. Do not edit below.
+       Changes to the metadata section in the source will not be saved. -->
+  <md:repository>http://legacy.cnx.org/content</md:repository>
+  <md:content-url>http://legacy.cnx.org/content/m59087/latest/</md:content-url>
+  <md:content-id>m59087</md:content-id>
+  <md:title>Introduction</md:title>
+  <md:version>1.2</md:version>
+  <md:created>2015/12/23 14:51:43 -0600</md:created>
+  <md:revised>2016/07/01 12:06:12.485 GMT-5</md:revised>
+  <md:actors>
+    <md:person userid="cnxamgov">
+      <md:firstname>OpenStax</md:firstname>
+      <md:surname>American Goverment</md:surname>
+      <md:fullname>OpenStax American Goverment</md:fullname>
+      <md:email>info@openstaxcollege.org</md:email>
+    </md:person>
+  </md:actors>
+  <md:roles>
+    <md:role type="author">cnxamgov</md:role>
+    <md:role type="maintainer">cnxamgov</md:role>
+    <md:role type="licensor">cnxamgov</md:role>
+  </md:roles>
+  <md:license url="http://creativecommons.org/licenses/by/4.0/">Creative Commons Attribution License 4.0</md:license>
+  <!-- For information on license requirements for use or modification, see license url in the
+       above <md:license> element.
+       For information on formatting required attribution, see the URL:
+         CONTENT_URL/content_info#cnx_cite_header
+       where CONTENT_URL is the value provided above in the <md:content-url> element.
+  -->
+  <md:keywordlist>
+    <md:keyword>Foreign policy</md:keyword>
+  </md:keywordlist>
+  <md:subjectlist>
+    <md:subject>Social Sciences</md:subject>
+    <md:subject>Social Sciences</md:subject>
+  </md:subjectlist>
+  <md:abstract></md:abstract>
+  <md:language>en</md:language>
+  <!-- WARNING! The 'metadata' section is read only. Do not edit above.
+       Changes to the metadata section in the source will not be saved. -->
+</metadata>
+
+<content>
+<?cnx.eoc class="summary" title="Summary"?>
+<?cnx.eoc class="review-questions" title="Review Questions"?>
+<?cnx.eoc class="critical-thinking" title="Critical Thinking Questions"?>
+<?cnx.eoc class="suggested-reading" title="Suggested Reading"?>
+<?cnx.eoc class="references" title="References"?>
+<figure id="OSC_AmGov_17_00_ObamaPutin" class="splash"><media id="fs-id1172503494190" alt="An image of Barack Obama and Vladimir Putin seated in front of two U. S. and two Russian flags, poised to shake hands.">
+<image mime-type="image/jpeg" src="OSC_AmGov_17_00_ObamaPutin_a.jpg"/>
+</media>
+
+<caption>U.S. president Barack <term class="no-emphasis">Obama</term> and Russian president Vladimir <term class="no-emphasis">Putin</term> shake hands for the cameras during the G8 Summit held June 17–18, 2013, at Lough Erne in Northern Ireland.</caption></figure><para id="fs-id1172503441439">The U.S. government interacts with a large number of international actors, from other governments to private organizations, to fight global problems like terrorism and human trafficking, and to meet many other national foreign policy goals such as encouraging trade and protecting the environment. Sometimes these goals are conflicting. Perhaps because of these realities, the president is in many ways the leader of the foreign policy domain. When the United States wishes to discuss important issues with other nations, the president (or a representative such as the secretary of state) typically does the talking, as when President Barack Obama visited with Russian president Vladimir Putin in 2013 (<link target-id="OSC_AmGov_17_00_ObamaPutin"/>).</para>
+<para id="fs-id1172503234051">But don’t let this image mislead you. While the president is the country’s foreign policy leader, Congress also has many foreign policy responsibilities, including approving treaties and agreements, allocating funding, making war, and confirming ambassadors. These and various other activities constitute the patchwork quilt that is U.S. foreign policy.</para>
+<para id="fs-id1172503238517">How are foreign and domestic policymaking different, and how are they linked? What are the main foreign policy goals of the United States? How do the president and Congress interact in the foreign policy realm? In what different ways might foreign policy be pursued? This chapter will delve into these and other issues to present an overview U.S. foreign policy.</para>
+</content>
+</document>

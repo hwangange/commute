@@ -1,13 +1,18 @@
 package com.interns.team3.openstax.myttsapplication;
 
 import android.app.Activity;
+import android.content.Context;
 import android.content.Intent;
+import android.graphics.drawable.Drawable;
 import android.support.v7.widget.RecyclerView;
+import android.util.Log;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 import android.widget.ImageView;
 import android.widget.TextView;
+
+import com.squareup.picasso.Picasso;
 
 import java.util.ArrayList;
 
@@ -16,6 +21,7 @@ public class ContentAdapter extends RecyclerView.Adapter<RecyclerView.ViewHolder
     public ArrayList<Content> dataSet;
     public View.OnClickListener modOnClickListener = new ModOnClickListener();
     public View.OnClickListener bookOnClickListener = new BookOnClickListener();
+    public Context context;
 
 
     public static class ModOnClickListener implements View.OnClickListener {
@@ -90,6 +96,7 @@ public class ContentAdapter extends RecyclerView.Adapter<RecyclerView.ViewHolder
             super(v);
             bookTitle = (TextView) v.findViewById(R.id.book_title);
             bookId = (TextView) v.findViewById(R.id.book_id);
+            bookImg= (ImageView) v.findViewById(R.id.book_img);
         }
     }
 
@@ -194,13 +201,19 @@ public class ContentAdapter extends RecyclerView.Adapter<RecyclerView.ViewHolder
                 BookViewHolder bookViewHolder = (BookViewHolder) holder;
                 TextView myBookTitle = bookViewHolder.bookTitle;
                 TextView myBookId = bookViewHolder.bookId;
+                ImageView myBookImg = bookViewHolder.bookImg;
 
                 Content.Book book = (Content.Book) dataSet.get(position);
                 String title= book.getTitle();
                 String id = book.getId();
 
+                String modified_title= title.replaceAll(" ", "_").toLowerCase();
+                Log.i("Title; ", modified_title);
+                int drawable_id = context.getResources().getIdentifier(modified_title, "drawable", context.getPackageName());
+
                 myBookTitle.setText(title);
                 myBookId.setText(id);
+                Picasso.with(context).load(drawable_id).into(myBookImg);
 
                 break;
             }
@@ -211,6 +224,10 @@ public class ContentAdapter extends RecyclerView.Adapter<RecyclerView.ViewHolder
     @Override
     public int getItemCount() {
         return dataSet.size();
+    }
+
+    public void setContext(Context c){
+        context = c;
     }
 
 }

@@ -1,0 +1,231 @@
+<?xml version="1.0"?>
+<document xmlns="http://cnx.rice.edu/cnxml" xmlns:md="http://cnx.rice.edu/mdml" xmlns:bib="http://bibtexml.sf.net/" xmlns:m="http://www.w3.org/1998/Math/MathML" xmlns:q="http://cnx.rice.edu/qml/1.0" id="new" cnxml-version="0.7" module-id="new">
+
+<title>The Federal Court System</title>
+<metadata xmlns:md="http://cnx.rice.edu/mdml"
+          mdml-version="0.5">
+  <!-- WARNING! The 'metadata' section is read only. Do not edit below.
+       Changes to the metadata section in the source will not be saved. -->
+  <md:repository>http://legacy.cnx.org/content</md:repository>
+  <md:content-url>http://legacy.cnx.org/content/m59062/latest</md:content-url>
+  <md:content-id>m59062</md:content-id>
+  <md:title>The Federal Court System</md:title>
+  <md:version>1.3</md:version>
+  <md:created>2015/12/23 13:24:28 -0600</md:created>
+  <md:revised>2016/11/11 08:59:32 -0600</md:revised>
+  <md:actors>
+    <md:person userid="cnxamgov">
+      <md:firstname>OpenStax</md:firstname>
+      <md:surname>American Government</md:surname>
+      <md:fullname>OpenStax American Government</md:fullname>
+      <md:email>info@openstaxcollege.org</md:email>
+    </md:person>
+  </md:actors>
+  <md:roles>
+    <md:role type="author">cnxamgov</md:role>
+    <md:role type="maintainer">cnxamgov</md:role>
+    <md:role type="licensor">cnxamgov</md:role>
+  </md:roles>
+  <md:license url="http://creativecommons.org/licenses/by/4.0/">Creative Commons Attribution License 4.0</md:license>
+  <!-- For information on license requirements for use or modification, see license url in the
+       above <md:license> element.
+       For information on formatting required attribution, see the URL:
+         CONTENT_URL/content_info#cnx_cite_header
+       where CONTENT_URL is the value provided above in the <md:content-url> element.
+  -->
+  <md:keywordlist>
+    <md:keyword>circuit courts</md:keyword>
+    <md:keyword>courts of appeals</md:keyword>
+    <md:keyword>district courts</md:keyword>
+    <md:keyword>precedent</md:keyword>
+    <md:keyword>senatorial courtesy</md:keyword>
+    <md:keyword>stare decisis</md:keyword>
+  </md:keywordlist>
+  <md:subjectlist>
+    <md:subject>Social Sciences</md:subject>
+    <md:subject>Social Sciences</md:subject>
+  </md:subjectlist>
+  <md:abstract></md:abstract>
+  <md:language>en</md:language>
+  <!-- WARNING! The 'metadata' section is read only. Do not edit above.
+       Changes to the metadata section in the source will not be saved. -->
+</metadata>
+
+<content>
+<section id="fs-id1163758555918" class="learning-objectives">
+<title>Learning Objectives</title>
+<para id="fs-id1163758316369">By the end of this section, you will be able to:</para>
+<list id="fs-id1163756172455">
+<item>Describe the differences between the U.S. district courts, circuit courts, and the Supreme Court</item>
+<item>Explain the significance of precedent in the courts’ operations</item>
+<item>Describe how judges are selected for their positions</item>
+</list>
+</section>
+<para id="fs-id1163756083848">Congress has made numerous changes to the federal judicial system throughout the years, but the three-tiered structure of the system is quite clear-cut today. Federal cases typically begin at the lowest federal level, the district (or trial) court. Losing parties may appeal their case to the higher courts—first to the circuit courts, or U.S. courts of appeals, and then, if chosen by the justices, to the U.S. Supreme Court. Decisions of the higher courts are binding on the lower courts. The <term>precedent</term> set by each ruling, particularly by the Supreme Court’s decisions, both builds on principles and guidelines set by earlier cases and frames the ongoing operation of the courts, steering the direction of the entire system. Reliance on precedent has enabled the federal courts to operate with logic and consistency that has helped validate their role as the key interpreters of the Constitution and the law—a legitimacy particularly vital in the United States where citizens do not elect federal judges and justices but are still subject to their rulings.</para>
+<section id="fs-id1163756148104">
+<title>THE THREE TIERS OF FEDERAL COURTS</title>
+<para id="fs-id1163758579892">There are ninety-four U.S. <term>district courts</term> in the fifty states and U.S. territories, of which eighty-nine are in the states (at least one in each state). The others are in Washington, DC; Puerto Rico; Guam; the U.S. Virgin Islands; and the Northern Mariana Islands. These are the trial courts of the national system, in which federal cases are tried, witness testimony is heard, and evidence is presented. No district court crosses state lines, and a single judge oversees each one. Some cases are heard by a jury, and some are not.</para>
+<para id="fs-id1163756241727">There are thirteen U.S. <term>courts of appeals</term>, or <term>circuit courts</term>, eleven across the nation and two in Washington, DC (the DC circuit and the federal circuit courts), as illustrated in <link target-id="OSC_AmGov_13_03_Circuits"/>. Each court is overseen by a rotating panel of three judges who do not hold trials but instead review the rulings of the trial (district) courts within their geographic circuit. As authorized by Congress, there are currently 179 judges. The circuit courts are often referred to as the <emphasis effect="italics">intermediate appellate courts</emphasis> of the federal system, since their rulings can be appealed to the U.S. Supreme Court. Moreover, different circuits can hold legal and cultural views, which can lead to differing outcomes on similar legal questions. In such scenarios, clarification from the U.S. Supreme Court might be needed.</para>
+<figure id="OSC_AmGov_13_03_Circuits">
+<media id="fs-id1163758392054" alt="A map of the Unites States titled &#x201C;U.S. Courts of Appeals and U.S. District Courts&#x201D;. The map shows the thirteen courts of appeals and the geographical areas those courts cover. The first region covers the states of Maine, New Hampshire, Massachusetts, and Rhode Island. The second region covers the states of Vermont, New York, and Connecticut. The third region covers the states of Pennsylvania, New Jersey, and Delaware. The fourth region covers the states of Maryland, West Virginia, Virginia, North Carolina, and South Carolina. The fifth region covers the states of Mississippi, Louisiana, and Texas. The sixth region covers the states of Michigan, Ohio, Kentucky, and Tennessee. The seventh region covers the states of Wisconsin, Illinois, and Indiana. The eighth region covers the states of North Dakota, South Dakota, Nebraska, Minnesota, Iowa, Missouri, and Arkansas. The ninth region covers the states of Washington, Montana, Idaho, Oregon, California, Nevada, Hawaii, Alaska, and Arizona. The tenth region covers the states of Wyoming, Utah, Colorado, Kansas, Oklahoma, and New Mexico. The eleventh region covers the states of Alabama, Georgia, and Florida. The twelfth court is labeled &#x201C;DC Federal Circuit&#x201D; and the thirteenth court is labeled &#x201C;DC Supreme Court&#x201D;.">
+<image mime-type="image/jpeg" src="OSC_AmGov_13_03_Circuits.jpg"/>
+</media>
+<caption>There are thirteen judicial circuits: eleven in the geographical areas marked on the map and two in Washington, DC.</caption>
+</figure>
+<para id="fs-id1163758490032">Today’s <term class="no-emphasis">federal court system</term> was not an overnight creation; it has been changing and transitioning for more than two hundred years through various acts of Congress. Since district courts are not called for in <term class="no-emphasis">Article III</term> of the Constitution, Congress established them and narrowly defined their jurisdiction, at first limiting them to handling only cases that arose within the district. Beginning in 1789 when there were just thirteen, the district courts became the basic organizational units of the federal judicial system. Gradually over the next hundred years, Congress expanded their jurisdiction, in particular over federal questions, which enables them to review constitutional issues and matters of federal law. In the <term class="no-emphasis">Judicial Code of 1911</term>, Congress made the U.S. district courts the sole general-jurisdiction trial courts of the federal judiciary, a role they had previously shared with the circuit courts.<cite target-id="rf-34"><note class="reference" display="inline" id="rf-34">“The U.S. District Courts and the Federal Judiciary.” <emphasis effect="italics">Federal Judicial Center</emphasis>. http://www.fjc.gov/history/home.nsf/page/courts_district.html (March 1, 2016).</note></cite></para>
+<para id="fs-id1163758513860">The <term class="no-emphasis">circuit courts</term> started out as the trial courts for most federal criminal cases and for some civil suits, including those initiated by the United States and those involving citizens of different states. But early on, they did not have their own judges; the local district judge and two Supreme Court justices formed each circuit court panel. (That is how the name “circuit” arose—judges in the early circuit courts traveled from town to town to hear cases, following prescribed paths or circuits to arrive at destinations where they were needed.<cite target-id="rf-35"><note class="reference" display="inline" id="rf-35">“Circuit Riding.” <emphasis effect="italics">Encyclopedia Britannica</emphasis>. http://www.britannica.com/topic/circuit-riding (March 1, 2016).</note></cite>) Circuit courts also exercised appellate jurisdiction (meaning they receive appeals on federal district court cases) over most civil suits that originated in the district courts; however, that role ended in 1891, and their appellate jurisdiction was turned over to the newly created circuit courts, or U.S. courts of appeals. The original circuit courts—the ones that did not have “of appeals” added to their name—were abolished in 1911, fully replaced by these new circuit courts of appeals.<cite target-id="rf-36"><note class="reference" display="inline" id="rf-36">“The U.S. Circuit Courts and the Federal Judiciary.” <emphasis effect="italics">Federal Judicial Center</emphasis>. http://www.fjc.gov/history/home.nsf/page/courts_circuit.html (March 1, 2016).</note></cite></para>
+<para id="fs-id1163758400112">While we often focus primarily on the district and circuit courts of the federal system, other federal trial courts exist that have more specialized jurisdictions, such as the Court of International Trade, Court of Federal Claims, and U.S. Tax Court. Specialized federal appeals courts include the Court of Appeals for the Armed Forces and the Court of Appeals for Veterans Claims. Cases from any of these courts may also be appealed to the Supreme Court, although that result is very rare.</para>
+<para id="fs-id1163758309068">On the <term class="no-emphasis">U.S. Supreme Court</term>, there are nine justices—one chief justice and eight associate justices. Circuit courts each contain three justices, whereas federal district courts have just one judge each. As the national court of last resort for all other courts in the system, the Supreme Court plays a vital role in setting the standards of interpretation that the lower courts follow. The Supreme Court’s decisions are binding across the nation and establish the precedent by which future cases are resolved in all the system’s tiers.</para>
+<para id="fs-id1163758462418">The U.S. court system operates on the principle of <term><emphasis effect="italics">stare decisis</emphasis></term> (Latin for <emphasis effect="italics">stand by things decided</emphasis>), which means that today’s decisions are based largely on rulings from the past, and tomorrow’s rulings rely on what is decided today. <emphasis effect="italics">Stare decisis</emphasis> is especially important in the U.S. common law system, in which the consistency of precedent ensures greater certainty and stability in law and constitutional interpretation, and it also contributes to the solidity and legitimacy of the court system itself. As former Supreme Court justice Benjamin <term class="no-emphasis">Cardozo</term> summarized it years ago, “Adherence to precedent must then be the rule rather than the exception if litigants are to have faith in the even-handed administration of justice in the courts.”<cite target-id="rf-37"><note class="reference" display="inline" id="rf-37">Benjamin N. Cardozo. 1921. <emphasis effect="italics">The Nature of the Judicial Process</emphasis>. New Haven: Yale University Press. http://www.constitution.org/cmt/cardozo/jud_proc.htm.</note></cite></para>
+<note id="fs-id1163758369008" class="american government link-to-learning">
+<media id="fs-id1163758545941" alt="Link to learning graphic">
+<image mime-type="image/png" src="OSC_Interactive_150.png"/>
+</media>
+<para id="fs-id1163758387484">With a focus on federal courts and the public, this website reveals the <link url="https://openstaxcollege.org/l/29fedcourtpub">different ways</link> the federal courts affect the lives of U.S. citizens and how those citizens interact with the courts.</para>
+</note>
+<para id="fs-id1163758577571">When the legal facts of one case are the same as the legal facts of another, <emphasis effect="italics">stare decisis</emphasis> dictates that they should be decided the same way, and judges are reluctant to disregard precedent without justification. However, that does not mean there is no flexibility or that new precedents or rulings can never be created. They often are. Certainly, court interpretations can change as times and circumstances change—and as the courts themselves change when new judges are selected and take their place on the bench. For example, the membership of the Supreme Court had changed entirely between <term class="no-emphasis"><emphasis effect="italics">Plessey v. Ferguson</emphasis></term> (1896), which brought the doctrine of “separate but equal” and <term class="no-emphasis"><emphasis effect="italics">Brown v.</emphasis> <emphasis effect="italics">Board of Education</emphasis></term> (1954), which required integration.<cite target-id="rf-38"><note class="reference" display="inline" id="rf-38"><emphasis effect="italics">Plessy v. Ferguson</emphasis>, 163 U.S. 537 (1896); <emphasis effect="italics">Brown v. Board of Education of Topeka</emphasis>, 347 U.S. 483 (1954).</note></cite></para>
+</section>
+<section id="fs-id1163758475956">
+<title>THE SELECTION OF JUDGES</title>
+<para id="fs-id1163758358058">Judges fulfill a vital role in the U.S. judicial system and are carefully selected. At the federal level, the president nominates a candidate to a judgeship or justice position, and the nominee must be confirmed by a majority vote in the U.S. Senate, a function of the Senate’s “advice and consent” role. All <term class="no-emphasis">judge</term>s and justices in the national courts serve lifetime terms of office.</para>
+<para id="fs-id1163758488736">The president sometimes chooses nominees from a list of candidates maintained by the <term class="no-emphasis">American Bar Association</term>, a national professional organization of lawyers.<cite target-id="rf-39"><note class="reference" display="inline" id="rf-39">American Bar Association Coalition for Justice. 2008. “Judicial Selection.” In <emphasis effect="italics">American Bar Association</emphasis>, eds. American Judicature Society and Malia Reddick. http://www.americanbar.org/content/dam/aba/migrated/JusticeCenter/Justice/PublicDocuments/judicial_selection_roadmap.authcheckdam.pdf.</note></cite> The president’s nominee is then discussed (and sometimes hotly debated) in the <term class="no-emphasis">Senate Judiciary Committee</term>. After a committee vote, the candidate must be confirmed by a majority vote of the full Senate. He or she is then sworn in, taking an oath of office to uphold the Constitution and the laws of the United States.</para>
+<para id="fs-id1163758539908">When a vacancy occurs in a lower federal court, by custom, the president consults with that state’s U.S. senators before making a nomination. Through such <term>senatorial courtesy</term>, senators exert considerable influence on the selection of judges in their state, especially those senators who share a party affiliation with the president. In many cases, a senator can block a proposed nominee just by voicing his or her opposition. Thus, a presidential nominee typically does not get far without the support of the senators from the nominee’s home state.</para>
+<para id="fs-id1163758577620">Most presidential appointments to the federal judiciary go unnoticed by the public, but when a president has the rarer opportunity to make a Supreme Court appointment, it draws more attention. That is particularly true now, when many people get their news primarily from the Internet and social media. It was not surprising to see not only television news coverage but also blogs and tweets about President <term class="no-emphasis">Obama</term>’s most recent nominees to the high court, Sonia Sotomayor and Elena Kagan (<link target-id="OSC_AmGov_13_03_Newest"/>).</para>
+<figure xmlns:data="http://www.w3.org/TR/html5/dom.html#custom-data-attribute" id="OSC_AmGov_13_03_Newest"><media id="fs-id1163758307960" alt="Image A is of Justice Sonia Sotomayor. Image B is of Justice Elena Kagan.">
+<image mime-type="image/jpeg" src="OSC_AmGov_13_03_Newest.jpg"/>
+</media>
+
+<caption>President Obama has made two appointments to the U.S. Supreme Court, Justices Sonia <term class="no-emphasis">Sotomayor</term> (a) in 2009 and Elena <term class="no-emphasis">Kagan</term> (b) in 2010. Since their appointments, both justices have made rulings consistent with a more liberal ideology. The death of Justice Antonin <term class="no-emphasis">Scalia</term> in February 2016 has prompted the most recent discussion of appointing a new justice, with Obama nominating Merrick <term class="no-emphasis">Garland</term> to fill the vacant seat. However, action on this nominee is unlikely given the election of Republican Donald Trump to the presidency. The Republican Senate will take up a Trump nominee in early 2017.</caption></figure><para id="fs-id1163756068224">Presidential nominees for the courts typically reflect the chief executive’s own ideological position. With a confirmed nominee serving a lifetime appointment, a president’s ideological legacy has the potential to live on long after the end of his or her term.<cite target-id="rf-40"><note class="reference" display="inline" id="rf-40">American Bar Association Coalition for Justice. 2008. “Judicial Selection.” In <emphasis effect="italics">American Bar Association</emphasis>, eds. American Judicature Society and Malia Reddick. http://www.americanbar.org/content/dam/aba/migrated/JusticeCenter/Justice/PublicDocuments/judicial_selection_roadmap.authcheckdam.pdf.</note></cite> President Obama surely considered the ideological leanings of his two Supreme Court appointees, and both Sotomayor and Kagan have consistently ruled in a more liberal ideological direction. The timing of the two nominations also dovetailed nicely with the Democratic Party’s gaining control of the Senate in the 111th Congress of 2009–2011, which helped guarantee their confirmations.</para>
+<para id="fs-id1163758545560">But some nominees turn out to be surprises or end up ruling in ways that the president who nominated them did not anticipate. Democratic-appointed judges sometimes side with conservatives, just as Republican-appointed judges sometimes side with liberals. Republican Dwight D. <term class="no-emphasis">Eisenhower</term> reportedly called his nomination of Earl <term class="no-emphasis">Warren</term> as chief justice—in an era that saw substantial broadening of civil and criminal rights—“the biggest damn fool mistake” he had ever made. Sandra Day <term class="no-emphasis">O’Connor</term>, nominated by Republican president Ronald <term class="no-emphasis">Reagan</term>, often became a champion for women’s rights. David <term class="no-emphasis">Souter</term>, nominated by Republican George H. W. <term class="no-emphasis">Bush</term>, more often than not sided with the Court’s liberal wing. And even on the present-day court, Anthony <term class="no-emphasis">Kennedy</term>, a Reagan appointee, has become notorious as the Court’s swing vote, sometimes siding with the more conservative justices but sometimes not. Current chief justice John <term class="no-emphasis">Roberts</term>, though most typically an ardent member of the Court’s more conservative wing, has twice voted to uphold provisions of the Affordable Care Act.</para>
+<para xmlns:data="http://www.w3.org/TR/html5/dom.html#custom-data-attribute" id="fs-id1163758447902">Once a justice has started his or her lifetime tenure on the Court and years begin to pass, many people simply forget which president nominated him or her. For better or worse, sometimes it is only a controversial nominee who leaves a president’s legacy behind. For example, the Reagan presidency is often remembered for two controversial nominees to the Supreme Court—Robert <term class="no-emphasis">Bork</term> and Douglas <term class="no-emphasis">Ginsburg</term>, the former accused of taking an overly conservative and “extremist view of the Constitution”<cite target-id="rf-41"><note class="reference" display="inline" id="rf-41">John M. Broder. “Edward M. Kennedy, Senate Stalwart, Is Dead at 77.” <emphasis effect="italics">New York Times</emphasis>. 26 August 2009.</note></cite> and the latter of having used marijuana while a student and then a professor at Harvard University (<link target-id="OSC_AmGov_13_03_Nominees"/>). President George W. Bush’s nomination of Harriet <term class="no-emphasis">Miers</term> was withdrawn in the face of criticism from both sides of the political spectrum, questioning her ideological leanings and especially her qualifications, suggesting she was not ready for the job.<cite target-id="rf-42"><note class="reference" display="inline" id="rf-42">Michael A. Fletcher and Charles Babington. “Miers, Under Fire From Right, Withdrawn as Court Nominee.” <emphasis effect="italics">Washington Post</emphasis>. 28 October 2005. http://www.washingtonpost.com/wp-dyn/content/article/2005/10/27/AR2005102700547.html.</note></cite> After Miers’ withdrawal, the Senate went on to confirm Bush’s subsequent nomination of Samuel <term class="no-emphasis">Alito</term>, who remains on the Court today. The 2016 presidential election between Hillary Clinton and Donald Trump was especially important because the next president is likely to choose three justices.</para><figure id="OSC_AmGov_13_03_Nominees">
+<media id="fs-id1163758391859" alt="Image A is of Robert Bork. Image B is of Douglas Ginsburg. Image C is of Harriet Miers.">
+<image mime-type="image/jpeg" src="OSC_AmGov_13_03_Nominees.jpg"/>
+</media>
+<caption>Presidential nominations to the Supreme Court sometimes go awry, as illustrated by the failed nominations of Robert Bork (a), Douglas Ginsburg (b), and Harriet Miers (c).</caption>
+</figure>
+<para id="fs-id1163758526136">Presidential legacy and controversial nominations notwithstanding, there is one certainty about the overall look of the federal court system: What was once a predominately white, male, Protestant institution is today much more diverse. As a look at <link target-id="fs-id1163758857567"/> reveals, the membership of the Supreme Court has changed with the passing years.</para>
+<table id="fs-id1163758857567" summary="This table has two columns and six rows. The values in the first row are &#x201C;First Catholic&#x201D; and &#x201C;Roger B. Taney (nominated in 1836)&#x201D;. The values in the second row are &#x201C;First Jew&#x201D; and &#x201C;Louis J. Brandeis (1916)&#x201D;. The values in the third row are &#x201C;First (and only) former U.S. President&#x201D; and &#x201C;William Howard Taft (1921)&#x201D;. The values in the fourth row are &#x201C;First African American&#x201D; and &#x201C;Thurgood Marshall (1967)&#x201D;. The values in the fifth row are &#x201C;First Woman&#x201D; and &#x201C;Sandra Day O&#x2019;Connor (1981)&#x201D;. The values in the sixth row are &#x201C;First Hispanic American&#x201D; and &#x201C;Sonia Sotomayor (2009)&#x201D;." class="span-all">
+<tgroup cols="2">
+<colspec colnum="1" colname="c1"/>
+<colspec colnum="2" colname="c2"/>
+<thead>
+<row>
+<entry namest="c1" nameend="c2" align="center">Supreme Court Justice Firsts</entry>
+</row>
+</thead>
+<tbody>
+<row valign="top">
+<entry valign="top" align="left">First Catholic</entry>
+<entry valign="top" align="left">Roger B. <term class="no-emphasis">Taney</term> (nominated in 1836)</entry>
+</row>
+<row valign="top">
+<entry valign="top" align="left">First Jew</entry>
+<entry valign="top" align="left">Louis J. <term class="no-emphasis">Brandeis</term> (1916)</entry>
+</row>
+<row valign="top">
+<entry valign="top" align="left">First (and only) former U.S. President</entry>
+<entry valign="top" align="left">William Howard <term class="no-emphasis">Taft</term> (1921)</entry>
+</row>
+<row valign="top">
+<entry valign="top" align="left">First African American</entry>
+<entry valign="top" align="left">Thurgood <term class="no-emphasis">Marshall</term> (1967)</entry>
+</row>
+<row valign="top">
+<entry valign="top" align="left">First Woman</entry>
+<entry valign="top" align="left">Sandra Day <term class="no-emphasis">O’Connor</term> (1981)</entry>
+</row>
+<row valign="top">
+<entry valign="top" align="left">First Hispanic American</entry>
+<entry valign="top" align="left">Sonia <term class="no-emphasis">Sotomayor</term> (2009)</entry>
+</row>
+</tbody>
+</tgroup>
+</table>
+<para id="fs-id1163756389439">The lower courts are also more diverse today. In the past few decades, the U.S. judiciary has expanded to include more women and minorities at both the federal and state levels.<cite target-id="rf-43"><note class="reference" display="inline" id="rf-43">Bureau of International Information Programs. United States Department of State. <emphasis effect="italics">Outline of the U.S. Legal System</emphasis>. 2004.</note></cite> However, the number of women and people of color on the courts still lags behind the overall number of white men. As of 2009, the federal judiciary consists of 70 percent white men, 15 percent white women, and between 1 and 8 percent African American, Hispanic American, and Asian American men and women.<cite target-id="rf-44"><note class="reference" display="inline" id="rf-44">Russell Wheeler. “The Changing Face of the Federal Judiciary.” <emphasis effect="italics">Governance Studies at Brookings</emphasis>. August 2009. http://www.brookings.edu/~/media/research/files/papers/2009/8/federal-judiciary-wheeler/08_federal_judiciary_wheeler.pdf.</note></cite></para>
+</section>
+<section id="fs-id1163758508504" class="summary">
+<title>Summary</title>
+<para id="fs-id1163758507932">The structure of today’s three-tiered federal court system, largely established by Congress, is quite clear-cut. The system’s reliance on precedent ensures a consistent and stable institution that is still capable of slowly evolving over the years—such as by increasingly reflecting the diverse population it serves. Presidents hope their judicial nominees will make rulings consistent with the chief executive’s own ideological leanings. But the lifetime tenure of federal court members gives them the flexibility to act in ways that may or may not reflect what their nominating president intended. Perfect alignment between nominating president and justice is not expected; a judge might be liberal on most issues but conservative on others, or vice versa. However, presidents have sometimes been surprised by the decisions made by their nominees, such as President Eisenhower was by Justice Earl Warren and President Reagan by Justice Anthony Kennedy.</para>
+</section>
+<section id="fs-id1163758519159" class="review-questions">
+<exercise id="fs-id1163758372924">
+<problem id="fs-id1163758494584">
+<para id="fs-id1163758511099">Besides the Supreme Court, there are lower courts in the national system called ________.</para>
+<list id="fs-id1163756068660" list-type="enumerated" number-style="lower-alpha">
+<item>state and federal courts</item>
+<item>district and circuit courts</item>
+<item>state and local courts</item>
+<item>civil and common courts</item>
+</list>
+</problem>
+<solution id="fs-id1163758531976">
+<para id="fs-id1163758363247">B</para>
+</solution>
+</exercise>
+<exercise id="fs-id1163758839661">
+<problem id="fs-id1163758355259">
+<para id="fs-id1163758657993">In standing by precedent, a judge relies on the principle of ________.</para>
+<list id="fs-id1163756314332" list-type="enumerated" number-style="lower-alpha">
+<item><emphasis effect="italics">stare decisis</emphasis></item>
+<item>amicus curiae</item>
+<item>judicial activism</item>
+<item>laissez-faire</item>
+</list>
+</problem>
+</exercise>
+<exercise id="fs-id1163758534602">
+<problem id="fs-id1163758486913">
+<para id="fs-id1163758536430">The justices of the Supreme Court are ________.</para>
+<list id="fs-id1163758536398" list-type="enumerated" number-style="lower-alpha">
+<item>elected by citizens</item>
+<item>chosen by the Congress</item>
+<item>confirmed by the president</item>
+<item>nominated by the president and confirmed by the Senate</item>
+</list>
+</problem>
+<solution id="fs-id1163758494290">
+<para id="fs-id1163758408816">D</para>
+</solution>
+</exercise>
+<exercise id="fs-id1163758581618">
+<problem id="fs-id1163758373308">
+<para id="fs-id1163758501820">Do you believe federal judges should be elected rather than appointed? Why or why not?</para>
+</problem>
+</exercise>
+<exercise id="fs-id1163758416025">
+<problem id="fs-id1163756171090">
+<para id="fs-id1163758501172">When it comes to filling judicial positions in the federal courts, do you believe race, gender, religion, and ethnicity should matter? Why or why not?</para>
+</problem>
+<solution id="fs-id1163758393350">
+<para id="fs-id1163758306592">The United States has become much more diverse, and it is only fitting that the judicial branch more accurately reflects the demographic composition of the population. At the same time, judicial positions should be filled by the most competent and qualified candidates.</para>
+</solution>
+</exercise>
+</section>
+</content>
+<glossary>
+<definition id="fs-id1163758531175">
+<term>circuit courts</term>
+<meaning id="fs-id1163758657382">the appeals (appellate) courts of the federal court system that review decisions of the lower (district) courts; also called courts of appeals</meaning>
+</definition>
+<definition id="fs-id1163758401342">
+<term>courts of appeals</term>
+<meaning id="fs-id1163756144615">the appellate courts of the federal court system that review decisions of the lower (district) courts; also called circuit courts</meaning>
+</definition>
+<definition id="fs-id1163758539058">
+<term>district courts</term>
+<meaning id="fs-id1163758655956">the trial courts of the federal court system where cases are tried, evidence is presented, and witness testimony is heard</meaning>
+</definition>
+<definition id="fs-id1163758486266">
+<term>precedent</term>
+<meaning id="fs-id1163758375185">the principles or guidelines established by courts in earlier cases that frame the ongoing operation of the courts, steering the direction of the entire system</meaning>
+</definition>
+<definition id="fs-id1163758546008">
+<term>senatorial courtesy</term>
+<meaning id="fs-id1163758438598">an unwritten custom by which the president consults the senators in the state before nominating a candidate for a federal vacancy there, particularly for court positions</meaning>
+</definition>
+<definition id="fs-id1163758359469">
+<term><emphasis effect="italics">stare decisis</emphasis></term>
+<meaning id="fs-id1163758475543">the principle by which courts rely on past decisions and their precedents when making decisions in new cases</meaning>
+</definition>
+</glossary>
+</document>

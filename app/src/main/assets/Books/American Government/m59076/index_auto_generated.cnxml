@@ -1,0 +1,67 @@
+<?xml version="1.0"?>
+<document xmlns="http://cnx.rice.edu/cnxml" xmlns:md="http://cnx.rice.edu/mdml" xmlns:bib="http://bibtexml.sf.net/" xmlns:m="http://www.w3.org/1998/Math/MathML" xmlns:q="http://cnx.rice.edu/qml/1.0" id="new" cnxml-version="0.7" module-id="new" class="introduction">
+
+<title>Introduction</title>
+<metadata xmlns:md="http://cnx.rice.edu/mdml"
+          mdml-version="0.5">
+  <!-- WARNING! The 'metadata' section is read only. Do not edit below.
+       Changes to the metadata section in the source will not be saved. -->
+  <md:repository>http://legacy.cnx.org/content</md:repository>
+  <md:content-url>http://legacy.cnx.org/content/m59076/latest</md:content-url>
+  <md:content-id>m59076</md:content-id>
+  <md:title>Introduction</md:title>
+  <md:version>1.2</md:version>
+  <md:created>2015/12/23 13:55:37 -0600</md:created>
+  <md:revised>2016/07/01 11:58:20 -0500</md:revised>
+  <md:actors>
+    <md:person userid="cnxamgov">
+      <md:firstname>OpenStax</md:firstname>
+      <md:surname>American Government</md:surname>
+      <md:fullname>OpenStax American Government</md:fullname>
+      <md:email>info@openstaxcollege.org</md:email>
+    </md:person>
+  </md:actors>
+  <md:roles>
+    <md:role type="author">cnxamgov</md:role>
+    <md:role type="maintainer">cnxamgov</md:role>
+    <md:role type="licensor">cnxamgov</md:role>
+  </md:roles>
+  <md:license url="http://creativecommons.org/licenses/by/4.0/">Creative Commons Attribution License 4.0</md:license>
+  <!-- For information on license requirements for use or modification, see license url in the
+       above <md:license> element.
+       For information on formatting required attribution, see the URL:
+         CONTENT_URL/content_info#cnx_cite_header
+       where CONTENT_URL is the value provided above in the <md:content-url> element.
+  -->
+  <md:keywordlist>
+    <md:keyword>bureaucracy</md:keyword>
+    <md:keyword>civil service</md:keyword>
+    <md:keyword>merit system</md:keyword>
+    <md:keyword>spoils system</md:keyword>
+  </md:keywordlist>
+  <md:subjectlist>
+    <md:subject>Social Sciences</md:subject>
+  </md:subjectlist>
+  <md:abstract></md:abstract>
+  <md:language>en</md:language>
+  <!-- WARNING! The 'metadata' section is read only. Do not edit above.
+       Changes to the metadata section in the source will not be saved. -->
+</metadata>
+
+<content>
+<?cnx.eoc class="summary" title="Summary"?>
+<?cnx.eoc class="review-questions" title="Review Questions"?>
+<?cnx.eoc class="critical-thinking" title="Critical Thinking Questions"?>
+<?cnx.eoc class="suggested-reading" title="Suggested Reading"?>
+<?cnx.eoc class="references" title="References"?>
+<figure id="OSC_AmGov_15_00_MosesCrat" class="splash">
+<media id="fs-id1171473314030" alt="A cartoon featuring a group of dejected former bureaucrats wrapped in blankets, huddling together on a rocky cliff. The United States Capitol is visible in the distant background.">
+<image mime-type="image/jpeg" src="OSC_AmGov_15_00_MosesCrat.jpg"/>
+</media>
+<caption>This 1885 cartoon reflects the disappointment of office seekers who were turned away from bureaucratic positions they believed their political commitments had earned them. It was published just as the U.S. bureaucracy was being transformed from the spoils system to the merit system primarily in use today.</caption>
+</figure>
+<para id="fs-id1171473035266">What does the word “bureaucracy” conjure in your mind? For many, it evokes inefficiency, corruption, red tape, and government overreach (<link target-id="OSC_AmGov_15_00_MosesCrat"/>). For others, it triggers very different images—of professionalism, helpful and responsive service, and government management. Your experience with bureaucrats and the administration of government probably informs your response to the term. The ability of bureaucracy to inspire both revulsion and admiration is one of several features that make it a fascinating object of study.</para>
+<para id="fs-id1171471200396">More than that, the many arms of the federal bureaucracy, often considered the fourth branch of government, are valuable components of the federal system. Without this administrative structure, staffed by nonelected workers who possess particular expertise to carry out their jobs, government could not function the way citizens need it to. That does not mean, however, that bureaucracies are perfect.</para>
+<para id="fs-id1171473036743">What roles do professional government employees carry out? Who are they, and how and why do they acquire their jobs? How do they run the programs of government enacted by elected leaders? Who makes the rules of a bureaucracy? This chapter uncovers the answers to these questions and many more.</para>
+</content>
+</document>

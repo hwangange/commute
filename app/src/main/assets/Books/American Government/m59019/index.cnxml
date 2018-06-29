@@ -1,0 +1,176 @@
+<?xml version="1.0"?>
+<document xmlns="http://cnx.rice.edu/cnxml" xmlns:md="http://cnx.rice.edu/mdml" xmlns:bib="http://bibtexml.sf.net/" xmlns:m="http://www.w3.org/1998/Math/MathML" xmlns:q="http://cnx.rice.edu/qml/1.0" id="new" cnxml-version="0.7" module-id="new">
+
+<title>Collective Action and Interest Group Formation</title>
+<metadata xmlns:md="http://cnx.rice.edu/mdml"
+          mdml-version="0.5">
+  <!-- WARNING! The 'metadata' section is read only. Do not edit below.
+       Changes to the metadata section in the source will not be saved. -->
+  <md:repository>https://legacy.cnx.org/content</md:repository>
+  <md:content-url>https://legacy.cnx.org/content/m59019/latest/</md:content-url>
+  <md:content-id>m59019</md:content-id>
+  <md:title>Collective Action and Interest Group Formation</md:title>
+  <md:version>1.3</md:version>
+  <md:created>2015/12/23 11:29:43 -0600</md:created>
+  <md:revised>2016/11/10 16:06:12.357 US/Central</md:revised>
+  <md:actors>
+    <md:person userid="cnxamgov">
+      <md:firstname>OpenStax</md:firstname>
+      <md:surname>American Goverment</md:surname>
+      <md:fullname>OpenStax American Goverment</md:fullname>
+      <md:email>info@openstaxcollege.org</md:email>
+    </md:person>
+  </md:actors>
+  <md:roles>
+    <md:role type="author">cnxamgov</md:role>
+    <md:role type="maintainer">cnxamgov</md:role>
+    <md:role type="licensor">cnxamgov</md:role>
+  </md:roles>
+  <md:license url="http://creativecommons.org/licenses/by/4.0/">Creative Commons Attribution License 4.0</md:license>
+  <!-- For information on license requirements for use or modification, see license url in the
+       above <md:license> element.
+       For information on formatting required attribution, see the URL:
+         CONTENT_URL/content_info#cnx_cite_header
+       where CONTENT_URL is the value provided above in the <md:content-url> element.
+  -->
+  <md:keywordlist>
+    <md:keyword>Disturbance theory</md:keyword>
+    <md:keyword>Free-rider problem</md:keyword>
+    <md:keyword>Material incentives</md:keyword>
+    <md:keyword>Purposive incentives</md:keyword>
+    <md:keyword>Solidary incentives</md:keyword>
+  </md:keywordlist>
+  <md:subjectlist>
+    <md:subject>Social Sciences</md:subject>
+    <md:subject>Social Sciences</md:subject>
+  </md:subjectlist>
+  <md:abstract></md:abstract>
+  <md:language>en</md:language>
+  <!-- WARNING! The 'metadata' section is read only. Do not edit above.
+       Changes to the metadata section in the source will not be saved. -->
+</metadata>
+
+<content>
+<section id="fs-id1171472161424" class="learning-objectives">
+<title>Learning Objectives</title>
+<para id="fs-id1171474478164">By the end of this section, you will be able to:</para>
+<list id="fs-id1171470300684">
+<item>Explain the concept of collective action and its effect on interest group formation</item>
+<item>Describe free riding and the reasons it occurs</item>
+<item>Discuss ways to overcome collective action problems</item>
+</list>
+</section>
+<para id="fs-id1171472078647">In any group project in which you have participated, you may have noticed that a small number of students did the bulk of the work while others did very little. Yet everyone received the same grade. Why do some do all the work, while others do little or none? How is it possible to get people to work when there is a disincentive to do so? This situation is an example of a collective action problem, and it exists in government as well as in public and private organizations. Whether it is Congress trying to pass a budget or an interest group trying to motivate members to contact lawmakers, organizations must overcome collective action problems to be productive. This is especially true of interest groups, whose formation and survival depend on members doing the necessary work to keep the group funded and operating.</para>
+<section id="fs-id1171474350536">
+<title>COLLECTIVE ACTION AND FREE RIDING</title>
+<para id="fs-id1171472261400">Collective action problems exist when people have a disincentive to take action.<cite target-id="rf-017"><note class="reference" display="inline" id="rf-017">Mancur Olson, Jr. 1965. <emphasis effect="italics">The Logic of Collective Action</emphasis>. Cambridge, MA: Harvard University Press; Frank R. Baumgartner and Beth L. Leech. <emphasis effect="italics">Basic Interests: The Importance of Groups in Political Science</emphasis>. Princeton, NJ: Princeton University Press.</note></cite> In his classic work, <emphasis effect="italics">The Logic of Collective Action</emphasis>, economist Mancur <term class="no-emphasis">Olson</term> discussed the conditions under which collective actions problems would exist, and he noted that they were prevalent among organized interests. People tend not to act when the perceived benefit is insufficient to justify the costs associated with engaging in the action. Many citizens may have concerns about the appropriate level of taxation, gun control, or environmental protection, but these concerns are not necessarily strong enough for them to become politically active. In fact, most people take no action on most issues, either because they do not feel strongly enough or because their action will likely have little bearing on whether a given policy is adopted. Thus, there is a disincentive to call your member of Congress, because rarely will a single phone call sway a politician on an issue.</para>
+<para id="fs-id1171472162393">Why do some students elect to do little on a group project? The answer is that they likely prefer to do something else and realize they can receive the same grade as the rest of the group without contributing to the effort. This result is often termed the <term>free rider problem</term>, because some individuals can receive benefits (get a free ride) without helping to bear the cost. When National Public Radio (NPR) engages in a fund-raising effort to help maintain the station, many listeners will not contribute. Since it is unlikely that any one listener’s donation will be decisive in whether NPR has adequate funding to continue to operate, most listeners will not contribute to the costs but instead will free ride and continue to receive the benefits of listening.</para>
+<para id="fs-id1171474414571">Collective action problems and free riding occur in many other situations as well. If union membership is optional and all workers will receive a salary increase regardless of whether they make the time and money commitment to join, some workers may free ride. The benefits sought by unions, such as higher wages, collective bargaining rights, and safer working conditions, are often enjoyed by all workers regardless of whether they are members. Therefore, free riders can receive the benefit of the pay increase without helping defray the cost by paying dues, attending meetings or rallies, or joining protests, like that shown in <link target-id="OSC_AmGov_10_02_Union"/>.</para>
+<figure id="OSC_AmGov_10_02_Union">
+<media id="fs-id1171474435368" alt="An image of a group of people standing in front of a bus. Some of the people hold signs.">
+<image mime-type="image/jpeg" src="OSC_AmGov_10_02_Union.jpg"/>
+</media>
+<caption>In February 2009, in protest over the “union-busting” efforts of the Rite-Aid Corporation, members of the AFL-CIO demonstrated at the drugstore chain’s corporate headquarters in Camp Hill, Pennsylvania. (credit: Amy Niehouse)</caption>
+</figure>
+<para id="fs-id1171474407656">If free riding is so prevalent, why are there so many interest groups and why is interest group membership so high in the United States? One reason is that free riding can be overcome in a variety of ways. Olson argued, for instance, that some groups are better able than others to surmount collective action problems.<cite target-id="rf-018"><note class="reference" display="inline" id="rf-018">Olson, Jr., <emphasis effect="italics">The Logic of Collective Action</emphasis>.</note></cite> They can sometimes maintain themselves by obtaining financial support from patrons outside the group.<cite target-id="rf-019"><note class="reference" display="inline" id="rf-019">Jack Walker, “The Origin and Maintenance of Interest Groups in America,” <emphasis effect="italics">American Political Science Review</emphasis> 77 (1983): 390–406.</note></cite> Groups with financial resources have an advantage in mobilizing in that they can offer incentives or hire a lobbyist. Smaller, well-organized groups also have an advantage. For one thing, opinions within smaller groups may be more similar, making it easier to reach consensus. It is also more difficult for members to free ride in a smaller group. In comparison, larger groups have a greater number of individuals and therefore more viewpoints to consider, making consensus more difficult. It may also be easier to free ride because it is less obvious in a large group when any single person does not contribute. However, if people do not lobby for their own interests, they may find that they are ignored, especially if smaller but more active groups with interests opposed to theirs lobby on behalf of themselves. Even though the United States is a democracy, policy is often made to suit the interests of the few instead of the needs of the many.</para>
+<para id="fs-id1171472205133">Group leaders also play an important role in overcoming collective action problems. For instance, political scientist Robert <term class="no-emphasis">Salisbury</term> suggests that group leaders will offer incentives to induce activity among individuals.<cite target-id="rf-020"><note class="reference" display="inline" id="rf-020">Robert Salisbury, “An Exchange Theory of Interest Groups,” <emphasis effect="italics">Midwest Journal of Political Science</emphasis> 13 (1969): 1–32; Peter B. Clark and James Q. Wilson, “Incentive Systems: A Theory of Organizations,” <emphasis effect="italics">Administration Science Quarterly</emphasis> 6 (1961): 129–166.</note></cite> Some offer <term>material incentives</term>, which are tangible benefits of joining a group. AARP, for example, offers discounts on hotel accommodations and insurance rates for its members, while dues are very low, so they can actually save money by joining. Group leaders may also offer <term>solidary incentives</term>, which provide the benefit of joining with others who have the same concerns or are similar in other ways. Some scholars suggest that people are naturally drawn to others with similar concerns. The NAACP is a civil rights groups concerned with promoting equality and eliminating discrimination based on race, and members may join to associate with others who have dealt with issues of inequality.<cite target-id="rf-021"><note class="reference" display="inline" id="rf-021">https://www.naacp.org/ (March 1, 2016).</note></cite></para>
+<para id="fs-id1171474464584">Similarly, <term>purposive incentives</term> focus on the issues or causes promoted by the group. Someone concerned about protecting individual rights might join a group like the American Civil Liberties Union (ACLU) because it supports the liberties guaranteed in the U.S. Constitution, even the free expression of unpopular views.<cite target-id="rf-022"><note class="reference" display="inline" id="rf-022">https://www.aclu.org/ (March 1, 2016).</note></cite> Members of the ACLU sometimes find the messages of those they defend (including Nazis and the Ku Klux Klan) deplorable, but they argue that the principle of protecting civil liberties is critical to U.S. democracy. In many ways, the organization’s stance is analogous to James Madison’s defense of factions mentioned earlier in this chapter. A commitment to protecting rights and liberties can serve as an incentive in overcoming collective action problems, because members or potential members care enough about the issues to join or participate. Thus, interest groups and their leadership will use whatever incentives they have at their disposal to overcome collective action problems and mobilize their members.</para>
+<para id="fs-id1171472078392">Finally, sometimes collective action problems are overcome because there is little choice about whether to join an organization. For example, some organizations may require membership in order to participate in a profession. To practice law, individuals may be required to join the American Bar Association or a state bar association. In the past, union membership could be required of workers, particularly in urban areas controlled by political machines consisting of a combination of parties, elected representatives, and interest groups.</para>
+<note id="fs-id1171472426441" class="american government link-to-learning">
+<media id="fs-id1171474276046" alt="Link to learning graphic">
+<image mime-type="image/jpeg" src="OSC_Interactive_150.png"/>
+</media>
+<para id="fs-id1171472084421">Visit the <link url="https://openstaxcollege.org/l/29freeridprob">Free Rider Problem</link> for a closer look at free riding as a philosophical problem. Think of a situation you have been in where a collective action problem existed or someone engaged in free riding behavior. Why did the collective action problem or free riding occur? What could have been done to overcome the problem? How will knowledge of these problems affect the way you act in future group settings?</para>
+</note>
+</section>
+<section id="fs-id1171472444997">
+<title>DISTURBANCE THEORY AND COLLECTIVE ACTION</title>
+<para id="fs-id1171474598638">In addition to the factors discussed above that can help overcome collective action problems, external events can sometimes help mobilize groups and potential members. Some scholars argue that <term>disturbance theory</term> can explain why groups mobilize due to an event in the political, economic, or social environment.<cite target-id="rf-023"><note class="reference" display="inline" id="rf-023">David Truman. 1951. <emphasis effect="italics">The Governmental Process</emphasis>. New York: Alfred A. Knopf.</note></cite> For example, in 1962, Rachel <term class="no-emphasis">Carson</term> published <emphasis effect="italics">Silent Spring</emphasis>, a book exposing the dangers posed by pesticides such as DDT.<cite target-id="rf-024"><note class="reference" display="inline" id="rf-024">Rachel Caron. 1962. <emphasis effect="italics">A Silent Spring</emphasis>. New York: Mariner Books.</note></cite> The book served as a catalyst for individuals worried about the environment and the potential dangers of pesticides. The result was an increase in both the number of environmental interest groups, such as Greenpeace and American Rivers, and the number of members within them.</para>
+<para id="fs-id1171474198421">More recently, several shooting deaths of unarmed young African American men have raised awareness of racial issues in the United States and potential problems in policing practices. In 2014, <term class="no-emphasis">Ferguson</term>, Missouri, erupted in protests and riots following a decision not to indict Darren Wilson, a white police officer, in the fatal shooting of Michael <term class="no-emphasis">Brown</term>, who had allegedly been involved in a theft at a local convenience store and ended up in a dispute with the officer.<cite target-id="rf-025"><note class="reference" display="inline" id="rf-025">“Hundreds of Ferguson Protesters March in Downtown D.C.,” http://www.nbcwashington.com/news/local/Ferguson-Protests-Planned-for-DC-Baltimore-Tuesday-283807831.html (March 1, 2016).</note></cite> The incident mobilized groups representing civil rights, such as the protestors in <link target-id="OSC_AmGov_10_02_BrownRally"/>, as well as others supporting the interests of police officers.</para>
+<figure id="OSC_AmGov_10_02_BrownRally">
+<media id="fs-id1171472252023" alt="An image of a large crowd of people, some holding signs that read &#x201C;Stand with the people of Ferguson&#x201D; and &#x201C;Darren Wilson murdered Mike Brown&#x201D;.">
+<image mime-type="image/jpeg" src="OSC_AmGov_10_02_BrownRally.jpg"/>
+</media>
+<caption>Protestors in Washington, DC, rally against the decision not to indict police officer Darren Wilson in the 2014 shooting death of teenager Michael Brown in Ferguson, Missouri. (credit: modification of work by Neil Cooler)</caption>
+</figure>
+<para xmlns:data="http://www.w3.org/TR/html5/dom.html#custom-data-attribute" id="fs-id1171474463927">Both the <emphasis effect="italics">Silent Spring</emphasis> and Ferguson examples demonstrate the idea that people will naturally join groups in response to disturbances. Some mobilization efforts develop more slowly and may require the efforts of group leaders. Sometimes political candidates can push issues to the forefront, which may result in interest group mobilization. The recent focus on immigration, for example, has resulted in the mobilization of those in support of restrictive policies as well as those opposed to them (<link target-id="OSC_AmGov_10_02_Immigrants"/>). Rather than being a single disturbance, debate about immigration policy has ebbed and flowed in recent years, creating what might best be described as a series of minor disturbances. When, during his presidential candidacy, Donald <term class="no-emphasis">Trump</term> made controversial statements about immigrants, many rallied both for and against him.<cite target-id="rf-026"><note class="reference" display="inline" id="rf-026">Jenna Johnson, “Immigration continues to be Donald Trump’s rallying issue,” <emphasis effect="italics">Washington Post</emphasis>, 22 October 2015, https://www.washingtonpost.com/news/post-politics/wp/2015/10/22/immigration-continues-to-be-donald-trumps-rallying-issue/.</note></cite></para><figure id="OSC_AmGov_10_02_Immigrants">
+<media id="fs-id1171472052827" alt="A chart titled &#x201C;Which comes closer to your view of immigrants today?&#x201D; On the left is a bar that is labeled &#x201C;Strengthen country through hard work and talents, 51%&#x201D;. To the left of the text are two images of people holding signs that read &#x201C;Peace for immigrants&#x201D; and &#x201C;We are not criminals we are hard workers!&#x201D;. In the center is a bar that is labeled &#x201C;other/don&#x2019;t know, 8%&#x201D;. On the right is a bar labeled &#x201C;Weaken country by taking jobs, housing, and health care, 41%&#x201D;. To the left of the text are two images of people holding signs that read &#x201C;Secure the borders now&#x201D; and &#x201C;Stop illegal immigration&#x201D;.">
+<image mime-type="image/jpeg" src="OSC_AmGov_10_02_Immigrants.jpg"/>
+</media>
+<caption>Protestors take to the streets on different sides of the immigration issue. Some argue that the United States is a nation of immigrants, whereas others demonstrate in support of greater restrictions on immigration.</caption>
+</figure>
+<note id="fs-id1171472079988" class="middle-ground">
+<title>Student Activism and Apathy</title>
+<para id="fs-id1171472073777">Student behavior is somewhat paradoxical when it comes to political participation. On one hand, students have been very active on college campuses at various times over the past half-century. Many became politically active in the 1960s as part of the civil rights movement, with some joining campus groups that promoted civil rights, while others supported groups that opposed these rights. In the late 1960s and early 1970s, college campuses were very active in opposition to the Vietnam War. More recently, in 2015, students at the University of Missouri protested against the university system president, who was accused of not taking racial issues at the university seriously. The student protests were supported by civil rights groups like the NAACP, and their efforts culminated in the president’s resignation.<cite target-id="rf-027"><note class="reference" display="inline" id="rf-027">http://www.news-leader.com/story/news/2015/11/09/springfield-naacp-responds-mu-president-resignation/75473312/ (March 1, 2016).</note></cite></para>
+<para id="fs-id1171474142249">Yet at the same time, students participate by voting and joining groups at lower rates than members of other age cohorts. Why is it the case that students can play such an important role in facilitating political change in some cases, while at the same time they are typically less active than other demographic groups?</para>
+<para id="fs-id1171474406333"><emphasis effect="italics">Are there groups on campus that represent issues important to you? If not, find out what you could do to start such a group.</emphasis></para>
+</note>
+</section>
+<section id="fs-id1171474404869" class="summary">
+<title>Summary</title>
+<para id="fs-id1171472172209">Interest groups often have to contend with disincentives to participate, particularly when individuals realize their participation is not critical to a group’s success. People often free ride when they can obtain benefits without contributing to the costs of obtaining these benefits. To overcome these challenges, group leaders may offer incentives to members or potential members to help them mobilize. Groups that are small, wealthy, and/or better organized are sometimes better able to overcome collective action problems. Sometimes external political, social, or economic disturbances result in interest group mobilization.</para>
+</section>
+<section id="fs-id1171474429033" class="review-questions">
+<exercise id="fs-id1171474369273">
+<problem id="fs-id1171472101167">
+<para id="fs-id1171474420101">What type of incentives appeal to someone’s concern about a cause?</para>
+<list id="fs-id1171472283271" list-type="enumerated" number-style="lower-alpha">
+<item>solidary incentives</item>
+<item>purposive incentives</item>
+<item>material incentives</item>
+<item>negative incentives</item>
+</list>
+</problem>
+<solution id="fs-id1171474369115">
+<para id="fs-id1171474142281">B</para>
+</solution>
+</exercise>
+<exercise id="fs-id1171472084270">
+<problem id="fs-id1171474487278">
+<para id="fs-id1171474444575">Which of the following is the best example of a solidary benefit?</para>
+<list id="fs-id1171472092497" list-type="enumerated" number-style="lower-alpha">
+<item>joining a group to be with others like you</item>
+<item>joining a group to obtain a monetary benefit</item>
+<item>joining a group because you care about a cause</item>
+<item>joining a group because it is a requirement of your job</item>
+</list>
+</problem>
+</exercise>
+<exercise id="fs-id1171472178569">
+<problem id="fs-id1171474370029">
+<para id="fs-id1171472214159">What are some ways to overcome collective action problems?</para>
+</problem>
+<solution id="fs-id1171472179236">
+<para id="fs-id1171472212240">Incentives that help overcome collective action problems include material, solidary, and purposive benefits. These are often offered by group leaders. Sometimes, political, economic, or social disturbances help overcome collective action problems by mobilizing groups.</para>
+</solution>
+</exercise>
+<exercise id="fs-id1171474296175">
+<problem id="fs-id1171474407398">
+<para id="fs-id1171470295044">Why do some groups have an easier time overcoming collective action problems?</para>
+</problem>
+</exercise>
+</section>
+</content>
+<glossary>
+<definition id="fs-id1171474399182">
+<term>disturbance theory</term>
+<meaning id="fs-id1171472077659">the theory that an external event can lead to interest group mobilization</meaning>
+</definition>
+<definition id="fs-id1171472078412">
+<term>free rider problem</term>
+<meaning id="fs-id1171474317846">the situation that occurs when some individuals receive benefits (get a free ride) without helping to bear the cost</meaning>
+</definition>
+<definition id="fs-id1171474302078">
+<term>material incentives</term>
+<meaning id="fs-id1171474495892">substantive monetary or physical benefits given to group members to help overcome collective action problems</meaning>
+</definition>
+<definition id="fs-id1171472277155">
+<term>purposive incentives</term>
+<meaning id="fs-id1171474445640">benefits to overcome collective action problems that appeal to people’s support of the issue or cause</meaning>
+</definition>
+<definition id="fs-id1171472171436">
+<term>solidary incentives</term>
+<meaning id="fs-id1171474394417">benefits based on the concept that people like to associate with those who are similar to them</meaning>
+</definition>
+</glossary>
+</document>
