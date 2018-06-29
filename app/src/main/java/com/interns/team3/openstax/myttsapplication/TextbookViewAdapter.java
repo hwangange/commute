@@ -25,7 +25,7 @@ public class TextbookViewAdapter extends RecyclerView.Adapter<TextbookViewAdapte
     public static Context context;
 
     public interface TextOnClickListener {
-        void onClick(String text, View v, int position);
+        void onClick(int position);
     }
 
     // Provide a reference to the views for each data item
@@ -45,7 +45,7 @@ public class TextbookViewAdapter extends RecyclerView.Adapter<TextbookViewAdapte
             textView.setText(text);
             textView.setOnClickListener(new View.OnClickListener(){
                 @Override public void onClick(View v){
-                    listener.onClick(text, v, getAdapterPosition());
+                    listener.onClick(getAdapterPosition());
                 }
             });
         }
