@@ -23,6 +23,7 @@ public class TextbookViewAdapter extends RecyclerView.Adapter<TextbookViewAdapte
     public ArrayList<TextChunk> dataSet;
     public TextOnClickListener textOnClickListener; //public View.OnClickListener textOnClickListener = new TextOnClickListener();
     public static Context context;
+    public int selected;
 
     public interface TextOnClickListener {
         void onClick(int position);
@@ -55,6 +56,7 @@ public class TextbookViewAdapter extends RecyclerView.Adapter<TextbookViewAdapte
     public TextbookViewAdapter(ArrayList<TextChunk> dataSet, TextOnClickListener textOnClickListener){
         this.dataSet = dataSet;
         this.textOnClickListener = textOnClickListener;
+        selected = 0;
     }
 
     // Create new views (invoked by the layout manager)
@@ -106,6 +108,14 @@ public class TextbookViewAdapter extends RecyclerView.Adapter<TextbookViewAdapte
     public void onViewDetachedFromWindow(ViewHolder viewHolder){
         // view leaves.
         //Log.wtf(TAG,"onViewDetachedFromWindow "+viewHolder);
+    }
+
+    public void setSelected(int i){
+        selected = i;
+    }
+
+    public int getSelected(){
+        return selected;
     }
 
 

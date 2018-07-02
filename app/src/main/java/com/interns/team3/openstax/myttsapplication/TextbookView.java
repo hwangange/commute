@@ -1,5 +1,10 @@
 package com.interns.team3.openstax.myttsapplication;
 
+import android.net.Uri;
+import android.support.v4.app.Fragment;
+import android.support.v4.app.FragmentActivity;
+import android.support.v4.app.FragmentManager;
+import android.support.v4.app.FragmentTransaction;
 import android.content.Context;
 import android.content.Intent;
 import android.graphics.PointF;
@@ -38,7 +43,9 @@ import java.util.ArrayList;
 import java.util.concurrent.ExecutorService;
 import java.util.concurrent.Executors;
 
-public class TextbookView extends AppCompatActivity {
+import static com.interns.team3.openstax.myttsapplication.PlayerBarFragment.newInstance;
+
+public class TextbookView extends AppCompatActivity implements PlayerBarFragment.OnFragmentInteractionListener {
 
 
     private RecyclerView recyclerView;
@@ -54,6 +61,9 @@ public class TextbookView extends AppCompatActivity {
 
 
     public CustomScrollListener customScrollListener;
+
+    public FragmentManager fragmentManager;
+    public PlayerBarFragment playerBarFragment;
 
 
 
@@ -85,7 +95,7 @@ public class TextbookView extends AppCompatActivity {
 
             @Override
             public void smoothScrollToPosition(RecyclerView recyclerView, RecyclerView.State state, int position) {
-                Log.i("on smooth scroll", "hmm");
+
                 SnappySmoothScroller scroller = new SnappySmoothScroller.Builder()
                         .setSnapType(SnapType.START) // SnapType.CENTER OR SnapType.START
                         .setSnapInterpolator(new DecelerateInterpolator())
@@ -103,13 +113,13 @@ public class TextbookView extends AppCompatActivity {
 
                 final int result = super.scrollVerticallyBy(dy, recycler, state);
                 int target = customScrollListener.getTarget();
-                Log.i("excellent", "In scrollVerticallyBy\t" + "Position: " + String.valueOf(target));
+                //Log.i("excellent", "In scrollVerticallyBy\t" + "Position: " + String.valueOf(target));
 
                 int front = findFirstVisibleItemPosition();
                 int back = findLastVisibleItemPosition();
 
                 if ( target >=front && target <=back) {
-                    Log.i("Target is visible", "Target is not -1!!");
+                   // Log.i("Target is visible", "Target is not -1!!");
                     readText(target);
                     customScrollListener.setTarget(-1);
                 }
@@ -200,9 +210,23 @@ public class TextbookView extends AppCompatActivity {
         });
         adapter.notifyDataSetChanged();
 
+        fragmentManager = getSupportFragmentManager();
+
+        //add
+        FragmentTransaction ft = fragmentManager.beginTransaction();
+        playerBarFragment = PlayerBarFragment.newInstance("","");
+        ft.add(R.id.playbar_container, playerBarFragment);
+        ft.commit();
+
+        // handle 'replace' and 'remove' requests
 
 
 
+
+    }
+
+    public void onFragmentInteraction(Uri uri){
+        Log.i("onFragmentInteraction", uri.toString());
     }
 
     @Override
@@ -211,14 +235,23 @@ public class TextbookView extends AppCompatActivity {
     }
 
     public void checkIfVisible(final int position){
+        adapter.setSelected(position);
         int first = layoutManager.findFirstCompletelyVisibleItemPosition();
         int last = layoutManager.findLastCompletelyVisibleItemPosition();
 
-        if(position < first || position > last){
+
+        // should check if the position is the first visible item position but the top is nOT at the top
+        if((position < first || position > last) && !(first == -1 && last == -1 && position == layoutManager.findFirstVisibleItemPosition())){
+            Log.i("Position not visible?", "\tFirst: " + String.valueOf(first)+"\tPosition: " + String.valueOf(position) + "\tLast: " + String.valueOf(last));
+            Log.i("First Visible item position: ", String.valueOf(layoutManager.findFirstVisibleItemPosition()));
             customScrollListener.setTarget(position);
             recyclerView.smoothScrollToPosition(position);
+
         }
-        else { readText(position); }
+        else {
+            Log.i("Selected: " + String.valueOf(getSelected()), "Position (Input): " + String.valueOf(position));
+            readText(position);
+        }
     }
 
     // Should only be called after the view is visible.
@@ -226,15 +259,19 @@ public class TextbookView extends AppCompatActivity {
         final View v = layoutManager.findViewByPosition(position);
 
         if (v != null) {
+            Log.i("Should not be null", "ugh");
             TextView tv = v.findViewById(R.id.item);
             final String text = (String) tv.getText();
             TextChunk tc = dataSet.get(position);
 
             tc.setSelected(true);
+
+
             runOnUiThread(new Runnable() {
                 @Override
                 public void run() {
                     v.findViewById(R.id.item).setBackgroundColor(ContextCompat.getColor(getApplicationContext(), R.color.colorHighlighted));
+                    playerBarFragment.setPlayButton("Pause");
                 }
             });
 
@@ -312,7 +349,15 @@ public class TextbookView extends AppCompatActivity {
 
             int posn = Integer.parseInt(pos) + 1;
             if (posn < dataSet.size()) {
-                 checkIfVisible(posn);
+                checkIfVisible(posn);
+
+            } else {
+                runOnUiThread(new Runnable() {
+                    @Override
+                    public void run() {
+                        playerBarFragment.setPlayButton("Play");
+                    }
+                });
             }
         }
 
@@ -358,6 +403,33 @@ public class TextbookView extends AppCompatActivity {
         }
 
         super.onDestroy();
+    }
+
+    //Meant to be called by fragment
+    public void pauseTTS() {
+        tts.stop();
+        runOnUiThread(new Runnable() {
+            @Override
+            public void run() {
+                playerBarFragment.setPlayButton("Play");
+            }
+        });
+    }
+
+    //Meant to be called by fragment
+    public void stopTTS(){
+        tts.stop();
+        adapter.setSelected(0);
+        runOnUiThread(new Runnable() {
+            @Override
+            public void run() {
+                playerBarFragment.setPlayButton("Play");
+            }
+        });
+    }
+
+    public int getSelected(){
+        return adapter.getSelected();
     }
 
     @Override

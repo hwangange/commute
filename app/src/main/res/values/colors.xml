@@ -7,6 +7,7 @@
     <color name="colorSelected">#a3a3a3</color>
     <color name="colorHighlighted">#ffe605</color>
     <color name="defaultGrey">#00eeeeee</color>
+    <color name="lightBlack">#303030</color>
 
 
 </resources>

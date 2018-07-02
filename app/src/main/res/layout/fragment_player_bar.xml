@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+    <!--
+    tools:context=".PlayerBarFragment"
+    class="com.interns.team3.openstax.myttsapplication.PlayerBarFragment"
+    android:name=".../PlayerbarFragmnet"
+    -->
+    <LinearLayout
+        xmlns:android="http://schemas.android.com/apk/res/android"
+        xmlns:tools="http://schemas.android.com/tools"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_gravity="end"
+        android:orientation="horizontal"
+        android:gravity="center_horizontal"
+        android:background="@color/lightBlack">
+
+        <!-- TODO: Update blank fragment layout -->
+
+        <Button
+            android:id="@+id/playButton"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Play" />
+
+        <Button
+            android:id="@+id/stopButton"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Stop" />
+
+
+    </LinearLayout>
