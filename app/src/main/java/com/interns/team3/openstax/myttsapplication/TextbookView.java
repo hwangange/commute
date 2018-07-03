@@ -181,8 +181,8 @@ public class TextbookView extends AppCompatActivity implements PlayerBarFragment
         adapter = new TextbookViewAdapter(dataSet, new TextbookViewAdapter.TextOnClickListener(){
 
             @Override public void onClick(int position){
-
-                checkIfVisible(position);
+                if(position != getSelected() || (position == getSelected() && !tts.isSpeaking()))  // do not pause the audio if "selected" text is selected again
+                    checkIfVisible(position);
             }
 
         });
@@ -239,17 +239,27 @@ public class TextbookView extends AppCompatActivity implements PlayerBarFragment
         int first = layoutManager.findFirstCompletelyVisibleItemPosition();
         int last = layoutManager.findLastCompletelyVisibleItemPosition();
 
+        View v = layoutManager.findViewByPosition(position);
 
-        // should check if the position is the first visible item position but the top is nOT at the top
-        if((position < first || position > last) && !(first == -1 && last == -1 && position == layoutManager.findFirstVisibleItemPosition())){
-            Log.i("Position not visible?", "\tFirst: " + String.valueOf(first)+"\tPosition: " + String.valueOf(position) + "\tLast: " + String.valueOf(last));
-            Log.i("First Visible item position: ", String.valueOf(layoutManager.findFirstVisibleItemPosition()));
+
+
+        // should check if the position is the first visible item position but the top is nOT at the top: && !(first == -1 && last == -1 && position == layoutManager.findFirstVisibleItemPosition())
+        // last condition checks if the view is visible, but isn't at the top. (too much at the bottom)
+        if(     ((position < first || position > last)   &&     (first !=-1 && last !=-1)) ||
+                (v !=null && v.getTop() < 0) ||
+                (v !=null && v.getTop() > 0 && position != last && position == layoutManager.findLastVisibleItemPosition()))
+        {
+
+          //  if(v != null) Log.i("Top", String.valueOf(v.getTop()));
+
+           // Log.i("Position not visible?", "\tFirst: " + String.valueOf(first)+"\tPosition: " + String.valueOf(position) + "\tLast: " + String.valueOf(last));
+           // Log.i("First Visible item position: ", String.valueOf(layoutManager.findFirstVisibleItemPosition()));
             customScrollListener.setTarget(position);
             recyclerView.smoothScrollToPosition(position);
 
         }
         else {
-            Log.i("Selected: " + String.valueOf(getSelected()), "Position (Input): " + String.valueOf(position));
+            //Log.i("Selected: " + String.valueOf(getSelected()), "Position (Input): " + String.valueOf(position));
             readText(position);
         }
     }
@@ -259,7 +269,6 @@ public class TextbookView extends AppCompatActivity implements PlayerBarFragment
         final View v = layoutManager.findViewByPosition(position);
 
         if (v != null) {
-            Log.i("Should not be null", "ugh");
             TextView tv = v.findViewById(R.id.item);
             final String text = (String) tv.getText();
             TextChunk tc = dataSet.get(position);
@@ -272,6 +281,7 @@ public class TextbookView extends AppCompatActivity implements PlayerBarFragment
                 public void run() {
                     v.findViewById(R.id.item).setBackgroundColor(ContextCompat.getColor(getApplicationContext(), R.color.colorHighlighted));
                     playerBarFragment.setPlayButton("Pause");
+                    playerBarFragment.setStopButton(true);
                 }
             });
 

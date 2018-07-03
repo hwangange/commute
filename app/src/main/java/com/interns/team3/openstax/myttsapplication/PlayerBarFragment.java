@@ -121,6 +121,8 @@ public class PlayerBarFragment extends Fragment {
         playButton.setText(s);
     }
 
+    public void setStopButton(boolean boo){ stopButton.setEnabled(boo);}
+
     @Override
     public void onAttach(Context context) {
         super.onAttach(context);
