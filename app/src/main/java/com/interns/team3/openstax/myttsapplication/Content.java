@@ -216,12 +216,15 @@ public interface Content {
         }
 
         private JSONObject pullReadingSection(Element section) throws JSONException {
-            String title = section.getElementsByAttributeValue("data-type", "title").first().text();
-            JSONObject paraObj = pullParagraphs(section);
-            JSONObject sectionObj = new JSONObject();
-            sectionObj.put("title", title);
-            sectionObj.put("paragraphs", paraObj.get("paragraphs"));
-            return sectionObj;
+            if(section != null) {
+                String title = section.getElementsByAttributeValue("data-type", "title").first().text();
+                JSONObject paraObj = pullParagraphs(section);
+                JSONObject sectionObj = new JSONObject();
+                sectionObj.put("title", title);
+                sectionObj.put("paragraphs", paraObj.get("paragraphs"));
+                return sectionObj;
+            }
+            return null;
         }
 
         private JSONArray pullAllReadingSections() throws JSONException {
@@ -284,19 +287,22 @@ public interface Content {
 
         private JSONArray pullGlossary() throws JSONException {
             Element glossary = getBody().getElementsByAttributeValue("data-type", "glossary").first();
-            Elements keyTerms = glossary.getElementsByTag("dl");
+            if(glossary != null) {
+                Elements keyTerms = glossary.getElementsByTag("dl");
 
-            JSONArray glossaryArray = new JSONArray();
-            for (Element keyTerm: keyTerms) {
-                JSONObject keyTermObj = new JSONObject();
-                String term = keyTerm.select("dt").text();
-                String definition = keyTerm.select("dd").text();
-                keyTermObj.put("term", term);
-                keyTermObj.put("definition", definition);
-                glossaryArray.put(keyTermObj);
+                JSONArray glossaryArray = new JSONArray();
+                for (Element keyTerm : keyTerms) {
+                    JSONObject keyTermObj = new JSONObject();
+                    String term = keyTerm.select("dt").text();
+                    String definition = keyTerm.select("dd").text();
+                    keyTermObj.put("term", term);
+                    keyTermObj.put("definition", definition);
+                    glossaryArray.put(keyTermObj);
+                }
+
+                return glossaryArray;
             }
-
-            return glossaryArray;
+            return null;
         }
 
         private JSONObject pullEocSections() throws JSONException {
@@ -374,7 +380,7 @@ public interface Content {
 
 //                System.out.println(intro);
                     lst.add(intro);
-                    lst.addAll(returnPrintJsonStringArray(abList, true));
+                    returnPrintJsonStringArray(abList, true).forEach( (stringo) -> lst.add("\t• "+stringo));
 //                System.out.println("");
                 }
                 if (!(opening.isNull("paragraphs"))) {
@@ -429,7 +435,7 @@ public interface Content {
             int secNum = section.getInt("section");
             String title = section.getString("title");
 //        System.out.println("Section " + secNum + ": " + title);
-            lst.add("Section " + secNum + ": " + title + "\n");
+            lst.add("<h3><b>Section " + secNum + "</b>: " + title + "</h3>");
 
             JSONArray paragraphs = section.getJSONArray("paragraphs");
             lst.addAll(returnPrintJsonStringArray(paragraphs, false));
@@ -491,31 +497,31 @@ public interface Content {
                 if (!(eoc.isNull("summary"))) {
                     JSONObject summary = eoc.getJSONObject("summary");
 //                System.out.println(summary.getString("title") + ":");
-                    lst.add(summary.getString("title") + ":" + "\n");
+                    lst.add("<h4><b>"+summary.getString("title") + "</b>:" + "</h4>");
                     lst.addAll(returnPrintJsonStringArray(summary.getJSONArray("paragraphs"), false));
 //                System.out.println("\n");
                 }
                 if (!(eoc.isNull("review questions"))) {
 //                System.out.println("Review Questions:");
-                    lst.add("Review Questions:\n");
+                    lst.add("<h4><b>Review Questions</b>:</h4>");
                     lst.addAll(returnPrintExercises(eoc.getJSONArray("review questions"), true, true));
 //                System.out.println("");
                 }
                 if (!(eoc.isNull("critical thinking"))) {
 //                System.out.println("Critical Thinking Questions:");
-                    lst.add("Critical Thinking Questions:\n");
+                    lst.add("<h4><b>Critical Thinking Questions</b>:</h4>");
                     lst.addAll(returnPrintExercises(eoc.getJSONArray("critical thinking"), false, true));
 //                System.out.println("");
                 }
                 if (!(eoc.isNull("personal application"))) {
 //                System.out.println("Personal Application Questions:");
-                    lst.add("Personal Application Questions:\n");
+                    lst.add("<h4><b>Personal Application Questions</b>:</h4>");
                     lst.addAll(returnPrintExercises(eoc.getJSONArray("personal application"), false, false));
 //                System.out.println("");
                 }
                 if (!(eoc.isNull("glossary"))) {
 //                System.out.println("Glossary:");
-                    lst.add("Glossary:\n");
+                    lst.add("<h4><b>Glossary</b>:</h4>");
                     JSONArray glossary = eoc.getJSONArray("glossary");
                     int length = glossary.length();
                     for (int i = 0; i < length; i++) {
@@ -523,7 +529,7 @@ public interface Content {
                         String term = keyTerm.getString("term");
                         String definition = keyTerm.getString("definition");
 //                    System.out.println("\t" + term + " -- " + definition);
-                        lst.add("\t" + term + " -- " + definition + "\n");
+                        lst.add("<b>" + term + "</b> -- " + definition + "\n");
                     }
                 }
             }
@@ -564,8 +570,8 @@ public interface Content {
                 String problem = ex.getString("problem");
 //            System.out.println("\t" + "Exercise " + exNum + ":");
 //            System.out.println("\t" + "Problem: " + problem);
-                lst.add("\t" + "Exercise " + exNum + ":\n");
-                lst.add("\t" + "Problem: " + problem + "\n");
+                lst.add("<h5><b>Exercise " + exNum + "</b>:</h5>");
+                lst.add("<b>Problem</b>: " + problem);
 
                 if (hasOptions) {
                     lst.addAll(returnPrintExerciseOptions(ex));
@@ -574,7 +580,7 @@ public interface Content {
                 if (hasSolution) {
                     String solution = ex.getString("solution");
 //                System.out.println("\t" + "Solution: " + solution);
-                    lst.add("\t" + "Solution: " + solution + "\n");
+                    lst.add("<b>Solution</b>: " + solution);
                 }
 //            System.out.println("");
             }
@@ -602,7 +608,7 @@ public interface Content {
             for (int i = 0; i < length; i++) {
                 String output = "\t\t" + letterChoice + ". " + options.getString(i);
 //            System.out.println(output);
-                lst.add(output + "\n");
+                lst.add(output);
                 letterChoice++;
             }
 

@@ -28,6 +28,7 @@ public class ContentAdapter extends RecyclerView.Adapter<RecyclerView.ViewHolder
         @Override
         public void onClick(final View v) {
             String modId = ((TextView) v.findViewById(R.id.modID)).getText().toString();
+            String modTitle = ((TextView) v.findViewById(R.id.modTitle)).getText().toString();
             //Toast.makeText(getApplicationContext(), targetId, Toast.LENGTH_SHORT).show();
 
             Intent intent = ((Activity) v.getContext()).getIntent();
@@ -36,6 +37,7 @@ public class ContentAdapter extends RecyclerView.Adapter<RecyclerView.ViewHolder
             intent = new Intent(v.getContext(), TextbookView.class);
             intent.putExtra("Module ID", modId);
             intent.putExtra("Book ID", bookId);
+            intent.putExtra("Module Title", modTitle);
             intent.setFlags(Intent.FLAG_ACTIVITY_NEW_TASK);
             v.getContext().startActivity(intent);
         }
@@ -46,10 +48,12 @@ public class ContentAdapter extends RecyclerView.Adapter<RecyclerView.ViewHolder
         @Override
         public void onClick(final View v) {
             String targetId = ((TextView) v.findViewById(R.id.book_id)).getText().toString();
+            String targetTitle = ((TextView) v.findViewById(R.id.book_title)).getText().toString();
             //Toast.makeText(getApplicationContext(), targetId, Toast.LENGTH_SHORT).show();
 
             Intent intent = new Intent(v.getContext(), TableOfContentsActivity.class);
             intent.putExtra("Book ID", targetId);
+            intent.putExtra("Book Title", targetTitle);
             intent.setFlags(Intent.FLAG_ACTIVITY_NEW_TASK);
             v.getContext().startActivity(intent);
         }

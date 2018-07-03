@@ -4,6 +4,7 @@ import android.content.Context;
 import android.speech.tts.UtteranceProgressListener;
 import android.support.v4.content.ContextCompat;
 import android.support.v7.widget.RecyclerView;
+import android.text.Html;
 import android.util.Log;
 import android.view.LayoutInflater;
 import android.view.View;
@@ -17,6 +18,8 @@ import java.util.ArrayList;
 import java.util.concurrent.TimeUnit;
 
 import static android.content.ContentValues.TAG;
+import static android.text.Html.FROM_HTML_MODE_LEGACY;
+import static android.text.Html.TO_HTML_PARAGRAPH_LINES_INDIVIDUAL;
 
 public class TextbookViewAdapter extends RecyclerView.Adapter<TextbookViewAdapter.ViewHolder>{
 
@@ -43,7 +46,7 @@ public class TextbookViewAdapter extends RecyclerView.Adapter<TextbookViewAdapte
         }
 
         public void bind(final String text, final TextOnClickListener listener){
-            textView.setText(text);
+            textView.setText(Html.fromHtml(text, Html.FROM_HTML_MODE_COMPACT));
             textView.setOnClickListener(new View.OnClickListener(){
                 @Override public void onClick(View v){
                     listener.onClick(getAdapterPosition());

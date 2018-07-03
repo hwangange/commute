@@ -20,6 +20,7 @@ import android.support.v7.widget.LinearSmoothScroller;
 import android.support.v7.widget.RecyclerView;
 import android.util.DisplayMetrics;
 import android.util.Log;
+import android.view.MenuItem;
 import android.view.View;
 import android.view.animation.DecelerateInterpolator;
 import android.widget.TextView;
@@ -53,7 +54,7 @@ public class TextbookView extends AppCompatActivity implements PlayerBarFragment
     private TextbookViewAdapter adapter;
     private LinearLayoutManager layoutManager;
 
-    public static String modId, bookId;
+    public static String modId, bookId, modTitle;
     public static Document content;
     public ArrayList<TextChunk> dataSet;
 
@@ -140,6 +141,10 @@ public class TextbookView extends AppCompatActivity implements PlayerBarFragment
         Intent intent = getIntent();
         modId = intent.getStringExtra("Module ID");
         bookId = intent.getStringExtra("Book ID");
+        modTitle= intent.getStringExtra("Module Title");
+        setTitle(modTitle);
+        getSupportActionBar().setHomeButtonEnabled(true);
+        getSupportActionBar().setDisplayHomeAsUpEnabled(true);
 
         // Toast.makeText(getApplicationContext(), modId, Toast.LENGTH_SHORT).show();
 
@@ -233,7 +238,8 @@ public class TextbookView extends AppCompatActivity implements PlayerBarFragment
 
         // should check if the position is the first visible item position but the top is nOT at the top: && !(first == -1 && last == -1 && position == layoutManager.findFirstVisibleItemPosition())
         // last condition checks if the view is visible, but isn't at the top. (too much at the bottom)
-        if(     ((position < first || position > last)   &&     (first !=-1 && last !=-1)) ||
+        if(     //((position < first || position > last)   &&     (first !=-1 && last !=-1)) ||
+                (v == null) ||
                 (v !=null && v.getTop() < 0) ||
                 (v !=null && v.getTop() > 0 && position != last && position == layoutManager.findLastVisibleItemPosition()))
         {
@@ -258,8 +264,8 @@ public class TextbookView extends AppCompatActivity implements PlayerBarFragment
 
         if (v != null) {
             TextView tv = v.findViewById(R.id.item);
-            final String text = (String) tv.getText();
             TextChunk tc = dataSet.get(position);
+            final String text = Jsoup.parse(tc.getText()).text();
 
             tc.setSelected(true);
 
@@ -303,9 +309,12 @@ public class TextbookView extends AppCompatActivity implements PlayerBarFragment
         String title = doc.body().getElementsByTag("div").first().attr("document-title");
         Content.Module mod= new Content.Module(title, modId, doc);
 
-        mod.returnPrintOpening().forEach( (stringo) -> dataSet.add(new TextChunk(stringo)));
-        mod.returnPrintReadingSections().forEach( (stringo) -> dataSet.add(new TextChunk(stringo)));
-        mod.returnPrintEoc().forEach( (stringo) -> dataSet.add(new TextChunk(stringo)));
+        ArrayList<String> temp = mod.returnPrintOpening();
+        if(temp != null) temp.forEach( (stringo) -> dataSet.add(new TextChunk(stringo)));
+        temp = mod.returnPrintReadingSections();
+        if(temp != null) temp.forEach( (stringo) -> dataSet.add(new TextChunk(stringo)));
+        temp = mod.returnPrintEoc();
+        if(temp != null) temp.forEach( (stringo) -> dataSet.add(new TextChunk(stringo)));
         adapter.notifyDataSetChanged();
 
         /*Elements elements = doc.body().children().select("*");
@@ -355,10 +364,12 @@ public class TextbookView extends AppCompatActivity implements PlayerBarFragment
                 checkIfVisible(posn);
 
             } else {
+                adapter.setSelected(0);
                 runOnUiThread(new Runnable() {
                     @Override
                     public void run() {
                         playerBarFragment.setPlayButton("Play");
+                        playerBarFragment.setStopButton(false);
                     }
                 });
             }
@@ -494,6 +505,15 @@ public class TextbookView extends AppCompatActivity implements PlayerBarFragment
                 //System.out.println("No Vertical Scrolled");
             }
         }
+    }
+
+    @Override
+    public boolean onOptionsItemSelected(MenuItem item) {
+        if (item.getItemId() == android.R.id.home) {
+            onBackPressed();
+            return true;
+        }
+        return false;
     }
 
 }

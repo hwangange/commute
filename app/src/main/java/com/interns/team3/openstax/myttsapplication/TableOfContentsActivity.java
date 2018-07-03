@@ -5,6 +5,7 @@ import android.os.Bundle;
 import android.support.v7.app.AppCompatActivity;
 import android.support.v7.widget.GridLayoutManager;
 import android.support.v7.widget.RecyclerView;
+import android.view.MenuItem;
 import android.widget.TextView;
 
 import org.jsoup.Jsoup;
@@ -32,7 +33,7 @@ public class TableOfContentsActivity extends AppCompatActivity {
 
     private DecimalFormat df;
 
-    private String bookId;
+    private String bookId, bookTitle;
 
    /* private BottomNavigationView.OnNavigationItemSelectedListener mOnNavigationItemSelectedListener
             = new BottomNavigationView.OnNavigationItemSelectedListener() {
@@ -80,6 +81,11 @@ public class TableOfContentsActivity extends AppCompatActivity {
         //get content
         Intent intent = getIntent();
         bookId = intent.getStringExtra("Book ID");
+        bookTitle =intent.getStringExtra("Book Title");
+
+        setTitle(bookTitle);
+        getSupportActionBar().setHomeButtonEnabled(true);
+        getSupportActionBar().setDisplayHomeAsUpEnabled(true);
 
         addItems();
 
@@ -154,6 +160,15 @@ public class TableOfContentsActivity extends AppCompatActivity {
         }
 
 
+    }
+
+    @Override
+    public boolean onOptionsItemSelected(MenuItem item) {
+        if (item.getItemId() == android.R.id.home) {
+            onBackPressed();
+            return true;
+        }
+        return false;
     }
 
 }
