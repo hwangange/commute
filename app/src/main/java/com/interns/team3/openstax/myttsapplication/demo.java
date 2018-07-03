@@ -21,6 +21,9 @@ import java.io.BufferedReader;
 import java.io.InputStreamReader;
 import java.net.URL;
 
+import org.json.JSONArray;
+import org.json.JSONException;
+import org.json.JSONObject;
 import org.jsoup.Jsoup;
 import org.jsoup.nodes.Document;
 import org.jsoup.nodes.Element;
@@ -34,6 +37,14 @@ public class demo {
 
     public static void main (String args[]) throws Exception {
         System.out.println("roflmao");
+
+
+        //parse_collection_xml();
+        JSONObject ugh = new JSONObject();
+        //JSONObject bb = new JSONObject("{interests : [{interestKey:Dogs}, {interestKey:Cats}]}");
+
+
+
         //firstTest("Hi! This is a test.");
         /*try {
             URL my_url = new URL("https://openstax.org/details/books/calculus-volume-3");
@@ -82,7 +93,7 @@ public class demo {
         for (String s : lst)
             System.out.println(s); */
 
-        print_files();
+        //print_files();
 
 
     }
@@ -114,30 +125,37 @@ public class demo {
     }
 
     public static void parse_collection_xml() throws Exception {
-        File input = new File("/Users/Linda/AndroidStudioProjects1/MyTTSApplication/app/src/main/res/values/col11629_1.7_complete/collection.xml");
+        File input = new File("/Users/Linda/AndroidStudioProjects1/MyTTSApplication/app/src/main/assets/Books/Psychology/collection.xml");
         Document doc = Jsoup.parse(input, "UTF-8", "");
 
 
         String title = doc.title();
-        System.out.println(title);
+        //System.out.println(title);
         Element body =  doc.body();
         Elements subcollections = body.getElementsByTag("col:subcollection");
+
+        ArrayList<Content.Module> mods = new ArrayList<Content.Module>();
+
         for (Element sub : subcollections)
         {
             String subTitle = sub.getElementsByTag("md:title").first().ownText();
-            System.out.println("Title: " + subTitle);
-            if(sub.hasText())
-                System.out.println(sub.ownText() + "\t" + sub.attributes());
+            //System.out.println("Title: " + subTitle);
+            /*if(sub.hasText())
+                System.out.println(sub.ownText() + "\t" + sub.attributes()); */
 
             Elements modules = sub.getElementsByTag("col:module");
             for (Element mod : modules)
             {
+                mods.add(new Content.Module("/Users/Linda/AndroidStudioProjects1/MyTTSApplication/app/src/main/assets/Books/Psychology/", mod));
                 String modTitle = mod.getElementsByTag("md:title").first().ownText();
-                System.out.println("\t"+modTitle + "\t" + mod.attributes().get("document"));
+                //System.out.println("\t"+modTitle + "\t" + mod.attributes().get("document"));
             }
 
-            System.out.println("------------------------");
+           // System.out.println("------------------------");
         }
+
+        JSONObject obj = mods.get(0).toJson();
+        System.out.print(obj.get("title"));
 
 
         /* important code. Keep this. */

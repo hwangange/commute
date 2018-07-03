@@ -31,6 +31,7 @@ import com.nshmura.snappysmoothscroller.SnappyLinearLayoutManager;
 import com.nshmura.snappysmoothscroller.SnappySmoothScroller;
 
 
+import org.json.JSONException;
 import org.jsoup.Jsoup;
 import org.jsoup.nodes.Document;
 import org.jsoup.nodes.Element;
@@ -72,23 +73,6 @@ public class TextbookView extends AppCompatActivity implements PlayerBarFragment
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_textbook_view);
         recyclerView = (RecyclerView) findViewById(R.id.my_recycler_view);
-
-        // use this setting to improve performance if you know that changes
-        // in content do not change the layout size of the RecyclerView
-        // recyclerView.setHasFixedSize(true);
-
-        // use a GRID layout manager
-       // layoutManager = new GridLayoutManager(this, 1);
-
-        // OPTION 1
-        /*layoutManager = new SnappyLinearLayoutManager(getApplicationContext());
-        // Set the SnapType
-        layoutManager.setSnapType(SnapType.CENTER);
-
-        // Set the Interpolator
-        layoutManager.setSnapInterpolator(new DecelerateInterpolator());
-        layoutManager.setSnapPaddingEnd(20);
-        recyclerView.setLayoutManager(layoutManager); */
 
         //OPTION 2
         layoutManager = new LinearLayoutManager(getApplicationContext(), LinearLayoutManager.VERTICAL, false) {
@@ -156,10 +140,9 @@ public class TextbookView extends AppCompatActivity implements PlayerBarFragment
         Intent intent = getIntent();
         modId = intent.getStringExtra("Module ID");
         bookId = intent.getStringExtra("Book ID");
+
         // Toast.makeText(getApplicationContext(), modId, Toast.LENGTH_SHORT).show();
 
-        content = getContent();
-        dataSet = new ArrayList<TextChunk>();
 
         myUtteranceProgressListener = new MyUtteranceProgressListener();
         tts = new TextToSpeech(getApplicationContext(), new TextToSpeech.OnInitListener() {
@@ -177,6 +160,10 @@ public class TextbookView extends AppCompatActivity implements PlayerBarFragment
         });
         tts.setOnUtteranceProgressListener(myUtteranceProgressListener);
 
+
+
+        dataSet = new ArrayList<TextChunk>();
+
         // specify an adapter (see also next example)
         adapter = new TextbookViewAdapter(dataSet, new TextbookViewAdapter.TextOnClickListener(){
 
@@ -187,18 +174,19 @@ public class TextbookView extends AppCompatActivity implements PlayerBarFragment
 
         });
 
+        try {
+            getContent();
+        } catch (IOException e){
+            Log.e("IOException", e.toString());
+        } catch(JSONException e){
+            Log.e("JSONException", e.toString());
+        }
+
         adapter.setContext(getApplicationContext()); // nOT NEEDED // will also setup TTS instance
         recyclerView.setAdapter(adapter);
 
 
-        Elements elements = content.body().children().select("*");
-        for (Element element : elements) {
-            dataSet.add(new TextChunk(element.ownText()));
 
-            adapter.notifyItemInserted(dataSet.size()-1);
-            //adapter.notifyDataSetChanged();
-
-        }
 
         recyclerView.addOnLayoutChangeListener(new View.OnLayoutChangeListener() {
 
@@ -299,29 +287,34 @@ public class TextbookView extends AppCompatActivity implements PlayerBarFragment
 
     }
 
-    public Document getContent() {
+    public void getContent() throws IOException, JSONException {
 
-        try {
-
-            String fileName = "Books/"+bookId+"/"+modId+"/index.cnxml.html";
-            StringBuilder buf = new StringBuilder();
-            InputStreamReader inputStream = new InputStreamReader(getAssets().open(fileName));
-            BufferedReader bufferedReader = new BufferedReader(inputStream);
-            String str;
-            while ((str = bufferedReader.readLine()) != null) {
-                buf.append(str);
-            }
-            Document doc = Jsoup.parse(buf.toString());
-
-            return doc;
-
-
-
-        } catch (IOException e) {
-            e.printStackTrace();
+        String fileName = "Books/"+bookId+"/"+modId+"/index.cnxml.html";
+        StringBuilder buf = new StringBuilder();
+        InputStreamReader inputStream = new InputStreamReader(getAssets().open(fileName));
+        BufferedReader bufferedReader = new BufferedReader(inputStream);
+        String str;
+        while ((str = bufferedReader.readLine()) != null) {
+            buf.append(str);
         }
 
-        return null;
+        Document doc = Jsoup.parse(buf.toString());
+
+        String title = doc.body().getElementsByTag("div").first().attr("document-title");
+        Content.Module mod= new Content.Module(title, modId, doc);
+
+        mod.returnPrintOpening().forEach( (stringo) -> dataSet.add(new TextChunk(stringo)));
+        mod.returnPrintReadingSections().forEach( (stringo) -> dataSet.add(new TextChunk(stringo)));
+        mod.returnPrintEoc().forEach( (stringo) -> dataSet.add(new TextChunk(stringo)));
+        adapter.notifyDataSetChanged();
+
+        /*Elements elements = doc.body().children().select("*");
+        for (Element element : elements) {
+            dataSet.add(new TextChunk(element.ownText()));
+            adapter.notifyItemInserted(dataSet.size() - 1);
+                //adapter.notifyDataSetChanged();
+        } */
+
     }
 
     private ArrayList<String> getData(Document doc, TextbookViewAdapter adapter) {

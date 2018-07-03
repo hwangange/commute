@@ -74,21 +74,12 @@ public class TableOfContentsActivity extends AppCompatActivity {
         recyclerView= (RecyclerView) findViewById(R.id.my_recycler_view);
         recyclerView.setAdapter(adapter);
 
-        // use a GRID layout manager
         layoutManager = new GridLayoutManager(this, 1);
-        // layoutManager = new LinearLayoutManager(this);
         recyclerView.setLayoutManager(layoutManager);
 
         //get content
         Intent intent = getIntent();
         bookId = intent.getStringExtra("Book ID");
-
-        // Add items to adapter
-        /*Module newModule = new Module("Angela", "Hwang");
-        adapter.add(newModule);
-
-        newModule = new Module("Connie", "Wang");
-        adapter.add(newModule);*/
 
         addItems();
 
@@ -103,24 +94,6 @@ public class TableOfContentsActivity extends AppCompatActivity {
         adapter.addAll(newUsers);
          */
 
-
-
-        // ON CLICK LISTENER
-        /*recyclerView.setOnItemClickListener(new AdapterView.OnItemClickListener(){
-            @Override
-            public void onItemClick(AdapterView<?>adapter, View v, int position, long id){
-                // what each variable means: https://developer.android.com/reference/android/widget/AdapterView.OnItemClickListener
-
-
-                String targetId = ((TextView) v.findViewById(R.id.itemID)).getText().toString();
-                //Toast.makeText(getApplicationContext(), targetId, Toast.LENGTH_SHORT).show();
-
-                Intent intent = new Intent(getApplicationContext(), TextbookView.class);
-                intent.putExtra("Module ID", targetId);
-                startActivity(intent);
-               // to put extra information: intent.putExtra(ImageTextListViewActivity.EXTRA_KMLSUMMARY, summary.get(position));
-            }
-        }); */
 
 
     }
@@ -156,7 +129,6 @@ public class TableOfContentsActivity extends AppCompatActivity {
 
                 dataSet.add(new Content.Chapter(subTitle, "0", chapNum));
                 adapter.notifyDataSetChanged();
-                //System.out.println("Title: " + subTitle);
 
                 if (sub.hasText())
                     System.out.println(sub.ownText() + "\t" + sub.attributes());
