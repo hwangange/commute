@@ -4,6 +4,7 @@ import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.support.v7.widget.GridLayoutManager;
 import android.support.v7.widget.RecyclerView;
+import android.util.Log;
 
 import java.io.IOException;
 import java.util.ArrayList;
@@ -49,6 +50,7 @@ public class BookshelfActivity extends AppCompatActivity {
             String[] bookTitles = getAssets().list("Books");
             for(String s : bookTitles){
                 dataSet.add(new Content.Book(s, s));
+                Log.i("Book", s);
             }
 
         } catch (IOException e) {

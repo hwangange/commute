@@ -211,7 +211,7 @@ public class ContentAdapter extends RecyclerView.Adapter<RecyclerView.ViewHolder
                 String title= book.getTitle();
                 String id = book.getId();
 
-                String modified_title= title.replaceAll(" ", "_").toLowerCase();
+                String modified_title= title.replaceAll(" ", "_").replaceAll("\\.", "").toLowerCase();
                 Log.i("Title; ", modified_title);
                 int drawable_id = context.getResources().getIdentifier(modified_title, "drawable", context.getPackageName());
 

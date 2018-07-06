@@ -1,51 +1,46 @@
 package com.interns.team3.openstax.myttsapplication;
 
+import android.Manifest;
+import android.content.pm.PackageManager;
+import android.media.AudioAttributes;
+import android.media.AudioManager;
+import android.media.MediaPlayer;
 import android.net.Uri;
-import android.support.v4.app.Fragment;
-import android.support.v4.app.FragmentActivity;
+import android.os.Environment;
+import android.support.v4.app.ActivityCompat;
 import android.support.v4.app.FragmentManager;
 import android.support.v4.app.FragmentTransaction;
-import android.content.Context;
 import android.content.Intent;
-import android.graphics.PointF;
-import android.os.AsyncTask;
 import android.speech.tts.TextToSpeech;
 import android.speech.tts.UtteranceProgressListener;
 import android.support.v4.content.ContextCompat;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
-import android.support.v7.widget.GridLayoutManager;
 import android.support.v7.widget.LinearLayoutManager;
-import android.support.v7.widget.LinearSmoothScroller;
 import android.support.v7.widget.RecyclerView;
-import android.util.DisplayMetrics;
 import android.util.Log;
 import android.view.MenuItem;
 import android.view.View;
 import android.view.animation.DecelerateInterpolator;
+import android.widget.Button;
 import android.widget.TextView;
-import android.widget.Toast;
 
 import com.nshmura.snappysmoothscroller.LinearLayoutScrollVectorDetector;
 import com.nshmura.snappysmoothscroller.SnapType;
-import com.nshmura.snappysmoothscroller.SnappyLinearLayoutManager;
 import com.nshmura.snappysmoothscroller.SnappySmoothScroller;
 
 
+import org.apache.commons.text.WordUtils;
 import org.json.JSONException;
 import org.jsoup.Jsoup;
 import org.jsoup.nodes.Document;
-import org.jsoup.nodes.Element;
-import org.jsoup.select.Elements;
 
 import java.io.BufferedReader;
+import java.io.File;
 import java.io.IOException;
 import java.io.InputStreamReader;
 import java.util.ArrayList;
-import java.util.concurrent.ExecutorService;
-import java.util.concurrent.Executors;
-
-import static com.interns.team3.openstax.myttsapplication.PlayerBarFragment.newInstance;
+import java.util.Arrays;
 
 public class TextbookView extends AppCompatActivity implements PlayerBarFragment.OnFragmentInteractionListener {
 
@@ -60,6 +55,20 @@ public class TextbookView extends AppCompatActivity implements PlayerBarFragment
 
     public TextToSpeech tts;
     public MyUtteranceProgressListener myUtteranceProgressListener;
+    public MediaPlayer player = new MediaPlayer();
+
+    Button readBtn;
+    Button pauseBtn;
+    Button convertBtn;
+    private int length;
+    public String s;
+
+    // Storage Permissions
+    private static final int REQUEST_EXTERNAL_STORAGE = 1;
+    private static String[] PERMISSIONS_STORAGE = {
+            Manifest.permission.READ_EXTERNAL_STORAGE,
+            Manifest.permission.WRITE_EXTERNAL_STORAGE
+    };
 
 
     public CustomScrollListener customScrollListener;
@@ -74,8 +83,15 @@ public class TextbookView extends AppCompatActivity implements PlayerBarFragment
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_textbook_view);
         recyclerView = (RecyclerView) findViewById(R.id.my_recycler_view);
+        readBtn = findViewById(R.id.readbtn);
+        pauseBtn = findViewById(R.id.pause);
+        convertBtn = findViewById(R.id.convert);
 
-        //OPTION 2
+        convertBtn.setEnabled(false);
+        pauseBtn.setEnabled(false);
+        readBtn.setEnabled(false);
+
+        // Layout Manager
         layoutManager = new LinearLayoutManager(getApplicationContext(), LinearLayoutManager.VERTICAL, false) {
 
             @Override
@@ -132,12 +148,10 @@ public class TextbookView extends AppCompatActivity implements PlayerBarFragment
                 }
             }
         };
-
         customScrollListener = new CustomScrollListener();
         recyclerView.setLayoutManager(layoutManager);
         recyclerView.addOnScrollListener(customScrollListener);
 
-        //get content
         Intent intent = getIntent();
         modId = intent.getStringExtra("Module ID");
         bookId = intent.getStringExtra("Book ID");
@@ -146,15 +160,15 @@ public class TextbookView extends AppCompatActivity implements PlayerBarFragment
         getSupportActionBar().setHomeButtonEnabled(true);
         getSupportActionBar().setDisplayHomeAsUpEnabled(true);
 
-        // Toast.makeText(getApplicationContext(), modId, Toast.LENGTH_SHORT).show();
 
-
+        // Utterance Progress Listener
         myUtteranceProgressListener = new MyUtteranceProgressListener();
         tts = new TextToSpeech(getApplicationContext(), new TextToSpeech.OnInitListener() {
             @Override
             public void onInit(int i) {
                 if (i == TextToSpeech.SUCCESS) {
                     //mButtonSpeak.setEnabled(true);
+                    convertBtn.setEnabled(true);
                     Log.e("Initialization", "Initialization succeeded");
 
                 } else {
@@ -189,10 +203,6 @@ public class TextbookView extends AppCompatActivity implements PlayerBarFragment
 
         adapter.setContext(getApplicationContext()); // nOT NEEDED // will also setup TTS instance
         recyclerView.setAdapter(adapter);
-
-
-
-
         recyclerView.addOnLayoutChangeListener(new View.OnLayoutChangeListener() {
 
             @Override
@@ -203,6 +213,108 @@ public class TextbookView extends AppCompatActivity implements PlayerBarFragment
         });
         adapter.notifyDataSetChanged();
 
+        int permission = ActivityCompat.checkSelfPermission(this, Manifest.permission.WRITE_EXTERNAL_STORAGE);
+        int permission2 = ActivityCompat.checkSelfPermission(this, Manifest.permission.READ_EXTERNAL_STORAGE);
+
+        if (permission != PackageManager.PERMISSION_GRANTED) {
+            // We don't have permission so prompt the user
+            ActivityCompat.requestPermissions(
+                    this,
+                    PERMISSIONS_STORAGE,
+                    REQUEST_EXTERNAL_STORAGE
+            );
+        }
+
+        if (permission2 != PackageManager.PERMISSION_GRANTED) {
+            // We don't have permission so prompt the user
+            ActivityCompat.requestPermissions(
+                    this,
+                    PERMISSIONS_STORAGE,
+                    REQUEST_EXTERNAL_STORAGE
+            );
+        }
+
+        readBtn.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                if (player.isPlaying()){
+                    player.seekTo(0);
+                    player.start();
+                }
+                else {
+
+                    initializeMedia();
+                    readBtn.setText("Restart");
+                }
+
+
+            }
+        });
+
+
+        convertBtn.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+
+                for(TextChunk tc : dataSet){
+                    s = s + tc.getText();
+                }
+
+                String[] list = stringSplit(s);
+
+                for (String s : list) {
+                    //Bundle params = new Bundle();
+                    String id = "textbookaudio" + Arrays.asList(list).indexOf(s);
+                    //params.putSerializable(TextToSpeech.Engine.KEY_PARAM_UTTERANCE_ID, id);
+
+                    String filename = "/textbookaudio" + Arrays.asList(list).indexOf(s) + s.substring(0,5).replaceAll("[^a-zA-Z ]", "") + ".wav";
+                    File myFile = new File(Environment.getExternalStorageDirectory().getAbsolutePath() + filename);
+                    if (myFile.exists()){
+                        Log.i("File Exists", filename);
+                        runOnUiThread(new Runnable() {
+                            @Override
+                            public void run() {
+                                readBtn.setEnabled(true);
+                                pauseBtn.setEnabled(true);
+                                convertBtn.setText("Conversion completed");
+                            }
+
+                        });
+
+                    }
+                    else {
+                        tts.synthesizeToFile(s, null, new File(Environment.getExternalStorageDirectory().getAbsolutePath() + filename), id);
+                        //tts.speak(s, TextToSpeech.QUEUE_ADD, null);
+                    }
+
+                }
+            }
+
+
+        });
+
+
+        pauseBtn.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                if (!player.isPlaying()){
+                    pauseBtn.setText("Pause");
+                    player.seekTo(length-1);
+                    player.start();
+                }
+                else{
+                    player.pause();
+                    pauseBtn.setText("Resume");
+                    length = player.getCurrentPosition();
+
+                }
+
+
+            }
+        });
+
+
+        // Audio Player Bar
         fragmentManager = getSupportFragmentManager();
 
         //add
@@ -282,6 +394,7 @@ public class TextbookView extends AppCompatActivity implements PlayerBarFragment
             Thread readTextThread = new Thread()
             {
                 public void run() {
+
                     tts.speak(text, TextToSpeech.QUEUE_FLUSH, null, String.valueOf(position));
                 }
             };
@@ -309,6 +422,8 @@ public class TextbookView extends AppCompatActivity implements PlayerBarFragment
         String title = doc.body().getElementsByTag("div").first().attr("document-title");
         Content.Module mod= new Content.Module(title, modId, doc);
 
+
+        // eventually just replace with mod.buildModuleSSMl()
         ArrayList<String> temp = mod.returnPrintOpening();
         if(temp != null) temp.forEach( (stringo) -> dataSet.add(new TextChunk(stringo)));
         temp = mod.returnPrintReadingSections();
@@ -326,16 +441,46 @@ public class TextbookView extends AppCompatActivity implements PlayerBarFragment
 
     }
 
-    private ArrayList<String> getData(Document doc, TextbookViewAdapter adapter) {
-        Element body = doc.body();
-        ArrayList<String> lst = new ArrayList<String>();
+    private String[] stringSplit(String string) {
+        String a = WordUtils.wrap(string, 3999);
+        String[] list = a.split(System.lineSeparator());
+        Log.i("Split string array length: ", String.valueOf(list.length));
+        for(String str : list) Log.i("\t\tElement", str +"\n");
+        return list;
 
-        Elements elements = doc.body().children().select("*");
-        for (Element element : elements) {
-            lst.add(element.ownText());
+    }
+
+    private void initializeMedia() {
+        for(TextChunk tc : dataSet)
+            s = s + tc.getText();
+        String[] list = stringSplit(s);
+        for (String s : list) {
+            String filename2 = "/textbookaudio" + Arrays.asList(list).indexOf(s) + s.substring(0,5).replaceAll("[^a-zA-Z ]", "")+ ".wav";
+            String fileName = Environment.getExternalStorageDirectory().getAbsolutePath() + filename2;
+
+            Uri uri = Uri.parse("file://" + fileName);
+
+           // player.setAudioStreamType(AudioManager.STREAM_MUSIC);
+            player.setAudioAttributes(new AudioAttributes.Builder()
+                    .setUsage(AudioAttributes.USAGE_MEDIA)
+                    .setContentType(AudioAttributes.CONTENT_TYPE_MUSIC)
+                    .build());
+
+            try {
+                player.setDataSource(getApplicationContext(), uri);
+                player.prepare();
+            } catch (Exception e) {
+                e.printStackTrace();
+            }
+
+            player.setOnPreparedListener(new MediaPlayer.OnPreparedListener() {
+                @Override
+                public void onPrepared(MediaPlayer mp) {
+                    player.start();
+                }
+            });
         }
 
-        return lst;
     }
 
     public class MyUtteranceProgressListener extends UtteranceProgressListener{
@@ -357,22 +502,37 @@ public class TextbookView extends AppCompatActivity implements PlayerBarFragment
         @Override
         public void onDone(final String pos) {
             // Log.i("onDone", pos);
-            backToNormal(pos);
 
-            int posn = Integer.parseInt(pos) + 1;
-            if (posn < dataSet.size()) {
-                checkIfVisible(posn);
-
-            } else {
-                adapter.setSelected(0);
+            if(pos.contains("textbookaudio")) {
                 runOnUiThread(new Runnable() {
                     @Override
                     public void run() {
-                        playerBarFragment.setPlayButton("Play");
-                        playerBarFragment.setStopButton(false);
+                        readBtn.setEnabled(true);
+                        pauseBtn.setEnabled(true);
+                        convertBtn.setText("Conversion completed");
                     }
+
                 });
             }
+
+            else{
+                backToNormal(pos);
+                int posn = Integer.parseInt(pos) + 1;
+                if (posn < dataSet.size()) {
+                    checkIfVisible(posn);
+
+                } else {
+                    adapter.setSelected(0);
+                    runOnUiThread(new Runnable() {
+                        @Override
+                        public void run() {
+                            playerBarFragment.setPlayButton("Play");
+                            playerBarFragment.setStopButton(false);
+                        }
+                    });
+                }
+            }
+
         }
 
         @Override
@@ -415,6 +575,9 @@ public class TextbookView extends AppCompatActivity implements PlayerBarFragment
             tts.stop();
             tts.shutdown();
         }
+
+        player.stop();
+        player.release();
 
         super.onDestroy();
     }

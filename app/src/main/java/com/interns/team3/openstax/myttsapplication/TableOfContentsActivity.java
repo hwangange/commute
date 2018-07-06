@@ -136,9 +136,6 @@ public class TableOfContentsActivity extends AppCompatActivity {
                 dataSet.add(new Content.Chapter(subTitle, "0", chapNum));
                 adapter.notifyDataSetChanged();
 
-                if (sub.hasText())
-                    System.out.println(sub.ownText() + "\t" + sub.attributes());
-
                 Elements modules = sub.getElementsByTag("col:module");
                 for (Element mod : modules) {
 

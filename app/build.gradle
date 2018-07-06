@@ -48,6 +48,10 @@ dependencies {
     androidTestImplementation 'com.android.support.test:runner:1.0.2'
     androidTestImplementation 'com.android.support.test.espresso:espresso-core:3.0.2'
 
+    // https://mvnrepository.com/artifact/org.apache.commons/commons-text
+    implementation group: 'org.apache.commons', name: 'commons-text', version: '1.4'
+
+
     // jsoup HTML parser library @ https://jsoup.org/
     implementation 'org.jsoup:jsoup:1.11.3'
     // JSON library
@@ -63,9 +67,15 @@ dependencies {
     //Picasso
     implementation 'com.squareup.picasso:picasso:2.5.2'
 
+    // Google Cloud API
+    //implementation 'com.google.cloud:google-cloud-texttospeech:0.53.0-beta'
+
     implementation 'io.grpc:grpc-netty:1.13.1'
     implementation 'io.netty:netty-handler:4.1.25.Final'
     implementation 'io.netty:netty-tcnative-boringssl-static:2.0.8.Final'
+
+    //Sectioned recycler view
+    implementation 'io.github.luizgrp.sectionedrecyclerviewadapter:sectionedrecyclerviewadapter:1.2.0'
 
 
 }
