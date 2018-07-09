@@ -5,13 +5,10 @@ import android.net.Uri;
 import android.os.Bundle;
 import android.speech.tts.TextToSpeech;
 import android.support.v4.app.Fragment;
-import android.util.Log;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
-import android.widget.Button;
-
-import org.w3c.dom.Text;
+import android.widget.ImageButton;
 
 
 /**
@@ -33,8 +30,7 @@ public class PlayerBarFragment extends Fragment {
     private String mParam2;
 
     private OnFragmentInteractionListener mListener;
-    private Button playButton;
-    private Button stopButton;
+    private ImageButton playButton, stopButton, forwardButton, reverseButton;
 
     private TextToSpeech tts;
 
@@ -76,34 +72,62 @@ public class PlayerBarFragment extends Fragment {
         // Inflate the layout for this fragment
         View view = inflater.inflate(R.layout.fragment_player_bar, container, false);
 
-        playButton = (Button)view.findViewById(R.id.playButton);
+        playButton = (ImageButton)view.findViewById(R.id.playButton);
+        playButton.setTag("Play");
         playButton.setOnClickListener(new View.OnClickListener(){
 
             @Override
             public void onClick(View v){
                 if(!stopButton.isEnabled()) stopButton.setEnabled(true);
-                if(playButton.getText().equals("Play"))
+                if(!forwardButton.isEnabled()) forwardButton.setEnabled(true);
+                if(!reverseButton.isEnabled()) reverseButton.setEnabled(true);
+                if(playButton.getTag().equals("Play"))
+
                 {
 
-                    playButton.setText("Pause");
+                    playButton.setTag("Pause");
+                    playButton.setImageResource(R.drawable.pause);
+
                     int selected = ((TextbookView)getActivity()).getSelected();
                     ((TextbookView)getActivity()).checkIfVisible(selected);
                 }
                 else{
-                    playButton.setText("Play");
+                    playButton.setTag("Play");
+                    playButton.setImageResource(R.drawable.play);
+
                     // Pause
                     ((TextbookView) getActivity()).pauseTTS();
                 }
             }
         });
 
-        stopButton = (Button) view.findViewById(R.id.stopButton);
+        stopButton = (ImageButton) view.findViewById(R.id.stopButton);
         stopButton.setEnabled(false);
         stopButton.setOnClickListener(new View.OnClickListener(){
             @Override
             public void onClick(View v){
                 stopButton.setEnabled(false);
+                forwardButton.setEnabled(false);
+                reverseButton.setEnabled(false);
                 ((TextbookView) getActivity()).stopTTS();
+            }
+        });
+
+        forwardButton = (ImageButton) view.findViewById(R.id.forwardButton);
+        forwardButton.setEnabled(false);
+        forwardButton.setOnClickListener(new View.OnClickListener(){
+            @Override
+            public void onClick(View v){
+                ((TextbookView) getActivity()).forwardTTS();
+            }
+        });
+
+        reverseButton = (ImageButton) view.findViewById(R.id.reverseButton);
+        reverseButton.setEnabled(false);
+        reverseButton.setOnClickListener(new View.OnClickListener(){
+            @Override
+            public void onClick(View v){
+                ((TextbookView) getActivity()).reverseTTS();
             }
         });
 
@@ -118,10 +142,26 @@ public class PlayerBarFragment extends Fragment {
     }
 
     public void setPlayButton(String s){
-        playButton.setText(s);
+        if(s.equals("Play"))
+
+        {
+
+            playButton.setTag("Play");
+            playButton.setImageResource(R.drawable.play);
+        }
+        else{
+            playButton.setTag("Pause");
+            playButton.setImageResource(R.drawable.pause);
+        }
     }
 
     public void setStopButton(boolean boo){ stopButton.setEnabled(boo);}
+
+    public void setForwardButton(boolean boo) {
+        forwardButton.setEnabled(boo);}
+
+    public void setReverseButton(boolean boo) {
+        reverseButton.setEnabled(boo);}
 
     @Override
     public void onAttach(Context context) {

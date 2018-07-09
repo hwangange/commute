@@ -17,17 +17,29 @@
 
         <!-- TODO: Update blank fragment layout -->
 
-        <Button
+         <ImageButton
+            android:id="@+id/reverseButton"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:src="@drawable/fast_rewind"/>
+
+        <ImageButton
             android:id="@+id/playButton"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:text="Play" />
+            android:src="@drawable/play" />
 
-        <Button
+        <ImageButton
             android:id="@+id/stopButton"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:text="Stop" />
+            android:src="@drawable/stop" />
+
+        <ImageButton
+            android:id="@+id/forwardButton"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:src="@drawable/fast_forward" />
 
 
     </LinearLayout>

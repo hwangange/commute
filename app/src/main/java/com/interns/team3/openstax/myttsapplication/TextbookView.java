@@ -5,7 +5,6 @@ import android.animation.Animator;
 import android.animation.AnimatorListenerAdapter;
 import android.content.pm.PackageManager;
 import android.media.AudioAttributes;
-import android.media.AudioManager;
 import android.media.MediaPlayer;
 import android.net.Uri;
 import android.os.Environment;
@@ -24,8 +23,6 @@ import android.util.Log;
 import android.view.MenuItem;
 import android.view.View;
 import android.view.animation.DecelerateInterpolator;
-import android.widget.Button;
-import android.widget.FrameLayout;
 import android.widget.LinearLayout;
 import android.widget.ProgressBar;
 import android.widget.TextView;
@@ -45,7 +42,6 @@ import java.io.File;
 import java.io.IOException;
 import java.io.InputStreamReader;
 import java.util.ArrayList;
-import java.util.Arrays;
 
 public class TextbookView extends AppCompatActivity implements PlayerBarFragment.OnFragmentInteractionListener {
 
@@ -56,7 +52,7 @@ public class TextbookView extends AppCompatActivity implements PlayerBarFragment
 
     public static String modId, bookId, modTitle;
     public static Document content;
-    public ArrayList<TextChunk> dataSet;
+    public ArrayList<TextChunk> tempDataSet, dataSet;
 
     public TextToSpeech tts;
     public MyUtteranceProgressListener myUtteranceProgressListener;
@@ -187,6 +183,7 @@ public class TextbookView extends AppCompatActivity implements PlayerBarFragment
 
 
         // Populate dataSet
+        tempDataSet = new ArrayList<TextChunk>();
         dataSet = new ArrayList<TextChunk>();
         adapter = new TextbookViewAdapter(dataSet, new TextbookViewAdapter.TextOnClickListener(){
 
@@ -194,11 +191,12 @@ public class TextbookView extends AppCompatActivity implements PlayerBarFragment
                 if(position != getSelected() || (position == getSelected() && !player.isPlaying()))  // do not pause the audio if "selected" text is selected again
                 {
                     // If interrupted
+
                     int former_position = getSelected();
                     TextChunk former_selected = dataSet.get(former_position);
-                    if(former_selected.isSelected()){
-                        backToNormal(String.valueOf(former_position));
-                    }
+                    //if(former_selected.isSelected())
+                    backToNormal(String.valueOf(former_position));
+
 
                     is_paused = false;
 
@@ -219,7 +217,7 @@ public class TextbookView extends AppCompatActivity implements PlayerBarFragment
         // After dataSet is completed
         //Progress bar to show progress of TTS file synthesis
         progressBar = (ProgressBar) findViewById(R.id.determinateBar);
-        progressBar.setMax(dataSet.size());
+        progressBar.setMax(tempDataSet.size());
         progress = (LinearLayout) findViewById(R.id.progress);
         progressNumber = (TextView) findViewById(R.id.progressNumber);
 
@@ -293,12 +291,12 @@ public class TextbookView extends AppCompatActivity implements PlayerBarFragment
 
         // eventually just replace with mod.buildModuleSSMl()
         ArrayList<String> temp = mod.returnPrintOpening();
-        if(temp != null) temp.forEach( (stringo) -> dataSet.add(new TextChunk(stringo)));
+        if(temp != null) temp.forEach( (stringo) -> tempDataSet.add(new TextChunk(stringo)));
         temp = mod.returnPrintReadingSections();
-        if(temp != null) temp.forEach( (stringo) -> dataSet.add(new TextChunk(stringo)));
+        if(temp != null) temp.forEach( (stringo) -> tempDataSet.add(new TextChunk(stringo)));
         temp = mod.returnPrintEoc();
-        if(temp != null) temp.forEach( (stringo) -> dataSet.add(new TextChunk(stringo)));
-        adapter.notifyDataSetChanged();
+        if(temp != null) temp.forEach( (stringo) -> tempDataSet.add(new TextChunk(stringo)));
+        //adapter.notifyDataSetChanged();
 
         /*Elements elements = doc.body().children().select("*");
         for (Element element : elements) {
@@ -316,12 +314,12 @@ public class TextbookView extends AppCompatActivity implements PlayerBarFragment
     public void storeConvertedTTSAudio() {
 
 
-        for (TextChunk tc : dataSet) {
+        for (TextChunk tc : tempDataSet) {
             String s = Jsoup.parse(tc.getText()).text(); // might have to modify this once text comes with SSML tags
-            String id = "textbookaudio" + dataSet.indexOf(tc);
+            String id = "textbookaudio" + tempDataSet.indexOf(tc);
 
 
-            String filename = "/textbookaudio" + String.valueOf(dataSet.indexOf(tc)) + ".wav";
+            String filename = "/textbookaudio" + String.valueOf(tempDataSet.indexOf(tc)) + ".wav";
             File myFile = new File(Environment.getExternalStorageDirectory().getAbsolutePath() + filename);
             tts.synthesizeToFile(s, null, new File(Environment.getExternalStorageDirectory().getAbsolutePath() + filename), id);
 
@@ -374,7 +372,7 @@ public class TextbookView extends AppCompatActivity implements PlayerBarFragment
 
         if (v != null) {
             TextView tv = v.findViewById(R.id.item);
-            TextChunk tc = dataSet.get(position);
+            TextChunk tc = tempDataSet.get(position);
             final String text = Jsoup.parse(tc.getText()).text();
 
             tc.setSelected(true);
@@ -386,6 +384,9 @@ public class TextbookView extends AppCompatActivity implements PlayerBarFragment
                     v.findViewById(R.id.item).setBackgroundColor(ContextCompat.getColor(getApplicationContext(), R.color.colorHighlighted));
                     playerBarFragment.setPlayButton("Pause");
                     playerBarFragment.setStopButton(true);
+                    playerBarFragment.setForwardButton(true);
+                    playerBarFragment.setReverseButton(true);
+
                 }
             });
 
@@ -447,6 +448,8 @@ public class TextbookView extends AppCompatActivity implements PlayerBarFragment
                                         public void run() {
                                             playerBarFragment.setPlayButton("Play");
                                             playerBarFragment.setStopButton(false);
+                                            playerBarFragment.setForwardButton(false);
+                                            playerBarFragment.setReverseButton(false);
                                         }
                                     });
                                 }
@@ -464,7 +467,7 @@ public class TextbookView extends AppCompatActivity implements PlayerBarFragment
     }
 
     /**
-     *
+     * Will be useful for downloading the entire chapter.
      * @param string
      * @return String array representation of string (broken down into 3999 character blocks)
      */
@@ -501,17 +504,22 @@ public class TextbookView extends AppCompatActivity implements PlayerBarFragment
 
             if(pos.contains("textbookaudio")) {
 
+                // index number in dataSet
+                int number = Integer.parseInt(pos.replaceAll("textbookaudio",""));
+                dataSet.add(new TextChunk(tempDataSet.get(number).getText()));
+
                 runOnUiThread(new Runnable() {
                     @Override
                     public void run() {
+                        adapter.notifyItemInserted(dataSet.size()-1);
                         progressBar.incrementProgressBy(1);
-                        int fraction = (int) (progressBar.getProgress() * 100 / dataSet.size());
+                        int fraction = (int) (progressBar.getProgress() * 100 / tempDataSet.size());
                         progressNumber.setText(String.valueOf(fraction) + "%");
 
                     }
                 });
 
-                if(pos.contains(String.valueOf(dataSet.size()-1))){
+                if(pos.contains(String.valueOf(tempDataSet.size()-1))){
                     Log.i("Completed converting all files", pos);
                     progress.animate().setDuration(200).alpha(0).setListener(new AnimatorListenerAdapter() {
                         @Override
@@ -544,6 +552,7 @@ public class TextbookView extends AppCompatActivity implements PlayerBarFragment
     public void backToNormal(String pos){
 
         final int position = Integer.parseInt(pos);
+        dataSet.get(position).setSelected(false);
 
         runOnUiThread(new Runnable() {
             @Override
@@ -562,8 +571,6 @@ public class TextbookView extends AppCompatActivity implements PlayerBarFragment
 
 
         });
-
-        dataSet.get(position).setSelected(false);
     }
 
     /**
@@ -616,6 +623,55 @@ public class TextbookView extends AppCompatActivity implements PlayerBarFragment
                 playerBarFragment.setPlayButton("Play");
             }
         });
+    }
+
+    //Called by player bar fragment
+    public void forwardTTS(){
+        int position = getSelected();
+        player.stop();
+
+        backToNormal(String.valueOf(position));
+        int posn = position + 1;
+        if (posn < dataSet.size()) {
+            checkIfVisible(posn);
+
+        } else {
+            adapter.setSelected(0);
+            runOnUiThread(new Runnable() {
+                @Override
+                public void run() {
+                    playerBarFragment.setPlayButton("Play");
+                    playerBarFragment.setStopButton(false);
+                    playerBarFragment.setForwardButton(false);
+                    playerBarFragment.setReverseButton(false);
+                }
+            });
+        }
+    }
+
+    //Called by player bar fragment
+    public void reverseTTS(){
+
+        int position = getSelected();
+        player.stop();
+
+        backToNormal(String.valueOf(position));
+        int posn = position - 1;
+        if (posn >= 0) {
+            checkIfVisible(posn);
+
+        } else {
+            adapter.setSelected(0);
+            runOnUiThread(new Runnable() {
+                @Override
+                public void run() {
+                    playerBarFragment.setPlayButton("Play");
+                    playerBarFragment.setStopButton(false);
+                    playerBarFragment.setForwardButton(false);
+                    playerBarFragment.setReverseButton(false);
+                }
+            });
+        }
     }
 
 
