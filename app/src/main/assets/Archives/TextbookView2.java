@@ -42,7 +42,7 @@ import java.io.InputStreamReader;
 import java.util.ArrayList;
 import java.util.Arrays;
 
-public class TextbookView extends AppCompatActivity implements PlayerBarFragment.OnFragmentInteractionListener {
+public class TextbookView2 extends AppCompatActivity implements PlayerBarFragment.OnFragmentInteractionListener {
 
 
     private RecyclerView recyclerView;

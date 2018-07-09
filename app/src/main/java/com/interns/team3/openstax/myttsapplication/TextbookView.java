@@ -57,10 +57,9 @@ public class TextbookView extends AppCompatActivity implements PlayerBarFragment
     public MyUtteranceProgressListener myUtteranceProgressListener;
     public MediaPlayer player = new MediaPlayer();
 
-    Button readBtn;
-    Button pauseBtn;
-    Button convertBtn;
     private int length;
+
+    private boolean is_paused;
 
 
     // Storage Permissions
@@ -82,14 +81,10 @@ public class TextbookView extends AppCompatActivity implements PlayerBarFragment
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_textbook_view);
-        recyclerView = (RecyclerView) findViewById(R.id.my_recycler_view);
-        readBtn = findViewById(R.id.readbtn);
-        pauseBtn = findViewById(R.id.pause);
-        convertBtn = findViewById(R.id.convert);
 
-        convertBtn.setEnabled(false);
-        pauseBtn.setEnabled(false);
-        readBtn.setEnabled(false);
+        is_paused = false;
+
+        recyclerView = (RecyclerView) findViewById(R.id.my_recycler_view);
 
         // Layout Manager
         layoutManager = new LinearLayoutManager(getApplicationContext(), LinearLayoutManager.VERTICAL, false) {
@@ -168,7 +163,7 @@ public class TextbookView extends AppCompatActivity implements PlayerBarFragment
             public void onInit(int i) {
                 if (i == TextToSpeech.SUCCESS) {
                     //mButtonSpeak.setEnabled(true);
-                    convertBtn.setEnabled(true);
+                    storeConvertedTTSAudio();
                     Log.e("Initialization", "Initialization succeeded");
 
                 } else {
@@ -188,7 +183,18 @@ public class TextbookView extends AppCompatActivity implements PlayerBarFragment
 
             @Override public void onClick(int position){
                 if(position != getSelected() || (position == getSelected() && !tts.isSpeaking()))  // do not pause the audio if "selected" text is selected again
+                {
+                    // If interrupted
+                    int former_position = getSelected();
+                    TextChunk former_selected = dataSet.get(former_position);
+                    if(former_selected.isSelected()){
+                        backToNormal(String.valueOf(former_position));
+                    }
+
+                    is_paused = false;
+
                     checkIfVisible(position);
+                }
             }
 
         });
@@ -233,80 +239,6 @@ public class TextbookView extends AppCompatActivity implements PlayerBarFragment
                     REQUEST_EXTERNAL_STORAGE
             );
         }
-
-        readBtn.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View v) {
-                if (player.isPlaying()){
-                    player.seekTo(0);
-                    player.start();
-                }
-                else {
-
-                    initializeMedia();
-                    readBtn.setText("Restart");
-                }
-
-
-            }
-        });
-
-
-        convertBtn.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View view) {
-
-
-                for (TextChunk tc : dataSet) {
-                    String s = tc.getText();
-                    String id = "textbookaudio" + dataSet.indexOf(tc);
-
-
-                    String filename = "/textbookaudio" + String.valueOf(dataSet.indexOf(tc)) + s.substring(0,5).replaceAll("[^a-zA-Z ]", "") + ".wav";
-                    File myFile = new File(Environment.getExternalStorageDirectory().getAbsolutePath() + filename);
-                    if (myFile.exists()){
-                        Log.i("File Exists", filename);
-                        runOnUiThread(new Runnable() {
-                            @Override
-                            public void run() {
-                                readBtn.setEnabled(true);
-                                pauseBtn.setEnabled(true);
-                                convertBtn.setText("Conversion completed");
-                            }
-
-                        });
-
-                    }
-                    else {
-                        tts.synthesizeToFile(s, null, new File(Environment.getExternalStorageDirectory().getAbsolutePath() + filename), id);
-                        //tts.speak(s, TextToSpeech.QUEUE_ADD, null);
-                    }
-
-                }
-            }
-
-
-        });
-
-
-        pauseBtn.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View view) {
-                if (!player.isPlaying()){
-                    pauseBtn.setText("Pause");
-                    player.seekTo(length-1);
-                    player.start();
-                }
-                else{
-                    player.pause();
-                    pauseBtn.setText("Resume");
-                    length = player.getCurrentPosition();
-
-                }
-
-
-            }
-        });
 
 
         // Audio Player Bar
@@ -365,6 +297,23 @@ public class TextbookView extends AppCompatActivity implements PlayerBarFragment
         }
     }
 
+    public void storeConvertedTTSAudio() {
+
+
+        for (TextChunk tc : dataSet) {
+            String s = tc.getText();
+            String id = "textbookaudio" + dataSet.indexOf(tc);
+
+
+            String filename = "/textbookaudio" + String.valueOf(dataSet.indexOf(tc)) + ".wav";
+            File myFile = new File(Environment.getExternalStorageDirectory().getAbsolutePath() + filename);
+            tts.synthesizeToFile(s, null, new File(Environment.getExternalStorageDirectory().getAbsolutePath() + filename), id);
+
+        }
+
+
+    }
+
     // Should only be called after the view is visible.
     public void readText(final int position) {
         final View v = layoutManager.findViewByPosition(position);
@@ -390,7 +339,66 @@ public class TextbookView extends AppCompatActivity implements PlayerBarFragment
             {
                 public void run() {
 
-                    tts.speak(text, TextToSpeech.QUEUE_FLUSH, null, String.valueOf(position));
+                    if (is_paused) {
+                        is_paused = false;
+                        player.seekTo(length - 1);
+                        player.start();
+                    }
+
+                    else {
+
+                        player.reset();
+
+                        // tts.speak(text, TextToSpeech.QUEUE_FLUSH, null, String.valueOf(position));
+
+                        String filename2 = "/textbookaudio" + String.valueOf(position) + ".wav";
+                        String fileName = Environment.getExternalStorageDirectory().getAbsolutePath() + filename2;
+
+                        Uri uri = Uri.parse("file://" + fileName);
+
+                        // player.setAudioStreamType(AudioManager.STREAM_MUSIC);
+                        player.setAudioAttributes(new AudioAttributes.Builder()
+                                .setUsage(AudioAttributes.USAGE_MEDIA)
+                                .setContentType(AudioAttributes.CONTENT_TYPE_MUSIC)
+                                .build());
+
+                        try {
+                            player.setDataSource(getApplicationContext(), uri);
+                            player.prepare();
+                        } catch (Exception e) {
+                            e.printStackTrace();
+                        }
+
+                        player.setOnPreparedListener(new MediaPlayer.OnPreparedListener() {
+                            @Override
+                            public void onPrepared(MediaPlayer mp) {
+                                player.start();
+                            }
+                        });
+
+                        player.setOnCompletionListener(new MediaPlayer.OnCompletionListener() {
+                            @Override
+                            public void onCompletion(MediaPlayer mp) {
+                                player.stop();
+
+                                backToNormal(String.valueOf(position));
+                                int posn = position + 1;
+                                if (posn < dataSet.size()) {
+                                    checkIfVisible(posn);
+
+                                } else {
+                                    adapter.setSelected(0);
+                                    runOnUiThread(new Runnable() {
+                                        @Override
+                                        public void run() {
+                                            playerBarFragment.setPlayButton("Play");
+                                            playerBarFragment.setStopButton(false);
+                                        }
+                                    });
+                                }
+                            }
+                        });
+                    }
                 }
             };
 
@@ -445,38 +453,6 @@ public class TextbookView extends AppCompatActivity implements PlayerBarFragment
 
     }
 
-    private void initializeMedia() {
-        for (TextChunk tc : dataSet) {
-            String s = tc.getText();
-            String id = "textbookaudio" + dataSet.indexOf(tc);
-
-            String filename2 = "/textbookaudio" + String.valueOf(dataSet.indexOf(tc)) + s.substring(0,5).replaceAll("[^a-zA-Z ]", "") + ".wav";
-            String fileName = Environment.getExternalStorageDirectory().getAbsolutePath() + filename2;
-
-            Uri uri = Uri.parse("file://" + fileName);
-
-           // player.setAudioStreamType(AudioManager.STREAM_MUSIC);
-            player.setAudioAttributes(new AudioAttributes.Builder()
-                    .setUsage(AudioAttributes.USAGE_MEDIA)
-                    .setContentType(AudioAttributes.CONTENT_TYPE_MUSIC)
-                    .build());
-
-            try {
-                player.setDataSource(getApplicationContext(), uri);
-                player.prepare();
-            } catch (Exception e) {
-                e.printStackTrace();
-            }
-
-            player.setOnPreparedListener(new MediaPlayer.OnPreparedListener() {
-                @Override
-                public void onPrepared(MediaPlayer mp) {
-                    player.start();
-                }
-            });
-        }
-
-    }
 
     public class MyUtteranceProgressListener extends UtteranceProgressListener{
 
@@ -500,18 +476,10 @@ public class TextbookView extends AppCompatActivity implements PlayerBarFragment
 
             if(pos.contains("textbookaudio")) {
                 Log.i("onDone", pos);
-                runOnUiThread(new Runnable() {
-                    @Override
-                    public void run() {
-                        readBtn.setEnabled(true);
-                        pauseBtn.setEnabled(true);
-                        convertBtn.setText("Conversion completed");
-                    }
 
-                });
             }
 
-            else{
+          /*  else{
                 backToNormal(pos);
                 int posn = Integer.parseInt(pos) + 1;
                 if (posn < dataSet.size()) {
@@ -527,7 +495,7 @@ public class TextbookView extends AppCompatActivity implements PlayerBarFragment
                         }
                     });
                 }
-            }
+            } */
 
         }
 
@@ -536,7 +504,8 @@ public class TextbookView extends AppCompatActivity implements PlayerBarFragment
             //if(interrupted) Log.i("onStop", "Interrupted");
             //else Log.i("onStop", "Completed");
 
-            backToNormal(position);
+            /*if(!position.contains("textbookaudio"))
+                backToNormal(position); */
 
         }
     }
@@ -578,9 +547,24 @@ public class TextbookView extends AppCompatActivity implements PlayerBarFragment
         super.onDestroy();
     }
 
+
+    // Meant to be called by fragment
+    public void playTTS() {
+
+        checkIfVisible(getSelected());
+
+    }
+
     //Meant to be called by fragment
     public void pauseTTS() {
-        tts.stop();
+
+        is_paused = true;
+
+        player.pause();
+        length = player.getCurrentPosition();
+
+        backToNormal(String.valueOf(getSelected()));
+
         runOnUiThread(new Runnable() {
             @Override
             public void run() {
@@ -591,7 +575,12 @@ public class TextbookView extends AppCompatActivity implements PlayerBarFragment
 
     //Meant to be called by fragment
     public void stopTTS(){
-        tts.stop();
+        player.stop();
+
+
+        int former_position = getSelected();
+        backToNormal(String.valueOf(former_position));
+
         adapter.setSelected(0);
         runOnUiThread(new Runnable() {
             @Override
