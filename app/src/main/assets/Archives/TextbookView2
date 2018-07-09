@@ -255,14 +255,20 @@ public class TextbookView extends AppCompatActivity implements PlayerBarFragment
         convertBtn.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
+                String temp = "";
+
+                for(TextChunk tc : dataSet){
+                    temp = temp + tc.getText();
+                }
+
+                String[] list = stringSplit(temp);
+
+                for (String s : list) {
+
+                    String id = "textbookaudio" + Arrays.asList(list).indexOf(s);
 
 
-                for (TextChunk tc : dataSet) {
-                    String s = tc.getText();
-                    String id = "textbookaudio" + dataSet.indexOf(tc);
-
-
-                    String filename = "/textbookaudio" + String.valueOf(dataSet.indexOf(tc)) + s.substring(0,5).replaceAll("[^a-zA-Z ]", "") + ".wav";
+                    String filename = "/textbookaudio" + Arrays.asList(list).indexOf(s) + s.substring(0,5).replaceAll("[^a-zA-Z ]", "") + ".wav";
                     File myFile = new File(Environment.getExternalStorageDirectory().getAbsolutePath() + filename);
                     if (myFile.exists()){
                         Log.i("File Exists", filename);
@@ -446,11 +452,12 @@ public class TextbookView extends AppCompatActivity implements PlayerBarFragment
     }
 
     private void initializeMedia() {
-        for (TextChunk tc : dataSet) {
-            String s = tc.getText();
-            String id = "textbookaudio" + dataSet.indexOf(tc);
-
-            String filename2 = "/textbookaudio" + String.valueOf(dataSet.indexOf(tc)) + s.substring(0,5).replaceAll("[^a-zA-Z ]", "") + ".wav";
+        String temp = "";
+        for(TextChunk tc : dataSet)
+            temp = temp + tc.getText();
+        String[] list = stringSplit(temp);
+        for (String s : list) {
+            String filename2 = "/textbookaudio" + Arrays.asList(list).indexOf(s) + s.substring(0,5).replaceAll("[^a-zA-Z ]", "")+ ".wav";
             String fileName = Environment.getExternalStorageDirectory().getAbsolutePath() + filename2;
 
             Uri uri = Uri.parse("file://" + fileName);
