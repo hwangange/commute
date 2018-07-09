@@ -156,10 +156,13 @@ public class TextbookView extends AppCompatActivity implements PlayerBarFragment
         recyclerView.setLayoutManager(layoutManager);
         recyclerView.addOnScrollListener(customScrollListener);
 
+        // Get book and module info
         Intent intent = getIntent();
         modId = intent.getStringExtra("Module ID");
         bookId = intent.getStringExtra("Book ID");
         modTitle= intent.getStringExtra("Module Title");
+
+        // Customize action bar
         setTitle(modTitle);
         getSupportActionBar().setHomeButtonEnabled(true);
         getSupportActionBar().setDisplayHomeAsUpEnabled(true);
@@ -183,14 +186,12 @@ public class TextbookView extends AppCompatActivity implements PlayerBarFragment
         tts.setOnUtteranceProgressListener(myUtteranceProgressListener);
 
 
-
+        // Populate dataSet
         dataSet = new ArrayList<TextChunk>();
-
-        // specify an adapter (see also next example)
         adapter = new TextbookViewAdapter(dataSet, new TextbookViewAdapter.TextOnClickListener(){
 
             @Override public void onClick(int position){
-                if(position != getSelected() || (position == getSelected() && !tts.isSpeaking()))  // do not pause the audio if "selected" text is selected again
+                if(position != getSelected() || (position == getSelected() && !player.isPlaying()))  // do not pause the audio if "selected" text is selected again
                 {
                     // If interrupted
                     int former_position = getSelected();
@@ -214,25 +215,19 @@ public class TextbookView extends AppCompatActivity implements PlayerBarFragment
         } catch(JSONException e){
             Log.e("JSONException", e.toString());
         }
+
         // After dataSet is completed
-        //Progress bar
+        //Progress bar to show progress of TTS file synthesis
         progressBar = (ProgressBar) findViewById(R.id.determinateBar);
         progressBar.setMax(dataSet.size());
         progress = (LinearLayout) findViewById(R.id.progress);
         progressNumber = (TextView) findViewById(R.id.progressNumber);
 
-        adapter.setContext(getApplicationContext()); // nOT NEEDED // will also setup TTS instance
+        adapter.setContext(getApplicationContext());
         recyclerView.setAdapter(adapter);
-        recyclerView.addOnLayoutChangeListener(new View.OnLayoutChangeListener() {
-
-            @Override
-            public void onLayoutChange(View v, int left, int top, int right, int bottom, int oldLeft, int oldTop, int oldRight, int oldBottom) {
-                recyclerView.removeOnLayoutChangeListener(this);
-                Log.e("LayoutChangeListener", "updated");
-            }
-        });
         adapter.notifyDataSetChanged();
 
+        //Permissions for MediaPlayer
         int permission = ActivityCompat.checkSelfPermission(this, Manifest.permission.WRITE_EXTERNAL_STORAGE);
         int permission2 = ActivityCompat.checkSelfPermission(this, Manifest.permission.READ_EXTERNAL_STORAGE);
 
@@ -258,13 +253,12 @@ public class TextbookView extends AppCompatActivity implements PlayerBarFragment
         // Audio Player Bar
         fragmentManager = getSupportFragmentManager();
 
-        //add
+        //Add player bar fragment to this activity
         FragmentTransaction ft = fragmentManager.beginTransaction();
         playerBarFragment = PlayerBarFragment.newInstance("","");
         ft.add(R.id.playbar_container, playerBarFragment);
         ft.commit();
 
-        // handle 'replace' and 'remove' requests
 
 
 
@@ -275,11 +269,71 @@ public class TextbookView extends AppCompatActivity implements PlayerBarFragment
         Log.i("onFragmentInteraction", uri.toString());
     }
 
-    @Override
-    protected void onStart() {
-        super.onStart();
+    /**
+     * Build data set
+     * @throws IOException
+     * @throws JSONException
+     */
+    public void getContent() throws IOException, JSONException {
+
+        String fileName = "Books/"+bookId+"/"+modId+"/index.cnxml.html";
+        StringBuilder buf = new StringBuilder();
+        InputStreamReader inputStream = new InputStreamReader(getAssets().open(fileName));
+        BufferedReader bufferedReader = new BufferedReader(inputStream);
+        String str;
+        while ((str = bufferedReader.readLine()) != null) {
+            buf.append(str);
+        }
+
+        Document doc = Jsoup.parse(buf.toString());
+
+        String title = doc.body().getElementsByTag("div").first().attr("document-title");
+        Content.Module mod= new Content.Module(title, modId, doc);
+
+
+        // eventually just replace with mod.buildModuleSSMl()
+        ArrayList<String> temp = mod.returnPrintOpening();
+        if(temp != null) temp.forEach( (stringo) -> dataSet.add(new TextChunk(stringo)));
+        temp = mod.returnPrintReadingSections();
+        if(temp != null) temp.forEach( (stringo) -> dataSet.add(new TextChunk(stringo)));
+        temp = mod.returnPrintEoc();
+        if(temp != null) temp.forEach( (stringo) -> dataSet.add(new TextChunk(stringo)));
+        adapter.notifyDataSetChanged();
+
+        /*Elements elements = doc.body().children().select("*");
+        for (Element element : elements) {
+            dataSet.add(new TextChunk(element.ownText()));
+            adapter.notifyItemInserted(dataSet.size() - 1);
+                //adapter.notifyDataSetChanged();
+        } */
+
     }
 
+
+    /**
+     * Convert every text block in dataSet to audio and store
+     */
+    public void storeConvertedTTSAudio() {
+
+
+        for (TextChunk tc : dataSet) {
+            String s = Jsoup.parse(tc.getText()).text(); // might have to modify this once text comes with SSML tags
+            String id = "textbookaudio" + dataSet.indexOf(tc);
+
+
+            String filename = "/textbookaudio" + String.valueOf(dataSet.indexOf(tc)) + ".wav";
+            File myFile = new File(Environment.getExternalStorageDirectory().getAbsolutePath() + filename);
+            tts.synthesizeToFile(s, null, new File(Environment.getExternalStorageDirectory().getAbsolutePath() + filename), id);
+
+        }
+
+
+    }
+
+    /**
+     * Scroll to selected text block if it is not visible. Otherwise, proceed to read it aloud (call readText).
+     * @param position
+     */
     public void checkIfVisible(final int position){
         adapter.setSelected(position);
         int first = layoutManager.findFirstCompletelyVisibleItemPosition();
@@ -311,24 +365,10 @@ public class TextbookView extends AppCompatActivity implements PlayerBarFragment
         }
     }
 
-    public void storeConvertedTTSAudio() {
-
-
-        for (TextChunk tc : dataSet) {
-            String s = tc.getText();
-            String id = "textbookaudio" + dataSet.indexOf(tc);
-
-
-            String filename = "/textbookaudio" + String.valueOf(dataSet.indexOf(tc)) + ".wav";
-            File myFile = new File(Environment.getExternalStorageDirectory().getAbsolutePath() + filename);
-            tts.synthesizeToFile(s, null, new File(Environment.getExternalStorageDirectory().getAbsolutePath() + filename), id);
-
-        }
-
-
-    }
-
-    // Should only be called after the view is visible.
+    /**
+     * Should only be called after the view is visible.
+     * @param position
+     */
     public void readText(final int position) {
         final View v = layoutManager.findViewByPosition(position);
 
@@ -423,41 +463,11 @@ public class TextbookView extends AppCompatActivity implements PlayerBarFragment
 
     }
 
-    public void getContent() throws IOException, JSONException {
-
-        String fileName = "Books/"+bookId+"/"+modId+"/index.cnxml.html";
-        StringBuilder buf = new StringBuilder();
-        InputStreamReader inputStream = new InputStreamReader(getAssets().open(fileName));
-        BufferedReader bufferedReader = new BufferedReader(inputStream);
-        String str;
-        while ((str = bufferedReader.readLine()) != null) {
-            buf.append(str);
-        }
-
-        Document doc = Jsoup.parse(buf.toString());
-
-        String title = doc.body().getElementsByTag("div").first().attr("document-title");
-        Content.Module mod= new Content.Module(title, modId, doc);
-
-
-        // eventually just replace with mod.buildModuleSSMl()
-        ArrayList<String> temp = mod.returnPrintOpening();
-        if(temp != null) temp.forEach( (stringo) -> dataSet.add(new TextChunk(stringo)));
-        temp = mod.returnPrintReadingSections();
-        if(temp != null) temp.forEach( (stringo) -> dataSet.add(new TextChunk(stringo)));
-        temp = mod.returnPrintEoc();
-        if(temp != null) temp.forEach( (stringo) -> dataSet.add(new TextChunk(stringo)));
-        adapter.notifyDataSetChanged();
-
-        /*Elements elements = doc.body().children().select("*");
-        for (Element element : elements) {
-            dataSet.add(new TextChunk(element.ownText()));
-            adapter.notifyItemInserted(dataSet.size() - 1);
-                //adapter.notifyDataSetChanged();
-        } */
-
-    }
-
+    /**
+     *
+     * @param string
+     * @return String array representation of string (broken down into 3999 character blocks)
+     */
     private String[] stringSplit(String string) {
         String a = WordUtils.wrap(string, 3999);
         String[] list = a.split(System.lineSeparator());
@@ -467,7 +477,9 @@ public class TextbookView extends AppCompatActivity implements PlayerBarFragment
 
     }
 
-
+    /**
+     * Useful for performing certain actions only after TTS finishes a request.
+     */
     public class MyUtteranceProgressListener extends UtteranceProgressListener{
 
         public MyUtteranceProgressListener(){
@@ -486,7 +498,6 @@ public class TextbookView extends AppCompatActivity implements PlayerBarFragment
 
         @Override
         public void onDone(final String pos) {
-            // Log.i("onDone", pos);
 
             if(pos.contains("textbookaudio")) {
 
@@ -499,7 +510,6 @@ public class TextbookView extends AppCompatActivity implements PlayerBarFragment
 
                     }
                 });
-                //Log.i("onDone", pos);
 
                 if(pos.contains(String.valueOf(dataSet.size()-1))){
                     Log.i("Completed converting all files", pos);
@@ -507,35 +517,12 @@ public class TextbookView extends AppCompatActivity implements PlayerBarFragment
                         @Override
                         public void onAnimationEnd(Animator animation) {
                             progress.setVisibility(View.GONE);
-                            /*FrameLayout myFrameLayout = (FrameLayout) findViewById(R.id.myFrameLayout);
-                            LinearLayout.LayoutParams params = new LinearLayout.LayoutParams(myFrameLayout.getLayoutParams());
-                            int margin = (int) getResources().getDimension(R.dimen.activity_vertical_margin);
-                            params.setMargins(margin, margin, margin, margin);
-                            myFrameLayout.setLayoutParams(params); */
                         }
                     });
 
                 }
 
             }
-
-          /*  else{
-                backToNormal(pos);
-                int posn = Integer.parseInt(pos) + 1;
-                if (posn < dataSet.size()) {
-                    checkIfVisible(posn);
-
-                } else {
-                    adapter.setSelected(0);
-                    runOnUiThread(new Runnable() {
-                        @Override
-                        public void run() {
-                            playerBarFragment.setPlayButton("Play");
-                            playerBarFragment.setStopButton(false);
-                        }
-                    });
-                }
-            } */
 
         }
 
@@ -550,6 +537,10 @@ public class TextbookView extends AppCompatActivity implements PlayerBarFragment
         }
     }
 
+    /**
+     * Change the view at the specified position back to its normal appearance
+     * @param pos
+     */
     public void backToNormal(String pos){
 
         final int position = Integer.parseInt(pos);
@@ -566,6 +557,7 @@ public class TextbookView extends AppCompatActivity implements PlayerBarFragment
                     View v = vh.textView;
                     v.findViewById(R.id.item).setBackgroundColor(ContextCompat.getColor(getApplicationContext(), R.color.defaultGrey));
                 }
+                else{Log.i("backToNormal", "View is null, can't set bg color to grey");}
             }
 
 
@@ -574,6 +566,9 @@ public class TextbookView extends AppCompatActivity implements PlayerBarFragment
         dataSet.get(position).setSelected(false);
     }
 
+    /**
+     * Shut down TTS and MediaPlayer instances
+     */
     @Override
     protected void onDestroy() {
         if (tts != null) {
@@ -588,14 +583,7 @@ public class TextbookView extends AppCompatActivity implements PlayerBarFragment
     }
 
 
-    // Meant to be called by fragment
-    public void playTTS() {
-
-        checkIfVisible(getSelected());
-
-    }
-
-    //Meant to be called by fragment
+    //Called by player bar fragment
     public void pauseTTS() {
 
         is_paused = true;
@@ -613,7 +601,7 @@ public class TextbookView extends AppCompatActivity implements PlayerBarFragment
         });
     }
 
-    //Meant to be called by fragment
+    //Called by player bar fragment
     public void stopTTS(){
         player.stop();
 
@@ -630,13 +618,9 @@ public class TextbookView extends AppCompatActivity implements PlayerBarFragment
         });
     }
 
+
     public int getSelected(){
         return adapter.getSelected();
-    }
-
-    @Override
-    protected void onStop(){
-        super.onStop();
     }
 
     public class CustomScrollListener extends RecyclerView.OnScrollListener {
