@@ -1,6 +1,8 @@
 package com.interns.team3.openstax.myttsapplication;
 
 import android.Manifest;
+import android.animation.Animator;
+import android.animation.AnimatorListenerAdapter;
 import android.content.pm.PackageManager;
 import android.media.AudioAttributes;
 import android.media.AudioManager;
@@ -23,6 +25,9 @@ import android.view.MenuItem;
 import android.view.View;
 import android.view.animation.DecelerateInterpolator;
 import android.widget.Button;
+import android.widget.FrameLayout;
+import android.widget.LinearLayout;
+import android.widget.ProgressBar;
 import android.widget.TextView;
 
 import com.nshmura.snappysmoothscroller.LinearLayoutScrollVectorDetector;
@@ -60,6 +65,10 @@ public class TextbookView extends AppCompatActivity implements PlayerBarFragment
     private int length;
 
     private boolean is_paused;
+
+    public ProgressBar progressBar;
+    public LinearLayout progress;
+    public TextView progressNumber;
 
 
     // Storage Permissions
@@ -155,7 +164,6 @@ public class TextbookView extends AppCompatActivity implements PlayerBarFragment
         getSupportActionBar().setHomeButtonEnabled(true);
         getSupportActionBar().setDisplayHomeAsUpEnabled(true);
 
-
         // Utterance Progress Listener
         myUtteranceProgressListener = new MyUtteranceProgressListener();
         tts = new TextToSpeech(getApplicationContext(), new TextToSpeech.OnInitListener() {
@@ -206,6 +214,12 @@ public class TextbookView extends AppCompatActivity implements PlayerBarFragment
         } catch(JSONException e){
             Log.e("JSONException", e.toString());
         }
+        // After dataSet is completed
+        //Progress bar
+        progressBar = (ProgressBar) findViewById(R.id.determinateBar);
+        progressBar.setMax(dataSet.size());
+        progress = (LinearLayout) findViewById(R.id.progress);
+        progressNumber = (TextView) findViewById(R.id.progressNumber);
 
         adapter.setContext(getApplicationContext()); // nOT NEEDED // will also setup TTS instance
         recyclerView.setAdapter(adapter);
@@ -475,7 +489,33 @@ public class TextbookView extends AppCompatActivity implements PlayerBarFragment
             // Log.i("onDone", pos);
 
             if(pos.contains("textbookaudio")) {
-                Log.i("onDone", pos);
+
+                runOnUiThread(new Runnable() {
+                    @Override
+                    public void run() {
+                        progressBar.incrementProgressBy(1);
+                        int fraction = (int) (progressBar.getProgress() * 100 / dataSet.size());
+                        progressNumber.setText(String.valueOf(fraction) + "%");
+
+                    }
+                });
+                //Log.i("onDone", pos);
+
+                if(pos.contains(String.valueOf(dataSet.size()-1))){
+                    Log.i("Completed converting all files", pos);
+                    progress.animate().setDuration(200).alpha(0).setListener(new AnimatorListenerAdapter() {
+                        @Override
+                        public void onAnimationEnd(Animator animation) {
+                            progress.setVisibility(View.GONE);
+                            /*FrameLayout myFrameLayout = (FrameLayout) findViewById(R.id.myFrameLayout);
+                            LinearLayout.LayoutParams params = new LinearLayout.LayoutParams(myFrameLayout.getLayoutParams());
+                            int margin = (int) getResources().getDimension(R.dimen.activity_vertical_margin);
+                            params.setMargins(margin, margin, margin, margin);
+                            myFrameLayout.setLayoutParams(params); */
+                        }
+                    });
+
+                }
 
             }
 
@@ -563,7 +603,7 @@ public class TextbookView extends AppCompatActivity implements PlayerBarFragment
         player.pause();
         length = player.getCurrentPosition();
 
-        backToNormal(String.valueOf(getSelected()));
+        //backToNormal(String.valueOf(getSelected()));
 
         runOnUiThread(new Runnable() {
             @Override
