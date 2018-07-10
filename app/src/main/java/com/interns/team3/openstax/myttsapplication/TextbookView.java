@@ -43,7 +43,7 @@ import java.io.IOException;
 import java.io.InputStreamReader;
 import java.util.ArrayList;
 
-public class TextbookView extends AppCompatActivity implements PlayerBarFragment.OnFragmentInteractionListener {
+public class TextbookView extends AppCompatActivity implements PlayerBarFragment.OnFragmentInteractionListener, VolumeFragment.OnFragmentInteractionListener {
 
 
     private RecyclerView recyclerView;
@@ -79,6 +79,7 @@ public class TextbookView extends AppCompatActivity implements PlayerBarFragment
 
     public FragmentManager fragmentManager;
     public PlayerBarFragment playerBarFragment;
+
 
 
 
@@ -263,6 +264,10 @@ public class TextbookView extends AppCompatActivity implements PlayerBarFragment
 
     }
 
+    public void replaceFragment(){
+
+    }
+
     public void onFragmentInteraction(Uri uri){
         Log.i("onFragmentInteraction", uri.toString());
     }
@@ -372,7 +377,7 @@ public class TextbookView extends AppCompatActivity implements PlayerBarFragment
 
         if (v != null) {
             TextView tv = v.findViewById(R.id.item);
-            TextChunk tc = tempDataSet.get(position);
+            TextChunk tc = dataSet.get(position);
             final String text = Jsoup.parse(tc.getText()).text();
 
             tc.setSelected(true);
@@ -672,6 +677,12 @@ public class TextbookView extends AppCompatActivity implements PlayerBarFragment
                 }
             });
         }
+    }
+
+    //Called by volume fragment
+    public void setVolume(float value){
+        Log.i("Volume", String.valueOf(value));
+        player.setVolume(value, value);
     }
 
 

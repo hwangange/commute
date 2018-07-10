@@ -1,10 +1,15 @@
 package com.interns.team3.openstax.myttsapplication;
 
+import android.app.AlertDialog;
+import android.app.Dialog;
+import android.support.v4.app.FragmentManager;
 import android.content.Context;
 import android.net.Uri;
 import android.os.Bundle;
 import android.speech.tts.TextToSpeech;
+import android.support.v4.app.DialogFragment;
 import android.support.v4.app.Fragment;
+import android.support.v4.app.FragmentTransaction;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
@@ -30,9 +35,11 @@ public class PlayerBarFragment extends Fragment {
     private String mParam2;
 
     private OnFragmentInteractionListener mListener;
-    private ImageButton playButton, stopButton, forwardButton, reverseButton;
+    private ImageButton playButton, stopButton, forwardButton, reverseButton, volumeButton;
 
     private TextToSpeech tts;
+    private FragmentManager fm;
+    private VolumeFragment volumeFragment;
 
     public PlayerBarFragment() {
         // Required empty public constructor
@@ -71,6 +78,8 @@ public class PlayerBarFragment extends Fragment {
 
         // Inflate the layout for this fragment
         View view = inflater.inflate(R.layout.fragment_player_bar, container, false);
+
+        fm = getChildFragmentManager();
 
         playButton = (ImageButton)view.findViewById(R.id.playButton);
         playButton.setTag("Play");
@@ -128,6 +137,17 @@ public class PlayerBarFragment extends Fragment {
             @Override
             public void onClick(View v){
                 ((TextbookView) getActivity()).reverseTTS();
+            }
+        });
+
+
+        volumeButton = (ImageButton) view.findViewById(R.id.volumeButton);
+        volumeButton.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v){
+                //Add player bar fragment to this activity
+                volumeFragment = VolumeFragment.newInstance("","");
+                volumeFragment.show(fm, "Volume");
             }
         });
 
@@ -194,4 +214,6 @@ public class PlayerBarFragment extends Fragment {
         // TODO: Update argument type and name
         void onFragmentInteraction(Uri uri);
     }
+
+
 }

@@ -5,41 +5,55 @@
     class="com.interns.team3.openstax.myttsapplication.PlayerBarFragment"
     android:name=".../PlayerbarFragmnet"
     -->
-    <LinearLayout
+    <RelativeLayout
         xmlns:android="http://schemas.android.com/apk/res/android"
         xmlns:tools="http://schemas.android.com/tools"
         android:layout_width="match_parent"
         android:layout_height="match_parent"
         android:layout_gravity="end"
         android:orientation="horizontal"
-        android:gravity="center_horizontal"
         android:background="@color/lightBlack">
 
         <!-- TODO: Update blank fragment layout -->
-
-         <ImageButton
-            android:id="@+id/reverseButton"
+        <LinearLayout
             android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:src="@drawable/fast_rewind"/>
+            android:layout_height="match_parent"
+            android:orientation="horizontal"
+            android:layout_centerHorizontal="true">
+            <ImageButton
+                android:id="@+id/reverseButton"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:src="@drawable/fast_rewind" />
 
-        <ImageButton
-            android:id="@+id/playButton"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:src="@drawable/play" />
+            <ImageButton
+                android:id="@+id/playButton"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:src="@drawable/play" />
 
-        <ImageButton
-            android:id="@+id/stopButton"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:src="@drawable/stop" />
+            <ImageButton
+                android:id="@+id/stopButton"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:src="@drawable/stop" />
 
-        <ImageButton
-            android:id="@+id/forwardButton"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:src="@drawable/fast_forward" />
+            <ImageButton
+                android:id="@+id/forwardButton"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:src="@drawable/fast_forward" />
+
+        </LinearLayout>
 
 
-    </LinearLayout>
+    <ImageButton
+        android:id="@+id/volumeButton"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="end"
+        android:layout_alignParentEnd="true"
+        android:src="@drawable/volume" />
+
+
+    </RelativeLayout>
