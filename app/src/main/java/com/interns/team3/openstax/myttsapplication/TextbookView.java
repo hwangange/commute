@@ -23,9 +23,12 @@ import android.util.Log;
 import android.view.MenuItem;
 import android.view.View;
 import android.view.animation.DecelerateInterpolator;
+import android.widget.Button;
 import android.widget.LinearLayout;
 import android.widget.ProgressBar;
 import android.widget.TextView;
+import android.widget.Toast;
+
 
 import com.nshmura.snappysmoothscroller.LinearLayoutScrollVectorDetector;
 import com.nshmura.snappysmoothscroller.SnapType;
@@ -41,7 +44,15 @@ import java.io.BufferedReader;
 import java.io.File;
 import java.io.IOException;
 import java.io.InputStreamReader;
+import java.io.RandomAccessFile;
+import java.nio.channels.FileChannel;
 import java.util.ArrayList;
+import java.util.LinkedList;
+import java.util.List;
+
+import nl.bravobit.ffmpeg.ExecuteBinaryResponseHandler;
+import nl.bravobit.ffmpeg.FFmpeg;
+
 
 public class TextbookView extends AppCompatActivity implements PlayerBarFragment.OnFragmentInteractionListener, VolumeFragment.OnFragmentInteractionListener {
 
@@ -79,6 +90,9 @@ public class TextbookView extends AppCompatActivity implements PlayerBarFragment
 
     public FragmentManager fragmentManager;
     public PlayerBarFragment playerBarFragment;
+
+    public Button download, playMerged;
+    public boolean makeDownloadAvailable = true;
 
 
 
@@ -258,6 +272,40 @@ public class TextbookView extends AppCompatActivity implements PlayerBarFragment
         ft.add(R.id.playbar_container, playerBarFragment);
         ft.commit();
 
+        String output = Environment.getExternalStorageDirectory().getAbsolutePath() + "/output"+modId+".mp3";
+        playMerged = (Button) findViewById(R.id.playMerged);
+        playMerged.setOnClickListener(new View.OnClickListener(){
+            @Override
+            public void onClick(View v){
+                playMergedFile(output);
+            }
+        });
+
+
+        File f = new File(output);
+        if(f.exists()) { makeDownloadAvailable = false; }
+        else { playMerged.setEnabled(false);}
+
+        //Download button
+        download = (Button) findViewById(R.id.download);
+        download.setEnabled(false);
+        download.setOnClickListener(new View.OnClickListener(){
+            @Override
+            public void onClick(View v){
+                try{ download(output); } catch (IOException e){Log.i("IOException", "Can't download");}
+            }
+        });
+
+        // ffmpeg merge audio
+        FFmpeg ffmpeg = FFmpeg.getInstance(this);
+        if (ffmpeg.isSupported()) {
+            // ffmpeg is supported
+            Log.i("FFmpeg is supported", "Yay!");
+            if(makeDownloadAvailable) download.setEnabled(true);
+        } else {
+            // ffmpeg is not supported
+            Log.i("FFmpeg is not supported", "Darn ;(");
+        }
 
 
 
@@ -413,6 +461,8 @@ public class TextbookView extends AppCompatActivity implements PlayerBarFragment
 
                         String filename2 = "/textbookaudio" + String.valueOf(position) + ".wav";
                         String fileName = Environment.getExternalStorageDirectory().getAbsolutePath() + filename2;
+
+                        Log.i("File name", fileName);
 
                         Uri uri = Uri.parse("file://" + fileName);
 
@@ -755,4 +805,108 @@ public class TextbookView extends AppCompatActivity implements PlayerBarFragment
         return false;
     }
 
+    public void download(String outputFilename) throws IOException {
+
+        /*String[] uris = new String[]{
+                "/storage/emulated/0/textbookaudio0.wav",
+             */
+
+        String[] uris = new String[dataSet.size()];
+        String s = "";
+
+        for (int x = 0; x < dataSet.size(); x ++){
+            uris[x] = "/storage/emulated/0/textbookaudio"+ x +".wav";
+            s+="-i " + uris[x] + " ";
+        }
+
+        s+="-filter_complex ";
+
+        for(int x = 0; x < dataSet.size(); x++){
+            s+="["+x+":0]";
+        }
+
+        s+="concat=n="+dataSet.size()+":v=0:a=1[out] -map [out] " + outputFilename;
+
+        // https://trac.ffmpeg.org/wiki/Concatenate
+       // String s = "-i " + uris[0] + " -i " + uris[1] + " -filter_complex [0:0][1:0]concat=n=2:v=0:a=1[out] -map [out] " + output;
+        Log.i("THE WHOLE THING", s);
+
+
+        String[] cmd = s.split(" ");
+
+        // String[] cmd = new String[]{"-version"};
+
+
+        // to execute "ffmpeg -version" command you just need to pass "-version"
+        // for more info, check out this link:
+        // https://superuser.com/questions/1298891/ffmpeg-merge-multiple-audio-files-into-single-audio-file-with-android
+        // CORRECT dependency that fixes "relocation" problems: https://github.com/bravobit/FFmpeg-Android
+        FFmpeg ffmpeg = FFmpeg.getInstance(this);
+        ffmpeg.execute(cmd, new ExecuteBinaryResponseHandler() {
+
+            @Override
+            public void onStart() {
+                Log.i("ffmpeg execute - Start", "Hi");
+            }
+
+            @Override
+            public void onProgress(String message) {
+                Log.i("ffmpeg execute - Progress", message);
+            }
+
+            @Override
+            public void onFailure(String message) {
+                Log.i("ffmpeg execute - Failure", message);
+            }
+
+            @Override
+            public void onSuccess(String message) {
+                Log.i("ffmpeg execute - Success", message);
+            }
+
+            @Override
+            public void onFinish() {
+                Log.i("ffmpeg execute - Finish", "Bye");
+                playMerged.setEnabled(true);
+            }
+
+        });
+    }
+
+    public void playMergedFile(String output) {
+
+        player.reset();
+
+        // tts.speak(text, TextToSpeech.QUEUE_FLUSH, null, String.valueOf(position));
+
+        Uri uri = Uri.parse("file://" + output);
+
+        // player.setAudioStreamType(AudioManager.STREAM_MUSIC);
+        player.setAudioAttributes(new AudioAttributes.Builder()
+                .setUsage(AudioAttributes.USAGE_MEDIA)
+                .setContentType(AudioAttributes.CONTENT_TYPE_MUSIC)
+                .build());
+
+        try {
+            player.setDataSource(getApplicationContext(), uri);
+            player.prepare();
+        } catch (Exception e) {
+            e.printStackTrace();
+        }
+
+        player.setOnPreparedListener(new MediaPlayer.OnPreparedListener() {
+            @Override
+            public void onPrepared(MediaPlayer mp) {
+                player.start();
+            }
+        });
+
+        player.setOnCompletionListener(new MediaPlayer.OnCompletionListener() {
+            @Override
+            public void onCompletion(MediaPlayer mp) {
+                player.stop();
+
+            }
+        });
+    }
 }

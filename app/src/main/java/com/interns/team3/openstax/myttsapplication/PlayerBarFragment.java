@@ -40,6 +40,7 @@ public class PlayerBarFragment extends Fragment {
     private TextToSpeech tts;
     private FragmentManager fm;
     private VolumeFragment volumeFragment;
+    private int volume;
 
     public PlayerBarFragment() {
         // Required empty public constructor
@@ -140,13 +141,13 @@ public class PlayerBarFragment extends Fragment {
             }
         });
 
-
+        volume = 50;
         volumeButton = (ImageButton) view.findViewById(R.id.volumeButton);
         volumeButton.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v){
                 //Add player bar fragment to this activity
-                volumeFragment = VolumeFragment.newInstance("","");
+                volumeFragment = VolumeFragment.newInstance(volume,"");
                 volumeFragment.show(fm, "Volume");
             }
         });
@@ -159,6 +160,10 @@ public class PlayerBarFragment extends Fragment {
         if (mListener != null) {
             mListener.onFragmentInteraction(uri);
         }
+    }
+
+    public void setVolume(int val){
+        volume = val;
     }
 
     public void setPlayButton(String s){

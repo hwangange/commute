@@ -31,7 +31,7 @@ public class VolumeFragment extends DialogFragment {
     private static final String ARG_PARAM2 = "param2";
 
     // TODO: Rename and change types of parameters
-    private String mParam1;
+    private int volume;
     private String mParam2;
 
     private OnFragmentInteractionListener mListener;
@@ -54,10 +54,10 @@ public class VolumeFragment extends DialogFragment {
      * @return A new instance of fragment VolumeFragment.
      */
     // TODO: Rename and change types and number of parameters
-    public static VolumeFragment newInstance(String param1, String param2) {
+    public static VolumeFragment newInstance(int param1, String param2) {
         VolumeFragment fragment = new VolumeFragment();
         Bundle args = new Bundle();
-        args.putString(ARG_PARAM1, param1);
+        args.putInt(ARG_PARAM1, param1);
         args.putString(ARG_PARAM2, param2);
         fragment.setArguments(args);
         return fragment;
@@ -67,7 +67,7 @@ public class VolumeFragment extends DialogFragment {
     public void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         if (getArguments() != null) {
-            mParam1 = getArguments().getString(ARG_PARAM1);
+            volume = getArguments().getInt(ARG_PARAM1);
             mParam2 = getArguments().getString(ARG_PARAM2);
         }
     }
@@ -81,13 +81,17 @@ public class VolumeFragment extends DialogFragment {
         okButton = (Button) view.findViewById(R.id.okButton);
         cancelButton = (Button) view.findViewById(R.id.cancelButton);
         volumeSeekBar = (SeekBar) view.findViewById(R.id.volumeSeekBar);
+        volumeSeekBar.setProgress(volume);
 
         okButton.setOnClickListener(new View.OnClickListener(){
             @Override
             public void onClick(View v){
-                float volume = (float)(Math.log(maxVolume - volumeSeekBar.getProgress())/Math.log(maxVolume));
 
-                ((TextbookView) getActivity()).setVolume(1 - volume);
+                int progressValue = volumeSeekBar.getProgress();
+                float volumeValue = (float)(Math.log(maxVolume - volumeSeekBar.getProgress())/Math.log(maxVolume));
+
+                ((TextbookView) getActivity()).setVolume(1 - volumeValue);
+                ((PlayerBarFragment) getParentFragment()).setVolume(progressValue);
                 dismiss();
             }
         });

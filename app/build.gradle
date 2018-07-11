@@ -76,5 +76,9 @@ dependencies {
     //Sectioned recycler view
     implementation 'io.github.luizgrp.sectionedrecyclerviewadapter:sectionedrecyclerviewadapter:1.2.0'
 
+    //ffmpeg
+    //implementation 'com.writingminds:FFmpegAndroid:0.3.2' <-- this one bad, has "text relocations" bug.
+    implementation 'nl.bravobit:android-ffmpeg:1.1.5'
+
 
 }
