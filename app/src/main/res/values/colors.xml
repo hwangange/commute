@@ -8,6 +8,13 @@
     <color name="colorHighlighted">#ffe605</color>
     <color name="defaultGrey">#00eeeeee</color>
     <color name="lightBlack">#303030</color>
+    <color name="darkBlack">#1b1b1b</color>
+    <color name="white">#fff</color>
+    <color name="lightPurple">#8c9eff</color>
+
+    <color name="opaque_colorPrimary">#293f51b5</color>
+    <color name="opaque_colorPrimaryDark">#26303f9f</color>
+    <color name="opaque_colorAccent">#2eff4081</color>
 
 
 </resources>

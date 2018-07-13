@@ -3,7 +3,6 @@ package com.interns.team3.openstax.myttsapplication;
 import android.Manifest;
 import android.content.pm.PackageManager;
 import android.media.AudioAttributes;
-import android.media.AudioManager;
 import android.media.MediaPlayer;
 import android.net.Uri;
 import android.os.Environment;
@@ -81,7 +80,7 @@ public class TextbookView2 extends AppCompatActivity implements PlayerBarFragmen
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_textbook_view);
+        setContentView(R.layout.fragment_textbook_view);
         recyclerView = (RecyclerView) findViewById(R.id.my_recycler_view);
         readBtn = findViewById(R.id.readbtn);
         pauseBtn = findViewById(R.id.pause);

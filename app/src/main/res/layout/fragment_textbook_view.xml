@@ -8,47 +8,30 @@
         android:id="@+id/container"
         android:layout_width="match_parent"
         android:layout_height="match_parent"
-        tools:context=".TextbookView"
+        tools:context=".TextbookViewFragment"
         android:orientation="vertical">
-    <LinearLayout
-        android:id="@+id/merging"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:orientation="horizontal"
-        android:layout_margin = "@dimen/activity_horizontal_margin"
-        android:gravity="top">
-        <Button
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:id="@+id/download"
-            android:text="Download"/>
-        <Button
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:id="@+id/playMerged"
-            android:text="Play Entire Module"/>
-    </LinearLayout>
-
 
     <LinearLayout
         android:id="@+id/progress"
         android:layout_width="match_parent"
         android:layout_height="0dp"
-        android:layout_weight=".5"
+        android:layout_weight=".3"
         android:orientation="horizontal"
         android:layout_margin = "@dimen/activity_horizontal_margin"
         android:gravity="top">
         <ProgressBar
             android:id="@+id/determinateBar"
             style="@android:style/Widget.ProgressBar.Horizontal"
-            android:layout_width="300dp"
+            android:layout_width="match_parent"
             android:layout_height="match_parent"
             android:layout_marginHorizontal="@dimen/activity_horizontal_margin"/>
+        <!--android:layout_width="300dp"-->
         <TextView
             android:id="@+id/progressNumber"
             android:layout_width="wrap_content"
             android:layout_height="match_parent"
             android:text="0%"
+            android:visibility="gone"
             />
     </LinearLayout>
 
@@ -60,6 +43,8 @@
         android:layout_weight="10"
         android:layout_marginHorizontal="@dimen/activity_horizontal_margin"
         android:layout_marginBottom="@dimen/activity_horizontal_margin">
+
+
 
         <android.support.v7.widget.RecyclerView
             android:id="@+id/my_recycler_view"
@@ -76,6 +61,7 @@
         android:layout_height="0dp"
         android:gravity="bottom"
         android:layout_weight="1"
+        android:layout_margin="0dp"
         >
     </FrameLayout>
 

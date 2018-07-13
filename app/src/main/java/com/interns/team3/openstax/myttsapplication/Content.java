@@ -23,6 +23,11 @@ public interface Content {
         private String title;
         private String id;
 
+        public Book(Book b){
+            this.title = b.getTitle();
+            this.id = b.getId();
+        }
+
         public Book(String title, String id) {
             this.title = title;
             this.id = id;
@@ -45,6 +50,11 @@ public interface Content {
         private ArrayList<Module> modules;
         private String chapter_num;
 
+        public Chapter(Chapter c){
+            this.title = c.getTitle();
+            this.id = c.getId();
+            this.chapter_num = c.getChapterNum();
+        }
         public Chapter(String title, String id, String chapter_num) {
             this.title = title;
             this.id = id;
@@ -75,6 +85,12 @@ public interface Content {
         private Document content;
         private ArrayList<String> nonReadingSections = new ArrayList<>();
         private int maxLineLength = 200;
+
+        public Module(Module m){
+            this.title = m.getTitle();
+            this.id = m.getId();
+            this.section_num = m.getSectionNum();
+        }
 
         public Module(String title, String id, String section_num) {
             this.title = title;

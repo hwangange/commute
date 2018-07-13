@@ -3,8 +3,8 @@ package com.interns.team3.openstax.myttsapplication;
 import android.app.Activity;
 import android.content.Context;
 import android.content.Intent;
-import android.graphics.drawable.Drawable;
 import android.support.v7.widget.RecyclerView;
+import android.text.Html;
 import android.util.Log;
 import android.view.LayoutInflater;
 import android.view.View;
@@ -19,45 +19,15 @@ import java.util.ArrayList;
 public class ContentAdapter extends RecyclerView.Adapter<RecyclerView.ViewHolder> {
 
     public ArrayList<Content> dataSet;
-    public View.OnClickListener modOnClickListener = new ModOnClickListener();
-    public View.OnClickListener bookOnClickListener = new BookOnClickListener();
+    public ContentOnClickListener contentOnClickListener;
+
     public Context context;
 
-
-    public static class ModOnClickListener implements View.OnClickListener {
-        @Override
-        public void onClick(final View v) {
-            String modId = ((TextView) v.findViewById(R.id.modID)).getText().toString();
-            String modTitle = ((TextView) v.findViewById(R.id.modTitle)).getText().toString();
-            //Toast.makeText(getApplicationContext(), targetId, Toast.LENGTH_SHORT).show();
-
-            Intent intent = ((Activity) v.getContext()).getIntent();
-            String bookId = intent.getStringExtra("Book ID");
-
-            intent = new Intent(v.getContext(), TextbookView.class);
-            intent.putExtra("Module ID", modId);
-            intent.putExtra("Book ID", bookId);
-            intent.putExtra("Module Title", modTitle);
-            intent.setFlags(Intent.FLAG_ACTIVITY_NEW_TASK);
-            v.getContext().startActivity(intent);
-        }
+    public interface ContentOnClickListener {
+        void onClick(View v);
     }
 
 
-    public static class BookOnClickListener implements View.OnClickListener {
-        @Override
-        public void onClick(final View v) {
-            String targetId = ((TextView) v.findViewById(R.id.book_id)).getText().toString();
-            String targetTitle = ((TextView) v.findViewById(R.id.book_title)).getText().toString();
-            //Toast.makeText(getApplicationContext(), targetId, Toast.LENGTH_SHORT).show();
-
-            Intent intent = new Intent(v.getContext(), TableOfContentsActivity.class);
-            intent.putExtra("Book ID", targetId);
-            intent.putExtra("Book Title", targetTitle);
-            intent.setFlags(Intent.FLAG_ACTIVITY_NEW_TASK);
-            v.getContext().startActivity(intent);
-        }
-    }
 
     // Provide a reference to the views for each data item
     // Complex data items may need more than one view per item, and
@@ -67,15 +37,25 @@ public class ContentAdapter extends RecyclerView.Adapter<RecyclerView.ViewHolder
         public TextView modID;
         public TextView modTitle;
         public TextView modChapter;
-
+        public View view;
 
 
         public ModuleViewHolder(View v) {
             super(v);
+            view = v;
             modID = (TextView) v.findViewById(R.id.modID);
             modTitle = (TextView) v.findViewById(R.id.modTitle);
             modChapter = (TextView) v.findViewById(R.id.modNum);
 
+        }
+
+        public void bind(final ContentOnClickListener listener){
+
+            view.setOnClickListener(new View.OnClickListener(){
+                @Override public void onClick(View v){
+                    listener.onClick(v);
+                }
+            });
         }
 
 
@@ -96,17 +76,29 @@ public class ContentAdapter extends RecyclerView.Adapter<RecyclerView.ViewHolder
         public TextView bookTitle;
         public ImageView bookImg;
         public TextView bookId;
+        public View view;
         public BookViewHolder(View v) {
             super(v);
+            view = v;
             bookTitle = (TextView) v.findViewById(R.id.book_title);
             bookId = (TextView) v.findViewById(R.id.book_id);
             bookImg= (ImageView) v.findViewById(R.id.book_img);
         }
+
+        public void bind(final ContentOnClickListener listener){
+
+            view.setOnClickListener(new View.OnClickListener(){
+                @Override public void onClick(View v){
+                    listener.onClick(v);
+                }
+            });
+        }
     }
 
-    public ContentAdapter(ArrayList<Content> dataSet)
+    public ContentAdapter(ArrayList<Content> dataSet, ContentOnClickListener contentOnClickListener)
     {
         this.dataSet = dataSet;
+        this.contentOnClickListener = contentOnClickListener;
     }
 
     @Override
@@ -133,7 +125,6 @@ public class ContentAdapter extends RecyclerView.Adapter<RecyclerView.ViewHolder
                         .inflate(R.layout.toc_module, parent, false);
 
                 ContentAdapter.ModuleViewHolder vh = new ContentAdapter.ModuleViewHolder(v);
-                v.setOnClickListener(modOnClickListener);
 
                 return vh;
             }
@@ -151,7 +142,7 @@ public class ContentAdapter extends RecyclerView.Adapter<RecyclerView.ViewHolder
                         .inflate(R.layout.textbook_card, parent, false);
 
                 ContentAdapter.BookViewHolder vh = new ContentAdapter.BookViewHolder(v);
-                v.setOnClickListener(bookOnClickListener);
+
                 return vh;
         }
 
@@ -183,6 +174,9 @@ public class ContentAdapter extends RecyclerView.Adapter<RecyclerView.ViewHolder
 
                 myModChapter.setText(section_num);
                 //System.out.println("MODULE: \t" + dataSet.get(position).id + "\t" + dataSet.get(position).title + "\t" + dataSet.get(position).chapter);
+
+                moduleViewHolder.bind(contentOnClickListener);
+
                 break;
             }
             case 1: {
@@ -218,6 +212,8 @@ public class ContentAdapter extends RecyclerView.Adapter<RecyclerView.ViewHolder
                 myBookTitle.setText(title);
                 myBookId.setText(id);
                 Picasso.with(context).load(drawable_id).into(myBookImg);
+
+                bookViewHolder.bind(contentOnClickListener);
 
                 break;
             }

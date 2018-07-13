@@ -12,7 +12,7 @@
         android:layout_height="match_parent"
         android:layout_gravity="end"
         android:orientation="horizontal"
-        android:background="@color/lightBlack">
+        android:background="@color/darkBlack">
 
         <!-- TODO: Update blank fragment layout -->
         <LinearLayout

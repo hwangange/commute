@@ -3,8 +3,7 @@
     package="com.interns.team3.openstax.myttsapplication">
 
     <uses-permission android:name="android.permission.INTERNET" />
-    <uses-permission
-        android:name="android.permission.WRITE_EXTERNAL_STORAGE" />
+    <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE" />
     <uses-permission android:name="android.permission.READ_EXTERNAL_STORAGE" />
 
     <!-- To auto-complete the email text field in the login form with the user's emails -->
@@ -16,24 +15,26 @@
         android:allowBackup="true"
         android:icon="@mipmap/ic_launcher"
         android:label="@string/app_name"
+        android:largeHeap="true"
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
-        android:theme="@style/AppTheme"
-        android:largeHeap="true">
-        <!-- in an attempt to fix memory error
+        android:theme="@style/AppTheme">
+
+        <!--
+             in an attempt to fix memory error
             android:hardwareAccelerated="false"
             android:largeHeap="true"
         -->
-        <activity android:name=".BookshelfActivity">
+
+        <activity android:name=".LoginActivity" />
+        <activity android:name=".MainActivity" android:theme="@style/AppTheme">
+            <!--android:theme="@style/OpaqueAppTheme"-->
+
             <intent-filter>
-            <action android:name="android.intent.action.MAIN" />
-            <category android:name="android.intent.category.LAUNCHER" />
+                <action android:name="android.intent.action.MAIN" />
+                <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
-
-        <activity android:name=".TextbookView" />
-        <activity android:name=".TableOfContentsActivity" />
-        <activity android:name=".LoginActivity" />
     </application>
 
 </manifest>

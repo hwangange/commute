@@ -8,7 +8,7 @@
         android:id="@+id/container"
         android:layout_width="match_parent"
         android:layout_height="match_parent"
-        tools:context=".TableOfContentsActivity"
+        tools:context=".TableOfContentsFragment"
         android:orientation="vertical">
         <!--
         tools:layout_editor_absoluteX="77dp"
@@ -45,27 +45,6 @@
         </LinearLayout>
 
     </ScrollView>
-    <LinearLayout
-        android:layout_width="match_parent"
-        android:orientation="vertical"
-
-        android:layout_weight="1"
-        android:gravity="bottom"
-        android:layout_height="0dp"
-        android:visibility="gone">
-
-        <android.support.design.widget.BottomNavigationView
-            android:id="@+id/navigation"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:layout_gravity="end"
-            android:layout_marginEnd="0dp"
-            android:layout_marginStart="0dp"
-            android:background="?android:attr/windowBackground"
-            app:menu="@menu/navigation"
-
-            />
-    </LinearLayout>
 
     </FrameLayout>
 

@@ -3,12 +3,15 @@ package com.interns.team3.openstax.myttsapplication;
 import android.Manifest;
 import android.animation.Animator;
 import android.animation.AnimatorListenerAdapter;
+import android.content.Context;
 import android.content.pm.PackageManager;
 import android.media.AudioAttributes;
 import android.media.MediaPlayer;
 import android.net.Uri;
+import android.os.AsyncTask;
 import android.os.Environment;
 import android.support.v4.app.ActivityCompat;
+import android.support.v4.app.Fragment;
 import android.support.v4.app.FragmentManager;
 import android.support.v4.app.FragmentTransaction;
 import android.content.Intent;
@@ -20,14 +23,17 @@ import android.os.Bundle;
 import android.support.v7.widget.LinearLayoutManager;
 import android.support.v7.widget.RecyclerView;
 import android.util.Log;
+import android.view.LayoutInflater;
+import android.view.Menu;
+import android.view.MenuInflater;
 import android.view.MenuItem;
 import android.view.View;
+import android.view.ViewGroup;
 import android.view.animation.DecelerateInterpolator;
 import android.widget.Button;
 import android.widget.LinearLayout;
 import android.widget.ProgressBar;
 import android.widget.TextView;
-import android.widget.Toast;
 
 
 import com.nshmura.snappysmoothscroller.LinearLayoutScrollVectorDetector;
@@ -39,29 +45,34 @@ import org.apache.commons.text.WordUtils;
 import org.json.JSONException;
 import org.jsoup.Jsoup;
 import org.jsoup.nodes.Document;
+import org.jsoup.nodes.Element;
+import org.jsoup.select.Elements;
 
 import java.io.BufferedReader;
 import java.io.File;
 import java.io.IOException;
 import java.io.InputStreamReader;
-import java.io.RandomAccessFile;
-import java.nio.channels.FileChannel;
+import java.text.DecimalFormat;
 import java.util.ArrayList;
-import java.util.LinkedList;
-import java.util.List;
 
 import nl.bravobit.ffmpeg.ExecuteBinaryResponseHandler;
 import nl.bravobit.ffmpeg.FFmpeg;
 
 
-public class TextbookView extends AppCompatActivity implements PlayerBarFragment.OnFragmentInteractionListener, VolumeFragment.OnFragmentInteractionListener {
+public class TextbookViewFragment extends Fragment implements PlayerBarFragment.OnFragmentInteractionListener, VolumeFragment.OnFragmentInteractionListener {
 
+    private static final String ARG_MOD_TITLE = "param1";
+    private static final String ARG_MOD_ID = "param2";
+    private static final String ARG_BOOK_ID = "param3";
+    private static final String ARG_CONTEXT = "param4";
+    // TODO: Rename and change types of parameters
 
     private RecyclerView recyclerView;
     private TextbookViewAdapter adapter;
     private LinearLayoutManager layoutManager;
 
     public static String modId, bookId, modTitle;
+    public Context context;
     public static Document content;
     public ArrayList<TextChunk> tempDataSet, dataSet;
 
@@ -91,23 +102,58 @@ public class TextbookView extends AppCompatActivity implements PlayerBarFragment
     public FragmentManager fragmentManager;
     public PlayerBarFragment playerBarFragment;
 
-    public Button download, playMerged;
+    public MenuItem download, playMerged;
     public boolean makeDownloadAvailable = true;
 
+    // required empty constructor
+    public TextbookViewFragment(){}
 
+    /**
+     * Use this factory method to create a new instance of
+     * this fragment using the provided parameters.
+     *
+     * @param param1 Parameter 1.
+     * @param param2 Parameter 2.
+     * @return A new instance of fragment PlayerBarFragment.
+     */
+    // TODO: Rename and change types and number of parameters
+    public static TextbookViewFragment newInstance(String param1, String param2, String param3, Context param4) {
+        TextbookViewFragment fragment = new TextbookViewFragment();
+        Bundle args = new Bundle();
+        args.putString(ARG_MOD_TITLE, param1);
+        args.putString(ARG_MOD_ID, param2);
+        args.putString(ARG_BOOK_ID, param3);
+        fragment.setContext(param4);
+        fragment.setArguments(args);
+        return fragment;
+    }
 
+    public void setContext(Context c){ context = c;}
 
     @Override
-    protected void onCreate(Bundle savedInstanceState) {
+    public void onCreate(Bundle savedInstanceState) {
+
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_textbook_view);
+        setHasOptionsMenu(true);
+        if (getArguments() != null) {
+            modTitle = getArguments().getString(ARG_MOD_TITLE);
+            modId = getArguments().getString(ARG_MOD_ID);
+            bookId = getArguments().getString(ARG_BOOK_ID);
+        }
+    }
+
+    @Override
+    public View onCreateView(LayoutInflater inflater, ViewGroup container,
+                             Bundle savedInstanceState) {
+        // Inflate the layout for this fragment
+        View view = inflater.inflate(R.layout.fragment_textbook_view, container, false);
 
         is_paused = false;
 
-        recyclerView = (RecyclerView) findViewById(R.id.my_recycler_view);
+        recyclerView = (RecyclerView) view.findViewById(R.id.my_recycler_view);
 
         // Layout Manager
-        layoutManager = new LinearLayoutManager(getApplicationContext(), LinearLayoutManager.VERTICAL, false) {
+        layoutManager = new LinearLayoutManager(context, LinearLayoutManager.VERTICAL, false) {
 
             @Override
             public void smoothScrollToPosition(RecyclerView recyclerView, RecyclerView.State state, int position) {
@@ -136,8 +182,9 @@ public class TextbookView extends AppCompatActivity implements PlayerBarFragment
 
                 if ( target >=front && target <=back) {
                    // Log.i("Target is visible", "Target is not -1!!");
-                    readText(target);
                     customScrollListener.setTarget(-1);
+                    readText(target);
+
                 }
 
                 return result;
@@ -158,8 +205,9 @@ public class TextbookView extends AppCompatActivity implements PlayerBarFragment
 
                 if ( target >=front && target <=back) {
                    // Log.i("Target is visible", "Target is not -1!!");
-                    readText(target);
                     customScrollListener.setTarget(-1);
+                    readText(target);
+
                 }
             }
         };
@@ -167,20 +215,14 @@ public class TextbookView extends AppCompatActivity implements PlayerBarFragment
         recyclerView.setLayoutManager(layoutManager);
         recyclerView.addOnScrollListener(customScrollListener);
 
-        // Get book and module info
-        Intent intent = getIntent();
-        modId = intent.getStringExtra("Module ID");
-        bookId = intent.getStringExtra("Book ID");
-        modTitle= intent.getStringExtra("Module Title");
-
         // Customize action bar
-        setTitle(modTitle);
-        getSupportActionBar().setHomeButtonEnabled(true);
-        getSupportActionBar().setDisplayHomeAsUpEnabled(true);
+        (getActivity()).setTitle(modTitle);
+        ((MainActivity)getActivity()).getSupportActionBar().setHomeButtonEnabled(true);
+        ((MainActivity)getActivity()).getSupportActionBar().setDisplayHomeAsUpEnabled(true);
 
         // Utterance Progress Listener
         myUtteranceProgressListener = new MyUtteranceProgressListener();
-        tts = new TextToSpeech(getApplicationContext(), new TextToSpeech.OnInitListener() {
+        tts = new TextToSpeech(context, new TextToSpeech.OnInitListener() {
             @Override
             public void onInit(int i) {
                 if (i == TextToSpeech.SUCCESS) {
@@ -200,6 +242,9 @@ public class TextbookView extends AppCompatActivity implements PlayerBarFragment
         // Populate dataSet
         tempDataSet = new ArrayList<TextChunk>();
         dataSet = new ArrayList<TextChunk>();
+
+        getContent();// new GetContentTask().execute("");
+
         adapter = new TextbookViewAdapter(dataSet, new TextbookViewAdapter.TextOnClickListener(){
 
             @Override public void onClick(int position){
@@ -221,33 +266,25 @@ public class TextbookView extends AppCompatActivity implements PlayerBarFragment
 
         });
 
-        try {
-            getContent();
-        } catch (IOException e){
-            Log.e("IOException", e.toString());
-        } catch(JSONException e){
-            Log.e("JSONException", e.toString());
-        }
-
         // After dataSet is completed
         //Progress bar to show progress of TTS file synthesis
-        progressBar = (ProgressBar) findViewById(R.id.determinateBar);
+        progressBar = (ProgressBar) view.findViewById(R.id.determinateBar);
         progressBar.setMax(tempDataSet.size());
-        progress = (LinearLayout) findViewById(R.id.progress);
-        progressNumber = (TextView) findViewById(R.id.progressNumber);
+        progress = (LinearLayout) view.findViewById(R.id.progress);
+        progressNumber = (TextView) view.findViewById(R.id.progressNumber);
 
-        adapter.setContext(getApplicationContext());
+        adapter.setContext(context);
         recyclerView.setAdapter(adapter);
         adapter.notifyDataSetChanged();
 
         //Permissions for MediaPlayer
-        int permission = ActivityCompat.checkSelfPermission(this, Manifest.permission.WRITE_EXTERNAL_STORAGE);
-        int permission2 = ActivityCompat.checkSelfPermission(this, Manifest.permission.READ_EXTERNAL_STORAGE);
+        int permission = ActivityCompat.checkSelfPermission(context, Manifest.permission.WRITE_EXTERNAL_STORAGE);
+        int permission2 = ActivityCompat.checkSelfPermission(context, Manifest.permission.READ_EXTERNAL_STORAGE);
 
         if (permission != PackageManager.PERMISSION_GRANTED) {
             // We don't have permission so prompt the user
             ActivityCompat.requestPermissions(
-                    this,
+                    getActivity(),
                     PERMISSIONS_STORAGE,
                     REQUEST_EXTERNAL_STORAGE
             );
@@ -256,7 +293,7 @@ public class TextbookView extends AppCompatActivity implements PlayerBarFragment
         if (permission2 != PackageManager.PERMISSION_GRANTED) {
             // We don't have permission so prompt the user
             ActivityCompat.requestPermissions(
-                    this,
+                    getActivity(),
                     PERMISSIONS_STORAGE,
                     REQUEST_EXTERNAL_STORAGE
             );
@@ -264,7 +301,7 @@ public class TextbookView extends AppCompatActivity implements PlayerBarFragment
 
 
         // Audio Player Bar
-        fragmentManager = getSupportFragmentManager();
+        fragmentManager = getChildFragmentManager();
 
         //Add player bar fragment to this activity
         FragmentTransaction ft = fragmentManager.beginTransaction();
@@ -272,47 +309,7 @@ public class TextbookView extends AppCompatActivity implements PlayerBarFragment
         ft.add(R.id.playbar_container, playerBarFragment);
         ft.commit();
 
-        String output = Environment.getExternalStorageDirectory().getAbsolutePath() + "/output"+modId+".mp3";
-        playMerged = (Button) findViewById(R.id.playMerged);
-        playMerged.setOnClickListener(new View.OnClickListener(){
-            @Override
-            public void onClick(View v){
-                playMergedFile(output);
-            }
-        });
-
-
-        File f = new File(output);
-        if(f.exists()) { makeDownloadAvailable = false; }
-        else { playMerged.setEnabled(false);}
-
-        //Download button
-        download = (Button) findViewById(R.id.download);
-        download.setEnabled(false);
-        download.setOnClickListener(new View.OnClickListener(){
-            @Override
-            public void onClick(View v){
-                try{ download(output); } catch (IOException e){Log.i("IOException", "Can't download");}
-            }
-        });
-
-        // ffmpeg merge audio
-        FFmpeg ffmpeg = FFmpeg.getInstance(this);
-        if (ffmpeg.isSupported()) {
-            // ffmpeg is supported
-            Log.i("FFmpeg is supported", "Yay!");
-            if(makeDownloadAvailable) download.setEnabled(true);
-        } else {
-            // ffmpeg is not supported
-            Log.i("FFmpeg is not supported", "Darn ;(");
-        }
-
-
-
-
-    }
-
-    public void replaceFragment(){
+        return view;
 
     }
 
@@ -320,44 +317,80 @@ public class TextbookView extends AppCompatActivity implements PlayerBarFragment
         Log.i("onFragmentInteraction", uri.toString());
     }
 
-    /**
-     * Build data set
-     * @throws IOException
-     * @throws JSONException
-     */
-    public void getContent() throws IOException, JSONException {
+    public void getContent(){
+        try {
+            String fileName = "Books/" + bookId + "/" + modId + "/index.cnxml.html";
+            StringBuilder buf = new StringBuilder();
+            InputStreamReader inputStream = new InputStreamReader(context.getAssets().open(fileName));
+            BufferedReader bufferedReader = new BufferedReader(inputStream);
+            String str;
+            while ((str = bufferedReader.readLine()) != null) {
+                buf.append(str);
+            }
 
-        String fileName = "Books/"+bookId+"/"+modId+"/index.cnxml.html";
-        StringBuilder buf = new StringBuilder();
-        InputStreamReader inputStream = new InputStreamReader(getAssets().open(fileName));
-        BufferedReader bufferedReader = new BufferedReader(inputStream);
-        String str;
-        while ((str = bufferedReader.readLine()) != null) {
-            buf.append(str);
+            Document doc = Jsoup.parse(buf.toString());
+
+            String title = doc.body().getElementsByTag("div").first().attr("document-title");
+            Content.Module mod = new Content.Module(title, modId, doc);
+
+            tempDataSet.add(new TextChunk("<h2>"+modTitle+"</h2>"));
+            // eventually just replace with mod.buildModuleSSMl()
+            ArrayList<String> temp = mod.returnPrintOpening();
+            if (temp != null)
+                temp.forEach((stringo) -> tempDataSet.add(new TextChunk(stringo)));
+            temp = mod.returnPrintReadingSections();
+            if (temp != null)
+                temp.forEach((stringo) -> tempDataSet.add(new TextChunk(stringo)));
+            temp = mod.returnPrintEoc();
+            if (temp != null)
+                temp.forEach((stringo) -> tempDataSet.add(new TextChunk(stringo)));
+        }  catch(IOException e ){ e.printStackTrace(); } catch(JSONException e){ e.printStackTrace(); }
+    }
+
+    private class GetContentTask extends AsyncTask<String, String, String> {
+
+        @Override
+        protected String doInBackground(String... ary) {
+
+            try {
+                String fileName = "Books/" + bookId + "/" + modId + "/index.cnxml.html";
+                StringBuilder buf = new StringBuilder();
+                InputStreamReader inputStream = new InputStreamReader(context.getAssets().open(fileName));
+                BufferedReader bufferedReader = new BufferedReader(inputStream);
+                String str;
+                while ((str = bufferedReader.readLine()) != null) {
+                    buf.append(str);
+                }
+
+                Document doc = Jsoup.parse(buf.toString());
+
+                String title = doc.body().getElementsByTag("div").first().attr("document-title");
+                Content.Module mod = new Content.Module(title, modId, doc);
+
+
+                // eventually just replace with mod.buildModuleSSMl()
+                ArrayList<String> temp = mod.returnPrintOpening();
+                if (temp != null)
+                    temp.forEach((stringo) -> tempDataSet.add(new TextChunk(stringo)));
+                temp = mod.returnPrintReadingSections();
+                if (temp != null)
+                    temp.forEach((stringo) -> tempDataSet.add(new TextChunk(stringo)));
+                temp = mod.returnPrintEoc();
+                if (temp != null)
+                    temp.forEach((stringo) -> tempDataSet.add(new TextChunk(stringo)));
+            }  catch(IOException e ){ e.printStackTrace(); } catch(JSONException e){ e.printStackTrace(); }
+
+
+            return "done";
         }
 
-        Document doc = Jsoup.parse(buf.toString());
+        @Override
+        protected void onProgressUpdate(String... result) { }
 
-        String title = doc.body().getElementsByTag("div").first().attr("document-title");
-        Content.Module mod= new Content.Module(title, modId, doc);
-
-
-        // eventually just replace with mod.buildModuleSSMl()
-        ArrayList<String> temp = mod.returnPrintOpening();
-        if(temp != null) temp.forEach( (stringo) -> tempDataSet.add(new TextChunk(stringo)));
-        temp = mod.returnPrintReadingSections();
-        if(temp != null) temp.forEach( (stringo) -> tempDataSet.add(new TextChunk(stringo)));
-        temp = mod.returnPrintEoc();
-        if(temp != null) temp.forEach( (stringo) -> tempDataSet.add(new TextChunk(stringo)));
-        //adapter.notifyDataSetChanged();
-
-        /*Elements elements = doc.body().children().select("*");
-        for (Element element : elements) {
-            dataSet.add(new TextChunk(element.ownText()));
-            adapter.notifyItemInserted(dataSet.size() - 1);
-                //adapter.notifyDataSetChanged();
-        } */
-
+        @Override
+        protected void onPostExecute(String result) {
+            Log.i("onPostExecute", "Done");
+        }
     }
 
 
@@ -391,6 +424,7 @@ public class TextbookView extends AppCompatActivity implements PlayerBarFragment
         int last = layoutManager.findLastCompletelyVisibleItemPosition();
 
         View v = layoutManager.findViewByPosition(position);
+        customScrollListener.setTarget(position);
 
 
 
@@ -406,7 +440,8 @@ public class TextbookView extends AppCompatActivity implements PlayerBarFragment
 
            // Log.i("Position not visible?", "\tFirst: " + String.valueOf(first)+"\tPosition: " + String.valueOf(position) + "\tLast: " + String.valueOf(last));
            // Log.i("First Visible item position: ", String.valueOf(layoutManager.findFirstVisibleItemPosition()));
-            customScrollListener.setTarget(position);
+
+            //customScrollListener.setTarget(position);
             recyclerView.smoothScrollToPosition(position);
 
         }
@@ -431,10 +466,10 @@ public class TextbookView extends AppCompatActivity implements PlayerBarFragment
             tc.setSelected(true);
 
 
-            runOnUiThread(new Runnable() {
+            getActivity().runOnUiThread(new Runnable() {
                 @Override
                 public void run() {
-                    v.findViewById(R.id.item).setBackgroundColor(ContextCompat.getColor(getApplicationContext(), R.color.colorHighlighted));
+                    v.findViewById(R.id.item).setBackgroundColor(ContextCompat.getColor(context, R.color.colorHighlighted));
                     playerBarFragment.setPlayButton("Pause");
                     playerBarFragment.setStopButton(true);
                     playerBarFragment.setForwardButton(true);
@@ -473,7 +508,7 @@ public class TextbookView extends AppCompatActivity implements PlayerBarFragment
                                 .build());
 
                         try {
-                            player.setDataSource(getApplicationContext(), uri);
+                            player.setDataSource(context, uri);
                             player.prepare();
                         } catch (Exception e) {
                             e.printStackTrace();
@@ -498,7 +533,7 @@ public class TextbookView extends AppCompatActivity implements PlayerBarFragment
 
                                 } else {
                                     adapter.setSelected(0);
-                                    runOnUiThread(new Runnable() {
+                                    getActivity().runOnUiThread(new Runnable() {
                                         @Override
                                         public void run() {
                                             playerBarFragment.setPlayButton("Play");
@@ -562,8 +597,7 @@ public class TextbookView extends AppCompatActivity implements PlayerBarFragment
                 // index number in dataSet
                 int number = Integer.parseInt(pos.replaceAll("textbookaudio",""));
                 dataSet.add(new TextChunk(tempDataSet.get(number).getText()));
-
-                runOnUiThread(new Runnable() {
+                getActivity().runOnUiThread(new Runnable() {
                     @Override
                     public void run() {
                         adapter.notifyItemInserted(dataSet.size()-1);
@@ -575,8 +609,8 @@ public class TextbookView extends AppCompatActivity implements PlayerBarFragment
                 });
 
                 if(pos.contains(String.valueOf(tempDataSet.size()-1))){
-                    Log.i("Completed converting all files", pos);
-                    progress.animate().setDuration(200).alpha(0).setListener(new AnimatorListenerAdapter() {
+                        Log.i("Completed converting all files", pos);
+                        progress.animate().setDuration(200).alpha(0).setListener(new AnimatorListenerAdapter() {
                         @Override
                         public void onAnimationEnd(Animator animation) {
                             progress.setVisibility(View.GONE);
@@ -607,9 +641,10 @@ public class TextbookView extends AppCompatActivity implements PlayerBarFragment
     public void backToNormal(String pos){
 
         final int position = Integer.parseInt(pos);
+
         dataSet.get(position).setSelected(false);
 
-        runOnUiThread(new Runnable() {
+        getActivity().runOnUiThread(new Runnable() {
             @Override
             public void run() {
 
@@ -619,7 +654,7 @@ public class TextbookView extends AppCompatActivity implements PlayerBarFragment
                 TextbookViewAdapter.ViewHolder vh = (TextbookViewAdapter.ViewHolder) recyclerView.findViewHolderForAdapterPosition(position);
                 if (vh != null) {
                     View v = vh.textView;
-                    v.findViewById(R.id.item).setBackgroundColor(ContextCompat.getColor(getApplicationContext(), R.color.defaultGrey));
+                    v.findViewById(R.id.item).setBackgroundColor(ContextCompat.getColor(context, R.color.defaultGrey));
                 }
                 else{Log.i("backToNormal", "View is null, can't set bg color to grey");}
             }
@@ -632,14 +667,17 @@ public class TextbookView extends AppCompatActivity implements PlayerBarFragment
      * Shut down TTS and MediaPlayer instances
      */
     @Override
-    protected void onDestroy() {
+    public void onDestroy() {
         if (tts != null) {
             tts.stop();
             tts.shutdown();
         }
 
-        player.stop();
-        player.release();
+        if(player !=null){
+            player.stop();
+            player.release();
+        }
+
 
         super.onDestroy();
     }
@@ -653,9 +691,11 @@ public class TextbookView extends AppCompatActivity implements PlayerBarFragment
         player.pause();
         length = player.getCurrentPosition();
 
+        Log.i("Paused - Selected", String.valueOf(adapter.getSelected()));
+
         //backToNormal(String.valueOf(getSelected()));
 
-        runOnUiThread(new Runnable() {
+        getActivity().runOnUiThread(new Runnable() {
             @Override
             public void run() {
                 playerBarFragment.setPlayButton("Play");
@@ -666,13 +706,13 @@ public class TextbookView extends AppCompatActivity implements PlayerBarFragment
     //Called by player bar fragment
     public void stopTTS(){
         player.stop();
-
+        player.release();
 
         int former_position = getSelected();
         backToNormal(String.valueOf(former_position));
 
         adapter.setSelected(0);
-        runOnUiThread(new Runnable() {
+        getActivity().runOnUiThread(new Runnable() {
             @Override
             public void run() {
                 playerBarFragment.setPlayButton("Play");
@@ -682,8 +722,11 @@ public class TextbookView extends AppCompatActivity implements PlayerBarFragment
 
     //Called by player bar fragment
     public void forwardTTS(){
+
+        is_paused = false; // if the player was paused before the user pressed "fast forward"
+
         int position = getSelected();
-        player.stop();
+        //player.stop();
 
         backToNormal(String.valueOf(position));
         int posn = position + 1;
@@ -692,7 +735,7 @@ public class TextbookView extends AppCompatActivity implements PlayerBarFragment
 
         } else {
             adapter.setSelected(0);
-            runOnUiThread(new Runnable() {
+            getActivity().runOnUiThread(new Runnable() {
                 @Override
                 public void run() {
                     playerBarFragment.setPlayButton("Play");
@@ -707,8 +750,12 @@ public class TextbookView extends AppCompatActivity implements PlayerBarFragment
     //Called by player bar fragment
     public void reverseTTS(){
 
+        is_paused = false; // if the player was paused before the user pressed "fast rewind"
+
+        Log.i("Reversed - Selected", String.valueOf(adapter.getSelected()) + " (should be the same)");
+
         int position = getSelected();
-        player.stop();
+        //player.stop();
 
         backToNormal(String.valueOf(position));
         int posn = position - 1;
@@ -717,7 +764,7 @@ public class TextbookView extends AppCompatActivity implements PlayerBarFragment
 
         } else {
             adapter.setSelected(0);
-            runOnUiThread(new Runnable() {
+            getActivity().runOnUiThread(new Runnable() {
                 @Override
                 public void run() {
                     playerBarFragment.setPlayButton("Play");
@@ -799,7 +846,7 @@ public class TextbookView extends AppCompatActivity implements PlayerBarFragment
     @Override
     public boolean onOptionsItemSelected(MenuItem item) {
         if (item.getItemId() == android.R.id.home) {
-            onBackPressed();
+            getActivity().onBackPressed();
             return true;
         }
         return false;
@@ -841,7 +888,7 @@ public class TextbookView extends AppCompatActivity implements PlayerBarFragment
         // for more info, check out this link:
         // https://superuser.com/questions/1298891/ffmpeg-merge-multiple-audio-files-into-single-audio-file-with-android
         // CORRECT dependency that fixes "relocation" problems: https://github.com/bravobit/FFmpeg-Android
-        FFmpeg ffmpeg = FFmpeg.getInstance(this);
+        FFmpeg ffmpeg = FFmpeg.getInstance(context);
         ffmpeg.execute(cmd, new ExecuteBinaryResponseHandler() {
 
             @Override
@@ -888,7 +935,7 @@ public class TextbookView extends AppCompatActivity implements PlayerBarFragment
                 .build());
 
         try {
-            player.setDataSource(getApplicationContext(), uri);
+            player.setDataSource(context, uri);
             player.prepare();
         } catch (Exception e) {
             e.printStackTrace();
@@ -908,5 +955,72 @@ public class TextbookView extends AppCompatActivity implements PlayerBarFragment
 
             }
         });
+    }
+
+    /**
+     * This interface must be implemented by activities that contain this
+     * fragment to allow an interaction in this fragment to be communicated
+     * to the activity and potentially other fragments contained in that
+     * activity.
+     * <p>
+     * See the Android Training lesson <a href=
+     * "http://developer.android.com/training/basics/fragments/communicating.html"
+     * >Communicating with Other Fragments</a> for more information.
+     */
+    public interface OnFragmentInteractionListener {
+        // TODO: Update argument type and name
+        void onFragmentInteraction(Uri uri);
+
+        void sendModuleInfo(String bookTitle, String bookID, String modID, String modTitle);
+    }
+
+    @Override
+    public void onPrepareOptionsMenu(Menu menu) {
+        super.onPrepareOptionsMenu(menu);
+
+        MenuInflater inflater = getActivity().getMenuInflater();
+        inflater.inflate(R.menu.textbook_view_menu, menu);
+        menu.findItem(R.id.download).setVisible(true);
+        menu.findItem(R.id.play_download).setVisible(true);
+
+        String output = Environment.getExternalStorageDirectory().getAbsolutePath() + "/output"+modId+".mp3";
+        playMerged = menu.findItem(R.id.play_download);
+        playMerged.setOnMenuItemClickListener(new MenuItem.OnMenuItemClickListener(){
+            @Override
+            public boolean onMenuItemClick(MenuItem m){
+                playMergedFile(output);
+                return true;
+            }
+        });
+
+
+        File f = new File(output);
+        if(f.exists()) { makeDownloadAvailable = false; }
+        else { playMerged.setEnabled(false);}
+
+        //Download button
+        download =  menu.findItem(R.id.download);
+        download.setEnabled(false);
+        download.setOnMenuItemClickListener(new MenuItem.OnMenuItemClickListener(){
+            @Override
+            public boolean onMenuItemClick(MenuItem m){
+                try{ download(output); } catch (IOException e){Log.i("IOException", "Can't download");}
+                return true;
+            }
+        });
+
+        // ffmpeg merge audio
+        FFmpeg ffmpeg = FFmpeg.getInstance(context);
+        if (ffmpeg.isSupported()) {
+            // ffmpeg is supported
+            Log.i("FFmpeg is supported", "Yay!");
+            if(makeDownloadAvailable) download.setEnabled(true);
+        } else {
+            // ffmpeg is not supported
+            Log.i("FFmpeg is not supported", "Darn ;(");
+        }
+
+
+
     }
 }

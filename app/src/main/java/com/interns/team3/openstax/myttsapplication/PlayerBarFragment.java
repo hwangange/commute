@@ -98,15 +98,15 @@ public class PlayerBarFragment extends Fragment {
                     playButton.setTag("Pause");
                     playButton.setImageResource(R.drawable.pause);
 
-                    int selected = ((TextbookView)getActivity()).getSelected();
-                    ((TextbookView)getActivity()).checkIfVisible(selected);
+                    int selected = ((TextbookViewFragment)getParentFragment()).getSelected();
+                    ((TextbookViewFragment)getParentFragment()).checkIfVisible(selected);
                 }
                 else{
                     playButton.setTag("Play");
                     playButton.setImageResource(R.drawable.play);
 
                     // Pause
-                    ((TextbookView) getActivity()).pauseTTS();
+                    ((TextbookViewFragment) getParentFragment()).pauseTTS();
                 }
             }
         });
@@ -119,7 +119,7 @@ public class PlayerBarFragment extends Fragment {
                 stopButton.setEnabled(false);
                 forwardButton.setEnabled(false);
                 reverseButton.setEnabled(false);
-                ((TextbookView) getActivity()).stopTTS();
+                ((TextbookViewFragment) getParentFragment()).stopTTS();
             }
         });
 
@@ -128,7 +128,7 @@ public class PlayerBarFragment extends Fragment {
         forwardButton.setOnClickListener(new View.OnClickListener(){
             @Override
             public void onClick(View v){
-                ((TextbookView) getActivity()).forwardTTS();
+                ((TextbookViewFragment) getParentFragment()).forwardTTS();
             }
         });
 
@@ -137,7 +137,7 @@ public class PlayerBarFragment extends Fragment {
         reverseButton.setOnClickListener(new View.OnClickListener(){
             @Override
             public void onClick(View v){
-                ((TextbookView) getActivity()).reverseTTS();
+                ((TextbookViewFragment) getParentFragment()).reverseTTS();
             }
         });
 
