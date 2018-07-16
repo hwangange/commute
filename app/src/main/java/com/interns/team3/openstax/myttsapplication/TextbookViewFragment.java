@@ -140,6 +140,53 @@ public class TextbookViewFragment extends Fragment implements PlayerBarFragment.
             modId = getArguments().getString(ARG_MOD_ID);
             bookId = getArguments().getString(ARG_BOOK_ID);
         }
+
+        // Utterance Progress Listener
+        myUtteranceProgressListener = new MyUtteranceProgressListener();
+        tts = new TextToSpeech(context, new TextToSpeech.OnInitListener() {
+            @Override
+            public void onInit(int i) {
+                if (i == TextToSpeech.SUCCESS) {
+                    //mButtonSpeak.setEnabled(true);
+                    storeConvertedTTSAudio();
+                    Log.e("Initialization", "Initialization succeeded");
+
+                } else {
+                    Log.e("Initialization", "Initialization failed");
+                }
+
+            }
+        });
+        tts.setOnUtteranceProgressListener(myUtteranceProgressListener);
+
+
+        // Populate dataSet
+        tempDataSet = new ArrayList<TextChunk>();
+        dataSet = new ArrayList<TextChunk>();
+
+        getContent();// new GetContentTask().execute("");
+
+        adapter = new TextbookViewAdapter(dataSet, new TextbookViewAdapter.TextOnClickListener(){
+
+            @Override public void onClick(int position){
+                if(position != getSelected() || (position == getSelected() && !player.isPlaying()))  // do not pause the audio if "selected" text is selected again
+                {
+                    // If interrupted
+
+                    int former_position = getSelected();
+                    TextChunk former_selected = dataSet.get(former_position);
+                    //if(former_selected.isSelected())
+                    backToNormal(String.valueOf(former_position));
+
+
+                    is_paused = false;
+
+                    checkIfVisible(position);
+                }
+            }
+
+        });
+
     }
 
     @Override
@@ -220,58 +267,19 @@ public class TextbookViewFragment extends Fragment implements PlayerBarFragment.
         ((MainActivity)getActivity()).getSupportActionBar().setHomeButtonEnabled(true);
         ((MainActivity)getActivity()).getSupportActionBar().setDisplayHomeAsUpEnabled(true);
 
-        // Utterance Progress Listener
-        myUtteranceProgressListener = new MyUtteranceProgressListener();
-        tts = new TextToSpeech(context, new TextToSpeech.OnInitListener() {
-            @Override
-            public void onInit(int i) {
-                if (i == TextToSpeech.SUCCESS) {
-                    //mButtonSpeak.setEnabled(true);
-                    storeConvertedTTSAudio();
-                    Log.e("Initialization", "Initialization succeeded");
 
-                } else {
-                    Log.e("Initialization", "Initialization failed");
-                }
-
-            }
-        });
-        tts.setOnUtteranceProgressListener(myUtteranceProgressListener);
-
-
-        // Populate dataSet
-        tempDataSet = new ArrayList<TextChunk>();
-        dataSet = new ArrayList<TextChunk>();
-
-        getContent();// new GetContentTask().execute("");
-
-        adapter = new TextbookViewAdapter(dataSet, new TextbookViewAdapter.TextOnClickListener(){
-
-            @Override public void onClick(int position){
-                if(position != getSelected() || (position == getSelected() && !player.isPlaying()))  // do not pause the audio if "selected" text is selected again
-                {
-                    // If interrupted
-
-                    int former_position = getSelected();
-                    TextChunk former_selected = dataSet.get(former_position);
-                    //if(former_selected.isSelected())
-                    backToNormal(String.valueOf(former_position));
-
-
-                    is_paused = false;
-
-                    checkIfVisible(position);
-                }
-            }
-
-        });
 
         // After dataSet is completed
         //Progress bar to show progress of TTS file synthesis
-        progressBar = (ProgressBar) view.findViewById(R.id.determinateBar);
-        progressBar.setMax(tempDataSet.size());
         progress = (LinearLayout) view.findViewById(R.id.progress);
-        progressNumber = (TextView) view.findViewById(R.id.progressNumber);
+        if(dataSet.size() == tempDataSet.size()){  progress.setVisibility(View.GONE); }
+        else {
+            progressBar = (ProgressBar) view.findViewById(R.id.determinateBar);
+            progressBar.setProgress(dataSet.size());
+            progressBar.setMax(tempDataSet.size());
+
+            progressNumber = (TextView) view.findViewById(R.id.progressNumber);
+        }
 
         adapter.setContext(context);
         recyclerView.setAdapter(adapter);
@@ -674,8 +682,10 @@ public class TextbookViewFragment extends Fragment implements PlayerBarFragment.
         }
 
         if(player !=null){
-            player.stop();
-            player.release();
+            try {
+                player.stop();
+                player.release();
+            } catch (Exception e) {e.printStackTrace();}
         }
 
 
@@ -726,7 +736,6 @@ public class TextbookViewFragment extends Fragment implements PlayerBarFragment.
         is_paused = false; // if the player was paused before the user pressed "fast forward"
 
         int position = getSelected();
-        //player.stop();
 
         backToNormal(String.valueOf(position));
         int posn = position + 1;
@@ -755,7 +764,6 @@ public class TextbookViewFragment extends Fragment implements PlayerBarFragment.
         Log.i("Reversed - Selected", String.valueOf(adapter.getSelected()) + " (should be the same)");
 
         int position = getSelected();
-        //player.stop();
 
         backToNormal(String.valueOf(position));
         int posn = position - 1;
@@ -972,12 +980,17 @@ public class TextbookViewFragment extends Fragment implements PlayerBarFragment.
         void onFragmentInteraction(Uri uri);
 
         void sendModuleInfo(String bookTitle, String bookID, String modID, String modTitle);
+
+        void playMergedFile(String bookTitle, String modID, String modTitle);
     }
+
+
+    private Menu menu;
 
     @Override
     public void onPrepareOptionsMenu(Menu menu) {
         super.onPrepareOptionsMenu(menu);
-
+        this.menu = menu;
         MenuInflater inflater = getActivity().getMenuInflater();
         inflater.inflate(R.menu.textbook_view_menu, menu);
         menu.findItem(R.id.download).setVisible(true);
@@ -988,7 +1001,8 @@ public class TextbookViewFragment extends Fragment implements PlayerBarFragment.
         playMerged.setOnMenuItemClickListener(new MenuItem.OnMenuItemClickListener(){
             @Override
             public boolean onMenuItemClick(MenuItem m){
-                playMergedFile(output);
+
+                ((MainActivity)getActivity()).playMergedFile(bookId, modId, modTitle);
                 return true;
             }
         });
@@ -1023,4 +1037,19 @@ public class TextbookViewFragment extends Fragment implements PlayerBarFragment.
 
 
     }
+
+    @Override
+    public void onStop(){
+        super.onStop();
+
+        menu.findItem(R.id.download).setVisible(false);
+        menu.findItem(R.id.play_download).setVisible(false);
+    }
+
+    @Override
+    public void onResume(){
+        super.onResume();
+        getActivity().invalidateOptionsMenu();
+    }
+
 }

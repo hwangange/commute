@@ -16,11 +16,14 @@ import android.view.MenuItem;
 import android.view.View;
 import android.view.Window;
 
-public class MainActivity extends AppCompatActivity implements BookshelfFragment.OnFragmentInteractionListener, TableOfContentsFragment.OnFragmentInteractionListener, TextbookViewFragment.OnFragmentInteractionListener, PlayerBarFragment.OnFragmentInteractionListener, VolumeFragment.OnFragmentInteractionListener, LibraryFragment.OnFragmentInteractionListener {
+public class MainActivity extends AppCompatActivity implements HOMEFragment.OnFragmentInteractionListener, LIBRARYFragment.OnFragmentInteractionListener, BookshelfFragment.OnFragmentInteractionListener, TableOfContentsFragment.OnFragmentInteractionListener, TextbookViewFragment.OnFragmentInteractionListener, PlayerBarFragment.OnFragmentInteractionListener, VolumeFragment.OnFragmentInteractionListener, NOWPLAYINGFragment.OnFragmentInteractionListener {
 
     public FragmentManager fragmentManager;
-    public BookshelfFragment bookshelfFragment;
-    public LibraryFragment libraryFragment;
+    public HOMEFragment homeFragment;
+    public LIBRARYFragment libraryFragment;
+    public NOWPLAYINGFragment nowPlayingFragment;
+
+    public BottomNavigationView bottomNavigationView;
 
 
     public int /*uiOptions= View.SYSTEM_UI_FLAG_IMMERSIVE
@@ -41,15 +44,18 @@ public class MainActivity extends AppCompatActivity implements BookshelfFragment
         setContentView(R.layout.activity_main);
 
         fragmentManager = getSupportFragmentManager();
-        libraryFragment = LibraryFragment.newInstance("","");
+        libraryFragment = LIBRARYFragment.newInstance("","");
+        nowPlayingFragment = NOWPLAYINGFragment.newInstance("Select a module to play!","","", null);
 
         FragmentTransaction ft = fragmentManager.beginTransaction();
-        bookshelfFragment = BookshelfFragment.newInstance("","");
-        ft.add(R.id.fragmentContainer, bookshelfFragment);
+        homeFragment = HOMEFragment.newInstance(getApplicationContext());
+        ft.setCustomAnimations(android.R.anim.slide_in_left, android.R.anim.slide_out_right, android.R.anim.fade_in, android.R.anim.fade_out);
+        ft.replace(R.id.fragmentContainer, homeFragment);
         ft.commit();
 
-        BottomNavigationView bottomNavigationView = (BottomNavigationView)
+        bottomNavigationView = (BottomNavigationView)
                 findViewById(R.id.navigation);
+        if(nowPlayingFragment == null) bottomNavigationView.findViewById(R.id.navigation_player).setEnabled(false);
 
         bottomNavigationView.setOnNavigationItemSelectedListener(mOnNavigationItemSelectedListener);
 
@@ -81,14 +87,29 @@ public class MainActivity extends AppCompatActivity implements BookshelfFragment
         @Override
         public boolean onNavigationItemSelected(@NonNull MenuItem item) {
             switch (item.getItemId()) {
-                case R.id.navigation_home:
+                case R.id.navigation_home: {
+                    FragmentTransaction ft = fragmentManager.beginTransaction();
+                    ft.replace(R.id.fragmentContainer, homeFragment);
+                    ft.addToBackStack(null); // allow user to go back
+                    ft.setCustomAnimations(android.R.anim.fade_in, android.R.anim.fade_out, android.R.anim.fade_in, android.R.anim.fade_out);
+                    ft.commit();
+                    Log.i("home","there");
                     return true;
-                case R.id.navigation_player:
+                }
+                case R.id.navigation_player: {
+                    FragmentTransaction ft = fragmentManager.beginTransaction();
+                    ft.replace(R.id.fragmentContainer, nowPlayingFragment, nowPlayingFragment.getTag());
+                    ft.addToBackStack(null); // allow user to go back
+                    ft.setCustomAnimations(android.R.anim.fade_in, android.R.anim.fade_out, android.R.anim.fade_in, android.R.anim.fade_out);
+                    ft.commit();
+                    Log.i("now playing","there");
                     return true;
+                }
                 case R.id.navigation_library: {
                     FragmentTransaction ft = fragmentManager.beginTransaction();
                     ft.replace(R.id.fragmentContainer, libraryFragment);
-                    ft.addToBackStack(null); // allow user to go back
+                    //ft.addToBackStack(null); // allow user to go back
+                    ft.setCustomAnimations(android.R.anim.fade_in, android.R.anim.fade_out, android.R.anim.fade_in, android.R.anim.fade_out);
                     ft.commit();
                     Log.i("library","there");
                     return true;
@@ -102,33 +123,29 @@ public class MainActivity extends AppCompatActivity implements BookshelfFragment
         Log.i("onFragmentInteraction", uri.toString());
     }
 
-    public void sendBookInfo(String bookID, String bookTitle){
-        // from Bookshelf fragment to Table of Contents fragment
-        Log.i("sendBookInfo", bookID + ", " + bookTitle);
-        TableOfContentsFragment tableOfContentsFragment = TableOfContentsFragment.newInstance(bookTitle, bookID);
-        FragmentTransaction ft = fragmentManager.beginTransaction();
-        ft.replace(R.id.fragmentContainer, tableOfContentsFragment);
-        ft.addToBackStack(null); // allow user to go back
-        ft.commit();
-    }
-
-    public void sendModuleInfo(String bookTitle, String bookID, String modID, String modTitle){
-        // from Table of Contents fragment to TextbookView Fragment
-        Log.i("sendModuleInfo", bookTitle + ", " + bookID + ", " + modID + ", " + modTitle);
-        TextbookViewFragment textbookViewFragment = TextbookViewFragment.newInstance(modTitle, modID, bookID, getApplicationContext());
-        FragmentTransaction ft = fragmentManager.beginTransaction();
-        ft.replace(R.id.fragmentContainer, textbookViewFragment);
-        ft.addToBackStack(null); // allow user to go back
-        ft.commit();
-
-
-    }
-
     @Override
     public boolean onOptionsItemSelected(MenuItem item) {
 
         if (item.getItemId() == android.R.id.home) {
-            onBackPressed();
+            if(bottomNavigationView.getSelectedItemId() == R.id.navigation_home){
+                int count = homeFragment.getChildFragmentManager().getBackStackEntryCount();
+
+                if(count ==0) super.onBackPressed();
+                else homeFragment.getChildFragmentManager().popBackStack();
+
+            }
+
+            else {
+
+                int count = getFragmentManager().getBackStackEntryCount();
+
+                if (count == 0) {
+                    super.onBackPressed();
+                    //additional code
+                } else {
+                    getFragmentManager().popBackStack();
+                }
+            }
             return true;
         }
         return false;
@@ -153,6 +170,44 @@ public class MainActivity extends AppCompatActivity implements BookshelfFragment
             ActionBar actionBar = getSupportActionBar();
             actionBar.show();
         }
+    }
+
+
+    public void sendBookInfo(String bookID, String bookTitle){
+        // from Bookshelf fragment to Table of Contents fragment
+        homeFragment.sendBookInfo(bookID, bookTitle);
+    }
+
+    public void sendModuleInfo(String bookTitle, String bookID, String modID, String modTitle){
+        // from Table of Contents fragment to TextbookView Fragment
+        homeFragment.sendModuleInfo(bookTitle, bookID, modID, modTitle);
+    }
+
+    public void playMergedFile(String bookTitle, String modID, String modTitle){
+        bottomNavigationView.findViewById(R.id.navigation_player).setEnabled(true);
+        bottomNavigationView.setSelectedItemId(R.id.navigation_player);
+        Log.i("is nowPlayingFragment null?", String.valueOf(nowPlayingFragment == null));
+        if(nowPlayingFragment != null)
+        {
+            String s = nowPlayingFragment.getModule();
+            Log.i("getModule() results", s);
+        }
+
+        if(!nowPlayingFragment.getModule().equals(modID))
+        {
+            // "delete" the old nowPlayingFragment
+            if(!nowPlayingFragment.getModule().equals("")) nowPlayingFragment.stopTTS();
+            fragmentManager.beginTransaction().remove(nowPlayingFragment).commit();
+
+            // make a new nowPlayingFragment
+            nowPlayingFragment = NOWPLAYINGFragment.newInstance(modTitle, modID, bookTitle, getApplicationContext());
+        }
+
+        FragmentTransaction ft = fragmentManager.beginTransaction();
+        ft.replace(R.id.fragmentContainer, nowPlayingFragment, "Now Playing " + modID);
+        ft.addToBackStack(null); // allow user to go back
+        ft.setCustomAnimations(android.R.anim.slide_in_left, android.R.anim.slide_out_right, android.R.anim.fade_in, android.R.anim.fade_out);
+        ft.commit();
     }
 
 

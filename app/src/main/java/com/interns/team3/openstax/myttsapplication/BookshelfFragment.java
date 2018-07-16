@@ -60,7 +60,7 @@ public class BookshelfFragment extends Fragment {
             mParam1 = getArguments().getString(ARG_PARAM1);
             mParam2 = getArguments().getString(ARG_PARAM2);
         }
-
+        setHasOptionsMenu(false);
         // Customize action bar
         (getActivity()).setTitle("OpenStax Commute");
         ((MainActivity)getActivity()).getSupportActionBar().setHomeButtonEnabled(false);
@@ -73,34 +73,40 @@ public class BookshelfFragment extends Fragment {
 
         // Inflate the layout for this fragment
         View view = inflater.inflate(R.layout.fragment_bookshelf, container, false);
+        Log.i("Bookshelf", "onCreateView");
 
-        // Construct the data source
-        dataSet = new ArrayList<Content>();
-        // Create the adapter to convert the array to views
-        adapter = new ContentAdapter(dataSet, new ContentAdapter.ContentOnClickListener() {
-            @Override
-            public void onClick(View v) {
-                String targetId = ((TextView) v.findViewById(R.id.book_id)).getText().toString();
-                String targetTitle = ((TextView) v.findViewById(R.id.book_title)).getText().toString();
-                //Toast.makeText(getApplicationContext(), targetId, Toast.LENGTH_SHORT).show();
+        if(savedInstanceState ==null) {
+            Log.i("Bookshelf", "onCreateView, savedInstanceState is null");
 
-                ((MainActivity)getActivity()).sendBookInfo(targetId, targetTitle);
-            }
-        });
+            // Construct the data source
+            dataSet = new ArrayList<Content>();
+            // Create the adapter to convert the array to views
+            adapter = new ContentAdapter(dataSet, new ContentAdapter.ContentOnClickListener() {
+                @Override
+                public void onClick(View v) {
+                    String targetId = ((TextView) v.findViewById(R.id.book_id)).getText().toString();
+                    String targetTitle = ((TextView) v.findViewById(R.id.book_title)).getText().toString();
+                    //Toast.makeText(getApplicationContext(), targetId, Toast.LENGTH_SHORT).show();
 
-        adapter.setContext(view.getContext());
+                    ((HOMEFragment) getParentFragment()).sendBookInfo(targetId, targetTitle);
+                }
+            });
 
-        // Attach the adapter to a ListView
-        recyclerView= (RecyclerView) view.findViewById(R.id.book_recycler_view);
-        recyclerView.setAdapter(adapter);
+            adapter.setContext(view.getContext());
 
-        // use a GRID layout manager
-        layoutManager = new GridLayoutManager(view.getContext(), 2);
-        // layoutManager = new LinearLayoutManager(this);
-        recyclerView.setLayoutManager(layoutManager);
+            // Attach the adapter to a ListView
+            recyclerView = (RecyclerView) view.findViewById(R.id.book_recycler_view);
+            recyclerView.setAdapter(adapter);
 
-        addItems();
-        adapter.notifyDataSetChanged();
+            // use a GRID layout manager
+            layoutManager = new GridLayoutManager(view.getContext(), 2);
+            // layoutManager = new LinearLayoutManager(this);
+            recyclerView.setLayoutManager(layoutManager);
+
+            addItems();
+            adapter.notifyDataSetChanged();
+        }
+
 
         return view;
 
@@ -113,7 +119,6 @@ public class BookshelfFragment extends Fragment {
             String[] bookTitles = getContext().getAssets().list("Books");
             for(String s : bookTitles){
                 dataSet.add(new Content.Book(s, s));
-                Log.i("Book", s);
             }
 
         } catch (IOException e) {
@@ -141,7 +146,7 @@ public class BookshelfFragment extends Fragment {
     @Override
     public void onResume(){
         super.onResume();
-        
+
         // Customize action bar
         (getActivity()).setTitle("OpenStax Commute");
         ((MainActivity)getActivity()).getSupportActionBar().setHomeButtonEnabled(false);

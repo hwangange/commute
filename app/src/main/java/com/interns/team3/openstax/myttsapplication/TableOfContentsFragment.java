@@ -75,11 +75,14 @@ public class TableOfContentsFragment extends Fragment {
                 bookTitle = getArguments().getString(ARG_BOOK_TITLE);
                 bookId = getArguments().getString(ARG_BOOK_ID);
             }
+        setHasOptionsMenu(false);
     }
 
     @Override
     public View onCreateView(LayoutInflater inflater, ViewGroup container,
             Bundle savedInstanceState) {
+
+        Log.i("Table of contents", "onCreateview");
 
             // Inflate the layout for this fragment
             View view = inflater.inflate(R.layout.fragment_toc, container, false);
@@ -99,7 +102,7 @@ public class TableOfContentsFragment extends Fragment {
                 String modTitle = ((TextView) v.findViewById(R.id.modTitle)).getText().toString();
                 //Toast.makeText(getApplicationContext(), targetId, Toast.LENGTH_SHORT).show();
 
-                ((MainActivity)getActivity()).sendModuleInfo(bookId, bookTitle, modId, modTitle);
+                ((HOMEFragment)getParentFragment()).sendModuleInfo(bookId, bookTitle, modId, modTitle);
             }
         });
 

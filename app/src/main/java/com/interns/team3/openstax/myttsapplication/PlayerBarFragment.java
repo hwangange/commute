@@ -168,9 +168,7 @@ public class PlayerBarFragment extends Fragment {
 
     public void setPlayButton(String s){
         if(s.equals("Play"))
-
         {
-
             playButton.setTag("Play");
             playButton.setImageResource(R.drawable.play);
         }

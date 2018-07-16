@@ -12,12 +12,12 @@ import android.view.ViewGroup;
 /**
  * A simple {@link Fragment} subclass.
  * Activities that contain this fragment must implement the
- * {@link LibraryFragment.OnFragmentInteractionListener} interface
+ * {@link LIBRARYFragment.OnFragmentInteractionListener} interface
  * to handle interaction events.
- * Use the {@link LibraryFragment#newInstance} factory method to
+ * Use the {@link LIBRARYFragment#newInstance} factory method to
  * create an instance of this fragment.
  */
-public class LibraryFragment extends Fragment {
+public class LIBRARYFragment extends Fragment {
     // TODO: Rename parameter arguments, choose names that match
     // the fragment initialization parameters, e.g. ARG_ITEM_NUMBER
     private static final String ARG_PARAM1 = "param1";
@@ -29,7 +29,7 @@ public class LibraryFragment extends Fragment {
 
     private OnFragmentInteractionListener mListener;
 
-    public LibraryFragment() {
+    public LIBRARYFragment() {
         // Required empty public constructor
     }
 
@@ -39,11 +39,11 @@ public class LibraryFragment extends Fragment {
      *
      * @param param1 Parameter 1.
      * @param param2 Parameter 2.
-     * @return A new instance of fragment LibraryFragment.
+     * @return A new instance of fragment LIBRARYFragment.
      */
     // TODO: Rename and change types and number of parameters
-    public static LibraryFragment newInstance(String param1, String param2) {
-        LibraryFragment fragment = new LibraryFragment();
+    public static LIBRARYFragment newInstance(String param1, String param2) {
+        LIBRARYFragment fragment = new LIBRARYFragment();
         Bundle args = new Bundle();
         args.putString(ARG_PARAM1, param1);
         args.putString(ARG_PARAM2, param2);
@@ -54,6 +54,8 @@ public class LibraryFragment extends Fragment {
     @Override
     public void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
+
+        setHasOptionsMenu(false);
         if (getArguments() != null) {
             mParam1 = getArguments().getString(ARG_PARAM1);
             mParam2 = getArguments().getString(ARG_PARAM2);
@@ -63,6 +65,9 @@ public class LibraryFragment extends Fragment {
     @Override
     public View onCreateView(LayoutInflater inflater, ViewGroup container,
                              Bundle savedInstanceState) {
+        (getActivity()).setTitle("My Library");
+        ((MainActivity)getActivity()).getSupportActionBar().setHomeButtonEnabled(false);
+        ((MainActivity)getActivity()).getSupportActionBar().setDisplayHomeAsUpEnabled(false);
         // Inflate the layout for this fragment
         return inflater.inflate(R.layout.fragment_library, container, false);
     }
@@ -90,6 +95,8 @@ public class LibraryFragment extends Fragment {
         super.onDetach();
         mListener = null;
     }
+
+
 
     /**
      * This interface must be implemented by activities that contain this
