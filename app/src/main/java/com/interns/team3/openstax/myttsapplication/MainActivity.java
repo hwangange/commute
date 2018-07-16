@@ -45,7 +45,7 @@ public class MainActivity extends AppCompatActivity implements HOMEFragment.OnFr
 
         fragmentManager = getSupportFragmentManager();
         libraryFragment = LIBRARYFragment.newInstance("","");
-        nowPlayingFragment = NOWPLAYINGFragment.newInstance("Select a module to play!","","", null);
+        nowPlayingFragment = NOWPLAYINGFragment.newInstance("Select a module to play!","","", getApplicationContext());
 
         FragmentTransaction ft = fragmentManager.beginTransaction();
         homeFragment = HOMEFragment.newInstance(getApplicationContext());
@@ -98,7 +98,7 @@ public class MainActivity extends AppCompatActivity implements HOMEFragment.OnFr
                 }
                 case R.id.navigation_player: {
                     FragmentTransaction ft = fragmentManager.beginTransaction();
-                    ft.replace(R.id.fragmentContainer, nowPlayingFragment, nowPlayingFragment.getTag());
+                    ft.replace(R.id.fragmentContainer, nowPlayingFragment);
                     ft.addToBackStack(null); // allow user to go back
                     ft.setCustomAnimations(android.R.anim.fade_in, android.R.anim.fade_out, android.R.anim.fade_in, android.R.anim.fade_out);
                     ft.commit();
@@ -195,16 +195,15 @@ public class MainActivity extends AppCompatActivity implements HOMEFragment.OnFr
 
         if(!nowPlayingFragment.getModule().equals(modID))
         {
-            // "delete" the old nowPlayingFragment
+            // stop the media player
             if(!nowPlayingFragment.getModule().equals("")) nowPlayingFragment.stopTTS();
-            fragmentManager.beginTransaction().remove(nowPlayingFragment).commit();
 
             // make a new nowPlayingFragment
-            nowPlayingFragment = NOWPLAYINGFragment.newInstance(modTitle, modID, bookTitle, getApplicationContext());
+            nowPlayingFragment.setNewModule(bookTitle, modID, modTitle);
         }
 
         FragmentTransaction ft = fragmentManager.beginTransaction();
-        ft.replace(R.id.fragmentContainer, nowPlayingFragment, "Now Playing " + modID);
+        ft.replace(R.id.fragmentContainer, nowPlayingFragment);
         ft.addToBackStack(null); // allow user to go back
         ft.setCustomAnimations(android.R.anim.slide_in_left, android.R.anim.slide_out_right, android.R.anim.fade_in, android.R.anim.fade_out);
         ft.commit();

@@ -159,7 +159,7 @@ public class NOWPLAYINGFragment extends Fragment {
             Log.i("Current Point", String.valueOf(currentPoint));
 
             if(currentPoint == -1) {
-                player = new MediaPlayer();
+                //player = new MediaPlayer(); <-- shouldn't be needed if player is "reset" in "playMergedFile"
                 setPlayButton("Pause");
                 String output = Environment.getExternalStorageDirectory().getAbsolutePath() + "/output" + modId + ".mp3";
                 playMergedFile(output);
@@ -220,11 +220,9 @@ public class NOWPLAYINGFragment extends Fragment {
 
         player.reset();
 
-        // tts.speak(text, TextToSpeech.QUEUE_FLUSH, null, String.valueOf(position));
 
         Uri uri = Uri.parse("file://" + output);
 
-        // player.setAudioStreamType(AudioManager.STREAM_MUSIC);
         player.setAudioAttributes(new AudioAttributes.Builder()
                 .setUsage(AudioAttributes.USAGE_MEDIA)
                 .setContentType(AudioAttributes.CONTENT_TYPE_MUSIC)
@@ -288,7 +286,7 @@ public class NOWPLAYINGFragment extends Fragment {
     //Called by player bar fragment
     public void stopTTS(){
         player.stop();
-        player.release();
+        //player.release(); <-- this would end the media player life cycle.
 
         /*getActivity().runOnUiThread(new Runnable() {
             @Override
@@ -323,6 +321,17 @@ public class NOWPLAYINGFragment extends Fragment {
             playButton.setTag("Pause");
             playButton.setImageResource(R.drawable.pause);
         }
+    }
+
+    // when user wants to listen to a new audiobook
+    public void setNewModule(String bookId, String modId, String modTitle){
+        this.bookId = bookId;
+        this.modId = modId;
+        this.modTitle = modTitle;
+        currentPoint = -1;
+        isPaused = false;
+
+
     }
 
 

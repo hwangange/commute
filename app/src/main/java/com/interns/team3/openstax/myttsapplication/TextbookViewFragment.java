@@ -716,10 +716,10 @@ public class TextbookViewFragment extends Fragment implements PlayerBarFragment.
     //Called by player bar fragment
     public void stopTTS(){
         player.stop();
-        player.release();
 
         int former_position = getSelected();
         backToNormal(String.valueOf(former_position));
+        is_paused = false;
 
         adapter.setSelected(0);
         getActivity().runOnUiThread(new Runnable() {
@@ -1044,7 +1044,10 @@ public class TextbookViewFragment extends Fragment implements PlayerBarFragment.
 
         menu.findItem(R.id.download).setVisible(false);
         menu.findItem(R.id.play_download).setVisible(false);
+
     }
+
+
 
     @Override
     public void onResume(){
