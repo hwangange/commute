@@ -4,7 +4,10 @@ import android.Manifest;
 import android.animation.Animator;
 import android.animation.AnimatorListenerAdapter;
 import android.content.Context;
+import android.content.SharedPreferences;
 import android.content.pm.PackageManager;
+import android.graphics.PorterDuff;
+import android.graphics.drawable.Drawable;
 import android.media.AudioAttributes;
 import android.media.MediaPlayer;
 import android.net.Uri;
@@ -54,6 +57,8 @@ import java.io.IOException;
 import java.io.InputStreamReader;
 import java.text.DecimalFormat;
 import java.util.ArrayList;
+import java.util.HashSet;
+import java.util.Set;
 
 import nl.bravobit.ffmpeg.ExecuteBinaryResponseHandler;
 import nl.bravobit.ffmpeg.FFmpeg;
@@ -102,7 +107,7 @@ public class TextbookViewFragment extends Fragment implements PlayerBarFragment.
     public FragmentManager fragmentManager;
     public PlayerBarFragment playerBarFragment;
 
-    public MenuItem download, playMerged;
+    public MenuItem download, playMerged, favorite;
     public boolean makeDownloadAvailable = true;
 
     // required empty constructor
@@ -995,6 +1000,7 @@ public class TextbookViewFragment extends Fragment implements PlayerBarFragment.
         inflater.inflate(R.menu.textbook_view_menu, menu);
         menu.findItem(R.id.download).setVisible(true);
         menu.findItem(R.id.play_download).setVisible(true);
+        menu.findItem(R.id.favorite).setVisible(true);
 
         String output = Environment.getExternalStorageDirectory().getAbsolutePath() + "/output"+modId+".mp3";
         playMerged = menu.findItem(R.id.play_download);
@@ -1034,8 +1040,56 @@ public class TextbookViewFragment extends Fragment implements PlayerBarFragment.
             Log.i("FFmpeg is not supported", "Darn ;(");
         }
 
+        // Shared Preferences
+        SharedPreferences sharedPreferences = context.getSharedPreferences("library", 0);
+        HashSet<String> faves = (HashSet<String>) sharedPreferences.getStringSet("favorites", null);
+        SharedPreferences.Editor editor = sharedPreferences.edit();
+        if(faves == null)  // no favorites yet
+        {
 
+            editor.putStringSet("favorites", new HashSet<String>());
+            editor.commit();
+        }
 
+        // Favorite button
+        favorite = menu.findItem(R.id.favorite);
+        setFavoriteIconColor(false);
+        favorite.setOnMenuItemClickListener(new MenuItem.OnMenuItemClickListener(){
+            @Override
+            public boolean onMenuItemClick(MenuItem m){
+                setFavoriteIconColor(true);
+                return true;
+            }
+        });
+    }
+
+    public void setFavoriteIconColor(boolean shouldToggle){
+        // Shared Preferences
+        SharedPreferences sharedPreferences = context.getSharedPreferences("library", 0);
+        HashSet<String> faves = (HashSet<String>) sharedPreferences.getStringSet("favorites", new HashSet<String>());
+        SharedPreferences.Editor editor = sharedPreferences.edit();
+
+        // create a duplicate HashSet of the current faves set
+        HashSet<String> newFaves = new HashSet<String>(faves);
+
+        if((faves.contains(modId) && shouldToggle) || (!faves.contains(modId) && !shouldToggle)) {
+            // change the module to NOT favorited
+            Drawable icon = favorite.getIcon();
+            icon.setColorFilter(context.getColor(R.color.white), PorterDuff.Mode.SRC_ATOP);
+            newFaves.remove(modId);
+
+        } else if((!faves.contains(modId) && shouldToggle) || (faves.contains(modId) && !shouldToggle )){
+            // Change the module to favorited
+            Drawable icon = favorite.getIcon();
+            icon.setColorFilter(context.getColor(R.color.colorAccent), PorterDuff.Mode.SRC_ATOP);
+            newFaves.add(modId);
+
+        }
+        String output = ":) \t";
+        for(String s : newFaves) { output+=s+"\t";}
+        Log.i("in NewFaves", output);
+        editor.putStringSet("favorites", newFaves); // hopefully this replaces the old favorites set
+        editor.commit();
     }
 
     @Override
@@ -1044,6 +1098,7 @@ public class TextbookViewFragment extends Fragment implements PlayerBarFragment.
 
         menu.findItem(R.id.download).setVisible(false);
         menu.findItem(R.id.play_download).setVisible(false);
+        menu.findItem(R.id.favorite).setVisible(false);
 
     }
 

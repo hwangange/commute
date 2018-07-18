@@ -1,12 +1,28 @@
 package com.interns.team3.openstax.myttsapplication;
 
 import android.content.Context;
+import android.content.SharedPreferences;
 import android.net.Uri;
 import android.os.Bundle;
+import android.os.Environment;
 import android.support.v4.app.Fragment;
+import android.support.v7.widget.LinearLayoutManager;
+import android.support.v7.widget.RecyclerView;
+import android.util.Log;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
+import android.widget.ImageView;
+import android.widget.TextView;
+import android.widget.Toast;
+
+import java.io.File;
+import java.util.ArrayList;
+import java.util.HashSet;
+
+import io.github.luizgrp.sectionedrecyclerviewadapter.SectionParameters;
+import io.github.luizgrp.sectionedrecyclerviewadapter.SectionedRecyclerViewAdapter;
+import io.github.luizgrp.sectionedrecyclerviewadapter.StatelessSection;
 
 
 /**
@@ -28,6 +44,8 @@ public class LIBRARYFragment extends Fragment {
     private String mParam2;
 
     private OnFragmentInteractionListener mListener;
+
+    private SectionedRecyclerViewAdapter sectionAdapter;
 
     public LIBRARYFragment() {
         // Required empty public constructor
@@ -60,16 +78,59 @@ public class LIBRARYFragment extends Fragment {
             mParam1 = getArguments().getString(ARG_PARAM1);
             mParam2 = getArguments().getString(ARG_PARAM2);
         }
+
     }
 
     @Override
     public View onCreateView(LayoutInflater inflater, ViewGroup container,
                              Bundle savedInstanceState) {
+
+        View view = inflater.inflate(R.layout.fragment_library, container, false);
+
         (getActivity()).setTitle("My Library");
         ((MainActivity)getActivity()).getSupportActionBar().setHomeButtonEnabled(false);
         ((MainActivity)getActivity()).getSupportActionBar().setDisplayHomeAsUpEnabled(false);
+
+        sectionAdapter = new SectionedRecyclerViewAdapter();
+
+        /* Finding Favorites */
+        // Shared Preferences
+        SharedPreferences sharedPreferences = getContext().getSharedPreferences("library", 0);
+        HashSet<String> faves = (HashSet<String>) sharedPreferences.getStringSet("favorites", new HashSet<String>());
+        ArrayList<String> favorites_dataSet = new ArrayList<String>();
+        for(String s : faves) favorites_dataSet.add(s);
+        Log.i("favorites_dataSet size", String.valueOf(favorites_dataSet.size()));
+
+        /* Finding Downloads */
+        File file = Environment.getExternalStorageDirectory();
+        ArrayList<String> downloads_dataSet= new ArrayList<String>();
+        File listFile[] = file.listFiles();
+
+        if (listFile != null) {
+            for (int i = 0; i < listFile.length; i++) {
+
+                if (!listFile[i].isDirectory()) { // in the future, may have to make a recursive function to take care of directories.
+                    // if the array element were a directory, call this function again with the element as input
+                    String filepath = listFile[i].getAbsolutePath();
+                    if(filepath.contains("output"))
+                    downloads_dataSet.add(filepath.substring(filepath.indexOf("output")+6, filepath.indexOf(".mp3")));
+
+                }
+            }
+        }
+
+
+        sectionAdapter.addSection("favorites", new CustomSection("Favorites", favorites_dataSet));
+        sectionAdapter.addSection("downloads", new CustomSection("Downloads", downloads_dataSet));
+
+        RecyclerView recyclerView = (RecyclerView) view.findViewById(R.id.library_recycler_view);
+        recyclerView.setLayoutManager(new LinearLayoutManager(getContext()));
+        recyclerView.setAdapter(sectionAdapter);
+        sectionAdapter.notifyDataSetChanged();
+
+
         // Inflate the layout for this fragment
-        return inflater.inflate(R.layout.fragment_library, container, false);
+        return view;
     }
 
     // TODO: Rename method, update argument and hook method into UI event
@@ -112,4 +173,89 @@ public class LIBRARYFragment extends Fragment {
         // TODO: Update argument type and name
         void onFragmentInteraction(Uri uri);
     }
+
+    public class CustomSection extends StatelessSection {
+        String title;
+        ArrayList<String> list;
+
+        CustomSection(String title, ArrayList<String> list) {
+            super(SectionParameters.builder()
+                    .itemResourceId(R.layout.section_item)
+                    .headerResourceId(R.layout.section_header)
+                    .build());
+
+            this.title = title;
+            this.list = list;
+        }
+
+        @Override
+        public int getContentItemsTotal() {
+            return list.size();
+        }
+
+        @Override
+        public RecyclerView.ViewHolder getItemViewHolder(View view) {
+            return new ItemViewHolder(view);
+        }
+
+        @Override
+        public void onBindItemViewHolder(RecyclerView.ViewHolder holder, int position) {
+            final ItemViewHolder itemHolder = (ItemViewHolder) holder;
+
+            String name = list.get(position);
+
+            itemHolder.tvItem.setText(name);
+            //itemHolder.imgItem.setImageResource(name.hashCode() % 2 == 0 ? R.drawable.ic_face_black_48dp : R.drawable.ic_tag_faces_black_48dp);
+
+            itemHolder.rootView.setOnClickListener(new View.OnClickListener() {
+                @Override
+                public void onClick(View v) {
+                    Toast.makeText(getContext(),
+                            String.format("Clicked on position #%s of Section %s",
+                                    sectionAdapter.getPositionInSection(itemHolder.getAdapterPosition()),
+                                    title),
+                            Toast.LENGTH_SHORT).show();
+                }
+            });
+        }
+
+        @Override
+        public RecyclerView.ViewHolder getHeaderViewHolder(View view) {
+            return new HeaderViewHolder(view);
+        }
+
+        @Override
+        public void onBindHeaderViewHolder(RecyclerView.ViewHolder holder) {
+            HeaderViewHolder headerHolder = (HeaderViewHolder) holder;
+
+            headerHolder.tvTitle.setText(title);
+        }
+    }
+
+    private class HeaderViewHolder extends RecyclerView.ViewHolder {
+
+        private final TextView tvTitle;
+
+        HeaderViewHolder(View view) {
+            super(view);
+
+            tvTitle = (TextView) view.findViewById(R.id.tvTitle);
+        }
+    }
+
+    private class ItemViewHolder extends RecyclerView.ViewHolder {
+
+        private final View rootView;
+        private final ImageView imgItem;
+        private final TextView tvItem;
+
+        ItemViewHolder(View view) {
+            super(view);
+
+            rootView = view;
+            imgItem = (ImageView) view.findViewById(R.id.imgItem);
+            tvItem = (TextView) view.findViewById(R.id.tvItem);
+        }
+    }
+
 }

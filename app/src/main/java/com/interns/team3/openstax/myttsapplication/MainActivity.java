@@ -186,6 +186,7 @@ public class MainActivity extends AppCompatActivity implements HOMEFragment.OnFr
     public void playMergedFile(String bookTitle, String modID, String modTitle){
         bottomNavigationView.findViewById(R.id.navigation_player).setEnabled(true);
         bottomNavigationView.setSelectedItemId(R.id.navigation_player);
+
         Log.i("is nowPlayingFragment null?", String.valueOf(nowPlayingFragment == null));
         if(nowPlayingFragment != null)
         {

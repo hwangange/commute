@@ -3,6 +3,12 @@
     xmlns:app="http://schemas.android.com/apk/res-auto">
 
     <item
+        android:id="@+id/favorite"
+        android:icon="@drawable/ic_heart_24dp"
+        android:title="Favorite"
+        app:showAsAction="ifRoom" />
+
+    <item
         android:id="@+id/download"
         android:icon="@drawable/ic_download_black_24dp"
         android:title="Download"
