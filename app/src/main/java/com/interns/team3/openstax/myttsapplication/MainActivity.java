@@ -2,19 +2,16 @@ package com.interns.team3.openstax.myttsapplication;
 
 
 import android.net.Uri;
+import android.os.Bundle;
 import android.support.annotation.NonNull;
 import android.support.design.widget.BottomNavigationView;
-import android.support.v4.app.FragmentActivity;
 import android.support.v4.app.FragmentManager;
 import android.support.v4.app.FragmentTransaction;
 import android.support.v7.app.ActionBar;
 import android.support.v7.app.AppCompatActivity;
-import android.os.Bundle;
 import android.util.Log;
-import android.view.Menu;
 import android.view.MenuItem;
 import android.view.View;
-import android.view.Window;
 
 public class MainActivity extends AppCompatActivity implements HOMEFragment.OnFragmentInteractionListener, LIBRARYFragment.OnFragmentInteractionListener, BookshelfFragment.OnFragmentInteractionListener, TableOfContentsFragment.OnFragmentInteractionListener, TextbookViewFragment.OnFragmentInteractionListener, PlayerBarFragment.OnFragmentInteractionListener, VolumeFragment.OnFragmentInteractionListener, NOWPLAYINGFragment.OnFragmentInteractionListener {
 
@@ -53,8 +50,7 @@ public class MainActivity extends AppCompatActivity implements HOMEFragment.OnFr
         ft.replace(R.id.fragmentContainer, homeFragment);
         ft.commit();
 
-        bottomNavigationView = (BottomNavigationView)
-                findViewById(R.id.navigation);
+        bottomNavigationView = findViewById(R.id.navigation);
         if(nowPlayingFragment == null) bottomNavigationView.findViewById(R.id.navigation_player).setEnabled(false);
 
         bottomNavigationView.setOnNavigationItemSelectedListener(mOnNavigationItemSelectedListener);
@@ -70,14 +66,10 @@ public class MainActivity extends AppCompatActivity implements HOMEFragment.OnFr
         int uiOptions = View.SYSTEM_UI_FLAG_IMMERSIVE_STICKY | View.SYSTEM_UI_FLAG_HIDE_NAVIGATION | View.SYSTEM_UI_FLAG_FULLSCREEN;
         decorView.setSystemUiVisibility(uiOptions);
 
-        decorView.setOnSystemUiVisibilityChangeListener (new View.OnSystemUiVisibilityChangeListener() {
-            @Override
-            public void onSystemUiVisibilityChange(int visibility) {
-                decorView.setSystemUiVisibility(uiOptions);
-                ActionBar actionBar = getSupportActionBar();
-                actionBar.show();
-
-            }
+        decorView.setOnSystemUiVisibilityChangeListener (visibility -> {
+            decorView.setSystemUiVisibility(uiOptions);
+            ActionBar actionBar = getSupportActionBar();
+            actionBar.show();
         });
     }
 

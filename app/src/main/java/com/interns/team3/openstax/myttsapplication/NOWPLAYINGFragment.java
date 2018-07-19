@@ -6,7 +6,6 @@ import android.media.MediaPlayer;
 import android.net.Uri;
 import android.os.Bundle;
 import android.os.Environment;
-import android.support.design.widget.BottomNavigationView;
 import android.support.v4.app.Fragment;
 import android.util.Log;
 import android.view.Gravity;
@@ -79,7 +78,9 @@ public class NOWPLAYINGFragment extends Fragment {
         return fragment;
     }
 
-    public void setContext(Context c){ context = c;}
+    public void setContext(Context c) {
+        context = c;
+    }
 
 
     @Override
@@ -94,8 +95,7 @@ public class NOWPLAYINGFragment extends Fragment {
     }
 
     @Override
-    public View onCreateView(LayoutInflater inflater, ViewGroup container,
-                             Bundle savedInstanceState) {
+    public View onCreateView(LayoutInflater inflater, ViewGroup container, Bundle savedInstanceState) {
 
         View view = inflater.inflate(R.layout.fragment_nowplaying, container, false);
 
@@ -103,81 +103,66 @@ public class NOWPLAYINGFragment extends Fragment {
         titleView.setText(modTitle);
         titleView.setGravity(Gravity.CENTER_HORIZONTAL);
 
-        (getActivity()).setTitle("Now Playing");
-        ((MainActivity)getActivity()).getSupportActionBar().setHomeButtonEnabled(false);
-        ((MainActivity)getActivity()).getSupportActionBar().setDisplayHomeAsUpEnabled(false);
+        getActivity().setTitle("Now Playing");
+        ((MainActivity) getActivity()).getSupportActionBar().setHomeButtonEnabled(false);
+        ((MainActivity) getActivity()).getSupportActionBar().setDisplayHomeAsUpEnabled(false);
 
 
         // buttons
 
-        if(modId !="") {
+        if (!modId.equals("")) {
 
-            playButton = (ImageButton) view.findViewById(R.id.nowPlayButton);
+            playButton = view.findViewById(R.id.nowPlayButton);
 
-            playButton.setOnClickListener(new View.OnClickListener() {
+            playButton.setOnClickListener(v -> {
+                if (!forwardButton.isEnabled()) forwardButton.setEnabled(true);
+                if (!reverseButton.isEnabled()) reverseButton.setEnabled(true);
 
-                @Override
-                public void onClick(View v) {
-                    if (!forwardButton.isEnabled()) forwardButton.setEnabled(true);
-                    if (!reverseButton.isEnabled()) reverseButton.setEnabled(true);
+                if (playButton.getTag().equals("Play")) {
+                    playButton.setTag("Pause");
+                    playButton.setImageResource(R.drawable.pause);
+                    player.seekTo(player.getCurrentPosition() - 1);
+                    player.start();
 
-                    if (playButton.getTag().equals("Play")) {
+                } else {
+                    playButton.setTag("Play");
+                    playButton.setImageResource(R.drawable.play);
 
-                        playButton.setTag("Pause");
-                        playButton.setImageResource(R.drawable.pause);
-                        player.seekTo(player.getCurrentPosition() - 1);
-                        player.start();
-
-                    } else {
-                        playButton.setTag("Play");
-                        playButton.setImageResource(R.drawable.play);
-
-                        // Pause
-                        pauseTTS();
-                    }
+                    // Pause
+                    pauseTTS();
                 }
             });
 
-            forwardButton = (ImageButton) view.findViewById(R.id.nowForwardButton);
+            forwardButton = view.findViewById(R.id.nowForwardButton);
             forwardButton.setEnabled(true);
-            forwardButton.setOnClickListener(new View.OnClickListener() {
-                @Override
-                public void onClick(View v) {
-                    forwardTTS();
-                }
-            });
+            forwardButton.setOnClickListener(v -> forwardTTS());
 
-            reverseButton = (ImageButton) view.findViewById(R.id.nowReverseButton);
+            reverseButton = view.findViewById(R.id.nowReverseButton);
             reverseButton.setEnabled(true);
-            reverseButton.setOnClickListener(new View.OnClickListener() {
-                @Override
-                public void onClick(View v) {
-                    reverseTTS();
-                }
-            });
+            reverseButton.setOnClickListener(v -> reverseTTS());
 
             Log.i("Current Point", String.valueOf(currentPoint));
 
             if(currentPoint == -1) {
                 //player = new MediaPlayer(); <-- shouldn't be needed if player is "reset" in "playMergedFile"
                 setPlayButton("Pause");
-                String output = Environment.getExternalStorageDirectory().getAbsolutePath() + "/output" + modId + ".mp3";
+                String output = Environment.getExternalStorageDirectory().getAbsolutePath() + "/output/" + modId + ".mp3";
                 playMergedFile(output);
 
             } else {
                 boolean isPlaying = false;
-                try{ isPlaying= player.isPlaying(); } catch(Exception e) {e.printStackTrace();}
+                try {
+                    isPlaying= player.isPlaying();
+                } catch(Exception e) {
+                    e.printStackTrace();
+                }
 
                 // isPlaying is true regardless of whether player was "playing" or "paused"
-                if(isPlaying)
-                {
+                if (isPlaying) {
                     Log.i("isPlaying", "Meaning playButton was 'play'");
                     setPlayButton("Pause");
                     player.seekTo(player.getCurrentPosition());
-                }
-
-                else
-                {
+                } else {
                     Log.i("NOT isPlaying", "Meaning playButton was 'pause'");
                     setPlayButton("Play");
                     player.seekTo(currentPoint);
@@ -185,8 +170,7 @@ public class NOWPLAYINGFragment extends Fragment {
                 currentPoint = -1;
             }
 
-        }
-        else{
+        } else {
             LinearLayout nowPlayingBar = view.findViewById(R.id.nowPlayingBar);
             nowPlayingBar.setVisibility(View.GONE);
             ImageView nowPlayingImage = view.findViewById(R.id.nowPlayingImage);
@@ -210,16 +194,13 @@ public class NOWPLAYINGFragment extends Fragment {
         if (context instanceof OnFragmentInteractionListener) {
             mListener = (OnFragmentInteractionListener) context;
         } else {
-            throw new RuntimeException(context.toString()
-                    + " must implement OnFragmentInteractionListener");
+            throw new RuntimeException(context.toString() + " must implement OnFragmentInteractionListener");
         }
     }
 
 
     public void playMergedFile(String output) {
-
         player.reset();
-
 
         Uri uri = Uri.parse("file://" + output);
 
@@ -235,21 +216,14 @@ public class NOWPLAYINGFragment extends Fragment {
             e.printStackTrace();
         }
 
-        player.setOnPreparedListener(new MediaPlayer.OnPreparedListener() {
-            @Override
-            public void onPrepared(MediaPlayer mp) {
-                setPlayButton("Pause");
-                player.start();
-            }
+        player.setOnPreparedListener(mp -> {
+            setPlayButton("Pause");
+            player.start();
         });
 
-        player.setOnCompletionListener(new MediaPlayer.OnCompletionListener() {
-            @Override
-            public void onCompletion(MediaPlayer mp) {
-                Log.i("onCompletion", "When is media player stopped?");
-                //player.stop();
-
-            }
+        player.setOnCompletionListener(mp -> {
+            Log.i("onCompletion", "When is media player stopped?");
+            //player.stop();
         });
     }
 
@@ -275,12 +249,7 @@ public class NOWPLAYINGFragment extends Fragment {
         length = player.getCurrentPosition();
 
 
-        getActivity().runOnUiThread(new Runnable() {
-            @Override
-            public void run() {
-                setPlayButton("Play");
-            }
-        });
+        getActivity().runOnUiThread(() -> setPlayButton("Play"));
     }
 
     //Called by player bar fragment
@@ -312,12 +281,10 @@ public class NOWPLAYINGFragment extends Fragment {
     }
 
     public void setPlayButton(String s){
-        if(s.equals("Play"))
-        {
+        if (s.equals("Play")) {
             playButton.setTag("Play");
             playButton.setImageResource(R.drawable.play);
-        }
-        else{
+        } else {
             playButton.setTag("Pause");
             playButton.setImageResource(R.drawable.pause);
         }
@@ -325,13 +292,11 @@ public class NOWPLAYINGFragment extends Fragment {
 
     // when user wants to listen to a new audiobook
     public void setNewModule(String bookId, String modId, String modTitle){
-        this.bookId = bookId;
-        this.modId = modId;
-        this.modTitle = modTitle;
+        NOWPLAYINGFragment.bookId = bookId;
+        NOWPLAYINGFragment.modId = modId;
+        NOWPLAYINGFragment.modTitle = modTitle;
         currentPoint = -1;
         isPaused = false;
-
-
     }
 
 
@@ -339,15 +304,11 @@ public class NOWPLAYINGFragment extends Fragment {
     public void onPause(){
         super.onPause();
 
-        if(modId != "" && player != null) {
+        if(!modId.equals("") && player != null) {
             try {
                 currentPoint = player.getCurrentPosition();
                 Log.i("Current point upon pausing", String.valueOf(currentPoint));
-                if (playButton.getTag().equals("Play")) {
-                    isPaused = true;
-                } else {
-                    isPaused = false;
-                }
+                isPaused = playButton.getTag().equals("Play");
             } catch (Exception e) {
                 e.printStackTrace();
                 currentPoint = -1;
@@ -358,7 +319,7 @@ public class NOWPLAYINGFragment extends Fragment {
     }
 
     @Override
-    public void onSaveInstanceState(Bundle outState){
+    public void onSaveInstanceState(Bundle outState) {
         super.onSaveInstanceState(outState);
     }
 

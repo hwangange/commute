@@ -24,6 +24,7 @@ import java.io.IOException;
 import java.io.InputStreamReader;
 import java.text.DecimalFormat;
 import java.util.ArrayList;
+import java.util.List;
 
 //import static com.interns.team3.openstax.myttsapplication.demo.*;
 
@@ -38,7 +39,7 @@ public class TableOfContentsFragment extends Fragment {
 
     private TextView mTextMessage;
     private ContentAdapter adapter;
-    private ArrayList<Content> dataSet;
+    private List<Content> dataSet;
 
     private RecyclerView recyclerView;
     private RecyclerView.LayoutManager layoutManager;
@@ -93,21 +94,18 @@ public class TableOfContentsFragment extends Fragment {
 
 
         // Construct the data source
-        dataSet = new ArrayList<Content>();
+        dataSet = new ArrayList<>();
         // Create the adapter to convert the array to views
-        adapter = new ContentAdapter(dataSet, new ContentAdapter.ContentOnClickListener() {
-            @Override
-            public void onClick(View v) {
-                String modId = ((TextView) v.findViewById(R.id.modID)).getText().toString();
-                String modTitle = ((TextView) v.findViewById(R.id.modTitle)).getText().toString();
-                //Toast.makeText(getApplicationContext(), targetId, Toast.LENGTH_SHORT).show();
+        adapter = new ContentAdapter(dataSet, v -> {
+            String modId = ((TextView) v.findViewById(R.id.modID)).getText().toString();
+            String modTitle = ((TextView) v.findViewById(R.id.modTitle)).getText().toString();
+            //Toast.makeText(getApplicationContext(), targetId, Toast.LENGTH_SHORT).show();
 
-                ((HOMEFragment)getParentFragment()).sendModuleInfo(bookId, bookTitle, modId, modTitle);
-            }
+            ((HOMEFragment)getParentFragment()).sendModuleInfo(bookId, bookTitle, modId, modTitle);
         });
 
         // Attach the adapter to a ListView
-        recyclerView= (RecyclerView) view.findViewById(R.id.my_recycler_view);
+        recyclerView= view.findViewById(R.id.my_recycler_view);
         recyclerView.setAdapter(adapter);
 
         layoutManager = new GridLayoutManager(getContext(), 1);
@@ -138,55 +136,29 @@ public class TableOfContentsFragment extends Fragment {
 
     private class AddItemsTask extends AsyncTask<String, Integer, String> {
 
-        ArrayList<Content> temp = new ArrayList<Content>();
+        List<Content> temp = new ArrayList<Content>();
 
         @Override
         protected String doInBackground(String... ary) {
-
             try {
-                StringBuilder buf=new StringBuilder();
-                InputStreamReader inputStream = new InputStreamReader((getActivity()).getAssets().open("Books/"+bookId+"/collection.xml"));
-                BufferedReader bufferedReader = new BufferedReader(inputStream);
-                String str;
-                while ((str=bufferedReader.readLine()) != null) {
-                    buf.append(str);
-                }
-                Document doc = Jsoup.parse(buf.toString());
+                AudioBook book = new AudioBook(getContext(), bookId);
+                Elements chapters = book.getChapters();
 
+                int chapterNum = 1;
+                for (Element chapter : chapters) {
+                    String subTitle = chapter.getElementsByTag("md:title").first().ownText();
+                    temp.add(new Content.Chapter(subTitle, "0", String.valueOf(chapterNum)));
+                    Elements modules = book.getChapterModules(chapter);
 
-                String title = doc.title();
-
-                Element body = doc.body();
-                Elements subcollections = body.getElementsByTag("col:subcollection");
-
-                float num= 0; // track chapter number
-
-                for (Element sub : subcollections) {
-
-                    num = Math.round(Math.floor(num+1));
-
-                    String subTitle = sub.getElementsByTag("md:title").first().ownText();
-                    df = new DecimalFormat("#");
-                    String chapNum = df.format(num);
-
-                    temp.add(new Content.Chapter(subTitle, "0", chapNum));
-
-                    Elements modules = sub.getElementsByTag("col:module");
+                    int modNum = 0;
                     for (Element mod : modules) {
-
-                        String modTitle = mod.getElementsByTag("md:title").first().ownText();
-                        if(!(modTitle.equals("Introduction"))) num += 0.1;
-                        String modID = mod.attributes().get("document");
-
-                        df = new DecimalFormat("0.#");
-                        String modChapter = df.format(num);
-
-                        temp.add(new Content.Module(modTitle, modID, modChapter));
+                        String chapModNum = chapterNum + "." + modNum;
+                        temp.add(book.getModule(mod, chapModNum));
+                        modNum++;
                     }
-
-
+                    chapterNum++;
                 }
-            } catch(IOException e ){
+            } catch(Exception e ){
                 e.printStackTrace();
             }
 
@@ -202,9 +174,12 @@ public class TableOfContentsFragment extends Fragment {
 
         @Override
         protected void onPostExecute(String result) {
-            for(Content c : temp){
-                if(c instanceof Content.Module) dataSet.add(new Content.Module((Content.Module) c));
-                else if(c instanceof Content.Chapter) dataSet.add(new Content.Chapter((Content.Chapter)c));
+            for(Content c : temp) {
+                if (c instanceof Content.Module) {
+                    dataSet.add(new Content.Module((Content.Module) c));
+                } else if (c instanceof Content.Chapter) {
+                    dataSet.add(new Content.Chapter((Content.Chapter) c));
+                }
                 adapter.notifyDataSetChanged();
             }
             Log.i("onPostExecute", "Done");

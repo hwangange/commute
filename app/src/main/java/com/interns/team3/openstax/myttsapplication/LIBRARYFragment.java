@@ -66,8 +66,8 @@ public class LIBRARYFragment extends Fragment {
     public View onCreateView(LayoutInflater inflater, ViewGroup container,
                              Bundle savedInstanceState) {
         (getActivity()).setTitle("My Library");
-        ((MainActivity)getActivity()).getSupportActionBar().setHomeButtonEnabled(false);
-        ((MainActivity)getActivity()).getSupportActionBar().setDisplayHomeAsUpEnabled(false);
+        ((MainActivity) getActivity()).getSupportActionBar().setHomeButtonEnabled(false);
+        ((MainActivity) getActivity()).getSupportActionBar().setDisplayHomeAsUpEnabled(false);
         // Inflate the layout for this fragment
         return inflater.inflate(R.layout.fragment_library, container, false);
     }
@@ -85,8 +85,7 @@ public class LIBRARYFragment extends Fragment {
         if (context instanceof OnFragmentInteractionListener) {
             mListener = (OnFragmentInteractionListener) context;
         } else {
-            throw new RuntimeException(context.toString()
-                    + " must implement OnFragmentInteractionListener");
+            throw new RuntimeException(context.toString() + " must implement OnFragmentInteractionListener");
         }
     }
 

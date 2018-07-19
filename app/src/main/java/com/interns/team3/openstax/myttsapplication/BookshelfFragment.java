@@ -16,6 +16,7 @@ import android.widget.TextView;
 
 import java.io.IOException;
 import java.util.ArrayList;
+import java.util.List;
 
 public class BookshelfFragment extends Fragment {
 
@@ -27,7 +28,7 @@ public class BookshelfFragment extends Fragment {
     private OnFragmentInteractionListener mListener;
 
     private ContentAdapter adapter;
-    private ArrayList<Content> dataSet;
+    private List<Content> dataSet;
 
     private RecyclerView recyclerView;
     private RecyclerView.LayoutManager layoutManager;
@@ -62,15 +63,13 @@ public class BookshelfFragment extends Fragment {
         }
         setHasOptionsMenu(false);
         // Customize action bar
-        (getActivity()).setTitle("OpenStax Commute");
-        ((MainActivity)getActivity()).getSupportActionBar().setHomeButtonEnabled(false);
-        ((MainActivity)getActivity()).getSupportActionBar().setDisplayHomeAsUpEnabled(false);
+        getActivity().setTitle("OpenStax Commute");
+        ((MainActivity) getActivity()).getSupportActionBar().setHomeButtonEnabled(false);
+        ((MainActivity) getActivity()).getSupportActionBar().setDisplayHomeAsUpEnabled(false);
     }
 
     @Override
-    public View onCreateView(LayoutInflater inflater, ViewGroup container,
-                             Bundle savedInstanceState) {
-
+    public View onCreateView(LayoutInflater inflater, ViewGroup container, Bundle savedInstanceState) {
         // Inflate the layout for this fragment
         View view = inflater.inflate(R.layout.fragment_bookshelf, container, false);
         Log.i("Bookshelf", "onCreateView");
@@ -79,23 +78,20 @@ public class BookshelfFragment extends Fragment {
             Log.i("Bookshelf", "onCreateView, savedInstanceState is null");
 
             // Construct the data source
-            dataSet = new ArrayList<Content>();
+            dataSet = new ArrayList<>();
             // Create the adapter to convert the array to views
-            adapter = new ContentAdapter(dataSet, new ContentAdapter.ContentOnClickListener() {
-                @Override
-                public void onClick(View v) {
-                    String targetId = ((TextView) v.findViewById(R.id.book_id)).getText().toString();
-                    String targetTitle = ((TextView) v.findViewById(R.id.book_title)).getText().toString();
-                    //Toast.makeText(getApplicationContext(), targetId, Toast.LENGTH_SHORT).show();
+            adapter = new ContentAdapter(dataSet, v -> {
+                String targetId = ((TextView) v.findViewById(R.id.book_id)).getText().toString();
+                String targetTitle = ((TextView) v.findViewById(R.id.book_title)).getText().toString();
+                //Toast.makeText(getApplicationContext(), targetId, Toast.LENGTH_SHORT).show();
 
-                    ((HOMEFragment) getParentFragment()).sendBookInfo(targetId, targetTitle);
-                }
+                ((HOMEFragment) getParentFragment()).sendBookInfo(targetId, targetTitle);
             });
 
             adapter.setContext(view.getContext());
 
             // Attach the adapter to a ListView
-            recyclerView = (RecyclerView) view.findViewById(R.id.book_recycler_view);
+            recyclerView = view.findViewById(R.id.book_recycler_view);
             recyclerView.setAdapter(adapter);
 
             // use a GRID layout manager
@@ -115,9 +111,9 @@ public class BookshelfFragment extends Fragment {
 
     public void addItems(){
 
-        try{
+        try {
             String[] bookTitles = getContext().getAssets().list("Books");
-            for(String s : bookTitles){
+            for (String s : bookTitles) {
                 dataSet.add(new Content.Book(s, s));
             }
 
@@ -132,8 +128,7 @@ public class BookshelfFragment extends Fragment {
         if (context instanceof BookshelfFragment.OnFragmentInteractionListener) {
             mListener = (BookshelfFragment.OnFragmentInteractionListener) context;
         } else {
-            throw new RuntimeException(context.toString()
-                    + " must implement OnFragmentInteractionListener");
+            throw new RuntimeException(context.toString() + " must implement OnFragmentInteractionListener");
         }
     }
 
@@ -151,7 +146,6 @@ public class BookshelfFragment extends Fragment {
         (getActivity()).setTitle("OpenStax Commute");
         ((MainActivity)getActivity()).getSupportActionBar().setHomeButtonEnabled(false);
         ((MainActivity)getActivity()).getSupportActionBar().setDisplayHomeAsUpEnabled(false);
-
     }
 
     /**

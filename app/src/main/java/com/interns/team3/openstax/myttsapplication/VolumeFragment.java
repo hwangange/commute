@@ -1,14 +1,10 @@
 package com.interns.team3.openstax.myttsapplication;
 
-import android.app.AlertDialog;
-import android.app.Dialog;
 import android.content.Context;
-import android.content.DialogInterface;
 import android.net.Uri;
 import android.os.Bundle;
 import android.support.v4.app.DialogFragment;
 import android.support.v4.app.Fragment;
-import android.util.Log;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
@@ -73,32 +69,25 @@ public class VolumeFragment extends DialogFragment {
     }
 
     @Override
-    public View onCreateView(LayoutInflater inflater, ViewGroup container,
-                             Bundle savedInstanceState) {
+    public View onCreateView(LayoutInflater inflater, ViewGroup container, Bundle savedInstanceState) {
         // Inflate the layout for this fragment
         View view = inflater.inflate(R.layout.fragment_volume, container, false);
 
-        okButton = (Button) view.findViewById(R.id.okButton);
-        cancelButton = (Button) view.findViewById(R.id.cancelButton);
-        volumeSeekBar = (SeekBar) view.findViewById(R.id.volumeSeekBar);
+        okButton = view.findViewById(R.id.okButton);
+        cancelButton = view.findViewById(R.id.cancelButton);
+        volumeSeekBar = view.findViewById(R.id.volumeSeekBar);
         volumeSeekBar.setProgress(volume);
 
-        okButton.setOnClickListener(new View.OnClickListener(){
-            @Override
-            public void onClick(View v){
+        okButton.setOnClickListener(v -> {
+            int progressValue = volumeSeekBar.getProgress();
+            float volumeValue = (float)(Math.log(maxVolume - volumeSeekBar.getProgress())/Math.log(maxVolume));
 
-                int progressValue = volumeSeekBar.getProgress();
-                float volumeValue = (float)(Math.log(maxVolume - volumeSeekBar.getProgress())/Math.log(maxVolume));
-
-                ((TextbookViewFragment)((PlayerBarFragment) getParentFragment()).getParentFragment()).setVolume(1 - volumeValue);
-                ((PlayerBarFragment) getParentFragment()).setVolume(progressValue);
-                dismiss();
-            }
+            ((TextbookViewFragment) getParentFragment().getParentFragment()).setVolume(1 - volumeValue);
+            ((PlayerBarFragment) getParentFragment()).setVolume(progressValue);
+            dismiss();
         });
 
-        cancelButton.setOnClickListener(new View.OnClickListener(){
-            @Override
-            public void onClick(View v){    dismiss();  }  });
+        cancelButton.setOnClickListener(v -> dismiss());
 
         return view;
 
@@ -117,8 +106,7 @@ public class VolumeFragment extends DialogFragment {
         if (context instanceof OnFragmentInteractionListener) {
             mListener = (OnFragmentInteractionListener) context;
         } else {
-            throw new RuntimeException(context.toString()
-                    + " must implement OnFragmentInteractionListener");
+            throw new RuntimeException(context.toString() + " must implement OnFragmentInteractionListener");
         }
     }
 
