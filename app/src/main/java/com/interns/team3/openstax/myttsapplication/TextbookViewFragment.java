@@ -200,6 +200,15 @@ public class TextbookViewFragment extends Fragment implements PlayerBarFragment.
         // Inflate the layout for this fragment
         View view = inflater.inflate(R.layout.fragment_textbook_view, container, false);
 
+        // Audio Player Bar
+        fragmentManager = getChildFragmentManager();
+
+        //Add player bar fragment to this activity
+        FragmentTransaction ft = fragmentManager.beginTransaction();
+        playerBarFragment = PlayerBarFragment.newInstance(tempDataSet.size());
+        ft.add(R.id.playbar_container, playerBarFragment);
+        ft.commit();
+
         is_paused = false;
 
         recyclerView = (RecyclerView) view.findViewById(R.id.my_recycler_view);
@@ -229,8 +238,12 @@ public class TextbookViewFragment extends Fragment implements PlayerBarFragment.
                 int target = customScrollListener.getTarget();
                 //Log.i("excellent", "In scrollVerticallyBy\t" + "Position: " + String.valueOf(target));
 
+
+
                 int front = findFirstVisibleItemPosition();
                 int back = findLastVisibleItemPosition();
+
+                playerBarFragment.setSeekbarProgress(front);
 
                 if ( target >=front && target <=back) {
                    // Log.i("Target is visible", "Target is not -1!!");
@@ -313,14 +326,6 @@ public class TextbookViewFragment extends Fragment implements PlayerBarFragment.
         }
 
 
-        // Audio Player Bar
-        fragmentManager = getChildFragmentManager();
-
-        //Add player bar fragment to this activity
-        FragmentTransaction ft = fragmentManager.beginTransaction();
-        playerBarFragment = PlayerBarFragment.newInstance("","");
-        ft.add(R.id.playbar_container, playerBarFragment);
-        ft.commit();
 
         return view;
 
@@ -427,6 +432,29 @@ public class TextbookViewFragment extends Fragment implements PlayerBarFragment.
 
     }
 
+
+    /**
+     * Find the first item whose top is underneath the action bar (that would be ok to read without needing to scroll.)
+     * */
+    public int getActualFirstVisibleItem(){
+        int first = layoutManager.findFirstCompletelyVisibleItemPosition();
+        int last = layoutManager.findLastCompletelyVisibleItemPosition();
+
+        int index = layoutManager.findFirstVisibleItemPosition();
+        int guaranteedLast = layoutManager.findLastVisibleItemPosition();
+
+        while(index <= guaranteedLast){
+            View v = layoutManager.findViewByPosition(index);
+            // removed the last condition from that in checkIfVisible.
+            if((v == null) || (v !=null && v.getTop() < 0))
+                index ++;
+            else return index;
+        }
+
+        return last;
+    }
+
+
     /**
      * Scroll to selected text block if it is not visible. Otherwise, proceed to read it aloud (call readText).
      * @param position
@@ -475,8 +503,6 @@ public class TextbookViewFragment extends Fragment implements PlayerBarFragment.
             TextView tv = v.findViewById(R.id.item);
             TextChunk tc = dataSet.get(position);
             final String text = Jsoup.parse(tc.getText()).text();
-
-            tc.setSelected(true);
 
 
             getActivity().runOnUiThread(new Runnable() {
@@ -655,8 +681,6 @@ public class TextbookViewFragment extends Fragment implements PlayerBarFragment.
 
         final int position = Integer.parseInt(pos);
 
-        dataSet.get(position).setSelected(false);
-
         getActivity().runOnUiThread(new Runnable() {
             @Override
             public void run() {
@@ -787,6 +811,35 @@ public class TextbookViewFragment extends Fragment implements PlayerBarFragment.
                 }
             });
         }
+    }
+
+    //Called by player bar fragment - seek bar
+    public void onDragStart(int position){ ;
+        if (player.isPlaying())
+            player.stop();
+        int former_position = getSelected();
+        backToNormal(String.valueOf(former_position));
+        adapter.setSelected(-1);
+
+
+    }
+
+    //Called by player bar fragment - seek bar
+    public void onDragStop(int position){
+        int start = getActualFirstVisibleItem();
+        //int start = layoutManager.findFirstVisibleItemPosition();
+        if(start == -1) Log.e("Invalid position", "getActualFirstVisibleItem returned -1");
+        adapter.setSelected(start);
+        readText(start);
+
+    }
+
+    //Called by player bar fragment - seek bar
+    public void showChange(int position){
+
+        //adapter.setSelected(position);
+        recyclerView.scrollToPosition(position);
+
     }
 
     //Called by volume fragment
@@ -1108,6 +1161,9 @@ public class TextbookViewFragment extends Fragment implements PlayerBarFragment.
     public void onResume(){
         super.onResume();
         getActivity().invalidateOptionsMenu();
+
+        playerBarFragment.setSeekbarProgress(getActualFirstVisibleItem());
+
     }
 
 }

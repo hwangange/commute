@@ -6,6 +6,7 @@ import android.media.MediaPlayer;
 import android.net.Uri;
 import android.os.Bundle;
 import android.os.Environment;
+import android.os.Handler;
 import android.support.design.widget.BottomNavigationView;
 import android.support.v4.app.Fragment;
 import android.util.Log;
@@ -16,6 +17,7 @@ import android.view.ViewGroup;
 import android.widget.ImageButton;
 import android.widget.ImageView;
 import android.widget.LinearLayout;
+import android.widget.SeekBar;
 import android.widget.TextView;
 
 
@@ -48,6 +50,10 @@ public class NOWPLAYINGFragment extends Fragment {
     private OnFragmentInteractionListener mListener;
 
     private ImageButton playButton, forwardButton, reverseButton;
+    private SeekBar seekbar;
+    private Handler handler = new Handler();
+
+    private int endTime; // duration of file
 
     public NOWPLAYINGFragment() {
         // Required empty public constructor
@@ -156,17 +162,51 @@ public class NOWPLAYINGFragment extends Fragment {
                 }
             });
 
+            seekbar = (SeekBar)view.findViewById(R.id.nowPlayingSeekbar);
+            seekbar.setOnSeekBarChangeListener(new SeekBar.OnSeekBarChangeListener() {
+                int progressvalue = 0;
+                @Override
+                public void onProgressChanged(SeekBar seekBar, int progress, boolean fromUser) {
+                    progressvalue = progress;
+                    //((TextbookViewFragment) getParentFragment()).showChange(progressvalue);
+
+
+                }
+
+                @Override
+                public void onStartTrackingTouch(SeekBar seekBar) {
+                    //((TextbookViewFragment) getParentFragment()).onDragStart(progressvalue);
+
+
+                }
+
+                @Override
+                public void onStopTrackingTouch(SeekBar seekBar) {
+                    //((TextbookViewFragment) getParentFragment()).goScrubber(progressvalue);
+                    seekbar.setProgress(progressvalue);
+                    player.seekTo(progressvalue);
+
+
+                }
+            });
+
+
             Log.i("Current Point", String.valueOf(currentPoint));
 
             if(currentPoint == -1) {
                 //player = new MediaPlayer(); <-- shouldn't be needed if player is "reset" in "playMergedFile"
                 setPlayButton("Pause");
+
+
                 String output = Environment.getExternalStorageDirectory().getAbsolutePath() + "/output" + modId + ".mp3";
                 playMergedFile(output);
 
             } else {
                 boolean isPlaying = false;
                 try{ isPlaying= player.isPlaying(); } catch(Exception e) {e.printStackTrace();}
+                endTime = player.getDuration();
+                seekbar.setMax(endTime);
+                seekbar.setProgress((int) currentPoint);
 
                 // isPlaying is true regardless of whether player was "playing" or "paused"
                 if(isPlaying)
@@ -182,12 +222,17 @@ public class NOWPLAYINGFragment extends Fragment {
                     setPlayButton("Play");
                     player.seekTo(currentPoint);
                 }
+
                 currentPoint = -1;
             }
+
+            handler.postDelayed(UpdateAudioTime,100);
 
         }
         else{
             LinearLayout nowPlayingBar = view.findViewById(R.id.nowPlayingBar);
+            seekbar = (SeekBar)view.findViewById(R.id.nowPlayingSeekbar);
+            seekbar.setVisibility(View.GONE);
             nowPlayingBar.setVisibility(View.GONE);
             ImageView nowPlayingImage = view.findViewById(R.id.nowPlayingImage);
             nowPlayingImage.setVisibility(View.GONE);
@@ -240,6 +285,9 @@ public class NOWPLAYINGFragment extends Fragment {
             public void onPrepared(MediaPlayer mp) {
                 setPlayButton("Pause");
                 player.start();
+                endTime = player.getDuration();
+                seekbar.setMax(endTime);
+                seekbar.setProgress(0);
             }
         });
 
@@ -247,6 +295,9 @@ public class NOWPLAYINGFragment extends Fragment {
             @Override
             public void onCompletion(MediaPlayer mp) {
                 Log.i("onCompletion", "When is media player stopped?");
+                setPlayButton("Play");
+                forwardButton.setEnabled(false);
+                reverseButton.setEnabled(false);
                 //player.stop();
 
             }
@@ -332,6 +383,7 @@ public class NOWPLAYINGFragment extends Fragment {
         isPaused = false;
 
 
+
     }
 
 
@@ -378,6 +430,15 @@ public class NOWPLAYINGFragment extends Fragment {
     public String getModule() {
         return modId;
     }
+
+    private Runnable UpdateAudioTime = new Runnable() {
+        public void run() {
+            currentPoint = player.getCurrentPosition();
+
+            seekbar.setProgress((int)currentPoint);
+            handler.postDelayed(this, 100);
+        }
+    };
 
 
 }
