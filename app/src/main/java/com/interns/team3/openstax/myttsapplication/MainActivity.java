@@ -1,6 +1,7 @@
 package com.interns.team3.openstax.myttsapplication;
 
 
+import android.media.MediaPlayer;
 import android.net.Uri;
 import android.support.annotation.NonNull;
 import android.support.design.widget.BottomNavigationView;
@@ -17,6 +18,9 @@ import android.view.View;
 import android.view.Window;
 
 public class MainActivity extends AppCompatActivity implements HOMEFragment.OnFragmentInteractionListener, LIBRARYFragment.OnFragmentInteractionListener, BookshelfFragment.OnFragmentInteractionListener, TableOfContentsFragment.OnFragmentInteractionListener, TextbookViewFragment.OnFragmentInteractionListener, PlayerBarFragment.OnFragmentInteractionListener, VolumeFragment.OnFragmentInteractionListener, NOWPLAYINGFragment.OnFragmentInteractionListener {
+
+
+    //private MediaRouteSelector mSelector;
 
     public FragmentManager fragmentManager;
     public HOMEFragment homeFragment;

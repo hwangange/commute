@@ -2,6 +2,7 @@ package com.interns.team3.openstax.myttsapplication;
 
 import android.content.Context;
 import android.content.SharedPreferences;
+import android.media.MediaPlayer;
 import android.net.Uri;
 import android.os.Bundle;
 import android.os.Environment;
@@ -46,6 +47,8 @@ public class LIBRARYFragment extends Fragment {
     private OnFragmentInteractionListener mListener;
 
     private SectionedRecyclerViewAdapter sectionAdapter;
+
+
 
     public LIBRARYFragment() {
         // Required empty public constructor
@@ -98,25 +101,19 @@ public class LIBRARYFragment extends Fragment {
         SharedPreferences sharedPreferences = getContext().getSharedPreferences("library", 0);
         HashSet<String> faves = (HashSet<String>) sharedPreferences.getStringSet("favorites", new HashSet<String>());
         ArrayList<String> favorites_dataSet = new ArrayList<String>();
-        for(String s : faves) favorites_dataSet.add(s);
-        Log.i("favorites_dataSet size", String.valueOf(favorites_dataSet.size()));
+        for(String s : faves)
+        {
+            String[] ary = s.split("_");
+            favorites_dataSet.add(ary[1]); // 1st element is the title
+        }
 
         /* Finding Downloads */
-        File file = Environment.getExternalStorageDirectory();
-        ArrayList<String> downloads_dataSet= new ArrayList<String>();
-        File listFile[] = file.listFiles();
-
-        if (listFile != null) {
-            for (int i = 0; i < listFile.length; i++) {
-
-                if (!listFile[i].isDirectory()) { // in the future, may have to make a recursive function to take care of directories.
-                    // if the array element were a directory, call this function again with the element as input
-                    String filepath = listFile[i].getAbsolutePath();
-                    if(filepath.contains("output"))
-                    downloads_dataSet.add(filepath.substring(filepath.indexOf("output")+6, filepath.indexOf(".mp3")));
-
-                }
-            }
+        HashSet<String> downloads = (HashSet<String>) sharedPreferences.getStringSet("downloads", new HashSet<String>());
+        ArrayList<String> downloads_dataSet = new ArrayList<String>();
+        for(String s : downloads)
+        {
+            String[] ary = s.split("_");
+            downloads_dataSet.add(ary[1]); // 1st element is the title
         }
 
 
@@ -154,7 +151,14 @@ public class LIBRARYFragment extends Fragment {
     @Override
     public void onDetach() {
         super.onDetach();
+
         mListener = null;
+    }
+
+    @Override
+    public void onDestroy(){
+
+        super.onDestroy();
     }
 
 

@@ -109,6 +109,7 @@ public class TextbookViewFragment extends Fragment implements PlayerBarFragment.
 
     public MenuItem download, playMerged, favorite;
     public boolean makeDownloadAvailable = true;
+    public String tag;
 
     // required empty constructor
     public TextbookViewFragment(){}
@@ -144,6 +145,7 @@ public class TextbookViewFragment extends Fragment implements PlayerBarFragment.
             modTitle = getArguments().getString(ARG_MOD_TITLE);
             modId = getArguments().getString(ARG_MOD_ID);
             bookId = getArguments().getString(ARG_BOOK_ID);
+            tag = bookId+"_"+modTitle+"_"+modId;
         }
 
         // Utterance Progress Listener
@@ -1055,7 +1057,12 @@ public class TextbookViewFragment extends Fragment implements PlayerBarFragment.
         menu.findItem(R.id.play_download).setVisible(true);
         menu.findItem(R.id.favorite).setVisible(true);
 
+        //Shared Preferences
+        SharedPreferences sharedPreferences = context.getSharedPreferences("library", 0);
+        SharedPreferences.Editor editor = sharedPreferences.edit();
+
         String output = Environment.getExternalStorageDirectory().getAbsolutePath() + "/output"+modId+".mp3";
+        Log.e("ORIGINAL output", output);
         playMerged = menu.findItem(R.id.play_download);
         playMerged.setOnMenuItemClickListener(new MenuItem.OnMenuItemClickListener(){
             @Override
@@ -1077,7 +1084,18 @@ public class TextbookViewFragment extends Fragment implements PlayerBarFragment.
         download.setOnMenuItemClickListener(new MenuItem.OnMenuItemClickListener(){
             @Override
             public boolean onMenuItemClick(MenuItem m){
-                try{ download(output); } catch (IOException e){Log.i("IOException", "Can't download");}
+                try{
+                    download(output);
+                    makeDownloadAvailable = false;
+                    download.setEnabled(false);
+
+                    HashSet<String> downloads = (HashSet<String>) sharedPreferences.getStringSet("downloads", new HashSet<String>());
+                    HashSet<String> newDownloads = new HashSet<String>(downloads);
+                    newDownloads.add(tag);
+                    editor.putStringSet("downloads", newDownloads); // hopefully this replaces the old downloads set
+                    editor.commit();
+
+                } catch (IOException e){Log.i("IOException", "Can't download");}
                 return true;
             }
         });
@@ -1094,12 +1112,9 @@ public class TextbookViewFragment extends Fragment implements PlayerBarFragment.
         }
 
         // Shared Preferences
-        SharedPreferences sharedPreferences = context.getSharedPreferences("library", 0);
         HashSet<String> faves = (HashSet<String>) sharedPreferences.getStringSet("favorites", null);
-        SharedPreferences.Editor editor = sharedPreferences.edit();
         if(faves == null)  // no favorites yet
         {
-
             editor.putStringSet("favorites", new HashSet<String>());
             editor.commit();
         }
@@ -1117,6 +1132,7 @@ public class TextbookViewFragment extends Fragment implements PlayerBarFragment.
     }
 
     public void setFavoriteIconColor(boolean shouldToggle){
+
         // Shared Preferences
         SharedPreferences sharedPreferences = context.getSharedPreferences("library", 0);
         HashSet<String> faves = (HashSet<String>) sharedPreferences.getStringSet("favorites", new HashSet<String>());
@@ -1125,17 +1141,17 @@ public class TextbookViewFragment extends Fragment implements PlayerBarFragment.
         // create a duplicate HashSet of the current faves set
         HashSet<String> newFaves = new HashSet<String>(faves);
 
-        if((faves.contains(modId) && shouldToggle) || (!faves.contains(modId) && !shouldToggle)) {
+        if((faves.contains(tag) && shouldToggle) || (!faves.contains(tag) && !shouldToggle)) {
             // change the module to NOT favorited
             Drawable icon = favorite.getIcon();
             icon.setColorFilter(context.getColor(R.color.white), PorterDuff.Mode.SRC_ATOP);
-            newFaves.remove(modId);
+            newFaves.remove(tag);
 
-        } else if((!faves.contains(modId) && shouldToggle) || (faves.contains(modId) && !shouldToggle )){
+        } else if((!faves.contains(tag) && shouldToggle) || (faves.contains(tag) && !shouldToggle )){
             // Change the module to favorited
             Drawable icon = favorite.getIcon();
             icon.setColorFilter(context.getColor(R.color.colorAccent), PorterDuff.Mode.SRC_ATOP);
-            newFaves.add(modId);
+            newFaves.add(tag);
 
         }
         String output = ":) \t";

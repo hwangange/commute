@@ -53,6 +53,7 @@ public class NOWPLAYINGFragment extends Fragment {
     private SeekBar seekbar;
     private Handler handler = new Handler();
 
+
     private int endTime; // duration of file
 
     public NOWPLAYINGFragment() {
@@ -96,6 +97,7 @@ public class NOWPLAYINGFragment extends Fragment {
             Log.i("modTitle", "|" + modTitle + "|");
             modId = getArguments().getString(ARG_MOD_ID);
             bookId = getArguments().getString(ARG_BOOK_ID);
+
         }
     }
 
@@ -199,6 +201,7 @@ public class NOWPLAYINGFragment extends Fragment {
 
 
                 String output = Environment.getExternalStorageDirectory().getAbsolutePath() + "/output" + modId + ".mp3";
+                Log.e("NOW output", output);
                 playMergedFile(output);
 
             } else {
