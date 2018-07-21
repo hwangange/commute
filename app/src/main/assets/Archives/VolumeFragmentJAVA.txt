@@ -91,7 +91,7 @@ public class VolumeFragment extends DialogFragment {
                 float volumeValue = (float)(Math.log(maxVolume - volumeSeekBar.getProgress())/Math.log(maxVolume));
 
                 ((TextbookViewFragment)((PlayerBarFragment) getParentFragment()).getParentFragment()).setVolume(1 - volumeValue);
-                ((PlayerBarFragment) getParentFragment()).setVolume(progressValue);
+                ((com.interns.team3.openstax.myttsapplication.OldPlayerBarFragment) getParentFragment()).setVolume(progressValue);
                 dismiss();
             }
         });

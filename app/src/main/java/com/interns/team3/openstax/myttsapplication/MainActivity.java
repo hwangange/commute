@@ -18,6 +18,8 @@ import android.support.v4.app.FragmentTransaction;
 import android.support.v7.app.ActionBar;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
+import android.support.v7.widget.RecyclerView;
+import android.support.v7.widget.Toolbar;
 import android.text.Html;
 import android.text.method.LinkMovementMethod;
 import android.util.Log;
@@ -41,7 +43,7 @@ import java.util.Arrays;
 import java.util.HashSet;
 import java.util.List;
 
-public class MainActivity extends AppCompatActivity implements HOMEFragment.OnFragmentInteractionListener, LIBRARYFragment.OnFragmentInteractionListener, BookshelfFragment.OnFragmentInteractionListener, TableOfContentsFragment.OnFragmentInteractionListener, TextbookViewFragment.OnFragmentInteractionListener, PlayerBarFragment.OnFragmentInteractionListener, VolumeFragment.OnFragmentInteractionListener, NOWPLAYINGFragment.OnFragmentInteractionListener {
+public class MainActivity extends AppCompatActivity implements HOMEFragment.OnFragmentInteractionListener, LIBRARYFragment.OnFragmentInteractionListener, BookshelfFragment.OnFragmentInteractionListener, TableOfContentsFragment.OnFragmentInteractionListener, TextbookViewFragment.OnFragmentInteractionListener, PlayerBarFragment.OnFragmentInteractionListener, NOWPLAYINGFragment.OnFragmentInteractionListener {
 
     private static final String TAG = "MainActivity";
 
@@ -58,6 +60,7 @@ public class MainActivity extends AppCompatActivity implements HOMEFragment.OnFr
     public LIBRARYFragment libraryFragment;
     public NOWPLAYINGFragment nowPlayingFragment;
     public TextbookViewFragment textbookViewFragment;
+    public PlayerBarFragment playerBarFragment;
 
     public BottomNavigationView bottomNavigationView;
 
@@ -78,18 +81,23 @@ public class MainActivity extends AppCompatActivity implements HOMEFragment.OnFr
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
+        setSupportActionBar((Toolbar) findViewById(R.id.main_toolbar));
 
         fragmentManager = getSupportFragmentManager();
         libraryFragment = LIBRARYFragment.newInstance("","");
-        nowPlayingFragment = NOWPLAYINGFragment.newInstance("Select a module to play!","","", getApplicationContext());
-        textbookViewFragment = TextbookViewFragment.newInstance("Select a module~", "", "", this);
+        nowPlayingFragment = NOWPLAYINGFragment.newInstance("Select a module to play!","","");
+        textbookViewFragment = TextbookViewFragment.newInstance("Select a module~", "", "");
+        playerBarFragment = PlayerBarFragment.newInstance("Select a module to play!", "","");
 
         //nowPlayingFragment = (NOWPLAYINGFragment) fragmentManager.findFragmentById(R.id.nowPlayingFragment);
         //nowPlayingFragment.setNewModule("Select a module to play!", "", "");
 
-        // add nowPlayingFragment to the scroll up panel
         FragmentTransaction ft = fragmentManager.beginTransaction();
         ft.replace(R.id.nowPlayingContainer, nowPlayingFragment);
+        ft.commit();
+
+        ft = fragmentManager.beginTransaction();
+        ft.replace(R.id.playbarContainer, playerBarFragment, "Player Bar");
         ft.commit();
 
         ft = fragmentManager.beginTransaction();
@@ -159,11 +167,11 @@ public class MainActivity extends AppCompatActivity implements HOMEFragment.OnFr
                 }
 
                 if(String.valueOf(newState).equals("EXPANDED")){
-                    dragView.setVisibility(View.GONE);
+                    //dragView.setVisibility(View.GONE);
                 }
 
                 if(String.valueOf(newState).equals("COLLAPSED")){
-                    dragView.setVisibility(View.VISIBLE);
+                    //dragView.setVisibility(View.VISIBLE);
                 }
 
 
@@ -214,7 +222,9 @@ public class MainActivity extends AppCompatActivity implements HOMEFragment.OnFr
             }
 
             @Override
-            public void onTabReselected(TabLayout.Tab tab){ }
+            public void onTabReselected(TabLayout.Tab tab){
+
+            }
 
             @Override
             public void onTabUnselected(TabLayout.Tab tab){ }
@@ -340,7 +350,7 @@ public class MainActivity extends AppCompatActivity implements HOMEFragment.OnFr
         homeFragment.sendModuleInfo(bookTitle, bookID, modID, modTitle);
     }
 
-    public void playMergedFile(String bookTitle, String modID, String modTitle){
+    public void playEntireModule(String bookTitle, String modID, String modTitle){
 
         Log.i("is nowPlayingFragment null?", String.valueOf(nowPlayingFragment == null));
         dragViewText.setText(Html.fromHtml("<b>"+modTitle+"</b><br/>"+bookTitle, Html.FROM_HTML_MODE_COMPACT));
@@ -355,15 +365,23 @@ public class MainActivity extends AppCompatActivity implements HOMEFragment.OnFr
         if(!nowPlayingFragment.getModule().equals(modID))
         {
             dragViewPlayButton.setImageResource(R.drawable.pause);
+
             // stop the media player
-            if(!nowPlayingFragment.getModule().equals("")) nowPlayingFragment.stopTTS();
+            if(!nowPlayingFragment.getModule().equals("")) playerBarFragment.stopTTS();
 
             // make a new nowPlayingFragment
             nowPlayingFragment.setNewModule(bookTitle, modID, modTitle);
+            playerBarFragment.setNewModule(bookTitle, modID, modTitle);
+            //textbookViewFragment.setNewModule(bookTitle, modID, modTitle); // probably not necessary..
+            textbookViewFragment = TextbookViewFragment.newInstance(modTitle, modID, bookTitle);
+
+            // add nowPlayingFragment to the scroll up panel
+            nowPlayingTab.select();
 
             String output = Environment.getExternalStorageDirectory().getAbsolutePath() + "/output" + modID + ".mp3";
-            nowPlayingFragment.playMergedFile(output);
+            playerBarFragment.playMergedFile(output);
         }
+
 
         mLayout.setPanelState(SlidingUpPanelLayout.PanelState.EXPANDED);
 
@@ -372,6 +390,10 @@ public class MainActivity extends AppCompatActivity implements HOMEFragment.OnFr
         ft.addToBackStack(null); // allow user to go back
         ft.setCustomAnimations(android.R.anim.slide_in_left, android.R.anim.slide_out_right, android.R.anim.fade_in, android.R.anim.fade_out);
         ft.commit(); */
+    }
+
+    public void onRecyclerViewCreated(RecyclerView recyclerView){
+        mLayout.setScrollableView(recyclerView);
     }
 
 

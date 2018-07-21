@@ -2,7 +2,7 @@
 <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
-    android:layout_height="match_parent"
+    android:layout_height="wrap_content"
     android:gravity="center_vertical"
     android:orientation="vertical"
     tools:context=".NOWPLAYINGFragment">
@@ -24,43 +24,5 @@
         android:id="@+id/nowPlayingTitle"
         android:text="Title"
         android:layout_margin="@dimen/activity_horizontal_margin"/>
-
-    <SeekBar
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:layout_marginHorizontal="30sp"
-        android:layout_marginBottom="@dimen/activity_vertical_margin"
-        android:id ="@+id/nowPlayingSeekbar"/>
-
-    <LinearLayout
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:id="@+id/nowPlayingBar"
-        android:orientation="horizontal"
-        android:gravity="center">
-
-        <ImageButton
-            android:id="@+id/nowReverseButton"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:src="@drawable/fast_rewind" />
-
-        <ImageButton
-            android:id="@+id/nowPlayButton"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:src="@drawable/pause" />
-
-
-        <ImageButton
-            android:id="@+id/nowForwardButton"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:src="@drawable/fast_forward" />
-
-    </LinearLayout>
-
-
-
 
 </LinearLayout>

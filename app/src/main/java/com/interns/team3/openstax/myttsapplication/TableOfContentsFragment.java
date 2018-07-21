@@ -1,6 +1,5 @@
 package com.interns.team3.openstax.myttsapplication;
 
-import android.content.Intent;
 import android.net.Uri;
 import android.os.AsyncTask;
 import android.os.Bundle;
@@ -9,7 +8,6 @@ import android.support.v7.widget.GridLayoutManager;
 import android.support.v7.widget.RecyclerView;
 import android.util.Log;
 import android.view.LayoutInflater;
-import android.view.MenuItem;
 import android.view.View;
 import android.view.ViewGroup;
 import android.widget.TextView;
@@ -103,7 +101,7 @@ public class TableOfContentsFragment extends Fragment {
                 //Toast.makeText(getApplicationContext(), targetId, Toast.LENGTH_SHORT).show();
 
 
-                ((MainActivity)getActivity()).playMergedFile(bookTitle, modId, modTitle);
+                ((MainActivity)getActivity()).playEntireModule(bookTitle, modId, modTitle);
                 //((HOMEFragment)getParentFragment()).sendModuleInfo(bookId, bookTitle, modId, modTitle);
             }
         });

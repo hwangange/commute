@@ -7,7 +7,6 @@ import android.net.Uri;
 import android.os.Bundle;
 import android.os.Environment;
 import android.os.Handler;
-import android.support.design.widget.BottomNavigationView;
 import android.support.v4.app.Fragment;
 import android.util.Log;
 import android.view.Gravity;
@@ -15,8 +14,6 @@ import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 import android.widget.ImageButton;
-import android.widget.ImageView;
-import android.widget.LinearLayout;
 import android.widget.SeekBar;
 import android.widget.TextView;
 
@@ -35,26 +32,12 @@ public class NOWPLAYINGFragment extends Fragment {
     private static final String ARG_MOD_TITLE = "param1";
     private static final String ARG_MOD_ID = "param2";
     private static final String ARG_BOOK_ID = "param3";
-    private static final String ARG_CONTEXT = "param4";
-
-    public static int currentPoint = -1; static boolean isPaused;
 
     public static String modId, bookId, modTitle;
     public TextView titleView;
     public Context context =getContext();
 
-    public MediaPlayer player = new MediaPlayer();
-
-    private int length;
-
     private OnFragmentInteractionListener mListener;
-
-    private ImageButton playButton, forwardButton, reverseButton;
-    private SeekBar seekbar;
-    private Handler handler = new Handler();
-
-
-    private int endTime; // duration of file
 
     public NOWPLAYINGFragment() {
         // Required empty public constructor
@@ -70,7 +53,7 @@ public class NOWPLAYINGFragment extends Fragment {
      * @return A new instance of fragment NOWPLAYINGFragment.
      */
     // TODO: Rename and change types and number of parameters
-    public static NOWPLAYINGFragment newInstance(String param1, String param2, String param3, Context param4) {
+    public static NOWPLAYINGFragment newInstance(String param1, String param2, String param3) {
         NOWPLAYINGFragment fragment = new NOWPLAYINGFragment();
         Bundle args = new Bundle();
         args.putString(ARG_MOD_TITLE, param1);
@@ -78,16 +61,9 @@ public class NOWPLAYINGFragment extends Fragment {
         args.putString(ARG_BOOK_ID, param3);
 
         modId = param2;
-        Log.i("MODTITLE IS CREATED", modId);
-        fragment.setContext(param4);
         fragment.setArguments(args);
-        currentPoint = -1;
-        isPaused = false;
-
         return fragment;
     }
-
-    public void setContext(Context c){ context = c;}
 
 
     @Override
@@ -96,7 +72,6 @@ public class NOWPLAYINGFragment extends Fragment {
 
         if (getArguments() != null && modTitle == null) {
             modTitle = getArguments().getString(ARG_MOD_TITLE);
-            Log.i("modTitle", "|" + modTitle + "|");
             modId = getArguments().getString(ARG_MOD_ID);
             bookId = getArguments().getString(ARG_BOOK_ID);
 
@@ -106,8 +81,6 @@ public class NOWPLAYINGFragment extends Fragment {
     @Override
     public View onCreateView(LayoutInflater inflater, ViewGroup container,
                              Bundle savedInstanceState) {
-
-        Log.i("onCreateView", "in here");
 
         View view = inflater.inflate(R.layout.fragment_nowplaying, container, false);
 
@@ -119,90 +92,6 @@ public class NOWPLAYINGFragment extends Fragment {
         ((MainActivity)getActivity()).getSupportActionBar().setHomeButtonEnabled(false);
         ((MainActivity)getActivity()).getSupportActionBar().setDisplayHomeAsUpEnabled(false);
 
-
-        // Initialize Buttons
-
-        playButton = (ImageButton) view.findViewById(R.id.nowPlayButton);
-
-        playButton.setOnClickListener(new View.OnClickListener() {
-
-            @Override
-            public void onClick(View v) {
-                if (!forwardButton.isEnabled()) forwardButton.setEnabled(true);
-                if (!reverseButton.isEnabled()) reverseButton.setEnabled(true);
-
-                if (playButton.getTag().equals("Play")) {
-
-                    playButton.setTag("Pause");
-                    playButton.setImageResource(R.drawable.pause);
-                    player.seekTo(player.getCurrentPosition() - 1);
-                    player.start();
-
-                } else {
-                    playButton.setTag("Play");
-                    playButton.setImageResource(R.drawable.play);
-
-                    // Pause
-                    pauseTTS();
-                }
-            }
-        });
-
-        forwardButton = (ImageButton) view.findViewById(R.id.nowForwardButton);
-        forwardButton.setEnabled(true);
-        forwardButton.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View v) {
-                forwardTTS();
-            }
-        });
-
-        reverseButton = (ImageButton) view.findViewById(R.id.nowReverseButton);
-        reverseButton.setEnabled(true);
-        reverseButton.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View v) {
-                reverseTTS();
-            }
-        });
-
-        seekbar = (SeekBar)view.findViewById(R.id.nowPlayingSeekbar);
-        seekbar.setOnSeekBarChangeListener(new SeekBar.OnSeekBarChangeListener() {
-            int progressvalue = 0;
-            @Override
-            public void onProgressChanged(SeekBar seekBar, int progress, boolean fromUser) {
-                progressvalue = progress;
-                //((TextbookViewFragment) getParentFragment()).showChange(progressvalue);
-
-
-            }
-
-            @Override
-            public void onStartTrackingTouch(SeekBar seekBar) {
-                //((TextbookViewFragment) getParentFragment()).onDragStart(progressvalue);
-
-
-            }
-
-            @Override
-            public void onStopTrackingTouch(SeekBar seekBar) {
-                //((TextbookViewFragment) getParentFragment()).goScrubber(progressvalue);
-                seekbar.setProgress(progressvalue);
-                player.seekTo(progressvalue);
-
-
-            }
-        });
-
-            // uncomment this if the slide up panel will be visible even when a module isn't selected.
-       /* else{
-            LinearLayout nowPlayingBar = view.findViewById(R.id.nowPlayingBar);
-            seekbar = (SeekBar)view.findViewById(R.id.nowPlayingSeekbar);
-            seekbar.setVisibility(View.GONE);
-            nowPlayingBar.setVisibility(View.GONE);
-            ImageView nowPlayingImage = view.findViewById(R.id.nowPlayingImage);
-            nowPlayingImage.setVisibility(View.GONE);
-        } */
 
         // Inflate the layout for this fragment
         return view;
@@ -226,93 +115,6 @@ public class NOWPLAYINGFragment extends Fragment {
         }
     }
 
-    // With the slideUpPanel, the nowPlayingFragment is always visible. so it wouldn't be necessary to have to save instances all the time whenever the fragment collapses.
-    public void beginAudio(){
-        Log.i("Current Point", String.valueOf(currentPoint));
-
-        if(currentPoint == -1) {
-            //player = new MediaPlayer(); <-- shouldn't be needed if player is "reset" in "playMergedFile"
-            setPlayButton("Pause");
-
-
-            String output = Environment.getExternalStorageDirectory().getAbsolutePath() + "/output" + modId + ".mp3";
-            Log.e("NOW output", output);
-            playMergedFile(output);
-
-        } else {
-            boolean isPlaying = false;
-            try{ isPlaying= player.isPlaying(); } catch(Exception e) {e.printStackTrace();}
-            endTime = player.getDuration();
-            seekbar.setMax(endTime);
-            seekbar.setProgress((int) currentPoint);
-
-            // isPlaying is true regardless of whether player was "playing" or "paused"
-            if(isPlaying)
-            {
-                Log.i("isPlaying", "Meaning playButton was 'play'");
-                setPlayButton("Pause");
-                player.seekTo(player.getCurrentPosition());
-            }
-
-            else
-            {
-                Log.i("NOT isPlaying", "Meaning playButton was 'pause'");
-                setPlayButton("Play");
-                player.seekTo(currentPoint);
-            }
-
-            currentPoint = -1;
-        }
-
-        handler.postDelayed(UpdateAudioTime,100);
-    }
-
-
-    public void playMergedFile(String output) {
-
-        titleView.setText(modTitle);
-        player.reset();
-
-        Uri uri = Uri.parse("file://" + output);
-
-        player.setAudioAttributes(new AudioAttributes.Builder()
-                .setUsage(AudioAttributes.USAGE_MEDIA)
-                .setContentType(AudioAttributes.CONTENT_TYPE_MUSIC)
-                .build());
-
-        try {
-            player.setDataSource(context, uri);
-            player.prepare();
-        } catch (Exception e) {
-            e.printStackTrace();
-        }
-
-        player.setOnPreparedListener(new MediaPlayer.OnPreparedListener() {
-            @Override
-            public void onPrepared(MediaPlayer mp) {
-                setPlayButton("Pause");
-                player.start();
-                endTime = player.getDuration();
-                seekbar.setMax(endTime);
-                seekbar.setProgress(0);
-            }
-        });
-
-        player.setOnCompletionListener(new MediaPlayer.OnCompletionListener() {
-            @Override
-            public void onCompletion(MediaPlayer mp) {
-                Log.i("onCompletion", "When is media player stopped?");
-                setPlayButton("Play");
-                forwardButton.setEnabled(false);
-                reverseButton.setEnabled(false);
-                //player.stop();
-
-            }
-        });
-
-        handler.postDelayed(UpdateAudioTime,100);
-    }
-
     /**
      * This interface must be implemented by activities that contain this
      * fragment to allow an interaction in this fragment to be communicated
@@ -328,94 +130,6 @@ public class NOWPLAYINGFragment extends Fragment {
         void onFragmentInteraction(Uri uri);
     }
 
-    //Called by player bar fragment
-    public void pauseTTS() {
-
-        player.pause();
-        length = player.getCurrentPosition();
-
-
-        getActivity().runOnUiThread(new Runnable() {
-            @Override
-            public void run() {
-                setPlayButton("Play");
-            }
-        });
-    }
-
-    //Called by player bar fragment
-    public void stopTTS(){
-        player.stop();
-        //player.release(); <-- this would end the media player life cycle.
-
-        /*getActivity().runOnUiThread(new Runnable() {
-            @Override
-            public void run() {
-                setPlayButton("Play");
-            }
-        }); */
-    }
-
-    //Called by player bar fragment
-    public void forwardTTS(){
-
-
-        length = player.getCurrentPosition();
-        player.seekTo(length+15000);
-    }
-
-    //Called by player bar fragment
-    public void reverseTTS(){
-
-       length = player.getCurrentPosition();
-       player.seekTo(length-15000);
-    }
-
-    public void setPlayButton(String s){
-        if(s.equals("Play"))
-        {
-            playButton.setTag("Play");
-            playButton.setImageResource(R.drawable.play);
-        }
-        else{
-            playButton.setTag("Pause");
-            playButton.setImageResource(R.drawable.pause);
-        }
-    }
-
-    // when user wants to listen to a new audiobook
-    public void setNewModule(String bookId, String modId, String modTitle){
-        this.bookId = bookId;
-        this.modId = modId;
-        this.modTitle = modTitle;
-        currentPoint = -1;
-        isPaused = false;
-
-    }
-
-
-    @Override
-    public void onPause(){
-        super.onPause();
-
-        if(modId != "" && player != null) {
-            try {
-                currentPoint = player.getCurrentPosition();
-                Log.i("Current point upon pausing", String.valueOf(currentPoint));
-                if (playButton.getTag().equals("Play")) {
-                    isPaused = true;
-                } else {
-                    isPaused = false;
-                }
-            } catch (Exception e) {
-                e.printStackTrace();
-                currentPoint = -1;
-            }
-
-        }
-
-    }
-
     @Override
     public void onSaveInstanceState(Bundle outState){
         super.onSaveInstanceState(outState);
@@ -425,14 +139,12 @@ public class NOWPLAYINGFragment extends Fragment {
     public void onViewStateRestored(Bundle savedInstanceState) {
         super.onViewStateRestored(savedInstanceState);
         // use this method if you want to do anything once the fragment is back on the screen
-        Log.i("onViewStateRestored", "in here");
 
     }
 
     @Override
     public void onDetach() {
         super.onDetach();
-        Log.i("onDetach", "in here");
         mListener = null;
     }
 
@@ -440,14 +152,15 @@ public class NOWPLAYINGFragment extends Fragment {
         return modId;
     }
 
-    private Runnable UpdateAudioTime = new Runnable() {
-        public void run() {
-            currentPoint = player.getCurrentPosition();
+    // when user wants to listen to a new audiobook
+    public void setNewModule(String bookId, String modId, String modTitle){
+        this.bookId = bookId;
+        this.modId = modId;
+        this.modTitle = modTitle;
 
-            seekbar.setProgress((int)currentPoint);
-            handler.postDelayed(this, 100);
-        }
-    };
+        titleView.setText(modTitle);
+
+    }
 
 
 }

@@ -19,8 +19,7 @@
         sothree:umanoPanelHeight="60dp"
         sothree:umanoShadowHeight="4dp"
         sothree:umanoParallaxOffset="100dp"
-        sothree:umanoOverlay="false"
-        sothree:umanoScrollableView="@+id/list">
+        sothree:umanoOverlay="false">
         <!--sothree:umanoDragView="@+id/dragView"-->
 
         <!-- Main content -->
@@ -28,13 +27,20 @@
             android:layout_width="match_parent"
             android:layout_height="match_parent"
             android:orientation="vertical"
-            tools:context=".MainActivity"
-
-            >
+            tools:context=".MainActivity">
             <!--
             android:paddingTop="100dp"
             android:paddingTop="?android:attr/actionBarSize"
             -->
+
+            <android.support.v7.widget.Toolbar
+                xmlns:sothree="http://schemas.android.com/apk/res-auto"
+                xmlns:android="http://schemas.android.com/apk/res/android"
+                android:id="@+id/main_toolbar"
+                android:layout_height="?android:attr/actionBarSize"
+                android:background="@color/colorPrimary"
+                sothree:theme="@style/OriginalAppTheme"
+                android:layout_width="match_parent"/>
 
             <FrameLayout
                 android:id="@+id/fragmentContainer"
@@ -115,6 +121,16 @@
                 android:layout_height="wrap_content"
                 android:layout_weight="1">
             </FrameLayout>
+
+            <FrameLayout
+                android:id="@+id/playbarContainer"
+                android:orientation="vertical"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_weight=".3" >
+            </FrameLayout>
+
+
 
 
         </LinearLayout>

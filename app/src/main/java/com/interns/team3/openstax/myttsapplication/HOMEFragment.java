@@ -6,6 +6,7 @@ import android.os.Bundle;
 import android.support.v4.app.Fragment;
 import android.support.v4.app.FragmentManager;
 import android.support.v4.app.FragmentTransaction;
+import android.support.v7.widget.RecyclerView;
 import android.util.Log;
 import android.view.LayoutInflater;
 import android.view.View;
@@ -145,7 +146,7 @@ public class HOMEFragment extends Fragment implements BookshelfFragment.OnFragme
 
 
         Log.i("sendModuleInfo", bookTitle + ", " + bookID + ", " + modID + ", " + modTitle);
-        TextbookViewFragment textbookViewFragment = TextbookViewFragment.newInstance(modTitle, modID, bookID, context);
+        TextbookViewFragment textbookViewFragment = TextbookViewFragment.newInstance(modTitle, modID, bookID);
         FragmentTransaction ft = fragmentManager.beginTransaction();
         ft.setCustomAnimations(android.R.anim.slide_in_left, android.R.anim.slide_out_right, android.R.anim.fade_in, android.R.anim.fade_out);
         ft.replace(R.id.homeFragmentContainer, textbookViewFragment);
@@ -155,8 +156,12 @@ public class HOMEFragment extends Fragment implements BookshelfFragment.OnFragme
 
     }
 
-    public void playMergedFile(String bookTitle, String modID, String modTitle){
-        ((MainActivity)getActivity()).playMergedFile(bookTitle, modID, modTitle);
+    public void playEntireModule(String bookTitle, String modID, String modTitle){
+        ((MainActivity)getActivity()).playEntireModule(bookTitle, modID, modTitle);
+    }
+
+    public void onRecyclerViewCreated(RecyclerView recyclerView){
+        ((MainActivity)getActivity()).onRecyclerViewCreated(recyclerView);
     }
 
     @Override

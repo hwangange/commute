@@ -1,20 +1,21 @@
 package com.interns.team3.openstax.myttsapplication;
 
-import android.app.AlertDialog;
-import android.app.Dialog;
-import android.support.v4.app.FragmentManager;
 import android.content.Context;
+import android.media.AudioAttributes;
+import android.media.MediaPlayer;
 import android.net.Uri;
 import android.os.Bundle;
-import android.speech.tts.TextToSpeech;
-import android.support.v4.app.DialogFragment;
+import android.os.Environment;
+import android.os.Handler;
 import android.support.v4.app.Fragment;
-import android.support.v4.app.FragmentTransaction;
+import android.util.Log;
+import android.view.Gravity;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 import android.widget.ImageButton;
 import android.widget.SeekBar;
+import android.widget.TextView;
 
 
 /**
@@ -28,46 +29,71 @@ import android.widget.SeekBar;
 public class PlayerBarFragment extends Fragment {
     // TODO: Rename parameter arguments, choose names that match
     // the fragment initialization parameters, e.g. ARG_ITEM_NUMBER
-    private static final String MAX_PROGRESS = "param1";
-    private static final String PROGRESS = "param2";
+    private static final String ARG_MOD_TITLE = "param1";
+    private static final String ARG_MOD_ID = "param2";
+    private static final String ARG_BOOK_ID = "param3";
 
-    // TODO: Rename and change types of parameters
-    private int maxProgress, progress;
+    public static int currentPoint = -1; static boolean isPaused;
+
+    public static String modId, bookId, modTitle;
+
+    public Context context = getContext();
+
+    public MediaPlayer player = new MediaPlayer();
+
+    private int length;
 
     private OnFragmentInteractionListener mListener;
-    private ImageButton playButton, stopButton, forwardButton, reverseButton, volumeButton;
-    private SeekBar seekbar;
 
-    private TextToSpeech tts;
-    private FragmentManager fm;
-    private VolumeFragment volumeFragment;
-    private int volume;
+    private ImageButton playButton, forwardButton, reverseButton;
+    private SeekBar seekbar;
+    private Handler handler = new Handler();
+
+
+    private int endTime; // duration of file
 
     public PlayerBarFragment() {
         // Required empty public constructor
+        this.setArguments(new Bundle());
     }
 
     /**
      * Use this factory method to create a new instance of
      * this fragment using the provided parameters.
      *
-     * @param maxProgress
+     * @param param1 Parameter 1.
+     * @param param2 Parameter 2.
      * @return A new instance of fragment PlayerBarFragment.
      */
     // TODO: Rename and change types and number of parameters
-    public static PlayerBarFragment newInstance(int maxProgress) {
+    public static PlayerBarFragment newInstance(String param1, String param2, String param3) {
         PlayerBarFragment fragment = new PlayerBarFragment();
         Bundle args = new Bundle();
-        args.putInt(MAX_PROGRESS, maxProgress);
+        args.putString(ARG_MOD_TITLE, param1);
+        args.putString(ARG_MOD_ID, param2);
+        args.putString(ARG_BOOK_ID, param3);
+
+        modId = param2;
+        Log.i("MODTITLE IS CREATED", modId);
         fragment.setArguments(args);
+        currentPoint = -1;
+        isPaused = false;
+
         return fragment;
     }
+
+
 
     @Override
     public void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        if (getArguments() != null) {
-            this.maxProgress = getArguments().getInt(MAX_PROGRESS);
+
+        if (getArguments() != null && modTitle == null) {
+            modTitle = getArguments().getString(ARG_MOD_TITLE);
+            Log.i("modTitle", "|" + modTitle + "|");
+            modId = getArguments().getString(ARG_MOD_ID);
+            bookId = getArguments().getString(ARG_BOOK_ID);
+
         }
     }
 
@@ -75,108 +101,100 @@ public class PlayerBarFragment extends Fragment {
     public View onCreateView(LayoutInflater inflater, ViewGroup container,
                              Bundle savedInstanceState) {
 
-        // Inflate the layout for this fragment
+        Log.i("onCreateView", "in here");
+
         View view = inflater.inflate(R.layout.fragment_player_bar, container, false);
 
-        fm = getChildFragmentManager();
+        (getActivity()).setTitle("Now Playing");
+        ((MainActivity)getActivity()).getSupportActionBar().setHomeButtonEnabled(false);
+        ((MainActivity)getActivity()).getSupportActionBar().setDisplayHomeAsUpEnabled(false);
 
-        playButton = (ImageButton)view.findViewById(R.id.playButton);
-        playButton.setTag("Play");
-        playButton.setOnClickListener(new View.OnClickListener(){
+
+        // Initialize Buttons
+
+        playButton = (ImageButton) view.findViewById(R.id.nowPlayButton);
+
+        playButton.setOnClickListener(new View.OnClickListener() {
 
             @Override
-            public void onClick(View v){
-                if(!stopButton.isEnabled()) stopButton.setEnabled(true);
-                if(!forwardButton.isEnabled()) forwardButton.setEnabled(true);
-                if(!reverseButton.isEnabled()) reverseButton.setEnabled(true);
-                if(playButton.getTag().equals("Play"))
+            public void onClick(View v) {
+                if (!forwardButton.isEnabled()) forwardButton.setEnabled(true);
+                if (!reverseButton.isEnabled()) reverseButton.setEnabled(true);
 
-                {
+                if (playButton.getTag().equals("Play")) {
 
                     playButton.setTag("Pause");
                     playButton.setImageResource(R.drawable.pause);
+                    player.seekTo(player.getCurrentPosition() - 1);
+                    player.start();
 
-                    int selected = ((TextbookViewFragment)getParentFragment()).getSelected();
-                    ((TextbookViewFragment)getParentFragment()).checkIfVisible(selected);
-                }
-                else{
+                } else {
                     playButton.setTag("Play");
                     playButton.setImageResource(R.drawable.play);
 
                     // Pause
-                    ((TextbookViewFragment) getParentFragment()).pauseTTS();
+                    pauseTTS();
                 }
             }
         });
 
-        stopButton = (ImageButton) view.findViewById(R.id.stopButton);
-        stopButton.setEnabled(false);
-        stopButton.setOnClickListener(new View.OnClickListener(){
+        forwardButton = (ImageButton) view.findViewById(R.id.nowForwardButton);
+        forwardButton.setEnabled(true);
+        forwardButton.setOnClickListener(new View.OnClickListener() {
             @Override
-            public void onClick(View v){
-                stopButton.setEnabled(false);
-                forwardButton.setEnabled(false);
-                reverseButton.setEnabled(false);
-                ((TextbookViewFragment) getParentFragment()).stopTTS();
+            public void onClick(View v) {
+                forwardTTS();
             }
         });
 
-        forwardButton = (ImageButton) view.findViewById(R.id.forwardButton);
-        forwardButton.setEnabled(false);
-        forwardButton.setOnClickListener(new View.OnClickListener(){
+        reverseButton = (ImageButton) view.findViewById(R.id.nowReverseButton);
+        reverseButton.setEnabled(true);
+        reverseButton.setOnClickListener(new View.OnClickListener() {
             @Override
-            public void onClick(View v){
-                ((TextbookViewFragment) getParentFragment()).forwardTTS();
+            public void onClick(View v) {
+                reverseTTS();
             }
         });
 
-        reverseButton = (ImageButton) view.findViewById(R.id.reverseButton);
-        reverseButton.setEnabled(false);
-        reverseButton.setOnClickListener(new View.OnClickListener(){
-            @Override
-            public void onClick(View v){
-                ((TextbookViewFragment) getParentFragment()).reverseTTS();
-            }
-        });
-
-        volume = 50;
-        volumeButton = (ImageButton) view.findViewById(R.id.volumeButton);
-        volumeButton.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View v){
-                //Add player bar fragment to this activity
-                volumeFragment = VolumeFragment.newInstance(volume,"");
-                volumeFragment.show(fm, "Volume");
-            }
-        });
-
-        seekbar = (SeekBar)view.findViewById(R.id.seekbar);
-        seekbar.setMax(maxProgress);
+        seekbar = (SeekBar)view.findViewById(R.id.nowPlayingSeekbar);
         seekbar.setOnSeekBarChangeListener(new SeekBar.OnSeekBarChangeListener() {
             int progressvalue = 0;
             @Override
             public void onProgressChanged(SeekBar seekBar, int progress, boolean fromUser) {
                 progressvalue = progress;
-                if(fromUser)
-                    ((TextbookViewFragment) getParentFragment()).showChange(progressvalue);
+                //((TextbookViewFragment) getParentFragment()).showChange(progressvalue);
 
 
             }
 
             @Override
             public void onStartTrackingTouch(SeekBar seekBar) {
-                ((TextbookViewFragment) getParentFragment()).onDragStart(progressvalue);
+                //((TextbookViewFragment) getParentFragment()).onDragStart(progressvalue);
 
 
             }
 
             @Override
             public void onStopTrackingTouch(SeekBar seekBar) {
-                ((TextbookViewFragment) getParentFragment()).onDragStop(progressvalue);
+                //((TextbookViewFragment) getParentFragment()).goScrubber(progressvalue);
+                seekbar.setProgress(progressvalue);
+                player.seekTo(progressvalue);
+
 
             }
         });
 
+        // uncomment this if the slide up panel will be visible even when a module isn't selected.
+       /* else{
+            LinearLayout nowPlayingBar = view.findViewById(R.id.nowPlayingBar);
+            seekbar = (SeekBar)view.findViewById(R.id.nowPlayingSeekbar);
+            seekbar.setVisibility(View.GONE);
+            nowPlayingBar.setVisibility(View.GONE);
+            ImageView nowPlayingImage = view.findViewById(R.id.nowPlayingImage);
+            nowPlayingImage.setVisibility(View.GONE);
+        } */
+
+        // Inflate the layout for this fragment
         return view;
     }
 
@@ -186,38 +204,6 @@ public class PlayerBarFragment extends Fragment {
             mListener.onFragmentInteraction(uri);
         }
     }
-
-    public void setSeekbarProgress(int progress){
-        seekbar.setProgress(progress);
-    }
-
-    public void setSeekbarMax(int max){
-        seekbar.setMax(max);
-    }
-
-    public void setVolume(int val){
-        volume = val;
-    }
-
-    public void setPlayButton(String s){
-        if(s.equals("Play"))
-        {
-            playButton.setTag("Play");
-            playButton.setImageResource(R.drawable.play);
-        }
-        else{
-            playButton.setTag("Pause");
-            playButton.setImageResource(R.drawable.pause);
-        }
-    }
-
-    public void setStopButton(boolean boo){ stopButton.setEnabled(boo);}
-
-    public void setForwardButton(boolean boo) {
-        forwardButton.setEnabled(boo);}
-
-    public void setReverseButton(boolean boo) {
-        reverseButton.setEnabled(boo);}
 
     @Override
     public void onAttach(Context context) {
@@ -230,10 +216,89 @@ public class PlayerBarFragment extends Fragment {
         }
     }
 
-    @Override
-    public void onDetach() {
-        super.onDetach();
-        mListener = null;
+    // With the slideUpPanel, the nowPlayingFragment is always visible. so it wouldn't be necessary to have to save instances all the time whenever the fragment collapses.
+    public void beginAudio(){
+        Log.i("Current Point", String.valueOf(currentPoint));
+
+        if(currentPoint == -1) {
+            //player = new MediaPlayer(); <-- shouldn't be needed if player is "reset" in "playEntireModule"
+            setPlayButton("Pause");
+
+
+            String output = Environment.getExternalStorageDirectory().getAbsolutePath() + "/output" + modId + ".mp3";
+            Log.e("NOW output", output);
+            playMergedFile(output);
+
+        } else {
+            boolean isPlaying = false;
+            try{ isPlaying= player.isPlaying(); } catch(Exception e) {e.printStackTrace();}
+            endTime = player.getDuration();
+            seekbar.setMax(endTime);
+            seekbar.setProgress((int) currentPoint);
+
+            // isPlaying is true regardless of whether player was "playing" or "paused"
+            if(isPlaying)
+            {
+                Log.i("isPlaying", "Meaning playButton was 'play'");
+                setPlayButton("Pause");
+                player.seekTo(player.getCurrentPosition());
+            }
+
+            else
+            {
+                Log.i("NOT isPlaying", "Meaning playButton was 'pause'");
+                setPlayButton("Play");
+                player.seekTo(currentPoint);
+            }
+
+            currentPoint = -1;
+        }
+
+        handler.postDelayed(UpdateAudioTime,100);
+    }
+
+
+    public void playMergedFile(String output) {
+        player.reset();
+
+        Uri uri = Uri.parse("file://" + output);
+
+        player.setAudioAttributes(new AudioAttributes.Builder()
+                .setUsage(AudioAttributes.USAGE_MEDIA)
+                .setContentType(AudioAttributes.CONTENT_TYPE_MUSIC)
+                .build());
+
+        try {
+            player.setDataSource(context, uri);
+            player.prepare();
+        } catch (Exception e) {
+            e.printStackTrace();
+        }
+
+        player.setOnPreparedListener(new MediaPlayer.OnPreparedListener() {
+            @Override
+            public void onPrepared(MediaPlayer mp) {
+                setPlayButton("Pause");
+                player.start();
+                endTime = player.getDuration();
+                seekbar.setMax(endTime);
+                seekbar.setProgress(0);
+            }
+        });
+
+        player.setOnCompletionListener(new MediaPlayer.OnCompletionListener() {
+            @Override
+            public void onCompletion(MediaPlayer mp) {
+                Log.i("onCompletion", "When is media player stopped?");
+                setPlayButton("Play");
+                forwardButton.setEnabled(false);
+                reverseButton.setEnabled(false);
+                //player.stop();
+
+            }
+        });
+
+        handler.postDelayed(UpdateAudioTime,100);
     }
 
     /**
@@ -250,6 +315,128 @@ public class PlayerBarFragment extends Fragment {
         // TODO: Update argument type and name
         void onFragmentInteraction(Uri uri);
     }
+
+    //Called by player bar fragment
+    public void pauseTTS() {
+
+        player.pause();
+        length = player.getCurrentPosition();
+
+
+        getActivity().runOnUiThread(new Runnable() {
+            @Override
+            public void run() {
+                setPlayButton("Play");
+            }
+        });
+    }
+
+    //Called by player bar fragment
+    public void stopTTS(){
+        player.stop();
+        //player.release(); <-- this would end the media player life cycle.
+
+        /*getActivity().runOnUiThread(new Runnable() {
+            @Override
+            public void run() {
+                setPlayButton("Play");
+            }
+        }); */
+    }
+
+    //Called by player bar fragment
+    public void forwardTTS(){
+
+
+        length = player.getCurrentPosition();
+        player.seekTo(length+15000);
+    }
+
+    //Called by player bar fragment
+    public void reverseTTS(){
+
+        length = player.getCurrentPosition();
+        player.seekTo(length-15000);
+    }
+
+    public void setPlayButton(String s){
+        if(s.equals("Play"))
+        {
+            playButton.setTag("Play");
+            playButton.setImageResource(R.drawable.play);
+        }
+        else{
+            playButton.setTag("Pause");
+            playButton.setImageResource(R.drawable.pause);
+        }
+    }
+
+    // when user wants to listen to a new audiobook
+    public void setNewModule(String bookId, String modId, String modTitle){
+        this.bookId = bookId;
+        this.modId = modId;
+        this.modTitle = modTitle;
+        currentPoint = -1;
+        isPaused = false;
+        context = getContext();
+
+    }
+
+
+    @Override
+    public void onPause(){
+        super.onPause();
+
+        if(modId != "" && player != null) {
+            try {
+                currentPoint = player.getCurrentPosition();
+                Log.i("Current point upon pausing", String.valueOf(currentPoint));
+                if (playButton.getTag().equals("Play")) {
+                    isPaused = true;
+                } else {
+                    isPaused = false;
+                }
+            } catch (Exception e) {
+                e.printStackTrace();
+                currentPoint = -1;
+            }
+
+        }
+
+    }
+
+    @Override
+    public void onSaveInstanceState(Bundle outState){
+        super.onSaveInstanceState(outState);
+    }
+
+    @Override
+    public void onViewStateRestored(Bundle savedInstanceState) {
+        super.onViewStateRestored(savedInstanceState);
+        // use this method if you want to do anything once the fragment is back on the screen
+        Log.i("onViewStateRestored", "in here");
+
+    }
+
+    @Override
+    public void onDetach() {
+        super.onDetach();
+        Log.i("onDetach", "in here");
+        mListener = null;
+    }
+
+    public String getModule() {
+        return modId;
+    }
+
+    private Runnable UpdateAudioTime = new Runnable() {
+        public void run() {
+            currentPoint = player.getCurrentPosition();
+
+            seekbar.setProgress((int) currentPoint);
+            handler.postDelayed(this, 100);
+        }
+    };
 
 
 }

@@ -5,7 +5,6 @@ import android.animation.Animator;
 import android.animation.AnimatorListenerAdapter;
 import android.content.Context;
 import android.content.SharedPreferences;
-import android.content.pm.PackageManager;
 import android.graphics.PorterDuff;
 import android.graphics.drawable.Drawable;
 import android.media.AudioAttributes;
@@ -13,7 +12,6 @@ import android.media.MediaPlayer;
 import android.net.Uri;
 import android.os.AsyncTask;
 import android.os.Environment;
-import android.support.v4.app.ActivityCompat;
 import android.support.v4.app.Fragment;
 import android.support.v4.app.FragmentManager;
 import android.speech.tts.TextToSpeech;
@@ -29,21 +27,15 @@ import android.view.MenuInflater;
 import android.view.MenuItem;
 import android.view.View;
 import android.view.ViewGroup;
-import android.view.animation.DecelerateInterpolator;
 import android.widget.LinearLayout;
 import android.widget.ProgressBar;
 import android.widget.TextView;
 
 
-import com.nshmura.snappysmoothscroller.LinearLayoutScrollVectorDetector;
-import com.nshmura.snappysmoothscroller.SnapType;
-import com.nshmura.snappysmoothscroller.SnappySmoothScroller;
-
 import org.apache.commons.text.WordUtils;
 import org.json.JSONException;
 import org.jsoup.Jsoup;
 import org.jsoup.nodes.Document;
-import org.w3c.dom.Text;
 
 import java.io.BufferedReader;
 import java.io.File;
@@ -56,7 +48,7 @@ import nl.bravobit.ffmpeg.ExecuteBinaryResponseHandler;
 import nl.bravobit.ffmpeg.FFmpeg;
 
 
-public class TextbookViewFragment extends Fragment implements PlayerBarFragment.OnFragmentInteractionListener {
+public class OldTextbookViewFragment extends Fragment implements PlayerBarFragment.OnFragmentInteractionListener, VolumeFragment.OnFragmentInteractionListener {
 
     private static final String ARG_MOD_TITLE = "param1";
     private static final String ARG_MOD_ID = "param2";
@@ -96,14 +88,14 @@ public class TextbookViewFragment extends Fragment implements PlayerBarFragment.
     public CustomScrollListener customScrollListener;
 
     public FragmentManager fragmentManager;
-    public PlayerBarFragment playerBarFragment;
+    public com.interns.team3.openstax.myttsapplication.OldPlayerBarFragment playerBarFragment;
 
     public MenuItem download, playMerged, favorite;
     public boolean makeDownloadAvailable = true;
     public String tag;
 
     // required empty constructor
-    public TextbookViewFragment(){}
+    public OldTextbookViewFragment(){}
 
     /**
      * Use this factory method to create a new instance of
@@ -114,8 +106,8 @@ public class TextbookViewFragment extends Fragment implements PlayerBarFragment.
      * @return A new instance of fragment PlayerBarFragment.
      */
     // TODO: Rename and change types and number of parameters
-    public static TextbookViewFragment newInstance(String param1, String param2, String param3) {
-        TextbookViewFragment fragment = new TextbookViewFragment();
+    public static OldTextbookViewFragment newInstance(String param1, String param2, String param3) {
+        OldTextbookViewFragment fragment = new OldTextbookViewFragment();
         Bundle args = new Bundle();
         args.putString(ARG_MOD_TITLE, param1);
         args.putString(ARG_MOD_ID, param2);
@@ -124,22 +116,11 @@ public class TextbookViewFragment extends Fragment implements PlayerBarFragment.
         return fragment;
     }
 
-
-    // when user wants to listen to a new audiobook
-    public void setNewModule(String bookId, String modId, String modTitle){
-        this.bookId = bookId;
-        this.modId = modId;
-        this.modTitle = modTitle;
-
-    }
-
-
     @Override
     public void onCreate(Bundle savedInstanceState) {
 
         super.onCreate(savedInstanceState);
         setHasOptionsMenu(true);
-
         if (getArguments() != null) {
             modTitle = getArguments().getString(ARG_MOD_TITLE);
             modId = getArguments().getString(ARG_MOD_ID);
@@ -149,13 +130,17 @@ public class TextbookViewFragment extends Fragment implements PlayerBarFragment.
 
 
 
+
+        /*
+
+
         // Utterance Progress Listener
-        //blubber
-        /*myUtteranceProgressListener = new MyUtteranceProgressListener();
+        myUtteranceProgressListener = new MyUtteranceProgressListener();
         tts = new TextToSpeech(context, new TextToSpeech.OnInitListener() {
             @Override
             public void onInit(int i) {
                 if (i == TextToSpeech.SUCCESS) {
+                    //mButtonSpeak.setEnabled(true);
                     storeConvertedTTSAudio();
                     Log.e("Initialization", "Initialization succeeded");
 
@@ -165,9 +150,8 @@ public class TextbookViewFragment extends Fragment implements PlayerBarFragment.
 
             }
         });
-        tts.setOnUtteranceProgressListener(myUtteranceProgressListener); */
+        tts.setOnUtteranceProgressListener(myUtteranceProgressListener);
 
-        context = getContext();
 
         // Populate dataSet
         tempDataSet = new ArrayList<TextChunk>();
@@ -175,32 +159,29 @@ public class TextbookViewFragment extends Fragment implements PlayerBarFragment.
 
         getContent();// new GetContentTask().execute("");
 
-
         adapter = new TextbookViewAdapter(dataSet, new TextbookViewAdapter.TextOnClickListener(){
 
             @Override public void onClick(int position){
-                // blubber
-                /*
                 if(position != getSelected() || (position == getSelected() && !player.isPlaying()))  // do not pause the audio if "selected" text is selected again
                 {
                     // If interrupted
 
                     int former_position = getSelected();
+                    TextChunk former_selected = dataSet.get(former_position);
+                    //if(former_selected.isSelected())
                     backToNormal(String.valueOf(former_position));
 
+
                     is_paused = false;
+
                     checkIfVisible(position);
-                }*/
+                }
             }
 
         });
 
-        // TEMP
-        //blubber
-        for(TextChunk t : tempDataSet){
-            dataSet.add(new TextChunk(t.getText()));
-            adapter.notifyItemInserted(dataSet.size()-1);
-        }
+
+        */
 
     }
 
@@ -214,9 +195,20 @@ public class TextbookViewFragment extends Fragment implements PlayerBarFragment.
         // Inflate the layout for this fragment
         View view = inflater.inflate(R.layout.fragment_textbook_view, container, false);
 
-        recyclerView = (RecyclerView) view.findViewById(R.id.my_recycler_view);
+        /*
 
-        playerBarFragment =  (PlayerBarFragment) ((MainActivity)getActivity()).getSupportFragmentManager().findFragmentByTag("Player Bar");
+        // Audio Player Bar
+        fragmentManager = getChildFragmentManager();
+
+        //Add player bar fragment to this activity
+        FragmentTransaction ft = fragmentManager.beginTransaction();
+        playerBarFragment = PlayerBarFragment.newInstance(tempDataSet.size());
+        ft.add(R.id.playbar_container, playerBarFragment);
+        ft.commit();
+
+        is_paused = false;
+
+        recyclerView = (RecyclerView) view.findViewById(R.id.my_recycler_view);
 
         // Layout Manager
         layoutManager = new LinearLayoutManager(context, LinearLayoutManager.VERTICAL, false) {
@@ -243,11 +235,12 @@ public class TextbookViewFragment extends Fragment implements PlayerBarFragment.
                 int target = customScrollListener.getTarget();
                 //Log.i("excellent", "In scrollVerticallyBy\t" + "Position: " + String.valueOf(target));
 
+
+
                 int front = findFirstVisibleItemPosition();
                 int back = findLastVisibleItemPosition();
 
-                // blubber
-                //playerBarFragment.setSeekbarProgress(front);
+                playerBarFragment.setSeekbarProgress(front);
 
                 if ( target >=front && target <=back) {
                    // Log.i("Target is visible", "Target is not -1!!");
@@ -293,13 +286,6 @@ public class TextbookViewFragment extends Fragment implements PlayerBarFragment.
 
         // After dataSet is completed
         //Progress bar to show progress of TTS file synthesis
-
-        //blubber
-        // REMOVE THIS
-        progress = (LinearLayout) view.findViewById(R.id.progress);
-        progress.setVisibility(View.GONE);
-
-        /*
         progress = (LinearLayout) view.findViewById(R.id.progress);
         if(dataSet.size() == tempDataSet.size()){  progress.setVisibility(View.GONE); }
         else {
@@ -309,6 +295,10 @@ public class TextbookViewFragment extends Fragment implements PlayerBarFragment.
 
             progressNumber = (TextView) view.findViewById(R.id.progressNumber);
         }
+
+        adapter.setContext(context);
+        recyclerView.setAdapter(adapter);
+        adapter.notifyDataSetChanged();
 
         //Permissions for MediaPlayer
         int permission = ActivityCompat.checkSelfPermission(context, Manifest.permission.WRITE_EXTERNAL_STORAGE);
@@ -334,9 +324,7 @@ public class TextbookViewFragment extends Fragment implements PlayerBarFragment.
 
         */
 
-        adapter.setContext(context);
-        recyclerView.setAdapter(adapter);
-        adapter.notifyDataSetChanged();
+
 
         return view;
 
@@ -347,7 +335,6 @@ public class TextbookViewFragment extends Fragment implements PlayerBarFragment.
     }
 
     public void getContent(){
-
         try {
             String fileName = "Books/" + bookId + "/" + modId + "/index.cnxml.html";
             StringBuilder buf = new StringBuilder();
@@ -485,14 +472,14 @@ public class TextbookViewFragment extends Fragment implements PlayerBarFragment.
         // last condition checks if the view is visible, but isn't at the top. (too much at the bottom)
         if(     //((position < first || position > last)   &&     (first !=-1 && last !=-1)) ||
                 (v == null) ||
-                        (v !=null && v.getTop() < 0) ||
-                        (v !=null && v.getTop() > 0 && position != last && position == layoutManager.findLastVisibleItemPosition()))
+                (v !=null && v.getTop() < 0) ||
+                (v !=null && v.getTop() > 0 && position != last && position == layoutManager.findLastVisibleItemPosition()))
         {
 
-            //  if(v != null) Log.i("Top", String.valueOf(v.getTop()));
+          //  if(v != null) Log.i("Top", String.valueOf(v.getTop()));
 
-            // Log.i("Position not visible?", "\tFirst: " + String.valueOf(first)+"\tPosition: " + String.valueOf(position) + "\tLast: " + String.valueOf(last));
-            // Log.i("First Visible item position: ", String.valueOf(layoutManager.findFirstVisibleItemPosition()));
+           // Log.i("Position not visible?", "\tFirst: " + String.valueOf(first)+"\tPosition: " + String.valueOf(position) + "\tLast: " + String.valueOf(last));
+           // Log.i("First Visible item position: ", String.valueOf(layoutManager.findFirstVisibleItemPosition()));
 
             //customScrollListener.setTarget(position);
             recyclerView.smoothScrollToPosition(position);
@@ -522,11 +509,9 @@ public class TextbookViewFragment extends Fragment implements PlayerBarFragment.
                 public void run() {
                     v.findViewById(R.id.item).setBackgroundColor(ContextCompat.getColor(context, R.color.colorHighlighted));
                     playerBarFragment.setPlayButton("Pause");
-
-                    // blubber
-                    /*playerBarFragment.setStopButton(true);
+                    playerBarFragment.setStopButton(true);
                     playerBarFragment.setForwardButton(true);
-                    playerBarFragment.setReverseButton(true); */
+                    playerBarFragment.setReverseButton(true);
 
                 }
             });
@@ -589,12 +574,10 @@ public class TextbookViewFragment extends Fragment implements PlayerBarFragment.
                                     getActivity().runOnUiThread(new Runnable() {
                                         @Override
                                         public void run() {
-                                            //blubber
-                                            /*
                                             playerBarFragment.setPlayButton("Play");
                                             playerBarFragment.setStopButton(false);
                                             playerBarFragment.setForwardButton(false);
-                                            playerBarFragment.setReverseButton(false); */
+                                            playerBarFragment.setReverseButton(false);
                                         }
                                     });
                                 }
@@ -664,18 +647,18 @@ public class TextbookViewFragment extends Fragment implements PlayerBarFragment.
                 });
 
                 if(pos.contains(String.valueOf(tempDataSet.size()-1))){
-                    Log.i("Completed converting all files", pos);
+                        Log.i("Completed converting all files", pos);
 
-                    if(makeDownloadAvailable) {
-                        makeDownloadAvailable = false;
-                        getActivity().runOnUiThread(new Runnable() {
-                            @Override
-                            public void run() {
-                                download.setEnabled(true);
-                            }
-                        });
-                    }
-                    progress.animate().setDuration(200).alpha(0).setListener(new AnimatorListenerAdapter() {
+                        if(makeDownloadAvailable) {
+                            makeDownloadAvailable = false;
+                            getActivity().runOnUiThread(new Runnable() {
+                                @Override
+                                public void run() {
+                                    download.setEnabled(true);
+                                }
+                            });
+                        }
+                        progress.animate().setDuration(200).alpha(0).setListener(new AnimatorListenerAdapter() {
                         @Override
                         public void onAnimationEnd(Animator animation) {
                             progress.setVisibility(View.GONE);
@@ -803,10 +786,9 @@ public class TextbookViewFragment extends Fragment implements PlayerBarFragment.
                 @Override
                 public void run() {
                     playerBarFragment.setPlayButton("Play");
-                    /* // blubber
                     playerBarFragment.setStopButton(false);
                     playerBarFragment.setForwardButton(false);
-                    playerBarFragment.setReverseButton(false); */
+                    playerBarFragment.setReverseButton(false);
                 }
             });
         }
@@ -832,11 +814,9 @@ public class TextbookViewFragment extends Fragment implements PlayerBarFragment.
                 @Override
                 public void run() {
                     playerBarFragment.setPlayButton("Play");
-                    //blubber
-                    /*
                     playerBarFragment.setStopButton(false);
                     playerBarFragment.setForwardButton(false);
-                    playerBarFragment.setReverseButton(false);  */
+                    playerBarFragment.setReverseButton(false);
                 }
             });
         }
@@ -931,7 +911,7 @@ public class TextbookViewFragment extends Fragment implements PlayerBarFragment.
             if (dy > 0) {
                 //System.out.println("Scrolled Downwards");
             } else if (dy < 0) {
-                // System.out.println("Scrolled Upwards");
+               // System.out.println("Scrolled Upwards");
             } else {
                 //System.out.println("No Vertical Scrolled");
             }
@@ -970,7 +950,7 @@ public class TextbookViewFragment extends Fragment implements PlayerBarFragment.
         s+="concat=n="+dataSet.size()+":v=0:a=1[out] -map [out] " + outputFilename;
 
         // https://trac.ffmpeg.org/wiki/Concatenate
-        // String s = "-i " + uris[0] + " -i " + uris[1] + " -filter_complex [0:0][1:0]concat=n=2:v=0:a=1[out] -map [out] " + output;
+       // String s = "-i " + uris[0] + " -i " + uris[1] + " -filter_complex [0:0][1:0]concat=n=2:v=0:a=1[out] -map [out] " + output;
         Log.i("THE WHOLE THING", s);
 
 
@@ -1069,8 +1049,6 @@ public class TextbookViewFragment extends Fragment implements PlayerBarFragment.
         void sendModuleInfo(String bookTitle, String bookID, String modID, String modTitle);
 
         void playEntireModule(String bookTitle, String modID, String modTitle);
-
-        void onRecyclerViewCreated(RecyclerView recyclerView);
     }
 
 
@@ -1206,9 +1184,6 @@ public class TextbookViewFragment extends Fragment implements PlayerBarFragment.
     public void onResume(){
         super.onResume();
         getActivity().invalidateOptionsMenu();
-        if(recyclerView !=null) ((MainActivity)getActivity()).onRecyclerViewCreated(recyclerView);
-        else Log.i("Recyclerview is null", "lol");
-
 
 //        playerBarFragment.setSeekbarProgress(getActualFirstVisibleItem());
 
