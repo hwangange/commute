@@ -80,5 +80,11 @@ dependencies {
     //implementation 'com.writingminds:FFmpegAndroid:0.3.2' <-- this one bad, has "text relocations" bug.
     implementation 'nl.bravobit:android-ffmpeg:1.1.5'
 
+    // slide panel up
+    repositories {
+        mavenCentral()
+    }
+    implementation 'com.sothree.slidinguppanel:library:3.4.0'
+
 
 }

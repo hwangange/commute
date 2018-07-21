@@ -1,31 +1,63 @@
 package com.interns.team3.openstax.myttsapplication;
 
 
+import android.content.Intent;
+import android.content.SharedPreferences;
+import android.graphics.PorterDuff;
+import android.graphics.drawable.Drawable;
 import android.media.MediaPlayer;
 import android.net.Uri;
+import android.os.Environment;
 import android.support.annotation.NonNull;
 import android.support.design.widget.BottomNavigationView;
+import android.support.design.widget.TabItem;
+import android.support.design.widget.TabLayout;
 import android.support.v4.app.FragmentActivity;
 import android.support.v4.app.FragmentManager;
 import android.support.v4.app.FragmentTransaction;
 import android.support.v7.app.ActionBar;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
+import android.text.Html;
+import android.text.method.LinkMovementMethod;
 import android.util.Log;
 import android.view.Menu;
 import android.view.MenuItem;
 import android.view.View;
 import android.view.Window;
+import android.widget.AdapterView;
+import android.widget.ArrayAdapter;
+import android.widget.Button;
+import android.widget.ImageButton;
+import android.widget.ImageView;
+import android.widget.ListView;
+import android.widget.RelativeLayout;
+import android.widget.TextView;
+import android.widget.Toast;
+
+import com.sothree.slidinguppanel.SlidingUpPanelLayout;
+
+import java.util.Arrays;
+import java.util.HashSet;
+import java.util.List;
 
 public class MainActivity extends AppCompatActivity implements HOMEFragment.OnFragmentInteractionListener, LIBRARYFragment.OnFragmentInteractionListener, BookshelfFragment.OnFragmentInteractionListener, TableOfContentsFragment.OnFragmentInteractionListener, TextbookViewFragment.OnFragmentInteractionListener, PlayerBarFragment.OnFragmentInteractionListener, VolumeFragment.OnFragmentInteractionListener, NOWPLAYINGFragment.OnFragmentInteractionListener {
 
+    private static final String TAG = "MainActivity";
 
-    //private MediaRouteSelector mSelector;
+    private SlidingUpPanelLayout mLayout;
+    private RelativeLayout dragView;
+    private TabLayout tabLayout;
+    private TabLayout.Tab textbookViewTab, nowPlayingTab;
+
+    private TextView dragViewText;
+    private ImageView dragViewPlayButton, dragViewFavorite;
 
     public FragmentManager fragmentManager;
     public HOMEFragment homeFragment;
     public LIBRARYFragment libraryFragment;
     public NOWPLAYINGFragment nowPlayingFragment;
+    public TextbookViewFragment textbookViewFragment;
 
     public BottomNavigationView bottomNavigationView;
 
@@ -50,8 +82,17 @@ public class MainActivity extends AppCompatActivity implements HOMEFragment.OnFr
         fragmentManager = getSupportFragmentManager();
         libraryFragment = LIBRARYFragment.newInstance("","");
         nowPlayingFragment = NOWPLAYINGFragment.newInstance("Select a module to play!","","", getApplicationContext());
+        textbookViewFragment = TextbookViewFragment.newInstance("Select a module~", "", "", this);
 
+        //nowPlayingFragment = (NOWPLAYINGFragment) fragmentManager.findFragmentById(R.id.nowPlayingFragment);
+        //nowPlayingFragment.setNewModule("Select a module to play!", "", "");
+
+        // add nowPlayingFragment to the scroll up panel
         FragmentTransaction ft = fragmentManager.beginTransaction();
+        ft.replace(R.id.nowPlayingContainer, nowPlayingFragment);
+        ft.commit();
+
+        ft = fragmentManager.beginTransaction();
         homeFragment = HOMEFragment.newInstance(getApplicationContext());
         ft.setCustomAnimations(android.R.anim.slide_in_left, android.R.anim.slide_out_right, android.R.anim.fade_in, android.R.anim.fade_out);
         ft.replace(R.id.fragmentContainer, homeFragment);
@@ -59,7 +100,7 @@ public class MainActivity extends AppCompatActivity implements HOMEFragment.OnFr
 
         bottomNavigationView = (BottomNavigationView)
                 findViewById(R.id.navigation);
-        if(nowPlayingFragment == null) bottomNavigationView.findViewById(R.id.navigation_player).setEnabled(false);
+        //if(nowPlayingFragment == null) bottomNavigationView.findViewById(R.id.navigation_player).setEnabled(false);
 
         bottomNavigationView.setOnNavigationItemSelectedListener(mOnNavigationItemSelectedListener);
 
@@ -83,6 +124,102 @@ public class MainActivity extends AppCompatActivity implements HOMEFragment.OnFr
 
             }
         });
+
+
+        dragView = (RelativeLayout) findViewById(R.id.dragView);
+        dragViewText = (TextView) findViewById(R.id.dragViewText);
+        dragViewPlayButton = (ImageView) findViewById(R.id.dragViewPlayButton);
+        dragViewPlayButton.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+
+            }
+        });
+        dragViewFavorite = (ImageView) findViewById(R.id.dragViewFavorite);
+        dragViewFavorite.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+
+            }
+        });
+
+        mLayout = (SlidingUpPanelLayout) findViewById(R.id.sliding_layout);
+        mLayout.addPanelSlideListener(new SlidingUpPanelLayout.PanelSlideListener() {
+            @Override
+            public void onPanelSlide(View panel, float slideOffset) {
+                //Log.i(TAG, "onPanelSlide, offset " + slideOffset);
+            }
+
+            @Override
+            public void onPanelStateChanged(View panel, SlidingUpPanelLayout.PanelState previousState, SlidingUpPanelLayout.PanelState newState) {
+                Log.i(TAG, "onPanelStateChanged " + newState);
+
+                if(String.valueOf(newState).equals("DRAGGING")){
+                    Log.i(TAG, "It is dragging");
+                }
+
+                if(String.valueOf(newState).equals("EXPANDED")){
+                    dragView.setVisibility(View.GONE);
+                }
+
+                if(String.valueOf(newState).equals("COLLAPSED")){
+                    dragView.setVisibility(View.VISIBLE);
+                }
+
+
+            }
+        });
+
+        mLayout.setFadeOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                mLayout.setPanelState(SlidingUpPanelLayout.PanelState.COLLAPSED);
+            }
+        });
+
+
+
+        // Hide the drag view
+        mLayout.setPanelState(SlidingUpPanelLayout.PanelState.HIDDEN);
+
+        // Tabs
+        tabLayout = findViewById(R.id.tabLayout);
+        textbookViewTab = tabLayout.newTab();
+        textbookViewTab.setText("Text");
+        nowPlayingTab = tabLayout.newTab();
+        nowPlayingTab.setText("Play");
+
+        tabLayout.addTab(textbookViewTab);
+        tabLayout.addTab(nowPlayingTab);
+        tabLayout.addOnTabSelectedListener(new TabLayout.OnTabSelectedListener(){
+            @Override
+            public void onTabSelected(TabLayout.Tab tab){
+
+                //TextbookView
+                if(tab.getText().equals("Text")){
+                    FragmentTransaction ft = fragmentManager.beginTransaction();
+                    ft.replace(R.id.nowPlayingContainer, textbookViewFragment);
+                    ft.addToBackStack(null); // allow user to go back
+                    ft.setCustomAnimations(android.R.anim.slide_in_left, android.R.anim.slide_out_right, android.R.anim.fade_in, android.R.anim.fade_out);
+                    ft.commit();
+                }
+
+                else if(tab.getText().equals("Play")) {
+                    FragmentTransaction ft = fragmentManager.beginTransaction();
+                    ft.replace(R.id.nowPlayingContainer, nowPlayingFragment);
+                    ft.addToBackStack(null); // allow user to go back
+                    ft.setCustomAnimations(android.R.anim.slide_in_left, android.R.anim.slide_out_right, android.R.anim.fade_in, android.R.anim.fade_out);
+                    ft.commit();
+                }
+            }
+
+            @Override
+            public void onTabReselected(TabLayout.Tab tab){ }
+
+            @Override
+            public void onTabUnselected(TabLayout.Tab tab){ }
+        });
+
     }
 
     private BottomNavigationView.OnNavigationItemSelectedListener mOnNavigationItemSelectedListener
@@ -101,12 +238,13 @@ public class MainActivity extends AppCompatActivity implements HOMEFragment.OnFr
                     return true;
                 }
                 case R.id.navigation_player: {
-                    FragmentTransaction ft = fragmentManager.beginTransaction();
+
+                   /* FragmentTransaction ft = fragmentManager.beginTransaction();
                     ft.replace(R.id.fragmentContainer, nowPlayingFragment);
                     ft.addToBackStack(null); // allow user to go back
                     ft.setCustomAnimations(android.R.anim.fade_in, android.R.anim.fade_out, android.R.anim.fade_in, android.R.anim.fade_out);
                     ft.commit();
-                    Log.i("now playing","there");
+                    Log.i("now playing","there"); */
                     return true;
                 }
                 case R.id.navigation_library: {
@@ -134,7 +272,11 @@ public class MainActivity extends AppCompatActivity implements HOMEFragment.OnFr
             if(bottomNavigationView.getSelectedItemId() == R.id.navigation_home){
                 int count = homeFragment.getChildFragmentManager().getBackStackEntryCount();
 
-                if(count ==0) super.onBackPressed();
+                if(count ==0)
+                {
+                    //super.onBackPressed();
+                    onBackPressed();
+                }
                 else homeFragment.getChildFragmentManager().popBackStack();
 
             }
@@ -144,7 +286,8 @@ public class MainActivity extends AppCompatActivity implements HOMEFragment.OnFr
                 int count = getFragmentManager().getBackStackEntryCount();
 
                 if (count == 0) {
-                    super.onBackPressed();
+                    onBackPressed();
+                    //super.onBackPressed();
                     //additional code
                 } else {
                     getFragmentManager().popBackStack();
@@ -154,6 +297,16 @@ public class MainActivity extends AppCompatActivity implements HOMEFragment.OnFr
         }
         return false;
     }
+
+    @Override
+    public void onBackPressed() {
+        if (mLayout != null &&
+                (mLayout.getPanelState() == SlidingUpPanelLayout.PanelState.EXPANDED || mLayout.getPanelState() == SlidingUpPanelLayout.PanelState.ANCHORED)) {
+            mLayout.setPanelState(SlidingUpPanelLayout.PanelState.COLLAPSED);
+        }
+        super.onBackPressed();
+    }
+
 
     @Override
     public void onResume(){
@@ -188,10 +341,11 @@ public class MainActivity extends AppCompatActivity implements HOMEFragment.OnFr
     }
 
     public void playMergedFile(String bookTitle, String modID, String modTitle){
-        bottomNavigationView.findViewById(R.id.navigation_player).setEnabled(true);
-        bottomNavigationView.setSelectedItemId(R.id.navigation_player);
 
         Log.i("is nowPlayingFragment null?", String.valueOf(nowPlayingFragment == null));
+        dragViewText.setText(Html.fromHtml("<b>"+modTitle+"</b><br/>"+bookTitle, Html.FROM_HTML_MODE_COMPACT));
+
+
         if(nowPlayingFragment != null)
         {
             String s = nowPlayingFragment.getModule();
@@ -200,18 +354,24 @@ public class MainActivity extends AppCompatActivity implements HOMEFragment.OnFr
 
         if(!nowPlayingFragment.getModule().equals(modID))
         {
+            dragViewPlayButton.setImageResource(R.drawable.pause);
             // stop the media player
             if(!nowPlayingFragment.getModule().equals("")) nowPlayingFragment.stopTTS();
 
             // make a new nowPlayingFragment
             nowPlayingFragment.setNewModule(bookTitle, modID, modTitle);
+
+            String output = Environment.getExternalStorageDirectory().getAbsolutePath() + "/output" + modID + ".mp3";
+            nowPlayingFragment.playMergedFile(output);
         }
 
-        FragmentTransaction ft = fragmentManager.beginTransaction();
+        mLayout.setPanelState(SlidingUpPanelLayout.PanelState.EXPANDED);
+
+        /*FragmentTransaction ft = fragmentManager.beginTransaction();
         ft.replace(R.id.fragmentContainer, nowPlayingFragment);
         ft.addToBackStack(null); // allow user to go back
         ft.setCustomAnimations(android.R.anim.slide_in_left, android.R.anim.slide_out_right, android.R.anim.fade_in, android.R.anim.fade_out);
-        ft.commit();
+        ft.commit(); */
     }
 
 

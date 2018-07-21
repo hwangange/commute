@@ -1,53 +1,139 @@
 <?xml version="1.0" encoding="utf-8"?>
-<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
-    xmlns:app="http://schemas.android.com/apk/res-auto"
+
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:tools="http://schemas.android.com/tools"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:sothree="http://schemas.android.com/apk/res-auto"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:orientation="vertical"
-    tools:context=".MainActivity"
+    android:id="@+id/parent_layout"
+    android:orientation="vertical">
 
-    >
-    <!--
-    android:paddingTop="100dp"
-    android:paddingTop="?android:attr/actionBarSize"
-    -->
-    <FrameLayout
-        android:id="@+id/fragmentContainer"
-        android:orientation="vertical"
+    <com.sothree.slidinguppanel.SlidingUpPanelLayout
+        android:id="@+id/sliding_layout"
         android:layout_width="match_parent"
         android:layout_height="0dp"
         android:gravity="bottom"
-        android:layout_weight="8">
-    </FrameLayout>
+        android:layout_weight="8"
+        sothree:umanoPanelHeight="60dp"
+        sothree:umanoShadowHeight="4dp"
+        sothree:umanoParallaxOffset="100dp"
+        sothree:umanoOverlay="false"
+        sothree:umanoScrollableView="@+id/list">
+        <!--sothree:umanoDragView="@+id/dragView"-->
 
-    <!--<LinearLayout
-        android:layout_width="match_parent"
-        android:background="@color/lightPurple"
-        android:orientation="vertical"
-        android:layout_weight="1"
-        android:gravity="bottom"
-        android:layout_height="0dp">
-            BOTTOM NAV
-            android:layout_alignParentBottom="true"
-            android:background="?android:attr/windowBackground"
-        </LinearLayout>-->
-
-        <android.support.design.widget.BottomNavigationView
-            android:id="@+id/navigation"
+        <!-- Main content -->
+        <LinearLayout
             android:layout_width="match_parent"
-            android:layout_height="0dp"
-            android:layout_weight="1"
-            android:layout_gravity="end"
-            android:background="@color/lightBlack"
-            android:gravity="bottom"
-            app:itemBackground="@color/lightBlack"
-            android:layout_margin="0dp"
-            app:itemIconTint="@drawable/bottom_navigation_color_selector"
-            app:itemTextColor="@drawable/bottom_navigation_color_selector"
-            app:menu="@menu/navigation"
+            android:layout_height="match_parent"
+            android:orientation="vertical"
+            tools:context=".MainActivity"
 
-            />
+            >
+            <!--
+            android:paddingTop="100dp"
+            android:paddingTop="?android:attr/actionBarSize"
+            -->
 
+            <FrameLayout
+                android:id="@+id/fragmentContainer"
+                android:orientation="vertical"
+                android:layout_width="match_parent"
+                android:layout_height="0dp"
+                android:gravity="bottom"
+                android:layout_weight="8">
+            </FrameLayout>
+
+        </LinearLayout>
+
+        <!-- SLIDING LAYOUT -->
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:background="#ffffff"
+            android:orientation="vertical"
+            android:clickable="true"
+            android:focusable="false"
+            android:id="@+id/panel">
+
+
+            <RelativeLayout
+                android:id="@+id/dragView"
+                android:layout_width="match_parent"
+                android:layout_height="60dp"
+                android:layout_gravity="end"
+                android:orientation="horizontal"
+                android:layout_marginHorizontal="@dimen/activity_vertical_margin">
+
+                <!--android:background="@color/darkBlack"-->
+
+                <ImageView
+                    android:id="@+id/dragViewPlayButton"
+                    android:contentDescription="Play"
+                    android:layout_width="wrap_content"
+                    android:layout_height="match_parent"
+                    android:gravity="center_vertical"
+                    android:src="@drawable/play"
+                    android:layout_gravity="start"
+                    android:layout_alignParentStart="true" />
+
+                <TextView
+                    android:id="@+id/dragViewText"
+                    android:layout_width="wrap_content"
+                    android:layout_height="match_parent"
+                    android:textSize="14sp"
+                    android:gravity="center_vertical"
+                    android:layout_centerHorizontal="true"
+                    android:paddingLeft="10dp"/>
+
+                <ImageView
+                    android:id="@+id/dragViewFavorite"
+                    android:contentDescription="Favorite"
+                    android:layout_width="wrap_content"
+                    android:layout_height="match_parent"
+                    android:textSize="14sp"
+                    android:gravity="center_vertical"
+                    android:src="@drawable/ic_heart_24dp"
+                    android:layout_gravity="end"
+                    android:layout_alignParentEnd="true"/>
+
+            </RelativeLayout>
+
+            <android.support.design.widget.TabLayout
+                android:id="@+id/tabLayout"
+                android:layout_height="wrap_content"
+                android:layout_width="match_parent">
+
+            </android.support.design.widget.TabLayout>
+
+
+            <FrameLayout
+                android:id="@+id/nowPlayingContainer"
+                android:orientation="vertical"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_weight="1">
+            </FrameLayout>
+
+
+        </LinearLayout>
+
+    </com.sothree.slidinguppanel.SlidingUpPanelLayout>
+
+    <android.support.design.widget.BottomNavigationView
+        android:id="@+id/navigation"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="1"
+        android:layout_gravity="end"
+        android:background="@color/lightBlack"
+        android:gravity="bottom"
+        app:itemBackground="@color/lightBlack"
+        android:layout_margin="0dp"
+        app:itemIconTint="@drawable/bottom_navigation_color_selector"
+        app:itemTextColor="@drawable/bottom_navigation_color_selector"
+        app:menu="@menu/navigation"
+        />
 
 </LinearLayout>

@@ -102,7 +102,9 @@ public class TableOfContentsFragment extends Fragment {
                 String modTitle = ((TextView) v.findViewById(R.id.modTitle)).getText().toString();
                 //Toast.makeText(getApplicationContext(), targetId, Toast.LENGTH_SHORT).show();
 
-                ((HOMEFragment)getParentFragment()).sendModuleInfo(bookId, bookTitle, modId, modTitle);
+
+                ((MainActivity)getActivity()).playMergedFile(bookTitle, modId, modTitle);
+                //((HOMEFragment)getParentFragment()).sendModuleInfo(bookId, bookTitle, modId, modTitle);
             }
         });
 

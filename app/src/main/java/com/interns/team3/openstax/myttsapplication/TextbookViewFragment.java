@@ -148,6 +148,12 @@ public class TextbookViewFragment extends Fragment implements PlayerBarFragment.
             tag = bookId+"_"+modTitle+"_"+modId;
         }
 
+
+
+
+        /*
+
+
         // Utterance Progress Listener
         myUtteranceProgressListener = new MyUtteranceProgressListener();
         tts = new TextToSpeech(context, new TextToSpeech.OnInitListener() {
@@ -194,13 +200,22 @@ public class TextbookViewFragment extends Fragment implements PlayerBarFragment.
 
         });
 
+
+        */
+
     }
 
     @Override
     public View onCreateView(LayoutInflater inflater, ViewGroup container,
                              Bundle savedInstanceState) {
+
+
+
+
         // Inflate the layout for this fragment
         View view = inflater.inflate(R.layout.fragment_textbook_view, container, false);
+
+        /*
 
         // Audio Player Bar
         fragmentManager = getChildFragmentManager();
@@ -326,6 +341,8 @@ public class TextbookViewFragment extends Fragment implements PlayerBarFragment.
                     REQUEST_EXTERNAL_STORAGE
             );
         }
+
+        */
 
 
 
@@ -651,6 +668,16 @@ public class TextbookViewFragment extends Fragment implements PlayerBarFragment.
 
                 if(pos.contains(String.valueOf(tempDataSet.size()-1))){
                         Log.i("Completed converting all files", pos);
+
+                        if(makeDownloadAvailable) {
+                            makeDownloadAvailable = false;
+                            getActivity().runOnUiThread(new Runnable() {
+                                @Override
+                                public void run() {
+                                    download.setEnabled(true);
+                                }
+                            });
+                        }
                         progress.animate().setDuration(200).alpha(0).setListener(new AnimatorListenerAdapter() {
                         @Override
                         public void onAnimationEnd(Animator animation) {
@@ -1105,7 +1132,7 @@ public class TextbookViewFragment extends Fragment implements PlayerBarFragment.
         if (ffmpeg.isSupported()) {
             // ffmpeg is supported
             Log.i("FFmpeg is supported", "Yay!");
-            if(makeDownloadAvailable) download.setEnabled(true);
+            //if(makeDownloadAvailable) download.setEnabled(true);
         } else {
             // ffmpeg is not supported
             Log.i("FFmpeg is not supported", "Darn ;(");
@@ -1178,7 +1205,7 @@ public class TextbookViewFragment extends Fragment implements PlayerBarFragment.
         super.onResume();
         getActivity().invalidateOptionsMenu();
 
-        playerBarFragment.setSeekbarProgress(getActualFirstVisibleItem());
+//        playerBarFragment.setSeekbarProgress(getActualFirstVisibleItem());
 
     }
 
