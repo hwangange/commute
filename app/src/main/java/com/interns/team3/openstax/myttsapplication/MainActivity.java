@@ -32,6 +32,7 @@ import android.widget.ArrayAdapter;
 import android.widget.Button;
 import android.widget.ImageButton;
 import android.widget.ImageView;
+import android.widget.LinearLayout;
 import android.widget.ListView;
 import android.widget.RelativeLayout;
 import android.widget.TextView;
@@ -39,9 +40,16 @@ import android.widget.Toast;
 
 import com.sothree.slidinguppanel.SlidingUpPanelLayout;
 
+import java.io.File;
+import java.io.IOException;
+import java.lang.reflect.Array;
+import java.util.ArrayList;
 import java.util.Arrays;
 import java.util.HashSet;
 import java.util.List;
+
+import nl.bravobit.ffmpeg.ExecuteBinaryResponseHandler;
+import nl.bravobit.ffmpeg.FFmpeg;
 
 public class MainActivity extends AppCompatActivity implements HOMEFragment.OnFragmentInteractionListener, LIBRARYFragment.OnFragmentInteractionListener, BookshelfFragment.OnFragmentInteractionListener, TableOfContentsFragment.OnFragmentInteractionListener, TextbookViewFragment.OnFragmentInteractionListener, PlayerBarFragment.OnFragmentInteractionListener, NOWPLAYINGFragment.OnFragmentInteractionListener {
 
@@ -140,14 +148,15 @@ public class MainActivity extends AppCompatActivity implements HOMEFragment.OnFr
         dragViewPlayButton.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-
+                playerBarFragment.handlePlayButtonClick();
             }
         });
         dragViewFavorite = (ImageView) findViewById(R.id.dragViewFavorite);
+        setFavoriteIconColor(false);
         dragViewFavorite.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-
+                setFavoriteIconColor(true);
             }
         });
 
@@ -372,28 +381,188 @@ public class MainActivity extends AppCompatActivity implements HOMEFragment.OnFr
             // make a new nowPlayingFragment
             nowPlayingFragment.setNewModule(bookTitle, modID, modTitle);
             playerBarFragment.setNewModule(bookTitle, modID, modTitle);
-            //textbookViewFragment.setNewModule(bookTitle, modID, modTitle); // probably not necessary..
             textbookViewFragment = TextbookViewFragment.newInstance(modTitle, modID, bookTitle);
 
             // add nowPlayingFragment to the scroll up panel
             nowPlayingTab.select();
 
-            String output = Environment.getExternalStorageDirectory().getAbsolutePath() + "/output" + modID + ".mp3";
-            playerBarFragment.playMergedFile(output);
+            if(isEntireModuleAvailable(modID)){
+                playerBarFragment.setVisible(true);
+                //fragmentManager.beginTransaction().replace(R.id.playbarContainer, playerBarFragment, "Player Bar").commit();
+                String output = Environment.getExternalStorageDirectory().getAbsolutePath() + "/output" + modID + ".mp3";
+                playerBarFragment.playMergedFile(output);
+            }
+            else {
+                // hide playerBarFragment?
+                playerBarFragment.setVisible(false);
+                //fragmentManager.beginTransaction().remove(playerBarFragment).commit();
+            }
+
+
         }
 
 
         mLayout.setPanelState(SlidingUpPanelLayout.PanelState.EXPANDED);
-
-        /*FragmentTransaction ft = fragmentManager.beginTransaction();
-        ft.replace(R.id.fragmentContainer, nowPlayingFragment);
-        ft.addToBackStack(null); // allow user to go back
-        ft.setCustomAnimations(android.R.anim.slide_in_left, android.R.anim.slide_out_right, android.R.anim.fade_in, android.R.anim.fade_out);
-        ft.commit(); */
     }
 
     public void onRecyclerViewCreated(RecyclerView recyclerView){
         mLayout.setScrollableView(recyclerView);
+    }
+
+
+
+
+    // Little icons
+    public void setFavoriteIconColor(boolean shouldToggle){
+
+        // Shared Preferences
+        SharedPreferences sharedPreferences = this.getSharedPreferences("library", 0);
+        HashSet<String> faves = (HashSet<String>) sharedPreferences.getStringSet("favorites", new HashSet<String>());
+        SharedPreferences.Editor editor = sharedPreferences.edit();
+
+        // create a duplicate HashSet of the current faves set
+        HashSet<String> newFaves = new HashSet<String>(faves);
+        String tag = textbookViewFragment.getFavesTag();
+        Log.i("Faves tag", tag);
+
+        if((faves.contains(tag) && shouldToggle) || (!faves.contains(tag) && !shouldToggle)) {
+            // change the module to NOT favorited
+            dragViewFavorite.setImageDrawable(getDrawable(R.drawable.ic_border_heart_24dp));
+            Drawable icon = dragViewFavorite.getDrawable();
+            icon.setColorFilter(this.getColor(R.color.darkBlack), PorterDuff.Mode.SRC_ATOP);
+            newFaves.remove(tag);
+
+        } else if((!faves.contains(tag) && shouldToggle) || (faves.contains(tag) && !shouldToggle )){
+            // Change the module to favorited
+            dragViewFavorite.setImageDrawable(getDrawable(R.drawable.ic_heart_24dp));
+            Drawable icon = dragViewFavorite.getDrawable();
+            icon.setColorFilter(this.getColor(R.color.colorAccent), PorterDuff.Mode.SRC_ATOP);
+            newFaves.add(tag);
+
+        }
+        String output = ":) \t";
+        for(String s : newFaves) {
+            output+=s+"\t";
+        }
+        newFaves.remove(null);
+        Log.i("in NewFaves", output);
+        editor.putStringSet("favorites", newFaves); // hopefully this replaces the old favorites set
+        editor.commit();
+    }
+
+    public boolean isEntireModuleAvailable(String modId){
+        SharedPreferences sharedPreferences = this.getSharedPreferences("library", 0);
+        SharedPreferences.Editor editor = sharedPreferences.edit();
+        String output = Environment.getExternalStorageDirectory().getAbsolutePath() + "/output"+modId+".mp3";
+        File f = new File(output);
+        if(f.exists()) {
+            // show textbookviewfragment
+            Log.i("Download available", "showing play options");
+            dragViewPlayButton.setVisibility(View.VISIBLE);
+            nowPlayingFragment.showPlaying();
+            return true;
+        }
+        else {
+            Log.i("Download unavailable", "hiding play options");
+            // show download button
+            // don't make player bar visible on the "Play" section.
+            dragViewPlayButton.setVisibility(View.GONE);
+            nowPlayingFragment.hidePlaying();
+
+            return false;
+        }
+    }
+
+    public void downloadEntireModule(String modId){
+        String output = Environment.getExternalStorageDirectory().getAbsolutePath() + "/output"+modId+".mp3";
+        try{ download(output); } catch(IOException e){ Log.i("IOException", "Downloading entire module");};
+
+        SharedPreferences sharedPreferences = this.getSharedPreferences("library", 0);
+        SharedPreferences.Editor editor = sharedPreferences.edit();
+        HashSet<String> downloads = (HashSet<String>) sharedPreferences.getStringSet("downloads", new HashSet<String>());
+        HashSet<String> newDownloads = new HashSet<String>(downloads);
+        newDownloads.add(textbookViewFragment.getFavesTag()); // same tag as favorites.
+        editor.putStringSet("downloads", newDownloads); // hopefully this replaces the old downloads set
+        editor.commit();
+    }
+
+    public void download(String outputFilename) throws IOException {
+
+        /*String[] uris = new String[]{
+                "/storage/emulated/0/textbookaudio0.wav",
+             */
+
+        ArrayList<TextChunk> dataSet = textbookViewFragment.getDataSet();
+
+        String[] uris = new String[dataSet.size()];
+        String s = "";
+
+        for (int x = 0; x < dataSet.size(); x ++){
+            uris[x] = "/storage/emulated/0/textbookaudio"+ x +".wav";
+            s+="-i " + uris[x] + " ";
+        }
+
+        s+="-filter_complex ";
+
+        for(int x = 0; x < dataSet.size(); x++){
+            s+="["+x+":0]";
+        }
+
+        s+="concat=n="+dataSet.size()+":v=0:a=1[out] -map [out] " + outputFilename;
+
+        // https://trac.ffmpeg.org/wiki/Concatenate
+        // String s = "-i " + uris[0] + " -i " + uris[1] + " -filter_complex [0:0][1:0]concat=n=2:v=0:a=1[out] -map [out] " + output;
+        Log.i("THE WHOLE THING", s);
+
+
+        String[] cmd = s.split(" ");
+
+        // checking that Ffmpeg works
+        FFmpeg ffmpeg = FFmpeg.getInstance(this);
+        if (ffmpeg.isSupported()) {
+            // ffmpeg is supported
+            Log.i("FFmpeg is supported", "Yay!");
+            //if(makeDownloadAvailable) download.setEnabled(true);
+        } else {
+            // ffmpeg is not supported
+            Log.i("FFmpeg is not supported", "Darn ;(");
+        }
+
+
+        // to execute "ffmpeg -version" command you just need to pass "-version"
+        // for more info, check out this link:
+        // https://superuser.com/questions/1298891/ffmpeg-merge-multiple-audio-files-into-single-audio-file-with-android
+        // CORRECT dependency that fixes "relocation" problems: https://github.com/bravobit/FFmpeg-Android
+        ffmpeg = FFmpeg.getInstance(this);
+        ffmpeg.execute(cmd, new ExecuteBinaryResponseHandler() {
+
+            @Override
+            public void onStart() {
+                Log.i("ffmpeg execute - Start", "Hi");
+            }
+
+            @Override
+            public void onProgress(String message) {
+                Log.i("ffmpeg execute - Progress", message);
+            }
+
+            @Override
+            public void onFailure(String message) {
+                Log.i("ffmpeg execute - Failure", message);
+            }
+
+            @Override
+            public void onSuccess(String message) {
+                Log.i("ffmpeg execute - Success", message);
+            }
+
+            @Override
+            public void onFinish() {
+                Log.i("ffmpeg execute - Finish", "Bye");
+                // show the original NowPlaying.
+            }
+
+        });
     }
 
 

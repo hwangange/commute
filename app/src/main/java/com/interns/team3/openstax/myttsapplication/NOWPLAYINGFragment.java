@@ -14,6 +14,7 @@ import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 import android.widget.ImageButton;
+import android.widget.LinearLayout;
 import android.widget.SeekBar;
 import android.widget.TextView;
 
@@ -38,6 +39,9 @@ public class NOWPLAYINGFragment extends Fragment {
     public Context context =getContext();
 
     private OnFragmentInteractionListener mListener;
+
+    public LinearLayout availableLayout, unavailableLayout;
+    public boolean showPlaying;
 
     public NOWPLAYINGFragment() {
         // Required empty public constructor
@@ -81,6 +85,7 @@ public class NOWPLAYINGFragment extends Fragment {
     @Override
     public View onCreateView(LayoutInflater inflater, ViewGroup container,
                              Bundle savedInstanceState) {
+        Log.i("NOWPLAYINGFRAGMENT", "increateview");
 
         View view = inflater.inflate(R.layout.fragment_nowplaying, container, false);
 
@@ -88,10 +93,10 @@ public class NOWPLAYINGFragment extends Fragment {
         titleView.setText(modTitle);
         titleView.setGravity(Gravity.CENTER_HORIZONTAL);
 
-        (getActivity()).setTitle("Now Playing");
-        ((MainActivity)getActivity()).getSupportActionBar().setHomeButtonEnabled(false);
-        ((MainActivity)getActivity()).getSupportActionBar().setDisplayHomeAsUpEnabled(false);
+        availableLayout = view.findViewById(R.id.availableLayout);
+        unavailableLayout = view.findViewById(R.id.unavailableLayout);
 
+        if(showPlaying) { showPlaying();} else { hidePlaying(); }
 
         // Inflate the layout for this fragment
         return view;
@@ -161,6 +166,19 @@ public class NOWPLAYINGFragment extends Fragment {
         titleView.setText(modTitle);
 
     }
+
+    public void showPlaying(){
+        showPlaying= true;
+        availableLayout.setVisibility(View.VISIBLE);
+        unavailableLayout.setVisibility(View.GONE);
+    }
+
+    public void hidePlaying(){
+        showPlaying = false;
+        availableLayout.setVisibility(View.GONE);
+        unavailableLayout.setVisibility(View.VISIBLE);
+    }
+
 
 
 }

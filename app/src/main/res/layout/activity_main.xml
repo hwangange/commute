@@ -40,7 +40,13 @@
                 android:layout_height="?android:attr/actionBarSize"
                 android:background="@color/colorPrimary"
                 sothree:theme="@style/OriginalAppTheme"
+                android:theme="@style/OriginalAppTheme"
                 android:layout_width="match_parent"/>
+            <!--
+                some possibilieies
+                android:theme="@style/ThemeOverlay.AppCompat.ActionBar"
+                app:popupTheme="@style/ThemeOverlay.AppCompat.Light"
+            -->
 
             <FrameLayout
                 android:id="@+id/fragmentContainer"
@@ -118,7 +124,7 @@
                 android:id="@+id/nowPlayingContainer"
                 android:orientation="vertical"
                 android:layout_width="match_parent"
-                android:layout_height="wrap_content"
+                android:layout_height="0dp"
                 android:layout_weight="1">
             </FrameLayout>
 
@@ -126,8 +132,8 @@
                 android:id="@+id/playbarContainer"
                 android:orientation="vertical"
                 android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:layout_weight=".3" >
+                android:layout_height="0dp"
+                android:layout_weight=".2" >
             </FrameLayout>
 
 

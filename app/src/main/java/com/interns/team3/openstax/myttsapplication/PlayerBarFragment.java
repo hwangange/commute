@@ -14,6 +14,8 @@ import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 import android.widget.ImageButton;
+import android.widget.ImageView;
+import android.widget.LinearLayout;
 import android.widget.SeekBar;
 import android.widget.TextView;
 
@@ -33,11 +35,11 @@ public class PlayerBarFragment extends Fragment {
     private static final String ARG_MOD_ID = "param2";
     private static final String ARG_BOOK_ID = "param3";
 
-    public static int currentPoint = -1; static boolean isPaused;
+    public static int currentPoint = -1; static boolean isPaused = true;
 
     public static String modId, bookId, modTitle;
 
-    public Context context = getContext();
+    public Context context;
 
     public MediaPlayer player = new MediaPlayer();
 
@@ -45,6 +47,7 @@ public class PlayerBarFragment extends Fragment {
 
     private OnFragmentInteractionListener mListener;
 
+    private LinearLayout playerBar;
     private ImageButton playButton, forwardButton, reverseButton;
     private SeekBar seekbar;
     private Handler handler = new Handler();
@@ -102,6 +105,7 @@ public class PlayerBarFragment extends Fragment {
                              Bundle savedInstanceState) {
 
         Log.i("onCreateView", "in here");
+        context = getContext();
 
         View view = inflater.inflate(R.layout.fragment_player_bar, container, false);
 
@@ -109,7 +113,7 @@ public class PlayerBarFragment extends Fragment {
         ((MainActivity)getActivity()).getSupportActionBar().setHomeButtonEnabled(false);
         ((MainActivity)getActivity()).getSupportActionBar().setDisplayHomeAsUpEnabled(false);
 
-
+        playerBar = view.findViewById(R.id.playerBar);
         // Initialize Buttons
 
         playButton = (ImageButton) view.findViewById(R.id.nowPlayButton);
@@ -118,23 +122,7 @@ public class PlayerBarFragment extends Fragment {
 
             @Override
             public void onClick(View v) {
-                if (!forwardButton.isEnabled()) forwardButton.setEnabled(true);
-                if (!reverseButton.isEnabled()) reverseButton.setEnabled(true);
-
-                if (playButton.getTag().equals("Play")) {
-
-                    playButton.setTag("Pause");
-                    playButton.setImageResource(R.drawable.pause);
-                    player.seekTo(player.getCurrentPosition() - 1);
-                    player.start();
-
-                } else {
-                    playButton.setTag("Play");
-                    playButton.setImageResource(R.drawable.play);
-
-                    // Pause
-                    pauseTTS();
-                }
+               handlePlayButtonClick();
             }
         });
 
@@ -269,7 +257,7 @@ public class PlayerBarFragment extends Fragment {
                 .build());
 
         try {
-            player.setDataSource(context, uri);
+            player.setDataSource(getContext(), uri);
             player.prepare();
         } catch (Exception e) {
             e.printStackTrace();
@@ -359,6 +347,32 @@ public class PlayerBarFragment extends Fragment {
         player.seekTo(length-15000);
     }
 
+
+    public void handlePlayButtonClick(){
+        if (!forwardButton.isEnabled()) forwardButton.setEnabled(true);
+        if (!reverseButton.isEnabled()) reverseButton.setEnabled(true);
+
+        ImageView dragViewPlayButton = getActivity().findViewById(R.id.dragViewPlayButton);
+
+        if (playButton.getTag().equals("Play")) {
+
+            playButton.setTag("Pause");
+            playButton.setImageResource(R.drawable.pause);
+            dragViewPlayButton.setImageResource(R.drawable.pause);
+
+            player.seekTo(player.getCurrentPosition() - 1);
+            player.start();
+
+        } else {
+            playButton.setTag("Play");
+            playButton.setImageResource(R.drawable.play);
+            dragViewPlayButton.setImageResource(R.drawable.play);
+
+            // Pause
+            pauseTTS();
+        }
+    }
+
     public void setPlayButton(String s){
         if(s.equals("Play"))
         {
@@ -391,11 +405,11 @@ public class PlayerBarFragment extends Fragment {
             try {
                 currentPoint = player.getCurrentPosition();
                 Log.i("Current point upon pausing", String.valueOf(currentPoint));
-                if (playButton.getTag().equals("Play")) {
+               /* if (playButton.getTag().equals("Play")) {
                     isPaused = true;
                 } else {
                     isPaused = false;
-                }
+                }*/
             } catch (Exception e) {
                 e.printStackTrace();
                 currentPoint = -1;
@@ -427,6 +441,15 @@ public class PlayerBarFragment extends Fragment {
 
     public String getModule() {
         return modId;
+    }
+
+    public void setVisible(boolean boo){
+
+        if(boo)
+        {
+            playerBar.setVisibility(View.VISIBLE);
+        }
+        else playerBar.setVisibility(View.GONE);
     }
 
     private Runnable UpdateAudioTime = new Runnable() {

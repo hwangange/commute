@@ -98,9 +98,10 @@ public class TextbookViewFragment extends Fragment implements PlayerBarFragment.
     public FragmentManager fragmentManager;
     public PlayerBarFragment playerBarFragment;
 
-    public MenuItem download, playMerged, favorite;
     public boolean makeDownloadAvailable = true;
-    public String tag;
+
+    public static String tag;
+
 
     // required empty constructor
     public TextbookViewFragment(){}
@@ -120,6 +121,8 @@ public class TextbookViewFragment extends Fragment implements PlayerBarFragment.
         args.putString(ARG_MOD_TITLE, param1);
         args.putString(ARG_MOD_ID, param2);
         args.putString(ARG_BOOK_ID, param3);
+
+        setFavesTag(param3, param1, param2);
         fragment.setArguments(args);
         return fragment;
     }
@@ -130,7 +133,16 @@ public class TextbookViewFragment extends Fragment implements PlayerBarFragment.
         this.bookId = bookId;
         this.modId = modId;
         this.modTitle = modTitle;
+        tag = bookId+"_"+modTitle+"_"+modId;
 
+    }
+
+    public static void setFavesTag(String bookId, String modTitle, String modId){
+        tag = bookId+"_"+modTitle+"_"+modId;
+    }
+
+    public String getFavesTag(){
+        return tag;
     }
 
 
@@ -138,7 +150,6 @@ public class TextbookViewFragment extends Fragment implements PlayerBarFragment.
     public void onCreate(Bundle savedInstanceState) {
 
         super.onCreate(savedInstanceState);
-        setHasOptionsMenu(true);
 
         if (getArguments() != null) {
             modTitle = getArguments().getString(ARG_MOD_TITLE);
@@ -283,12 +294,6 @@ public class TextbookViewFragment extends Fragment implements PlayerBarFragment.
         customScrollListener = new CustomScrollListener();
         recyclerView.setLayoutManager(layoutManager);
         recyclerView.addOnScrollListener(customScrollListener);
-
-        // Customize action bar
-        (getActivity()).setTitle(modTitle);
-        ((MainActivity)getActivity()).getSupportActionBar().setHomeButtonEnabled(true);
-        ((MainActivity)getActivity()).getSupportActionBar().setDisplayHomeAsUpEnabled(true);
-
 
 
         // After dataSet is completed
@@ -671,7 +676,7 @@ public class TextbookViewFragment extends Fragment implements PlayerBarFragment.
                         getActivity().runOnUiThread(new Runnable() {
                             @Override
                             public void run() {
-                                download.setEnabled(true);
+                                //download.setEnabled(true);
                             }
                         });
                     }
@@ -877,7 +882,6 @@ public class TextbookViewFragment extends Fragment implements PlayerBarFragment.
         player.setVolume(value, value);
     }
 
-
     public int getSelected(){
         return adapter.getSelected();
     }
@@ -947,111 +951,6 @@ public class TextbookViewFragment extends Fragment implements PlayerBarFragment.
         return false;
     }
 
-    public void download(String outputFilename) throws IOException {
-
-        /*String[] uris = new String[]{
-                "/storage/emulated/0/textbookaudio0.wav",
-             */
-
-        String[] uris = new String[dataSet.size()];
-        String s = "";
-
-        for (int x = 0; x < dataSet.size(); x ++){
-            uris[x] = "/storage/emulated/0/textbookaudio"+ x +".wav";
-            s+="-i " + uris[x] + " ";
-        }
-
-        s+="-filter_complex ";
-
-        for(int x = 0; x < dataSet.size(); x++){
-            s+="["+x+":0]";
-        }
-
-        s+="concat=n="+dataSet.size()+":v=0:a=1[out] -map [out] " + outputFilename;
-
-        // https://trac.ffmpeg.org/wiki/Concatenate
-        // String s = "-i " + uris[0] + " -i " + uris[1] + " -filter_complex [0:0][1:0]concat=n=2:v=0:a=1[out] -map [out] " + output;
-        Log.i("THE WHOLE THING", s);
-
-
-        String[] cmd = s.split(" ");
-
-        // String[] cmd = new String[]{"-version"};
-
-
-        // to execute "ffmpeg -version" command you just need to pass "-version"
-        // for more info, check out this link:
-        // https://superuser.com/questions/1298891/ffmpeg-merge-multiple-audio-files-into-single-audio-file-with-android
-        // CORRECT dependency that fixes "relocation" problems: https://github.com/bravobit/FFmpeg-Android
-        FFmpeg ffmpeg = FFmpeg.getInstance(context);
-        ffmpeg.execute(cmd, new ExecuteBinaryResponseHandler() {
-
-            @Override
-            public void onStart() {
-                Log.i("ffmpeg execute - Start", "Hi");
-            }
-
-            @Override
-            public void onProgress(String message) {
-                Log.i("ffmpeg execute - Progress", message);
-            }
-
-            @Override
-            public void onFailure(String message) {
-                Log.i("ffmpeg execute - Failure", message);
-            }
-
-            @Override
-            public void onSuccess(String message) {
-                Log.i("ffmpeg execute - Success", message);
-            }
-
-            @Override
-            public void onFinish() {
-                Log.i("ffmpeg execute - Finish", "Bye");
-                playMerged.setEnabled(true);
-            }
-
-        });
-    }
-
-    public void playMergedFile(String output) {
-
-        player.reset();
-
-        // tts.speak(text, TextToSpeech.QUEUE_FLUSH, null, String.valueOf(position));
-
-        Uri uri = Uri.parse("file://" + output);
-
-        // player.setAudioStreamType(AudioManager.STREAM_MUSIC);
-        player.setAudioAttributes(new AudioAttributes.Builder()
-                .setUsage(AudioAttributes.USAGE_MEDIA)
-                .setContentType(AudioAttributes.CONTENT_TYPE_MUSIC)
-                .build());
-
-        try {
-            player.setDataSource(context, uri);
-            player.prepare();
-        } catch (Exception e) {
-            e.printStackTrace();
-        }
-
-        player.setOnPreparedListener(new MediaPlayer.OnPreparedListener() {
-            @Override
-            public void onPrepared(MediaPlayer mp) {
-                player.start();
-            }
-        });
-
-        player.setOnCompletionListener(new MediaPlayer.OnCompletionListener() {
-            @Override
-            public void onCompletion(MediaPlayer mp) {
-                player.stop();
-
-            }
-        });
-    }
-
     /**
      * This interface must be implemented by activities that contain this
      * fragment to allow an interaction in this fragment to be communicated
@@ -1073,139 +972,12 @@ public class TextbookViewFragment extends Fragment implements PlayerBarFragment.
         void onRecyclerViewCreated(RecyclerView recyclerView);
     }
 
-
-    private Menu menu;
-
-    @Override
-    public void onPrepareOptionsMenu(Menu menu) {
-        super.onPrepareOptionsMenu(menu);
-        this.menu = menu;
-        MenuInflater inflater = getActivity().getMenuInflater();
-        inflater.inflate(R.menu.textbook_view_menu, menu);
-        menu.findItem(R.id.download).setVisible(true);
-        menu.findItem(R.id.play_download).setVisible(true);
-        menu.findItem(R.id.favorite).setVisible(true);
-
-        //Shared Preferences
-        SharedPreferences sharedPreferences = context.getSharedPreferences("library", 0);
-        SharedPreferences.Editor editor = sharedPreferences.edit();
-
-        String output = Environment.getExternalStorageDirectory().getAbsolutePath() + "/output"+modId+".mp3";
-        Log.e("ORIGINAL output", output);
-        playMerged = menu.findItem(R.id.play_download);
-        playMerged.setOnMenuItemClickListener(new MenuItem.OnMenuItemClickListener(){
-            @Override
-            public boolean onMenuItemClick(MenuItem m){
-
-                ((MainActivity)getActivity()).playEntireModule(bookId, modId, modTitle);
-                return true;
-            }
-        });
-
-
-        File f = new File(output);
-        if(f.exists()) { makeDownloadAvailable = false; }
-        else { playMerged.setEnabled(false);}
-
-        //Download button
-        download =  menu.findItem(R.id.download);
-        download.setEnabled(false);
-        download.setOnMenuItemClickListener(new MenuItem.OnMenuItemClickListener(){
-            @Override
-            public boolean onMenuItemClick(MenuItem m){
-                try{
-                    download(output);
-                    makeDownloadAvailable = false;
-                    download.setEnabled(false);
-
-                    HashSet<String> downloads = (HashSet<String>) sharedPreferences.getStringSet("downloads", new HashSet<String>());
-                    HashSet<String> newDownloads = new HashSet<String>(downloads);
-                    newDownloads.add(tag);
-                    editor.putStringSet("downloads", newDownloads); // hopefully this replaces the old downloads set
-                    editor.commit();
-
-                } catch (IOException e){Log.i("IOException", "Can't download");}
-                return true;
-            }
-        });
-
-        // ffmpeg merge audio
-        FFmpeg ffmpeg = FFmpeg.getInstance(context);
-        if (ffmpeg.isSupported()) {
-            // ffmpeg is supported
-            Log.i("FFmpeg is supported", "Yay!");
-            //if(makeDownloadAvailable) download.setEnabled(true);
-        } else {
-            // ffmpeg is not supported
-            Log.i("FFmpeg is not supported", "Darn ;(");
-        }
-
-        // Shared Preferences
-        HashSet<String> faves = (HashSet<String>) sharedPreferences.getStringSet("favorites", null);
-        if(faves == null)  // no favorites yet
-        {
-            editor.putStringSet("favorites", new HashSet<String>());
-            editor.commit();
-        }
-
-        // Favorite button
-        favorite = menu.findItem(R.id.favorite);
-        setFavoriteIconColor(false);
-        favorite.setOnMenuItemClickListener(new MenuItem.OnMenuItemClickListener(){
-            @Override
-            public boolean onMenuItemClick(MenuItem m){
-                setFavoriteIconColor(true);
-                return true;
-            }
-        });
-    }
-
-    public void setFavoriteIconColor(boolean shouldToggle){
-
-        // Shared Preferences
-        SharedPreferences sharedPreferences = context.getSharedPreferences("library", 0);
-        HashSet<String> faves = (HashSet<String>) sharedPreferences.getStringSet("favorites", new HashSet<String>());
-        SharedPreferences.Editor editor = sharedPreferences.edit();
-
-        // create a duplicate HashSet of the current faves set
-        HashSet<String> newFaves = new HashSet<String>(faves);
-
-        if((faves.contains(tag) && shouldToggle) || (!faves.contains(tag) && !shouldToggle)) {
-            // change the module to NOT favorited
-            Drawable icon = favorite.getIcon();
-            icon.setColorFilter(context.getColor(R.color.white), PorterDuff.Mode.SRC_ATOP);
-            newFaves.remove(tag);
-
-        } else if((!faves.contains(tag) && shouldToggle) || (faves.contains(tag) && !shouldToggle )){
-            // Change the module to favorited
-            Drawable icon = favorite.getIcon();
-            icon.setColorFilter(context.getColor(R.color.colorAccent), PorterDuff.Mode.SRC_ATOP);
-            newFaves.add(tag);
-
-        }
-        String output = ":) \t";
-        for(String s : newFaves) { output+=s+"\t";}
-        Log.i("in NewFaves", output);
-        editor.putStringSet("favorites", newFaves); // hopefully this replaces the old favorites set
-        editor.commit();
-    }
-
-    @Override
-    public void onStop(){
-        super.onStop();
-
-        menu.findItem(R.id.download).setVisible(false);
-        menu.findItem(R.id.play_download).setVisible(false);
-        menu.findItem(R.id.favorite).setVisible(false);
-
-    }
-
-
+    public ArrayList<TextChunk> getDataSet(){ return dataSet; }
 
     @Override
     public void onResume(){
         super.onResume();
-        getActivity().invalidateOptionsMenu();
+
         if(recyclerView !=null) ((MainActivity)getActivity()).onRecyclerViewCreated(recyclerView);
         else Log.i("Recyclerview is null", "lol");
 
