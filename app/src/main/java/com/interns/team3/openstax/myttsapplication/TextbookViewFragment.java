@@ -13,14 +13,17 @@ import android.media.MediaMetadataRetriever;
 import android.media.MediaPlayer;
 import android.net.Uri;
 import android.os.AsyncTask;
+import android.os.Bundle;
 import android.os.Environment;
 import android.support.v4.app.ActivityCompat;
 import android.support.v4.app.Fragment;
 import android.support.v4.app.FragmentManager;
+
 import android.speech.tts.TextToSpeech;
 import android.speech.tts.UtteranceProgressListener;
 import android.support.v4.content.ContextCompat;
 import android.os.Bundle;
+
 import android.support.v7.widget.LinearLayoutManager;
 import android.support.v7.widget.RecyclerView;
 import android.util.Log;
@@ -35,7 +38,6 @@ import android.widget.LinearLayout;
 import android.widget.ProgressBar;
 import android.widget.TextView;
 
-
 import com.nshmura.snappysmoothscroller.LinearLayoutScrollVectorDetector;
 import com.nshmura.snappysmoothscroller.SnapType;
 import com.nshmura.snappysmoothscroller.SnappySmoothScroller;
@@ -47,12 +49,14 @@ import org.jsoup.Jsoup;
 import org.jsoup.nodes.Document;
 import org.w3c.dom.Text;
 
-import java.io.BufferedReader;
 import java.io.File;
 import java.io.IOException;
+
 import java.io.InputStreamReader;
 import java.util.ArrayList;
 import java.util.HashSet;
+import java.util.List;
+
 
 import nl.bravobit.ffmpeg.ExecuteBinaryResponseHandler;
 import nl.bravobit.ffmpeg.FFmpeg;
@@ -72,11 +76,12 @@ public class TextbookViewFragment extends Fragment implements PlayerBarFragment.
     public static String modId, bookId, modTitle;
     public Context context = getContext();
     public static Document content;
-    public ArrayList<TextChunk> tempDataSet, dataSet;
+    public List<TextAudioChunk> tempDataSet, dataSet;
 
     public TextToSpeech tts;
     public MyUtteranceProgressListener myUtteranceProgressListener;
     public MediaPlayer player;
+
 
     private int length;
 
@@ -129,7 +134,6 @@ public class TextbookViewFragment extends Fragment implements PlayerBarFragment.
         return fragment;
     }
 
-
     // when user wants to listen to a new audiobook
     public void setNewModule(String bookId, String modId, String modTitle){
         this.bookId = bookId;
@@ -137,7 +141,6 @@ public class TextbookViewFragment extends Fragment implements PlayerBarFragment.
         this.modTitle = modTitle;
 
     }
-
 
     @Override
     public void onCreate(Bundle savedInstanceState) {
@@ -149,7 +152,6 @@ public class TextbookViewFragment extends Fragment implements PlayerBarFragment.
             modId = getArguments().getString(ARG_MOD_ID);
             bookId = getArguments().getString(ARG_BOOK_ID);
         }
-
 
 
         // Utterance Progress Listener
@@ -177,14 +179,14 @@ public class TextbookViewFragment extends Fragment implements PlayerBarFragment.
         context = getContext();
 
         // Populate dataSet
-        tempDataSet = new ArrayList<TextChunk>();
-        dataSet = new ArrayList<TextChunk>();
+        tempDataSet = new ArrayList<>();
+        dataSet = new ArrayList<>();
 
         getContent();// new GetContentTask().execute("");
         if(easyWay){
             int index = 0;
-            for(TextChunk tc : tempDataSet) {
-                dataSet.add(new TextChunk(tc.getText()));
+            for(TextAudioChunk tc : tempDataSet) {
+                dataSet.add(new TextAudioChunk(tc));
                 index ++;
             }
         }
@@ -209,7 +211,6 @@ public class TextbookViewFragment extends Fragment implements PlayerBarFragment.
                     }
                 }
             }
-
         });
 
     }
@@ -223,6 +224,7 @@ public class TextbookViewFragment extends Fragment implements PlayerBarFragment.
 
         // Inflate the layout for this fragment
         View view = inflater.inflate(R.layout.fragment_textbook_view, container, false);
+
 
         recyclerView = (RecyclerView) view.findViewById(R.id.my_recycler_view);
 
@@ -295,6 +297,7 @@ public class TextbookViewFragment extends Fragment implements PlayerBarFragment.
 
         // After dataSet is completed
         //Progress bar to show progress of TTS file synthesis
+
         progress = (LinearLayout) view.findViewById(R.id.progress);
         if(easyWay) { progress.setVisibility(View.GONE); }
         else {
@@ -307,6 +310,7 @@ public class TextbookViewFragment extends Fragment implements PlayerBarFragment.
 
                 progressNumber = (TextView) view.findViewById(R.id.progressNumber);
             }
+
         }
 
         //Permissions for MediaPlayer
@@ -346,32 +350,26 @@ public class TextbookViewFragment extends Fragment implements PlayerBarFragment.
     public void getContent(){
 
         try {
-            String fileName = "Books/" + bookId + "/" + modId + "/index.cnxml.html";
-            StringBuilder buf = new StringBuilder();
-            InputStreamReader inputStream = new InputStreamReader(context.getAssets().open(fileName));
-            BufferedReader bufferedReader = new BufferedReader(inputStream);
-            String str;
-            while ((str = bufferedReader.readLine()) != null) {
-                buf.append(str);
-            }
+            AudioBook book = new AudioBook(getContext(), bookId);
+            String moduleFile = book.getModuleFile(modId);
+            Content.Module mod = new Content.Module(modId, moduleFile);
 
-            Document doc = Jsoup.parse(buf.toString());
-
-            String title = doc.body().getElementsByTag("div").first().attr("document-title");
-            Content.Module mod = new Content.Module(title, modId, doc);
-
-            tempDataSet.add(new TextChunk("<h2>"+modTitle+"</h2>"));
+//            tempDataSet.add(new TextChunk("<h2>"+modTitle+"</h2>"));
             // eventually just replace with mod.buildModuleSSMl()
-            ArrayList<String> temp = mod.returnPrintOpening();
-            if (temp != null)
-                temp.forEach((stringo) -> tempDataSet.add(new TextChunk(stringo)));
-            temp = mod.returnPrintReadingSections();
-            if (temp != null)
-                temp.forEach((stringo) -> tempDataSet.add(new TextChunk(stringo)));
-            temp = mod.returnPrintEoc();
-            if (temp != null)
-                temp.forEach((stringo) -> tempDataSet.add(new TextChunk(stringo)));
-        }  catch(IOException e ){ e.printStackTrace(); } catch(JSONException e){ e.printStackTrace(); }
+            tempDataSet = mod.initTextAudioChunks();
+
+//            List<String> temp = mod.returnPrintOpening();
+//            if (temp != null)
+//                temp.forEach((stringo) -> tempDataSet.add(new TextChunk(stringo)));
+//            temp = mod.returnPrintReadingSections();
+//            if (temp != null)
+//                temp.forEach((stringo) -> tempDataSet.add(new TextChunk(stringo)));
+//            temp = mod.returnPrintEoc();
+//            if (temp != null)
+//                temp.forEach((stringo) -> tempDataSet.add(new TextChunk(stringo)));
+        } catch (Exception e ) {
+            e.printStackTrace();
+        }
     }
 
     /**
@@ -380,18 +378,26 @@ public class TextbookViewFragment extends Fragment implements PlayerBarFragment.
     public void storeConvertedTTSAudio() {
 
 
-        for (TextChunk tc : tempDataSet) {
-            String s = Jsoup.parse(tc.getText()).text(); // might have to modify this once text comes with SSML tags
-            String id = "textbookaudio" + tempDataSet.indexOf(tc);
+//        for (TextChunk tc : tempDataSet) {
+//            String s = Jsoup.parse(tc.getText()).text(); // might have to modify this once text comes with SSML tags
+//            String id = "textbookaudio" + tempDataSet.indexOf(tc);
+//
+//
+//            String filename = "/textbookaudio" + String.valueOf(tempDataSet.indexOf(tc)) + ".wav";
+//            File myFile = new File(Environment.getExternalStorageDirectory().getAbsolutePath() + filename);
+//            tts.synthesizeToFile(s, null, new File(Environment.getExternalStorageDirectory().getAbsolutePath() + filename), id);
+//
+//        }
 
-
-            String filename = "/textbookaudio" + String.valueOf(tempDataSet.indexOf(tc)) + ".wav";
-            File myFile = new File(Environment.getExternalStorageDirectory().getAbsolutePath() + filename);
-            tts.synthesizeToFile(s, null, new File(Environment.getExternalStorageDirectory().getAbsolutePath() + filename), id);
-
-        }
-
-
+        tempDataSet.parallelStream().forEach(chunk -> {
+            String ssml = chunk.getSsml(); // might have to modify this once text comes with SSML tags
+            int id = chunk.getId();
+            String folder = Environment.getExternalStorageDirectory().getAbsolutePath() + "/" + bookId + "/" + modId + "/";
+            AudioClient.AmazonClient client = new AudioClient.AmazonClient(folder, getContext());
+            client.synthesizeAudio(String.valueOf(id), true, ssml, false);
+            chunk.setAudioFile(folder + id + ".mp3");
+            chunk.synthesized();
+        });
     }
 
 
@@ -463,7 +469,7 @@ public class TextbookViewFragment extends Fragment implements PlayerBarFragment.
 
         if (v != null) {
             TextView tv = v.findViewById(R.id.item);
-            TextChunk tc = dataSet.get(position);
+            TextAudioChunk tc = dataSet.get(position);
             final String text = Jsoup.parse(tc.getText()).text();
 
 
@@ -474,80 +480,6 @@ public class TextbookViewFragment extends Fragment implements PlayerBarFragment.
                 }
             });
 
-            // blubber
-            // possibly move this to separate function - when user selects a textChunk to read.
-            /*Thread readTextThread = new Thread()
-            {
-                public void run() {
-
-                    if (is_paused) {
-                        is_paused = false;
-                        player.seekTo(length - 1);
-                        player.start();
-                    }
-
-                    else {
-
-                        player.reset();
-
-                        String filename2 = "/textbookaudio" + String.valueOf(position) + ".wav";
-                        String fileName = Environment.getExternalStorageDirectory().getAbsolutePath() + filename2;
-
-                        Log.i("File name", fileName);
-
-                        Uri uri = Uri.parse("file://" + fileName);
-
-                        // player.setAudioStreamType(AudioManager.STREAM_MUSIC);
-                        player.setAudioAttributes(new AudioAttributes.Builder()
-                                .setUsage(AudioAttributes.USAGE_MEDIA)
-                                .setContentType(AudioAttributes.CONTENT_TYPE_MUSIC)
-                                .build());
-
-                        try {
-                            player.setDataSource(context, uri);
-                            player.prepare();
-                        } catch (Exception e) {
-                            e.printStackTrace();
-                        }
-
-                        player.setOnPreparedListener(new MediaPlayer.OnPreparedListener() {
-                            @Override
-                            public void onPrepared(MediaPlayer mp) {
-                                player.start();
-                            }
-                        });
-
-                        player.setOnCompletionListener(new MediaPlayer.OnCompletionListener() {
-                            @Override
-                            public void onCompletion(MediaPlayer mp) {
-                                player.stop();
-
-                                backToNormal(String.valueOf(position));
-                                int posn = position + 1;
-                                if (posn < dataSet.size()) {
-                                    checkIfVisible(posn);
-
-                                } else {
-                                    adapter.setSelected(0);
-                                    getActivity().runOnUiThread(new Runnable() {
-                                        @Override
-                                        public void run() {
-                                            //blubber
-
-                                            //playerBarFragment.setPlayButton("Play");
-                                            //playerBarFragment.setStopButton(false);
-                                            //playerBarFragment.setForwardButton(false);
-                                            //playerBarFragment.setReverseButton(false);
-                                        }
-                                    });
-                                }
-                            }
-                        });
-                    }
-                }
-            };
-
-            readTextThread.start(); */
         } else {
             Log.i("View is null", "View: " + v + "\tPosition: " + position + "\nLast Visible Item: " + layoutManager.findLastVisibleItemPosition());
         }
@@ -565,7 +497,6 @@ public class TextbookViewFragment extends Fragment implements PlayerBarFragment.
         Log.i("Split string array length: ", String.valueOf(list.length));
         for(String str : list) Log.i("\t\tElement", str +"\n");
         return list;
-
     }
 
     /**
@@ -594,7 +525,7 @@ public class TextbookViewFragment extends Fragment implements PlayerBarFragment.
 
                 // index number in dataSet
                 int number = Integer.parseInt(pos.replaceAll("textbookaudio",""));
-                dataSet.add(new TextChunk(tempDataSet.get(number).getText()));
+                dataSet.add(new TextAudioChunk(tempDataSet.get(number)));
                 getActivity().runOnUiThread(new Runnable() {
                     @Override
                     public void run() {
@@ -644,28 +575,24 @@ public class TextbookViewFragment extends Fragment implements PlayerBarFragment.
         }
     }
 
+
     /**
      * Change the view at the specified position back to its normal appearance
      * @param position
      */
     public void unhighlightText(final int position){
 
-        getActivity().runOnUiThread(new Runnable() {
-            @Override
-            public void run() {
 
-                // old method
-                //View v = recyclerView.getLayoutManager().findViewByPosition(Integer.parseInt(position));
+        getActivity().runOnUiThread(() -> {
 
-                TextbookViewAdapter.ViewHolder vh = (TextbookViewAdapter.ViewHolder) recyclerView.findViewHolderForAdapterPosition(position);
-                if (vh != null) {
-                    View v = vh.textView;
-                    v.findViewById(R.id.item).setBackgroundColor(ContextCompat.getColor(context, R.color.defaultGrey));
-                }
-                else{Log.i("unhighlightText", "View is null, can't set bg color to grey");}
+            // old method
+            //View v = recyclerView.getLayoutManager().findViewByPosition(Integer.parseInt(position));
+            TextbookViewAdapter.ViewHolder vh = (TextbookViewAdapter.ViewHolder) recyclerView.findViewHolderForAdapterPosition(position);
+            if (vh != null) {
+                View v = vh.textView;
+                v.findViewById(R.id.item).setBackgroundColor(ContextCompat.getColor(context, R.color.defaultGrey));
             }
-
-
+            else{Log.i("unhighlightText", "View is null, can't set bg color to grey");}
         });
     }
 
@@ -674,18 +601,19 @@ public class TextbookViewFragment extends Fragment implements PlayerBarFragment.
      */
     @Override
     public void onDestroy() {
-        if (tts != null) {
-            tts.stop();
-            tts.shutdown();
-        }
+//        if (tts != null) {
+//            tts.stop();
+//            tts.shutdown();
+//        }
 
         if(player !=null){
             try {
                 player.stop();
                 player.release();
-            } catch (Exception e) {e.printStackTrace();}
+            } catch (Exception e) {
+                e.printStackTrace();
+            }
         }
-
 
         super.onDestroy();
     }
@@ -693,7 +621,6 @@ public class TextbookViewFragment extends Fragment implements PlayerBarFragment.
 
     //Called by player bar fragment
     public void pauseTTS() {
-
         is_paused = true;
 
         player.pause();
@@ -703,12 +630,7 @@ public class TextbookViewFragment extends Fragment implements PlayerBarFragment.
 
         //backToNormal(String.valueOf(getSelected()));
 
-        getActivity().runOnUiThread(new Runnable() {
-            @Override
-            public void run() {
-                playerBarFragment.setPlayButton("Play");
-            }
-        });
+        getActivity().runOnUiThread(() -> playerBarFragment.setPlayButton("Play"));
     }
 
     //Called by player bar fragment
@@ -720,12 +642,7 @@ public class TextbookViewFragment extends Fragment implements PlayerBarFragment.
         is_paused = false;
 
         adapter.setSelected(0);
-        getActivity().runOnUiThread(new Runnable() {
-            @Override
-            public void run() {
-                playerBarFragment.setPlayButton("Play");
-            }
-        });
+        getActivity().runOnUiThread(() -> playerBarFragment.setPlayButton("Play"));
     }
 
     //Called by player bar fragment
@@ -781,6 +698,7 @@ public class TextbookViewFragment extends Fragment implements PlayerBarFragment.
                     playerBarFragment.setForwardButton(false);
                     playerBarFragment.setReverseButton(false);  */
                 }
+
             });
         }
     }
@@ -889,6 +807,7 @@ public class TextbookViewFragment extends Fragment implements PlayerBarFragment.
         return false;
     }
 
+
     /**
      * This interface must be implemented by activities that contain this
      * fragment to allow an interaction in this fragment to be communicated
@@ -910,7 +829,7 @@ public class TextbookViewFragment extends Fragment implements PlayerBarFragment.
         void onRecyclerViewCreated(RecyclerView recyclerView);
     }
 
-    public ArrayList<TextChunk> getDataSet(){ return dataSet; }
+    public List<TextAudioChunk> getDataSet(){ return dataSet; }
 
     @Override
     public void onResume(){
@@ -937,6 +856,7 @@ public class TextbookViewFragment extends Fragment implements PlayerBarFragment.
             String s = "/storage/emulated/0/textbookaudio"+ x +".wav";
             int time = getTimeLength(s);
             times.add(time);
+
         }
         // convert arrayList to jSONArray to string
         JSONArray timesJSON = new JSONArray(times);

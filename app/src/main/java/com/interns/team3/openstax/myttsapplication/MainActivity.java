@@ -7,6 +7,7 @@ import android.graphics.PorterDuff;
 import android.graphics.drawable.Drawable;
 import android.media.MediaPlayer;
 import android.net.Uri;
+
 import android.os.Environment;
 import android.support.annotation.NonNull;
 import android.support.design.widget.BottomNavigationView;
@@ -14,17 +15,17 @@ import android.support.design.widget.TabItem;
 import android.support.design.widget.TabLayout;
 import android.support.v4.app.Fragment;
 import android.support.v4.app.FragmentActivity;
+import android.os.Bundle;
 import android.support.v4.app.FragmentManager;
 import android.support.v4.app.FragmentTransaction;
 import android.support.v7.app.ActionBar;
 import android.support.v7.app.AppCompatActivity;
-import android.os.Bundle;
 import android.support.v7.widget.RecyclerView;
 import android.support.v7.widget.Toolbar;
 import android.text.Html;
 import android.text.method.LinkMovementMethod;
+
 import android.util.Log;
-import android.view.Menu;
 import android.view.MenuItem;
 import android.view.View;
 import android.view.Window;
@@ -122,6 +123,7 @@ public class MainActivity extends AppCompatActivity implements HOMEFragment.OnFr
                 findViewById(R.id.navigation);
         //if(nowPlayingFragment == null) bottomNavigationView.findViewById(R.id.navigation_player).setEnabled(false);
 
+
         bottomNavigationView.setOnNavigationItemSelectedListener(mOnNavigationItemSelectedListener);
 
         // hide the actual bottom navigation
@@ -135,14 +137,10 @@ public class MainActivity extends AppCompatActivity implements HOMEFragment.OnFr
         int uiOptions = View.SYSTEM_UI_FLAG_IMMERSIVE_STICKY | View.SYSTEM_UI_FLAG_HIDE_NAVIGATION | View.SYSTEM_UI_FLAG_FULLSCREEN;
         decorView.setSystemUiVisibility(uiOptions);
 
-        decorView.setOnSystemUiVisibilityChangeListener (new View.OnSystemUiVisibilityChangeListener() {
-            @Override
-            public void onSystemUiVisibilityChange(int visibility) {
-                decorView.setSystemUiVisibility(uiOptions);
-                ActionBar actionBar = getSupportActionBar();
-                actionBar.show();
-
-            }
+        decorView.setOnSystemUiVisibilityChangeListener (visibility -> {
+            decorView.setSystemUiVisibility(uiOptions);
+            ActionBar actionBar = getSupportActionBar();
+            actionBar.show();
         });
 
 
@@ -515,7 +513,7 @@ public class MainActivity extends AppCompatActivity implements HOMEFragment.OnFr
                 "/storage/emulated/0/textbookaudio0.wav",
              */
 
-        ArrayList<TextChunk> dataSet = textbookViewFragment.getDataSet();
+        List<TextAudioChunk> dataSet = textbookViewFragment.getDataSet();
 
         String[] uris = new String[dataSet.size()];
         String s = "";

@@ -6,7 +6,9 @@ import android.media.MediaPlayer;
 import android.net.Uri;
 import android.os.Bundle;
 import android.os.Environment;
+
 import android.os.Handler;
+
 import android.support.v4.app.Fragment;
 import android.util.Log;
 import android.view.Gravity;
@@ -72,6 +74,10 @@ public class NOWPLAYINGFragment extends Fragment {
         return fragment;
     }
 
+    public void setContext(Context c) {
+        context = c;
+    }
+
 
     @Override
     public void onCreate(Bundle savedInstanceState) {
@@ -86,9 +92,8 @@ public class NOWPLAYINGFragment extends Fragment {
     }
 
     @Override
-    public View onCreateView(LayoutInflater inflater, ViewGroup container,
-                             Bundle savedInstanceState) {
-        Log.i("NOWPLAYINGFRAGMENT", "increateview");
+
+    public View onCreateView(LayoutInflater inflater, ViewGroup container, Bundle savedInstanceState) {
 
         View view = inflater.inflate(R.layout.fragment_nowplaying, container, false);
 
@@ -109,14 +114,16 @@ public class NOWPLAYINGFragment extends Fragment {
                     downloadButton.setText("Downloading...");
                     // find some way to check the progress of downloads xD
                     // for now, assume reader only clicks after downloads finish
-                    ((MainActivity)getActivity()).downloadEntireModule(modId);
+                    ((MainActivity) getActivity()).downloadEntireModule(modId);
                 }
             });
         }
 
+
         // Inflate the layout for this fragment
         return view;
     }
+
 
     // TODO: Rename method, update argument and hook method into UI event
     public void onButtonPressed(Uri uri) {
@@ -131,10 +138,11 @@ public class NOWPLAYINGFragment extends Fragment {
         if (context instanceof OnFragmentInteractionListener) {
             mListener = (OnFragmentInteractionListener) context;
         } else {
-            throw new RuntimeException(context.toString()
-                    + " must implement OnFragmentInteractionListener");
+            throw new RuntimeException(context.toString() + " must implement OnFragmentInteractionListener");
         }
     }
+
+
 
     /**
      * This interface must be implemented by activities that contain this
@@ -151,10 +159,6 @@ public class NOWPLAYINGFragment extends Fragment {
         void onFragmentInteraction(Uri uri);
     }
 
-    @Override
-    public void onSaveInstanceState(Bundle outState){
-        super.onSaveInstanceState(outState);
-    }
 
     @Override
     public void onViewStateRestored(Bundle savedInstanceState) {
@@ -171,9 +175,11 @@ public class NOWPLAYINGFragment extends Fragment {
         mListener = null;
     }
 
+
     public String getModule() {
-        return modId;
-    }
+            return modId;
+        }
+
 
     // when user wants to listen to a new audiobook
     public void setNewModule(String bookId, String modId, String modTitle){
@@ -190,6 +196,7 @@ public class NOWPLAYINGFragment extends Fragment {
         availableLayout.setVisibility(View.VISIBLE);
         unavailableLayout.setVisibility(View.GONE);
     }
+
 
     public void hidePlaying(){
         showPlaying = false;

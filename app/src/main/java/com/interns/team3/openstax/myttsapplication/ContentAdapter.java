@@ -14,11 +14,11 @@ import android.widget.TextView;
 
 import com.squareup.picasso.Picasso;
 
-import java.util.ArrayList;
+import java.util.List;
 
 public class ContentAdapter extends RecyclerView.Adapter<RecyclerView.ViewHolder> {
 
-    public ArrayList<Content> dataSet;
+    public List<Content> dataSet;
     public ContentOnClickListener contentOnClickListener;
 
     public Context context;
@@ -26,7 +26,6 @@ public class ContentAdapter extends RecyclerView.Adapter<RecyclerView.ViewHolder
     public interface ContentOnClickListener {
         void onClick(View v);
     }
-
 
 
     // Provide a reference to the views for each data item
@@ -43,19 +42,14 @@ public class ContentAdapter extends RecyclerView.Adapter<RecyclerView.ViewHolder
         public ModuleViewHolder(View v) {
             super(v);
             view = v;
-            modID = (TextView) v.findViewById(R.id.modID);
-            modTitle = (TextView) v.findViewById(R.id.modTitle);
-            modChapter = (TextView) v.findViewById(R.id.modNum);
-
+            modID = v.findViewById(R.id.modID);
+            modTitle = v.findViewById(R.id.modTitle);
+            modChapter = v.findViewById(R.id.modNum);
         }
 
         public void bind(final ContentOnClickListener listener){
 
-            view.setOnClickListener(new View.OnClickListener(){
-                @Override public void onClick(View v){
-                    listener.onClick(v);
-                }
-            });
+            view.setOnClickListener(listener::onClick);
         }
 
 
@@ -67,8 +61,8 @@ public class ContentAdapter extends RecyclerView.Adapter<RecyclerView.ViewHolder
         public TextView chapterTitle;
         public ChapterViewHolder(View v) {
             super(v);
-            chapterNum = (TextView) v.findViewById(R.id.chapterNum);
-            chapterTitle = (TextView) v.findViewById(R.id.chapterTitle);
+            chapterNum = v.findViewById(R.id.chapterNum);
+            chapterTitle = v.findViewById(R.id.chapterTitle);
         }
     }
 
@@ -80,22 +74,18 @@ public class ContentAdapter extends RecyclerView.Adapter<RecyclerView.ViewHolder
         public BookViewHolder(View v) {
             super(v);
             view = v;
-            bookTitle = (TextView) v.findViewById(R.id.book_title);
-            bookId = (TextView) v.findViewById(R.id.book_id);
-            bookImg= (ImageView) v.findViewById(R.id.book_img);
+            bookTitle = v.findViewById(R.id.book_title);
+            bookId = v.findViewById(R.id.book_id);
+            bookImg= v.findViewById(R.id.book_img);
         }
 
         public void bind(final ContentOnClickListener listener){
 
-            view.setOnClickListener(new View.OnClickListener(){
-                @Override public void onClick(View v){
-                    listener.onClick(v);
-                }
-            });
+            view.setOnClickListener(listener::onClick);
         }
     }
 
-    public ContentAdapter(ArrayList<Content> dataSet, ContentOnClickListener contentOnClickListener)
+    public ContentAdapter(List<Content> dataSet, ContentOnClickListener contentOnClickListener)
     {
         this.dataSet = dataSet;
         this.contentOnClickListener = contentOnClickListener;
@@ -106,11 +96,11 @@ public class ContentAdapter extends RecyclerView.Adapter<RecyclerView.ViewHolder
         // 0 = module, 1 = chapter
         // Note that unlike in ListView adapters, types don't have to be contiguous
         Content item = dataSet.get(position);
-        if(item instanceof Content.Module)
+        if (item instanceof Content.Module)
             return 0;
-        else if(item instanceof Content.Chapter)
+        else if (item instanceof Content.Chapter)
             return 1;
-        else if(item instanceof Content.Book)
+        else if (item instanceof Content.Book)
             return 2;
         return -1;
     }
@@ -118,35 +108,29 @@ public class ContentAdapter extends RecyclerView.Adapter<RecyclerView.ViewHolder
     @Override
     public RecyclerView.ViewHolder onCreateViewHolder(ViewGroup parent, int viewType) {
         switch (viewType) {
-            case 0: // Module
-            {
+            case 0: {   // Module
                 // create a new view
-                View v = (View) LayoutInflater.from(parent.getContext())
+                View v = LayoutInflater.from(parent.getContext())
                         .inflate(R.layout.toc_module, parent, false);
 
-                ContentAdapter.ModuleViewHolder vh = new ContentAdapter.ModuleViewHolder(v);
-
-                return vh;
+                return new ModuleViewHolder(v);
             }
-            case 1: // Chapter
-            {
+            case 1: {   // Chapter
                 // create a new view
-                View v = (View) LayoutInflater.from(parent.getContext())
+                View v = LayoutInflater.from(parent.getContext())
                         .inflate(R.layout.toc_chapter, parent, false);
 
-                ContentAdapter.ChapterViewHolder vh = new ContentAdapter.ChapterViewHolder(v);
-                return vh;
+                return new ChapterViewHolder(v);
             }
-            case 2: // Book
-                View v = (View) LayoutInflater.from(parent.getContext())
+            case 2: {   // Book
+                View v = LayoutInflater.from(parent.getContext())
                         .inflate(R.layout.textbook_card, parent, false);
 
-                ContentAdapter.BookViewHolder vh = new ContentAdapter.BookViewHolder(v);
-
-                return vh;
+                return new BookViewHolder(v);
+            }
+            default:
+                return null;
         }
-
-        return null;
     }
 
     @Override
@@ -159,20 +143,21 @@ public class ContentAdapter extends RecyclerView.Adapter<RecyclerView.ViewHolder
                 TextView myModChapter = moduleViewHolder.modChapter;
 
                 Content.Module module = (Content.Module) dataSet.get(position);
-                String section_num = module.getSectionNum();
+                String modNum = module.getModuleNum();
                 String title = module.getTitle();
-
 
                 myModID.setText(module.getId());
 
                 String tempModuleTitle;
-                if (!(module.getTitle().equals("Introduction")))
-                    tempModuleTitle = section_num + " " + title;
-                else tempModuleTitle = title;
+                if (!(module.getTitle().equals("Introduction"))) {
+                    tempModuleTitle = modNum + " " + title;
+                } else {
+                    tempModuleTitle = title;
+                }
 
                 myModTitle.setText(tempModuleTitle);
 
-                myModChapter.setText(section_num);
+                myModChapter.setText(modNum);
                 //System.out.println("MODULE: \t" + dataSet.get(position).id + "\t" + dataSet.get(position).title + "\t" + dataSet.get(position).chapter);
 
                 moduleViewHolder.bind(contentOnClickListener);

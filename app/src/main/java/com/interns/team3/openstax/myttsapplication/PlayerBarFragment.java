@@ -19,6 +19,8 @@ import android.widget.LinearLayout;
 import android.widget.SeekBar;
 import android.widget.TextView;
 
+//import android.speech.tts.TextToSpeech;
+
 
 /**
  * A simple {@link Fragment} subclass.
@@ -102,8 +104,7 @@ public class PlayerBarFragment extends Fragment {
     }
 
     @Override
-    public View onCreateView(LayoutInflater inflater, ViewGroup container,
-                             Bundle savedInstanceState) {
+    public View onCreateView(LayoutInflater inflater, ViewGroup container, Bundle savedInstanceState) {
 
         Log.i("onCreateView", "in here");
         context = getContext();
@@ -171,6 +172,7 @@ public class PlayerBarFragment extends Fragment {
 
 
             }
+
         });
 
         // uncomment this if the slide up panel will be visible even when a module isn't selected.
@@ -350,6 +352,7 @@ public class PlayerBarFragment extends Fragment {
             dragViewPlayButton.setImageResource(R.drawable.play);
         }
         else{
+
             playButton.setTag("Pause");
             playButton.setImageResource(R.drawable.pause);
             dragViewPlayButton.setImageResource(R.drawable.pause);

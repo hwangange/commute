@@ -65,8 +65,7 @@ public class HOMEFragment extends Fragment implements BookshelfFragment.OnFragme
     }
 
     @Override
-    public View onCreateView(LayoutInflater inflater, ViewGroup container,
-                             Bundle savedInstanceState) {
+    public View onCreateView(LayoutInflater inflater, ViewGroup container, Bundle savedInstanceState) {
         // Inflate the layout for this fragment
         View v = inflater.inflate(R.layout.fragment_home, container, false);
         Log.i("HOME", "onCreateVIew and newInstance is: " + String.valueOf(newInstance));
@@ -99,8 +98,7 @@ public class HOMEFragment extends Fragment implements BookshelfFragment.OnFragme
         if (context instanceof OnFragmentInteractionListener) {
             mListener = (OnFragmentInteractionListener) context;
         } else {
-            throw new RuntimeException(context.toString()
-                    + " must implement OnFragmentInteractionListener");
+            throw new RuntimeException(context.toString() + " must implement OnFragmentInteractionListener");
         }
     }
 
@@ -143,8 +141,6 @@ public class HOMEFragment extends Fragment implements BookshelfFragment.OnFragme
 
     public void sendModuleInfo(String bookTitle, String bookID, String modID, String modTitle){
         // from Table of Contents fragment to TextbookView Fragment
-
-
         Log.i("sendModuleInfo", bookTitle + ", " + bookID + ", " + modID + ", " + modTitle);
         TextbookViewFragment textbookViewFragment = TextbookViewFragment.newInstance(modTitle, modID, bookID);
         FragmentTransaction ft = fragmentManager.beginTransaction();
@@ -152,8 +148,6 @@ public class HOMEFragment extends Fragment implements BookshelfFragment.OnFragme
         ft.replace(R.id.homeFragmentContainer, textbookViewFragment);
         ft.addToBackStack(null); // allow user to go back
         ft.commit();
-
-
     }
 
     public void playEntireModule(String bookTitle, String modID, String modTitle){
@@ -162,6 +156,7 @@ public class HOMEFragment extends Fragment implements BookshelfFragment.OnFragme
 
     public void onRecyclerViewCreated(RecyclerView recyclerView){
         ((MainActivity)getActivity()).onRecyclerViewCreated(recyclerView);
+
     }
 
     @Override
