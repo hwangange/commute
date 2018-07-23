@@ -433,11 +433,9 @@ public class MainActivity extends AppCompatActivity implements HOMEFragment.OnFr
 
         // create a duplicate HashSet of the current faves set
         HashSet<String> newFaves = new HashSet<String>(faves);
-        Log.i("Faves tag", tag);
 
         if((faves.contains(tag) && shouldToggle) || (!faves.contains(tag) && !shouldToggle)) {
             // change the module to NOT favorited
-            Log.i("Favorite icon", "Setting to not favorite, " + faves.contains(tag));
             dragViewFavorite.setImageDrawable(getDrawable(R.drawable.ic_border_heart_24dp));
             Drawable icon = dragViewFavorite.getDrawable();
             icon.setColorFilter(this.getColor(R.color.darkBlack), PorterDuff.Mode.SRC_ATOP);
@@ -452,7 +450,6 @@ public class MainActivity extends AppCompatActivity implements HOMEFragment.OnFr
 
         } else if((!faves.contains(tag) && shouldToggle) || (faves.contains(tag) && !shouldToggle )){
             // Change the module to favorited
-            Log.i("Favorite icon", "Setting to not favorite, " + faves.contains(tag));
             dragViewFavorite.setImageDrawable(getDrawable(R.drawable.ic_heart_24dp));
             Drawable icon = dragViewFavorite.getDrawable();
             icon.setColorFilter(this.getColor(R.color.colorAccent), PorterDuff.Mode.SRC_ATOP);
