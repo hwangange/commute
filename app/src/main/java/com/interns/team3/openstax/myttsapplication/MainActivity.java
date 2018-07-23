@@ -12,6 +12,7 @@ import android.support.annotation.NonNull;
 import android.support.design.widget.BottomNavigationView;
 import android.support.design.widget.TabItem;
 import android.support.design.widget.TabLayout;
+import android.support.v4.app.Fragment;
 import android.support.v4.app.FragmentActivity;
 import android.support.v4.app.FragmentManager;
 import android.support.v4.app.FragmentTransaction;
@@ -72,6 +73,8 @@ public class MainActivity extends AppCompatActivity implements HOMEFragment.OnFr
 
     public BottomNavigationView bottomNavigationView;
 
+    public Fragment activeFragment;
+
 
     public int /*uiOptions= View.SYSTEM_UI_FLAG_IMMERSIVE
             // set the content to appear under system bars
@@ -101,6 +104,7 @@ public class MainActivity extends AppCompatActivity implements HOMEFragment.OnFr
         //nowPlayingFragment.setNewModule("Select a module to play!", "", "");
 
         FragmentTransaction ft = fragmentManager.beginTransaction();
+        activeFragment = nowPlayingFragment;
         ft.replace(R.id.nowPlayingContainer, nowPlayingFragment);
         ft.commit();
 
@@ -152,7 +156,6 @@ public class MainActivity extends AppCompatActivity implements HOMEFragment.OnFr
             }
         });
         dragViewFavorite = (ImageView) findViewById(R.id.dragViewFavorite);
-        setFavoriteIconColor(false);
         dragViewFavorite.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
@@ -215,6 +218,7 @@ public class MainActivity extends AppCompatActivity implements HOMEFragment.OnFr
                 //TextbookView
                 if(tab.getText().equals("Text")){
                     FragmentTransaction ft = fragmentManager.beginTransaction();
+                    activeFragment = textbookViewFragment;
                     ft.replace(R.id.nowPlayingContainer, textbookViewFragment);
                     ft.addToBackStack(null); // allow user to go back
                     ft.setCustomAnimations(android.R.anim.slide_in_left, android.R.anim.slide_out_right, android.R.anim.fade_in, android.R.anim.fade_out);
@@ -223,6 +227,7 @@ public class MainActivity extends AppCompatActivity implements HOMEFragment.OnFr
 
                 else if(tab.getText().equals("Play")) {
                     FragmentTransaction ft = fragmentManager.beginTransaction();
+                    activeFragment = nowPlayingFragment;
                     ft.replace(R.id.nowPlayingContainer, nowPlayingFragment);
                     ft.addToBackStack(null); // allow user to go back
                     ft.setCustomAnimations(android.R.anim.slide_in_left, android.R.anim.slide_out_right, android.R.anim.fade_in, android.R.anim.fade_out);
@@ -377,6 +382,9 @@ public class MainActivity extends AppCompatActivity implements HOMEFragment.OnFr
 
             // stop the media player
             if(!nowPlayingFragment.getModule().equals("")) playerBarFragment.stopTTS();
+
+            // set favorite
+            setFavoriteIconColor(false);
 
             // make a new nowPlayingFragment
             nowPlayingFragment.setNewModule(bookTitle, modID, modTitle);
@@ -560,9 +568,25 @@ public class MainActivity extends AppCompatActivity implements HOMEFragment.OnFr
             public void onFinish() {
                 Log.i("ffmpeg execute - Finish", "Bye");
                 // show the original NowPlaying.
+                if(getActiveFragment() instanceof NOWPLAYINGFragment){
+                    nowPlayingFragment.showPlaying();
+                }
+                nowPlayingFragment.setShowPlaying(true); // in case nowPlayingFragment is not visibile on the screen at the time
+                textbookViewFragment.makeThingsEasy();
+                dragViewPlayButton.setVisibility(View.VISIBLE);
+                playerBarFragment.setVisible(true);
+                playerBarFragment.playMergedFile(outputFilename);
             }
 
         });
+    }
+
+    public TextbookViewFragment getTextbookViewFragment(){
+        return textbookViewFragment;
+    }
+
+    public Fragment getActiveFragment() {
+        return activeFragment;
     }
 
 

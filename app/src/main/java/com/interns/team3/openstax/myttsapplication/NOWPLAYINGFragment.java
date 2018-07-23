@@ -13,6 +13,7 @@ import android.view.Gravity;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
+import android.widget.Button;
 import android.widget.ImageButton;
 import android.widget.LinearLayout;
 import android.widget.SeekBar;
@@ -42,6 +43,8 @@ public class NOWPLAYINGFragment extends Fragment {
 
     public LinearLayout availableLayout, unavailableLayout;
     public boolean showPlaying;
+
+    public Button downloadButton;
 
     public NOWPLAYINGFragment() {
         // Required empty public constructor
@@ -96,7 +99,20 @@ public class NOWPLAYINGFragment extends Fragment {
         availableLayout = view.findViewById(R.id.availableLayout);
         unavailableLayout = view.findViewById(R.id.unavailableLayout);
 
-        if(showPlaying) { showPlaying();} else { hidePlaying(); }
+        if(showPlaying) { showPlaying();} else {
+            hidePlaying();
+            downloadButton = (Button) view.findViewById(R.id.download);
+            downloadButton.setOnClickListener(new View.OnClickListener() {
+                @Override
+                public void onClick(View v) {
+                    downloadButton.setEnabled(false);
+                    downloadButton.setText("Downloading...");
+                    // find some way to check the progress of downloads xD
+                    // for now, assume reader only clicks after downloads finish
+                    ((MainActivity)getActivity()).downloadEntireModule(modId);
+                }
+            });
+        }
 
         // Inflate the layout for this fragment
         return view;
@@ -144,6 +160,8 @@ public class NOWPLAYINGFragment extends Fragment {
     public void onViewStateRestored(Bundle savedInstanceState) {
         super.onViewStateRestored(savedInstanceState);
         // use this method if you want to do anything once the fragment is back on the screen
+        if(showPlaying) showPlaying();
+        else hidePlaying();
 
     }
 
@@ -177,6 +195,10 @@ public class NOWPLAYINGFragment extends Fragment {
         showPlaying = false;
         availableLayout.setVisibility(View.GONE);
         unavailableLayout.setVisibility(View.VISIBLE);
+    }
+
+    public void setShowPlaying(boolean boo){
+        showPlaying = boo;
     }
 
 

@@ -54,6 +54,7 @@ public class PlayerBarFragment extends Fragment {
 
 
     private int endTime; // duration of file
+    public TextbookViewFragment textbookViewFragment;
 
     public PlayerBarFragment() {
         // Required empty public constructor
@@ -183,6 +184,8 @@ public class PlayerBarFragment extends Fragment {
         } */
 
         // Inflate the layout for this fragment
+
+        textbookViewFragment = ((MainActivity)getActivity()).getTextbookViewFragment();
         return view;
     }
 
@@ -278,9 +281,14 @@ public class PlayerBarFragment extends Fragment {
             @Override
             public void onCompletion(MediaPlayer mp) {
                 Log.i("onCompletion", "When is media player stopped?");
-                setPlayButton("Play");
+                handlePlayButtonClick(); //alternative: setPlayButton("Play");
                 forwardButton.setEnabled(false);
                 reverseButton.setEnabled(false);
+
+                // go back to the beginning
+                activeIndexPosition = 0;
+                player.seekTo(0);
+
                 //player.stop();
 
             }
@@ -452,14 +460,40 @@ public class PlayerBarFragment extends Fragment {
         else playerBar.setVisibility(View.GONE);
     }
 
+    private int activeIndexPosition = 0;
+
     private Runnable UpdateAudioTime = new Runnable() {
         public void run() {
+
             currentPoint = player.getCurrentPosition();
+
+
+            if(((MainActivity)getActivity()).getActiveFragment() instanceof TextbookViewFragment)
+            {
+                textbookViewFragment = (TextbookViewFragment) ((MainActivity)getActivity()).getActiveFragment();
+                int currentIndexPosition = textbookViewFragment.getPositionAt(currentPoint);
+                if(currentIndexPosition != activeIndexPosition && currentIndexPosition != -1){
+                    // unhighlight text
+                    textbookViewFragment.unhighlightText(activeIndexPosition);
+
+                    // set new active text
+                    activeIndexPosition = currentIndexPosition;
+                    textbookViewFragment.setSelected(activeIndexPosition);
+                    textbookViewFragment.checkIfVisible(activeIndexPosition);
+                }
+
+            }
 
             seekbar.setProgress((int) currentPoint);
             handler.postDelayed(this, 100);
         }
     };
+
+    public int getDuration(){
+        if(player != null)
+            return player.getDuration();
+        else return -1;
+    }
 
 
 }
