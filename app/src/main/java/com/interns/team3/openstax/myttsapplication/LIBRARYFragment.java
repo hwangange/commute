@@ -48,6 +48,8 @@ public class LIBRARYFragment extends Fragment {
 
     private SectionedRecyclerViewAdapter sectionAdapter;
 
+    public ArrayList<String> favorites_dataSet, downloads_dataSet;
+
 
 
     public LIBRARYFragment() {
@@ -100,7 +102,7 @@ public class LIBRARYFragment extends Fragment {
         // Shared Preferences
         SharedPreferences sharedPreferences = getContext().getSharedPreferences("library", 0);
         HashSet<String> faves = (HashSet<String>) sharedPreferences.getStringSet("favorites", new HashSet<String>());
-        ArrayList<String> favorites_dataSet = new ArrayList<String>();
+        favorites_dataSet = new ArrayList<String>();
         for(String s : faves)
         {
             String[] ary = s.split("_");
@@ -109,7 +111,7 @@ public class LIBRARYFragment extends Fragment {
 
         /* Finding Downloads */
         HashSet<String> downloads = (HashSet<String>) sharedPreferences.getStringSet("downloads", new HashSet<String>());
-        ArrayList<String> downloads_dataSet = new ArrayList<String>();
+        downloads_dataSet = new ArrayList<String>();
         for(String s : downloads)
         {
             String[] ary = s.split("_");
@@ -161,7 +163,25 @@ public class LIBRARYFragment extends Fragment {
         super.onDestroy();
     }
 
+    public void addFavorite(String title) {
+        favorites_dataSet.add(title);
+        sectionAdapter.notifyDataSetChanged();
+    }
 
+    public void removeFavorite(String title){
+        favorites_dataSet.remove(title);
+        sectionAdapter.notifyDataSetChanged();
+    }
+
+    public void addDownload(String title){
+        downloads_dataSet.add(title);
+        sectionAdapter.notifyDataSetChanged();
+    }
+
+    public void removeDownload(String title){
+        downloads_dataSet.remove(title);
+        sectionAdapter.notifyDataSetChanged();
+    }
 
     /**
      * This interface must be implemented by activities that contain this

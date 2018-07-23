@@ -159,7 +159,9 @@ public class MainActivity extends AppCompatActivity implements HOMEFragment.OnFr
         dragViewFavorite.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
+
                 setFavoriteIconColor(true);
+
             }
         });
 
@@ -172,10 +174,10 @@ public class MainActivity extends AppCompatActivity implements HOMEFragment.OnFr
 
             @Override
             public void onPanelStateChanged(View panel, SlidingUpPanelLayout.PanelState previousState, SlidingUpPanelLayout.PanelState newState) {
-                Log.i(TAG, "onPanelStateChanged " + newState);
+                //Log.i(TAG, "onPanelStateChanged " + newState);
 
                 if(String.valueOf(newState).equals("DRAGGING")){
-                    Log.i(TAG, "It is dragging");
+                    //Log.i(TAG, "It is dragging");
                 }
 
                 if(String.valueOf(newState).equals("EXPANDED")){
@@ -383,13 +385,14 @@ public class MainActivity extends AppCompatActivity implements HOMEFragment.OnFr
             // stop the media player
             if(!nowPlayingFragment.getModule().equals("")) playerBarFragment.stopTTS();
 
-            // set favorite
-            setFavoriteIconColor(false);
-
             // make a new nowPlayingFragment
             nowPlayingFragment.setNewModule(bookTitle, modID, modTitle);
             playerBarFragment.setNewModule(bookTitle, modID, modTitle);
             textbookViewFragment = TextbookViewFragment.newInstance(modTitle, modID, bookTitle);
+            setFileTag(bookTitle, modTitle, modID);
+
+            // set favorite
+            setFavoriteIconColor(false);
 
             // add nowPlayingFragment to the scroll up panel
             nowPlayingTab.select();
@@ -430,24 +433,39 @@ public class MainActivity extends AppCompatActivity implements HOMEFragment.OnFr
 
         // create a duplicate HashSet of the current faves set
         HashSet<String> newFaves = new HashSet<String>(faves);
-        String tag = textbookViewFragment.getFavesTag();
         Log.i("Faves tag", tag);
 
         if((faves.contains(tag) && shouldToggle) || (!faves.contains(tag) && !shouldToggle)) {
             // change the module to NOT favorited
+            Log.i("Favorite icon", "Setting to not favorite, " + faves.contains(tag));
             dragViewFavorite.setImageDrawable(getDrawable(R.drawable.ic_border_heart_24dp));
             Drawable icon = dragViewFavorite.getDrawable();
             icon.setColorFilter(this.getColor(R.color.darkBlack), PorterDuff.Mode.SRC_ATOP);
             newFaves.remove(tag);
 
+            if(shouldToggle && bottomNavigationView.getSelectedItemId() == R.id.navigation_library)
+            {
+                // Update favorites list real time
+                String title = tag.split("_")[1];
+                libraryFragment.removeFavorite(title);
+            }
+
         } else if((!faves.contains(tag) && shouldToggle) || (faves.contains(tag) && !shouldToggle )){
             // Change the module to favorited
+            Log.i("Favorite icon", "Setting to not favorite, " + faves.contains(tag));
             dragViewFavorite.setImageDrawable(getDrawable(R.drawable.ic_heart_24dp));
             Drawable icon = dragViewFavorite.getDrawable();
             icon.setColorFilter(this.getColor(R.color.colorAccent), PorterDuff.Mode.SRC_ATOP);
             newFaves.add(tag);
 
-        }
+            if(shouldToggle && bottomNavigationView.getSelectedItemId() == R.id.navigation_library)
+            {
+                // Update favorites list real time
+                String title = tag.split("_")[1];
+                libraryFragment.addFavorite(title);
+            }
+
+        } else { Log.e("Why is it here.", faves.contains(tag) + " | " + shouldToggle);}
         String output = ":) \t";
         for(String s : newFaves) {
             output+=s+"\t";
@@ -489,7 +507,7 @@ public class MainActivity extends AppCompatActivity implements HOMEFragment.OnFr
         SharedPreferences.Editor editor = sharedPreferences.edit();
         HashSet<String> downloads = (HashSet<String>) sharedPreferences.getStringSet("downloads", new HashSet<String>());
         HashSet<String> newDownloads = new HashSet<String>(downloads);
-        newDownloads.add(textbookViewFragment.getFavesTag()); // same tag as favorites.
+        newDownloads.add(tag); // same tag as favorites.
         editor.putStringSet("downloads", newDownloads); // hopefully this replaces the old downloads set
         editor.commit();
     }
@@ -576,6 +594,13 @@ public class MainActivity extends AppCompatActivity implements HOMEFragment.OnFr
                 dragViewPlayButton.setVisibility(View.VISIBLE);
                 playerBarFragment.setVisible(true);
                 playerBarFragment.playMergedFile(outputFilename);
+
+                if(bottomNavigationView.getSelectedItemId() == R.id.navigation_library)
+                {
+                    // update the list of downloads realtime
+                    String title = tag.split("_")[1];
+                    libraryFragment.addDownload(title);
+                }
             }
 
         });
@@ -588,6 +613,15 @@ public class MainActivity extends AppCompatActivity implements HOMEFragment.OnFr
     public Fragment getActiveFragment() {
         return activeFragment;
     }
+
+    public String tag;
+    public void setFileTag(String bookId, String modTitle, String modId){
+
+        tag = bookId+"_"+modTitle+"_"+modId;
+
+    }
+
+    public String getFileTag(){ return tag; }
 
 
 }

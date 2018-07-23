@@ -207,47 +207,6 @@ public class PlayerBarFragment extends Fragment {
         }
     }
 
-    // With the slideUpPanel, the nowPlayingFragment is always visible. so it wouldn't be necessary to have to save instances all the time whenever the fragment collapses.
-    public void beginAudio(){
-        Log.i("Current Point", String.valueOf(currentPoint));
-
-        if(currentPoint == -1) {
-            //player = new MediaPlayer(); <-- shouldn't be needed if player is "reset" in "playEntireModule"
-            setPlayButton("Pause");
-
-
-            String output = Environment.getExternalStorageDirectory().getAbsolutePath() + "/output" + modId + ".mp3";
-            Log.e("NOW output", output);
-            playMergedFile(output);
-
-        } else {
-            boolean isPlaying = false;
-            try{ isPlaying= player.isPlaying(); } catch(Exception e) {e.printStackTrace();}
-            endTime = player.getDuration();
-            seekbar.setMax(endTime);
-            seekbar.setProgress((int) currentPoint);
-
-            // isPlaying is true regardless of whether player was "playing" or "paused"
-            if(isPlaying)
-            {
-                Log.i("isPlaying", "Meaning playButton was 'play'");
-                setPlayButton("Pause");
-                player.seekTo(player.getCurrentPosition());
-            }
-
-            else
-            {
-                Log.i("NOT isPlaying", "Meaning playButton was 'pause'");
-                setPlayButton("Play");
-                player.seekTo(currentPoint);
-            }
-
-            currentPoint = -1;
-        }
-
-        handler.postDelayed(UpdateAudioTime,100);
-    }
-
 
     public void playMergedFile(String output) {
         player.reset();
@@ -382,14 +341,18 @@ public class PlayerBarFragment extends Fragment {
     }
 
     public void setPlayButton(String s){
+        ImageView dragViewPlayButton = getActivity().findViewById(R.id.dragViewPlayButton);
+
         if(s.equals("Play"))
         {
             playButton.setTag("Play");
             playButton.setImageResource(R.drawable.play);
+            dragViewPlayButton.setImageResource(R.drawable.play);
         }
         else{
             playButton.setTag("Pause");
             playButton.setImageResource(R.drawable.pause);
+            dragViewPlayButton.setImageResource(R.drawable.pause);
         }
     }
 
@@ -493,6 +456,10 @@ public class PlayerBarFragment extends Fragment {
         if(player != null)
             return player.getDuration();
         else return -1;
+    }
+
+    public MediaPlayer getPlayer(){
+        return player;
     }
 
 

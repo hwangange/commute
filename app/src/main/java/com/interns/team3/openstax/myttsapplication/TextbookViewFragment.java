@@ -76,7 +76,7 @@ public class TextbookViewFragment extends Fragment implements PlayerBarFragment.
 
     public TextToSpeech tts;
     public MyUtteranceProgressListener myUtteranceProgressListener;
-    public MediaPlayer player = new MediaPlayer();
+    public MediaPlayer player;
 
     private int length;
 
@@ -102,8 +102,6 @@ public class TextbookViewFragment extends Fragment implements PlayerBarFragment.
 
     public boolean makeDownloadAvailable = true;
 
-    public static String tag;
-
     public boolean easyWay = false; // skip tts, utterance progress listener, progress bar
     public ArrayList<Integer> times;
 
@@ -127,7 +125,6 @@ public class TextbookViewFragment extends Fragment implements PlayerBarFragment.
         args.putString(ARG_MOD_ID, param2);
         args.putString(ARG_BOOK_ID, param3);
 
-        setFavesTag(param3, param1, param2);
         fragment.setArguments(args);
         return fragment;
     }
@@ -138,16 +135,7 @@ public class TextbookViewFragment extends Fragment implements PlayerBarFragment.
         this.bookId = bookId;
         this.modId = modId;
         this.modTitle = modTitle;
-        tag = bookId+"_"+modTitle+"_"+modId;
 
-    }
-
-    public static void setFavesTag(String bookId, String modTitle, String modId){
-        tag = bookId+"_"+modTitle+"_"+modId;
-    }
-
-    public String getFavesTag(){
-        return tag;
     }
 
 
@@ -160,7 +148,6 @@ public class TextbookViewFragment extends Fragment implements PlayerBarFragment.
             modTitle = getArguments().getString(ARG_MOD_TITLE);
             modId = getArguments().getString(ARG_MOD_ID);
             bookId = getArguments().getString(ARG_BOOK_ID);
-            tag = bookId+"_"+modTitle+"_"+modId;
         }
 
 
@@ -202,32 +189,28 @@ public class TextbookViewFragment extends Fragment implements PlayerBarFragment.
             }
         }
 
-
+        playerBarFragment =  (PlayerBarFragment) ((MainActivity)getActivity()).getSupportFragmentManager().findFragmentByTag("Player Bar");
+        player = playerBarFragment.getPlayer();
         adapter = new TextbookViewAdapter(dataSet, new TextbookViewAdapter.TextOnClickListener(){
 
             @Override public void onClick(int position){
-                // blubber
-                /*
+
                 if(position != getSelected() || (position == getSelected() && !player.isPlaying()))  // do not pause the audio if "selected" text is selected again
                 {
                     // If interrupted
+                    if(times != null)
+                    {
+                        player.seekTo(getTimeUpTo(position));
 
-                    int former_position = getSelected();
-                    backToNormal(String.valueOf(former_position));
+                        // No matter what, makes sure player starts playing.
+                        playerBarFragment.setPlayButton("Pause");
+                        player.start();
 
-                    is_paused = false;
-                    checkIfVisible(position);
-                }*/
+                    }
+                }
             }
 
         });
-
-        // TEMP
-        //blubber
-        /*for(TextChunk t : tempDataSet){
-            dataSet.add(new TextChunk(t.getText()));
-            adapter.notifyItemInserted(dataSet.size()-1);
-        } */
 
     }
 
@@ -242,8 +225,6 @@ public class TextbookViewFragment extends Fragment implements PlayerBarFragment.
         View view = inflater.inflate(R.layout.fragment_textbook_view, container, false);
 
         recyclerView = (RecyclerView) view.findViewById(R.id.my_recycler_view);
-
-        playerBarFragment =  (PlayerBarFragment) ((MainActivity)getActivity()).getSupportFragmentManager().findFragmentByTag("Player Bar");
 
         // Layout Manager
         layoutManager = new LinearLayoutManager(context, LinearLayoutManager.VERTICAL, false) {
@@ -392,53 +373,6 @@ public class TextbookViewFragment extends Fragment implements PlayerBarFragment.
                 temp.forEach((stringo) -> tempDataSet.add(new TextChunk(stringo)));
         }  catch(IOException e ){ e.printStackTrace(); } catch(JSONException e){ e.printStackTrace(); }
     }
-
-    private class GetContentTask extends AsyncTask<String, String, String> {
-
-        @Override
-        protected String doInBackground(String... ary) {
-
-            try {
-                String fileName = "Books/" + bookId + "/" + modId + "/index.cnxml.html";
-                StringBuilder buf = new StringBuilder();
-                InputStreamReader inputStream = new InputStreamReader(context.getAssets().open(fileName));
-                BufferedReader bufferedReader = new BufferedReader(inputStream);
-                String str;
-                while ((str = bufferedReader.readLine()) != null) {
-                    buf.append(str);
-                }
-
-                Document doc = Jsoup.parse(buf.toString());
-
-                String title = doc.body().getElementsByTag("div").first().attr("document-title");
-                Content.Module mod = new Content.Module(title, modId, doc);
-
-
-                // eventually just replace with mod.buildModuleSSMl()
-                ArrayList<String> temp = mod.returnPrintOpening();
-                if (temp != null)
-                    temp.forEach((stringo) -> tempDataSet.add(new TextChunk(stringo)));
-                temp = mod.returnPrintReadingSections();
-                if (temp != null)
-                    temp.forEach((stringo) -> tempDataSet.add(new TextChunk(stringo)));
-                temp = mod.returnPrintEoc();
-                if (temp != null)
-                    temp.forEach((stringo) -> tempDataSet.add(new TextChunk(stringo)));
-            }  catch(IOException e ){ e.printStackTrace(); } catch(JSONException e){ e.printStackTrace(); }
-
-
-            return "done";
-        }
-
-        @Override
-        protected void onProgressUpdate(String... result) { }
-
-        @Override
-        protected void onPostExecute(String result) {
-            Log.i("onPostExecute", "Done");
-        }
-    }
-
 
     /**
      * Convert every text block in dataSet to audio and store
