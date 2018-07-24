@@ -1,6 +1,9 @@
 package com.interns.team3.openstax.myttsapplication;
 
 import android.content.Context;
+import android.os.AsyncTask;
+import android.support.v4.app.Fragment;
+import android.util.Log;
 
 import com.amazonaws.auth.CognitoCachingCredentialsProvider;
 import com.amazonaws.regions.Regions;
@@ -9,6 +12,8 @@ import com.amazonaws.services.polly.model.DescribeVoicesRequest;
 import com.amazonaws.services.polly.model.DescribeVoicesResult;
 import com.amazonaws.services.polly.model.OutputFormat;
 import com.amazonaws.services.polly.model.SynthesizeSpeechPresignRequest;
+
+import org.w3c.dom.Text;
 
 import java.io.File;
 import java.io.FileInputStream;
@@ -251,17 +256,30 @@ public abstract class AudioClient {
         }
 
         private void writeToFile(String fileName, InputStream audioStream, boolean debug) {
+
             String file = this.audioFolder + fileName + ".mp3";
             byte[] buffer = new byte[1024 * 4];
             int readBytes;
 
             try (FileOutputStream outputStream = new FileOutputStream(file)) {
+                Log.i("WriteToFile", fileName);
                 while ((readBytes = audioStream.read(buffer)) > 0) {
                     outputStream.write(buffer, 0, readBytes);
                 }
                 outputStream.close();
+
+                //showProgress
+                ((MainActivity)context).runOnUiThread(new Runnable() {
+                    public void run() {
+                        Fragment fragment = ((MainActivity)context).getActiveFragment();
+                        if(fragment instanceof TextbookViewFragment){ ((TextbookViewFragment) fragment).showProgress(Integer.parseInt(fileName));}
+
+                    }
+                });
+
                 if (debug) {
-                    System.out.printf("Audio content written to file \"%s.mp3\"\n", fileName);
+                    Log.i("Audio content written to file \"%s.mp3\"\n", fileName);
+                    //System.out.printf("Audio content written to file \"%s.mp3\"\n", fileName);
                 }
             } catch (Exception e) {
                 e.printStackTrace();
@@ -275,10 +293,41 @@ public abstract class AudioClient {
                     .withVoiceId(this.voice)
                     .withOutputFormat(OutputFormat.Mp3);
 
-            URL synthResURL = this.client.getPresignedSynthesizeSpeechUrl(synthReq);
-
-            writeToFile(fileName, synthResURL, debug);
+            new SynthesizeAudioTask(fileName, isSSML, content, debug).execute(synthReq);
         }
+
+        private class SynthesizeAudioTask extends AsyncTask<SynthesizeSpeechPresignRequest, Void, String> {
+            String fileName; // just a number
+            boolean isSSML;
+            String content;
+            boolean debug;
+            int count;
+
+            SynthesizeAudioTask(String fileName, boolean isSSML, String content, boolean debug ){
+                this.fileName = fileName;
+                this.isSSML = isSSML;
+                this.content = content;
+                this.debug = debug;
+                this.count = 0;
+            }
+
+            protected String doInBackground(SynthesizeSpeechPresignRequest... requests) {
+                SynthesizeSpeechPresignRequest synthReq = requests[0];
+                URL synthResURL = client.getPresignedSynthesizeSpeechUrl(synthReq); // formerly, this.client...
+                writeToFile(fileName, synthResURL, debug);
+                return "";
+
+            }
+
+            protected void onProgressUpdate() {
+            }
+
+            protected void onPostExecute(String s) {
+
+            }
+        }
+
+
 
         public void getVoiceDetails() {
             DescribeVoicesRequest allVoicesRequest = new DescribeVoicesRequest();

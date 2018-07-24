@@ -8,7 +8,6 @@ import android.graphics.drawable.Drawable;
 import android.media.MediaPlayer;
 import android.net.Uri;
 
-import android.os.Environment;
 import android.support.annotation.NonNull;
 import android.support.design.widget.BottomNavigationView;
 import android.support.design.widget.TabItem;
@@ -395,10 +394,10 @@ public class MainActivity extends AppCompatActivity implements HOMEFragment.OnFr
             // add nowPlayingFragment to the scroll up panel
             nowPlayingTab.select();
 
-            if(isEntireModuleAvailable(modID)){
+            if(isEntireModuleAvailable(bookTitle, modID)){
                 playerBarFragment.setVisible(true);
                 //fragmentManager.beginTransaction().replace(R.id.playbarContainer, playerBarFragment, "Player Bar").commit();
-                String output = Environment.getExternalStorageDirectory().getAbsolutePath() + "/output" + modID + ".mp3";
+                String output = getExternalCacheDir().getAbsolutePath() + "/" + bookTitle + "/" + modID + "/output.mp3";
                 playerBarFragment.playMergedFile(output);
             }
             else {
@@ -471,10 +470,9 @@ public class MainActivity extends AppCompatActivity implements HOMEFragment.OnFr
         editor.commit();
     }
 
-    public boolean isEntireModuleAvailable(String modId){
-        SharedPreferences sharedPreferences = this.getSharedPreferences("library", 0);
-        SharedPreferences.Editor editor = sharedPreferences.edit();
-        String output = Environment.getExternalStorageDirectory().getAbsolutePath() + "/output"+modId+".mp3";
+    public boolean isEntireModuleAvailable(String bookTitle, String modId){
+        String output = getExternalCacheDir().getAbsolutePath() + "/" + bookTitle + "/" + modId + "/output.mp3";
+
         File f = new File(output);
         if(f.exists()) {
             // show textbookviewfragment
@@ -494,9 +492,9 @@ public class MainActivity extends AppCompatActivity implements HOMEFragment.OnFr
         }
     }
 
-    public void downloadEntireModule(String modId){
-        String output = Environment.getExternalStorageDirectory().getAbsolutePath() + "/output"+modId+".mp3";
-        try{ download(output); } catch(IOException e){ Log.i("IOException", "Downloading entire module");};
+    public void downloadEntireModule(String bookTitle, String modId){
+        String output = getExternalCacheDir().getAbsolutePath() + "/" + bookTitle + "/" + modId + "/output.mp3";
+        try{ download(output, bookTitle, modId); } catch(IOException e){ Log.i("IOException", "Downloading entire module");};
 
         SharedPreferences sharedPreferences = this.getSharedPreferences("library", 0);
         SharedPreferences.Editor editor = sharedPreferences.edit();
@@ -507,7 +505,7 @@ public class MainActivity extends AppCompatActivity implements HOMEFragment.OnFr
         editor.commit();
     }
 
-    public void download(String outputFilename) throws IOException {
+    public void download(String outputFilename, String bookTitle, String modID) throws IOException {
 
         /*String[] uris = new String[]{
                 "/storage/emulated/0/textbookaudio0.wav",
@@ -519,7 +517,8 @@ public class MainActivity extends AppCompatActivity implements HOMEFragment.OnFr
         String s = "";
 
         for (int x = 0; x < dataSet.size(); x ++){
-            uris[x] = "/storage/emulated/0/textbookaudio"+ x +".wav";
+
+            uris[x] = getExternalCacheDir().getAbsolutePath() + "/" + bookTitle + "/" + modID + "/" + x + ".mp3";
             s+="-i " + uris[x] + " ";
         }
 

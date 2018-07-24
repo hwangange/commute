@@ -114,7 +114,7 @@ public class NOWPLAYINGFragment extends Fragment {
                     downloadButton.setText("Downloading...");
                     // find some way to check the progress of downloads xD
                     // for now, assume reader only clicks after downloads finish
-                    ((MainActivity) getActivity()).downloadEntireModule(modId);
+                    ((MainActivity) getActivity()).downloadEntireModule(bookId, modId);
                 }
             });
         }

@@ -1,0 +1,12 @@
+<component name="libraryTable">
+  <library name="Gradle: nl.bravobit:android-ffmpeg-1.1.5">
+    <CLASSES>
+      <root url="jar://$USER_HOME$/.gradle/caches/transforms-1/files-1.1/android-ffmpeg-1.1.5.aar/32b0f3a5ce79ba9012b8484938dfc4e0/jars/classes.jar!/" />
+      <root url="file://$USER_HOME$/.gradle/caches/transforms-1/files-1.1/android-ffmpeg-1.1.5.aar/32b0f3a5ce79ba9012b8484938dfc4e0/res" />
+    </CLASSES>
+    <JAVADOC />
+    <SOURCES>
+      <root url="jar://$USER_HOME$/.gradle/caches/modules-2/files-2.1/nl.bravobit/android-ffmpeg/1.1.5/55d8318ef28fd4936d1d839b0d8ae11cdd517ddd/android-ffmpeg-1.1.5-sources.jar!/" />
+    </SOURCES>
+  </library>
+</component>

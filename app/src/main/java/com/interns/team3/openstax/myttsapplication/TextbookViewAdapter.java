@@ -68,12 +68,14 @@ public class TextbookViewAdapter extends RecyclerView.Adapter<TextbookViewAdapte
         //taking precautions: https://stackoverflow.com/questions/39424212/how-to-stop-recyclerview-from-recycling-items-that-are-toggled-visible-and-gone?noredirect=1&lq=1
         TextAudioChunk tc = dataSet.get(position);
 
-        // highlight selected text. except for the 0th one (the title).
-        if(position == getSelected() && position != 0) holder.textView.setBackgroundColor(ContextCompat.getColor(context, R.color.colorHighlighted));
-        else holder.textView.setBackgroundColor(ContextCompat.getColor(context, R.color.defaultGrey));
+        if(tc != null){
+            // highlight selected text. except for the 0th one (the title).
+            if(position == getSelected() && position != 0) holder.textView.setBackgroundColor(ContextCompat.getColor(context, R.color.colorHighlighted));
+            else holder.textView.setBackgroundColor(ContextCompat.getColor(context, R.color.defaultGrey));
 
 
-        holder.bind(tc.getText(), textOnClickListener);
+            holder.bind(tc.getText(), textOnClickListener);
+        }
 
     }
 

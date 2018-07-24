@@ -6,6 +6,7 @@ import android.animation.AnimatorListenerAdapter;
 import android.content.Context;
 import android.content.SharedPreferences;
 import android.content.pm.PackageManager;
+import android.graphics.Path;
 import android.graphics.PorterDuff;
 import android.graphics.drawable.Drawable;
 import android.media.AudioAttributes;
@@ -53,6 +54,8 @@ import java.io.File;
 import java.io.IOException;
 
 import java.io.InputStreamReader;
+import java.nio.file.Files;
+import java.nio.file.Paths;
 import java.util.ArrayList;
 import java.util.HashSet;
 import java.util.List;
@@ -79,7 +82,6 @@ public class TextbookViewFragment extends Fragment implements PlayerBarFragment.
     public List<TextAudioChunk> tempDataSet, dataSet;
 
     public TextToSpeech tts;
-    public MyUtteranceProgressListener myUtteranceProgressListener;
     public MediaPlayer player;
 
 
@@ -153,43 +155,9 @@ public class TextbookViewFragment extends Fragment implements PlayerBarFragment.
             bookId = getArguments().getString(ARG_BOOK_ID);
         }
 
-
-        // Utterance Progress Listener
-        if(getTimesList() == null || !((MainActivity) getContext()).isEntireModuleAvailable(modId)) {
-            myUtteranceProgressListener = new MyUtteranceProgressListener();
-            tts = new TextToSpeech(getContext(), new TextToSpeech.OnInitListener() {
-                @Override
-                public void onInit(int i) {
-                    if (i == TextToSpeech.SUCCESS) {
-                        storeConvertedTTSAudio();
-                        Log.e("Initialization", "Initialization succeeded");
-
-                    } else {
-                        Log.e("Initialization", "Initialization failed");
-                    }
-
-                }
-            });
-            tts.setOnUtteranceProgressListener(myUtteranceProgressListener);
-        } else {
-            // if there is a recorded times list AND entire module has already been downloaded
-            makeThingsEasy();
-        }
-
-        context = getContext();
-
         // Populate dataSet
         tempDataSet = new ArrayList<>();
         dataSet = new ArrayList<>();
-
-        getContent();// new GetContentTask().execute("");
-        if(easyWay){
-            int index = 0;
-            for(TextAudioChunk tc : tempDataSet) {
-                dataSet.add(new TextAudioChunk(tc));
-                index ++;
-            }
-        }
 
         playerBarFragment =  (PlayerBarFragment) ((MainActivity)getActivity()).getSupportFragmentManager().findFragmentByTag("Player Bar");
         player = playerBarFragment.getPlayer();
@@ -212,6 +180,29 @@ public class TextbookViewFragment extends Fragment implements PlayerBarFragment.
                 }
             }
         });
+
+        if(getTimesList() == null || !((MainActivity) getContext()).isEntireModuleAvailable(bookId, modId)) {
+            getContent(); // Populate tempDataSet
+            storeConvertedTTSAudio();
+
+            // look at UtteranceProgressListener class.
+        } else {
+            // if there is a recorded times list AND entire module has already been downloaded
+            makeThingsEasy();
+            getContent(); // Order matters bro
+        }
+
+
+        context = getContext();
+
+        if(easyWay){
+            for(TextAudioChunk tc : tempDataSet) {
+                dataSet.add(new TextAudioChunk(tc));
+            }
+
+            Log.i("dataSet is good to go!", "finished populating");
+        }
+
 
     }
 
@@ -301,11 +292,11 @@ public class TextbookViewFragment extends Fragment implements PlayerBarFragment.
         progress = (LinearLayout) view.findViewById(R.id.progress);
         if(easyWay) { progress.setVisibility(View.GONE); }
         else {
-            if (dataSet.size() == tempDataSet.size()) {
+            if (dataSet.size() == tempDataSet.size() && !dataSet.contains(null)) {
                 progress.setVisibility(View.GONE);
             } else {
                 progressBar = (ProgressBar) view.findViewById(R.id.determinateBar);
-                progressBar.setProgress(dataSet.size());
+                progressBar.setProgress(numNonNulls());
                 progressBar.setMax(tempDataSet.size());
 
                 progressNumber = (TextView) view.findViewById(R.id.progressNumber);
@@ -343,6 +334,16 @@ public class TextbookViewFragment extends Fragment implements PlayerBarFragment.
 
     }
 
+    public int numNonNulls(){
+        int count = 0;
+        // find number of non nulls in dataSet
+        for(TextAudioChunk tac : dataSet){
+            if(tac != null)
+                count ++;
+        }
+        return count;
+    }
+
     public void onFragmentInteraction(Uri uri){
         Log.i("onFragmentInteraction", uri.toString());
     }
@@ -357,6 +358,13 @@ public class TextbookViewFragment extends Fragment implements PlayerBarFragment.
 //            tempDataSet.add(new TextChunk("<h2>"+modTitle+"</h2>"));
             // eventually just replace with mod.buildModuleSSMl()
             tempDataSet = mod.initTextAudioChunks();
+
+            // fill dataset with temporary values; because chunks finish downloading out of order
+            if(!easyWay) {
+                Log.i("NOT the easyWay", "you better not be in here!");
+                for(int x = 0; x < tempDataSet.size(); x ++)
+                    dataSet.add(null);
+            }
 
 //            List<String> temp = mod.returnPrintOpening();
 //            if (temp != null)
@@ -389,14 +397,26 @@ public class TextbookViewFragment extends Fragment implements PlayerBarFragment.
 //
 //        }
 
+        // Make folder for book if it exists.
+        //String bookPath = Environment.getExternalStorageDirectory().getAbsolutePath() + "/" + bookId +"/";
+        File book = new File(getContext().getExternalCacheDir(), bookId);
+        if(!book.isDirectory())
+        {
+                if(book.mkdirs()) Log.i("Book directory created", "YAY!");
+                else Log.i("FAILED: book directory not created", "rip");
+        }
+
         tempDataSet.parallelStream().forEach(chunk -> {
             String ssml = chunk.getSsml(); // might have to modify this once text comes with SSML tags
             int id = chunk.getId();
-            String folder = Environment.getExternalStorageDirectory().getAbsolutePath() + "/" + bookId + "/" + modId + "/";
+            String folder = getContext().getExternalCacheDir().getAbsolutePath() + "/" + bookId + "/" + modId + "/";
             AudioClient.AmazonClient client = new AudioClient.AmazonClient(folder, getContext());
             client.synthesizeAudio(String.valueOf(id), true, ssml, false);
             chunk.setAudioFile(folder + id + ".mp3");
+
             chunk.synthesized();
+
+            //showProgress(id);
         });
     }
 
@@ -499,80 +519,37 @@ public class TextbookViewFragment extends Fragment implements PlayerBarFragment.
         return list;
     }
 
-    /**
-     * Useful for performing certain actions only after TTS finishes a request.
-     */
-    public class MyUtteranceProgressListener extends UtteranceProgressListener{
+    // Formerly in UtteranceProgressListener
+    public void showProgress(int pos){
+        // index number in dataSet
 
-        public MyUtteranceProgressListener(){
-            super();
-        }
+        dataSet.set(pos, new TextAudioChunk(tempDataSet.get(pos)));
+        getActivity().runOnUiThread(new Runnable() {
+            @Override
+            public void run() {
+                adapter.notifyDataSetChanged();
+                if(progressBar != null) {
+                    progressBar.incrementProgressBy(1);
+                    int fraction = (int) (progressBar.getProgress() * 100 / tempDataSet.size());
+                    progressNumber.setText(String.valueOf(fraction) + "%");
 
-        @Override
-        public void onStart(String position){
-            //Log.i("onStart", position);
-        }
+                    if(progressBar.getProgress() == tempDataSet.size()){
+                        Log.i("Completed converting all files", String.valueOf(pos));
 
-        @Override
-        public void onError(String position){
-            //Log.i("onError", position);
-        }
+                        storeTimeLengths();
 
-        @Override
-        public void onDone(final String pos) {
-
-            if(pos.contains("textbookaudio")) {
-
-                // index number in dataSet
-                int number = Integer.parseInt(pos.replaceAll("textbookaudio",""));
-                dataSet.add(new TextAudioChunk(tempDataSet.get(number)));
-                getActivity().runOnUiThread(new Runnable() {
-                    @Override
-                    public void run() {
-                        adapter.notifyItemInserted(dataSet.size()-1);
-                        progressBar.incrementProgressBy(1);
-                        int fraction = (int) (progressBar.getProgress() * 100 / tempDataSet.size());
-                        progressNumber.setText(String.valueOf(fraction) + "%");
-
-                    }
-                });
-
-                if(pos.contains(String.valueOf(tempDataSet.size()-1))){
-                    Log.i("Completed converting all files", pos);
-
-                    storeTimeLengths();
-
-                    if(makeDownloadAvailable) {
-                        makeDownloadAvailable = false;
-                        getActivity().runOnUiThread(new Runnable() {
+                        if(makeDownloadAvailable) { makeDownloadAvailable = false; }
+                        progress.animate().setDuration(200).alpha(0).setListener(new AnimatorListenerAdapter() {
                             @Override
-                            public void run() {
-                                //download.setEnabled(true);
+                            public void onAnimationEnd(Animator animation) {
+                                progress.setVisibility(View.GONE);
                             }
                         });
                     }
-                    progress.animate().setDuration(200).alpha(0).setListener(new AnimatorListenerAdapter() {
-                        @Override
-                        public void onAnimationEnd(Animator animation) {
-                            progress.setVisibility(View.GONE);
-                        }
-                    });
-
                 }
 
             }
-
-        }
-
-        @Override
-        public void onStop(final String position, boolean interrupted){
-            //if(interrupted) Log.i("onStop", "Interrupted");
-            //else Log.i("onStop", "Completed");
-
-            /*if(!position.contains("textbookaudio"))
-                backToNormal(position); */
-
-        }
+        });
     }
 
 
@@ -853,7 +830,9 @@ public class TextbookViewFragment extends Fragment implements PlayerBarFragment.
 
         // get times from downloads as milliseconds
         for (int x = 0; x < dataSet.size(); x ++){
-            String s = "/storage/emulated/0/textbookaudio"+ x +".wav";
+            //String s = "/storage/emulated/0/textbookaudio"+ x +".wav";
+            //String s = Environment.getExternalStorageDirectory().getAbsolutePath() + "/" + bookId + "/" + modId + "/" + x + ".mp3";
+            String s = getContext().getExternalCacheDir().getAbsolutePath() + "/" + bookId + "/" + modId + "/"+x+".mp3";
             int time = getTimeLength(s);
             times.add(time);
 

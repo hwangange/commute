@@ -439,13 +439,15 @@ public class PlayerBarFragment extends Fragment {
                 textbookViewFragment = (TextbookViewFragment) ((MainActivity)getActivity()).getActiveFragment();
                 int currentIndexPosition = textbookViewFragment.getPositionAt(currentPoint);
                 if(currentIndexPosition != activeIndexPosition && currentIndexPosition != -1){
-                    // unhighlight text
-                    textbookViewFragment.unhighlightText(activeIndexPosition);
+                    if(textbookViewFragment.getDataSet().size() != 0 ) {
+                        // unhighlight text
+                        textbookViewFragment.unhighlightText(activeIndexPosition);
 
-                    // set new active text
-                    activeIndexPosition = currentIndexPosition;
-                    textbookViewFragment.setSelected(activeIndexPosition);
-                    textbookViewFragment.checkIfVisible(activeIndexPosition);
+                        // set new active text
+                        activeIndexPosition = currentIndexPosition;
+                        textbookViewFragment.setSelected(activeIndexPosition);
+                        textbookViewFragment.checkIfVisible(activeIndexPosition);
+                    }
                 }
 
             }
