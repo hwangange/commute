@@ -1,5 +1,6 @@
 package com.interns.team3.openstax.myttsapplication;
 
+import android.annotation.SuppressLint;
 import android.content.Context;
 import android.os.AsyncTask;
 import android.support.v4.app.Fragment;
@@ -12,8 +13,7 @@ import com.amazonaws.services.polly.model.DescribeVoicesRequest;
 import com.amazonaws.services.polly.model.DescribeVoicesResult;
 import com.amazonaws.services.polly.model.OutputFormat;
 import com.amazonaws.services.polly.model.SynthesizeSpeechPresignRequest;
-
-import org.w3c.dom.Text;
+import com.amazonaws.services.polly.model.Voice;
 
 import java.io.File;
 import java.io.FileInputStream;
@@ -32,6 +32,7 @@ import java.util.Locale;
 public abstract class AudioClient {
     String audioFolder;
     String voice;
+    String language;
     boolean isMale;
     int volume;
 
@@ -56,6 +57,14 @@ public abstract class AudioClient {
         this.voice = newVoice;
     }
 
+    public String getLanguage() {
+        return this.language;
+    }
+
+    public void setLanguage(String language) {
+        this.language = language;
+    }
+
     public String getGender() {
         return this.isMale ? "Male" : "Female";
     }
@@ -72,20 +81,8 @@ public abstract class AudioClient {
         }
     }
 
-    static void listAllVoices(String client) {
-        switch (client.toLowerCase()) {
-            case "google":  {
-//                GoogleClient.listAllSupportedVoices();
-                break;
-            }
-            case "amazon": {
-                new AmazonClient("", null).listAllSupportedVoices();
-                break;
-            }
-            default: {
-                System.err.printf("ERROR: \"%s\" is not a supported client. Please choose one of \"Google\" or \"Amazon\"\n", client);
-            }
-        }
+    static List<String> listAllVoices(Context context) {
+        return new AmazonClient("", context).getSupportedVoices();
     }
 
     static void combineMP3(String folder, String outputFile, String file1, String file2, boolean deleteOldFiles, boolean debug) {
@@ -165,8 +162,6 @@ public abstract class AudioClient {
     }
 
     public void synthesizeAudio(String fileName, boolean isSSML, List<String> contentList, boolean debug) {
-//        System.out.format("Synthesizing audio of file \"%s.mp3\":\n", fileName);
-//        System.out.format("writing...\n");
         List<String> audioFiles = new ArrayList<>();
         for (int i = 0; i < contentList.size(); i++) {
             try {
@@ -179,9 +174,7 @@ public abstract class AudioClient {
                 e.printStackTrace();
             }
         }
-//        System.out.format("merging...\n");
         combineMP3(this.audioFolder, fileName, audioFiles, true, debug);
-//        System.out.format("Finished audio file \"%s.mp3\"\n", fileName);
     }
 
     public abstract void synthesizeAudio(String fileName, boolean isSSML, String content, boolean debug);
@@ -196,7 +189,16 @@ public abstract class AudioClient {
             super(folder);
             this.context = context;
             this.voice = "Matthew";
+            this.language = "en-US";
             this.isMale = true;
+            initPollyClient();
+        }
+
+        AmazonClient(String folder, Context context, String voice) {
+            super(folder);
+            this.context = context;
+            this.voice = voice;
+            this.language = "en-US";
             initPollyClient();
         }
 
@@ -204,6 +206,7 @@ public abstract class AudioClient {
             super(folder);
             this.context = context;
             this.voice = isMale ? "Matthew" : "Joanna";
+            this.language = "en-US";
             this.isMale = isMale;
             initPollyClient();
         }
@@ -212,6 +215,7 @@ public abstract class AudioClient {
             super(folder);
             this.context = context;
             this.voice = voice;
+            this.language = "en-US";
             this.isMale = isMale;
             initPollyClient();
         }
@@ -237,8 +241,9 @@ public abstract class AudioClient {
             this.client = new AmazonPollyPresigningClient(credentialsProvider);
         }
 
-        private void listAllSupportedVoices() {
-            DescribeVoicesRequest allVoicesRequest = new DescribeVoicesRequest();
+        private List<String> getSupportedVoices() {
+            List<String> voices = new ArrayList<>();
+            DescribeVoicesRequest allVoicesRequest = new DescribeVoicesRequest().withLanguageCode(this.language);
             try {
                 String nextToken;
                 do {
@@ -246,19 +251,15 @@ public abstract class AudioClient {
                     nextToken = allVoicesResult.getNextToken();
                     allVoicesRequest.setNextToken(nextToken);
 
-                    for (com.amazonaws.services.polly.model.Voice voice: allVoicesResult.getVoices()) {
-                        System.out.printf("%s: %s\n", "Name", voice.getName());
-                        System.out.printf("%s: %s\n", "Gender", voice.getGender());
-                        System.out.printf("%s: %s\n", "Id", voice.getId());
-                        System.out.printf("%s: %s\n", "LanguageCode", voice.getLanguageCode());
-                        System.out.printf("%s: %s\n", "LanguageName", voice.getLanguageName());
-                        System.out.println();
+                    for (Voice voice: allVoicesResult.getVoices()) {
+                        voices.add(voice.getId());
                     }
                 } while (nextToken != null);
 
             } catch (Exception e) {
                 e.printStackTrace();
             }
+            return voices;
         }
 
         private void writeToFile(String filename, URL streamURL, boolean debug) {
@@ -283,11 +284,10 @@ public abstract class AudioClient {
                 outputStream.close();
 
                 //showProgress
-                ((MainActivity)context).runOnUiThread(new Runnable() {
-                    public void run() {
-                        Fragment fragment = ((MainActivity)context).getActiveFragment();
-                        if(fragment instanceof TextbookViewFragment){ ((TextbookViewFragment) fragment).showProgress(Integer.parseInt(fileName));}
-
+                ((MainActivity) context).runOnUiThread(() -> {
+                    Fragment fragment = ((MainActivity) context).getActiveFragment();
+                    if (fragment instanceof TextbookViewFragment) {
+                        ((TextbookViewFragment) fragment).showProgress(Integer.parseInt(fileName));
                     }
                 });
 
@@ -310,6 +310,7 @@ public abstract class AudioClient {
             new SynthesizeAudioTask(fileName, isSSML, content, debug).execute(synthReq);
         }
 
+        @SuppressLint("StaticFieldLeak")
         private class SynthesizeAudioTask extends AsyncTask<SynthesizeSpeechPresignRequest, Void, String> {
             String fileName; // just a number
             boolean isSSML;
@@ -330,18 +331,14 @@ public abstract class AudioClient {
                 URL synthResURL = client.getPresignedSynthesizeSpeechUrl(synthReq); // formerly, this.client...
                 writeToFile(fileName, synthResURL, debug);
                 return "";
-
             }
 
             protected void onProgressUpdate() {
             }
 
             protected void onPostExecute(String s) {
-
             }
         }
-
-
 
         public void getVoiceDetails() {
             DescribeVoicesRequest allVoicesRequest = new DescribeVoicesRequest();

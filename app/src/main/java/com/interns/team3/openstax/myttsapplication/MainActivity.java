@@ -1,51 +1,31 @@
 package com.interns.team3.openstax.myttsapplication;
 
 
-import android.content.Intent;
 import android.content.SharedPreferences;
 import android.graphics.PorterDuff;
 import android.graphics.drawable.Drawable;
-import android.media.MediaPlayer;
 import android.net.Uri;
-
+import android.os.Bundle;
 import android.support.annotation.NonNull;
 import android.support.design.widget.BottomNavigationView;
-import android.support.design.widget.TabItem;
 import android.support.design.widget.TabLayout;
 import android.support.v4.app.Fragment;
-import android.support.v4.app.FragmentActivity;
-import android.os.Bundle;
 import android.support.v4.app.FragmentManager;
 import android.support.v4.app.FragmentTransaction;
 import android.support.v7.app.ActionBar;
 import android.support.v7.app.AppCompatActivity;
 import android.support.v7.widget.RecyclerView;
-import android.support.v7.widget.Toolbar;
 import android.text.Html;
-import android.text.method.LinkMovementMethod;
-
 import android.util.Log;
 import android.view.MenuItem;
 import android.view.View;
-import android.view.Window;
-import android.widget.AdapterView;
-import android.widget.ArrayAdapter;
-import android.widget.Button;
-import android.widget.ImageButton;
 import android.widget.ImageView;
-import android.widget.LinearLayout;
-import android.widget.ListView;
 import android.widget.RelativeLayout;
 import android.widget.TextView;
-import android.widget.Toast;
 
 import com.sothree.slidinguppanel.SlidingUpPanelLayout;
 
 import java.io.File;
-import java.io.IOException;
-import java.lang.reflect.Array;
-import java.util.ArrayList;
-import java.util.Arrays;
 import java.util.HashSet;
 import java.util.List;
 
@@ -93,7 +73,7 @@ public class MainActivity extends AppCompatActivity implements HOMEFragment.OnFr
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
-        setSupportActionBar((Toolbar) findViewById(R.id.main_toolbar));
+        setSupportActionBar(findViewById(R.id.main_toolbar));
 
         fragmentManager = getSupportFragmentManager();
         libraryFragment = LIBRARYFragment.newInstance("","");
@@ -120,8 +100,7 @@ public class MainActivity extends AppCompatActivity implements HOMEFragment.OnFr
         ft.replace(R.id.fragmentContainer, homeFragment);
         ft.commit();
 
-        bottomNavigationView = (BottomNavigationView)
-                findViewById(R.id.navigation);
+        bottomNavigationView = findViewById(R.id.navigation);
         //if(nowPlayingFragment == null) bottomNavigationView.findViewById(R.id.navigation_player).setEnabled(false);
 
 
@@ -145,26 +124,14 @@ public class MainActivity extends AppCompatActivity implements HOMEFragment.OnFr
         });
 
 
-        dragView = (RelativeLayout) findViewById(R.id.dragView);
-        dragViewText = (TextView) findViewById(R.id.dragViewText);
-        dragViewPlayButton = (ImageView) findViewById(R.id.dragViewPlayButton);
-        dragViewPlayButton.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View v) {
-                playerBarFragment.handlePlayButtonClick();
-            }
-        });
-        dragViewFavorite = (ImageView) findViewById(R.id.dragViewFavorite);
-        dragViewFavorite.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View v) {
+        dragView = findViewById(R.id.dragView);
+        dragViewText = findViewById(R.id.dragViewText);
+        dragViewPlayButton = findViewById(R.id.dragViewPlayButton);
+        dragViewPlayButton.setOnClickListener(v -> playerBarFragment.handlePlayButtonClick());
+        dragViewFavorite = findViewById(R.id.dragViewFavorite);
+        dragViewFavorite.setOnClickListener(v -> setFavoriteIconColor(true));
 
-                setFavoriteIconColor(true);
-
-            }
-        });
-
-        mLayout = (SlidingUpPanelLayout) findViewById(R.id.sliding_layout);
+        mLayout = findViewById(R.id.sliding_layout);
         mLayout.addPanelSlideListener(new SlidingUpPanelLayout.PanelSlideListener() {
             @Override
             public void onPanelSlide(View panel, float slideOffset) {
@@ -191,12 +158,7 @@ public class MainActivity extends AppCompatActivity implements HOMEFragment.OnFr
             }
         });
 
-        mLayout.setFadeOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View view) {
-                mLayout.setPanelState(SlidingUpPanelLayout.PanelState.COLLAPSED);
-            }
-        });
+        mLayout.setFadeOnClickListener(view -> mLayout.setPanelState(SlidingUpPanelLayout.PanelState.COLLAPSED));
 
 
 
@@ -427,7 +389,7 @@ public class MainActivity extends AppCompatActivity implements HOMEFragment.OnFr
 
         // Shared Preferences
         SharedPreferences sharedPreferences = this.getSharedPreferences("library", 0);
-        HashSet<String> faves = (HashSet<String>) sharedPreferences.getStringSet("favorites", new HashSet<String>());
+        HashSet<String> faves = (HashSet<String>) sharedPreferences.getStringSet("favorites", new HashSet<>());
         SharedPreferences.Editor editor = sharedPreferences.edit();
 
         // create a duplicate HashSet of the current faves set
@@ -496,48 +458,45 @@ public class MainActivity extends AppCompatActivity implements HOMEFragment.OnFr
 
     public void downloadEntireModule(String bookTitle, String modId){
         String output = getExternalCacheDir().getAbsolutePath() + "/" + bookTitle + "/" + modId + "/output.mp3";
-        try{ download(output, bookTitle, modId); } catch(IOException e){ Log.i("IOException", "Downloading entire module");};
+        try {
+            download(output);
+        } catch (Exception e) {
+            Log.i("IOException", "Downloading entire module");
+        }
 
         SharedPreferences sharedPreferences = this.getSharedPreferences("library", 0);
         SharedPreferences.Editor editor = sharedPreferences.edit();
-        HashSet<String> downloads = (HashSet<String>) sharedPreferences.getStringSet("downloads", new HashSet<String>());
-        HashSet<String> newDownloads = new HashSet<String>(downloads);
+        HashSet<String> downloads = (HashSet<String>) sharedPreferences.getStringSet("downloads", new HashSet<>());
+        HashSet<String> newDownloads = new HashSet<>(downloads);
         newDownloads.add(tag); // same tag as favorites.
         editor.putStringSet("downloads", newDownloads); // hopefully this replaces the old downloads set
         editor.commit();
     }
 
-    public void download(String outputFilename, String bookTitle, String modID) throws IOException {
-
-        /*String[] uris = new String[]{
-                "/storage/emulated/0/textbookaudio0.wav",
-             */
-
+    public void download(String outputFilename) {
         List<TextAudioChunk> dataSet = textbookViewFragment.getDataSet();
 
-        String[] uris = new String[dataSet.size()];
-        String s = "";
+        final StringBuilder s = new StringBuilder();
 
-        for (int x = 0; x < dataSet.size(); x ++){
+        dataSet.forEach(chunk -> {
+            String uri = chunk.getAudioFile();
+            s.append(String.format("-i %s ", uri));
+        });
 
-            uris[x] = getExternalCacheDir().getAbsolutePath() + "/" + bookTitle + "/" + modID + "/" + x + ".mp3";
-            s+="-i " + uris[x] + " ";
-        }
-
-        s+="-filter_complex ";
+        s.append("-filter_complex ");
 
         for(int x = 0; x < dataSet.size(); x++){
-            s+="["+x+":0]";
+            s.append(String.format("[%s:0]", x));
         }
 
-        s+="concat=n="+dataSet.size()+":v=0:a=1[out] -map [out] " + outputFilename;
+        s.append(String.format("concat=n=%s:v=0:a=1[out] -map [out] %s", dataSet.size(), outputFilename));
 
         // https://trac.ffmpeg.org/wiki/Concatenate
         // String s = "-i " + uris[0] + " -i " + uris[1] + " -filter_complex [0:0][1:0]concat=n=2:v=0:a=1[out] -map [out] " + output;
-        Log.i("THE WHOLE THING", s);
+        Log.i("THE WHOLE THING", s.toString());
 
 
-        String[] cmd = s.split(" ");
+        String[] cmd = s.toString().split(" ");
 
         // checking that Ffmpeg works
         FFmpeg ffmpeg = FFmpeg.getInstance(this);
@@ -555,7 +514,6 @@ public class MainActivity extends AppCompatActivity implements HOMEFragment.OnFr
         // for more info, check out this link:
         // https://superuser.com/questions/1298891/ffmpeg-merge-multiple-audio-files-into-single-audio-file-with-android
         // CORRECT dependency that fixes "relocation" problems: https://github.com/bravobit/FFmpeg-Android
-        ffmpeg = FFmpeg.getInstance(this);
         ffmpeg.execute(cmd, new ExecuteBinaryResponseHandler() {
 
             @Override
