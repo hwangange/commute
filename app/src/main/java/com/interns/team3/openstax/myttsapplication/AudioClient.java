@@ -1,5 +1,6 @@
 package com.interns.team3.openstax.myttsapplication;
 
+import android.annotation.SuppressLint;
 import android.content.Context;
 import android.os.AsyncTask;
 import android.support.v4.app.Fragment;
@@ -75,21 +76,9 @@ public abstract class AudioClient {
         }
     }
 
-//    static void listAllVoices(String client) {
-//        switch (client.toLowerCase()) {
-//            case "google":  {
-////                GoogleClient.listAllSupportedVoices();
-//                break;
-//            }
-//            case "amazon": {
-//                new AmazonClient("", null).listAllSupportedVoices();
-//                break;
-//            }
-//            default: {
-//                System.err.printf("ERROR: \"%s\" is not a supported client. Please choose one of \"Google\" or \"Amazon\"\n", client);
-//            }
-//        }
-//    }
+    static List<String> listAllVoices(Context context) {
+        return new AmazonClient("", context).getSupportedVoices();
+    }
 
     static void combineMP3(String folder, String outputFile, String file1, String file2, boolean deleteOldFiles, boolean debug) {
         try {
@@ -238,8 +227,7 @@ public abstract class AudioClient {
             this.client = new AmazonPollyPresigningClient(credentialsProvider);
         }
 
-        // to get voices, call new AmazonClient("",null).getSupportedVoices();
-        public List<String> getSupportedVoices() {
+        private List<String> getSupportedVoices() {
             List<String> voices = new ArrayList<>();
             DescribeVoicesRequest allVoicesRequest = new DescribeVoicesRequest().withLanguageCode(this.language);
             try {
@@ -251,12 +239,6 @@ public abstract class AudioClient {
 
                     for (Voice voice: allVoicesResult.getVoices()) {
                         voices.add(voice.getId());
-//                        System.out.printf("%s: %s\n", "Name", voice.getName());
-//                        System.out.printf("%s: %s\n", "Gender", voice.getGender());
-//                        System.out.printf("%s: %s\n", "Id", voice.getId());
-//                        System.out.printf("%s: %s\n", "LanguageCode", voice.getLanguageCode());
-//                        System.out.printf("%s: %s\n", "LanguageName", voice.getLanguageName());
-//                        System.out.println();
                     }
                 } while (nextToken != null);
 
@@ -314,6 +296,7 @@ public abstract class AudioClient {
             new SynthesizeAudioTask(fileName, isSSML, content, debug).execute(synthReq);
         }
 
+        @SuppressLint("StaticFieldLeak")
         private class SynthesizeAudioTask extends AsyncTask<SynthesizeSpeechPresignRequest, Void, String> {
             String fileName; // just a number
             boolean isSSML;

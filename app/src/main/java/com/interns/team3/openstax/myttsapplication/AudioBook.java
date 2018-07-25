@@ -2,8 +2,8 @@ package com.interns.team3.openstax.myttsapplication;
 
 import android.content.Context;
 
-import com.interns.team3.openstax.myttsapplication.ssml.SsmlBuilder;
 import com.interns.team3.openstax.myttsapplication.Content.Module;
+import com.interns.team3.openstax.myttsapplication.ssml.SsmlBuilder;
 
 import org.json.JSONArray;
 import org.json.JSONException;
@@ -25,25 +25,26 @@ import java.util.Map;
 public class AudioBook {
     private final Context context;
     private final String mainFolder;
-    private final String bookName;
-    private  String targetFolder;
+    private final boolean hasUnits;
 
     AudioBook (Context context, String bookName) {
         this.context = context;
         this.mainFolder = "Books/" + bookName + "/";
-        this.bookName = bookName;
+        this.hasUnits = false;
     }
 
+    AudioBook(Context context, String bookName, boolean hasUnits) {
+        this.context = context;
+        this.mainFolder = "Books/" + bookName + "/";
+        this.hasUnits = hasUnits;
+    }
 
     public String getMainFolder() {
         return this.mainFolder;
     }
 
-    public void setTargetFolder(String folder) {
-        this.targetFolder = folder;
-    }
 
-    public String readAsset(String file) throws IOException {
+    private String readAsset(String file) throws IOException {
         InputStreamReader input = new InputStreamReader(this.context.getAssets().open(file));
         StringBuilder buf = new StringBuilder();
         BufferedReader bufferedReader = new BufferedReader(input);
@@ -78,9 +79,44 @@ public class AudioBook {
         return Jsoup.parse(file, "UTF-8");
     }
 
+    public Elements getUnits() {
+        if (this.hasUnits) {
+            Document doc = toJsoupDoc(getCollectionFile());
+            return doc.select("col|collection > col|content > col|subcollection");
+        } else {
+            return null;
+        }
+    }
+
+    public void printUnits() {
+        if (getUnits() != null) {
+            Elements units = getUnits();
+            for (Element unit: units) {
+                String title = unit.select("md|title").first().text();
+                System.out.println(title + "\n");
+            }
+        }
+    }
+
+    private Elements getUnitChapters(Element unit) {
+        if (this.hasUnits) {
+            return unit.select("> col|content > col|subcollection");
+        } else {
+            return null;
+        }
+    }
+
     public Elements getChapters() {
-        Document doc = toJsoupDoc(getCollectionFile());
-        return doc.select("col|collection > col|content > col|subcollection");
+        if (this.hasUnits) {
+            Elements chapters = new Elements();
+            for (Element unit: getUnits()) {
+                chapters.addAll(getUnitChapters(unit));
+            }
+            return chapters;
+        } else {
+            Document doc = toJsoupDoc(getCollectionFile());
+            return doc.select("col|collection > col|content > col|subcollection");
+        }
     }
 
     public void printChapters() {
@@ -150,35 +186,6 @@ public class AudioBook {
         }
 
         return chapterSSML;
-    }
-
-    public void makeChapterAudio(Element chapter, boolean moduleSectioned, boolean debug, boolean parallel) {
-        Elements parts = getChapterModules(chapter);
-        if (parallel) {
-            parts.parallelStream().forEach(part -> {
-                try {
-                    Module module = getModule(part);
-                    if (debug) {
-                        System.out.println("    " + module.getId() + " -- " + module.getTitle());
-                    }
-                    module.makeModuleAudio(this.targetFolder + this.bookName + "/", this.context, moduleSectioned);
-                } catch (Exception e) {
-                    e.printStackTrace();
-                }
-            });
-        } else {
-            parts.forEach(part -> {
-                try {
-                    Module module = getModule(part);
-                    if (debug) {
-                        System.out.println("    " + module.getId() + " -- " + module.getTitle());
-                    }
-                    module.makeModuleAudio(this.targetFolder + this.bookName + "/", this.context, moduleSectioned);
-                } catch (Exception e) {
-                    e.printStackTrace();
-                }
-            });
-        }
     }
 
     private Map<String, String> metadata() {
@@ -253,45 +260,4 @@ public class AudioBook {
         }
     }
 
-
-//    public Elements getUnits() throws IOException {
-//        Document doc = toJsoupDoc(getCollectionFile());
-//        return doc.select("col|collection > col|content > col|subcollection");
-//    }
-
-//    public void printUnits() throws IOException {
-//        Elements units = getUnits();
-//        for (Element unit: units) {
-//            String title = unit.select("md|title").first().text();
-//            System.out.println(title + "\n");
-//        }
-//    }
-
-//    public Elements getUnitChapters(Element unit) {
-//        return unit.select("> col|content > col|subcollection");
-//    }
-
-//    public Elements getAllChapters() throws IOException {
-//        Elements all = new Elements();
-//        for (Element unit: getUnits()) {
-//            all.addAll(getUnitChapters(unit));
-//        }
-//        return all;
-//    }
-
-//    public void printChapters(Element unit) {
-//        Elements chapters = getUnitChapters(unit);
-//        for (Element chapter: chapters) {
-//            String title = chapter.select("md|title").first().text();
-//            System.out.println(title + "\n");
-//        }
-//    }
-
-//    public void printAllChapters() throws IOException {
-//        Elements chapters = getAllChapters();
-//        for (Element chapter: chapters) {
-//            String title = chapter.select("md|title").first().text();
-//            System.out.println(title + "\n");
-//        }
-//    }
 }
