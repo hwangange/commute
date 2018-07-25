@@ -39,6 +39,7 @@ import android.widget.LinearLayout;
 import android.widget.ProgressBar;
 import android.widget.TextView;
 
+import com.amazonaws.services.polly.model.Voice;
 import com.nshmura.snappysmoothscroller.LinearLayoutScrollVectorDetector;
 import com.nshmura.snappysmoothscroller.SnapType;
 import com.nshmura.snappysmoothscroller.SnappySmoothScroller;
@@ -351,12 +352,18 @@ public class TextbookViewFragment extends Fragment implements PlayerBarFragment.
     public void getContent(){
 
         try {
+
+            Object[] voicePrefs = getVoicePreferences();
+            int volume = (int) voicePrefs[1];
+
+
             AudioBook book = new AudioBook(getContext(), bookId);
             String moduleFile = book.getModuleFile(modId);
-            Content.Module mod = new Content.Module(modId, moduleFile);
+            Content.Module mod = new Content.Module(modId, moduleFile, volume);
 
 //            tempDataSet.add(new TextChunk("<h2>"+modTitle+"</h2>"));
             // eventually just replace with mod.buildModuleSSMl()
+
             tempDataSet = mod.initTextAudioChunks();
 
             // fill dataset with temporary values; because chunks finish downloading out of order
@@ -399,6 +406,10 @@ public class TextbookViewFragment extends Fragment implements PlayerBarFragment.
 
         // Make folder for book if it exists.
         //String bookPath = Environment.getExternalStorageDirectory().getAbsolutePath() + "/" + bookId +"/";
+
+        Object[] voicePrefs = getVoicePreferences();
+        String voice = (String) voicePrefs[0];
+
         File book = new File(getContext().getExternalCacheDir(), bookId);
         if(!book.isDirectory())
         {
@@ -410,7 +421,7 @@ public class TextbookViewFragment extends Fragment implements PlayerBarFragment.
             String ssml = chunk.getSsml(); // might have to modify this once text comes with SSML tags
             int id = chunk.getId();
             String folder = getContext().getExternalCacheDir().getAbsolutePath() + "/" + bookId + "/" + modId + "/";
-            AudioClient.AmazonClient client = new AudioClient.AmazonClient(folder, getContext());
+            AudioClient.AmazonClient client = new AudioClient.AmazonClient(folder, getContext(), voice,false);
             client.synthesizeAudio(String.valueOf(id), true, ssml, false);
             chunk.setAudioFile(folder + id + ".mp3");
 
@@ -915,6 +926,13 @@ public class TextbookViewFragment extends Fragment implements PlayerBarFragment.
     public void makeThingsEasy(){
         easyWay = true;
         times= getTimesList();
+    }
+
+    public Object[] getVoicePreferences() {
+        SharedPreferences sharedPreferences = getContext().getSharedPreferences("settings", 0);
+        String selectedVoice = sharedPreferences.getString("voice", "None");
+        int selectedVolume = sharedPreferences.getInt("volume", -6); // -6 to 6.
+        return new Object[]{selectedVoice, selectedVolume};
     }
 
 }

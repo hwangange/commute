@@ -33,6 +33,7 @@ public abstract class AudioClient {
     String audioFolder;
     String voice;
     boolean isMale;
+    int volume;
 
     AudioClient(String folder) {
         this.audioFolder = folder;
@@ -58,6 +59,10 @@ public abstract class AudioClient {
     public String getGender() {
         return this.isMale ? "Male" : "Female";
     }
+
+    public int getVolume() { return this.volume; }
+
+    public void setVolume(int newVolume) { this.volume = newVolume; }
 
     private static void makeFolder(String folder) {
         try {
@@ -207,6 +212,15 @@ public abstract class AudioClient {
             super(folder);
             this.context = context;
             this.voice = voice;
+            this.isMale = isMale;
+            initPollyClient();
+        }
+
+        AmazonClient(String folder, Context context, String voice, int volume, boolean isMale) {
+            super(folder);
+            this.context = context;
+            this.voice = voice;
+            this.volume = volume;
             this.isMale = isMale;
             initPollyClient();
         }

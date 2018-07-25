@@ -5,9 +5,15 @@ import java.util.function.Consumer;
 public class SsmlBuilder implements SsmlPhrase {
     private final StringBuilder stringBuilder;
     private boolean built = false;
+    private int volume =  6;
 
     public SsmlBuilder() {
         stringBuilder = new StringBuilder();
+    }
+
+    public SsmlBuilder(int volume) {
+        stringBuilder = new StringBuilder();
+        this.volume = volume;
     }
 
     public SsmlBuilder appendSSML(SsmlBuilder ssml) {
@@ -121,7 +127,9 @@ public class SsmlBuilder implements SsmlPhrase {
     public String build() {
         if (!built) {
             built = true;
+            String decibelString = String.valueOf(volume)+"dB";
             stringBuilder.insert(0, "<amazon:auto-breaths frequency=\"low\" volume=\"soft\" duration=\"x-short\">").append("</amazon:auto-breaths>");
+            stringBuilder.insert(0, "<prosody volume=\"" +decibelString +"\">").append("</prosody>");
             stringBuilder.insert(0, "<speak>").append("</speak>");
         }
         return stringBuilder.toString();

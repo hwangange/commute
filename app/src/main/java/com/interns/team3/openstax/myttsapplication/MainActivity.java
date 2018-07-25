@@ -52,7 +52,7 @@ import java.util.List;
 import nl.bravobit.ffmpeg.ExecuteBinaryResponseHandler;
 import nl.bravobit.ffmpeg.FFmpeg;
 
-public class MainActivity extends AppCompatActivity implements HOMEFragment.OnFragmentInteractionListener, LIBRARYFragment.OnFragmentInteractionListener, BookshelfFragment.OnFragmentInteractionListener, TableOfContentsFragment.OnFragmentInteractionListener, TextbookViewFragment.OnFragmentInteractionListener, PlayerBarFragment.OnFragmentInteractionListener, NOWPLAYINGFragment.OnFragmentInteractionListener {
+public class MainActivity extends AppCompatActivity implements HOMEFragment.OnFragmentInteractionListener, LIBRARYFragment.OnFragmentInteractionListener, BookshelfFragment.OnFragmentInteractionListener, TableOfContentsFragment.OnFragmentInteractionListener, TextbookViewFragment.OnFragmentInteractionListener, PlayerBarFragment.OnFragmentInteractionListener, NOWPLAYINGFragment.OnFragmentInteractionListener, SettingsFragment.OnFragmentInteractionListener {
 
     private static final String TAG = "MainActivity";
 
@@ -70,6 +70,7 @@ public class MainActivity extends AppCompatActivity implements HOMEFragment.OnFr
     public NOWPLAYINGFragment nowPlayingFragment;
     public TextbookViewFragment textbookViewFragment;
     public PlayerBarFragment playerBarFragment;
+    public SettingsFragment settingsFragment;
 
     public BottomNavigationView bottomNavigationView;
 
@@ -99,6 +100,7 @@ public class MainActivity extends AppCompatActivity implements HOMEFragment.OnFr
         nowPlayingFragment = NOWPLAYINGFragment.newInstance("Select a module to play!","","");
         textbookViewFragment = TextbookViewFragment.newInstance("Select a module~", "", "");
         playerBarFragment = PlayerBarFragment.newInstance("Select a module to play!", "","");
+        settingsFragment = SettingsFragment.newInstance("","");
 
         //nowPlayingFragment = (NOWPLAYINGFragment) fragmentManager.findFragmentById(R.id.nowPlayingFragment);
         //nowPlayingFragment.setNewModule("Select a module to play!", "", "");
@@ -260,16 +262,6 @@ public class MainActivity extends AppCompatActivity implements HOMEFragment.OnFr
                     Log.i("home","there");
                     return true;
                 }
-                case R.id.navigation_player: {
-
-                   /* FragmentTransaction ft = fragmentManager.beginTransaction();
-                    ft.replace(R.id.fragmentContainer, nowPlayingFragment);
-                    ft.addToBackStack(null); // allow user to go back
-                    ft.setCustomAnimations(android.R.anim.fade_in, android.R.anim.fade_out, android.R.anim.fade_in, android.R.anim.fade_out);
-                    ft.commit();
-                    Log.i("now playing","there"); */
-                    return true;
-                }
                 case R.id.navigation_library: {
                     FragmentTransaction ft = fragmentManager.beginTransaction();
                     ft.replace(R.id.fragmentContainer, libraryFragment);
@@ -277,6 +269,16 @@ public class MainActivity extends AppCompatActivity implements HOMEFragment.OnFr
                     ft.setCustomAnimations(android.R.anim.fade_in, android.R.anim.fade_out, android.R.anim.fade_in, android.R.anim.fade_out);
                     ft.commit();
                     Log.i("library","there");
+                    return true;
+                }
+                case R.id.navigation_settings: {
+
+                    FragmentTransaction ft = fragmentManager.beginTransaction();
+                    ft.replace(R.id.fragmentContainer, settingsFragment);
+                    //ft.addToBackStack(null); // allow user to go back
+                    ft.setCustomAnimations(android.R.anim.fade_in, android.R.anim.fade_out, android.R.anim.fade_in, android.R.anim.fade_out);
+                    ft.commit();
+                    Log.i("Settings","there");
                     return true;
                 }
             }

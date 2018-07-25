@@ -8,14 +8,16 @@
         android:title="@string/title_home" />
 
     <item
-        android:id="@+id/navigation_player"
-        android:icon="@drawable/ic_play_circle_black_24dp"
-        android:title="Now Playing" />
-
-    <item
         android:id="@+id/navigation_library"
         android:icon="@drawable/ic_library_music_black_24dp"
         android:title="My Library" />
+
+    <item
+        android:id="@+id/navigation_settings"
+        android:icon="@drawable/ic_settings_black_24"
+        android:title="Settings" />
+
+
 
 
 </menu>

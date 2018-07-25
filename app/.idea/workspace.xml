@@ -9,14 +9,7 @@
     <option name="TOOL_WINDOW_CONFIGURED_FILTER" value="Show only selected application" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="b056fbd2-499f-4316-bd5f-d272702a7b12" name="Default" comment="">
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/interns/team3/openstax/myttsapplication/AudioClient.java" afterPath="$PROJECT_DIR$/src/main/java/com/interns/team3/openstax/myttsapplication/AudioClient.java" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/interns/team3/openstax/myttsapplication/MainActivity.java" afterPath="$PROJECT_DIR$/src/main/java/com/interns/team3/openstax/myttsapplication/MainActivity.java" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/interns/team3/openstax/myttsapplication/NOWPLAYINGFragment.java" afterPath="$PROJECT_DIR$/src/main/java/com/interns/team3/openstax/myttsapplication/NOWPLAYINGFragment.java" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/interns/team3/openstax/myttsapplication/PlayerBarFragment.java" afterPath="$PROJECT_DIR$/src/main/java/com/interns/team3/openstax/myttsapplication/PlayerBarFragment.java" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/interns/team3/openstax/myttsapplication/TextbookViewAdapter.java" afterPath="$PROJECT_DIR$/src/main/java/com/interns/team3/openstax/myttsapplication/TextbookViewAdapter.java" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/interns/team3/openstax/myttsapplication/TextbookViewFragment.java" afterPath="$PROJECT_DIR$/src/main/java/com/interns/team3/openstax/myttsapplication/TextbookViewFragment.java" />
-    </list>
+    <list default="true" id="b056fbd2-499f-4316-bd5f-d272702a7b12" name="Default" comment="" />
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="TRACKING_ENABLED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -2191,7 +2184,7 @@
     </option>
   </component>
   <component name="ProjectFrameBounds">
-    <option name="x" value="10" />
+    <option name="x" value="67" />
     <option name="y" value="23" />
     <option name="width" value="1304" />
     <option name="height" value="803" />
@@ -2419,7 +2412,7 @@
     <servers />
   </component>
   <component name="ToolWindowManager">
-    <frame x="10" y="23" width="1304" height="803" extended-state="0" />
+    <frame x="67" y="23" width="1304" height="803" extended-state="0" />
     <layout>
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
       <window_info id="Android Profiler" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="-1" side_tool="false" content_ui="tabs" />
@@ -2431,7 +2424,7 @@
       <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32909605" sideWeight="0.5" order="-1" side_tool="false" content_ui="tabs" />
       <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32909605" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="-1" side_tool="false" content_ui="tabs" />
-      <window_info id="Logcat" active="true" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.32909605" sideWeight="0.5" order="-1" side_tool="false" content_ui="tabs" />
+      <window_info id="Logcat" active="true" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.70621467" sideWeight="0.5" order="-1" side_tool="false" content_ui="tabs" />
       <window_info id="Captures" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Capture Tool" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="-1" side_tool="false" content_ui="tabs" />
       <window_info id="Designer" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="-1" side_tool="false" content_ui="tabs" />

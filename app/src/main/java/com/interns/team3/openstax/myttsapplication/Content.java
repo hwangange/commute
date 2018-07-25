@@ -90,6 +90,7 @@ public interface Content {
         private Document content;
         private String moduleNum;
         private List<String> nonReadingSections = new ArrayList<>();
+        private int volume;
 
         Module(Module mod) {
             this.title = mod.getTitle();
@@ -98,12 +99,28 @@ public interface Content {
             this.moduleFile = mod.getModuleFile();
             this.content = mod.getContent();
             this.nonReadingSections = mod.getNonReadingSections();
+            this.volume = 6;
         }
 
         Module(String modId, String moduleFile) {
             this.id = modId;
             this.moduleFile = moduleFile;
             this.moduleNum = "";
+            this.volume = 6;
+            cleanContent();
+            this.content = Jsoup.parse(this.moduleFile, "UTF-8");
+            this.title = this.content.body().getElementsByTag("div").first().attr("document-title");
+            this.nonReadingSections.add("summary");
+            this.nonReadingSections.add("review-questions");
+            this.nonReadingSections.add("critical-thinking");
+            this.nonReadingSections.add("personal-application");
+        }
+
+        Module(String modId, String moduleFile, int volume){
+            this.id = modId;
+            this.moduleFile = moduleFile;
+            this.moduleNum = "";
+            this.volume = volume;
             cleanContent();
             this.content = Jsoup.parse(this.moduleFile, "UTF-8");
             this.title = this.content.body().getElementsByTag("div").first().attr("document-title");
@@ -118,6 +135,7 @@ public interface Content {
             this.id = section.attr("document");
             this.moduleNum = "";
             this.moduleFile = moduleFile;
+            this.volume = 6;
             cleanContent();
             this.content = Jsoup.parse(this.moduleFile, "UTF-8");
             this.nonReadingSections.add("summary");
@@ -131,6 +149,7 @@ public interface Content {
             this.id = section.attr("document");
             this.moduleNum = moduleNum;
             this.moduleFile = moduleFile;
+            this.volume= 6;
             cleanContent();
             this.content = Jsoup.parse(this.moduleFile, "UTF-8");
             this.nonReadingSections.add("summary");
@@ -178,6 +197,7 @@ public interface Content {
         }
 
         public List<TextAudioChunk> initTextAudioChunks() throws JSONException {
+
             List<String> textList = modulePageText();
             List<String> ssmlList = buildModuleSSML();
             if (textList.size() != ssmlList.size()) {
@@ -407,7 +427,7 @@ public interface Content {
             List<String> ssmlList = new ArrayList<>();
             JSONObject opening = getOpening();
 
-            SsmlBuilder titleSsml = new SsmlBuilder();
+            SsmlBuilder titleSsml = new SsmlBuilder(volume);
             titleSsml.text(this.title).newParagraph();
             ssmlList.add(titleSsml.build());
 
@@ -416,12 +436,12 @@ public interface Content {
                     JSONObject absObj = opening.getJSONObject("abstract");
                     String intro = absObj.getString("intro");
                     JSONArray abList = absObj.getJSONArray("list");
-                    SsmlBuilder absSsml = new SsmlBuilder();
+                    SsmlBuilder absSsml = new SsmlBuilder(volume);
 
                     absSsml.sentence(intro).comma();
                     ssmlList.add(absSsml.build());
                     buildArraySSML(ssmlList, abList, false);
-//                ssmlList.add(new SsmlBuilder().newParagraph().build());
+//                ssmlList.add(new SsmlBuilder(volume.newParagraph().build());
                 }
                 if (!(opening.isNull("paragraphs"))) {
                     JSONArray paragraphs = opening.getJSONArray("paragraphs");
@@ -452,7 +472,7 @@ public interface Content {
             int secNum = section.getInt("section");
             String title = section.getString("title");
             JSONArray paragraphs = section.getJSONArray("paragraphs");
-            SsmlBuilder ssml = new SsmlBuilder();
+            SsmlBuilder ssml = new SsmlBuilder(volume);
 
             ssml.text("Section " + secNum).strongBreak().text(title).newParagraph();
             ssmlList.add(ssml.build());
@@ -465,7 +485,7 @@ public interface Content {
             JSONObject eom = getEom();
             if (eom != null) {
                 if (!(eom.isNull("summary"))) {
-                    SsmlBuilder summarySsml = new SsmlBuilder();
+                    SsmlBuilder summarySsml = new SsmlBuilder(volume);
                     JSONObject summary = eom.getJSONObject("summary");
                     summarySsml.text(summary.getString("title")).newParagraph();
                     ssmlList.add(summarySsml.build());
@@ -473,35 +493,35 @@ public interface Content {
                     buildArraySSML(ssmlList, summary.getJSONArray("paragraphs"), true);
                 }
                 if (!(eom.isNull("review questions"))) {
-                    SsmlBuilder revQSsml = new SsmlBuilder();
+                    SsmlBuilder revQSsml = new SsmlBuilder(volume);
                     revQSsml.text("Review Questions:").newParagraph();
                     ssmlList.add(revQSsml.build());
 
                     buildExerciseSSML(ssmlList, eom.getJSONArray("review questions"), true, true);
                 }
                 if (!(eom.isNull("critical thinking"))) {
-                    SsmlBuilder critSsml = new SsmlBuilder();
+                    SsmlBuilder critSsml = new SsmlBuilder(volume);
                     critSsml.text("Critical Thinking Questions:").newParagraph();
                     ssmlList.add(critSsml.build());
 
                     buildExerciseSSML(ssmlList, eom.getJSONArray("critical thinking"), false, true);
                 }
                 if (!(eom.isNull("personal application"))) {
-                    SsmlBuilder pAppSsml = new SsmlBuilder();
+                    SsmlBuilder pAppSsml = new SsmlBuilder(volume);
                     pAppSsml.text("Personal Application Questions:").newParagraph();
                     ssmlList.add(pAppSsml.build());
 
                     buildExerciseSSML(ssmlList, eom.getJSONArray("personal application"), false, false);
                 }
                 if (!(eom.isNull("glossary"))) {
-                    SsmlBuilder glossSsml = new SsmlBuilder();
+                    SsmlBuilder glossSsml = new SsmlBuilder(volume);
                     glossSsml.text("Glossary:").newParagraph();
                     ssmlList.add(glossSsml.build());
 
                     JSONArray glossary = eom.getJSONArray("glossary");
                     int length = glossary.length();
                     for (int i = 0; i < length; i++) {
-                        SsmlBuilder keyTermSsml = new SsmlBuilder();
+                        SsmlBuilder keyTermSsml = new SsmlBuilder(volume);
                         JSONObject keyTerm = glossary.getJSONObject(i);
                         String term = keyTerm.getString("term");
                         String definition = keyTerm.getString("definition");
@@ -517,7 +537,7 @@ public interface Content {
         private void buildExerciseSSML(List<String> ssmlList, JSONArray exercises, boolean hasOptions, boolean hasSolution) throws JSONException {
             int length = exercises.length();
             for (int i = 0; i < length; i++) {
-                SsmlBuilder ssml = new SsmlBuilder();
+                SsmlBuilder ssml = new SsmlBuilder(volume);
                 JSONObject ex = exercises.getJSONObject(i);
                 int exNum = ex.getInt("exercise");
                 String problem = ex.getString("problem");
@@ -531,7 +551,7 @@ public interface Content {
                 }
 
                 if (hasSolution) {
-                    SsmlBuilder solutionSsml = new SsmlBuilder();
+                    SsmlBuilder solutionSsml = new SsmlBuilder(volume);
                     solutionSsml.newParagraph().newParagraph();
                     solutionSsml.text("Solution").strongBreak();
                     String solution = ex.getString("solution");
@@ -546,7 +566,7 @@ public interface Content {
             int length = options.length();
             char letterChoice = 'A';
             for (int i = 0; i < length; i++) {
-                SsmlBuilder ssml = new SsmlBuilder();
+                SsmlBuilder ssml = new SsmlBuilder(volume);
                 String output = options.getString(i);
                 ssml.text(String.valueOf(letterChoice)).comma().sentence(output).strongBreak();
                 ssmlList.add(ssml.build());
@@ -557,7 +577,7 @@ public interface Content {
         private void buildArraySSML(List<String> ssmlList, JSONArray array, boolean paragraphs) throws JSONException {
             int length = array.length();
             for (int i = 0; i < length; i++) {
-                SsmlBuilder ssml = new SsmlBuilder();
+                SsmlBuilder ssml = new SsmlBuilder(volume);
                 String output = array.getString(i);
                 if (paragraphs) {
                     ssml.paragraph(output).newParagraph();
