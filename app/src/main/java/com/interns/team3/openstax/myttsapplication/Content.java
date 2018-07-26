@@ -85,7 +85,7 @@ public interface Content {
         private String moduleFile;
         private Document content;
         private String moduleNum;
-        private int volume;
+        private int volume = 6;
         private List<String> eomSections = Arrays.asList("summary", "review-questions", "critical-thinking", "personal-application");
 
         Module(Module mod) {
@@ -94,7 +94,6 @@ public interface Content {
             this.moduleNum = mod.getModuleNum();
             this.moduleFile = mod.getModuleFile();
             this.content = mod.getContent();
-            this.volume = 6;
             this.eomSections = mod.getEomSections();
         }
 
@@ -102,17 +101,6 @@ public interface Content {
             this.id = modId;
             this.moduleFile = moduleFile;
             this.moduleNum = "";
-            this.volume = 6;
-            cleanContent();
-            this.content = Jsoup.parse(this.moduleFile, "UTF-8");
-            this.title = this.content.body().getElementsByTag("div").first().attr("document-title");
-        }
-
-        Module(String modId, String moduleFile, int volume){
-            this.id = modId;
-            this.moduleFile = moduleFile;
-            this.moduleNum = "";
-            this.volume = volume;
             cleanContent();
             this.content = Jsoup.parse(this.moduleFile, "UTF-8");
             this.title = this.content.body().getElementsByTag("div").first().attr("document-title");
@@ -123,7 +111,6 @@ public interface Content {
             this.id = section.attr("document");
             this.moduleNum = "";
             this.moduleFile = moduleFile;
-            this.volume = 6;
             cleanContent();
             this.content = Jsoup.parse(this.moduleFile, "UTF-8");
         }
@@ -133,7 +120,6 @@ public interface Content {
             this.id = section.attr("document");
             this.moduleNum = moduleNum;
             this.moduleFile = moduleFile;
-            this.volume= 6;
             cleanContent();
             this.content = Jsoup.parse(this.moduleFile, "UTF-8");
         }
@@ -176,8 +162,8 @@ public interface Content {
                     .replaceAll("\\[link]", "");
         }
 
-        public List<TextAudioChunk> initTextAudioChunks() throws JSONException {
-
+        public List<TextAudioChunk> initTextAudioChunks(int volume) throws JSONException {
+            this.volume = volume;
             List<String> textList = modulePageText();
             List<String> ssmlList = buildModuleSSML();
             if (textList.size() != ssmlList.size()) {
