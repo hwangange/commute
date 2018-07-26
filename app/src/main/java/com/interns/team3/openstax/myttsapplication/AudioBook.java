@@ -188,14 +188,16 @@ public class AudioBook {
         return chapterSSML;
     }
 
-    private Map<String, String> metadata() {
+    public Map<String, String> metadata() {
         Document doc = toJsoupDoc(getCollectionFile());
         String contentUrl = doc.select("metadata md|content-url").text();
         String contentId = doc.select("metadata md|content-id").text();
-        String title = doc.select("metadata md|title").text();
-        String version = doc.select("metadata md|version").text();
-        String created = doc.select("metadata md|created").text();
-        String revised = doc.select("metadata md|revised").text();
+        String title = doc.selectFirst("metadata md|title").text();
+        String version = doc.selectFirst("metadata md|version").text();
+        String created = doc.selectFirst("metadata md|created").text();
+        String revised = doc.selectFirst("metadata md|revised").text();
+        String subject = doc.selectFirst("metadata md|subject").text();
+        String summary = doc.selectFirst("metadata md|abstract").text();
 
         Map<String, String> metadata = new HashMap<>();
         metadata.put("content-url", contentUrl);
@@ -204,6 +206,8 @@ public class AudioBook {
         metadata.put("version", version);
         metadata.put("created", created);
         metadata.put("revised", revised);
+        metadata.put("subject", subject);
+        metadata.put("summary", summary);
 
         return metadata;
     }

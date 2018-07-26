@@ -1,5 +1,7 @@
 package com.interns.team3.openstax.myttsapplication;
 
+import android.animation.Animator;
+import android.animation.AnimatorListenerAdapter;
 import android.net.Uri;
 import android.os.AsyncTask;
 import android.os.Bundle;
@@ -10,7 +12,11 @@ import android.util.Log;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
+import android.widget.ImageView;
+import android.widget.LinearLayout;
 import android.widget.TextView;
+
+import com.squareup.picasso.Picasso;
 
 import org.jsoup.Jsoup;
 import org.jsoup.nodes.Document;
@@ -22,7 +28,9 @@ import java.io.IOException;
 import java.io.InputStreamReader;
 import java.text.DecimalFormat;
 import java.util.ArrayList;
+import java.util.HashMap;
 import java.util.List;
+import java.util.Map;
 
 //import static com.interns.team3.openstax.myttsapplication.demo.*;
 
@@ -35,7 +43,9 @@ public class TableOfContentsFragment extends Fragment {
 
     private OnFragmentInteractionListener mListener;
 
-    private TextView mTextMessage;
+    private LinearLayout loading, doneLoading;
+    private TextView details, bookTitleTv, bookDate;
+    private ImageView bookImg;
     private ContentAdapter adapter;
     private List<Content> dataSet;
 
@@ -90,7 +100,6 @@ public class TableOfContentsFragment extends Fragment {
        /*  BottomNavigationView navigation = (BottomNavigationView) findViewById(R.id.navigation);
         navigation.setOnNavigationItemSelectedListener(mOnNavigationItemSelectedListener); */
 
-
         // Construct the data source
         dataSet = new ArrayList<>();
         // Create the adapter to convert the array to views
@@ -113,11 +122,22 @@ public class TableOfContentsFragment extends Fragment {
 
         layoutManager = new GridLayoutManager(getContext(), 1);
         recyclerView.setLayoutManager(layoutManager);
+        recyclerView.setNestedScrollingEnabled(false); // fix unsmooth scrolling?
 
         (getActivity()).setTitle(bookTitle);
         ((MainActivity)getActivity()).getSupportActionBar().setHomeButtonEnabled(true);
         ((MainActivity)getActivity()).getSupportActionBar().setDisplayHomeAsUpEnabled(true);
 
+        // miscellaneous things
+        loading = view.findViewById(R.id.loading);
+        doneLoading = view.findViewById(R.id.doneLoading);
+        details = view.findViewById(R.id.details);
+        bookTitleTv = view.findViewById(R.id.bookTitleTv);
+        bookImg = view.findViewById(R.id.bookImg);
+        bookDate = view.findViewById(R.id.bookDate);
+
+        loading.setVisibility(View.VISIBLE);
+        doneLoading.setVisibility(View.GONE);
         new AddItemsTask().execute("");
 
 
@@ -137,14 +157,15 @@ public class TableOfContentsFragment extends Fragment {
     }
 
 
-    private class AddItemsTask extends AsyncTask<String, Integer, String> {
+    private class AddItemsTask extends AsyncTask<String, Integer, Map <String, String>> {
 
         List<Content> temp = new ArrayList<Content>();
 
         @Override
-        protected String doInBackground(String... ary) {
+        protected Map<String, String> doInBackground(String... ary) {
             try {
                 AudioBook book = new AudioBook(getContext(), bookId);
+                Map<String, String> metadata = book.metadata();
                 Elements chapters = book.getChapters();
 
                 int chapterNum = 1;
@@ -161,12 +182,13 @@ public class TableOfContentsFragment extends Fragment {
                     }
                     chapterNum++;
                 }
+
+                return metadata;
             } catch(Exception e ){
                 e.printStackTrace();
             }
 
-
-            return "done";
+            return null;
         }
 
         @Override
@@ -176,7 +198,7 @@ public class TableOfContentsFragment extends Fragment {
         }
 
         @Override
-        protected void onPostExecute(String result) {
+        protected void onPostExecute(Map<String, String> metadata) {
             for(Content c : temp) {
                 if (c instanceof Content.Module) {
                     dataSet.add(new Content.Module((Content.Module) c));
@@ -185,6 +207,42 @@ public class TableOfContentsFragment extends Fragment {
                 }
                 adapter.notifyDataSetChanged();
             }
+
+            String revised = "Last Revised: " + metadata.get("revised");
+            String title = metadata.get("title");
+            String summary = metadata.get("summary");
+            bookDate.setText(revised);
+            bookTitleTv.setText(title);
+            details.setText(summary);
+
+            String modified_title= title.replaceAll(" ", "_").replaceAll("\\.", "").toLowerCase();
+            Log.i("modified_title T_T", modified_title);
+            int drawable_id = getContext().getResources().getIdentifier(modified_title, "drawable", getContext().getPackageName());
+            Picasso.with(getContext()).load(drawable_id).into(bookImg);
+
+            loading.animate()
+                    .translationY(loading.getHeight())
+                    .alpha(0.0f)
+                    .setDuration(300)
+                    .setListener(new AnimatorListenerAdapter() {
+                        @Override
+                        public void onAnimationEnd(Animator animation) {
+                            super.onAnimationEnd(animation);
+                            loading.setVisibility(View.GONE);
+                            doneLoading.animate()
+                                    .translationY(0)
+                                    .alpha(1.0f)
+                                    .setDuration(300)
+                                    .setListener(new AnimatorListenerAdapter() {
+                                        @Override
+                                        public void onAnimationEnd(Animator animation) {
+                                            super.onAnimationEnd(animation);
+                                            doneLoading.setVisibility(View.VISIBLE);
+                                        }
+                                    });
+                        }
+                    });
+
             Log.i("onPostExecute", "Done");
         }
     }

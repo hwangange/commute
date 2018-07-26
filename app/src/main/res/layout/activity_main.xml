@@ -70,11 +70,11 @@
             android:id="@+id/panel">
 
 
-            <RelativeLayout
+            <LinearLayout
                 android:id="@+id/dragView"
                 android:layout_width="match_parent"
                 android:layout_height="60dp"
-                android:layout_gravity="end"
+                android:gravity="center"
                 android:orientation="horizontal"
                 android:layout_marginHorizontal="@dimen/activity_vertical_margin">
 
@@ -83,34 +83,35 @@
                 <ImageView
                     android:id="@+id/dragViewPlayButton"
                     android:contentDescription="Play"
-                    android:layout_width="wrap_content"
-                    android:layout_height="match_parent"
-                    android:gravity="center_vertical"
+                    android:layout_width="0dp"
+                    android:layout_weight="1"
+                    android:layout_height="wrap_content"
                     android:src="@drawable/play"
-                    android:layout_gravity="start"
-                    android:layout_alignParentStart="true" />
+                    android:layout_gravity="center_vertical" />
 
                 <TextView
                     android:id="@+id/dragViewText"
-                    android:layout_width="wrap_content"
+                    android:layout_width="0dp"
+                    android:layout_weight="10"
                     android:layout_height="match_parent"
                     android:textSize="14sp"
-                    android:gravity="center_vertical"
-                    android:layout_centerHorizontal="true"
-                    android:paddingLeft="10dp"/>
+                    android:layout_gravity="center_vertical"
+                    android:gravity="center"
+                    android:textAlignment="center" />
+
+                <!-- autoSize should prevent text from overflowing -->
 
                 <ImageView
                     android:id="@+id/dragViewFavorite"
                     android:contentDescription="Favorite"
-                    android:layout_width="wrap_content"
-                    android:layout_height="match_parent"
+                    android:layout_width="0dp"
+                    android:layout_weight="1"
+                    android:layout_height="wrap_content"
                     android:textSize="14sp"
-                    android:gravity="center_vertical"
                     android:src="@drawable/ic_heart_24dp"
-                    android:layout_gravity="end"
-                    android:layout_alignParentEnd="true"/>
+                    android:layout_gravity="center_vertical" />
 
-            </RelativeLayout>
+            </LinearLayout>
 
             <android.support.design.widget.TabLayout
                 android:id="@+id/tabLayout"

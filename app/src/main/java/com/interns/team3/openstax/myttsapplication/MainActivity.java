@@ -20,6 +20,7 @@ import android.util.Log;
 import android.view.MenuItem;
 import android.view.View;
 import android.widget.ImageView;
+import android.widget.LinearLayout;
 import android.widget.RelativeLayout;
 import android.widget.TextView;
 
@@ -37,7 +38,7 @@ public class MainActivity extends AppCompatActivity implements HOMEFragment.OnFr
     private static final String TAG = "MainActivity";
 
     private SlidingUpPanelLayout mLayout;
-    private RelativeLayout dragView;
+    private LinearLayout dragView;
     private TabLayout tabLayout;
     private TabLayout.Tab textbookViewTab, nowPlayingTab;
 
