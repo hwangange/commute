@@ -1,33 +1,116 @@
 <?xml version="1.0" encoding="utf-8"?>
+    <!--
+    tools:layout_editor_absoluteX="77dp"
+    tools:layout_editor_absoluteY="8dp"
+    -->
 
+<android.support.v4.widget.NestedScrollView
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    tools:context=".TableOfContentsFragment"
+    android:layout_margin="@dimen/double_margin"
+    android:id="@+id/container">
 
     <LinearLayout
-        xmlns:android="http://schemas.android.com/apk/res/android"
-        xmlns:app="http://schemas.android.com/apk/res-auto"
-        xmlns:tools="http://schemas.android.com/tools"
-        android:id="@+id/container"
         android:layout_width="match_parent"
         android:layout_height="match_parent"
-        tools:context=".TableOfContentsFragment"
         android:orientation="vertical">
-        <!--
-        tools:layout_editor_absoluteX="77dp"
-        tools:layout_editor_absoluteY="8dp"
-        -->
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:id="@+id/loading"
+        android:gravity="center_vertical"
+        android:orientation="vertical">
+        <TextView
+            android:layout_width="match_parent"
+            android:textAlignment="center"
+            android:textSize="20sp"
+            android:text="Loading..."
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_horizontal"
+            android:id="@+id/tocProgressTv"/>
+        <ProgressBar
+            style="?android:attr/progressBarStyle"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_horizontal"
+            android:id="@+id/tocProgressBar" />
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical"
+        android:id="@+id/doneLoading">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="@dimen/double_margin"
+        android:orientation="horizontal">
+
+        <ImageView
+            android:layout_width="0dp"
+            android:layout_weight="1"
+            android:layout_height="wrap_content"
+            android:adjustViewBounds="true"
+            android:id="@+id/bookImg"/>
+
+        <LinearLayout
+            android:layout_width="0dp"
+            android:layout_weight="2"
+            android:layout_height="match_parent"
+            android:layout_marginHorizontal="@dimen/double_margin"
+            android:gravity="center_vertical"
+            android:orientation="vertical">
+
+            <TextView
+                android:layout_width="match_parent"
+                android:textAlignment="center"
+                android:textSize="20sp"
+                android:layout_height="wrap_content"
+                android:id="@+id/bookTitleTv"/>
+
+            <TextView
+                android:layout_width="match_parent"
+                android:textAlignment="center"
+                android:textSize="12sp"
+                android:layout_height="wrap_content"
+                android:id="@+id/bookDate"/>
+
+        </LinearLayout>
+
+    </LinearLayout>
+
+    <TextView
+        android:layout_width="match_parent"
+        android:textSize="20sp"
+        android:layout_height="wrap_content"
+        android:text="Details"
+        android:layout_marginBottom="@dimen/activity_vertical_margin"/>
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:id="@+id/details"
+        android:layout_marginBottom="@dimen/double_margin"/>
+
+    <TextView
+        android:layout_width="match_parent"
+        android:textSize="20sp"
+        android:layout_height="wrap_content"
+        android:text="Table of Contents"
+        android:layout_marginBottom="@dimen/activity_vertical_margin"/>
+
+
     <FrameLayout
         android:orientation="vertical"
         android:layout_width="match_parent"
-        android:layout_height="match_parent"
-        android:layout_weight="0">
-
-    <ScrollView
-        xmlns:android="http://schemas.android.com/apk/res/android"
-        xmlns:app="http://schemas.android.com/apk/res-auto"
-        xmlns:tools="http://schemas.android.com/tools"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-
-        >
+        android:layout_height="wrap_content">
 
         <LinearLayout
             android:layout_width="match_parent"
@@ -36,17 +119,19 @@
 
             <android.support.v7.widget.RecyclerView
                 android:id="@+id/my_recycler_view"
-                android:scrollbars="vertical"
-                android:layout_margin="@dimen/activity_horizontal_margin"
                 android:layout_width="match_parent"
                 android:layout_height="match_parent"/>
+            <!--android:scrollbars="vertical"  -->
 
 
         </LinearLayout>
 
-    </ScrollView>
 
     </FrameLayout>
 
-</LinearLayout>
+    </LinearLayout>
+
+    </LinearLayout>
+
+</android.support.v4.widget.NestedScrollView>
 

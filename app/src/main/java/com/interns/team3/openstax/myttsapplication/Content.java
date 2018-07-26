@@ -106,10 +106,6 @@ public interface Content {
             cleanContent();
             this.content = Jsoup.parse(this.moduleFile, "UTF-8");
             this.title = this.content.body().getElementsByTag("div").first().attr("document-title");
-            this.eomSections.add("summary");
-            this.eomSections.add("review-questions");
-            this.eomSections.add("critical-thinking");
-            this.eomSections.add("personal-application");
         }
 
         Module(String modId, String moduleFile, int volume){
@@ -120,10 +116,6 @@ public interface Content {
             cleanContent();
             this.content = Jsoup.parse(this.moduleFile, "UTF-8");
             this.title = this.content.body().getElementsByTag("div").first().attr("document-title");
-            this.eomSections.add("summary");
-            this.eomSections.add("review-questions");
-            this.eomSections.add("critical-thinking");
-            this.eomSections.add("personal-application");
         }
 
         Module(Element section, String moduleFile) {
@@ -134,10 +126,6 @@ public interface Content {
             this.volume = 6;
             cleanContent();
             this.content = Jsoup.parse(this.moduleFile, "UTF-8");
-            this.eomSections.add("summary");
-            this.eomSections.add("review-questions");
-            this.eomSections.add("critical-thinking");
-            this.eomSections.add("personal-application");
         }
 
         Module(Element section, String moduleFile, String moduleNum) {
@@ -148,10 +136,6 @@ public interface Content {
             this.volume= 6;
             cleanContent();
             this.content = Jsoup.parse(this.moduleFile, "UTF-8");
-            this.eomSections.add("summary");
-            this.eomSections.add("review-questions");
-            this.eomSections.add("critical-thinking");
-            this.eomSections.add("personal-application");
         }
 
         public String getTitle() {
