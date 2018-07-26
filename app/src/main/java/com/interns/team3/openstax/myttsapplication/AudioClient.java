@@ -34,7 +34,6 @@ public abstract class AudioClient {
     String voice;
     String language;
     boolean isMale;
-//    int volume;
 
     AudioClient(String folder) {
         this.audioFolder = folder;
@@ -73,10 +72,6 @@ public abstract class AudioClient {
         return this.isMale ? "Male" : "Female";
     }
 
-//    public int getVolume() { return this.volume; }
-
-//    public void setVolume(int newVolume) { this.volume = newVolume; }
-
     private static void makeFolder(String folder) {
         try {
             Files.createDirectories(Paths.get(folder));
@@ -88,36 +83,6 @@ public abstract class AudioClient {
     static List<Voice> listAllVoices(Context context) {
         return getGeneralClient(context).getSupportedVoices();
     }
-
-//    static void combineMP3(String folder, String outputFile, String file1, String file2, boolean deleteOldFiles, boolean debug) {
-//        try {
-//            FileInputStream input1 = new FileInputStream(folder + file1 + ".mp3");
-//            FileInputStream input2 = new FileInputStream(folder + file2 + ".mp3");
-//            SequenceInputStream seqStream = new SequenceInputStream(input1, input2);
-//            FileOutputStream output = new FileOutputStream(folder + outputFile + ".mp3");
-//
-//            int temp;
-//            while((temp = seqStream.read()) != -1) {
-//                output.write(temp);
-//            }
-//
-//            input1.close();
-//            input2.close();
-//            seqStream.close();
-//            output.close();
-//
-//            if (debug) {
-//                System.out.printf("Audio files \"%s.mp3\" and \"%s.mp3\" merged into file \"%s.mp3\"\n", file1, file2, outputFile);
-//            }
-//
-//            if (deleteOldFiles) {
-//                deleteFile(folder + file1);
-//                deleteFile(folder + file2);
-//            }
-//        } catch (Exception e) {
-//            e.printStackTrace();
-//        }
-//    }
 
     static void combineMP3(String folder, String outputFile, List<String> inputFiles, boolean deleteOldFiles, boolean debug) {
         try {
@@ -223,15 +188,6 @@ public abstract class AudioClient {
             this.isMale = isMale;
             initPollyClient();
         }
-
-//        AmazonClient(String folder, Context context, String voice, int volume, boolean isMale) {
-//            super(folder);
-//            this.context = context;
-//            this.voice = voice;
-////            this.volume = volume;
-//            this.isMale = isMale;
-//            initPollyClient();
-//        }
 
         private void initPollyClient() {
             //Initialize the Amazon Cognito credentials provider.
