@@ -8,37 +8,30 @@ import android.net.Uri;
 import android.os.AsyncTask;
 import android.os.Bundle;
 import android.support.v4.app.Fragment;
-import android.text.Editable;
-import android.text.TextWatcher;
 import android.util.Log;
-import android.view.KeyEvent;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 import android.widget.AdapterView;
 import android.widget.BaseAdapter;
 import android.widget.Button;
-import android.widget.EditText;
-import android.widget.ImageButton;
 import android.widget.ProgressBar;
 import android.widget.SeekBar;
 import android.widget.Spinner;
 import android.widget.TextView;
 import android.widget.Toast;
 
-import com.amazonaws.auth.CognitoCachingCredentialsProvider;
-import com.amazonaws.regions.Regions;
-import com.amazonaws.services.polly.AmazonPollyPresigningClient;
-import com.amazonaws.services.polly.model.DescribeVoicesRequest;
-import com.amazonaws.services.polly.model.DescribeVoicesResult;
 import com.amazonaws.services.polly.model.OutputFormat;
 import com.amazonaws.services.polly.model.SynthesizeSpeechPresignRequest;
 import com.amazonaws.services.polly.model.Voice;
 
 import java.io.IOException;
 import java.net.URL;
-import java.util.HashSet;
 import java.util.List;
+
+import static com.interns.team3.openstax.myttsapplication.AudioClient.AmazonClient;
+import static com.interns.team3.openstax.myttsapplication.AudioClient.getGeneralClient;
+import static com.interns.team3.openstax.myttsapplication.AudioClient.listAllVoices;
 
 
 /**
@@ -61,16 +54,7 @@ public class SettingsFragment extends Fragment {
     private static final String KEY_VOICES = "Voices";
     private static final String KEY_SAMPLE_TEXT = "SampleText";
 
-    // Cognito pool ID. For this app, pool needs to be unauthenticated pool with
-    // Amazon Polly permissions.
-    private static final String COGNITO_POOL_ID = "us-east-2:055c2658-ed41-4198-b2d7-2b343fdf739a";
-
-    // Region of Amazon Polly.
-    private static final Regions MY_REGION = Regions.US_EAST_2;
-
-    CognitoCachingCredentialsProvider credentialsProvider;
-
-    private AmazonPollyPresigningClient client;
+    private AmazonClient generalClient;
     private List<Voice> voices;
 
     private ProgressBar voicesProgressBar;
@@ -144,12 +128,11 @@ public class SettingsFragment extends Fragment {
             }
             Voice voice = voices.get(position);
 
-            TextView nameTextView = (TextView) convertView.findViewById(R.id.voiceName);
+            TextView nameTextView = convertView.findViewById(R.id.voiceName);
             nameTextView.setText(voice.getName());
 
-            TextView languageCodeTextView = (TextView) convertView.findViewById(R.id.voiceLanguageCode);
-            languageCodeTextView.setText(voice.getLanguageName() +
-                    " (" + voice.getLanguageCode() + ")");
+            TextView languageCodeTextView = convertView.findViewById(R.id.voiceLanguageCode);
+            languageCodeTextView.setText(String.format("%s (%s)", voice.getLanguageName(), voice.getLanguageCode()));
 
             return convertView;
         }
@@ -162,20 +145,8 @@ public class SettingsFragment extends Fragment {
                 return null;
             }
 
-            // Create describe voices request.
-            DescribeVoicesRequest describeVoicesRequest = new DescribeVoicesRequest();
-
-            DescribeVoicesResult describeVoicesResult;
-            try {
-                // Synchronously ask the Polly Service to describe available TTS voices.
-                describeVoicesResult = client.describeVoices(describeVoicesRequest);
-            } catch (RuntimeException e) {
-                Log.e(TAG, "Unable to get available voices. " + e.getMessage());
-                return null;
-            }
-
             // Get list of voices from the result.
-            voices = describeVoicesResult.getVoices();
+            voices = listAllVoices(getContext());
 
             // Log a message with a list of available TTS voices.
             Log.i(TAG, "Available Polly voices: " + voices);
@@ -228,8 +199,7 @@ public class SettingsFragment extends Fragment {
     }
 
     @Override
-    public View onCreateView(LayoutInflater inflater, ViewGroup container,
-                             Bundle savedInstanceState) {
+    public View onCreateView(LayoutInflater inflater, ViewGroup container, Bundle savedInstanceState) {
         // Inflate the layout for this fragment
         View view = inflater.inflate(R.layout.fragment_settings, container, false);
 
@@ -239,23 +209,17 @@ public class SettingsFragment extends Fragment {
 
 
         voicesProgressBar = view.findViewById(R.id.voicesProgressBar);
-        playButton = (Button) view.findViewById(R.id.readButton);
-        voicesSpinner = (Spinner) view.findViewById(R.id.voicesSpinner);
-        volumeSeekBar = (SeekBar) view.findViewById(R.id.volumeSeekBar);
+        playButton = view.findViewById(R.id.readButton);
+        voicesSpinner = view.findViewById(R.id.voicesSpinner);
+        volumeSeekBar = view.findViewById(R.id.volumeSeekBar);
         volumeSeekBar.setMax(12);
-        saveButton = (Button) view.findViewById(R.id.saveButton);
-        saveButton.setOnClickListener(new View.OnClickListener(){
-            @Override
-            public void onClick(View v){
-                saveSettings();
-            }
-        });
+        saveButton = view.findViewById(R.id.saveButton);
+        saveButton.setOnClickListener(v -> saveSettings());
 
-        initPollyClient();
+        generalClient = getGeneralClient(getContext());
         setupNewMediaPlayer();
         setupPlayButton();
         setupVoicesSpinner();
-
 
         return view;
     }
@@ -299,40 +263,19 @@ public class SettingsFragment extends Fragment {
         void onFragmentInteraction(Uri uri);
     }
 
-    void initPollyClient() {
-        // Initialize the Amazon Cognito credentials provider.
-        credentialsProvider = new CognitoCachingCredentialsProvider(
-                getContext(),
-                COGNITO_POOL_ID,
-                MY_REGION
-        );
-
-        // Create a client that supports generation of presigned URLs.
-        client = new AmazonPollyPresigningClient(credentialsProvider);
-    }
-
     void setupNewMediaPlayer() {
         mediaPlayer = new MediaPlayer();
-        mediaPlayer.setOnCompletionListener(new MediaPlayer.OnCompletionListener() {
-            @Override
-            public void onCompletion(MediaPlayer mp) {
-                mp.release();
-                setupNewMediaPlayer();
-            }
+        mediaPlayer.setOnCompletionListener(mp -> {
+            mp.release();
+            setupNewMediaPlayer();
         });
-        mediaPlayer.setOnPreparedListener(new MediaPlayer.OnPreparedListener() {
-            @Override
-            public void onPrepared(MediaPlayer mp) {
-                mp.start();
-                playButton.setEnabled(true);
-            }
+        mediaPlayer.setOnPreparedListener(mp -> {
+            mp.start();
+            playButton.setEnabled(true);
         });
-        mediaPlayer.setOnErrorListener(new MediaPlayer.OnErrorListener() {
-            @Override
-            public boolean onError(MediaPlayer mp, int what, int extra) {
-                playButton.setEnabled(true);
-                return false;
-            }
+        mediaPlayer.setOnErrorListener((mp, what, extra) -> {
+            playButton.setEnabled(true);
+            return false;
         });
     }
 
@@ -345,53 +288,50 @@ public class SettingsFragment extends Fragment {
 
     void setupPlayButton() {
         playButton.setEnabled(false);
-        playButton.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View v) {
-                playButton.setEnabled(false);
+        playButton.setOnClickListener(v -> {
+            playButton.setEnabled(false);
 
-                Voice selectedVoice = (Voice) voicesSpinner.getSelectedItem();
-                int volume = volumeSeekBar.getProgress() - 6;
-                String decibelString = String.valueOf(volume)+"dB";
+            Voice selectedVoice = (Voice) voicesSpinner.getSelectedItem();
+            int volume = volumeSeekBar.getProgress() - 6;
+            String decibelString = String.valueOf(volume) + "dB";
 
-                String ssmlSampleText = "<speak><prosody volume=\"" +decibelString +"\">" + sampleText + "</prosody></speak>";
-                Log.i("New Sample Text", ssmlSampleText);
+            String ssmlSampleText = "<speak><prosody volume=\"" + decibelString +"\">" + sampleText + "</prosody></speak>";
+            Log.i("New Sample Text", ssmlSampleText);
 
-                // Create speech synthesis request.
-                SynthesizeSpeechPresignRequest synthesizeSpeechPresignRequest =
-                        new SynthesizeSpeechPresignRequest()
-                                // Set text to synthesize.
-                                .withText(ssmlSampleText).withTextType("ssml")
-                                // Set voice selected by the user.
-                                .withVoiceId(selectedVoice.getId())
-                                // Set format to MP3.
-                                .withOutputFormat(OutputFormat.Mp3);
+            // Create speech synthesis request.
+            SynthesizeSpeechPresignRequest synthesizeSpeechPresignRequest =
+                    new SynthesizeSpeechPresignRequest()
+                            // Set text to synthesize.
+                            .withText(ssmlSampleText).withTextType("ssml")
+                            // Set voice selected by the user.
+                            .withVoiceId(selectedVoice.getId())
+                            // Set format to MP3.
+                            .withOutputFormat(OutputFormat.Mp3);
 
-                new SpeakSampleTextTask().execute(synthesizeSpeechPresignRequest);
-                /*
-                // Get the presigned URL for synthesized speech audio stream.
-                URL presignedSynthesizeSpeechUrl =
-                        client.getPresignedSynthesizeSpeechUrl(synthesizeSpeechPresignRequest);
+            new SpeakSampleTextTask().execute(synthesizeSpeechPresignRequest);
+            /*
+            // Get the presigned URL for synthesized speech audio stream.
+            URL presignedSynthesizeSpeechUrl =
+                    client.getPresignedSynthesizeSpeechUrl(synthesizeSpeechPresignRequest);
 
-                Log.i(TAG, "Playing speech from presigned URL: " + presignedSynthesizeSpeechUrl);
+            Log.i(TAG, "Playing speech from presigned URL: " + presignedSynthesizeSpeechUrl);
 
-                // Create a media player to play the synthesized audio stream.
-                if (mediaPlayer.isPlaying()) {
-                    setupNewMediaPlayer();
-                }
-                mediaPlayer.setAudioStreamType(AudioManager.STREAM_MUSIC);
-
-                try {
-                    // Set media player's data source to previously obtained URL.
-                    mediaPlayer.setDataSource(presignedSynthesizeSpeechUrl.toString());
-                } catch (IOException e) {
-                    Log.e(TAG, "Unable to set data source for the media player! " + e.getMessage());
-                }
-
-                // Start the playback asynchronously (since the data source is a network stream).
-                mediaPlayer.prepareAsync();
-                */
+            // Create a media player to play the synthesized audio stream.
+            if (mediaPlayer.isPlaying()) {
+                setupNewMediaPlayer();
             }
+            mediaPlayer.setAudioStreamType(AudioManager.STREAM_MUSIC);
+
+            try {
+                // Set media player's data source to previously obtained URL.
+                mediaPlayer.setDataSource(presignedSynthesizeSpeechUrl.toString());
+            } catch (IOException e) {
+                Log.e(TAG, "Unable to set data source for the media player! " + e.getMessage());
+            }
+
+            // Start the playback asynchronously (since the data source is a network stream).
+            mediaPlayer.prepareAsync();
+            */
         });
     }
 
@@ -400,9 +340,7 @@ public class SettingsFragment extends Fragment {
         protected URL doInBackground(SynthesizeSpeechPresignRequest... requests) {
             // Get the presigned URL for synthesized speech audio stream.
             SynthesizeSpeechPresignRequest synthReq = requests[0];
-            URL synthResURL = client.getPresignedSynthesizeSpeechUrl(synthReq); // formerly, this.client...
-            return synthResURL;
-
+            return generalClient.getClient().getPresignedSynthesizeSpeechUrl(synthReq);
         }
 
         protected void onProgressUpdate() {
@@ -431,7 +369,7 @@ public class SettingsFragment extends Fragment {
 
 
 
-    public void saveSettings(){
+    public void saveSettings() {
         Voice selectedVoice = (Voice) voicesSpinner.getSelectedItem();
         int selectedVolume = volumeSeekBar.getProgress() -6;
         SharedPreferences sharedPreferences = getContext().getSharedPreferences("settings", 0);
@@ -439,20 +377,23 @@ public class SettingsFragment extends Fragment {
         editor.putString("voice", selectedVoice.getId());
         editor.putInt("volume", selectedVolume);
         editor.commit();
-        Toast.makeText(getContext(), "Saved Changes:  " + selectedVoice.getId() + ",  " + String.valueOf(selectedVolume), Toast.LENGTH_SHORT).show();
+        Toast.makeText(getContext(), String.format("Saved Changes:  %s,  %s", selectedVoice.getId(), String.valueOf(selectedVolume)), Toast.LENGTH_SHORT).show();
     }
 
-    public void getPreferences(){
+    public void getPreferences() {
         SharedPreferences sharedPreferences = getContext().getSharedPreferences("settings", 0);
         String selectedVoice = sharedPreferences.getString("voice", "None");
         int selectedVolume = sharedPreferences.getInt("volume", -6); // -6 to 6.
         int index = 0;
-        for(Voice voice : voices){
-            if(voice.getId().equals(selectedVoice))
+        for (Voice voice : voices) {
+            if (voice.getId().equals(selectedVoice)) {
                 break;
+            }
             index++;
         }
-        if(index >= voices.size()) index = 0;
+        if (index >= voices.size()) {
+            index = 0;
+        }
 
         voicesSpinner.setSelection(index);
         volumeSeekBar.setProgress(selectedVolume +6);

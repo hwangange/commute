@@ -26,7 +26,6 @@ import android.widget.LinearLayout;
 import android.widget.ProgressBar;
 import android.widget.TextView;
 
-import com.amazonaws.services.polly.model.Voice;
 import com.nshmura.snappysmoothscroller.LinearLayoutScrollVectorDetector;
 import com.nshmura.snappysmoothscroller.SnapType;
 import com.nshmura.snappysmoothscroller.SnappySmoothScroller;
@@ -317,20 +316,14 @@ public class TextbookViewFragment extends Fragment implements PlayerBarFragment.
     public void getContent(){
 
         try {
-
             Object[] voicePrefs = getVoicePreferences();
             int volume = (int) voicePrefs[1];
 
-
             AudioBook book = new AudioBook(getContext(), bookId);
             String moduleFile = book.getModuleFile(modId);
-            Content.Module mod = new Content.Module(modId, moduleFile, volume);
+            Content.Module mod = new Content.Module(modId, moduleFile);
 
-//            tempDataSet.add(new TextChunk("<h2>"+modTitle+"</h2>"));
-            // eventually just replace with mod.buildModuleSSMl()
-
-
-            tempDataSet = mod.initTextAudioChunks();
+            tempDataSet = mod.initTextAudioChunks(volume);
 
             // fill dataset with temporary values; because chunks finish downloading out of order
             if (!easyWay) {
@@ -347,9 +340,6 @@ public class TextbookViewFragment extends Fragment implements PlayerBarFragment.
      * Convert every text block in dataSet to audio and store
      */
     public void storeConvertedTTSAudio() {
-        // Make folder for book if it exists.
-        //String bookPath = Environment.getExternalStorageDirectory().getAbsolutePath() + "/" + bookId +"/";
-
         Object[] voicePrefs = getVoicePreferences();
         String voice = (String) voicePrefs[0];
 
@@ -360,10 +350,10 @@ public class TextbookViewFragment extends Fragment implements PlayerBarFragment.
         }
 
         tempDataSet.parallelStream().forEach(chunk -> {
-            String ssml = chunk.getSsml(); // might have to modify this once text comes with SSML tags
+            String ssml = chunk.getSsml();
             int id = chunk.getId();
-            String folder = getContext().getExternalCacheDir().getAbsolutePath() + "/" + bookId + "/" + modId + "/";
-            AudioClient.AmazonClient client = new AudioClient.AmazonClient(folder, getContext(), voice,false);
+            String folder = String.format("%s/%s/%s/", getContext().getExternalCacheDir().getAbsolutePath(), bookId, modId);
+            AudioClient.AmazonClient client = new AudioClient.AmazonClient(folder, getContext(), voice);
             client.synthesizeAudio(String.valueOf(id), true, ssml, false);
             chunk.setAudioFile(folder + id + ".mp3");
             chunk.synthesized();
@@ -815,14 +805,14 @@ public class TextbookViewFragment extends Fragment implements PlayerBarFragment.
 
     public int getPositionAt(int time){
         int sum = 0;
-        if(times != null){
+        if (times != null) {
             for(int i = 0; i < times.size(); i ++){
                 if(sum <= time && time < sum + times.get(i))
                     return i;
                 sum += times.get(i);
             }
 
-            return times.size()-1;
+            return times.size() - 1;
         }
         // means times hasn't been instantiated yet; give it some t i m e
         return -1;
