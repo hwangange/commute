@@ -27,6 +27,12 @@ public class AudioBook {
     private final String mainFolder;
     private final boolean hasUnits;
 
+    AudioBook(String bookPath, boolean hasUnits) {
+        this.context = null;
+        this.mainFolder = bookPath;
+        this.hasUnits = hasUnits;
+    }
+
     AudioBook (Context context, String bookName) {
         this.context = context;
         this.mainFolder = "Books/" + bookName + "/";
