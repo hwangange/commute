@@ -48,7 +48,7 @@ public class LIBRARYFragment extends Fragment {
 
     private SectionedRecyclerViewAdapter sectionAdapter;
 
-    public ArrayList<String> favorites_dataSet, downloads_dataSet;
+    public ArrayList<LibraryItem> favorites_dataSet, downloads_dataSet;
 
 
 
@@ -102,20 +102,18 @@ public class LIBRARYFragment extends Fragment {
         // Shared Preferences
         SharedPreferences sharedPreferences = getContext().getSharedPreferences("library", 0);
         HashSet<String> faves = (HashSet<String>) sharedPreferences.getStringSet("favorites", new HashSet<String>());
-        favorites_dataSet = new ArrayList<String>();
+        favorites_dataSet = new ArrayList<LibraryItem>();
         for(String s : faves)
         {
-            String[] ary = s.split("_");
-            favorites_dataSet.add(ary[1]); // 1st element is the title
+            favorites_dataSet.add(makeLibraryItem(s)); // 1st element is the title
         }
 
         /* Finding Downloads */
         HashSet<String> downloads = (HashSet<String>) sharedPreferences.getStringSet("downloads", new HashSet<String>());
-        downloads_dataSet = new ArrayList<String>();
+        downloads_dataSet = new ArrayList<LibraryItem>();
         for(String s : downloads)
         {
-            String[] ary = s.split("_");
-            downloads_dataSet.add(ary[1]); // 1st element is the title
+            downloads_dataSet.add(makeLibraryItem(s)); // 1st element is the title
         }
 
 
@@ -130,6 +128,11 @@ public class LIBRARYFragment extends Fragment {
 
         // Inflate the layout for this fragment
         return view;
+    }
+
+    public LibraryItem makeLibraryItem(String tag){
+        String[] ary = tag.split("_");
+        return new LibraryItem(ary[0], ary[1], ary[2]);
     }
 
     // TODO: Rename method, update argument and hook method into UI event
@@ -162,23 +165,33 @@ public class LIBRARYFragment extends Fragment {
         super.onDestroy();
     }
 
-    public void addFavorite(String title) {
-        favorites_dataSet.add(title);
+    public void addFavorite(String tag) {
+        favorites_dataSet.add(makeLibraryItem(tag));
         sectionAdapter.notifyDataSetChanged();
     }
 
-    public void removeFavorite(String title){
-        favorites_dataSet.remove(title);
+    public void removeFavorite(String tag){
+        String modId = makeLibraryItem(tag).getModId();
+        for(LibraryItem li : favorites_dataSet){
+            if(li.getModId().equals(modId)){
+                favorites_dataSet.remove(li);
+            }
+        }
         sectionAdapter.notifyDataSetChanged();
     }
 
-    public void addDownload(String title){
-        downloads_dataSet.add(title);
+    public void addDownload(String tag){
+        downloads_dataSet.add(makeLibraryItem(tag));
         sectionAdapter.notifyDataSetChanged();
     }
 
-    public void removeDownload(String title){
-        downloads_dataSet.remove(title);
+    public void removeDownload(String tag){
+        String modId = makeLibraryItem(tag).getModId();
+        for(LibraryItem li : downloads_dataSet){
+            if(li.getModId().equals(modId)){
+                downloads_dataSet.remove(li);
+            }
+        }
         sectionAdapter.notifyDataSetChanged();
     }
 
@@ -199,9 +212,9 @@ public class LIBRARYFragment extends Fragment {
 
     public class CustomSection extends StatelessSection {
         String title;
-        ArrayList<String> list;
+        ArrayList<LibraryItem> list;
 
-        CustomSection(String title, ArrayList<String> list) {
+        CustomSection(String title, ArrayList<LibraryItem> list) {
             super(SectionParameters.builder()
                     .itemResourceId(R.layout.section_item)
                     .headerResourceId(R.layout.section_header)
@@ -224,20 +237,20 @@ public class LIBRARYFragment extends Fragment {
         @Override
         public void onBindItemViewHolder(RecyclerView.ViewHolder holder, int position) {
             final ItemViewHolder itemHolder = (ItemViewHolder) holder;
+            LibraryItem item = list.get(position);
+            String modTitle = item.getModTitle();
 
-            String name = list.get(position);
+            itemHolder.tvItem.setText(modTitle);
 
-            itemHolder.tvItem.setText(name);
+            String bookTitle = item.getBookTitle();
+            String modId = item.getModId();
             //itemHolder.imgItem.setImageResource(name.hashCode() % 2 == 0 ? R.drawable.ic_face_black_48dp : R.drawable.ic_tag_faces_black_48dp);
 
             itemHolder.rootView.setOnClickListener(new View.OnClickListener() {
                 @Override
                 public void onClick(View v) {
-                    Toast.makeText(getContext(),
-                            String.format("Clicked on position #%s of Section %s",
-                                    sectionAdapter.getPositionInSection(itemHolder.getAdapterPosition()),
-                                    title),
-                            Toast.LENGTH_SHORT).show();
+                    //Toast.makeText(getContext(), String.format("Clicked on position #%s of Section %s", sectionAdapter.getPositionInSection(itemHolder.getAdapterPosition()), title), Toast.LENGTH_SHORT).show();
+                    ((MainActivity)getActivity()).playEntireModule(bookTitle, modId, modTitle);
                 }
             });
         }
@@ -279,6 +292,22 @@ public class LIBRARYFragment extends Fragment {
             imgItem = (ImageView) view.findViewById(R.id.imgItem);
             tvItem = (TextView) view.findViewById(R.id.tvItem);
         }
+    }
+
+    private class LibraryItem {
+        private String bookTitle;
+        private String modTitle;
+        private String modId;
+
+        LibraryItem(String bookTitle, String modTitle, String modId) {
+            this.bookTitle= bookTitle;
+            this.modTitle = modTitle;
+            this.modId = modId;
+        }
+
+        public String getBookTitle(){ return bookTitle; }
+        public String getModTitle() {return modTitle; }
+        public String getModId() { return modId; }
     }
 
 }

@@ -63,11 +63,12 @@
         <LinearLayout
             android:layout_width="match_parent"
             android:layout_height="match_parent"
-            android:background="#ffffff"
             android:orientation="vertical"
             android:clickable="true"
             android:focusable="false"
-            android:id="@+id/panel">
+            android:id="@+id/panel"
+            android:background="@color/slideUpBar_background">
+            <!--android:background="#ffffff"-->
 
 
             <LinearLayout
@@ -86,6 +87,7 @@
                     android:layout_width="0dp"
                     android:layout_weight="1"
                     android:layout_height="wrap_content"
+                    android:tint="@color/white"
                     android:src="@drawable/play"
                     android:layout_gravity="center_vertical" />
 
@@ -116,7 +118,9 @@
             <android.support.design.widget.TabLayout
                 android:id="@+id/tabLayout"
                 android:layout_height="wrap_content"
-                android:layout_width="match_parent">
+                android:layout_width="match_parent"
+                style="@style/AppTabLayout"
+                app:tabTextAppearance="@style/AppTabTextAppearance">
 
             </android.support.design.widget.TabLayout>
 
@@ -126,6 +130,7 @@
                 android:orientation="vertical"
                 android:layout_width="match_parent"
                 android:layout_height="0dp"
+                android:background="@color/darkBlack"
                 android:layout_weight="1">
             </FrameLayout>
 
@@ -150,9 +155,9 @@
         android:layout_height="0dp"
         android:layout_weight="1"
         android:layout_gravity="end"
-        android:background="@color/lightBlack"
+        android:background="@color/darkBlack"
         android:gravity="bottom"
-        app:itemBackground="@color/lightBlack"
+        app:itemBackground="@color/darkBlack"
         android:layout_margin="0dp"
         app:itemIconTint="@drawable/bottom_navigation_color_selector"
         app:itemTextColor="@drawable/bottom_navigation_color_selector"

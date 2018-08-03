@@ -1,7 +1,7 @@
 <resources>
 
 
-    <style name="AppBaseTheme" parent="Theme.AppCompat.Light.NoActionBar">
+    <style name="AppBaseTheme" parent="Theme.AppCompat.DayNight.NoActionBar">
         <item name="colorPrimary">@color/colorPrimary</item>
         <item name="colorPrimaryDark">@color/colorPrimaryDark</item>
         <item name="colorAccent">@color/colorAccent</item>
@@ -11,6 +11,13 @@
     <style name="AppTheme" parent="AppBaseTheme">
 
     </style>
+
+    <style name="DarkAppTheme" parent="AppBaseTheme">
+        <item name="android:windowBackground">@color/lightBlack</item>
+        <item name="android:textColor">@color/white</item>
+        <item name="android:iconTint">@color/white</item>
+    </style>
+
 
 
     <!-- Base application theme. -->
@@ -31,6 +38,22 @@
         <item name="colorPrimaryDark">@color/opaque_colorPrimaryDark</item>
         <item name="colorAccent">@color/opaque_colorAccent</item>
         <item name="windowActionBarOverlay">true</item>
+    </style>
+
+    <!-- Tab -->
+    <style name="AppTabLayout" parent="Widget.Design.TabLayout">
+        <item name="tabTextAppearance">@style/AppTabTextAppearance</item>
+        <item name="tabSelectedTextColor">@color/white</item>
+    </style>
+    <style name="AppTabTextAppearance" parent="TextAppearance.Design.Tab">
+        <item name="android:textColor">@color/white</item>
+    </style>
+
+    <!-- Spinner -->
+    <!-- Tab -->
+    <style name="AppSpinnerTextAppearance" parent="TextAppearance.AppCompat.Widget.TextView.SpinnerItem">
+        <item name="android:textColor">@color/white</item>
+        <item name="android:background">@color/lightBlack</item>
     </style>
 
 </resources>

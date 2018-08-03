@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="utf-8"?>
-<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<android.support.v4.widget.NestedScrollView xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
@@ -7,27 +7,17 @@
     android:orientation="vertical"
     tools:context=".BookshelfFragment">
 
-    <RelativeLayout
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical"
+        android:animateLayoutChanges="true">
 
-        android:layout_width="match_parent"
-        android:layout_height="0dp"
-        android:layout_weight="1">
-        <TextView
-            android:layout_width="wrap_content"
+        <ImageView
+            android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:text = "Audiobooks"
-            android:textAlignment="center"
-            android:layout_centerInParent="true"
-            android:textSize="34dp"
-            android:textStyle="bold"/>
-    </RelativeLayout>
-    <!--- android:layout_weight="2" -->
-    <GridLayout
-        android:id="@+id/grid_layout"
-        android:layout_width="match_parent"
-        android:layout_height="0dp"
-        android:layout_weight="7"
-        android:padding = "14dp">
+            android:adjustViewBounds="true"
+            android:src="@drawable/ad" />
 
         <android.support.v7.widget.RecyclerView
             android:id="@+id/book_recycler_view"
@@ -35,8 +25,6 @@
             android:layout_width="match_parent"
             android:layout_height="match_parent" />
 
+    </LinearLayout>
 
-    </GridLayout>
-    <!--android:layout_weight ="8" -->
-
-</LinearLayout>
+</android.support.v4.widget.NestedScrollView>

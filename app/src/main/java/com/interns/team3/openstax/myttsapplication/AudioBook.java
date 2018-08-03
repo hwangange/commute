@@ -25,20 +25,24 @@ import java.util.Map;
 public class AudioBook {
     private final Context context;
     private final String mainFolder;
+    private final String bookName;
     private final boolean hasUnits;
 
     AudioBook (Context context, String bookName) {
         this.context = context;
+        this.bookName = bookName;
         this.mainFolder = "Books/" + bookName + "/";
         this.hasUnits = false;
     }
 
     AudioBook(Context context, String bookName, boolean hasUnits) {
         this.context = context;
+        this.bookName = bookName;
         this.mainFolder = "Books/" + bookName + "/";
         this.hasUnits = hasUnits;
     }
 
+    public String getBookName() { return bookName;}
     public String getMainFolder() {
         return this.mainFolder;
     }

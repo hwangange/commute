@@ -2,6 +2,7 @@ package com.interns.team3.openstax.myttsapplication;
 
 import android.animation.Animator;
 import android.animation.AnimatorListenerAdapter;
+import android.animation.LayoutTransition;
 import android.net.Uri;
 import android.os.AsyncTask;
 import android.os.Bundle;
@@ -12,6 +13,12 @@ import android.util.Log;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
+import android.view.animation.AccelerateInterpolator;
+import android.view.animation.AlphaAnimation;
+import android.view.animation.Animation;
+import android.view.animation.AnimationSet;
+import android.view.animation.AnimationUtils;
+import android.view.animation.DecelerateInterpolator;
 import android.widget.ImageView;
 import android.widget.LinearLayout;
 import android.widget.TextView;
@@ -87,14 +94,21 @@ public class TableOfContentsFragment extends Fragment {
         setHasOptionsMenu(false);
     }
 
+    private ViewGroup container;
+
     @Override
     public View onCreateView(LayoutInflater inflater, ViewGroup container,
             Bundle savedInstanceState) {
 
         Log.i("Table of contents", "onCreateview");
 
-            // Inflate the layout for this fragment
-            View view = inflater.inflate(R.layout.fragment_toc, container, false);
+        // Inflate the layout for this fragment
+        View view = inflater.inflate(R.layout.fragment_toc, container, false);
+        this.container = view.findViewById(R.id.container);
+
+        LayoutTransition lt = new LayoutTransition();
+        lt.enableTransitionType(LayoutTransition.CHANGING);
+        this.container.setLayoutTransition(lt);
 
 
        /*  BottomNavigationView navigation = (BottomNavigationView) findViewById(R.id.navigation);
@@ -136,8 +150,9 @@ public class TableOfContentsFragment extends Fragment {
         bookImg = view.findViewById(R.id.bookImg);
         bookDate = view.findViewById(R.id.bookDate);
 
-        loading.setVisibility(View.VISIBLE);
-        doneLoading.setVisibility(View.GONE);
+        //loading.setVisibility(View.VISIBLE);
+        this.container.removeView(doneLoading);
+        //doneLoading.setVisibility(View.GONE);
         new AddItemsTask().execute("");
 
 
@@ -207,20 +222,21 @@ public class TableOfContentsFragment extends Fragment {
                 }
                 adapter.notifyDataSetChanged();
             }
-
-            String revised = "Last Revised: " + metadata.get("revised");
+            if(metadata.get("revised")!=null)
+            {
+                String revised = "Last Revised: " + metadata.get("revised");
+                bookDate.setText(revised);
+            }
             String title = metadata.get("title");
             String summary = metadata.get("summary");
-            bookDate.setText(revised);
             bookTitleTv.setText(title);
             details.setText(summary);
 
             String modified_title= title.replaceAll(" ", "_").replaceAll("\\.", "").toLowerCase();
-            Log.i("modified_title T_T", modified_title);
             int drawable_id = getContext().getResources().getIdentifier(modified_title, "drawable", getContext().getPackageName());
             Picasso.with(getContext()).load(drawable_id).into(bookImg);
 
-            loading.animate()
+            /*loading.animate()
                     .translationY(loading.getHeight())
                     .alpha(0.0f)
                     .setDuration(300)
@@ -229,19 +245,13 @@ public class TableOfContentsFragment extends Fragment {
                         public void onAnimationEnd(Animator animation) {
                             super.onAnimationEnd(animation);
                             loading.setVisibility(View.GONE);
-                            doneLoading.animate()
-                                    .translationY(0)
-                                    .alpha(1.0f)
-                                    .setDuration(300)
-                                    .setListener(new AnimatorListenerAdapter() {
-                                        @Override
-                                        public void onAnimationEnd(Animator animation) {
-                                            super.onAnimationEnd(animation);
-                                            doneLoading.setVisibility(View.VISIBLE);
-                                        }
-                                    });
+
                         }
-                    });
+                    }); */
+            container.removeView(loading);
+            container.addView(doneLoading);
+            //loading.setVisibility(View.GONE);
+            //doneLoading.setVisibility(View.VISIBLE);
 
             Log.i("onPostExecute", "Done");
         }

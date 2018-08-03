@@ -1,22 +1,35 @@
 package com.interns.team3.openstax.myttsapplication;
 
 import android.content.Context;
-import android.content.Intent;
 import android.net.Uri;
+import android.provider.MediaStore;
 import android.support.v4.app.Fragment;
-import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.support.v7.widget.GridLayoutManager;
+import android.support.v7.widget.LinearLayoutManager;
 import android.support.v7.widget.RecyclerView;
 import android.util.Log;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
+import android.widget.ImageView;
+import android.widget.LinearLayout;
 import android.widget.TextView;
 
+import com.squareup.picasso.Picasso;
+
 import java.io.IOException;
+import java.lang.reflect.Array;
 import java.util.ArrayList;
+import java.util.Collection;
+import java.util.HashMap;
+import java.util.HashSet;
 import java.util.List;
+import java.util.TreeSet;
+
+import io.github.luizgrp.sectionedrecyclerviewadapter.SectionParameters;
+import io.github.luizgrp.sectionedrecyclerviewadapter.SectionedRecyclerViewAdapter;
+import io.github.luizgrp.sectionedrecyclerviewadapter.StatelessSection;
 
 public class BookshelfFragment extends Fragment {
 
@@ -27,11 +40,13 @@ public class BookshelfFragment extends Fragment {
     private String mParam2;
     private OnFragmentInteractionListener mListener;
 
-    private ContentAdapter adapter;
-    private List<Content> dataSet;
+    private SectionedRecyclerViewAdapter sectionedAdapter;
+
 
     private RecyclerView recyclerView;
-    private RecyclerView.LayoutManager layoutManager;
+
+
+    private HashMap<String, ArrayList<AudioBook>> genres;
 
     // required empty constructor
     public BookshelfFragment(){}
@@ -63,7 +78,7 @@ public class BookshelfFragment extends Fragment {
         }
         setHasOptionsMenu(false);
         // Customize action bar
-        getActivity().setTitle("OpenStax Commute");
+        getActivity().setTitle("OpenStax On the Go");
         ((MainActivity) getActivity()).getSupportActionBar().setHomeButtonEnabled(false);
         ((MainActivity) getActivity()).getSupportActionBar().setDisplayHomeAsUpEnabled(false);
     }
@@ -78,29 +93,23 @@ public class BookshelfFragment extends Fragment {
             Log.i("Bookshelf", "onCreateView, savedInstanceState is null");
 
             // Construct the data source
-            dataSet = new ArrayList<>();
+            genres = new HashMap<String, ArrayList<AudioBook>>();
+
             // Create the adapter to convert the array to views
-            adapter = new ContentAdapter(dataSet, v -> {
-                String targetId = ((TextView) v.findViewById(R.id.book_id)).getText().toString();
-                String targetTitle = ((TextView) v.findViewById(R.id.book_title)).getText().toString();
-                //Toast.makeText(getApplicationContext(), targetId, Toast.LENGTH_SHORT).show();
-
-                ((HOMEFragment) getParentFragment()).sendBookInfo(targetId, targetTitle);
-            });
-
-            adapter.setContext(view.getContext());
+            sectionedAdapter = new SectionedRecyclerViewAdapter();
 
             // Attach the adapter to a ListView
             recyclerView = view.findViewById(R.id.book_recycler_view);
-            recyclerView.setAdapter(adapter);
+            recyclerView.setAdapter(sectionedAdapter);
+            recyclerView.setNestedScrollingEnabled(false); // fix unsmooth scrolling?
 
             // use a GRID layout manager
-            layoutManager = new GridLayoutManager(view.getContext(), 2);
-            // layoutManager = new LinearLayoutManager(this);
+            //layoutManager = new GridLayoutManager(view.getContext(), 2);
+            LinearLayoutManager layoutManager = new LinearLayoutManager(getContext());
             recyclerView.setLayoutManager(layoutManager);
 
             addItems();
-            adapter.notifyDataSetChanged();
+            sectionedAdapter.notifyDataSetChanged();
         }
 
 
@@ -114,11 +123,31 @@ public class BookshelfFragment extends Fragment {
         try {
             String[] bookTitles = getContext().getAssets().list("Books");
             for (String s : bookTitles) {
-                dataSet.add(new Content.Book(s, s));
+                AudioBook book = new AudioBook(getContext(), s);
+                String genre = book.metadata().get("subject");
+
+                if(genres.containsKey(genre)){
+                   // ArrayList<AudioBook> list = ((GenreSection) sectionedAdapter.getSection(genre)).getList();
+                    ArrayList<AudioBook> list = genres.get(genre);
+                    list.add(book);
+                    genres.put(genre, list);
+
+                }
+                else {
+                    ArrayList<AudioBook> list = new ArrayList<AudioBook>();
+                    list.add(book);
+                    //sectionedAdapter.addSection(genre, new GenreSection(genre, list));
+                    genres.put(genre, list);
+                }
+
             }
 
         } catch (IOException e) {
             e.printStackTrace();
+        }
+
+        for(String genre : new TreeSet<String>(genres.keySet())){
+            sectionedAdapter.addSection(genre, new GenreSection(genre, genres.get(genre)));
         }
     }
 
@@ -143,7 +172,7 @@ public class BookshelfFragment extends Fragment {
         super.onResume();
 
         // Customize action bar
-        (getActivity()).setTitle("OpenStax Commute");
+        (getActivity()).setTitle("OpenStax On the Go");
         ((MainActivity)getActivity()).getSupportActionBar().setHomeButtonEnabled(false);
         ((MainActivity)getActivity()).getSupportActionBar().setDisplayHomeAsUpEnabled(false);
     }
@@ -164,5 +193,188 @@ public class BookshelfFragment extends Fragment {
 
         void sendBookInfo(String bookID, String bookTitle);
     }
+
+    public class GenreSection extends StatelessSection {
+        String title;
+        ArrayList<AudioBook> list;
+        ShelfAdapter shelfAdapter;
+
+        GenreSection(String title, ArrayList<AudioBook> list) {
+            super(SectionParameters.builder()
+                    .itemResourceId(R.layout.scrollable_shelf)
+                    .headerResourceId(R.layout.shelf_header)
+                    .build());
+
+            this.title = title;
+            this.list = list;
+        }
+
+        public ArrayList<AudioBook> getList() {return list; }
+
+        @Override
+        public int getContentItemsTotal() {
+            return 1;
+        }
+
+        @Override
+        public RecyclerView.ViewHolder getItemViewHolder(View view) {
+            return new BookshelfFragment.ShelfHolder(view);
+        }
+
+        @Override
+        public void onBindItemViewHolder(RecyclerView.ViewHolder holder, int position) {
+            final BookshelfFragment.ShelfHolder linearLayoutHolder = (BookshelfFragment.ShelfHolder) holder;
+
+            RecyclerView shelf = linearLayoutHolder.getShelf();
+            LinearLayoutManager layoutManager = new LinearLayoutManager(getContext());
+            layoutManager.setOrientation(LinearLayoutManager.HORIZONTAL);
+
+            shelfAdapter = new ShelfAdapter(list);
+            shelf.setAdapter(shelfAdapter);
+            shelf.setLayoutManager(layoutManager);
+
+            shelfAdapter.notifyDataSetChanged();
+
+        }
+
+        public void notifyChange(){
+            shelfAdapter.notifyDataSetChanged();
+        }
+
+        @Override
+        public RecyclerView.ViewHolder getHeaderViewHolder(View view) {
+            return new BookshelfFragment.HeaderViewHolder(view);
+        }
+
+        @Override
+        public void onBindHeaderViewHolder(RecyclerView.ViewHolder holder) {
+            BookshelfFragment.HeaderViewHolder headerHolder = (BookshelfFragment.HeaderViewHolder) holder;
+
+            headerHolder.tvTitle.setText(title);
+        }
+    }
+
+    private class HeaderViewHolder extends RecyclerView.ViewHolder {
+
+        private final TextView tvTitle;
+
+        HeaderViewHolder(View view) {
+            super(view);
+
+            tvTitle = (TextView) view.findViewById(R.id.tvTitle);
+        }
+    }
+
+    private class ShelfHolder extends RecyclerView.ViewHolder {
+
+        private final View rootView;
+        private final RecyclerView recyclerView;
+
+        ShelfHolder(View view) {
+            super(view);
+
+            rootView = view;
+            recyclerView = view.findViewById(R.id.shelf);
+        }
+
+        public RecyclerView getShelf() {return recyclerView;}
+    }
+
+    private class ItemViewHolder extends RecyclerView.ViewHolder {
+
+        private final View rootView;
+        private final ImageView cover;
+        private final TextView id;
+        private final TextView title;
+
+        ItemViewHolder(View view) {
+            super(view);
+
+            rootView = view;
+            cover = (ImageView) view.findViewById(R.id.book_img);
+            id = (TextView) view.findViewById(R.id.book_id);
+            title = (TextView) view.findViewById(R.id.book_title);
+        }
+
+        public ImageView getBookImage(){ return cover; }
+        public TextView getBookId() {return id;}
+        public TextView getBookTitle() {return title;}
+    }
+
+    private class ShelfAdapter extends RecyclerView.Adapter {
+
+        public List<AudioBook> dataSet;
+
+        // Provide a suitable constructor (depends on the kind of dataSet)
+        public ShelfAdapter(List<AudioBook> dataSet) {
+            this.dataSet = dataSet;
+        }
+
+        // Create new views (invoked by the layout manager)
+        @Override
+        public RecyclerView.ViewHolder onCreateViewHolder(ViewGroup parent, int viewType) {
+            // create a new view
+            View v = LayoutInflater.from(parent.getContext())
+                    .inflate(R.layout.textbook_card, parent, false);
+
+            return new ItemViewHolder(v);
+        }
+
+        // Replace the contents of a view (invoked by the layout manager)
+        @Override
+        public void onBindViewHolder(RecyclerView.ViewHolder holder, int position) {
+
+            final BookshelfFragment.ItemViewHolder itemHolder = (BookshelfFragment.ItemViewHolder) holder;
+
+
+            TextView myBookTitle = itemHolder.getBookTitle();
+            TextView myBookId = itemHolder.getBookId();
+            ImageView myBookImg = itemHolder.getBookImage();
+
+            AudioBook book = dataSet.get(position);
+            String title= book.getBookName();
+            String id = book.getBookName();
+
+            String modified_title= title.replaceAll(" ", "_").replaceAll("\\.", "").toLowerCase();
+            int drawable_id = getContext().getResources().getIdentifier(modified_title, "drawable", getContext().getPackageName());
+
+            myBookTitle.setText(title);
+            myBookId.setText(id);
+            Picasso.with(getContext()).load(drawable_id).into(myBookImg);
+
+
+            itemHolder.rootView.setOnClickListener(new View.OnClickListener() {
+                @Override
+                public void onClick(View v) {
+                    ((HOMEFragment) getParentFragment()).sendBookInfo(id, title);
+                }
+            });
+
+
+        }
+
+        // Return the size of your dataset (invoked by the layout manager)
+        @Override
+        public int getItemCount() {
+            return dataSet.size();
+        }
+
+        @Override
+        public void onViewRecycled(RecyclerView.ViewHolder vh) {
+            // view appears.
+            //Log.wtf(TAG,"onViewRecycled "+vh);
+        }
+
+        @Override
+        public void onViewDetachedFromWindow(RecyclerView.ViewHolder viewHolder) {
+            // view leaves.
+            //Log.wtf(TAG,"onViewDetachedFromWindow "+viewHolder);
+        }
+
+
+    }
+
+
+
 
 }

@@ -70,8 +70,16 @@ public class TextbookViewAdapter extends RecyclerView.Adapter<TextbookViewAdapte
 
         if(tc != null){
             // highlight selected text. except for the 0th one (the title).
-            if(position == getSelected() && position != 0) holder.textView.setBackgroundColor(ContextCompat.getColor(context, R.color.colorHighlighted));
-            else holder.textView.setBackgroundColor(ContextCompat.getColor(context, R.color.defaultGrey));
+            if(position == getSelected() && position != 0)
+            {
+                holder.textView.setBackgroundColor(ContextCompat.getColor(context, R.color.colorHighlighted));
+                holder.textView.setTextColor(ContextCompat.getColor(context, R.color.darkBlack));
+            }
+            else
+            {
+                holder.textView.setBackgroundColor(ContextCompat.getColor(context, R.color.defaultGrey));
+                holder.textView.setTextColor(ContextCompat.getColor(context, R.color.white));
+            }
 
 
             holder.bind(tc.getText(), textOnClickListener);

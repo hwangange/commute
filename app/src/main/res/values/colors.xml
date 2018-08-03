@@ -12,6 +12,8 @@
     <color name="white">#fff</color>
     <color name="lightPurple">#8c9eff</color>
 
+    <color name="slideUpBar_background">#505050</color>
+
     <color name="opaque_colorPrimary">#293f51b5</color>
     <color name="opaque_colorPrimaryDark">#26303f9f</color>
     <color name="opaque_colorAccent">#2eff4081</color>

@@ -7,9 +7,9 @@
     android:layout_width="wrap_content"
     android:layout_height="wrap_content"
 
-    android:layout_marginBottom="16dp"
-    android:layout_marginLeft="16dp"
-    android:layout_marginRight="16dp"
+    android:layout_marginBottom="8dp"
+    android:layout_marginLeft="8dp"
+    android:layout_marginRight="8dp"
     app:cardElevation="8dp"
     app:cardCornerRadius="8dp"
     app:cardBackgroundColor="@android:color/white"
@@ -22,25 +22,36 @@
     <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="match_parent"
-        android:layout_margin="16dp"
+        android:layout_marginTop="8dp"
+        android:layout_marginLeft="8dp"
+        android:layout_marginRight="8dp"
         android:layout_gravity="center_horizontal|center_vertical"
         android:orientation="vertical"
         android:background="@drawable/list_item_text_selector"
         >
-        <TextView
-            android:textAlignment="center"
+
+        <FrameLayout
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:id="@+id/book_title"
-            android:textSize="18sp"
-            android:textStyle="bold"
-            android:textColor="@android:color/black"/>
+            android:gravity="center_vertical">
+            <TextView
+                android:textAlignment="center"
+                android:layout_gravity="center_vertical"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:lines="2"
+                android:id="@+id/book_title"
+                android:autoSizeMaxTextSize="18sp"
+                android:textStyle="bold"
+                android:textColor="@android:color/black"/>
+        </FrameLayout>
         <ImageView
             android:id="@+id/book_img"
             android:adjustViewBounds="true"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_gravity="center_horizontal"
+            android:maxHeight="100dp"
             android:layout_marginVertical="@dimen/activity_vertical_margin"/>
         <!-- android:src = "@drawable/" -->
         <!-- adjustViewBounds = true removed the unwanted padding-->

@@ -14,6 +14,7 @@ import android.support.v4.app.FragmentManager;
 import android.support.v4.app.FragmentTransaction;
 import android.support.v7.app.ActionBar;
 import android.support.v7.app.AppCompatActivity;
+import android.support.v7.app.AppCompatDelegate;
 import android.support.v7.widget.RecyclerView;
 import android.text.Html;
 import android.util.Log;
@@ -400,14 +401,13 @@ public class MainActivity extends AppCompatActivity implements HOMEFragment.OnFr
             // change the module to NOT favorited
             dragViewFavorite.setImageDrawable(getDrawable(R.drawable.ic_border_heart_24dp));
             Drawable icon = dragViewFavorite.getDrawable();
-            icon.setColorFilter(this.getColor(R.color.darkBlack), PorterDuff.Mode.SRC_ATOP);
+            icon.setColorFilter(this.getColor(R.color.white), PorterDuff.Mode.SRC_ATOP);
             newFaves.remove(tag);
 
             if(shouldToggle && bottomNavigationView.getSelectedItemId() == R.id.navigation_library)
             {
                 // Update favorites list real time
-                String title = tag.split("_")[1];
-                libraryFragment.removeFavorite(title);
+                libraryFragment.removeFavorite(tag);
             }
 
         } else if((!faves.contains(tag) && shouldToggle) || (faves.contains(tag) && !shouldToggle )){
@@ -420,8 +420,7 @@ public class MainActivity extends AppCompatActivity implements HOMEFragment.OnFr
             if(shouldToggle && bottomNavigationView.getSelectedItemId() == R.id.navigation_library)
             {
                 // Update favorites list real time
-                String title = tag.split("_")[1];
-                libraryFragment.addFavorite(title);
+                libraryFragment.addFavorite(tag);
             }
 
         } else { Log.e("Why is it here.", faves.contains(tag) + " | " + shouldToggle);}
@@ -553,8 +552,7 @@ public class MainActivity extends AppCompatActivity implements HOMEFragment.OnFr
                 if(bottomNavigationView.getSelectedItemId() == R.id.navigation_library)
                 {
                     // update the list of downloads realtime
-                    String title = tag.split("_")[1];
-                    libraryFragment.addDownload(title);
+                    libraryFragment.addDownload(tag);
                 }
             }
 

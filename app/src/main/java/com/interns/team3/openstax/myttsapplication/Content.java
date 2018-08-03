@@ -1,5 +1,7 @@
 package com.interns.team3.openstax.myttsapplication;
 
+import android.content.Context;
+
 import com.interns.team3.openstax.myttsapplication.ssml.SsmlBuilder;
 
 import org.json.JSONArray;
@@ -10,10 +12,15 @@ import org.jsoup.nodes.Document;
 import org.jsoup.nodes.Element;
 import org.jsoup.select.Elements;
 
+import java.io.BufferedReader;
+import java.io.IOException;
+import java.io.InputStreamReader;
 import java.util.ArrayList;
 import java.util.Arrays;
+import java.util.HashMap;
 import java.util.List;
 import java.util.Locale;
+import java.util.Map;
 
 public interface Content {
 
@@ -28,6 +35,7 @@ public interface Content {
         public Book(Book b) {
             this.title = b.getTitle();
             this.id = b.getId();
+
         }
 
         public Book(String title, String id) {
@@ -44,6 +52,7 @@ public interface Content {
         public String getId() {
             return this.id;
         }
+
     }
 
     class Chapter implements Content {
@@ -185,7 +194,6 @@ public interface Content {
 
             return chunks;
         }
-
 
         //************* JSON FUNCTIONS ******************//
 
