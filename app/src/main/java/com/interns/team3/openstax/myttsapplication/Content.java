@@ -1,7 +1,5 @@
 package com.interns.team3.openstax.myttsapplication;
 
-import android.content.Context;
-
 import com.interns.team3.openstax.myttsapplication.ssml.SsmlBuilder;
 import org.json.JSONArray;
 import org.json.JSONException;
@@ -11,17 +9,8 @@ import org.jsoup.nodes.Document;
 import org.jsoup.nodes.Element;
 import org.jsoup.select.Elements;
 
-import java.io.BufferedReader;
-import java.io.IOException;
-import java.io.InputStreamReader;
 import java.util.ArrayList;
-import java.util.Arrays;
-import java.util.HashMap;
 import java.util.List;
-import java.util.Locale;
-import java.util.Map;
-
-import java.util.*;
 import java.util.stream.Collectors;
 
 
@@ -35,6 +24,7 @@ public interface Content {
 
         private String title;
         private String id;
+
         public Book(Book b) {
             this.title = b.getTitle();
             this.id = b.getId();
@@ -56,23 +46,58 @@ public interface Content {
             return this.id;
         }
 
-
     }
+
+    class Unit implements Content {
+
+        private String title;
+        private String id;
+        private String unitNum;
+
+        public Unit(Unit u) {
+            this.title = u.getTitle();
+            this.id = u.getId();
+            this.unitNum = this.getUnitNum();
+        }
+
+        public Unit(String title, String id, String unitNum) {
+            this.title = title;
+            this.id = id;
+            this.unitNum = unitNum;
+        }
+
+        @Override
+        public String getTitle() {
+            return title;
+        }
+
+
+        @Override
+        public String getId() {
+            return id;
+        }
+
+        public String getUnitNum() {
+            return unitNum;
+        }
+    }
+
     class Chapter implements Content {
 
         private String title;
         private String id;
-        private String chapter_num;
+        private String chapterNum;
+
         public Chapter(Chapter c) {
             this.title = c.getTitle();
             this.id = c.getId();
-            this.chapter_num = c.getChapterNum();
+            this.chapterNum = c.getChapterNum();
         }
 
-        public Chapter(String title, String id, String chapter_num) {
+        public Chapter(String title, String id, String chapterNum) {
             this.title = title;
             this.id = id;
-            this.chapter_num = chapter_num;
+            this.chapterNum = chapterNum;
         }
 
         @Override
@@ -86,11 +111,11 @@ public interface Content {
         }
 
         public String getChapterNum() {
-            return this.chapter_num;
+            return this.chapterNum;
         }
 
-
     }
+
     class Module implements Content {
 
         private String title;
@@ -99,7 +124,6 @@ public interface Content {
         private Document content;
         private String moduleNum;
         private int volume = 6;
-        private int structNum = 2;
         private List<EomSection> eomSections;
 
         Module(Module mod) {
@@ -109,7 +133,6 @@ public interface Content {
             this.moduleFile = mod.getModuleFile();
             this.content = mod.getContent();
             this.volume = mod.getVolume();
-            this.structNum = mod.getStructNum();
             this.eomSections = mod.getEomSections();
         }
 
@@ -123,16 +146,6 @@ public interface Content {
             setEomSections();
         }
 
-        Module(Element section, String moduleFile) {
-            this.title = section.select("md|title").text();
-            this.id = section.attr("document");
-            this.moduleNum = "";
-            this.moduleFile = moduleFile;
-            cleanContent();
-            this.content = Jsoup.parse(this.moduleFile, "UTF-8");
-            setEomSections();
-        }
-
         Module(Element section, String moduleFile, String moduleNum) {
             this.title = section.select("md|title").text();
             this.id = section.attr("document");
@@ -143,10 +156,12 @@ public interface Content {
             setEomSections();
         }
 
+        @Override
         public String getTitle() {
             return this.title;
         }
 
+        @Override
         public String getId() {
             return this.id;
         }
@@ -167,36 +182,27 @@ public interface Content {
             return this.volume;
         }
 
-        public int getStructNum() {
-            return this.structNum;
-        }
-
         public List<EomSection> getEomSections() {
             return this.eomSections;
         }
 
         private void setEomSections() {
             List<EomSection> sections = new ArrayList<>();
-            switch (this.structNum) {
-                case (1): {
-                    sections.add(new EomSection("summary", "summary"));
-                    sections.add(new EomSection("review-questions", "exercise", true, true));
-                    sections.add(new EomSection("critical-thinking", "exercise", false, true));
-                    sections.add(new EomSection("personal-application", "exercise", false, false));
-                    sections.add(new EomSection("glossary", "glossary"));
-                    break;
-                }
-                case (2): {
-                    sections.add(new EomSection("summary", "summary"));
-                    sections.add(new EomSection("multiple-choice", "exercise", true, true));
-                    sections.add(new EomSection("free-response", "exercise", false, true));
-                    sections.add(new EomSection("art-exercise", "exercise", true, true));
-                    sections.add(new EomSection("glossary", "glossary"));
-                    break;
-                }
-                default:
-                    System.err.printf("invalid structure: %d%n", this.structNum);
-            }
+
+            sections.add(new EomSection("summary", "summary"));
+
+            // Psychology
+            sections.add(new EomSection("review-questions", "exercise", true, true));
+            sections.add(new EomSection("critical-thinking", "exercise", false, true));
+            sections.add(new EomSection("personal-application", "exercise", false, false));
+
+            // Biology
+            sections.add(new EomSection("multiple-choice", "exercise", true, true));
+            sections.add(new EomSection("free-response", "exercise", false, true));
+            sections.add(new EomSection("art-exercise", "exercise", true, true));
+
+            sections.add(new EomSection("glossary", "glossary"));
+
             this.eomSections = sections;
         }
 
@@ -299,17 +305,6 @@ public interface Content {
             return absObj;
         }
 
-        private JSONObject pullParagraphs(Element section) throws JSONException {
-            Elements paragraphs = section.select("> p");
-            JSONObject paraObj = new JSONObject();
-            if (paragraphs != null) {
-                paraObj.put("paragraphs", new JSONArray(paragraphs.eachText()));
-            } else {
-                paraObj.put("paragraphs", JSONObject.NULL);
-            }
-            return paraObj;
-        }
-
         private JSONObject pullOpening() throws JSONException {
             JSONObject absObj = pullAbstract();
             JSONObject paraObj = pullParagraphs(getBody());
@@ -319,15 +314,6 @@ public interface Content {
             openingObj.put("paragraphs", paraObj.get("paragraphs"));
 
             return openingObj;
-        }
-
-        private JSONObject pullReadingSection(Element section) throws JSONException {
-            String title = section.getElementsByAttributeValue("data-type", "title").first().text();
-            JSONObject paraObj = pullParagraphs(section);
-            JSONObject sectionObj = new JSONObject();
-            sectionObj.put("title", title);
-            sectionObj.put("paragraphs", paraObj.get("paragraphs"));
-            return sectionObj;
         }
 
         private JSONArray pullAllReadingSections() throws JSONException {
@@ -345,6 +331,70 @@ public interface Content {
             }
 
             return readingSecArray;
+        }
+
+        private JSONObject pullReadingSection(Element section) throws JSONException {
+            String title = section.getElementsByAttributeValue("data-type", "title").first().text();
+            JSONObject paraObj = pullParagraphs(section);
+            JSONObject sectionObj = new JSONObject();
+            sectionObj.put("title", title);
+            sectionObj.put("paragraphs", paraObj.get("paragraphs"));
+            return sectionObj;
+        }
+
+        private JSONObject pullParagraphs(Element section) throws JSONException {
+            Elements paragraphs = section.select("> p");
+            JSONObject paraObj = new JSONObject();
+            if (paragraphs != null) {
+                paraObj.put("paragraphs", new JSONArray(paragraphs.eachText()));
+            } else {
+                paraObj.put("paragraphs", JSONObject.NULL);
+            }
+            return paraObj;
+        }
+
+        private JSONObject pullEomSections() throws JSONException {
+            JSONObject eomObj = new JSONObject();
+            for (EomSection section : this.eomSections) {
+                Element elem = getBody().getElementsByClass(section.getClassName()).first();
+                if (elem == null) {
+                    continue;
+                }
+                JSONObject obj = new JSONObject();
+                switch (section.getSecType()) {
+                    case ("summary"): {
+                        obj = pullReadingSection(elem);
+                        break;
+                    }
+                    case ("exercise"): {
+                        obj = pullSectionExercises(elem, section.isMultiChoice(), section.hasSolution());
+                        break;
+                    }
+                    case ("glossary"): {
+                        obj = pullGlossary();
+                    }
+                }
+                eomObj.put(section.getClassName(), obj);
+            }
+
+            return eomObj;
+        }
+
+        private JSONObject pullSectionExercises(Element section, boolean multiChoice, boolean hasSolution) throws JSONException {
+            if (section == null) {
+                return null;
+            }
+            String title = section.getElementsByAttributeValue("data-type", "title").first().text();
+            Elements exercises = section.getElementsByAttributeValue("data-type", "exercise");
+            JSONArray allExArray = new JSONArray();
+            int count = 1;
+            for (Element exercise : exercises) {
+                JSONObject exObj = pullExercise(exercise, multiChoice, hasSolution);
+                exObj.put("exercise", count);
+                allExArray.put(exObj);
+                count++;
+            }
+            return new JSONObject().put("title", title).put("exercises", allExArray);
         }
 
         private JSONObject pullExercise(Element exercise, boolean multiChoice, boolean hasSolution) throws JSONException {
@@ -368,23 +418,6 @@ public interface Content {
             return exObj;
         }
 
-        private JSONObject pullSectionExercises(Element section, boolean multiChoice, boolean hasSolution) throws JSONException {
-            if (section == null) {
-                return null;
-            }
-            String title = section.getElementsByAttributeValue("data-type", "title").first().text();
-            Elements exercises = section.getElementsByAttributeValue("data-type", "exercise");
-            JSONArray allExArray = new JSONArray();
-            int count = 1;
-            for (Element exercise : exercises) {
-                JSONObject exObj = pullExercise(exercise, multiChoice, hasSolution);
-                exObj.put("exercise", count);
-                allExArray.put(exObj);
-                count++;
-            }
-            return new JSONObject().put("title", title).put("exercises", allExArray);
-        }
-
         private JSONObject pullGlossary() throws JSONException {
             Element glossary = getBody().getElementsByAttributeValue("data-type", "glossary").first();
             String title = glossary.getElementsByAttributeValue("data-type", "glossary-title").first().text();
@@ -401,50 +434,6 @@ public interface Content {
             }
 
             return new JSONObject().put("title", title).put("key terms", glossaryArray);
-        }
-
-        private JSONObject pullEomSections() throws JSONException {
-            JSONObject eomObj = new JSONObject();
-            for (EomSection section : this.eomSections) {
-                Element elem = getBody().getElementsByClass(section.getClassName()).first();
-                JSONObject obj = new JSONObject();
-                switch (section.getSecType()) {
-                    case ("summary"): {
-                        obj = pullReadingSection(elem);
-                        break;
-                    }
-                    case ("exercise"): {
-                        obj = pullSectionExercises(elem, section.isMultiChoice(), section.hasSolution());
-                        break;
-                    }
-                    case ("glossary"): {
-                        obj = pullGlossary();
-                    }
-                }
-                eomObj.put(section.getClassName(), obj);
-            }
-
-            return eomObj;
-
-
-//            Element reviewQs = getBody().getElementsByClass("review-questions").first();
-//            Element critThink = getBody().getElementsByClass("critical-thinking").first();
-//            Element personalAp = getBody().getElementsByClass("personal-application").first();
-//
-//            JSONObject summaryObj = pullSummary();
-//            JSONObject reviewQsObj = pullSectionExercises(reviewQs, true, true);
-//            JSONObject critThinkObj = pullSectionExercises(critThink, false, true);
-//            JSONObject personalApObj = pullSectionExercises(personalAp, false, false);
-//            JSONObject glossaryObj = pullGlossary();
-//
-//            JSONObject eomObj = new JSONObject();
-//            eomObj.put("summary", summaryObj);
-//            eomObj.put("review questions", reviewQsObj);
-//            eomObj.put("critical thinking", critThinkObj);
-//            eomObj.put("personal application", personalApObj);
-//            eomObj.put("glossary", glossaryObj);
-//
-//            return eomObj;
         }
 
 
@@ -539,60 +528,6 @@ public interface Content {
                     }
                 }
             }
-
-
-//            if (eom != null) {
-//                if (!(eom.isNull("summary"))) {
-//                    SsmlBuilder summarySsml = new SsmlBuilder(volume);
-//                    JSONObject summary = eom.getJSONObject("summary");
-//                    summarySsml.text(summary.getString("title")).newParagraph();
-//                    ssmlList.add(summarySsml.build());
-//
-//                    buildArraySSML(ssmlList, summary.getJSONArray("paragraphs"), true);
-//                }
-//                if (!(eom.isNull("review questions"))) {
-//                    SsmlBuilder revQSsml = new SsmlBuilder(volume);
-//                    JSONObject revQsObj = eom.getJSONObject("review questions");
-//                    revQSsml.text(revQsObj.getString("title")).newParagraph();
-//                    ssmlList.add(revQSsml.build());
-//
-//                    buildExerciseSSML(ssmlList, revQsObj.getJSONArray("exercises"), true, true);
-//                }
-//                if (!(eom.isNull("critical thinking"))) {
-//                    SsmlBuilder critSsml = new SsmlBuilder(volume);
-//                    JSONObject critObj = eom.getJSONObject("critical thinking");
-//                    critSsml.text(critObj.getString("title")).newParagraph();
-//                    ssmlList.add(critSsml.build());
-//
-//                    buildExerciseSSML(ssmlList, critObj.getJSONArray("exercises"), false, true);
-//                }
-//                if (!(eom.isNull("personal application"))) {
-//                    SsmlBuilder pAppSsml = new SsmlBuilder(volume);
-//                    JSONObject pAppObj = eom.getJSONObject("personal application");
-//                    pAppSsml.text(pAppObj.getString("title")).newParagraph();
-//                    ssmlList.add(pAppSsml.build());
-//
-//                    buildExerciseSSML(ssmlList, pAppObj.getJSONArray("exercises"), false, false);
-//                }
-//                if (!(eom.isNull("glossary"))) {
-//                    SsmlBuilder glossSsml = new SsmlBuilder(volume);
-//                    JSONObject glossaryObj = eom.getJSONObject("glossary");
-//                    glossSsml.text(glossaryObj.getString("title")).newParagraph();
-//                    ssmlList.add(glossSsml.build());
-//
-//                    JSONArray keyTerms = glossaryObj.getJSONArray("key terms");
-//                    int length = keyTerms.length();
-//                    for (int i = 0; i < length; i++) {
-//                        SsmlBuilder keyTermSsml = new SsmlBuilder(volume);
-//                        JSONObject keyTerm = keyTerms.getJSONObject(i);
-//                        String term = keyTerm.getString("term");
-//                        String definition = keyTerm.getString("definition");
-//                        keyTermSsml.text(term).comma().sentence(definition).strongBreak();
-//                        ssmlList.add(keyTermSsml.build());
-//                    }
-//                }
-//            }
-
         }
 
         private void buildExerciseSSML(List<String> ssmlList, JSONArray exercises, boolean hasOptions, boolean hasSolution) throws JSONException {
@@ -734,47 +669,6 @@ public interface Content {
                     }
                 }
             }
-
-
-//            if (eom != null) {
-//                if (!(eom.isNull("summary"))) {
-//                    JSONObject summary = eom.getJSONObject("summary");
-//                    String sumTitle = String.format(secTitleFormat, summary.getString("title"));
-//                    textList.add(sumTitle);
-//                    textFromArray(textList, summary.getJSONArray("paragraphs"), false);
-//                }
-//                if (!(eom.isNull("review questions"))) {
-//                    JSONObject revQuesObj = eom.getJSONObject("review questions");
-//                    String revQuesTitle = String.format(secTitleFormat, revQuesObj.getString("title"));
-//                    textList.add(revQuesTitle);
-//                    exercisesText(textList, revQuesObj.getJSONArray("exercises"), true, true);
-//                }
-//                if (!(eom.isNull("critical thinking"))) {
-//                    JSONObject critObj = eom.getJSONObject("critical thinking");
-//                    String critTitle = String.format(secTitleFormat, critObj.getString("title"));
-//                    textList.add(critTitle);
-//                    exercisesText(textList, critObj.getJSONArray("exercises"), false, true);
-//                }
-//                if (!(eom.isNull("personal application"))) {
-//                    JSONObject perAppObj = eom.getJSONObject("personal application");
-//                    String perAppTitle = String.format(secTitleFormat, perAppObj.getString("title"));
-//                    textList.add(perAppTitle);
-//                    exercisesText(textList, perAppObj.getJSONArray("exercises"), false, false);
-//                }
-//                if (!(eom.isNull("glossary"))) {
-//                    JSONObject glossaryObj = eom.getJSONObject("glossary");
-//                    String glossTitle = String.format(secTitleFormat, glossaryObj.getString("title"));
-//                    textList.add(glossTitle);
-//                    JSONArray keyTerms = glossaryObj.getJSONArray("key terms");
-//                    int length = keyTerms.length();
-//                    for (int i = 0; i < length; i++) {
-//                        JSONObject keyTerm = keyTerms.getJSONObject(i);
-//                        String term = keyTerm.getString("term");
-//                        String definition = keyTerm.getString("definition");
-//                        textList.add(String.format(Locale.ENGLISH, "<b>%s</b> -- %s", term, definition));
-//                    }
-//                }
-//            }
         }
 
         private void exercisesText(List<String> textList, JSONArray exercises, boolean hasOptions, boolean hasSolution) throws JSONException {

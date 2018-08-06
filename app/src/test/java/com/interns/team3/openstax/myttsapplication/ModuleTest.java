@@ -21,9 +21,6 @@ public class ModuleTest {
     private String file2 = readFile(String.format("%s/psychology/%s/index.cnxml.html", booksPath, id2));
     private String file3 = readFile(String.format("%s/biology/%s/index.cnxml.html", booksPath, id3));
 
-    //    private AudioBook testBook = new AudioBook(bookPath, false);
-//    private Elements modules = testBook.getChapterModules(testBook.getChapters().first());
-//    private Content.Module introModule = testBook.getModule(modules.first());
     private Module testModule = new Module(id1, file1);
     private Module testModule2 = new Module(id2, file2);
     private Module testModule3 = new Module(id3, file3);
