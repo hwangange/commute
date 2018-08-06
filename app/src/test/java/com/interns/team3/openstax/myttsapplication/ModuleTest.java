@@ -2,45 +2,68 @@ package com.interns.team3.openstax.myttsapplication;
 
 import org.json.JSONException;
 import org.json.JSONObject;
-import org.jsoup.select.Elements;
 import org.junit.Test;
-import static org.junit.Assert.*;
 
 import java.io.IOException;
+import java.nio.charset.StandardCharsets;
+import java.nio.file.Files;
+import java.nio.file.Paths;
 import java.util.List;
 
-public class BookModuleTest {
-    private String bookPath = "/Users/Linda/AndroidStudioProjects1/MyTTSApplication/app/src/main/assets/Books/Psychology/";
-    private ParseObject testParse = new ParseObject(bookPath);
-    private Elements modules = testParse.getChapterModules(testParse.getChapters().first());
-    private Content.Module introModule = new Content.Module(bookPath, modules.first());
-    private Content.Module testModule = new Content.Module(bookPath, modules.last());
+import static com.interns.team3.openstax.myttsapplication.Content.Module;
 
-    public BookModuleTest() throws IOException {
+public class ModuleTest {
+    private String booksPath = "C:/Users/Damon/Documents/OpenStax/oer.exports/data";
+    private String id1 = "m48993";
+    private String id2 = "m49003";
+    private String id3 = "m44392";
+    private String file1 = readFile(String.format("%s/psychology/%s/index.cnxml.html", booksPath, id1));
+    private String file2 = readFile(String.format("%s/psychology/%s/index.cnxml.html", booksPath, id2));
+    private String file3 = readFile(String.format("%s/biology/%s/index.cnxml.html", booksPath, id3));
+
+    //    private AudioBook testBook = new AudioBook(bookPath, false);
+//    private Elements modules = testBook.getChapterModules(testBook.getChapters().first());
+//    private Content.Module introModule = testBook.getModule(modules.first());
+    private Module testModule = new Module(id1, file1);
+    private Module testModule2 = new Module(id2, file2);
+    private Module testModule3 = new Module(id3, file3);
+
+
+    public ModuleTest() throws IOException {
+    }
+
+    private static String readFile(String path) throws IOException {
+        byte[] encoded = Files.readAllBytes(Paths.get(path));
+        return new String(encoded, StandardCharsets.UTF_8);
     }
 
     @Test
     public void toJsonTest() throws JSONException {
-        JSONObject moduleObj = introModule.toJson();
+        JSONObject moduleObj = testModule.toJson();
         System.out.println(moduleObj.toString(4));
     }
 
     @Test
-    public void getOpeningTest() throws JSONException {
-        System.out.println(testModule.getOpening().toString(4));
+    public void correctChunks() throws JSONException {
+        List<TextAudioChunk> chunks = testModule3.initTextAudioChunks();
+        chunks.forEach(chunk -> {
+            System.out.println(chunk.getText());
+            System.out.println(chunk.getSsml());
+            System.out.println();
+        });
     }
 
-    @Test
-    public void getReadingSectionsTest() throws JSONException {
-        System.out.println(introModule.getReadingSections());
-        System.out.println(testModule.getReadingSections().toString(4));
-    }
-
-    @Test
-    public void getEocTest() throws JSONException {
-        System.out.println(introModule.getEoc());
-        System.out.println(testModule.getEoc().toString(4));
-    }
+//    @Test
+//    public void getReadingSectionsTest() throws JSONException {
+//        System.out.println(introModule.getReadingSections());
+//        System.out.println(testModule.getReadingSections().toString(4));
+//    }
+//
+//    @Test
+//    public void getEocTest() throws JSONException {
+//        System.out.println(introModule.getEom());
+//        System.out.println(testModule.getEom().toString(4));
+//    }
 
    /* @Test
     public void buildOpeningSSMLTest() throws JSONException {
@@ -57,10 +80,6 @@ public class BookModuleTest {
         System.out.println(testModule.buildEocSSML());
     } */
 
-    @Test
-    public void printModulePageTest() throws JSONException {
-        testModule.printModulePage("/Users/Linda/AndroidStudioProjects1/MyTTSApplication/app/src/test/modulePage.txt");
-    }
 /*
     @Test
     public void makeSectionsAudioTest() throws Exception {
