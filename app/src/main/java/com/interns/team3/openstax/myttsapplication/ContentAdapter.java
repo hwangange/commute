@@ -8,6 +8,8 @@ import android.view.ViewGroup;
 import android.widget.ImageView;
 import android.widget.TextView;
 
+import com.interns.team3.openstax.myttsapplication.Content;
+import com.interns.team3.openstax.myttsapplication.R;
 import com.squareup.picasso.Picasso;
 
 import java.util.List;

@@ -42,7 +42,7 @@ public class ModuleTest {
 
     @Test
     public void correctChunks() throws JSONException {
-        List<TextAudioChunk> chunks = testModule3.initTextAudioChunks();
+        List<TextAudioChunk> chunks = testModule3.initTextAudioChunks(6);
         chunks.forEach(chunk -> {
             System.out.println(chunk.getText());
             System.out.println(chunk.getSsml());

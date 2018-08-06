@@ -28,7 +28,6 @@ public interface Content {
         public Book(Book b) {
             this.title = b.getTitle();
             this.id = b.getId();
-
         }
 
         public Book(String title, String id) {
@@ -70,7 +69,6 @@ public interface Content {
         public String getTitle() {
             return title;
         }
-
 
         @Override
         public String getId() {
@@ -126,7 +124,7 @@ public interface Content {
         private int volume = 6;
         private List<EomSection> eomSections;
 
-        Module(Module mod) {
+        public Module(Module mod) {
             this.title = mod.getTitle();
             this.id = mod.getId();
             this.moduleNum = mod.getModuleNum();
@@ -136,7 +134,7 @@ public interface Content {
             this.eomSections = mod.getEomSections();
         }
 
-        Module(String modId, String moduleFile) {
+        public Module(String modId, String moduleFile) {
             this.id = modId;
             this.moduleFile = moduleFile;
             this.moduleNum = "";
@@ -146,7 +144,7 @@ public interface Content {
             setEomSections();
         }
 
-        Module(Element section, String moduleFile, String moduleNum) {
+        public Module(Element section, String moduleFile, String moduleNum) {
             this.title = section.select("md|title").text();
             this.id = section.attr("document");
             this.moduleNum = moduleNum;
@@ -186,6 +184,9 @@ public interface Content {
             return this.eomSections;
         }
 
+        /**
+         * Initializes the list of non-reading EOM sections.
+         */
         private void setEomSections() {
             List<EomSection> sections = new ArrayList<>();
 
@@ -210,6 +211,9 @@ public interface Content {
             return this.content.body();
         }
 
+        /**
+         * Cleans content markup by replacing unreadable character codes with corresponding characters.
+         */
         private void cleanContent() {
             this.moduleFile = this.moduleFile
                     .replaceAll("&amp;", "and")
@@ -220,10 +224,11 @@ public interface Content {
                     .replaceAll("\\[link]", "");
         }
 
-        public List<TextAudioChunk> initTextAudioChunks() throws JSONException {
-            return initTextAudioChunks(6);
-        }
-
+        /**
+         * Initializes TextAudioChunks by pairing text and ssml.
+         * @param volume ssml prosody parameter for Amazon Polly audio
+         * @return list of TextAudio Chunks that pair text with corresponding ssml
+         */
         public List<TextAudioChunk> initTextAudioChunks(int volume) throws JSONException {
             this.volume = volume;
             List<String> textList = modulePageText();
@@ -249,6 +254,11 @@ public interface Content {
         }
 
         //************* JSON FUNCTIONS ******************//
+
+        /**
+         * Converts module markup into easily readable and navigable JSON.
+         * @return JSON object containing all module content
+         */
         public JSONObject toJson() throws JSONException {
             JSONObject moduleObj = new JSONObject();
             moduleObj.put("title", this.title);
@@ -269,24 +279,52 @@ public interface Content {
             return moduleObj;
         }
 
+        /**
+         * @return JSON object representing module opening
+         */
         public JSONObject getOpening() throws JSONException {
             JSONObject module = toJson();
             return module.optJSONObject("opening");
         }
 
+        /**
+         * @return JSON object representing module reading sections
+         */
         private JSONArray getReadingSections() throws JSONException {
             JSONObject module = toJson();
             return module.optJSONArray("reading sections");
         }
 
+        /**
+         * @return JSON object representing module EOM sections
+         */
         private JSONObject getEom() throws JSONException {
             JSONObject module = toJson();
             return module.optJSONObject("eom");
         }
 
 
-
         //************* HELPER JSON FUNCTIONS ******************//
+
+        /**
+         * Pulls module opening content from module markup.
+         * @return JSON object representing module opening
+         */
+        private JSONObject pullOpening() throws JSONException {
+            JSONObject absObj = pullAbstract();
+            JSONObject paraObj = pullParagraphs(getBody());
+
+            JSONObject openingObj = new JSONObject();
+            openingObj.put("abstract", absObj.get("abstract"));
+            openingObj.put("paragraphs", paraObj.get("paragraphs"));
+
+            return openingObj;
+        }
+
+        /**
+         * Pulls module abstract content from module markup.
+         * @return JSON object representing module abstract
+         */
         private JSONObject pullAbstract() throws JSONException {
             Element abstractElem = getBody().getElementsByAttributeValue("data-type", "abstract").first();
 
@@ -305,17 +343,10 @@ public interface Content {
             return absObj;
         }
 
-        private JSONObject pullOpening() throws JSONException {
-            JSONObject absObj = pullAbstract();
-            JSONObject paraObj = pullParagraphs(getBody());
-
-            JSONObject openingObj = new JSONObject();
-            openingObj.put("abstract", absObj.get("abstract"));
-            openingObj.put("paragraphs", paraObj.get("paragraphs"));
-
-            return openingObj;
-        }
-
+        /**
+         * Pulls module reading sections content from module markup.
+         * @return JSON object representing module reading sections
+         */
         private JSONArray pullAllReadingSections() throws JSONException {
             Elements sections = getBody().select("> section");
             List<String> eomClasses = this.eomSections.stream().map(EomSection::getClassName).collect(Collectors.toList());
@@ -333,6 +364,11 @@ public interface Content {
             return readingSecArray;
         }
 
+        /**
+         * Pulls module reading section content of specified section from module markup.
+         * @param section Jsoup Element representing reading section markup element
+         * @return JSON object representing module reading section
+         */
         private JSONObject pullReadingSection(Element section) throws JSONException {
             String title = section.getElementsByAttributeValue("data-type", "title").first().text();
             JSONObject paraObj = pullParagraphs(section);
@@ -342,6 +378,11 @@ public interface Content {
             return sectionObj;
         }
 
+        /**
+         * Pulls paragraphs of specified section from module markup.
+         * @param section Jsoup Element representing markup element full of paragraphs
+         * @return JSON object representing paragraphs
+         */
         private JSONObject pullParagraphs(Element section) throws JSONException {
             Elements paragraphs = section.select("> p");
             JSONObject paraObj = new JSONObject();
@@ -353,6 +394,10 @@ public interface Content {
             return paraObj;
         }
 
+        /**
+         * Pulls module EOM sections content from module markup.
+         * @return JSON object representing module EOM sections
+         */
         private JSONObject pullEomSections() throws JSONException {
             JSONObject eomObj = new JSONObject();
             for (EomSection section : this.eomSections) {
@@ -380,6 +425,13 @@ public interface Content {
             return eomObj;
         }
 
+        /**
+         * Pulls exercises of specified section from module markup.
+         * @param section Jsoup Element containing exercises
+         * @param multiChoice boolean stating whether exercises contain answer choices
+         * @param hasSolution boolean stating whether exercises have solutions
+         * @return JSON object representing section exercises
+         */
         private JSONObject pullSectionExercises(Element section, boolean multiChoice, boolean hasSolution) throws JSONException {
             if (section == null) {
                 return null;
@@ -397,6 +449,13 @@ public interface Content {
             return new JSONObject().put("title", title).put("exercises", allExArray);
         }
 
+        /**
+         * Pulls exercise content of specified exercise from module markup.
+         * @param exercise Jsoup Element representing exercise
+         * @param multiChoice boolean stating whether exercise contains answer choices
+         * @param hasSolution boolean stating whether exercise has solutions
+         * @return JSON object representing exercise
+         */
         private JSONObject pullExercise(Element exercise, boolean multiChoice, boolean hasSolution) throws JSONException {
             Element problem = exercise.getElementsByAttributeValue("data-type", "problem").first();
             String question = problem.select("p").text();
@@ -418,6 +477,10 @@ public interface Content {
             return exObj;
         }
 
+        /**
+         * Pulls glossary content from module markup.
+         * @return JSON object representing module glossary
+         */
         private JSONObject pullGlossary() throws JSONException {
             Element glossary = getBody().getElementsByAttributeValue("data-type", "glossary").first();
             String title = glossary.getElementsByAttributeValue("data-type", "glossary-title").first().text();
@@ -439,6 +502,11 @@ public interface Content {
 
 
         //************* SSML FUNCTIONS ******************//
+
+        /**
+         * Builds a list of ssml strings of module content.
+         * @return String List representing ssml
+         */
         List<String> buildModuleSSML() throws JSONException {
             List<String> ssmlList = new ArrayList<>();
             buildOpeningSSML(ssmlList);
@@ -447,6 +515,10 @@ public interface Content {
             return ssmlList;
         }
 
+        /**
+         * Builds up ssmlList with content of opening
+         * @param ssmlList String List to be filled with ssml strings
+         */
         private void buildOpeningSSML(List<String> ssmlList) throws JSONException {
             JSONObject opening = getOpening();
 
@@ -472,6 +544,10 @@ public interface Content {
             }
         }
 
+        /**
+         * Builds up ssmlList with content of reading sections
+         * @param ssmlList String List to be filled with ssml strings
+         */
         private void buildReadSecSSMLArray(List<String> ssmlList) throws JSONException {
             JSONArray readingSec = getReadingSections();
             if (readingSec != null) {
@@ -482,6 +558,11 @@ public interface Content {
             }
         }
 
+        /**
+         * Builds up ssmlList with content of specified reading section
+         * @param ssmlList String List to be filled with ssml strings
+         * @param section JSON object representing reading section
+         */
         private void buildOneReadingSectionSSML(List<String> ssmlList, JSONObject section) throws JSONException {
             int secNum = section.getInt("section");
             String title = section.getString("title");
@@ -493,6 +574,10 @@ public interface Content {
             buildArraySSML(ssmlList, paragraphs, true);
         }
 
+        /**
+         * Builds up ssmlList with content of EOM
+         * @param ssmlList String List to be filled with ssml strings
+         */
         private void buildEomSSML(List<String> ssmlList) throws JSONException {
             JSONObject eom = getEom();
             if (eom != null) {
@@ -530,6 +615,13 @@ public interface Content {
             }
         }
 
+        /**
+         * Builds up ssmlList with content of specified exercises.
+         * @param ssmlList String List to be filled with ssml strings
+         * @param exercises JSON array of exercise objects
+         * @param hasOptions boolean stating whether exercises contain answer choices
+         * @param hasSolution boolean stating whether exercises have solutions
+         */
         private void buildExerciseSSML(List<String> ssmlList, JSONArray exercises, boolean hasOptions, boolean hasSolution) throws JSONException {
             int length = exercises.length();
             for (int i = 0; i < length; i++) {
@@ -557,6 +649,11 @@ public interface Content {
             }
         }
 
+        /**
+         * Builds up ssmlList with options of specified exercise.
+         * @param ssmlList String List to be filled with ssml strings
+         * @param exercise JSON object representing exercise
+         */
         private void buildExerciseOptionsSSML(List<String> ssmlList, JSONObject exercise) throws JSONException {
             JSONArray options = exercise.getJSONArray("options");
             int length = options.length();
@@ -570,6 +667,12 @@ public interface Content {
             }
         }
 
+        /**
+         * Builds up ssmlList with content of specified JSON array.
+         * @param ssmlList String List to be filled with ssml strings
+         * @param array JSON array of JSON strings
+         * @param paragraphs boolean stating whether array is filled with paragraphs
+         */
         private void buildArraySSML(List<String> ssmlList, JSONArray array, boolean paragraphs) throws JSONException {
             int length = array.length();
             for (int i = 0; i < length; i++) {
@@ -591,6 +694,11 @@ public interface Content {
 
 
         //************* TEXT FUNCTIONS ******************//
+
+        /**
+         * Builds a list of text strings of module content.
+         * @return String List representing text
+         */
         List<String> modulePageText() throws JSONException {
             List<String> textList = new ArrayList<>();
             openingText(textList);
@@ -599,6 +707,10 @@ public interface Content {
             return textList;
         }
 
+        /**
+         * Builds up textList with content of opening
+         * @param textList String List to be filled with text strings
+         */
         private void openingText(List<String> textList) throws JSONException {
             JSONObject opening = getOpening();
             textList.add(this.title);
@@ -617,6 +729,10 @@ public interface Content {
             }
         }
 
+        /**
+         * Builds up textList with content of reading sections
+         * @param textList String List to be filled with text strings
+         */
         private void readingSecText(List<String> textList) throws JSONException {
             JSONArray readingSec = getReadingSections();
             if (readingSec != null) {
@@ -627,6 +743,11 @@ public interface Content {
             }
         }
 
+        /**
+         * Builds up textList with content of specified reading section
+         * @param textList String List to be filled with text strings
+         * @param section JSON object representing reading section
+         */
         private void oneReadingSecText(List<String> textList, JSONObject section) throws JSONException {
             int secNum = section.getInt("section");
             String title = section.getString("title");
@@ -636,6 +757,10 @@ public interface Content {
             textFromArray(textList, paragraphs, false);
         }
 
+        /**
+         * Builds up textList with content of EOM
+         * @param textList String List to be filled with text strings
+         */
         private void eomText(List<String> textList) throws JSONException {
             JSONObject eom = getEom();
             String secTitleFormat = "<h4><b>%s</b>:</h4>";
@@ -671,6 +796,13 @@ public interface Content {
             }
         }
 
+        /**
+         * Builds up textList with content of specified exercises.
+         * @param textList String List to be filled with text strings
+         * @param exercises JSON array of exercise objects
+         * @param hasOptions boolean stating whether exercises contain answer choices
+         * @param hasSolution boolean stating whether exercises have solutions
+         */
         private void exercisesText(List<String> textList, JSONArray exercises, boolean hasOptions, boolean hasSolution) throws JSONException {
             int length = exercises.length();
             for (int i = 0; i < length; i++) {
@@ -689,6 +821,11 @@ public interface Content {
             }
         }
 
+        /**
+         * Builds up textList with options of specified exercise.
+         * @param textList String List to be filled with text strings
+         * @param exercise JSON object representing exercise
+         */
         private void exerciseOptionsText(List<String> textList, JSONObject exercise) throws JSONException {
             JSONArray options = exercise.getJSONArray("options");
             int length = options.length();
@@ -700,6 +837,12 @@ public interface Content {
             }
         }
 
+        /**
+         * Builds up textList with content of specified JSON array.
+         * @param textList String List to be filled with text strings
+         * @param array JSON array of JSON strings
+         * @param indent boolean stating whether text strings should be indented
+         */
         private void textFromArray(List<String> textList, JSONArray array, boolean indent) throws JSONException {
             int length = array.length();
             for (int i = 0; i < length; i++) {
@@ -711,41 +854,5 @@ public interface Content {
                 textList.add(output);
             }
         }
-    }
-}
-
-
-class EomSection {
-    private String className;
-    private String secType;
-    private boolean multiChoice = false;
-    private boolean hasSolution = false;
-
-    EomSection(String className, String type) {
-        this.className = className;
-        this.secType = type;
-    }
-
-    EomSection(String className, String type, boolean multiChoice, boolean hasSolution) {
-        this.className = className;
-        this.secType = type;
-        this.multiChoice = multiChoice;
-        this.hasSolution = hasSolution;
-    }
-
-    String getClassName() {
-        return this.className;
-    }
-
-    String getSecType() {
-        return this.secType;
-    }
-
-    boolean isMultiChoice() {
-        return this.multiChoice;
-    }
-
-    boolean hasSolution() {
-        return this.hasSolution;
     }
 }

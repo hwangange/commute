@@ -11,7 +11,7 @@ public class TextAudioChunk {
     TextAudioChunk() {
     }
 
-    TextAudioChunk(TextAudioChunk temp){
+    public TextAudioChunk(TextAudioChunk temp){
         this.id = temp.getId();
         this.text = temp.getText();
         this.ssml = temp.getSsml();

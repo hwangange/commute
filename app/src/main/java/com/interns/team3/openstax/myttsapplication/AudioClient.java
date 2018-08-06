@@ -80,7 +80,7 @@ public abstract class AudioClient {
         }
     }
 
-    static List<Voice> listAllVoices(Context context) {
+    public static List<Voice> listAllVoices(Context context) {
         return getGeneralClient(context).getSupportedVoices();
     }
 
@@ -154,7 +154,7 @@ public abstract class AudioClient {
         private Context context;
         private AmazonPollyPresigningClient client;
 
-        AmazonClient(String folder, Context context) {
+        public AmazonClient(String folder, Context context) {
             super(folder);
             this.context = context;
             this.voice = "Matthew";
@@ -163,7 +163,7 @@ public abstract class AudioClient {
             initPollyClient();
         }
 
-        AmazonClient(String folder, Context context, String voice) {
+        public AmazonClient(String folder, Context context, String voice) {
             super(folder);
             this.context = context;
             this.voice = voice;
@@ -171,19 +171,10 @@ public abstract class AudioClient {
             initPollyClient();
         }
 
-        AmazonClient(String folder, Context context, boolean isMale) {
+        public AmazonClient(String folder, Context context, boolean isMale) {
             super(folder);
             this.context = context;
             this.voice = isMale ? "Matthew" : "Joanna";
-            this.language = "en-US";
-            this.isMale = isMale;
-            initPollyClient();
-        }
-
-        AmazonClient(String folder, Context context, String voice, boolean isMale) {
-            super(folder);
-            this.context = context;
-            this.voice = voice;
             this.language = "en-US";
             this.isMale = isMale;
             initPollyClient();

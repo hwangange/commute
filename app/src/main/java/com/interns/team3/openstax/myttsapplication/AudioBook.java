@@ -28,14 +28,14 @@ public class AudioBook {
     private final String bookName;
     private final boolean hasUnits;
 
-    AudioBook (Context context, String bookName) {
+    public AudioBook (Context context, String bookName) {
         this.context = context;
         this.bookName = bookName;
         this.mainFolder = "Books/" + bookName + "/";
         this.hasUnits = false;
     }
 
-    AudioBook(Context context, String bookName, boolean hasUnits) {
+    public AudioBook(Context context, String bookName, boolean hasUnits) {
         this.context = context;
         this.bookName = bookName;
         this.mainFolder = "Books/" + bookName + "/";
@@ -50,6 +50,11 @@ public class AudioBook {
         return this.mainFolder;
     }
 
+    /**
+     * Reads file and writes it to a string.
+     * @param file path to file to be read
+     * @return String containing file content
+     */
     private String readAsset(String file) throws IOException {
         InputStreamReader input = new InputStreamReader(this.context.getAssets().open(file));
         StringBuilder buf = new StringBuilder();
@@ -61,6 +66,10 @@ public class AudioBook {
         return buf.toString();
     }
 
+    /**
+     * Reads book collection file and writes it to a string.
+     * @return String containing book collection file content
+     */
     private String getCollectionFile() {
         String collection = mainFolder + "collection.xml";
         try {
@@ -71,6 +80,10 @@ public class AudioBook {
         }
     }
 
+    /**
+     * Reads module index file and writes it to a string.
+     * @return String containing module index file content
+     */
     public String getModuleFile(String moduleID) {
         String module = mainFolder + moduleID + "/index.cnxml.html";
         try {
@@ -81,10 +94,19 @@ public class AudioBook {
         }
     }
 
+    /**
+     * Converts file to Jsoup doc.
+     * @param file path to file to be converted
+     * @return Jsoup doc representing file
+     */
     private Document toJsoupDoc(String file) {
         return Jsoup.parse(file, "UTF-8");
     }
 
+    /**
+     * Pulls units from book if they exist.
+     * @return Jsoup Elements representing book units
+     */
     public Elements getUnits() {
         if (this.hasUnits) {
             Document doc = toJsoupDoc(getCollectionFile());
@@ -94,6 +116,9 @@ public class AudioBook {
         }
     }
 
+    /**
+     * Print book units for the purpose of debugging.
+     */
     public void printUnits() {
         if (getUnits() != null) {
             Elements units = getUnits();
@@ -104,6 +129,11 @@ public class AudioBook {
         }
     }
 
+    /**
+     * Pulls chapters from specified unit of book.
+     * @param unit Jsoup Element representing book unit
+     * @return Jsoup Elements representing unit chapters
+     */
     private Elements getUnitChapters(Element unit) {
         if (this.hasUnits) {
             return unit.select("> col|content > col|subcollection");
@@ -112,6 +142,10 @@ public class AudioBook {
         }
     }
 
+    /**
+     * Pulls all chapters from book.
+     * @return Jsoup Elements representing book chapters
+     */
     public Elements getChapters() {
         if (this.hasUnits) {
             Elements chapters = new Elements();
@@ -125,6 +159,9 @@ public class AudioBook {
         }
     }
 
+    /**
+     * Print book chapters for the purpose of debugging.
+     */
     public void printChapters() {
         Elements chapters = getChapters();
         for (Element chapter: chapters) {
@@ -133,10 +170,19 @@ public class AudioBook {
         }
     }
 
+    /**
+     * Pulls modules from specified chapter
+     * @param chapter Jsoup Element representing book chapter
+     * @return Jsoup Elements representing chapter modules
+     */
     public Elements getChapterModules(Element chapter) {
         return chapter.getElementsByTag("col:module");
     }
 
+    /**
+     * Print chapter modules for the purpose of debugging.
+     * @param chapter Jsoup Element representing book chapter
+     */
     public void printChapterModules(Element chapter) {
         Elements modules = getChapterModules(chapter);
         for (Element module: modules) {
@@ -145,11 +191,24 @@ public class AudioBook {
         }
     }
 
+    /**
+     * Gets Content Module object of specified module.
+     * @param module Jsoup Element representing book module
+     * @param moduleNum String representing module number
+     * @return Content Module object representing book module
+     */
     public Module getModule(Element module, String moduleNum) {
         String moduleId = module.attr("document");
         return new Module(module, getModuleFile(moduleId), moduleNum);
     }
 
+    /**
+     * Converts specified chapter to JSON object.
+     * @param chapter Jsoup Element representing book chapter
+     * @param chapterNum int representing chapter number
+     * @param debug boolean stating whether to provide debugging output
+     * @return JSON object representing chapter
+     */
     public JSONObject chapterToJson(Element chapter, int chapterNum, boolean debug) throws JSONException {
         JSONObject chapterObj = new JSONObject();
         String title = chapter.select("md|title").first().text();
@@ -172,6 +231,13 @@ public class AudioBook {
         return chapterObj;
     }
 
+    /**
+     * Converts specified chapter to ssml list
+     * @param chapter Jsoup Element representing book chapter
+     * @param chapterNum int representing chapter number
+     * @param debug boolean stating whether to provide debugging output
+     * @return String List full of ssml strings representing book chapter content
+     */
     private List<String> chapterToSSML(Element chapter, int chapterNum, boolean debug) throws JSONException {
         List<String> chapterSSML = new ArrayList<>();
         SsmlBuilder ssml = new SsmlBuilder();
@@ -193,6 +259,10 @@ public class AudioBook {
         return chapterSSML;
     }
 
+    /**
+     * Pulls metadata from book collection file.
+     * @return Mapping of metadata elements to their values
+     */
     public Map<String, String> metadata() {
         Document doc = toJsoupDoc(getCollectionFile());
         String contentUrl = doc.select("metadata md|content-url").text();
@@ -217,6 +287,11 @@ public class AudioBook {
         return metadata;
     }
 
+    /**
+     * Converts specified book to JSON object.
+     * @param debug boolean stating whether to provide debugging output
+     * @return JSON object representing book
+     */
     public JSONObject bookToJson(boolean debug) throws JSONException {
         Map<String, String> metadata = metadata();
         JSONObject bookObj = new JSONObject(metadata);
@@ -237,6 +312,11 @@ public class AudioBook {
         return bookObj;
     }
 
+    /**
+     * Converts book ssml list
+     * @param debug boolean stating whether to provide debugging output
+     * @return String List full of ssml strings representing book content
+     */
     public List<String> bookToSSML(boolean debug) throws JSONException {
         Document doc = toJsoupDoc(getCollectionFile());
         String title = doc.select("metadata md|title").text();
@@ -259,6 +339,11 @@ public class AudioBook {
         return bookSSML;
     }
 
+    /**
+     * Creates JSON file of specified JSON object
+     * @param obj JSON object to be converted
+     * @param fileString name and path of JSON file
+     */
     public void jsonToFile(JSONObject obj, String fileString) {
         try {
             FileWriter fileWriter = new FileWriter(fileString);
