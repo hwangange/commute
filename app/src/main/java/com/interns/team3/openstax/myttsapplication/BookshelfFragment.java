@@ -5,6 +5,7 @@ import android.net.Uri;
 import android.provider.MediaStore;
 import android.support.v4.app.Fragment;
 import android.os.Bundle;
+import android.support.v4.widget.NestedScrollView;
 import android.support.v7.widget.GridLayoutManager;
 import android.support.v7.widget.LinearLayoutManager;
 import android.support.v7.widget.RecyclerView;
@@ -47,6 +48,8 @@ public class BookshelfFragment extends Fragment {
 
 
     private HashMap<String, ArrayList<AudioBook>> genres;
+
+    private NestedScrollView nestedScrollView;
 
     // required empty constructor
     public BookshelfFragment(){}
@@ -110,6 +113,11 @@ public class BookshelfFragment extends Fragment {
 
             addItems();
             sectionedAdapter.notifyDataSetChanged();
+
+            // automatically "scroll" to top upon first opening
+            nestedScrollView = view.findViewById(R.id.nested_scrollview);
+            nestedScrollView.setFocusableInTouchMode(true);
+            nestedScrollView.setDescendantFocusability(ViewGroup.FOCUS_BEFORE_DESCENDANTS);
         }
 
 

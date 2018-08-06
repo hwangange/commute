@@ -27,7 +27,7 @@
         -->
 
         <activity android:name=".LoginActivity" />
-        <activity android:name=".MainActivity" android:theme="@style/DarkAppTheme">
+        <activity android:name=".MainActivity">
             <!--android:theme="@style/OpaqueAppTheme"-->
 
             <intent-filter>

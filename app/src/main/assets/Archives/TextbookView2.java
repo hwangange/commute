@@ -561,7 +561,7 @@ public class TextbookView2 extends AppCompatActivity implements PlayerBarFragmen
                 TextbookViewAdapter.ViewHolder vh = (TextbookViewAdapter.ViewHolder) recyclerView.findViewHolderForAdapterPosition(position);
                 if (vh != null) {
                     View v = vh.textView;
-                    v.findViewById(R.id.item).setBackgroundColor(ContextCompat.getColor(getApplicationContext(), R.color.defaultGrey));
+                    v.findViewById(R.id.item).setBackgroundColor(ContextCompat.getColor(getApplicationContext(), R.color.transparentGrey));
                 }
             }
 

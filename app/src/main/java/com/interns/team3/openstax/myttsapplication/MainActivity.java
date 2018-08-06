@@ -1,6 +1,8 @@
 package com.interns.team3.openstax.myttsapplication;
 
 
+import android.app.Activity;
+import android.content.Intent;
 import android.content.SharedPreferences;
 import android.graphics.PorterDuff;
 import android.graphics.drawable.Drawable;
@@ -73,6 +75,18 @@ public class MainActivity extends AppCompatActivity implements HOMEFragment.OnFr
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
+
+        int themeMode = getDelegate().getDefaultNightMode();
+        if (themeMode == AppCompatDelegate.MODE_NIGHT_AUTO) {
+            Log.i("Current Theme", "Auto");
+        } else if (themeMode == AppCompatDelegate.MODE_NIGHT_NO) {
+            Log.i("Current Theme", "Day");
+            setTheme(R.style.AppTheme);
+        } else if (themeMode == AppCompatDelegate.MODE_NIGHT_YES) {
+            Log.i("Current Theme", "Night");
+            setTheme(R.style.DarkAppTheme);
+        }
+
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
         setSupportActionBar(findViewById(R.id.main_toolbar));
@@ -370,6 +384,9 @@ public class MainActivity extends AppCompatActivity implements HOMEFragment.OnFr
                 // hide playerBarFragment?
                 playerBarFragment.setVisible(false);
                 //fragmentManager.beginTransaction().remove(playerBarFragment).commit();
+
+                // show the TextbookView tab first.
+                textbookViewTab.select();
             }
 
 
@@ -401,7 +418,7 @@ public class MainActivity extends AppCompatActivity implements HOMEFragment.OnFr
             // change the module to NOT favorited
             dragViewFavorite.setImageDrawable(getDrawable(R.drawable.ic_border_heart_24dp));
             Drawable icon = dragViewFavorite.getDrawable();
-            icon.setColorFilter(this.getColor(R.color.white), PorterDuff.Mode.SRC_ATOP);
+            icon.setColorFilter(this.getColor(R.color.iconTint), PorterDuff.Mode.SRC_ATOP);
             newFaves.remove(tag);
 
             if(shouldToggle && bottomNavigationView.getSelectedItemId() == R.id.navigation_library)
@@ -575,6 +592,17 @@ public class MainActivity extends AppCompatActivity implements HOMEFragment.OnFr
     }
 
     public String getFileTag(){ return tag; }
+
+    public void setNewTheme(String theme) {
+
+        if(theme.equals("Day")) AppCompatDelegate.setDefaultNightMode(AppCompatDelegate.MODE_NIGHT_NO);
+        else {
+            Log.i("NIGHT", "please become night...");
+            AppCompatDelegate.setDefaultNightMode(AppCompatDelegate.MODE_NIGHT_YES);
+        }
+
+        recreate();
+    }
 
 
 }

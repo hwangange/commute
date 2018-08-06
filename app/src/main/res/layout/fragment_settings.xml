@@ -15,6 +15,20 @@
     <TextView
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
+        android:text="Theme"
+        android:textSize="20sp" />
+
+    <Switch
+        android:id="@+id/themeSwitch"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginVertical="@dimen/activity_vertical_margin"
+        android:paddingStart="@dimen/default_margin"
+        android:paddingEnd="@dimen/half_margin" />
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
         android:text="Voice"
         android:textSize="20sp" />
 
@@ -70,8 +84,6 @@
         android:layout_height="wrap_content"
         android:layout_gravity="center_horizontal"
         android:id="@+id/voicesProgressBar" />
-
-
 
 
 </LinearLayout>

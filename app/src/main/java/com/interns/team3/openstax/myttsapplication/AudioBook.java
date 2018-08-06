@@ -32,6 +32,7 @@ public class AudioBook {
         this.context = null;
         this.mainFolder = bookPath;
         this.hasUnits = hasUnits;
+        this.bookName = bookPath.substring(bookPath.indexOf("Books/") + 6, bookPath.length()-1);
     }
 
     AudioBook (Context context, String bookName) {

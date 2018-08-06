@@ -8,7 +8,9 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:id="@+id/parent_layout"
-    android:orientation="vertical">
+    android:orientation="vertical"
+    android:background="@color/windowBackground"
+    android:textColor="@color/textColor">
 
     <com.sothree.slidinguppanel.SlidingUpPanelLayout
         android:id="@+id/sliding_layout"
@@ -28,6 +30,12 @@
             android:layout_height="match_parent"
             android:orientation="vertical"
             tools:context=".MainActivity">
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="@color/windowBackground"
+                android:text="This should change color. If not, then I haven't made any progress."/>
             <!--
             android:paddingTop="100dp"
             android:paddingTop="?android:attr/actionBarSize"
@@ -68,8 +76,6 @@
             android:focusable="false"
             android:id="@+id/panel"
             android:background="@color/slideUpBar_background">
-            <!--android:background="#ffffff"-->
-
 
             <LinearLayout
                 android:id="@+id/dragView"
@@ -79,15 +85,13 @@
                 android:orientation="horizontal"
                 android:layout_marginHorizontal="@dimen/activity_vertical_margin">
 
-                <!--android:background="@color/darkBlack"-->
-
                 <ImageView
                     android:id="@+id/dragViewPlayButton"
                     android:contentDescription="Play"
                     android:layout_width="0dp"
                     android:layout_weight="1"
                     android:layout_height="wrap_content"
-                    android:tint="@color/white"
+                    android:tint="@color/iconTint"
                     android:src="@drawable/play"
                     android:layout_gravity="center_vertical" />
 
@@ -130,7 +134,7 @@
                 android:orientation="vertical"
                 android:layout_width="match_parent"
                 android:layout_height="0dp"
-                android:background="@color/darkBlack"
+                android:background="@color/nowPlaying_background"
                 android:layout_weight="1">
             </FrameLayout>
 

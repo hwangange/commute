@@ -17,6 +17,8 @@ import android.widget.ImageView;
 import android.widget.TextView;
 import android.widget.Toast;
 
+import com.squareup.picasso.Picasso;
+
 import java.io.File;
 import java.util.ArrayList;
 import java.util.HashSet;
@@ -244,7 +246,11 @@ public class LIBRARYFragment extends Fragment {
 
             String bookTitle = item.getBookTitle();
             String modId = item.getModId();
-            //itemHolder.imgItem.setImageResource(name.hashCode() % 2 == 0 ? R.drawable.ic_face_black_48dp : R.drawable.ic_tag_faces_black_48dp);
+
+            ImageView bookImg = itemHolder.imgItem;
+            String modified_title= bookTitle.replaceAll(" ", "_").replaceAll("\\.", "").toLowerCase();
+            int drawable_id = getContext().getResources().getIdentifier(modified_title, "drawable", getContext().getPackageName());
+            Picasso.with(getContext()).load(drawable_id).into(bookImg);
 
             itemHolder.rootView.setOnClickListener(new View.OnClickListener() {
                 @Override

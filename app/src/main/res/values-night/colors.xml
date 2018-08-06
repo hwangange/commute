@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <color name="colorPrimary">#3F51B5</color>
+    <color name="colorPrimaryDark">#303F9F</color>
+    <color name="colorAccent">#FF4081</color>
+    <color name="colorPressed">#cac4c4</color>
+    <color name="colorSelected">#a3a3a3</color>
+    <color name="colorHighlighted">#ffe605</color>
+    <color name="transparentGrey">#00eeeeee</color>
+    <color name="lightBlack">#303030</color>
+    <color name="darkBlack">#1b1b1b</color>
+    <color name="white">#fff</color>
+    <color name="lightPurple">#8c9eff</color>
+
+    <color name="grey">#c9c9c9</color>
+
+    <color name="opaque_colorPrimary">#293f51b5</color>
+    <color name="opaque_colorPrimaryDark">#26303f9f</color>
+    <color name="opaque_colorAccent">#2eff4081</color>
+
+    <!-- These values are different for day/night. -->
+    <color name="slideUpBar_background">#505050</color>
+    <color name="iconTint">#fff</color>
+    <color name="nowPlaying_background">@color/darkBlack</color>
+    <color name="normalText">@color/white</color>
+    <color name="highlightedText">@color/darkBlack</color>
+    <color name="selectorItem">@color/lightBlack</color>
+
+    <!-- Previously in styles file. -->
+    <color name="windowBackground">@color/lightBlack</color>
+    <color name="textColor">@color/white</color>
+
+    <!-- for sectioned adapter -->
+    <color name="app_background_color">#FAFAFA</color>
+    <color name="divider_color">#C7C7CC</color>
+
+    <color name="item_selected_background_color">#C7C7CC</color>
+    <color name="image_placeholder_background_color">#C7C7CC</color>
+
+
+</resources>

@@ -73,12 +73,12 @@ public class TextbookViewAdapter extends RecyclerView.Adapter<TextbookViewAdapte
             if(position == getSelected() && position != 0)
             {
                 holder.textView.setBackgroundColor(ContextCompat.getColor(context, R.color.colorHighlighted));
-                holder.textView.setTextColor(ContextCompat.getColor(context, R.color.darkBlack));
+                holder.textView.setTextColor(ContextCompat.getColor(context, R.color.highlightedText));
             }
             else
             {
-                holder.textView.setBackgroundColor(ContextCompat.getColor(context, R.color.defaultGrey));
-                holder.textView.setTextColor(ContextCompat.getColor(context, R.color.white));
+                holder.textView.setBackgroundColor(ContextCompat.getColor(context, R.color.transparentGrey));
+                holder.textView.setTextColor(ContextCompat.getColor(context, R.color.normalText));
             }
 
 

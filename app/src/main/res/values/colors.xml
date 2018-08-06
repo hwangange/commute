@@ -6,17 +6,29 @@
     <color name="colorPressed">#cac4c4</color>
     <color name="colorSelected">#a3a3a3</color>
     <color name="colorHighlighted">#ffe605</color>
-    <color name="defaultGrey">#00eeeeee</color>
+    <color name="transparentGrey">#00eeeeee</color>
     <color name="lightBlack">#303030</color>
     <color name="darkBlack">#1b1b1b</color>
     <color name="white">#fff</color>
     <color name="lightPurple">#8c9eff</color>
 
-    <color name="slideUpBar_background">#505050</color>
+    <color name="grey">#efefef</color>
 
     <color name="opaque_colorPrimary">#293f51b5</color>
     <color name="opaque_colorPrimaryDark">#26303f9f</color>
     <color name="opaque_colorAccent">#2eff4081</color>
+
+    <!-- These values are different for day/night. -->
+    <color name="slideUpBar_background">#ffffff</color>
+    <color name="iconTint">@color/darkBlack</color>
+    <color name="nowPlaying_background">@color/transparentGrey</color>
+    <color name="normalText">@color/darkBlack</color>
+    <color name="highlightedText">@color/darkBlack</color>
+    <color name="selectorItem">@color/grey</color>
+
+    <!-- Previously in styles file. -->
+    <color name="windowBackground">@color/grey</color>
+    <color name="textColor">@color/darkBlack</color>
 
     <!-- for sectioned adapter -->
     <color name="app_background_color">#FAFAFA</color>

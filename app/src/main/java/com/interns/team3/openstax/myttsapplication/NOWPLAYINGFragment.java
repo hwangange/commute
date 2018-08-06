@@ -17,9 +17,12 @@ import android.view.View;
 import android.view.ViewGroup;
 import android.widget.Button;
 import android.widget.ImageButton;
+import android.widget.ImageView;
 import android.widget.LinearLayout;
 import android.widget.SeekBar;
 import android.widget.TextView;
+
+import com.squareup.picasso.Picasso;
 
 
 /**
@@ -39,6 +42,7 @@ public class NOWPLAYINGFragment extends Fragment {
 
     public static String modId, bookId, modTitle;
     public TextView titleView;
+    public ImageView imageView;
     public Context context =getContext();
 
     private OnFragmentInteractionListener mListener;
@@ -100,6 +104,8 @@ public class NOWPLAYINGFragment extends Fragment {
         titleView = view.findViewById(R.id.nowPlayingTitle);
         titleView.setText(modTitle);
         titleView.setGravity(Gravity.CENTER_HORIZONTAL);
+
+        imageView = view.findViewById(R.id.nowPlayingImage);
 
         availableLayout = view.findViewById(R.id.availableLayout);
         unavailableLayout = view.findViewById(R.id.unavailableLayout);
@@ -183,17 +189,28 @@ public class NOWPLAYINGFragment extends Fragment {
 
     // when user wants to listen to a new audiobook
     public void setNewModule(String bookId, String modId, String modTitle){
-        this.bookId = bookId;
+
+        if(!(this.bookId.equals(bookId))){
+            this.bookId = bookId;
+            String modified_title= bookId.replaceAll(" ", "_").replaceAll("\\.", "").toLowerCase();
+            int drawable_id = getContext().getResources().getIdentifier(modified_title, "drawable", getContext().getPackageName());
+            Picasso.with(getContext()).load(drawable_id).into(imageView);
+        }
+
         this.modId = modId;
         this.modTitle = modTitle;
 
         titleView.setText(modTitle);
+
 
     }
 
     public void showPlaying(){
         showPlaying= true;
         availableLayout.setVisibility(View.VISIBLE);
+        String modified_title= bookId.replaceAll(" ", "_").replaceAll("\\.", "").toLowerCase();
+        int drawable_id = getContext().getResources().getIdentifier(modified_title, "drawable", getContext().getPackageName());
+        Picasso.with(getContext()).load(drawable_id).into(imageView);
         unavailableLayout.setVisibility(View.GONE);
     }
 

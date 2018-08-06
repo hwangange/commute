@@ -8,6 +8,7 @@ import android.net.Uri;
 import android.os.AsyncTask;
 import android.os.Bundle;
 import android.support.v4.app.Fragment;
+import android.support.v4.content.ContextCompat;
 import android.util.Log;
 import android.view.LayoutInflater;
 import android.view.View;
@@ -15,9 +16,11 @@ import android.view.ViewGroup;
 import android.widget.AdapterView;
 import android.widget.BaseAdapter;
 import android.widget.Button;
+import android.widget.CompoundButton;
 import android.widget.ProgressBar;
 import android.widget.SeekBar;
 import android.widget.Spinner;
+import android.widget.Switch;
 import android.widget.TextView;
 import android.widget.Toast;
 
@@ -56,6 +59,8 @@ public class SettingsFragment extends Fragment {
 
     private AmazonClient generalClient;
     private List<Voice> voices;
+
+    private Switch themeSwitch;
 
     private ProgressBar voicesProgressBar;
     private SeekBar volumeSeekBar;
@@ -207,7 +212,7 @@ public class SettingsFragment extends Fragment {
         ((MainActivity)getActivity()).getSupportActionBar().setHomeButtonEnabled(false);
         ((MainActivity)getActivity()).getSupportActionBar().setDisplayHomeAsUpEnabled(false);
 
-
+        themeSwitch = view.findViewById(R.id.themeSwitch);
         voicesProgressBar = view.findViewById(R.id.voicesProgressBar);
         playButton = view.findViewById(R.id.readButton);
         voicesSpinner = view.findViewById(R.id.voicesSpinner);
@@ -217,6 +222,7 @@ public class SettingsFragment extends Fragment {
         saveButton.setOnClickListener(v -> saveSettings());
 
         generalClient = getGeneralClient(getContext());
+        setupThemeSwitch();
         setupNewMediaPlayer();
         setupPlayButton();
         setupVoicesSpinner();
@@ -261,6 +267,17 @@ public class SettingsFragment extends Fragment {
     public interface OnFragmentInteractionListener {
         // TODO: Update argument type and name
         void onFragmentInteraction(Uri uri);
+    }
+
+    void setupThemeSwitch() {
+        Log.i("setupThemeSwitch", "");
+        themeSwitch.setOnCheckedChangeListener(new CompoundButton.OnCheckedChangeListener() {
+            @Override
+            public void onCheckedChanged(CompoundButton buttonView, boolean isChecked) {
+                if(isChecked) {themeSwitch.setText((CharSequence)"Night");}
+                else {themeSwitch.setText((CharSequence)"Day");}
+            }
+        });
     }
 
     void setupNewMediaPlayer() {
@@ -372,16 +389,22 @@ public class SettingsFragment extends Fragment {
     public void saveSettings() {
         Voice selectedVoice = (Voice) voicesSpinner.getSelectedItem();
         int selectedVolume = volumeSeekBar.getProgress() -6;
+        String theme = (String) themeSwitch.getText();
         SharedPreferences sharedPreferences = getContext().getSharedPreferences("settings", 0);
         SharedPreferences.Editor editor = sharedPreferences.edit();
+        editor.putString("theme", theme);
         editor.putString("voice", selectedVoice.getId());
         editor.putInt("volume", selectedVolume);
         editor.commit();
-        Toast.makeText(getContext(), String.format("Saved Changes:  %s,  %s", selectedVoice.getId(), String.valueOf(selectedVolume)), Toast.LENGTH_SHORT).show();
+        Toast.makeText(getContext(), String.format("Saved Changes:  %s, %s,  %s", theme, selectedVoice.getId(), String.valueOf(selectedVolume)), Toast.LENGTH_SHORT).show();
+
+        ((MainActivity)getActivity()).setNewTheme(theme);
+
     }
 
     public void getPreferences() {
         SharedPreferences sharedPreferences = getContext().getSharedPreferences("settings", 0);
+        String theme = sharedPreferences.getString("theme", "Night");
         String selectedVoice = sharedPreferences.getString("voice", "None");
         int selectedVolume = sharedPreferences.getInt("volume", -6); // -6 to 6.
         int index = 0;
@@ -395,6 +418,17 @@ public class SettingsFragment extends Fragment {
             index = 0;
         }
 
+        if(theme.equals("Night")) {
+            Log.i("getPreferences", "is error occurring here?");
+            themeSwitch.setChecked(true);
+
+            themeSwitch.setText((CharSequence) "Night");
+        } else {
+            Log.i("getPreferences", "is error occurring here?");
+            themeSwitch.setChecked(false);
+            themeSwitch.setText((CharSequence) "Day");
+
+        }
         voicesSpinner.setSelection(index);
         volumeSeekBar.setProgress(selectedVolume +6);
 

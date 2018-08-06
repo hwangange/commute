@@ -431,7 +431,7 @@ public class TextbookViewFragment extends Fragment implements PlayerBarFragment.
             getActivity().runOnUiThread(() ->
             {
                 v.findViewById(R.id.item).setBackgroundColor(ContextCompat.getColor(context, R.color.colorHighlighted));
-                ((TextView) v.findViewById(R.id.item)).setTextColor(ContextCompat.getColor(context, R.color.darkBlack));
+                ((TextView) v.findViewById(R.id.item)).setTextColor(ContextCompat.getColor(context, R.color.highlightedText));
             });
 
         } else {
@@ -498,8 +498,8 @@ public class TextbookViewFragment extends Fragment implements PlayerBarFragment.
             TextbookViewAdapter.ViewHolder vh = (TextbookViewAdapter.ViewHolder) recyclerView.findViewHolderForAdapterPosition(position);
             if (vh != null) {
                 View v = vh.textView;
-                v.findViewById(R.id.item).setBackgroundColor(ContextCompat.getColor(context, R.color.defaultGrey));
-                ((TextView)v.findViewById(R.id.item)).setTextColor(ContextCompat.getColor(context, R.color.white));
+                v.findViewById(R.id.item).setBackgroundColor(ContextCompat.getColor(context, R.color.transparentGrey));
+                ((TextView)v.findViewById(R.id.item)).setTextColor(ContextCompat.getColor(context, R.color.normalText));
             }
             else{Log.i("unhighlightText", "View is null, can't set bg color to grey");}
         });

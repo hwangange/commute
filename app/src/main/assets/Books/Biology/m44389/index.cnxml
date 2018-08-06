@@ -1,0 +1,170 @@
+<document xmlns="http://cnx.rice.edu/cnxml" xmlns:md="http://cnx.rice.edu/mdml" xmlns:bib="http://bibtexml.sf.net/" xmlns:m="http://www.w3.org/1998/Math/MathML" xmlns:q="http://cnx.rice.edu/qml/1.0" id="new" cnxml-version="0.7" module-id="new" class="introduction">
+
+<title>Introduction</title>
+<metadata xmlns:md="http://cnx.rice.edu/mdml" mdml-version="0.5">
+  <!-- WARNING! The 'metadata' section is read only. Do not edit below.
+       Changes to the metadata section in the source will not be saved. -->
+  <md:repository>http://cnx.org/content</md:repository>
+  <md:content-url>http://cnx.org/content/m44389/latest/</md:content-url>
+  <md:content-id>m44389</md:content-id>
+  <md:title>Introduction</md:title>
+  <md:version>1.2</md:version>
+  <md:created>2012/08/22 14:10:17 -0500</md:created>
+  <md:revised>2013/03/07 17:25:22.028 US/Central</md:revised>
+  <md:actors>
+    <md:person userid="OSCRiceUniversity">
+      <md:firstname>Rice</md:firstname>
+      <md:surname>University</md:surname>
+      <md:fullname>Rice University</md:fullname>
+      <md:email>daniel@openstaxcollege.org</md:email>
+    </md:person>
+    <md:organization userid="OpenStaxCollege">
+      <md:shortname>OpenStax College</md:shortname>
+      <md:fullname>OpenStax College</md:fullname>
+      <md:email>info@openstaxcollege.org</md:email>
+    </md:organization>
+    <md:person userid="cnxbio">
+      <md:firstname>Cnx</md:firstname>
+      <md:surname>Biology</md:surname>
+      <md:fullname>Cnx Biology</md:fullname>
+      <md:email>ryan.s.stickney@gmail.com</md:email>
+    </md:person>
+  </md:actors>
+  <md:roles>
+    <md:role type="author">OpenStaxCollege</md:role>
+    <md:role type="maintainer">OpenStaxCollege cnxbio</md:role>
+    <md:role type="licensor">OSCRiceUniversity</md:role>
+  </md:roles>
+  <md:license url="http://creativecommons.org/licenses/by/3.0/"/>
+  <!-- For information on license requirements for use or modification, see license url in the
+       above <md:license> element.
+       For information on formatting required attribution, see the URL:
+         CONTENT_URL/content_info#cnx_cite_header
+       where CONTENT_URL is the value provided above in the <md:content-url> element.
+  -->
+  <md:keywordlist>
+    <md:keyword>acid</md:keyword>
+    <md:keyword>adhesion</md:keyword>
+    <md:keyword>aliphatic hydrocarbon</md:keyword>
+    <md:keyword>anion</md:keyword>
+    <md:keyword>aromatic hydrocarbon</md:keyword>
+    <md:keyword>atom</md:keyword>
+    <md:keyword>atomic mass</md:keyword>
+    <md:keyword>atomic number</md:keyword>
+    <md:keyword>balanced chemical equation</md:keyword>
+    <md:keyword>base</md:keyword>
+    <md:keyword>Bohr model</md:keyword>
+    <md:keyword>boiling point</md:keyword>
+    <md:keyword>buffer</md:keyword>
+    <md:keyword>calorie</md:keyword>
+    <md:keyword>capillary action</md:keyword>
+    <md:keyword>carbon</md:keyword>
+    <md:keyword>carbon dating</md:keyword>
+    <md:keyword>carbonic acid-bicarbonate buffer system</md:keyword>
+    <md:keyword>cation</md:keyword>
+    <md:keyword>chemical bond</md:keyword>
+    <md:keyword>chemical reaction</md:keyword>
+    <md:keyword>chemical reactivity</md:keyword>
+    <md:keyword>chemical signal</md:keyword>
+    <md:keyword>cohesion</md:keyword>
+    <md:keyword>compound</md:keyword>
+    <md:keyword>covalent bond</md:keyword>
+    <md:keyword>dissociation</md:keyword>
+    <md:keyword>electrolytes</md:keyword>
+    <md:keyword>electron</md:keyword>
+    <md:keyword>electron configuration</md:keyword>
+    <md:keyword>electron orbital</md:keyword>
+    <md:keyword>electron transfer</md:keyword>
+    <md:keyword>electronegativity</md:keyword>
+    <md:keyword>element</md:keyword>
+    <md:keyword>enantiomers</md:keyword>
+    <md:keyword>equilibrium</md:keyword>
+    <md:keyword>evaporation</md:keyword>
+    <md:keyword>float</md:keyword>
+    <md:keyword>functional group</md:keyword>
+    <md:keyword>gas</md:keyword>
+    <md:keyword>geometric isomer</md:keyword>
+    <md:keyword>heat of vaporization of water</md:keyword>
+    <md:keyword>hydrocarbon</md:keyword>
+    <md:keyword>hydrocarbon chain</md:keyword>
+    <md:keyword>hydrogen bond</md:keyword>
+    <md:keyword>hydrophilic</md:keyword>
+    <md:keyword>hydrophobic</md:keyword>
+    <md:keyword>ice</md:keyword>
+    <md:keyword>inert gas</md:keyword>
+    <md:keyword>ion</md:keyword>
+    <md:keyword>ionic bond</md:keyword>
+    <md:keyword>irreversible chemical reaction</md:keyword>
+    <md:keyword>isomers</md:keyword>
+    <md:keyword>isotope</md:keyword>
+    <md:keyword>Johannes Diderik van der Waals</md:keyword>
+    <md:keyword>law of mass action</md:keyword>
+    <md:keyword>liquid</md:keyword>
+    <md:keyword>litmus paper</md:keyword>
+    <md:keyword>macromolecule</md:keyword>
+    <md:keyword>mass number</md:keyword>
+    <md:keyword>matter</md:keyword>
+    <md:keyword>molecule</md:keyword>
+    <md:keyword>neutral pH</md:keyword>
+    <md:keyword>neutron</md:keyword>
+    <md:keyword>Niels Bohr</md:keyword>
+    <md:keyword>noble gas</md:keyword>
+    <md:keyword>non-neutral pH</md:keyword>
+    <md:keyword>nonpolar covalent bond</md:keyword>
+    <md:keyword>nucleus</md:keyword>
+    <md:keyword>octet rule</md:keyword>
+    <md:keyword>orbital</md:keyword>
+    <md:keyword>organic molecule</md:keyword>
+    <md:keyword>periodic table</md:keyword>
+    <md:keyword>pH paper</md:keyword>
+    <md:keyword>pH scale</md:keyword>
+    <md:keyword>pharmaceutical chemist</md:keyword>
+    <md:keyword>polar covalent bond</md:keyword>
+    <md:keyword>polarity</md:keyword>
+    <md:keyword>product</md:keyword>
+    <md:keyword>proton</md:keyword>
+    <md:keyword>radioactive decay</md:keyword>
+    <md:keyword>radioisotope</md:keyword>
+    <md:keyword>reactant</md:keyword>
+    <md:keyword>reversible chemical reaction</md:keyword>
+    <md:keyword>solid</md:keyword>
+    <md:keyword>solvent</md:keyword>
+    <md:keyword>specific heat capacity</md:keyword>
+    <md:keyword>sphere of hydration</md:keyword>
+    <md:keyword>structural isomers</md:keyword>
+    <md:keyword>subshell</md:keyword>
+    <md:keyword>substituted hydrocarbon</md:keyword>
+    <md:keyword>surface tension</md:keyword>
+    <md:keyword>temperature</md:keyword>
+    <md:keyword>tetrahedral geometry</md:keyword>
+    <md:keyword>tetrahedron</md:keyword>
+    <md:keyword>the periodic table</md:keyword>
+    <md:keyword>triglyceride</md:keyword>
+    <md:keyword>valence shell</md:keyword>
+    <md:keyword>van der Waals interaction</md:keyword>
+    <md:keyword>water</md:keyword>
+  </md:keywordlist>
+  <md:subjectlist>
+    <md:subject>Science and Technology</md:subject>
+  </md:subjectlist>
+  <md:abstract/>
+  <md:language>en</md:language>
+  <!-- WARNING! The 'metadata' section is read only. Do not edit above.
+       Changes to the metadata section in the source will not be saved. -->
+</metadata>
+
+<content>
+    <?cnx.eoc class="summary" title="Sections Summary"?>
+<?cnx.eoc class="art-exercise" title="Art Connections"?>
+<?cnx.eoc class="multiple-choice" title="Multiple Choice"?>
+<?cnx.eoc class="free-response" title="Free Response"?>
+
+<figure id="fig-ch02_00_01" class="splash">
+    <media id="fs-idp74163776" alt="A molecular model shows hundreds of atoms, represented by yellow, red, black, blue and white balls, connected together by rods to form a molecule. The molecule has a complex but very specific three-dimensional structure with rings and branches.">
+        <image mime-type="image/jpeg" src="Figure_02_00_01.jpg" width="600"/>
+    </media>
+<caption>Atoms are the building blocks of molecules found in the universe&#8212;air, soil, water, rocks . . . and also the cells of all living organisms. In this model of an organic molecule, the atoms of carbon (black), hydrogen (white), nitrogen (blue), oxygen (red), and sulfur (yellow) are shown in proportional atomic size. The silver rods indicate chemical bonds. (credit: modification of work by Christian Guthier)</caption></figure>
+<para id="fs-idp250733232">Elements in various combinations comprise all matter, including living things. Some of the most abundant elements in living organisms include carbon, hydrogen, nitrogen, oxygen, sulfur, and phosphorus. These form the nucleic acids, proteins, carbohydrates, and lipids that are the fundamental components of living matter. Biologists must understand these important building blocks and the unique structures of the atoms that make up molecules, allowing for the formation of cells, tissues, organ systems, and entire organisms.</para>
+<para id="fs-idm10142720">All biological processes follow the laws of physics and chemistry, so in order to understand how biological systems work, it is important to understand the underlying physics and chemistry. For example, the flow of blood within the circulatory system follows the laws of physics that regulate the modes of fluid flow. The breakdown of the large, complex molecules of food into smaller molecules&#8212;and the conversion of these to release energy to be stored in adenosine triphosphate (ATP)&#8212;is a series of chemical reactions that follow chemical laws. The properties of water and the formation of hydrogen bonds are key to understanding living processes. Recognizing the properties of acids and bases is important, for example, to our understanding of the digestive process. Therefore, the fundamentals of physics and chemistry are important for gaining insight into biological processes.</para>
+</content>
+</document>
