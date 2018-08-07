@@ -49,11 +49,13 @@ public class AudioBook {
         this.hasUnits = hasUnits;
     }
 
-    public String getBookName() { return bookName;}
+    public String getBookName() {
+        return bookName;
+    }
+
     public String getMainFolder() {
         return this.mainFolder;
     }
-
 
     private String readAsset(String file) throws IOException {
         InputStreamReader input = new InputStreamReader(this.context.getAssets().open(file));
@@ -150,27 +152,24 @@ public class AudioBook {
         }
     }
 
-    public Module getModule(Element module) {
-        String moduleId = module.attr("document");
-        return new Module(module, getModuleFile(moduleId));
-    }
-
     public Module getModule(Element module, String moduleNum) {
         String moduleId = module.attr("document");
         return new Module(module, getModuleFile(moduleId), moduleNum);
     }
 
-    public JSONObject chapterToJson(Element chapter, boolean debug) throws JSONException {
+    public JSONObject chapterToJson(Element chapter, int chapterNum, boolean debug) throws JSONException {
         JSONObject chapterObj = new JSONObject();
         String title = chapter.select("md|title").first().text();
         chapterObj.put("title", title);
 
         JSONArray modulesArray = new JSONArray();
-        Elements parts = getChapterModules(chapter);
-        for (Element part: parts) {
-            Module module = getModule(part);
+        Elements modules = getChapterModules(chapter);
+        int modNum = 0;
+        for (Element modElem: modules) {
+            String fullModNum = chapterNum + "." + modNum;
+            Module module = getModule(modElem, fullModNum);
             if (debug) {
-                System.out.println("    " + module.getId() + " -- " + module.getTitle());
+                System.out.printf("\t%s -- %s %s%n", module.getId(), fullModNum, module.getTitle());
             }
             JSONObject moduleObj = module.toJson();
             modulesArray.put(moduleObj);
@@ -180,17 +179,19 @@ public class AudioBook {
         return chapterObj;
     }
 
-    private List<String> chapterToSSML(Element chapter, boolean debug) throws JSONException {
+    private List<String> chapterToSSML(Element chapter, int chapterNum, boolean debug) throws JSONException {
         List<String> chapterSSML = new ArrayList<>();
         SsmlBuilder ssml = new SsmlBuilder();
         String title = chapter.select("md|title").first().text();
         chapterSSML.add(ssml.text(title).newParagraph().newParagraph().build());
 
-        Elements parts = getChapterModules(chapter);
-        for (Element part: parts) {
-            Module module = getModule(part);
+        Elements modules = getChapterModules(chapter);
+        int modNum = 0;
+        for (Element modElem: modules) {
+            String fullModNum = chapterNum + "." + modNum;
+            Module module = getModule(modElem, fullModNum);
             if (debug) {
-                System.out.println("    " + module.getId() + " -- " + module.getTitle());
+                System.out.printf("\t%s -- %s %s%n", module.getId(), fullModNum, module.getTitle());
             }
             List<String> moduleSSML = module.buildModuleSSML();
             chapterSSML.addAll(moduleSSML);
@@ -229,11 +230,12 @@ public class AudioBook {
 
         JSONArray chaptersArray = new JSONArray();
         Elements chapters = getChapters();
+        int chapterNum = 1;
         for (Element chapter: chapters) {
             if (debug) {
                 System.out.println(chapter.select("md|title").first().text());
             }
-            JSONObject chapterObj = chapterToJson(chapter, debug);
+            JSONObject chapterObj = chapterToJson(chapter, chapterNum, debug);
             chaptersArray.put(chapterObj);
         }
 
@@ -257,7 +259,7 @@ public class AudioBook {
             }
             bookSSML.add(new SsmlBuilder().text("Chapter %d", chapterNum).strongBreak()
                     .text(title).newParagraph().build());
-            List<String> chapterSSML = chapterToSSML(chapter, debug);
+            List<String> chapterSSML = chapterToSSML(chapter, chapterNum, debug);
             bookSSML.addAll(chapterSSML);
         }
 
