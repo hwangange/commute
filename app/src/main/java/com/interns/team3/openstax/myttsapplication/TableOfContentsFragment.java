@@ -84,6 +84,7 @@ public class TableOfContentsFragment extends Fragment {
                 bookId = getArguments().getString(ARG_BOOK_ID);
             }
         setHasOptionsMenu(false);
+        setRetainInstance(true);
     }
 
     private ViewGroup container;
@@ -91,8 +92,6 @@ public class TableOfContentsFragment extends Fragment {
     @Override
     public View onCreateView(LayoutInflater inflater, ViewGroup container,
             Bundle savedInstanceState) {
-
-        Log.i("Table of contents", "onCreateview");
 
         // Inflate the layout for this fragment
         View view = inflater.inflate(R.layout.fragment_toc, container, false);
@@ -206,27 +205,29 @@ public class TableOfContentsFragment extends Fragment {
 
         @Override
         protected void onPostExecute(Map<String, String> metadata) {
-            for(Content c : temp) {
-                if (c instanceof Content.Module) {
-                    dataSet.add(new Content.Module((Content.Module) c));
-                } else if (c instanceof Content.Chapter) {
-                    dataSet.add(new Content.Chapter((Content.Chapter) c));
+            if(getContext() != null) {
+                for (Content c : temp) {
+                    if (c instanceof Content.Module) {
+                        dataSet.add(new Content.Module((Content.Module) c));
+                    } else if (c instanceof Content.Chapter) {
+                        dataSet.add(new Content.Chapter((Content.Chapter) c));
+                    }
+                    adapter.notifyDataSetChanged();
                 }
-                adapter.notifyDataSetChanged();
-            }
-            if(metadata.get("revised")!=null)
-            {
-                String revised = "Last Revised: " + metadata.get("revised");
-                bookDate.setText(revised);
-            }
-            String title = metadata.get("title");
-            String summary = metadata.get("summary");
-            bookTitleTv.setText(title);
-            details.setText(summary);
+                if (metadata != null) {
+                    if (metadata.get("revised") != null) {
+                        String revised = "Last Revised: " + metadata.get("revised");
+                        bookDate.setText(revised);
+                    }
+                    String title = metadata.get("title");
+                    String summary = metadata.get("summary");
+                    bookTitleTv.setText(title);
+                    details.setText(summary);
 
-            String modified_title= title.replaceAll(" ", "_").replaceAll("\\.", "").toLowerCase();
-            int drawable_id = getContext().getResources().getIdentifier(modified_title, "drawable", getContext().getPackageName());
-            Picasso.with(getContext()).load(drawable_id).into(bookImg);
+                    String modified_title = title.replaceAll(" ", "_").replaceAll("\\.", "").toLowerCase();
+                    int drawable_id = getContext().getResources().getIdentifier(modified_title, "drawable", getContext().getPackageName());
+                    Picasso.with(getContext()).load(drawable_id).into(bookImg);
+                }
 
             /*loading.animate()
                     .translationY(loading.getHeight())
@@ -240,12 +241,11 @@ public class TableOfContentsFragment extends Fragment {
 
                         }
                     }); */
-            container.removeView(loading);
-            container.addView(doneLoading);
-            //loading.setVisibility(View.GONE);
-            //doneLoading.setVisibility(View.VISIBLE);
-
-            Log.i("onPostExecute", "Done");
+                container.removeView(loading);
+                container.addView(doneLoading);
+                //loading.setVisibility(View.GONE);
+                //doneLoading.setVisibility(View.VISIBLE);
+            }
         }
     }
 

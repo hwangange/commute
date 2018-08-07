@@ -8,6 +8,7 @@ import android.os.Bundle;
 import android.os.Environment;
 import android.os.Handler;
 import android.support.v4.app.Fragment;
+import android.text.Html;
 import android.util.Log;
 import android.view.Gravity;
 import android.view.LayoutInflater;
@@ -39,7 +40,7 @@ public class PlayerBarFragment extends Fragment {
 
     public static int currentPoint = -1; static boolean isPaused = true;
 
-    public static String modId, bookId, modTitle;
+    public static String modId, bookId, modTitle, output;
 
     public Context context;
 
@@ -101,12 +102,14 @@ public class PlayerBarFragment extends Fragment {
             bookId = getArguments().getString(ARG_BOOK_ID);
 
         }
+
+        setRetainInstance(true);
     }
 
     @Override
     public View onCreateView(LayoutInflater inflater, ViewGroup container, Bundle savedInstanceState) {
 
-        Log.i("onCreateView", "in here");
+        Log.i("PlayerBarFragment", "onCreateView");
         context = getContext();
 
         View view = inflater.inflate(R.layout.fragment_player_bar, container, false);
@@ -209,8 +212,13 @@ public class PlayerBarFragment extends Fragment {
         }
     }
 
+    public void setOutputFilePath(String output){ this.output = output; }
 
-    public void playMergedFile(String output) {
+
+    public void playMergedFile(int startingTime) {
+
+        Log.i("Starting time", String.valueOf(startingTime));
+
         player.reset();
 
         Uri uri = Uri.parse("file://" + output);
@@ -230,11 +238,20 @@ public class PlayerBarFragment extends Fragment {
         player.setOnPreparedListener(new MediaPlayer.OnPreparedListener() {
             @Override
             public void onPrepared(MediaPlayer mp) {
-                setPlayButton("Pause");
-                player.start();
+
+                player.seekTo(startingTime);
+                activeIndexPosition = startingTime;
                 endTime = player.getDuration();
                 seekbar.setMax(endTime);
-                seekbar.setProgress(0);
+                seekbar.setProgress(startingTime);
+
+                if(!isPaused){
+                    setPlayButton("Pause");
+                    player.start();
+                }
+                else {
+                    setPlayButton("Play");
+                }
             }
         });
 
@@ -303,8 +320,6 @@ public class PlayerBarFragment extends Fragment {
 
     //Called by player bar fragment
     public void forwardTTS(){
-
-
         length = player.getCurrentPosition();
         player.seekTo(length+15000);
     }
@@ -324,15 +339,16 @@ public class PlayerBarFragment extends Fragment {
         ImageView dragViewPlayButton = getActivity().findViewById(R.id.dragViewPlayButton);
 
         if (playButton.getTag().equals("Play")) {
-
+            isPaused= false;
             playButton.setTag("Pause");
             playButton.setImageResource(R.drawable.pause);
             dragViewPlayButton.setImageResource(R.drawable.pause);
 
-            player.seekTo(player.getCurrentPosition() - 1);
+            player.seekTo(player.getCurrentPosition());
             player.start();
 
         } else {
+            isPaused = true;
             playButton.setTag("Play");
             playButton.setImageResource(R.drawable.play);
             dragViewPlayButton.setImageResource(R.drawable.play);
@@ -367,7 +383,6 @@ public class PlayerBarFragment extends Fragment {
         currentPoint = -1;
         isPaused = false;
         context = getContext();
-
     }
 
 
@@ -413,9 +428,9 @@ public class PlayerBarFragment extends Fragment {
         mListener = null;
     }
 
-    public String getModule() {
-        return modId;
-    }
+    public String getBook() {return bookId;}
+
+    public String getModule() { return modId; }
 
     public void setVisible(boolean boo){
 
@@ -432,7 +447,6 @@ public class PlayerBarFragment extends Fragment {
         public void run() {
 
             currentPoint = player.getCurrentPosition();
-
 
             if(((MainActivity)getActivity()).getActiveFragment() instanceof TextbookViewFragment)
             {
@@ -465,6 +479,25 @@ public class PlayerBarFragment extends Fragment {
 
     public MediaPlayer getPlayer(){
         return player;
+    }
+
+    @Override
+    public void onDestroy() {
+        currentPoint = player.getCurrentPosition();
+        player.stop();
+        player.release();
+        super.onDestroy();
+    }
+
+    @Override
+    public void onResume(){
+        super.onResume();
+        player.reset();
+        if(output!= null && currentPoint >=0){
+            playMergedFile(currentPoint);
+            ((TextView)(getActivity().findViewById(R.id.dragViewText))).setText(Html.fromHtml("<b>"+modTitle+"</b><br/>"+bookId, Html.FROM_HTML_MODE_COMPACT));
+        }
+
     }
 
 

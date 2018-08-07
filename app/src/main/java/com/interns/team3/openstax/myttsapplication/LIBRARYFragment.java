@@ -85,6 +85,7 @@ public class LIBRARYFragment extends Fragment {
             mParam1 = getArguments().getString(ARG_PARAM1);
             mParam2 = getArguments().getString(ARG_PARAM2);
         }
+        setRetainInstance(true);
 
     }
 
@@ -107,15 +108,16 @@ public class LIBRARYFragment extends Fragment {
         favorites_dataSet = new ArrayList<LibraryItem>();
         for(String s : faves)
         {
-            favorites_dataSet.add(makeLibraryItem(s)); // 1st element is the title
+            favorites_dataSet.add(makeLibraryItem(s));
         }
 
         /* Finding Downloads */
         HashSet<String> downloads = (HashSet<String>) sharedPreferences.getStringSet("downloads", new HashSet<String>());
         downloads_dataSet = new ArrayList<LibraryItem>();
+
         for(String s : downloads)
         {
-            downloads_dataSet.add(makeLibraryItem(s)); // 1st element is the title
+            downloads_dataSet.add(makeLibraryItem(s));
         }
 
 
@@ -300,7 +302,7 @@ public class LIBRARYFragment extends Fragment {
         }
     }
 
-    private class LibraryItem {
+    public class LibraryItem {
         private String bookTitle;
         private String modTitle;
         private String modId;

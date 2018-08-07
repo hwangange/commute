@@ -84,16 +84,17 @@ public class BookshelfFragment extends Fragment {
         getActivity().setTitle("OpenStax On the Go");
         ((MainActivity) getActivity()).getSupportActionBar().setHomeButtonEnabled(false);
         ((MainActivity) getActivity()).getSupportActionBar().setDisplayHomeAsUpEnabled(false);
+
+        setRetainInstance(true);
     }
 
     @Override
     public View onCreateView(LayoutInflater inflater, ViewGroup container, Bundle savedInstanceState) {
         // Inflate the layout for this fragment
         View view = inflater.inflate(R.layout.fragment_bookshelf, container, false);
-        Log.i("Bookshelf", "onCreateView");
 
-        if(savedInstanceState ==null) {
-            Log.i("Bookshelf", "onCreateView, savedInstanceState is null");
+        if(savedInstanceState ==null || genres == null) {
+            Log.i("Bookshelf", "onCreateView, savedInstanceState or list 'genres' is null");
 
             // Construct the data source
             genres = new HashMap<String, ArrayList<AudioBook>>();
@@ -106,8 +107,6 @@ public class BookshelfFragment extends Fragment {
             recyclerView.setAdapter(sectionedAdapter);
             recyclerView.setNestedScrollingEnabled(false); // fix unsmooth scrolling?
 
-            // use a GRID layout manager
-            //layoutManager = new GridLayoutManager(view.getContext(), 2);
             LinearLayoutManager layoutManager = new LinearLayoutManager(getContext());
             recyclerView.setLayoutManager(layoutManager);
 
@@ -118,6 +117,13 @@ public class BookshelfFragment extends Fragment {
             nestedScrollView = view.findViewById(R.id.nested_scrollview);
             nestedScrollView.setFocusableInTouchMode(true);
             nestedScrollView.setDescendantFocusability(ViewGroup.FOCUS_BEFORE_DESCENDANTS);
+        } else {
+            recyclerView = view.findViewById(R.id.book_recycler_view);
+            recyclerView.setAdapter(sectionedAdapter);
+            recyclerView.setNestedScrollingEnabled(false);
+            LinearLayoutManager layoutManager = new LinearLayoutManager(getContext());
+            recyclerView.setLayoutManager(layoutManager);
+            sectionedAdapter.notifyDataSetChanged();
         }
 
 

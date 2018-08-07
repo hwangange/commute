@@ -8,9 +8,7 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:id="@+id/parent_layout"
-    android:orientation="vertical"
-    android:background="@color/windowBackground"
-    android:textColor="@color/textColor">
+    android:orientation="vertical">
 
     <com.sothree.slidinguppanel.SlidingUpPanelLayout
         android:id="@+id/sliding_layout"
@@ -31,11 +29,6 @@
             android:orientation="vertical"
             tools:context=".MainActivity">
 
-            <TextView
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:background="@color/windowBackground"
-                android:text="This should change color. If not, then I haven't made any progress."/>
             <!--
             android:paddingTop="100dp"
             android:paddingTop="?android:attr/actionBarSize"

@@ -8,21 +8,26 @@
 
     </style>
 
-    <style name="AppTheme" parent="AppBaseTheme">
+    <style name="AppTheme" parent="ThemeOverlay.AppCompat.Light">
         <item name="android:windowAnimationStyle">@style/WindowAnimationTransition</item>
-       <!-- <item name="android:windowBackground">@color/grey</item>
-        <item name="android:textColor">@color/darkBlack</item> -->
+        <item name="android:windowBackground">@color/grey</item>
+        <item name="android:textColor">@color/darkBlack</item>
         <item name="android:spinnerStyle">@style/LightSpinner</item>
-        <item name="android:switchStyle">@style/LightSwitch</item>
+        <item name="android:switchTextAppearance">@style/LightSwitch</item>
     </style>
 
-    <style name="DarkAppTheme" parent="AppBaseTheme">
+    <style name="DarkAppTheme" parent="ThemeOverlay.AppCompat.Dark">
+        <!-- no action bar -->
+        <item name="android:windowActionBar">false</item>
+        <item name="android:windowNoTitle">true</item>
+
         <item name="android:windowAnimationStyle">@style/WindowAnimationTransition</item>
-        <!--<item name="android:background">@color/lightBlack</item> -->
         <item name="android:windowBackground">@color/lightBlack</item>
         <item name="android:textColor">@color/white</item>
         <item name="android:spinnerStyle">@style/DarkSpinner</item>
-        <item name="android:switchStyle">@style/DarkSwitch</item>
+        <item name="android:switchTextAppearance">@style/DarkSwitch</item>
+        <item name="android:colorBackground">@color/lightBlack</item>
+
     </style>
 
     <!-- This will set the fade in animation on all your activities by default -->
@@ -31,18 +36,22 @@
         <item name="android:windowExitAnimation">@android:anim/fade_out</item>
     </style>
 
-    <style name="LightSpinner" parent="Widget.AppCompat.DropDownItem.Spinner">
-        <item name = "android:background">@color/transparentGrey</item>
-    </style>
-    <style name="DarkSpinner" parent="Widget.AppCompat.DropDownItem.Spinner">
-        <item name = "android:background">@color/darkBlack</item>
+    <style name="LightSpinner" parent="Base.Widget.AppCompat.Spinner">
+        <item name = "android:background">@color/grey</item>
     </style>
 
-    <style name="LightSwitch" parent="Widget.AppCompat.CompoundButton.Switch">
+    <style name="DarkSpinner" parent="Base.Widget.AppCompat.Spinner">
+        <item name = "android:background">@color/darkBlack</item>
+        <item name="android:colorBackground">@color/darkBlack</item>
+        <item name="android:textColor">@color/colorPrimary</item>
+    </style>
+
+    <style name="LightSwitch" parent="TextAppearance.AppCompat.Widget.Switch">
         <item name = "android:textColor">@color/darkBlack</item>
     </style>
-    <style name="DarkSwitch" parent="Widget.AppCompat.CompoundButton.Switch">
+    <style name="DarkSwitch" parent="TextAppearance.AppCompat.Widget.Switch">
         <item name = "android:textColor">@color/white</item>
+        <item name= "android:color">@color/white</item>
     </style>
 
 
@@ -77,11 +86,9 @@
         <item name="android:textColor">@color/normalText</item>
     </style>
 
-    <!-- Spinner -->
-    <!-- Tab -->
     <style name="AppSpinnerTextAppearance" parent="TextAppearance.AppCompat.Widget.TextView.SpinnerItem">
         <item name="android:textColor">@color/normalText</item>
-        <item name="android:background">@color/lightBlack</item>
+        <item name="android:background">@color/white</item>
     </style>
 
 </resources>

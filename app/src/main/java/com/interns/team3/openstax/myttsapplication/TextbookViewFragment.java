@@ -131,6 +131,8 @@ public class TextbookViewFragment extends Fragment implements PlayerBarFragment.
             bookId = getArguments().getString(ARG_BOOK_ID);
         }
 
+        Log.i("modtitle", modTitle);
+
         // Populate dataSet
         tempDataSet = new ArrayList<>();
         dataSet = new ArrayList<>();
@@ -176,6 +178,8 @@ public class TextbookViewFragment extends Fragment implements PlayerBarFragment.
             Log.i("dataSet is good to go!", "finished populating");
         }
 
+        setRetainInstance(true);
+
 
     }
 
@@ -209,7 +213,6 @@ public class TextbookViewFragment extends Fragment implements PlayerBarFragment.
 
                 final int result = super.scrollVerticallyBy(dy, recycler, state);
                 int target = customScrollListener.getTarget();
-                //Log.i("excellent", "In scrollVerticallyBy\t" + "Position: " + String.valueOf(target));
 
                 int front = findFirstVisibleItemPosition();
                 int back = findLastVisibleItemPosition();

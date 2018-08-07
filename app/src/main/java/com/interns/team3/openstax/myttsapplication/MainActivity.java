@@ -8,6 +8,7 @@ import android.graphics.PorterDuff;
 import android.graphics.drawable.Drawable;
 import android.net.Uri;
 import android.os.Bundle;
+import android.provider.Settings;
 import android.support.annotation.NonNull;
 import android.support.design.widget.BottomNavigationView;
 import android.support.design.widget.TabLayout;
@@ -30,6 +31,7 @@ import android.widget.TextView;
 import com.sothree.slidinguppanel.SlidingUpPanelLayout;
 
 import java.io.File;
+import java.util.Collection;
 import java.util.HashSet;
 import java.util.List;
 
@@ -76,15 +78,15 @@ public class MainActivity extends AppCompatActivity implements HOMEFragment.OnFr
     @Override
     protected void onCreate(Bundle savedInstanceState) {
 
-        int themeMode = getDelegate().getDefaultNightMode();
-        if (themeMode == AppCompatDelegate.MODE_NIGHT_AUTO) {
-            Log.i("Current Theme", "Auto");
-        } else if (themeMode == AppCompatDelegate.MODE_NIGHT_NO) {
-            Log.i("Current Theme", "Day");
-            setTheme(R.style.AppTheme);
-        } else if (themeMode == AppCompatDelegate.MODE_NIGHT_YES) {
-            Log.i("Current Theme", "Night");
+        SharedPreferences sharedPreferences = getSharedPreferences("settings", 0);
+        String theme = sharedPreferences.getString("theme", "Night");
+        if(theme.equals("Night")) {
+            AppCompatDelegate.setDefaultNightMode(AppCompatDelegate.MODE_NIGHT_YES);
             setTheme(R.style.DarkAppTheme);
+        }
+        else {
+            AppCompatDelegate.setDefaultNightMode(AppCompatDelegate.MODE_NIGHT_NO);
+            setTheme(R.style.AppTheme);
         }
 
         super.onCreate(savedInstanceState);
@@ -92,34 +94,15 @@ public class MainActivity extends AppCompatActivity implements HOMEFragment.OnFr
         setSupportActionBar(findViewById(R.id.main_toolbar));
 
         fragmentManager = getSupportFragmentManager();
-        libraryFragment = LIBRARYFragment.newInstance("","");
-        nowPlayingFragment = NOWPLAYINGFragment.newInstance("Select a module to play!","","");
-        textbookViewFragment = TextbookViewFragment.newInstance("Select a module~", "", "");
-        playerBarFragment = PlayerBarFragment.newInstance("Select a module to play!", "","");
-        settingsFragment = SettingsFragment.newInstance("","");
+        playerBarFragment = (fragmentManager.findFragmentByTag("Player Bar") == null) ? PlayerBarFragment.newInstance("Select a module to play!", "", "") : (PlayerBarFragment) fragmentManager.findFragmentByTag("Player Bar");
+        textbookViewFragment = (fragmentManager.findFragmentByTag("Textbook View") == null) ?  TextbookViewFragment.newInstance("Select a module~", "", "") : (TextbookViewFragment) fragmentManager.findFragmentByTag( "Textbook View");
+        homeFragment = (fragmentManager.findFragmentByTag("Home") == null) ? HOMEFragment.newInstance(getApplicationContext()) : (HOMEFragment) fragmentManager.findFragmentByTag( "Home");
+        nowPlayingFragment = (fragmentManager.findFragmentByTag( "Now Playing") == null) ? NOWPLAYINGFragment.newInstance("Select a module to play!", "", "") : (NOWPLAYINGFragment) fragmentManager.findFragmentByTag( "Now Playing");
+        settingsFragment = (fragmentManager.findFragmentByTag( "Settings") == null) ? SettingsFragment.newInstance("", "") : (SettingsFragment) fragmentManager.findFragmentByTag( "Settings");
+        libraryFragment = (fragmentManager.findFragmentByTag( "Library") == null) ?  LIBRARYFragment.newInstance("", "") : (LIBRARYFragment) fragmentManager.findFragmentByTag( "Library");
 
-        //nowPlayingFragment = (NOWPLAYINGFragment) fragmentManager.findFragmentById(R.id.nowPlayingFragment);
-        //nowPlayingFragment.setNewModule("Select a module to play!", "", "");
-
-        FragmentTransaction ft = fragmentManager.beginTransaction();
-        activeFragment = nowPlayingFragment;
-        ft.replace(R.id.nowPlayingContainer, nowPlayingFragment);
-        ft.commit();
-
-        ft = fragmentManager.beginTransaction();
-        ft.replace(R.id.playbarContainer, playerBarFragment, "Player Bar");
-        ft.commit();
-
-        ft = fragmentManager.beginTransaction();
-        homeFragment = HOMEFragment.newInstance(getApplicationContext());
-        ft.setCustomAnimations(android.R.anim.slide_in_left, android.R.anim.slide_out_right, android.R.anim.fade_in, android.R.anim.fade_out);
-        ft.replace(R.id.fragmentContainer, homeFragment);
-        ft.commit();
 
         bottomNavigationView = findViewById(R.id.navigation);
-        //if(nowPlayingFragment == null) bottomNavigationView.findViewById(R.id.navigation_player).setEnabled(false);
-
-
         bottomNavigationView.setOnNavigationItemSelectedListener(mOnNavigationItemSelectedListener);
 
         // hide the actual bottom navigation
@@ -133,7 +116,7 @@ public class MainActivity extends AppCompatActivity implements HOMEFragment.OnFr
         int uiOptions = View.SYSTEM_UI_FLAG_IMMERSIVE_STICKY | View.SYSTEM_UI_FLAG_HIDE_NAVIGATION | View.SYSTEM_UI_FLAG_FULLSCREEN;
         decorView.setSystemUiVisibility(uiOptions);
 
-        decorView.setOnSystemUiVisibilityChangeListener (visibility -> {
+        decorView.setOnSystemUiVisibilityChangeListener(visibility -> {
             decorView.setSystemUiVisibility(uiOptions);
             ActionBar actionBar = getSupportActionBar();
             actionBar.show();
@@ -158,15 +141,15 @@ public class MainActivity extends AppCompatActivity implements HOMEFragment.OnFr
             public void onPanelStateChanged(View panel, SlidingUpPanelLayout.PanelState previousState, SlidingUpPanelLayout.PanelState newState) {
                 //Log.i(TAG, "onPanelStateChanged " + newState);
 
-                if(String.valueOf(newState).equals("DRAGGING")){
+                if (String.valueOf(newState).equals("DRAGGING")) {
                     //Log.i(TAG, "It is dragging");
                 }
 
-                if(String.valueOf(newState).equals("EXPANDED")){
+                if (String.valueOf(newState).equals("EXPANDED")) {
                     //dragView.setVisibility(View.GONE);
                 }
 
-                if(String.valueOf(newState).equals("COLLAPSED")){
+                if (String.valueOf(newState).equals("COLLAPSED")) {
                     //dragView.setVisibility(View.VISIBLE);
                 }
 
@@ -175,7 +158,6 @@ public class MainActivity extends AppCompatActivity implements HOMEFragment.OnFr
         });
 
         mLayout.setFadeOnClickListener(view -> mLayout.setPanelState(SlidingUpPanelLayout.PanelState.COLLAPSED));
-
 
 
         // Hide the drag view
@@ -190,24 +172,22 @@ public class MainActivity extends AppCompatActivity implements HOMEFragment.OnFr
 
         tabLayout.addTab(textbookViewTab);
         tabLayout.addTab(nowPlayingTab);
-        tabLayout.addOnTabSelectedListener(new TabLayout.OnTabSelectedListener(){
+        tabLayout.addOnTabSelectedListener(new TabLayout.OnTabSelectedListener() {
             @Override
-            public void onTabSelected(TabLayout.Tab tab){
+            public void onTabSelected(TabLayout.Tab tab) {
 
                 //TextbookView
-                if(tab.getText().equals("Text")){
+                if (tab.getText().equals("Text")) {
                     FragmentTransaction ft = fragmentManager.beginTransaction();
                     activeFragment = textbookViewFragment;
-                    ft.replace(R.id.nowPlayingContainer, textbookViewFragment);
+                    ft.replace(R.id.nowPlayingContainer, textbookViewFragment, "Textbook View");
                     ft.addToBackStack(null); // allow user to go back
                     ft.setCustomAnimations(android.R.anim.slide_in_left, android.R.anim.slide_out_right, android.R.anim.fade_in, android.R.anim.fade_out);
                     ft.commit();
-                }
-
-                else if(tab.getText().equals("Play")) {
+                } else if (tab.getText().equals("Play")) {
                     FragmentTransaction ft = fragmentManager.beginTransaction();
                     activeFragment = nowPlayingFragment;
-                    ft.replace(R.id.nowPlayingContainer, nowPlayingFragment);
+                    ft.replace(R.id.nowPlayingContainer, nowPlayingFragment, "Now Playing");
                     ft.addToBackStack(null); // allow user to go back
                     ft.setCustomAnimations(android.R.anim.slide_in_left, android.R.anim.slide_out_right, android.R.anim.fade_in, android.R.anim.fade_out);
                     ft.commit();
@@ -215,13 +195,16 @@ public class MainActivity extends AppCompatActivity implements HOMEFragment.OnFr
             }
 
             @Override
-            public void onTabReselected(TabLayout.Tab tab){
+            public void onTabReselected(TabLayout.Tab tab) {
 
             }
 
             @Override
-            public void onTabUnselected(TabLayout.Tab tab){ }
+            public void onTabUnselected(TabLayout.Tab tab) {
+            }
         });
+
+
 
     }
 
@@ -232,31 +215,30 @@ public class MainActivity extends AppCompatActivity implements HOMEFragment.OnFr
         public boolean onNavigationItemSelected(@NonNull MenuItem item) {
             switch (item.getItemId()) {
                 case R.id.navigation_home: {
+                    Log.i("onNavigationItemSelected", "Home");
                     FragmentTransaction ft = fragmentManager.beginTransaction();
-                    ft.replace(R.id.fragmentContainer, homeFragment);
+                    ft.replace(R.id.fragmentContainer, homeFragment, "Home");
                     ft.addToBackStack(null); // allow user to go back
                     ft.setCustomAnimations(android.R.anim.fade_in, android.R.anim.fade_out, android.R.anim.fade_in, android.R.anim.fade_out);
                     ft.commit();
-                    Log.i("home","there");
                     return true;
                 }
                 case R.id.navigation_library: {
+                    Log.i("onNavigationItemSelected", "Library");
                     FragmentTransaction ft = fragmentManager.beginTransaction();
-                    ft.replace(R.id.fragmentContainer, libraryFragment);
+                    ft.replace(R.id.fragmentContainer, libraryFragment, "Library");
                     //ft.addToBackStack(null); // allow user to go back
                     ft.setCustomAnimations(android.R.anim.fade_in, android.R.anim.fade_out, android.R.anim.fade_in, android.R.anim.fade_out);
                     ft.commit();
-                    Log.i("library","there");
                     return true;
                 }
                 case R.id.navigation_settings: {
-
+                    Log.i("onNavigationItemSelected", "Settings");
                     FragmentTransaction ft = fragmentManager.beginTransaction();
-                    ft.replace(R.id.fragmentContainer, settingsFragment);
+                    ft.replace(R.id.fragmentContainer, settingsFragment, "Settings");
                     //ft.addToBackStack(null); // allow user to go back
                     ft.setCustomAnimations(android.R.anim.fade_in, android.R.anim.fade_out, android.R.anim.fade_in, android.R.anim.fade_out);
                     ft.commit();
-                    Log.i("Settings","there");
                     return true;
                 }
             }
@@ -345,7 +327,9 @@ public class MainActivity extends AppCompatActivity implements HOMEFragment.OnFr
 
     public void playEntireModule(String bookTitle, String modID, String modTitle){
 
-        Log.i("is nowPlayingFragment null?", String.valueOf(nowPlayingFragment == null));
+        Log.i("playEntireModule", "is nowPlayingFragment null? "+ String.valueOf(nowPlayingFragment == null));
+        Log.i("playEntireModule", "Module Title parameter: __" + modTitle + "__!");
+
         dragViewText.setText(Html.fromHtml("<b>"+modTitle+"</b><br/>"+bookTitle, Html.FROM_HTML_MODE_COMPACT));
 
 
@@ -378,7 +362,8 @@ public class MainActivity extends AppCompatActivity implements HOMEFragment.OnFr
                 playerBarFragment.setVisible(true);
                 //fragmentManager.beginTransaction().replace(R.id.playbarContainer, playerBarFragment, "Player Bar").commit();
                 String output = getExternalCacheDir().getAbsolutePath() + "/" + bookTitle + "/" + modID + "/output.mp3";
-                playerBarFragment.playMergedFile(output);
+                playerBarFragment.setOutputFilePath(output);
+                playerBarFragment.playMergedFile(0);
             }
             else {
                 // hide playerBarFragment?
@@ -457,7 +442,6 @@ public class MainActivity extends AppCompatActivity implements HOMEFragment.OnFr
         File f = new File(output);
         if(f.exists()) {
             // show textbookviewfragment
-            Log.i("Download available", "showing play options");
             dragViewPlayButton.setVisibility(View.VISIBLE);
             nowPlayingFragment.showPlaying();
             return true;
@@ -485,6 +469,7 @@ public class MainActivity extends AppCompatActivity implements HOMEFragment.OnFr
         SharedPreferences.Editor editor = sharedPreferences.edit();
         HashSet<String> downloads = (HashSet<String>) sharedPreferences.getStringSet("downloads", new HashSet<>());
         HashSet<String> newDownloads = new HashSet<>(downloads);
+        newDownloads.remove(null);
         newDownloads.add(tag); // same tag as favorites.
         editor.putStringSet("downloads", newDownloads); // hopefully this replaces the old downloads set
         editor.commit();
@@ -564,7 +549,8 @@ public class MainActivity extends AppCompatActivity implements HOMEFragment.OnFr
                 textbookViewFragment.makeThingsEasy();
                 dragViewPlayButton.setVisibility(View.VISIBLE);
                 playerBarFragment.setVisible(true);
-                playerBarFragment.playMergedFile(outputFilename);
+                playerBarFragment.setOutputFilePath(outputFilename);
+                playerBarFragment.playMergedFile(0);
 
                 if(bottomNavigationView.getSelectedItemId() == R.id.navigation_library)
                 {
@@ -595,13 +581,44 @@ public class MainActivity extends AppCompatActivity implements HOMEFragment.OnFr
 
     public void setNewTheme(String theme) {
 
-        if(theme.equals("Day")) AppCompatDelegate.setDefaultNightMode(AppCompatDelegate.MODE_NIGHT_NO);
-        else {
-            Log.i("NIGHT", "please become night...");
+        if (theme.equals("Day")) {
+            AppCompatDelegate.setDefaultNightMode(AppCompatDelegate.MODE_NIGHT_NO);
+        } else {
             AppCompatDelegate.setDefaultNightMode(AppCompatDelegate.MODE_NIGHT_YES);
         }
 
         recreate();
+    }
+
+    @Override
+    public void onPostResume() {
+        super.onPostResume();
+        FragmentTransaction ft = fragmentManager.beginTransaction();
+        activeFragment = nowPlayingFragment;
+        ft.replace(R.id.nowPlayingContainer, nowPlayingFragment, "Now Playing");
+        ft.commit();
+
+        ft = fragmentManager.beginTransaction();
+        ft.replace(R.id.playbarContainer, playerBarFragment, "Player Bar");
+        ft.commit();
+
+        int id = bottomNavigationView.getSelectedItemId();
+        bottomNavigationView.setSelectedItemId(id);
+        mOnNavigationItemSelectedListener.onNavigationItemSelected(bottomNavigationView.getMenu().findItem(id));
+
+        SharedPreferences sharedPreferences = getSharedPreferences("current session", 0);
+        tag = sharedPreferences.getString("tag", null);
+    }
+
+    @Override
+    public void onDestroy(){
+        if(tag != null) {
+            SharedPreferences sharedPreferences = getSharedPreferences("current session", 0);
+            SharedPreferences.Editor editor = sharedPreferences.edit();
+            editor.putString("tag", tag);
+            editor.commit();
+        }
+        super.onDestroy();
     }
 
 

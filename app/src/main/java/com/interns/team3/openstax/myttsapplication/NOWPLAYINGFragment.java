@@ -93,6 +93,8 @@ public class NOWPLAYINGFragment extends Fragment {
             bookId = getArguments().getString(ARG_BOOK_ID);
 
         }
+
+        setRetainInstance(true);
     }
 
     @Override

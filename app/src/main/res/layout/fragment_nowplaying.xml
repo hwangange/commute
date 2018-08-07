@@ -52,7 +52,6 @@
             android:layout_gravity="center_horizontal"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:textColor="@color/darkBlack"
             android:text="Download"
             android:id="@+id/download"/>
 

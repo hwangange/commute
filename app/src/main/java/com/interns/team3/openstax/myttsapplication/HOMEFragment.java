@@ -58,17 +58,16 @@ public class HOMEFragment extends Fragment implements BookshelfFragment.OnFragme
     public void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         // Nested fragments
-        fragmentManager = getChildFragmentManager();
-        Log.i("Home", "in onCreate");
-
         newInstance= true; // assuming onCreate only gets called when this fragment is FIRST created.
+        setRetainInstance(true);
     }
 
     @Override
     public View onCreateView(LayoutInflater inflater, ViewGroup container, Bundle savedInstanceState) {
         // Inflate the layout for this fragment
         View v = inflater.inflate(R.layout.fragment_home, container, false);
-        Log.i("HOME", "onCreateVIew and newInstance is: " + String.valueOf(newInstance));
+
+        fragmentManager = getChildFragmentManager();
 
         if(newInstance) {
             newInstance = false;
@@ -76,11 +75,14 @@ public class HOMEFragment extends Fragment implements BookshelfFragment.OnFragme
             //Add Bookshelf fragment to this activity
             FragmentTransaction ft = fragmentManager.beginTransaction();
             bookshelfFragment = BookshelfFragment.newInstance("", "");
-            ft.replace(R.id.homeFragmentContainer, bookshelfFragment);
+            ft.replace(R.id.homeFragmentContainer, bookshelfFragment, "Bookshelf");
             ft.addToBackStack(null); // allow user to go back
-            ft.commit();
+            ft.commitAllowingStateLoss();
         }
-
+        else {
+            bookshelfFragment = (fragmentManager.findFragmentByTag("Bookshelf") == null) ? BookshelfFragment.newInstance("", "") : (BookshelfFragment) fragmentManager.findFragmentByTag("Bookshelf");
+            textbookViewFragment = (fragmentManager.findFragmentByTag("Textbook View")) == null ? null : (TextbookViewFragment) fragmentManager.findFragmentByTag("Textbook View");
+        }
 
         return v;
     }
@@ -134,7 +136,7 @@ public class HOMEFragment extends Fragment implements BookshelfFragment.OnFragme
         TableOfContentsFragment tableOfContentsFragment = TableOfContentsFragment.newInstance(bookTitle, bookID);
         FragmentTransaction ft = fragmentManager.beginTransaction();
         ft.setCustomAnimations(android.R.anim.slide_in_left, android.R.anim.slide_out_right, android.R.anim.fade_in, android.R.anim.fade_out);
-        ft.replace(R.id.homeFragmentContainer, tableOfContentsFragment);
+        ft.replace(R.id.homeFragmentContainer, tableOfContentsFragment, "Table of Contents");
         ft.addToBackStack(null); // allow user to go back
         ft.commit();
     }
@@ -145,9 +147,9 @@ public class HOMEFragment extends Fragment implements BookshelfFragment.OnFragme
         TextbookViewFragment textbookViewFragment = TextbookViewFragment.newInstance(modTitle, modID, bookID);
         FragmentTransaction ft = fragmentManager.beginTransaction();
         ft.setCustomAnimations(android.R.anim.slide_in_left, android.R.anim.slide_out_right, android.R.anim.fade_in, android.R.anim.fade_out);
-        ft.replace(R.id.homeFragmentContainer, textbookViewFragment);
+        ft.replace(R.id.homeFragmentContainer, textbookViewFragment, "Textbook View");
         ft.addToBackStack(null); // allow user to go back
-        ft.commit();
+        ft.commit(); // formerly just .commit() but idk.
     }
 
     public void playEntireModule(String bookTitle, String modID, String modTitle){
@@ -157,12 +159,5 @@ public class HOMEFragment extends Fragment implements BookshelfFragment.OnFragme
     public void onRecyclerViewCreated(RecyclerView recyclerView){
         ((MainActivity)getActivity()).onRecyclerViewCreated(recyclerView);
 
-    }
-
-    @Override
-    public void onSaveInstanceState(Bundle outState){
-        super.onSaveInstanceState(outState);
-        outState.putString("Heh", "Kek");
-        Log.i("onSaveInstanceState", "this is fking annoying");
     }
 }

@@ -12,11 +12,14 @@
     <!-- https://docs.aws.amazon.com/polly/latest/dg/supported-ssml.html#prosody-tag -->
 
     <!-- TODO: Update blank fragment layout -->
+
     <TextView
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:text="Theme"
         android:textSize="20sp" />
+
+
 
     <Switch
         android:id="@+id/themeSwitch"
@@ -58,7 +61,6 @@
 
         <Button
             android:text="Speak"
-            android:textColor="@color/darkBlack"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:id="@+id/readButton"
@@ -68,7 +70,6 @@
 
         <Button
             android:text="Save"
-            android:textColor="@color/darkBlack"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:id="@+id/saveButton"
