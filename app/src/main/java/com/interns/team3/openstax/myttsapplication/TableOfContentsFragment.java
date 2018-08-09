@@ -1,7 +1,5 @@
 package com.interns.team3.openstax.myttsapplication;
 
-import android.animation.Animator;
-import android.animation.AnimatorListenerAdapter;
 import android.animation.LayoutTransition;
 import android.net.Uri;
 import android.os.AsyncTask;
@@ -13,12 +11,6 @@ import android.util.Log;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
-import android.view.animation.AccelerateInterpolator;
-import android.view.animation.AlphaAnimation;
-import android.view.animation.Animation;
-import android.view.animation.AnimationSet;
-import android.view.animation.AnimationUtils;
-import android.view.animation.DecelerateInterpolator;
 import android.widget.ImageView;
 import android.widget.LinearLayout;
 import android.widget.TextView;

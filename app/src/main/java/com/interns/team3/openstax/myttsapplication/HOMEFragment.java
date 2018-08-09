@@ -21,7 +21,7 @@ import android.view.ViewGroup;
  * Use the {@link HOMEFragment#newInstance} factory method to
  * create an instance of this fragment.
  */
-public class HOMEFragment extends Fragment implements BookshelfFragment.OnFragmentInteractionListener, TableOfContentsFragment.OnFragmentInteractionListener, TextbookViewFragment.OnFragmentInteractionListener{
+public class HOMEFragment extends Fragment implements BookshelfFragment.OnFragmentInteractionListener, TableOfContentsFragment.OnFragmentInteractionListener, TextbookViewFragment.OnFragmentInteractionListener {
 
     private OnFragmentInteractionListener mListener;
 
