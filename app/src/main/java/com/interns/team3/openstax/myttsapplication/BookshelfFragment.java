@@ -1,30 +1,26 @@
 package com.interns.team3.openstax.myttsapplication;
 
+import android.app.Activity;
 import android.content.Context;
 import android.net.Uri;
-import android.provider.MediaStore;
 import android.support.v4.app.Fragment;
 import android.os.Bundle;
 import android.support.v4.widget.NestedScrollView;
-import android.support.v7.widget.GridLayoutManager;
 import android.support.v7.widget.LinearLayoutManager;
 import android.support.v7.widget.RecyclerView;
-import android.util.Log;
+import android.util.DisplayMetrics;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 import android.widget.ImageView;
-import android.widget.LinearLayout;
 import android.widget.TextView;
+import android.widget.Toast;
 
 import com.squareup.picasso.Picasso;
 
 import java.io.IOException;
-import java.lang.reflect.Array;
 import java.util.ArrayList;
-import java.util.Collection;
 import java.util.HashMap;
-import java.util.HashSet;
 import java.util.List;
 import java.util.TreeSet;
 
@@ -50,6 +46,8 @@ public class BookshelfFragment extends Fragment {
     private HashMap<String, ArrayList<AudioBook>> genres;
 
     private NestedScrollView nestedScrollView;
+
+    private ImageView ad;
 
     // required empty constructor
     public BookshelfFragment(){}
@@ -93,8 +91,15 @@ public class BookshelfFragment extends Fragment {
         // Inflate the layout for this fragment
         View view = inflater.inflate(R.layout.fragment_bookshelf, container, false);
 
+        DisplayMetrics displayMetrics = new DisplayMetrics();
+        ((Activity) getContext()).getWindowManager().getDefaultDisplay().getMetrics(displayMetrics);
+        int width = displayMetrics.widthPixels;
+
+        ad = view.findViewById(R.id.ad);
+        Picasso.with(getContext()).load(R.drawable.ad).resize(width,width).into(ad);
+
         if(savedInstanceState ==null || genres == null) {
-            Log.i("Bookshelf", "onCreateView, savedInstanceState or list 'genres' is null");
+            //Log.i("Bookshelf", "onCreateView, savedInstanceState or list 'genres' is null");
 
             // Construct the data source
             genres = new HashMap<String, ArrayList<AudioBook>>();
@@ -360,7 +365,9 @@ public class BookshelfFragment extends Fragment {
             itemHolder.rootView.setOnClickListener(new View.OnClickListener() {
                 @Override
                 public void onClick(View v) {
-                    ((HOMEFragment) getParentFragment()).sendBookInfo(id, title);
+                    if(title.equals("Psychology") || title.equals("Biology"))
+                        ((HOMEFragment) getParentFragment()).sendBookInfo(id, title);
+                    else Toast.makeText(getContext(), "Please select either Psychology or Biology.", Toast.LENGTH_SHORT).show();
                 }
             });
 

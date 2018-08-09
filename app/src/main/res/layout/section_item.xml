@@ -14,7 +14,8 @@
         android:layout_centerVertical="true"
         android:layout_alignParentLeft="true"
         android:layout_marginLeft="15dp"
-        android:src="@drawable/psychology"
+        android:scaleType="centerInside"
+        android:adjustViewBounds="true"
         android:id="@+id/imgItem"/>
 
     <TextView

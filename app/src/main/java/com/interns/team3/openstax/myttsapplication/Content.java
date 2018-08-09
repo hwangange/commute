@@ -342,6 +342,7 @@ public interface Content {
             return sectionObj;
         }
 
+        // also do section.select  figures with images
         private JSONObject pullParagraphs(Element section) throws JSONException {
             Elements paragraphs = section.select("> p");
             JSONObject paraObj = new JSONObject();

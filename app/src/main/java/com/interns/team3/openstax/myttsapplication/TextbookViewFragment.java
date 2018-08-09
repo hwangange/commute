@@ -25,6 +25,7 @@ import android.view.animation.DecelerateInterpolator;
 import android.widget.LinearLayout;
 import android.widget.ProgressBar;
 import android.widget.TextView;
+import android.widget.Toast;
 
 import com.nshmura.snappysmoothscroller.LinearLayoutScrollVectorDetector;
 import com.nshmura.snappysmoothscroller.SnapType;
@@ -117,6 +118,7 @@ public class TextbookViewFragment extends Fragment implements PlayerBarFragment.
         TextbookViewFragment.bookId = bookId;
         TextbookViewFragment.modId = modId;
         TextbookViewFragment.modTitle = modTitle;
+        player.reset();
 
     }
 
@@ -131,7 +133,8 @@ public class TextbookViewFragment extends Fragment implements PlayerBarFragment.
             bookId = getArguments().getString(ARG_BOOK_ID);
         }
 
-        Log.i("modtitle", modTitle);
+
+        //Log.i("modtitle", modTitle);
 
         // Populate dataSet
         tempDataSet = new ArrayList<>();
@@ -175,7 +178,8 @@ public class TextbookViewFragment extends Fragment implements PlayerBarFragment.
                 dataSet.add(new TextAudioChunk(tc));
             }
 
-            Log.i("dataSet is good to go!", "finished populating");
+
+            //Log.i("dataSet is good to go!", "finished populating");
         }
 
         setRetainInstance(true);
@@ -221,7 +225,8 @@ public class TextbookViewFragment extends Fragment implements PlayerBarFragment.
                 //playerBarFragment.setSeekbarProgress(front);
 
                 if ( target >=front && target <=back) {
-                   // Log.i("Target is visible", "Target is not -1!!");
+                   //
+                    // //Log.i("Target is visible", "Target is not -1!!");
                     customScrollListener.setTarget(-1);
                     highlightText(target);
 
@@ -238,13 +243,15 @@ public class TextbookViewFragment extends Fragment implements PlayerBarFragment.
 
                 super.onLayoutChildren(recycler, state);
                 int target = customScrollListener.getTarget();
-                //Log.i("excellent", "In onLayoutChildren\t"+ "Position: " + String.valueOf(target));
+                //
+                // //Log.i("excellent", "In onLayoutChildren\t"+ "Position: " + String.valueOf(target));
 
                 int front = findFirstVisibleItemPosition();
                 int back = findLastVisibleItemPosition();
 
                 if ( target >=front && target <=back) {
-                   // Log.i("Target is visible", "Target is not -1!!");
+                   //
+                    // //Log.i("Target is visible", "Target is not -1!!");
                     customScrollListener.setTarget(-1);
                     highlightText(target);
 
@@ -313,7 +320,8 @@ public class TextbookViewFragment extends Fragment implements PlayerBarFragment.
     }
 
     public void onFragmentInteraction(Uri uri){
-        Log.i("onFragmentInteraction", uri.toString());
+
+        //Log.i("onFragmentInteraction", uri.toString());
     }
 
     public void getContent(){
@@ -330,7 +338,8 @@ public class TextbookViewFragment extends Fragment implements PlayerBarFragment.
 
             // fill dataset with temporary values; because chunks finish downloading out of order
             if (!easyWay) {
-                Log.i("NOT the easyWay", "you better not be in here!");
+
+                //Log.i("NOT the easyWay", "you better not be in here!");
                 for(int x = 0; x < tempDataSet.size(); x ++)
                     dataSet.add(null);
             }
@@ -345,21 +354,28 @@ public class TextbookViewFragment extends Fragment implements PlayerBarFragment.
     public void storeConvertedTTSAudio() {
         Object[] voicePrefs = getVoicePreferences();
         String voice = (String) voicePrefs[0];
+        String currentModId = modId;
 
         File book = new File(getContext().getExternalCacheDir(), bookId);
         if (!book.isDirectory()) {
-                if(book.mkdirs()) Log.i("Book directory created", "YAY!");
-                else Log.i("FAILED: book directory not created", "rip");
+                if(book.mkdirs()) {
+                    //Log.i("FAILED: book directory not created", "rip");
+                }
         }
 
         tempDataSet.parallelStream().forEach(chunk -> {
-            String ssml = chunk.getSsml();
-            int id = chunk.getId();
-            String folder = String.format("%s/%s/%s/", getContext().getExternalCacheDir().getAbsolutePath(), bookId, modId);
-            AudioClient.AmazonClient client = new AudioClient.AmazonClient(folder, getContext(), voice);
-            client.synthesizeAudio(String.valueOf(id), true, ssml, false);
-            chunk.setAudioFile(folder + id + ".mp3");
-            chunk.synthesized();
+            if(currentModId.equals(modId)) {
+                String ssml = chunk.getSsml();
+                int id = chunk.getId();
+                String folder = String.format("%s/%s/%s/", getContext().getExternalCacheDir().getAbsolutePath(), bookId, modId);
+                AudioClient.AmazonClient client = new AudioClient.AmazonClient(folder, getContext(), voice);
+                client.synthesizeAudio(String.valueOf(id), true, ssml, false);
+                chunk.setAudioFile(folder + id + ".mp3");
+                chunk.synthesized();
+            } else{
+                Toast.makeText(getContext(), "Cancelling streaming", Toast.LENGTH_SHORT).show();
+                return;
+            }
         });
     }
 
@@ -408,17 +424,19 @@ public class TextbookViewFragment extends Fragment implements PlayerBarFragment.
                         (v !=null && v.getTop() > 0 && position != last && position == layoutManager.findLastVisibleItemPosition()))
         {
 
-            //  if(v != null) Log.i("Top", String.valueOf(v.getTop()));
+            //  if(v != null)
+            // //Log.i("Top", String.valueOf(v.getTop()));
 
-            // Log.i("Position not visible?", "\tFirst: " + String.valueOf(first)+"\tPosition: " + String.valueOf(position) + "\tLast: " + String.valueOf(last));
-            // Log.i("First Visible item position: ", String.valueOf(layoutManager.findFirstVisibleItemPosition()));
+            //
+            // //Log.i("First Visible item position: ", String.valueOf(layoutManager.findFirstVisibleItemPosition()));
 
             //customScrollListener.setTarget(position);
             recyclerView.smoothScrollToPosition(position);
 
         }
         else {
-            //Log.i("Selected: " + String.valueOf(getSelected()), "Position (Input): " + String.valueOf(position));
+            //
+            // //Log.i("Selected: " + String.valueOf(getSelected()), "Position (Input): " + String.valueOf(position));
             highlightText(position);
         }
     }
@@ -438,7 +456,8 @@ public class TextbookViewFragment extends Fragment implements PlayerBarFragment.
             });
 
         } else {
-            Log.i("View is null", "View: " + v + "\tPosition: " + position + "\nLast Visible Item: " + layoutManager.findLastVisibleItemPosition());
+
+            //Log.i("View is null", "View: " + v + "\tPosition: " + position + "\nLast Visible Item: " + layoutManager.findLastVisibleItemPosition());
         }
 
     }
@@ -451,39 +470,46 @@ public class TextbookViewFragment extends Fragment implements PlayerBarFragment.
     private String[] stringSplit(String string) {
         String a = WordUtils.wrap(string, 3999);
         String[] list = a.split(System.lineSeparator());
-        Log.i("Split string array length: ", String.valueOf(list.length));
-        for(String str : list) Log.i("\t\tElement", str +"\n");
+
+        //Log.i("Split string array length: ", String.valueOf(list.length));
+        for(String str : list) {
+            //Log.i("\t\tElement", str +"\n");
+        }
         return list;
     }
 
     // Formerly in UtteranceProgressListener
     public void showProgress(int pos){
         // index number in dataSet
+        if(pos < dataSet.size()) {
+            dataSet.set(pos, new TextAudioChunk(tempDataSet.get(pos)));
+            getActivity().runOnUiThread(() -> {
+                adapter.notifyDataSetChanged();
+                if (progressBar != null) {
+                    progressBar.incrementProgressBy(1);
+                    int fraction = progressBar.getProgress() * 100 / tempDataSet.size();
+                    progressNumber.setText(String.format("%s%%", fraction));
 
-        dataSet.set(pos, new TextAudioChunk(tempDataSet.get(pos)));
-        getActivity().runOnUiThread(() -> {
-            adapter.notifyDataSetChanged();
-            if(progressBar != null) {
-                progressBar.incrementProgressBy(1);
-                int fraction = progressBar.getProgress() * 100 / tempDataSet.size();
-                progressNumber.setText(String.format("%s%%", fraction));
+                    if (progressBar.getProgress() == tempDataSet.size()) {
 
-                if(progressBar.getProgress() == tempDataSet.size()){
-                    Log.i("Completed converting all files", String.valueOf(pos));
+                        //Log.i("Completed converting all files", String.valueOf(pos));
 
-                    storeTimeLengths();
+                        storeTimeLengths();
 
-                    if(makeDownloadAvailable) { makeDownloadAvailable = false; }
-                    progress.animate().setDuration(200).alpha(0).setListener(new AnimatorListenerAdapter() {
-                        @Override
-                        public void onAnimationEnd(Animator animation) {
-                            progress.setVisibility(View.GONE);
+                        if (makeDownloadAvailable) {
+                            makeDownloadAvailable = false;
                         }
-                    });
+                        progress.animate().setDuration(200).alpha(0).setListener(new AnimatorListenerAdapter() {
+                            @Override
+                            public void onAnimationEnd(Animator animation) {
+                                progress.setVisibility(View.GONE);
+                            }
+                        });
+                    }
                 }
-            }
 
-        });
+            });
+        }
     }
 
 
@@ -504,7 +530,9 @@ public class TextbookViewFragment extends Fragment implements PlayerBarFragment.
                 v.findViewById(R.id.item).setBackgroundColor(ContextCompat.getColor(context, R.color.transparentGrey));
                 ((TextView)v.findViewById(R.id.item)).setTextColor(ContextCompat.getColor(context, R.color.normalText));
             }
-            else{Log.i("unhighlightText", "View is null, can't set bg color to grey");}
+            else{
+                //Log.i("unhighlightText", "View is null, can't set bg color to grey");
+            }
         });
     }
 
@@ -533,7 +561,8 @@ public class TextbookViewFragment extends Fragment implements PlayerBarFragment.
         player.pause();
         length = player.getCurrentPosition();
 
-        Log.i("Paused - Selected", String.valueOf(adapter.getSelected()));
+
+        //Log.i("Paused - Selected", String.valueOf(adapter.getSelected()));
 
         //backToNormal(String.valueOf(getSelected()));
 
@@ -581,7 +610,8 @@ public class TextbookViewFragment extends Fragment implements PlayerBarFragment.
 
         is_paused = false; // if the player was paused before the user pressed "fast rewind"
 
-        Log.i("Reversed - Selected", String.valueOf(adapter.getSelected()) + " (should be the same)");
+
+        //Log.i("Reversed - Selected", String.valueOf(adapter.getSelected()) + " (should be the same)");
 
         int position = getSelected();
 
@@ -618,7 +648,7 @@ public class TextbookViewFragment extends Fragment implements PlayerBarFragment.
     public void onDragStop(int position){
         int start = getActualFirstVisibleItem();
         //int start = layoutManager.findFirstVisibleItemPosition();
-        if(start == -1) Log.e("Invalid position", "getActualFirstVisibleItem returned -1");
+       // if(start == -1) Log.e("Invalid position", "getActualFirstVisibleItem returned -1");
         adapter.setSelected(start);
         highlightText(start);
 
@@ -634,7 +664,8 @@ public class TextbookViewFragment extends Fragment implements PlayerBarFragment.
 
     //Called by volume fragment
     public void setVolume(float value){
-        Log.i("Volume", String.valueOf(value));
+
+        //Log.i("Volume", String.valueOf(value));
         player.setVolume(value, value);
     }
 
@@ -667,9 +698,11 @@ public class TextbookViewFragment extends Fragment implements PlayerBarFragment.
                     break;
                 case RecyclerView.SCROLL_STATE_SETTLING:
                     //System.out.println("Scroll Settling");
-                    //Log.i("ScrollStateChanged", "Scroll Settling\tTarget: " + String.valueOf(target));
+                    //
+                    // //Log.i("ScrollStateChanged", "Scroll Settling\tTarget: " + String.valueOf(target));
                     /*if(target != -1) {
-                        Log.i("ScrollStateChanged", "Target is not -1!!");
+
+                        //Log.i("ScrollStateChanged", "Target is not -1!!");
                         doneScrolling(target);
                         target = -1;
                     } */
@@ -736,7 +769,7 @@ public class TextbookViewFragment extends Fragment implements PlayerBarFragment.
         super.onResume();
 
         if(recyclerView !=null) ((MainActivity)getActivity()).onRecyclerViewCreated(recyclerView);
-        else Log.i("Recyclerview is null", "lol");
+        //else Log.i("Recyclerview is null", "lol");
 
 
 //        playerBarFragment.setSeekbarProgress(getActualFirstVisibleItem());
@@ -769,7 +802,8 @@ public class TextbookViewFragment extends Fragment implements PlayerBarFragment.
         MediaMetadataRetriever mmr = new MediaMetadataRetriever();
         mmr.setDataSource(getContext(), Uri.parse(filePath));
         String duration = mmr.extractMetadata(MediaMetadataRetriever.METADATA_KEY_DURATION);
-        //Log.i("Duration", duration);
+        //
+        // //Log.i("Duration", duration);
         mmr.release();
         return Integer.parseInt(duration);
     }
@@ -789,13 +823,16 @@ public class TextbookViewFragment extends Fragment implements PlayerBarFragment.
 //                    s +=timesJSON.getString(i)+"\t";
                     total += Integer.parseInt(timesJSON.getString(i));
                 }
-                Log.i("======================>", "yeetz");
-                Log.i("Calculated Duration", String.valueOf(total));
+
+                //Log.i("Calculated Duration", String.valueOf(total));
                 playerBarFragment =  (PlayerBarFragment) getActivity().getSupportFragmentManager().findFragmentByTag("Player Bar");
-                Log.i("Actual Duration", String.valueOf(playerBarFragment.getDuration()));
+
+                //Log.i("Actual Duration", String.valueOf(playerBarFragment.getDuration()));
                 return times;
 
-            } catch(JSONException e){ Log.e("JSONException", "SharedPreferences string cannot be converted to JSONArray");}
+            } catch(JSONException e){
+                //Log.e("JSONException", "SharedPreferences string cannot be converted to JSONArray");
+            }
 
 
         }

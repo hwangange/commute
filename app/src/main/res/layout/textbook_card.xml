@@ -52,7 +52,7 @@
             android:layout_height="wrap_content"
             android:layout_gravity="center_horizontal"
             android:maxHeight="100dp"
-            android:layout_marginVertical="@dimen/activity_vertical_margin"/>
+            android:layout_marginVertical="@dimen/activity_vertical_margin" />
         <!-- android:src = "@drawable/" -->
         <!-- adjustViewBounds = true removed the unwanted padding-->
 

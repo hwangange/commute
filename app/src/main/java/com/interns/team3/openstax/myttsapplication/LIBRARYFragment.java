@@ -22,6 +22,7 @@ import com.squareup.picasso.Picasso;
 import java.io.File;
 import java.util.ArrayList;
 import java.util.HashSet;
+import java.util.Iterator;
 
 import io.github.luizgrp.sectionedrecyclerviewadapter.SectionParameters;
 import io.github.luizgrp.sectionedrecyclerviewadapter.SectionedRecyclerViewAdapter;
@@ -175,12 +176,19 @@ public class LIBRARYFragment extends Fragment {
     }
 
     public void removeFavorite(String tag){
+
         String modId = makeLibraryItem(tag).getModId();
-        for(LibraryItem li : favorites_dataSet){
+
+        Iterator<LibraryItem> iter = favorites_dataSet.iterator();
+
+        while (iter.hasNext()) {
+            LibraryItem li = iter.next();
             if(li.getModId().equals(modId)){
-                favorites_dataSet.remove(li);
+                iter.remove();
             }
+
         }
+
         sectionAdapter.notifyDataSetChanged();
     }
 
@@ -311,6 +319,13 @@ public class LIBRARYFragment extends Fragment {
             this.bookTitle= bookTitle;
             this.modTitle = modTitle;
             this.modId = modId;
+        }
+
+        LibraryItem(String tag) {
+            String[] ary = tag.split("_");
+            this.bookTitle= ary[0];
+            this.modTitle = ary[1];
+            this.modId = ary[2];
         }
 
         public String getBookTitle(){ return bookTitle; }

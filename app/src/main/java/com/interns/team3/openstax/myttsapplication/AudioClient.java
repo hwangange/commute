@@ -3,8 +3,10 @@ package com.interns.team3.openstax.myttsapplication;
 import android.annotation.SuppressLint;
 import android.content.Context;
 import android.os.AsyncTask;
+import android.os.Environment;
 import android.support.v4.app.Fragment;
 import android.util.Log;
+import android.widget.Toast;
 
 import com.amazonaws.auth.CognitoCachingCredentialsProvider;
 import com.amazonaws.regions.Regions;
@@ -73,10 +75,16 @@ public abstract class AudioClient {
     }
 
     private static void makeFolder(String folder) {
-        try {
-            Files.createDirectories(Paths.get(folder));
-        } catch (IOException e) {
-            e.printStackTrace();
+
+        File dir = new File(folder);
+        boolean success = true;
+        if (!dir.exists()) {
+            success = dir.mkdir();
+        }
+        if (success) {
+
+        } else {
+            //Log.i("Failed to make folder", "awww man...");
         }
     }
 
@@ -239,7 +247,7 @@ public abstract class AudioClient {
             int readBytes;
 
             try (FileOutputStream outputStream = new FileOutputStream(file)) {
-                Log.i("WriteToFile", fileName);
+                //Log.i("WriteToFile", fileName);
                 while ((readBytes = audioStream.read(buffer)) > 0) {
                     outputStream.write(buffer, 0, readBytes);
                 }
@@ -248,13 +256,14 @@ public abstract class AudioClient {
                 //showProgress
                 ((MainActivity) context).runOnUiThread(() -> {
                     Fragment fragment = ((MainActivity) context).getActiveFragment();
-                    if (fragment instanceof TextbookViewFragment) {
+                    if (fragment instanceof TextbookViewFragment && (!(String.valueOf(fileName.charAt(0)).equals("m")) ||
+                            (String.valueOf(fileName.charAt(0)).equals("m") && fileName.equals(((TextbookViewFragment)fragment).modId)))) {
                         ((TextbookViewFragment) fragment).showProgress(Integer.parseInt(fileName));
                     }
                 });
 
                 if (debug) {
-                    Log.i("Audio content written to file \"%s.mp3\"\n", fileName);
+                    //Log.i("Audio content written to file \"%s.mp3\"\n", fileName);
                     //System.out.printf("Audio content written to file \"%s.mp3\"\n", fileName);
                 }
             } catch (Exception e) {

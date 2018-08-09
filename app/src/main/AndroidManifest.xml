@@ -26,10 +26,12 @@
             android:largeHeap="true"
         -->
 
-        <activity android:name=".LoginActivity" />
+        <activity android:name=".LoginActivity">
+
+        </activity>
+
         <activity android:name=".MainActivity">
             <!--android:theme="@style/OpaqueAppTheme"-->
-
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
                 <category android:name="android.intent.category.LAUNCHER" />

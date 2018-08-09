@@ -134,15 +134,15 @@ public class MainActivity extends AppCompatActivity implements HOMEFragment.OnFr
         mLayout.addPanelSlideListener(new SlidingUpPanelLayout.PanelSlideListener() {
             @Override
             public void onPanelSlide(View panel, float slideOffset) {
-                //Log.i(TAG, "onPanelSlide, offset " + slideOffset);
+                ////Log.i(TAG, "onPanelSlide, offset " + slideOffset);
             }
 
             @Override
             public void onPanelStateChanged(View panel, SlidingUpPanelLayout.PanelState previousState, SlidingUpPanelLayout.PanelState newState) {
-                //Log.i(TAG, "onPanelStateChanged " + newState);
+                ////Log.i(TAG, "onPanelStateChanged " + newState);
 
                 if (String.valueOf(newState).equals("DRAGGING")) {
-                    //Log.i(TAG, "It is dragging");
+                    ////Log.i(TAG, "It is dragging");
                 }
 
                 if (String.valueOf(newState).equals("EXPANDED")) {
@@ -181,16 +181,14 @@ public class MainActivity extends AppCompatActivity implements HOMEFragment.OnFr
                     FragmentTransaction ft = fragmentManager.beginTransaction();
                     activeFragment = textbookViewFragment;
                     ft.replace(R.id.nowPlayingContainer, textbookViewFragment, "Textbook View");
-                    ft.addToBackStack(null); // allow user to go back
                     ft.setCustomAnimations(android.R.anim.slide_in_left, android.R.anim.slide_out_right, android.R.anim.fade_in, android.R.anim.fade_out);
-                    ft.commit();
+                    ft.commitNow();
                 } else if (tab.getText().equals("Play")) {
                     FragmentTransaction ft = fragmentManager.beginTransaction();
                     activeFragment = nowPlayingFragment;
                     ft.replace(R.id.nowPlayingContainer, nowPlayingFragment, "Now Playing");
-                    ft.addToBackStack(null); // allow user to go back
                     ft.setCustomAnimations(android.R.anim.slide_in_left, android.R.anim.slide_out_right, android.R.anim.fade_in, android.R.anim.fade_out);
-                    ft.commit();
+                    ft.commitNow();
                 }
             }
 
@@ -215,7 +213,7 @@ public class MainActivity extends AppCompatActivity implements HOMEFragment.OnFr
         public boolean onNavigationItemSelected(@NonNull MenuItem item) {
             switch (item.getItemId()) {
                 case R.id.navigation_home: {
-                    Log.i("onNavigationItemSelected", "Home");
+                    //Log.i("onNavigationItemSelected", "Home");
                     FragmentTransaction ft = fragmentManager.beginTransaction();
                     ft.replace(R.id.fragmentContainer, homeFragment, "Home");
                     ft.addToBackStack(null); // allow user to go back
@@ -224,7 +222,7 @@ public class MainActivity extends AppCompatActivity implements HOMEFragment.OnFr
                     return true;
                 }
                 case R.id.navigation_library: {
-                    Log.i("onNavigationItemSelected", "Library");
+                    //Log.i("onNavigationItemSelected", "Library");
                     FragmentTransaction ft = fragmentManager.beginTransaction();
                     ft.replace(R.id.fragmentContainer, libraryFragment, "Library");
                     //ft.addToBackStack(null); // allow user to go back
@@ -233,7 +231,7 @@ public class MainActivity extends AppCompatActivity implements HOMEFragment.OnFr
                     return true;
                 }
                 case R.id.navigation_settings: {
-                    Log.i("onNavigationItemSelected", "Settings");
+                    //Log.i("onNavigationItemSelected", "Settings");
                     FragmentTransaction ft = fragmentManager.beginTransaction();
                     ft.replace(R.id.fragmentContainer, settingsFragment, "Settings");
                     //ft.addToBackStack(null); // allow user to go back
@@ -247,7 +245,7 @@ public class MainActivity extends AppCompatActivity implements HOMEFragment.OnFr
     };
 
     public void onFragmentInteraction(Uri uri){
-        Log.i("onFragmentInteraction", uri.toString());
+        //Log.i("onFragmentInteraction", uri.toString());
     }
 
     @Override
@@ -325,60 +323,70 @@ public class MainActivity extends AppCompatActivity implements HOMEFragment.OnFr
         homeFragment.sendModuleInfo(bookTitle, bookID, modID, modTitle);
     }
 
+    public void setDragView(String bookTitle, String modID, String modTitle) {
+        dragViewText.setText(Html.fromHtml("<b>"+modTitle+"</b><br/>"+bookTitle, Html.FROM_HTML_MODE_COMPACT));
+        if(isEntireModuleAvailable(bookTitle, modID)){
+            dragViewPlayButton.setVisibility(View.VISIBLE);
+        }
+        else {
+            dragViewPlayButton.setVisibility(View.GONE);
+        }
+        setFavoriteIconColor(false);
+    }
+
     public void playEntireModule(String bookTitle, String modID, String modTitle){
 
-        Log.i("playEntireModule", "is nowPlayingFragment null? "+ String.valueOf(nowPlayingFragment == null));
-        Log.i("playEntireModule", "Module Title parameter: __" + modTitle + "__!");
+        setFileTag(bookTitle, modTitle, modID);
+        setDragView(bookTitle, modID, modTitle);
 
-        dragViewText.setText(Html.fromHtml("<b>"+modTitle+"</b><br/>"+bookTitle, Html.FROM_HTML_MODE_COMPACT));
-
-
-        if(nowPlayingFragment != null)
-        {
-            String s = nowPlayingFragment.getModule();
-            Log.i("getModule() results", s);
-        }
-
-        if(!nowPlayingFragment.getModule().equals(modID))
+        if(nowPlayingFragment.getModule() == null || !nowPlayingFragment.getModule().equals(modID))
         {
             dragViewPlayButton.setImageResource(R.drawable.pause);
 
             // stop the media player
-            if(!nowPlayingFragment.getModule().equals("")) playerBarFragment.stopTTS();
+            if(!nowPlayingFragment.getModule().equals(""))
+            {
+                FragmentTransaction ft = fragmentManager.beginTransaction();
+                ft.remove(playerBarFragment);
+                ft.commit();
+            }
+
 
             // make a new nowPlayingFragment
-            nowPlayingFragment.setNewModule(bookTitle, modID, modTitle);
+           // nowPlayingFragment.setNewModule(bookTitle, modID, modTitle);
             playerBarFragment.setNewModule(bookTitle, modID, modTitle);
+
+            nowPlayingFragment = NOWPLAYINGFragment.newInstance(modTitle, modID, bookTitle);
             textbookViewFragment = TextbookViewFragment.newInstance(modTitle, modID, bookTitle);
-            setFileTag(bookTitle, modTitle, modID);
 
-            // set favorite
-            setFavoriteIconColor(false);
-
-            // add nowPlayingFragment to the scroll up panel
-            nowPlayingTab.select();
 
             if(isEntireModuleAvailable(bookTitle, modID)){
-                playerBarFragment.setVisible(true);
-                //fragmentManager.beginTransaction().replace(R.id.playbarContainer, playerBarFragment, "Player Bar").commit();
+                // show the Now Playing tab first.
+                nowPlayingFragment.setShowPlaying(true);
+                nowPlayingTab.select();
+                dragViewPlayButton.setVisibility(View.VISIBLE);
+
                 String output = getExternalCacheDir().getAbsolutePath() + "/" + bookTitle + "/" + modID + "/output.mp3";
                 playerBarFragment.setOutputFilePath(output);
                 playerBarFragment.playMergedFile(0);
+
             }
             else {
-                // hide playerBarFragment?
-                playerBarFragment.setVisible(false);
-                //fragmentManager.beginTransaction().remove(playerBarFragment).commit();
-
                 // show the TextbookView tab first.
                 textbookViewTab.select();
+
+                // show download button
+                // don't make player bar visible on the "Play" section.
+                dragViewPlayButton.setVisibility(View.GONE);
+                nowPlayingFragment.setShowPlaying(false);
+
+
             }
+
+            mLayout.setPanelState(SlidingUpPanelLayout.PanelState.EXPANDED);
 
 
         }
-
-
-        mLayout.setPanelState(SlidingUpPanelLayout.PanelState.EXPANDED);
     }
 
     public void onRecyclerViewCreated(RecyclerView recyclerView){
@@ -425,13 +433,15 @@ public class MainActivity extends AppCompatActivity implements HOMEFragment.OnFr
                 libraryFragment.addFavorite(tag);
             }
 
-        } else { Log.e("Why is it here.", faves.contains(tag) + " | " + shouldToggle);}
+        } else {
+            //Log.e("Why is it here.", faves.contains(tag) + " | " + shouldToggle);
+            }
         String output = ":) \t";
         for(String s : newFaves) {
             output+=s+"\t";
         }
         newFaves.remove(null);
-        Log.i("in NewFaves", output);
+        //Log.i("in NewFaves", output);
         editor.putStringSet("favorites", newFaves); // hopefully this replaces the old favorites set
         editor.commit();
     }
@@ -441,18 +451,9 @@ public class MainActivity extends AppCompatActivity implements HOMEFragment.OnFr
 
         File f = new File(output);
         if(f.exists()) {
-            // show textbookviewfragment
-            dragViewPlayButton.setVisibility(View.VISIBLE);
-            nowPlayingFragment.showPlaying();
             return true;
         }
         else {
-            Log.i("Download unavailable", "hiding play options");
-            // show download button
-            // don't make player bar visible on the "Play" section.
-            dragViewPlayButton.setVisibility(View.GONE);
-            nowPlayingFragment.hidePlaying();
-
             return false;
         }
     }
@@ -462,7 +463,7 @@ public class MainActivity extends AppCompatActivity implements HOMEFragment.OnFr
         try {
             download(output);
         } catch (Exception e) {
-            Log.i("IOException", "Downloading entire module");
+            //Log.i("IOException", "Downloading entire module");
         }
 
         SharedPreferences sharedPreferences = this.getSharedPreferences("library", 0);
@@ -495,7 +496,7 @@ public class MainActivity extends AppCompatActivity implements HOMEFragment.OnFr
 
         // https://trac.ffmpeg.org/wiki/Concatenate
         // String s = "-i " + uris[0] + " -i " + uris[1] + " -filter_complex [0:0][1:0]concat=n=2:v=0:a=1[out] -map [out] " + output;
-        Log.i("THE WHOLE THING", s.toString());
+        //Log.i("THE WHOLE THING", s.toString());
 
 
         String[] cmd = s.toString().split(" ");
@@ -504,51 +505,46 @@ public class MainActivity extends AppCompatActivity implements HOMEFragment.OnFr
         FFmpeg ffmpeg = FFmpeg.getInstance(this);
         if (ffmpeg.isSupported()) {
             // ffmpeg is supported
-            Log.i("FFmpeg is supported", "Yay!");
-            //if(makeDownloadAvailable) download.setEnabled(true);
+
         } else {
             // ffmpeg is not supported
-            Log.i("FFmpeg is not supported", "Darn ;(");
+
         }
 
 
-        // to execute "ffmpeg -version" command you just need to pass "-version"
-        // for more info, check out this link:
-        // https://superuser.com/questions/1298891/ffmpeg-merge-multiple-audio-files-into-single-audio-file-with-android
-        // CORRECT dependency that fixes "relocation" problems: https://github.com/bravobit/FFmpeg-Android
         ffmpeg.execute(cmd, new ExecuteBinaryResponseHandler() {
 
             @Override
             public void onStart() {
-                Log.i("ffmpeg execute - Start", "Hi");
+                //Log.i("ffmpeg execute - Start", "Hi");
             }
 
             @Override
             public void onProgress(String message) {
-                Log.i("ffmpeg execute - Progress", message);
+                //Log.i("ffmpeg execute - Progress", message);
             }
 
             @Override
             public void onFailure(String message) {
-                Log.i("ffmpeg execute - Failure", message);
+                //Log.i("ffmpeg execute - Failure", message);
             }
 
             @Override
             public void onSuccess(String message) {
-                Log.i("ffmpeg execute - Success", message);
+                //Log.i("ffmpeg execute - Success", message);
             }
 
             @Override
             public void onFinish() {
-                Log.i("ffmpeg execute - Finish", "Bye");
+                //Log.i("ffmpeg execute - Finish", "Bye");
                 // show the original NowPlaying.
                 if(getActiveFragment() instanceof NOWPLAYINGFragment){
                     nowPlayingFragment.showPlaying();
                 }
+
                 nowPlayingFragment.setShowPlaying(true); // in case nowPlayingFragment is not visibile on the screen at the time
                 textbookViewFragment.makeThingsEasy();
                 dragViewPlayButton.setVisibility(View.VISIBLE);
-                playerBarFragment.setVisible(true);
                 playerBarFragment.setOutputFilePath(outputFilename);
                 playerBarFragment.playMergedFile(0);
 
@@ -608,6 +604,14 @@ public class MainActivity extends AppCompatActivity implements HOMEFragment.OnFr
 
         SharedPreferences sharedPreferences = getSharedPreferences("current session", 0);
         tag = sharedPreferences.getString("tag", null);
+        if(tag != null) {
+            String[] ary = tag.split("_");
+            String bookTitle = ary[0];
+            String modTitle = ary[1];
+            String modID = ary[2];
+
+            setDragView(bookTitle, modID, modTitle);
+        }
     }
 
     @Override

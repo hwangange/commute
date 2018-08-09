@@ -71,7 +71,7 @@ public class HOMEFragment extends Fragment implements BookshelfFragment.OnFragme
 
         if(newInstance) {
             newInstance = false;
-            Log.i("Creating new bookshelf", "uh");
+            //Log.i("Creating new bookshelf", "uh");
             //Add Bookshelf fragment to this activity
             FragmentTransaction ft = fragmentManager.beginTransaction();
             bookshelfFragment = BookshelfFragment.newInstance("", "");
@@ -126,13 +126,13 @@ public class HOMEFragment extends Fragment implements BookshelfFragment.OnFragme
     }
 
     public void onFragmentInteraction(Uri uri){
-        Log.i("onFragmentInteraction", uri.toString());
+        //Log.i("onFragmentInteraction", uri.toString());
     }
 
     public void sendBookInfo(String bookID, String bookTitle){
         // from Bookshelf fragment to Table of Contents fragment
 
-        Log.i("sendBookInfo", bookID + ", " + bookTitle);
+        //Log.i("sendBookInfo", bookID + ", " + bookTitle);
         TableOfContentsFragment tableOfContentsFragment = TableOfContentsFragment.newInstance(bookTitle, bookID);
         FragmentTransaction ft = fragmentManager.beginTransaction();
         ft.setCustomAnimations(android.R.anim.slide_in_left, android.R.anim.slide_out_right, android.R.anim.fade_in, android.R.anim.fade_out);
@@ -143,7 +143,7 @@ public class HOMEFragment extends Fragment implements BookshelfFragment.OnFragme
 
     public void sendModuleInfo(String bookTitle, String bookID, String modID, String modTitle){
         // from Table of Contents fragment to TextbookView Fragment
-        Log.i("sendModuleInfo", bookTitle + ", " + bookID + ", " + modID + ", " + modTitle);
+        //Log.i("sendModuleInfo", bookTitle + ", " + bookID + ", " + modID + ", " + modTitle);
         TextbookViewFragment textbookViewFragment = TextbookViewFragment.newInstance(modTitle, modID, bookID);
         FragmentTransaction ft = fragmentManager.beginTransaction();
         ft.setCustomAnimations(android.R.anim.slide_in_left, android.R.anim.slide_out_right, android.R.anim.fade_in, android.R.anim.fade_out);

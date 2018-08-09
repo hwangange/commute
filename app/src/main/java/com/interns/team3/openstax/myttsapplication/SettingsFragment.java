@@ -154,7 +154,7 @@ public class SettingsFragment extends Fragment {
             voices = listAllVoices(getContext());
 
             // Log a message with a list of available TTS voices.
-            Log.i(TAG, "Available Polly voices: " + voices);
+            //Log.i(TAG, "Available Polly voices: " + voices);
 
             return null;
         }
@@ -272,7 +272,7 @@ public class SettingsFragment extends Fragment {
     }
 
     void setupThemeSwitch() {
-        Log.i("setupThemeSwitch", "");
+        //Log.i("setupThemeSwitch", "");
         themeSwitch.setOnCheckedChangeListener(new CompoundButton.OnCheckedChangeListener() {
             @Override
             public void onCheckedChanged(CompoundButton buttonView, boolean isChecked) {
@@ -315,7 +315,7 @@ public class SettingsFragment extends Fragment {
             String decibelString = String.valueOf(volume) + "dB";
 
             String ssmlSampleText = "<speak><prosody volume=\"" + decibelString +"\">" + sampleText + "</prosody></speak>";
-            Log.i("New Sample Text", ssmlSampleText);
+            //Log.i("New Sample Text", ssmlSampleText);
 
             // Create speech synthesis request.
             SynthesizeSpeechPresignRequest synthesizeSpeechPresignRequest =
@@ -333,7 +333,7 @@ public class SettingsFragment extends Fragment {
             URL presignedSynthesizeSpeechUrl =
                     client.getPresignedSynthesizeSpeechUrl(synthesizeSpeechPresignRequest);
 
-            Log.i(TAG, "Playing speech from presigned URL: " + presignedSynthesizeSpeechUrl);
+            //Log.i(TAG, "Playing speech from presigned URL: " + presignedSynthesizeSpeechUrl);
 
             // Create a media player to play the synthesized audio stream.
             if (mediaPlayer.isPlaying()) {
@@ -345,7 +345,7 @@ public class SettingsFragment extends Fragment {
                 // Set media player's data source to previously obtained URL.
                 mediaPlayer.setDataSource(presignedSynthesizeSpeechUrl.toString());
             } catch (IOException e) {
-                Log.e(TAG, "Unable to set data source for the media player! " + e.getMessage());
+                //Log.e(TAG, "Unable to set data source for the media player! " + e.getMessage());
             }
 
             // Start the playback asynchronously (since the data source is a network stream).
@@ -366,7 +366,7 @@ public class SettingsFragment extends Fragment {
         }
 
         protected void onPostExecute(URL presignedSynthesizeSpeechUrl) {
-            Log.i(TAG, "Playing speech from presigned URL: " + presignedSynthesizeSpeechUrl);
+            //Log.i(TAG, "Playing speech from presigned URL: " + presignedSynthesizeSpeechUrl);
 
             // Create a media player to play the synthesized audio stream.
             if (mediaPlayer.isPlaying()) {
@@ -378,7 +378,7 @@ public class SettingsFragment extends Fragment {
                 // Set media player's data source to previously obtained URL.
                 mediaPlayer.setDataSource(presignedSynthesizeSpeechUrl.toString());
             } catch (IOException e) {
-                Log.e(TAG, "Unable to set data source for the media player! " + e.getMessage());
+                //Log.e(TAG, "Unable to set data source for the media player! " + e.getMessage());
             }
 
             // Start the playback asynchronously (since the data source is a network stream).
@@ -421,12 +421,12 @@ public class SettingsFragment extends Fragment {
         }
 
         if(theme.equals("Night")) {
-            Log.i("getPreferences", "is error occurring here?");
+            //Log.i("getPreferences", "is error occurring here?");
             themeSwitch.setChecked(true);
 
             themeSwitch.setText((CharSequence) "Night");
         } else {
-            Log.i("getPreferences", "is error occurring here?");
+            //Log.i("getPreferences", "is error occurring here?");
             themeSwitch.setChecked(false);
             themeSwitch.setText((CharSequence) "Day");
 

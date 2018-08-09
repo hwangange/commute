@@ -40,7 +40,7 @@ public class NOWPLAYINGFragment extends Fragment {
     private static final String ARG_MOD_ID = "param2";
     private static final String ARG_BOOK_ID = "param3";
 
-    public static String modId, bookId, modTitle;
+    public String modId, bookId, modTitle;
     public TextView titleView;
     public ImageView imageView;
     public Context context =getContext();
@@ -73,7 +73,6 @@ public class NOWPLAYINGFragment extends Fragment {
         args.putString(ARG_MOD_ID, param2);
         args.putString(ARG_BOOK_ID, param3);
 
-        modId = param2;
         fragment.setArguments(args);
         return fragment;
     }
@@ -87,7 +86,7 @@ public class NOWPLAYINGFragment extends Fragment {
     public void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
 
-        if (getArguments() != null && modTitle == null) {
+        if (getArguments() != null) {
             modTitle = getArguments().getString(ARG_MOD_TITLE);
             modId = getArguments().getString(ARG_MOD_ID);
             bookId = getArguments().getString(ARG_BOOK_ID);

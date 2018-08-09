@@ -81,7 +81,7 @@ public class PlayerBarFragment extends Fragment {
         args.putString(ARG_BOOK_ID, param3);
 
         modId = param2;
-        Log.i("MODTITLE IS CREATED", modId);
+        //Log.i("MODTITLE IS CREATED", modId);
         fragment.setArguments(args);
         currentPoint = -1;
         isPaused = false;
@@ -95,9 +95,8 @@ public class PlayerBarFragment extends Fragment {
     public void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
 
-        if (getArguments() != null && modTitle == null) {
+        if (getArguments() != null) {
             modTitle = getArguments().getString(ARG_MOD_TITLE);
-            Log.i("modTitle", "|" + modTitle + "|");
             modId = getArguments().getString(ARG_MOD_ID);
             bookId = getArguments().getString(ARG_BOOK_ID);
 
@@ -109,7 +108,7 @@ public class PlayerBarFragment extends Fragment {
     @Override
     public View onCreateView(LayoutInflater inflater, ViewGroup container, Bundle savedInstanceState) {
 
-        Log.i("PlayerBarFragment", "onCreateView");
+        //Log.i("PlayerBarFragment", "onCreateView");
         context = getContext();
 
         View view = inflater.inflate(R.layout.fragment_player_bar, container, false);
@@ -217,7 +216,7 @@ public class PlayerBarFragment extends Fragment {
 
     public void playMergedFile(int startingTime) {
 
-        Log.i("Starting time", String.valueOf(startingTime));
+        //Log.i("Starting time", String.valueOf(startingTime));
 
         player.reset();
 
@@ -258,7 +257,7 @@ public class PlayerBarFragment extends Fragment {
         player.setOnCompletionListener(new MediaPlayer.OnCompletionListener() {
             @Override
             public void onCompletion(MediaPlayer mp) {
-                Log.i("onCompletion", "When is media player stopped?");
+                //Log.i("onCompletion", "When is media player stopped?");
                 handlePlayButtonClick(); //alternative: setPlayButton("Play");
                 forwardButton.setEnabled(false);
                 reverseButton.setEnabled(false);
@@ -377,6 +376,8 @@ public class PlayerBarFragment extends Fragment {
 
     // when user wants to listen to a new audiobook
     public void setNewModule(String bookId, String modId, String modTitle){
+        player.reset();
+
         this.bookId = bookId;
         this.modId = modId;
         this.modTitle = modTitle;
@@ -393,7 +394,7 @@ public class PlayerBarFragment extends Fragment {
         if(modId != "" && player != null) {
             try {
                 currentPoint = player.getCurrentPosition();
-                Log.i("Current point upon pausing", String.valueOf(currentPoint));
+                //Log.i("Current point upon pausing", String.valueOf(currentPoint));
                /* if (playButton.getTag().equals("Play")) {
                     isPaused = true;
                 } else {
@@ -417,14 +418,14 @@ public class PlayerBarFragment extends Fragment {
     public void onViewStateRestored(Bundle savedInstanceState) {
         super.onViewStateRestored(savedInstanceState);
         // use this method if you want to do anything once the fragment is back on the screen
-        Log.i("onViewStateRestored", "in here");
+        //Log.i("onViewStateRestored", "in here");
 
     }
 
     @Override
     public void onDetach() {
         super.onDetach();
-        Log.i("onDetach", "in here");
+        //Log.i("onDetach", "in here");
         mListener = null;
     }
 
@@ -493,6 +494,7 @@ public class PlayerBarFragment extends Fragment {
     public void onResume(){
         super.onResume();
         player.reset();
+        Log.i("PlayerBarFragment", "Output file path: " + output + " at point: " + String.valueOf(currentPoint));
         if(output!= null && currentPoint >=0){
             playMergedFile(currentPoint);
             ((TextView)(getActivity().findViewById(R.id.dragViewText))).setText(Html.fromHtml("<b>"+modTitle+"</b><br/>"+bookId, Html.FROM_HTML_MODE_COMPACT));
