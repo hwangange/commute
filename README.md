@@ -34,8 +34,8 @@ OpenStax On the Go has the following capabilities and features:
 1. Open `AudioClient.java` and update the following constants with the appropriate values:
 
     ```
-    COGNITO_POOL_ID = "CHANGE_ME";
-    MY_REGION = Regions.US_EAST_1;
+    cognitoId = "CHANGE_ME";
+    myRegion = Regions.US_EAST_1;
     ```
 
 1. Build and run the app.

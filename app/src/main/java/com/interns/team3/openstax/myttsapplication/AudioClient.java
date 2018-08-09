@@ -149,8 +149,8 @@ public abstract class AudioClient {
     public abstract void synthesizeAudio(String fileName, boolean isSSML, String content, boolean debug);
 
     public static class AmazonClient extends AudioClient {
-        private String cognitoId = "us-east-1:1fe997b7-6fe9-4137-92ab-39a50d0e34b3";
-        private Regions myRegion = Regions.US_EAST_1;
+        private String cognitoId = "us-east-1:1fe997b7-6fe9-4137-92ab-39a50d0e34b3"; // insert your cognito ID here
+        private Regions myRegion = Regions.US_EAST_1; // insert your region here
         private Context context;
         private AmazonPollyPresigningClient client;
 
